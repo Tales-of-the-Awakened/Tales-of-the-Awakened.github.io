@@ -1,0 +1,3312 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tales of the Awakened [Warframe RP Community] - side-story-03</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <style>
+        /* General */
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-300.woff);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-400.woff);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-500.woff);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-600.woff);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-700.woff);
+    font-weight: 700;
+}
+
+body {
+    font-family: "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    object-fit: contain;
+}
+
+.markdown {
+    max-width: 100%;
+    line-height: 1.3;
+    overflow-wrap: break-word;
+}
+
+.preserve-whitespace {
+    white-space: pre-wrap;
+}
+
+.spoiler {
+    /* width: fit-content; */
+    display: inline-block;
+    /* This is more consistent across browsers, the old attribute worked well under Chrome but not FireFox. */
+}
+
+.spoiler--hidden {
+    cursor: pointer;
+}
+
+.spoiler-text {
+    border-radius: 3px;
+}
+
+.spoiler--hidden .spoiler-text {
+    color: rgba(0, 0, 0, 0);
+}
+
+.spoiler--hidden .spoiler-text::selection {
+    color: rgba(0, 0, 0, 0);
+}
+
+.spoiler-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.spoiler--hidden .spoiler-image {
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.spoiler--hidden .spoiler-image * {
+    filter: blur(44px);
+}
+
+    .spoiler--hidden .spoiler-image:after {
+        content: "SPOILER";
+        color: #dcddde;
+        background-color: rgba(0, 0, 0, 0.6);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: 600;
+        /* padding: 0.5em 0.7em; */
+        padding: 100%;
+        /* This ruins those beutifully rounded buttons, but it's needed to prevent a FireFox bug with video and audio elemnts. */
+        /* The bug is that you can click trough the spoiler layer and play the video or audio, I could not identify the cause. */
+        /* I leave this here, in case someone is brave enough to venture in to madness that is undocumented browser behaviour. */
+        border-radius: 20px;
+        letter-spacing: 0.05em;
+        font-size: 0.9em;
+    }
+
+.spoiler--hidden:hover .spoiler-image:after {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.quote {
+    margin: 0.1em 0;
+    padding-left: 0.6em;
+    border-left: 4px solid;
+    border-radius: 3px;
+}
+
+.pre {
+    font-family: "Consolas", "Courier New", Courier, monospace;
+}
+
+.pre--multiline {
+    margin-top: 0.25em;
+    padding: 0.5em;
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+.pre--inline {
+    padding: 2px;
+    border-radius: 3px;
+    font-size: 0.85em;
+}
+
+.mention {
+    border-radius: 3px;
+    padding: 0 2px;
+    color: #7289da;
+    background: rgba(114, 137, 218, .1);
+    font-weight: 500;
+}
+
+.emoji {
+    width: 1.25em;
+    height: 1.25em;
+    margin: 0 0.06em;
+    vertical-align: -0.4em;
+}
+
+.emoji--small {
+    width: 1em;
+    height: 1em;
+}
+
+.emoji--large {
+    width: 2.8em;
+    height: 2.8em;
+}
+
+/* Preamble */
+
+.preamble {
+    display: grid;
+    margin: 0 0.3em 0.6em 0.3em;
+    max-width: 100%;
+    grid-template-columns: auto 1fr;
+}
+
+.preamble__guild-icon-container {
+    grid-column: 1;
+}
+
+.preamble__guild-icon {
+    max-width: 88px;
+    max-height: 88px;
+}
+
+.preamble__entries-container {
+    grid-column: 2;
+    margin-left: 0.6em;
+}
+
+.preamble__entry {
+    font-size: 1.4em;
+}
+
+.preamble__entry--small {
+    font-size: 1em;
+}
+
+/* Chatlog */
+
+.chatlog {
+    max-width: 100%;
+}
+
+.chatlog__message-group {
+    display: grid;
+    margin: 0 0.6em;
+    padding: 0.9em 0;
+    border-top: 1px solid;
+    grid-template-columns: auto 1fr;
+}
+
+.chatlog__author-avatar-container {
+    grid-column: 1;
+    width: 40px;
+    height: 40px;
+}
+
+.chatlog__author-avatar {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.chatlog__messages {
+    grid-column: 2;
+    margin-left: 1.2em;
+    min-width: 50%;
+}
+
+.chatlog__author-name {
+    font-weight: 500;
+}
+
+.chatlog__timestamp {
+    margin-left: 0.3em;
+    font-size: 0.75em;
+}
+
+.chatlog__message {
+    padding: 0.1em 0.3em;
+    margin: 0 -0.3em;
+    background-color: transparent;
+    transition: background-color 1s ease;
+}
+
+.chatlog__content {
+    font-size: 0.95em;
+    word-wrap: break-word;
+}
+
+.chatlog__edited-timestamp {
+    margin-left: 0.15em;
+    font-size: 0.8em;
+}
+
+.chatlog__attachment {
+    margin-top: 0.3em;
+}
+
+.chatlog__attachment-thumbnail {
+    vertical-align: top;
+    max-width: 45vw;
+    max-height: 500px;
+    border-radius: 3px;
+}
+
+.chatlog__embed {
+    display: flex;
+    margin-top: 0.3em;
+    max-width: 520px;
+}
+
+.chatlog__embed-color-pill {
+    flex-shrink: 0;
+    width: 0.25em;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.chatlog__embed-content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em 0.6em;
+    border: 1px solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.chatlog__embed-content {
+    display: flex;
+    width: 100%;
+}
+
+.chatlog__embed-text {
+    flex: 1;
+}
+
+.chatlog__embed-author {
+    display: flex;
+    margin-bottom: 0.3em;
+    align-items: center;
+}
+
+.chatlog__embed-author-icon {
+    margin-right: 0.5em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.chatlog__embed-author-name {
+    font-size: 0.875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-title {
+    margin-bottom: 0.2em;
+    font-size: 0.875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-description {
+    font-weight: 500;
+    font-size: 0.85em;
+}
+
+.chatlog__embed-fields {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chatlog__embed-field {
+    flex: 0;
+    min-width: 100%;
+    max-width: 506px;
+    padding-top: 0.6em;
+    font-size: 0.875em;
+}
+
+.chatlog__embed-field--inline {
+    flex: 1;
+    flex-basis: auto;
+    min-width: 150px;
+}
+
+.chatlog__embed-field-name {
+    margin-bottom: 0.2em;
+    font-weight: 600;
+}
+
+.chatlog__embed-field-value {
+    font-weight: 500;
+}
+
+.chatlog__embed-thumbnail {
+    flex: 0;
+    margin-left: 1.2em;
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-image-container {
+    margin-top: 0.6em;
+}
+
+.chatlog__embed-image {
+    max-width: 500px;
+    max-height: 400px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-footer {
+    margin-top: 0.6em;
+}
+
+.chatlog__embed-footer-icon {
+    margin-right: 0.2em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.chatlog__embed-footer-text {
+    font-size: 0.75em;
+    font-weight: 500;
+}
+
+.chatlog__reactions {
+    display: flex;
+}
+
+.chatlog__reaction {
+    display: flex;
+    align-items: center;
+    margin: 0.35em 0.1em 0.1em 0.1em;
+    padding: 0.2em 0.35em;
+    border-radius: 3px;
+}
+
+.chatlog__reaction-count {
+    min-width: 9px;
+    margin-left: 0.35em;
+    font-size: 0.875em;
+}
+
+.chatlog__bot-tag {
+    position: relative;
+    top: -.2em;
+    margin-left: 0.3em;
+    padding: 0.05em 0.3em;
+    border-radius: 3px;
+    vertical-align: middle;
+    line-height: 1.3;
+    background: #7289da;
+    color: #ffffff;
+    font-size: 0.625em;
+    font-weight: 500;
+}
+
+/* Postamble */
+
+.postamble {
+    margin: 1.4em 0.3em 0.6em 0.3em;
+    padding: 1em;
+    border-top: 1px solid;
+}
+    </style>
+    <style>
+        /* General */
+
+body {
+    background-color: #36393e;
+    color: #dcddde;
+}
+
+a {
+    color: #0096cf;
+}
+
+.spoiler-text {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.spoiler--hidden .spoiler-text {
+    background-color: #202225;
+}
+
+.spoiler--hidden:hover .spoiler-text {
+    background-color: rgba(32, 34, 37, 0.8);
+}
+
+.quote {
+    border-color: #4f545c;
+}
+
+.pre {
+    background-color: #2f3136 !important;
+}
+
+.pre--multiline {
+    border-color: #282b30 !important;
+    color: #b9bbbe !important;
+}
+
+/* === Preamble === */
+
+.preamble__entry {
+    color: #ffffff;
+}
+
+/* Chatlog */
+
+.chatlog__message-group {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.chatlog__author-name {
+    color: #ffffff;
+}
+
+.chatlog__timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__message--highlighted {
+    background-color: rgba(114, 137, 218, 0.2) !important;
+}
+
+.chatlog__message--pinned {
+    background-color: rgba(249, 168, 37, 0.05);
+}
+
+.chatlog__edited-timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__embed-color-pill--default {
+    background-color: rgba(79, 84, 92, 1);
+}
+
+.chatlog__embed-content-container {
+    background-color: rgba(46, 48, 54, 0.3);
+    border-color: rgba(46, 48, 54, 0.6);
+}
+
+.chatlog__embed-author-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-author-name-link {
+    color: #ffffff;
+}
+
+.chatlog__embed-title {
+    color: #ffffff;
+}
+
+.chatlog__embed-description {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-field-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-field-value {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-footer {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__reaction {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.chatlog__reaction-count {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* Postamble */
+
+.postamble {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.postamble__entry {
+    color: #ffffff;
+}
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.pre--multiline').forEach(block => hljs.highlightBlock(block));
+        });
+    </script>
+
+    <script>
+        function scrollToMessage(event, id) {
+            var element = document.getElementById('message-' + id);
+
+            if (element) {
+                event.preventDefault();
+
+                element.classList.add('chatlog__message--highlighted');
+
+                window.scrollTo({
+                    top: element.getBoundingClientRect().top - document.body.getBoundingClientRect().top - (window.innerHeight / 2),
+                    behavior: 'smooth'
+                });
+
+                window.setTimeout(function() {
+                    element.classList.remove('chatlog__message--highlighted');
+                }, 2000);
+            }
+        }
+
+        function showSpoiler(event, element) {
+            if (element && element.classList.contains('spoiler--hidden')) {
+                event.preventDefault();
+                element.classList.remove('spoiler--hidden');
+            }
+        }
+    </script>
+</head>
+<body>
+
+<div class="preamble">
+    <div class="preamble__guild-icon-container">
+        <img class="preamble__guild-icon" src="side-story-03.html_Files/fc98d03e2959db67fbf41a51f8e7c2ed-EA16C.png" alt="Guild icon">
+    </div>
+    <div class="preamble__entries-container">
+        <div class="preamble__entry">Tales of the Awakened [Warframe RP Community]</div>
+        <div class="preamble__entry">The Weaver&#39;s Manifest [RP] / side-story-03</div>
+
+            <div class="preamble__entry preamble__entry--small">[4/4 BR] Open RP - Jupiter outpost (auction house) | If you are passing through the living room at around this time you might notice something shiny lying on the couch. Upon closer inspection it is revealed that it is a Kuria, a shinny orokitty. As to what it’s doing there? Well…
+
+At just that time, varying degree of noises spills from the barracks, shattering the current state of peace on the Sanctuary. They range from yelling, to hushed frustration, to huffing and manic laughing.</div>
+
+    </div>
+</div>
+
+<div class="chatlog">
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/b03fcd29a75bcceadb0df5c8129d39ef-42318.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="jado the man#0685" data-user-id="136944676849582080" style="color: rgb(173,20,87)">Almighty_Jado - Kapak</span>
+
+
+        <span class="chatlog__timestamp">06-Oct-18 12:51 AM</span>
+
+            <div class="chatlog__message " data-message-id="497994393886654465" id="message-497994393886654465">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><span class="mention" title="Rozencratz#3124">@Rozencratz - Sonera</span> <span class="mention" title="TheFafalStudios#8672">@TheFafaltudios - Vuko</span> !</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/4404de0ba7e5c9a4d627695dfa3192f4-7C2F8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Rozencratz#3124" data-user-id="339116401815977986" style="color: rgb(135,157,189)">Rozencratz - Sonera</span>
+
+
+        <span class="chatlog__timestamp">06-Oct-18 05:57 AM</span>
+
+            <div class="chatlog__message " data-message-id="498071181556056074" id="message-498071181556056074">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">[Open RP]
+[Lua, Orokin Remnant Sanctuary / Jupiter outpost (auction house)]
+[4/4, 12:19]
+
+---If you are passing through the living room at around this time you might notice something shiny lying on the couch. Upon closer inspection it is revealed that it is a Kuria, a shinny orokitty. As to what it’s doing there? Well…
+
+At just that time, varying degree of noises spills from the barracks, shattering the current state of peace on the Sanctuary. They range from yelling, to hushed frustration, to huffing and manic laughing.---</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/b03fcd29a75bcceadb0df5c8129d39ef-42318.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="jado the man#0685" data-user-id="136944676849582080" style="color: rgb(173,20,87)">Almighty_Jado - Kapak</span>
+
+
+        <span class="chatlog__timestamp">06-Oct-18 11:34 AM</span>
+
+            <div class="chatlog__message " data-message-id="498156136537653283" id="message-498156136537653283">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><u>Kapak:</u>
+The bio lab, which is located directly across the hall from the barracks, had its doors burst open as a very angry, tall Nidus stormed out and into the hall.
+“DO YOU MIND?! I AM TRYING TO WORK!! WHAT IN TARNATION ARE YOU DOING IN THERE, WHOEVER YOU ARE? IT BETTER NOT BE SOME VOID-DAMN PROCREATION! I SWEAR, KEEP IT DOWN OR SO HELP ME BALLAS I WILL RIP OFF YOUR FATHERMUCKING HEAD, FLY INTO THE VOID, FIND A DERELICT AND FEED IT TO A LEPHANTIS! VOID!”
+The Nidus stormed back into the bio lab, the doors slamming shut behind him.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/a61ca3ad057e19655043ca7f29c5f0f3-83927.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="TheFafalStudios#8672" data-user-id="236097848586797057" style="color: rgb(204,85,0)">TheFafaltudios - Vuko</span>
+
+
+        <span class="chatlog__timestamp">06-Oct-18 12:02 PM</span>
+
+            <div class="chatlog__message " data-message-id="498163100961341441" id="message-498163100961341441">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><u>Vuko:</u>
+    <em>A still half-asleep Vuko was slowly making his way out of the hangar, visually having a problem walking, and navigating in general. For some odd reason he was wearing nothing but boxers, and his hair was let loose in a weird array, as if he had to fight off a flock of condorcs. Just as he made his way to the intersection, the wild noises started causing him to lower his head and start massaging his temples, while he mumbled under his nose.</em> - &quot;zaraza... those damn monkeys can&#39;t even behave in the morning...&quot; - <em>And just as he finished, the Nidus burst out of the lab, screaming atop his lungs. The startled Vuko jumped up in surprise, and in a fit of revenge, screamed back towards the closed lab doors.</em> - &quot;MIND YOUR TONE, KAPAK! SOME OF US ARE TRYING TO SUFFER IN PEACE HERE!&quot; - <em>He responded, knowing that he probably won&#39;t hear him.</em> - &quot;Infested buffoon...&quot; - <em>He added under his nose, while still trying to massage the headache away.</em>
+     <em>Somehow the stumbling Tenno made his way into the kitchen and poured himself a glass of water, and after staring at it for half a minute decided to drink straight from the bottle he poured it out of, quickly downing almost two liters of water. After rummaging through the kitchen a bit more he managed to find a plate of brownies, which he took without a second thought and headed back to the lounge, while stuffing his face full of the chocolate goodness. With a loud &#39;thump&#39; he jumped onto the couch, causing the Kuria to bounce off into the middle of the floor, but Vuko didn&#39;t see that, as he was too consumed with the plate of sweets.</em></span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/4404de0ba7e5c9a4d627695dfa3192f4-7C2F8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Rozencratz#3124" data-user-id="339116401815977986" style="color: rgb(135,157,189)">Rozencratz - Sonera</span>
+
+
+        <span class="chatlog__timestamp">06-Oct-18 12:09 PM</span>
+
+            <div class="chatlog__message " data-message-id="498164972396740608" id="message-498164972396740608">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">~The noise inside the barracks freezes instantly as the furious Nidus and the fatiqued boy yell. The culprits inside stagnating, like children getting yelled at by their parents. Even after a moment, whoever is inside dared not move or make any other noise. Then, hurried shuffling is heard, followed my muffled speaking, and then some bangs, some slaps and scampering steps.
+
+The door of the barracks hisses to open and a Feyarch Oberon peeks out to the hallway, holding a stretched out Verida suit, with the legs on it slobbered and gnawed on, in his right hand.~
+
+Devros von Inie
+The boy looks back inside the barracks, where a furous kubrow is glaring at him
+
+“Oi said i’ll be back in two &#39;ours tops! Besides, yer can’t folly me dare, yer nu waaat &#39;appened de last time. An&#39; stayin&#39; &#39;ere &#39;ill be more craic for yer.”
+
+The kubrow, still glaring, sits on his rump by Devros’ bed which is really trashed. Speaking of, if anyone dares look inside the barracks they will come across a battlefield. The bed sheets are scattered, the pillow stuffing is in the air, clothes on the floor, and the wall above Devros’ bed have hoof markings.
+
+The Oberon smiles and nods at Garhul, stepping out in to the hallway to let the door to the barracks close. He tip toes around to the bio lab but halts just before the door sensors activate and open. “Let him cool off? Yeah!”
+
+He looks down to the suit in his hand and sighs. When Garhul tugs on something he TUGS. His suit looks like it could fit Kapak now. Throwing the jumpsuit over his right shoulder he looks down the hall leading to the living room and notices the battered Tenno just walking back from the kitchen. With hurried clanks of his hoofed feet, the Oberon walks over to the couch and plops down with his elbows on the back rest of the couch just next to Vuko.
+
+“&#39;eya! So um…enjoy de sweets, and um…are ya good?”
+
+He eyes the other Tenno’s current state, completely missing the Kuria on the floor</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/a61ca3ad057e19655043ca7f29c5f0f3-83927.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="TheFafalStudios#8672" data-user-id="236097848586797057" style="color: rgb(204,85,0)">TheFafaltudios - Vuko</span>
+
+
+        <span class="chatlog__timestamp">06-Oct-18 12:10 PM</span>
+
+            <div class="chatlog__message " data-message-id="498165109772910636" id="message-498165109772910636">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><u>Vuko:</u>
+    - “Wonn sum bwownin?” - <em>He says with a mouthful of the chocolate cake, extending the plate with two remaining pieces to Devros. As Vuko waits for him to take some, he finishes chewing what was inside his mouth and goes on to talk, this time normally.</em> - “Yeah, I’m good man, don’t worry. Just curing my hangover. You should really try them, they’re delicious.” - <em>He says, shaking the plate lightly in front of the Oberon.</em> - “Koya made ‘em. They’re not as good as Kili’s, but are still way better than most. Believe me.” - <em>He tries to convince his buddy, accenting the last sentence in an odd fashion.</em>
+    - “And what’s up with that?” - <em>He points at the Verida suit.</em> - “Got into an argument with Garhul?” - <em>Vuko asks, giggling at himself.</em></span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/4404de0ba7e5c9a4d627695dfa3192f4-7C2F8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Rozencratz#3124" data-user-id="339116401815977986" style="color: rgb(135,157,189)">Rozencratz - Sonera</span>
+
+
+        <span class="chatlog__timestamp">06-Oct-18 12:15 PM</span>
+
+            <div class="chatlog__message " data-message-id="498166378365321238" id="message-498166378365321238">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Devros von Inie
+The flowery warframe eyes the plate of cookies and smiles, straightening up and with a buzz of golden energy the messy haired boy steps out. The tall, beefy looking Tenno which is only dressed in a very wide and loose shirt that hangs like a old bag on his body and a pair of equally pants (which overall might make him look like one of those shroom loving airheads), snags one of the cookies and leaps over the back end of the couch in one fluid motion to sit next to Vuko, leaving his Oberon to stand still behind him. He chomps down on it and starts chewing. His greenish golden eyes widen as he twirls his head to look back at Vuko through his busted glasses.
+
+“Oooooh. Dis is gran&#39;.Kili? i’ll &#39;av ter &#39;unt dat lass down fer de recipe”
+
+The dark haired boy smirks as he looks over his shoulder to the Verida suit that is slaunched over his Oberon’s shoulder. With a shrug, he looks back at the almost fully naked colleague and says in his raspy voice
+
+“Aye yeah. oi &#39;av sum business ter take care av an&#39; he can’t go dare so he got the bleedin&#39; full shillin&#39; an&#39; wanted ter stop me. He did dis to me suit an&#39; tried ter hide somethin&#39; oi nade….which I…”
+
+He trails off as he spots the Kuria on the floor from the corner of his eye.
+
+“AHA!”
+
+He exclaims and hops off the couch to snatch the shiny thing examining it for marks, but then pauses, freezing as he turns to look at Vuko with a confused look
+
+“Wait, &#39;owl on, &#39;angover? it’s 12 in de afternoon!”</span>
+
+                                <span class="chatlog__edited-timestamp" title="06-Oct-18 12:15 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/a61ca3ad057e19655043ca7f29c5f0f3-83927.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="TheFafalStudios#8672" data-user-id="236097848586797057" style="color: rgb(204,85,0)">TheFafaltudios - Vuko</span>
+
+
+        <span class="chatlog__timestamp">06-Oct-18 12:15 PM</span>
+
+            <div class="chatlog__message " data-message-id="498166470560317474" id="message-498166470560317474">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><u>Vuko:</u>
+     -  &quot;Whaaaa... It&#39;s already this late?&quot; - <em>He asks with a confused look on his face.</em> - &quot;I could &#39;ave sworn I had Ide set an alarm for 9 o&#39;clock. Oh well.&quot; - <em>He says, putting the plate with the last remaining brownie onto the arm of the couch.</em> - &quot;A piece of good advice: do never, and I mean ever, dare Pedlek to a drinking competition. That Ostron boy has a head of steel, I tell you, a head of steel.&quot; - <em>While talking Vuko gathers his hair using both hands and ties it up behind his head into a bun, as the hair falling into his eyes and mouth clearly started to annoy him.</em> - &quot;Might I ask what it is that you were looking for? Some piece of jewelery? A statuette?&quot; - <em>He asks, trying to peek behind Devros&#39; shoulder to see what it is.</em></span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/4404de0ba7e5c9a4d627695dfa3192f4-7C2F8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Rozencratz#3124" data-user-id="339116401815977986" style="color: rgb(135,157,189)">Rozencratz - Sonera</span>
+
+
+        <span class="chatlog__timestamp">06-Oct-18 12:23 PM</span>
+
+            <div class="chatlog__message " data-message-id="498168441476349991" id="message-498168441476349991">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Devros von Inie
+The boy let out a low chuckle 
+
+“Pedlek? Dat goon can chucker somethin&#39; other than nap? Oi &#39;aven’t seen &#39;imself git oyt av &#39;is chair in forever”
+
+He smirked, obviously joking. Devros turned around with the Kuria in one hand and the half eaten cookie in the other. In one smooth motion, he slumps down back on the couch next to Vuko, sinking deep in the cushions and making himself comfortable. He smirks at the other Tenno and will throw the Kuria over to him. If caught, Vuko will notice – if he came in to contact with one of these before – that this one feels a bit off. The weight, color and shape are all the same but it’s like something is missing from the complete package, a certain tone.
+
+Devros throws the rest of the cookie in his gluttonous maw and wipes his lips with the back of his hand before he spoke again
+
+“Dat, me ticket in de Cobalt Needle Syndicate aucshun house. Tart Garhul wud &#39;av &#39;id it in de flower scratcher by de &#39;angar…phew! An&#39; no bite marks, double phew” (Tart – thought)
+
+He whipped some invisible sweat off his forehead and leans back completely letting out a sigh of relief</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/a61ca3ad057e19655043ca7f29c5f0f3-83927.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="TheFafalStudios#8672" data-user-id="236097848586797057" style="color: rgb(204,85,0)">TheFafaltudios - Vuko</span>
+
+
+        <span class="chatlog__timestamp">06-Oct-18 12:24 PM</span>
+
+            <div class="chatlog__message " data-message-id="498168564809990145" id="message-498168564809990145">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><u>Vuko:</u>
+    <em>He catches the Kuria in the air with one of his hands, and takes it closer to his face, inspecting what it is. He twirls it, rotates it, knocks on it, and even smells it, trying to find out what it is.</em> - &quot;I&#39;ve never seen something like that. Is this some kind of art piece from the Empire? Bet &#39;Kino would love to see it.&quot; - <em>Vuko half listens to Devros, consumed with trying to figure out what the statuette is.</em> - &quot;Ye, bet if that doggo got his jaws on it there wouldn&#39;t much left.&quot; - <em>He says in a muffled voice, almost automatically without much thought as most of his attention is on the Kuria.</em> - &quot;Hold up. An auction house? Like odds and ends from all over the system? Fancy stuff and rich schmucks style?&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/4404de0ba7e5c9a4d627695dfa3192f4-7C2F8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Rozencratz#3124" data-user-id="339116401815977986" style="color: rgb(135,157,189)">Rozencratz - Sonera</span>
+
+
+        <span class="chatlog__timestamp">06-Oct-18 12:26 PM</span>
+
+            <div class="chatlog__message " data-message-id="498169180646801420" id="message-498169180646801420">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Devros von Inie
+Devros leans on the backrest of the couch with his left elbow, resting his chin in his opened palm to observe Vuko’s reaction with a amused expression. It’s like watching a puppy explore a new toy, sniffing around it, cautious but interested, seeing if it&#39;s edible. Cute. He runs a palm through his wild, puffy hair and says in his raspy voice
+
+“Yeah, it’s somethin&#39; loike a shiny Orokin ornament, but it’s not rayle. It’s a pure gran&#39; lookalike tho”
+
+He smirked. It was the perfect knock-off, apart from the fact that it didn’t have the ability to produce melodic tones as of yet, but Devors has a way of going around that
+
+“Aye! A place wha odd an&#39; valuable things pop up. Oi &#39;av been dare a couple av times an&#39; oi can’t even describe de feelin&#39;. it pulls yer in ya know?!”
+
+His muddy golden eyes lit up with excitement as he speaks, trying to physically show what he is saying by pulling imaginary reigns towards himself. Vuko can clearly see the passion in Devros’ expression, as if he’s speaking from the soul…maybe a bit too vigorously.
+
+“Oi mean so&#39;tiz kind av shady but that’s waaat makes it entertainin&#39;.”
+
+He paused for a moment, looking over the other Tenno
+
+“Fancy joining?”</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/a61ca3ad057e19655043ca7f29c5f0f3-83927.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="TheFafalStudios#8672" data-user-id="236097848586797057" style="color: rgb(204,85,0)">TheFafaltudios - Vuko</span>
+
+
+        <span class="chatlog__timestamp">06-Oct-18 12:26 PM</span>
+
+            <div class="chatlog__message " data-message-id="498169220874371082" id="message-498169220874371082">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><u>Vuko:</u>
+    - “It’s a nice piece. How much are you planning to make off it?” - <em>He asks, throwing the Kuria onto Devros’ lap.</em> - “You must really like that place. You’re acting like a hungry Kubrow that just got a big piece of ham.” - <em>He chuckles, poking at his behavior. At the same time he stands up and raises both his arms, one hand holding the other, and stretches himself with a characteristic bone crackling.</em> - “Is that even a question after your enthusiastic descriptions? Of course I’m joining. - <em>The Tenno responds to the question almost immedieatly.</em> - “Although I need some time to... ehhh... clean myself up. Where should I meet you when I’m ready?”</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/4404de0ba7e5c9a4d627695dfa3192f4-7C2F8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Rozencratz#3124" data-user-id="339116401815977986" style="color: rgb(135,157,189)">Rozencratz - Sonera</span>
+
+
+        <span class="chatlog__timestamp">06-Oct-18 12:37 PM</span>
+
+            <div class="chatlog__message " data-message-id="498171842637332510" id="message-498171842637332510">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Devros von Inie
+Devros snags the ornament straight from the air and looks up at Vuko with a shrug
+
+“De profit is not in me gain nigh. Oi jist want ter git in!”
+
+He smirks and throws the Kuria in the air, towards the still Oberon. Swiftly transferring to it, he snatches the Kuria off the air with his metallic hand before it had time to start falling. Devros, now in his Oberon Prime, nods towards Vuko
+
+“Yer can meet me by de &#39;angar den, I’ll pay our resident butcher – oi mean &#39;ealer a visit…err ter clap if &#39;e’s still not the full shillin&#39; aboyt de &#39;ustle dat went on in de barracks. But if yer take too long ter spruce up an&#39; I’m not dare den yer can noggin straight ter Amalthea on Jupiter. Don’t worry, dare is a ceasefire todey for de…event. But still! leave yer warframe onboard”
+
+He smiles and nods his head at the boy as a indication to him that he can go, but stays to see if he has anything to add or ask.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/a61ca3ad057e19655043ca7f29c5f0f3-83927.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="TheFafalStudios#8672" data-user-id="236097848586797057" style="color: rgb(204,85,0)">TheFafaltudios - Vuko</span>
+
+
+        <span class="chatlog__timestamp">06-Oct-18 12:37 PM</span>
+
+            <div class="chatlog__message " data-message-id="498171951471263755" id="message-498171951471263755">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><u>Vuko:</u>
+    - &quot;Leave my warframe? That&#39;s... interesting. Thanks for the heads up. I&#39;ll prepare myself accordingly.&quot; - <em>He says with a somewhat devious smile on his face and heads towards the hangar.</em>
+
+    <em>No more than a few seconds after he disappeared, he comes back jogging, his bare feet making flapping sounds as they hit the floor. He runs up to the table, and snags the remaining brownie.</em> - &quot;I&#39;ll take that.&quot; - <em>He says with a smile on his face and jogs back into the hangar.</em></span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/4404de0ba7e5c9a4d627695dfa3192f4-7C2F8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Rozencratz#3124" data-user-id="339116401815977986" style="color: rgb(135,157,189)">Rozencratz - Sonera</span>
+
+
+        <span class="chatlog__timestamp">06-Oct-18 12:41 PM</span>
+
+            <div class="chatlog__message " data-message-id="498173045622439946" id="message-498173045622439946">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Devros von Inie
+The Oberon smirks and shakes his head as the boy returns for the cookie. He watches Vuko hop along and then just heads out himself, heading towards the bio lab. With tiny clanks of his hoofed feet, he makes his way to the door and with a loud “whoosh” sound of the sliding door, indicates his arrival.
+
+The Oberon pokes his head inside to try and spot the infested fellow.
+
+“Oy! Pak pak! Naw &#39;ard feelings aye? Aboyt de um..noise an&#39; such”
+
+He steps inside the lab, letting the door shut behind him</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/b03fcd29a75bcceadb0df5c8129d39ef-42318.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="jado the man#0685" data-user-id="136944676849582080" style="color: rgb(173,20,87)">Almighty_Jado - Kapak</span>
+
+
+        <span class="chatlog__timestamp">06-Oct-18 12:42 PM</span>
+
+            <div class="chatlog__message " data-message-id="498173146696777748" id="message-498173146696777748">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><u>Kapak:</u>
+Kapak is sitting in the corner of the room with his legs folded, his face regarding a... decapitated Grineer head. A twisting cyclone of pipes and tubes snaked into the underside of the head.
+“Ah? Of course no hard feelings! Of course not! I’ve just been working on this for the last 8 hours straight and needed to be able to hear. Listen!”
+As Kapak went silent, Devros could hear...
+...well, nothing.
+“Wonderful, isn’t it?” Kapak grinned. “I never thought that it would be possible!” He poked the head on the cheek playfully as if it were a child.</span>
+
+                                <span class="chatlog__edited-timestamp" title="06-Oct-18 12:43 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/4404de0ba7e5c9a4d627695dfa3192f4-7C2F8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Rozencratz#3124" data-user-id="339116401815977986" style="color: rgb(135,157,189)">Rozencratz - Sonera</span>
+
+
+        <span class="chatlog__timestamp">06-Oct-18 12:54 PM</span>
+
+            <div class="chatlog__message " data-message-id="498176268307791941" id="message-498176268307791941">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Devros von Inie
+Devros eyes the severed head not with a “WTF IS WRONG WITH YOU” gaze but with a intrigued and curious look. Is he doing the headless kubrow experiment? The boy read articles of the procedure, of how to keep a severed head living long enough for it to be transferred on to a new body. But…that’s old science!
+
+He walks towards the infested fellow and the grineer head, perking his ears as the other said to listen. But…nothing happens. Huh?
+
+He leans closer and still nothing.
+
+“Is de silence waaat i’m supposed ter &#39;ear or…am oi losin&#39; me &#39;earin&#39; again.”
+
+He chuckled thinking of all of the times his Lenz blew up under him causing his ears to ring for weeks. Good thing injuries don’t stick that long on the void tainted</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/b03fcd29a75bcceadb0df5c8129d39ef-42318.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="jado the man#0685" data-user-id="136944676849582080" style="color: rgb(173,20,87)">Almighty_Jado - Kapak</span>
+
+
+        <span class="chatlog__timestamp">06-Oct-18 12:54 PM</span>
+
+            <div class="chatlog__message " data-message-id="498176326759612417" id="message-498176326759612417">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><u>Head:</u>
+The severed head&#39;s eyes darted towards Devros&#39; own face before opening its mouth and screaming.
+&quot;TENNO SKOOOOOOOOOOOOOOOOOOOOOOOOOOOOM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!&quot;
+The head yelled so hard that it tipped over backwards, unplugging several of the tubes from the underside and causing the head to become lifeless again.
+
+<u>Kapak:</u>
+The Nidus stood there confused. &quot;What the Void....? It&#39;s never done that before. Did I somehow restore its consciousness somehow....?&quot;
+He coughed awkwardly before standing the head back up and sticking the tubing back in. &quot;I was experimenting with using small infested tumors to carry information,&quot; he explained, turning the head around to reveal a small, mushroom like pip sticking out behind its ear, &quot;it vibrates in a certain pattern and basically whispers information. Not entirely practical right now, but just a fun little project.&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/4404de0ba7e5c9a4d627695dfa3192f4-7C2F8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Rozencratz#3124" data-user-id="339116401815977986" style="color: rgb(135,157,189)">Rozencratz - Sonera</span>
+
+
+        <span class="chatlog__timestamp">06-Oct-18 12:56 PM</span>
+
+            <div class="chatlog__message " data-message-id="498176615042252801" id="message-498176615042252801">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Devros von Inie
+OH SHHHHH. The Oberon instinctively reeled back as the head yelled right at him. Talk about jump scares! He froze with one hand held in front of him as a shield and one dropping down to his hip for the Sonicor. Geeeze!  He blinked once, then twice and let out a cackle, his frame relaxing and slightly shaking from the laughter.
+
+“Ey! Almost made me jump oyt av me suit.”
+
+He stepped closer to the head again and looked at the tubing. Devros is a man of biology so this kind of thing interests him greatly. Information relayed through flesh and tumors? Now isn’t that a amusing thought. You can turn hoards in to messengers, chargers in to carriers, and those flying fart spilling cunts in to megaphones or some sort. He tilts his head to the side, as he watched the Nidus put the tubing back in place, his greedy eyes slurping up everything about the project.
+
+“Gotta say, that’s sum messed up informashun port yer got dare. but…wouldn’t others nade &#39;elmith to-
+
+He paused mid sentence as if he’s listening to someone speaking. 
+
+“Ahhhh! so&#39;tiz time already?!”
+
+He lifts his left palm, facing it upwards and from it he projects a solar clock which indicates that it’s soon to be 12:30.
+
+“Feck, oi &#39;ill be late.”
+
+He disperses the projection and lifts his head to look at the Nidus
+
+“Unless dat tin&#39; really needs yisser attenshun, we can continue dis on de way aye? Oi &#39;av a date wi&#39; Amalthea on Jupiter, a aucshun gaff ter attend, can’t miss it!”
+
+He boomed with excitement, waiting to see what the Nidus says</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/b03fcd29a75bcceadb0df5c8129d39ef-42318.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="jado the man#0685" data-user-id="136944676849582080" style="color: rgb(173,20,87)">Almighty_Jado - Kapak</span>
+
+
+        <span class="chatlog__timestamp">06-Oct-18 12:56 PM</span>
+
+            <div class="chatlog__message " data-message-id="498176689583554600" id="message-498176689583554600">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><u>Kapak:</u>
+“An auction, you say?” The light twinkled off of the red crown of his head, emulating a sparkle in his eye. “Sounds... interesting!”
+He whirled about, rummaging through a nearby cabinet until he pulled out a handful of fake moustaches.
+“Count me in! I wouldn’t mind rummaging through old dusty artifacts without having to dive balls-deep into a Derelict!”
+Kapak picked up the now talking head and placed in the corner of the bio lab, hopefully in a place where it’s babbling wouldn’t disturb anyone.
+“Oi, Mephalus! Gorrus, you too! Watch the bio lab, make sure that experiment 434-D gets its nutrient supply refilled!” Kapak pointed to the corner of the bio lab where Devros would’ve been able to see two of Kapak’s engineers playing an improvised game of Komi using bullet casings as the stones. They nodded absentmindedly in response to the Nidus.
+“Right! Let us go, then!”</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/4404de0ba7e5c9a4d627695dfa3192f4-7C2F8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Rozencratz#3124" data-user-id="339116401815977986" style="color: rgb(135,157,189)">Rozencratz - Sonera</span>
+
+
+        <span class="chatlog__timestamp">06-Oct-18 12:58 PM</span>
+
+            <div class="chatlog__message " data-message-id="498177349531992095" id="message-498177349531992095">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Devros von Inie
+Devros slapped his hands together in a grand gesture
+
+“Marvelous! An&#39; yer &#39;ill fend more dan jist auld dusty artifacts. Oi &#39;av seen me share av wacky gadgets dare” He shrugged his shoulders “Oyt av place but who cares?! Andele!
+
+He leads the way out of the bio lab and turns to head down towards the hangar
+
+“Vuko said &#39;e’d join too, don’t nu if eh finished preppin&#39; yet. Maybe he already waitin&#39; aye?”
+
+He glances towards the Nidus as he walked on, catching the fake moustaches which caused the Oberon to let out a low giggle.
+
+“Ey, dat actually weurks?”
+
+He points at the mustaches in his friends hands.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/b03fcd29a75bcceadb0df5c8129d39ef-42318.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="jado the man#0685" data-user-id="136944676849582080" style="color: rgb(173,20,87)">Almighty_Jado - Kapak</span>
+
+
+        <span class="chatlog__timestamp">06-Oct-18 01:01 PM</span>
+
+            <div class="chatlog__message " data-message-id="498178011816919061" id="message-498178011816919061">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><u>Kapak:</u>
+“Ninety percent success rate!” Kapak smiled toothily as he held one of them over his face.
+“All the time! Sometimes!”
+He waved his hand at the Oberon and turned back towards his workstation and began to wipe down the surface with a cloth he procured from another drawer.
+“I’ll just finish sanitizing the lab and I’ll meet with you at the place- it’s probably for the best, since I don’t want Boss man breathing down my arse anymore than he already is. Don’t worry though, I’ll be right behind you! Just transmit the location to me and I’ll see you there!”</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/4404de0ba7e5c9a4d627695dfa3192f4-7C2F8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Rozencratz#3124" data-user-id="339116401815977986" style="color: rgb(135,157,189)">Rozencratz - Sonera</span>
+
+
+        <span class="chatlog__timestamp">06-Oct-18 01:05 PM</span>
+
+            <div class="chatlog__message " data-message-id="498178951144013846" id="message-498178951144013846">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Devros von Inie
+The Oberon chuckles and shakes his head at his friends antics.
+
+“Pure, clap yer dare”
+
+He rounds around the corner but then remembers something and quickly pokes his head through the bio lab to say
+
+“Maybe try an&#39; fend a trench coat? Jist a suggesshun!”
+
+With that he pulls back and heads towards the hangar with hard clanks of his hoofed feet hoping his other companion will be waiting for him there</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/a61ca3ad057e19655043ca7f29c5f0f3-83927.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="TheFafalStudios#8672" data-user-id="236097848586797057" style="color: rgb(204,85,0)">TheFafaltudios - Vuko</span>
+
+
+        <span class="chatlog__timestamp">06-Oct-18 01:07 PM</span>
+
+            <div class="chatlog__message " data-message-id="498179397485068309" id="message-498179397485068309">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><u>Vuko:</u>
+    <em>In the hangar Devros’ companion is indeed waiting for him. He looks freshened up, his hair still a bit wet, but other than that ready to go. His Orokin-styled armor is covered in a dark grey cloak, which is supposed to conceal the gold and help him fade into the crowds.</em> - “Took ya long enough.” - <em>He nags the messy-haired boy.</em> - “So! What kind of security systems are we talking about? Cameras? That’s a given. Pressure sensors? Laser detectors? Vacuum chambers? Should I bring along vault cracking equipment? Ya gotta give me something. I can’t go in blindly.” - <em>Vuko says in a quick manner, bombarding his colleague with questions that seem to be burning on his mind.</em> - “Talking of vision, you got the schematics of the place, right? Please tell me you got the schematics.”</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/4404de0ba7e5c9a4d627695dfa3192f4-7C2F8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Rozencratz#3124" data-user-id="339116401815977986" style="color: rgb(135,157,189)">Rozencratz - Sonera</span>
+
+
+        <span class="chatlog__timestamp">06-Oct-18 01:08 PM</span>
+
+            <div class="chatlog__message " data-message-id="498179844836687873" id="message-498179844836687873">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Devros von Inie
+The flora painted Oberon rounds up the corner and sees Vuko standing in the hangar and waiting for him which made him relieved…he’s already 10 min behind schedule! But, the others vigorous and eager questions had him pause mid step to his way to his run down and dull Scmitar landing craft. If warframes had brows then the Oberon’s would definetlly furrow as he lifts his expressionless face towards Vuko
+
+“&#39;ooooauld up dare mucker”
+
+He starts walking towards the other, his right hand raised as a mock stop indicator to the other
+
+“Either yer got de wrong idea or yer are really itchin&#39; for sum craic, aye? Dis is a friendly gatherin&#39; fer trinket enthusiasts. We ain’t stealin&#39; but participatin&#39;. &#39;owever…”
+
+He stops in front of the mannered boy and leans forward a bit so that his face is on level with the others
+
+…disorder isn’t dat uncommon.”
+
+He playfully smirks and straightens up.  Well...that was a bit of a lie but there is something that is supposed to be at that auction that Devros is not leaving without and if that means causing a scene and/or stealing it then so be it. Twirling on his hoofs he heads back towards his landing craft, speaking over his shoulder on the way
+
+“Yer can join me on me orbiter or folly wi&#39; yisser own, make it snappy! We be behind schedule!”</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/a61ca3ad057e19655043ca7f29c5f0f3-83927.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="TheFafalStudios#8672" data-user-id="236097848586797057" style="color: rgb(204,85,0)">TheFafaltudios - Vuko</span>
+
+
+        <span class="chatlog__timestamp">06-Oct-18 01:09 PM</span>
+
+            <div class="chatlog__message " data-message-id="498179926168436737" id="message-498179926168436737">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><u>Vuko:</u>
+    - &quot;I&#39;m definitely coming with. I... uhhh... love that dog of yours. Yes! I want to spend more time with him!&quot; - <em>He says as he turns to follow the Oberon, making oddly fast steps, as if they were unnatural for a human, quickly catching up to Devros. As he walks besides his companion, he mutters into his comms as quietly as possible.</em> - &quot;Ide, pack the vault cracking equipment.&quot; - <em>Vuko then quickly turns towards his friend, and tries to come up with something to talk about, which seems off-putting as he doesn&#39;t chit-chat normally.</em> - &quot;So.. uh.. how&#39;s he been doing?.. Your doggo I mean... Did you... bathe him lately?&quot;
+
+~If one had a keen enough sense, or a scanner constantly looking for something, he would be able to notice that the duo is not alone in the hangar, and there is in fact something following them closely. Something invisible, that will climb into the Scimitar as soon as the ramp lowers.~</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/4404de0ba7e5c9a4d627695dfa3192f4-7C2F8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Rozencratz#3124" data-user-id="339116401815977986" style="color: rgb(135,157,189)">Rozencratz - Sonera</span>
+
+
+        <span class="chatlog__timestamp">06-Oct-18 01:25 PM</span>
+
+            <div class="chatlog__message " data-message-id="498183953300193320" id="message-498183953300193320">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Devros von Inie
+The Oberon pauses for a split second as the talk of his beloved companion came up
+
+“A-ah, Garhul &#39;ill not be comin&#39;, last time oi did, it caused a bit av a ruckus wi&#39; de auctioneers..”
+
+He shrugged as he stepped inside his landing craft and stepping to the side for Vuko to enter in to the cramped space
+
+“Oy wus oi ter nu dat &#39;is pelt is dat valuable?”
+
+He chuckled under his breath and as soon as Vuko (and the mysterious lurker) strap on he will flick the switch and lift off, projecting the hunk of metal towards his Orbiter that is hanging on the outskirts of Lua</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="498184000280461312" id="message-498184000280461312">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><em> </em>
+20 min later
+Amalthea on Jupiter is no a popular place, it’s just a Corpus Gas City built for harvesting the resourses in the atmosphere of this powerful planet. You’d think that mostly those that are mad or those whose greed knows no bound find themselves here, to work in this harsh environment. Either though punishment or vision, you are here – but! Not today!
+
+Today is a very special day for those that call Amalthea their home/work place, it is a time when the Cobalt Needle Syndicate opens their floating auction house to all…well to all that know of the event. They are not very known by the general public nor do they want to be, but they did build a reputation for themselves among small circles as the best scavengers on this side of the galaxy. Is there a unopened vault somewhere? You can bet your skooma – I mean credits that they have cracked it by now. Is that a Tenno Orbiter floating out here? Zoinks! They have it in their hangar. A unknown Orokin artifact existing somewhere? Yup, it’s in their inventory. Risk their crazy lives to get a data mass that contains the thoughts of a Oroking researcher from a infested ship? Oh look, it’s in their hands. They work for their own gain, answering to none and caring about none too for all they care are recovering and selling anything that looks old or mysterious enough. Time is credits and these fellas are selling theirs for steep prices.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="498184051870400512" id="message-498184051870400512">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><em> </em>
+Once every eight years the Cobalt Needle open their floating auction house to those that know of it, each time parking it by various stations to refill the heavy ship before it jettisons off for years of scavenging.  The floating auction house itself is just a retrofitted Corpus war ship to contain +40 levels of storage units and hangar bays that get filled up with a very varying degree of items. And of course, the multiple auction rooms that are lined across the top floor where they sell most of their findings to the highest bidder and everyone knows – or at least, those that are in such circles – that the Cobalt Needle Syndicate never disappoints, they offer some of the most intriguing and unique items, most that you get to see only once in your lifetime in their auction houses before some rich bastard takes it. 
+
+There are no invitations going out to call for participants for it is not some common open house where just anyone can waltz in and bid, oh no! Currency circles around this by the millions and not many are willing nor have that kind of amount on them. The Cobalt Needle is a syndicate that cares not for small fries, it’s either you bet big or go home. But, as all interesting things, words spreads fast about it and each docking more and more people gather to witness the exotic it holds onboard. Invitations are not needed anymore when you attract them just by existing – now that is a business goal.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="498184117922430977" id="message-498184117922430977">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><em> </em>
+And, being chosen as the refueling station for such a event is something akin to a honor among the Corpus that know of it, cause it attracts a lot of wealthy Condors up to your doorsteps where you can charge them anything you like for the parking fee and other trinkets or even sell them the nasty rations that they eat on a daily basis. It’s like New Year…if it cost billions.
+
+As Devros’ Orbiter approaches Jupiter, Vuko can see from the window inside the messy haired boys private quarters (where the tour of the ship brought them) a massive ship, almost the size of the Gas City itself, floating alongside it with three tubes connecting Amalthea to the floating auction house. In appearance it looks vaguely like any other brigade but the paint alongside it is pitch black with a name alongside the left side in off-white that reads “Harlegand” Two copies of the same glyph resting on both sides of the ship that descript a yellow Kuaka that is being pierced through the head by a cobalt colored needle. There is no mistaking it, the floating auction house has arrived already and Vuko can see that things on Amalthea are very different from what he’s used to seeing.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="498184158045011968" id="message-498184158045011968">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><em> </em>
+The entire Gas City is overflowing with ships, some Corpus, some Grineer, even other Tenno Orbiters are resting around the busy docking areas. Even through Jupiters clouds, Vuko can see a lot of bussle and hussle going on at the surface of the City, as if the entire station just transformed from a resourse outpost to a entertainment and shopping center. Vendors out and about selling their poor trinkets, food being distributed through flimsy cups, parking officers keeping a eye on the docking ships and well dressed people walking through it all towards one of the entry tubes. It is clearly one heck of a event. Of course, seeing as how there are many races mingling about the security is tighter than ever and there are drones watching everything from above, keeping a eye on public peace.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="498184200134983692" id="message-498184200134983692">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><em> </em>
+Devros von Inie
+“Glorious, is it not?!”
+
+Devros squeals out, now out of his Oberon and dressed in his standard Varida suit, the excitement evident in his voice and gleaming golden/emerald eyes. This will be his second trip to the Harlegand ,and just as the first time, he finds himself unable to contain the bubbling itch. There is no erasing the wonders he has seen onboard that ship eight years ago and he’s sure that the same thing awaits him this time as well. He glances at Vuko from the corner of his eyes to see the others expression but coaxes him otherwise
+
+“Com, com! we &#39;ill be landin&#39; soon!”
+
+He turns to make his way out of his jungle like quarters. There are vines coiling alongside the walls, the floor – that was once usually metal – is now riddled with grass and flowers. The fish tanks beaming with activity and there are many caged Kuaka on the shelves of the room. Then again, that’s how most of his ship looks like so his quarters is nothing special…there is just less grass everywhere than in here and he’s still unsure as to how his traveling companion managed such a feat but he avoids asking such questions – just let her do what she wants as long as she keeps breeding those delicious animals!
+
+The excited Tenno exits his room and heads across his flora infested ship to the Navigator. He meets his traveling companion – the always present Titania specter – tending to a patch of Moonlight Jadeleaf near the relic refinement segment. He gives her a simple nod and stomps towards the large window to see everything in far greater width.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/a61ca3ad057e19655043ca7f29c5f0f3-83927.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="TheFafalStudios#8672" data-user-id="236097848586797057" style="color: rgb(204,85,0)">TheFafaltudios - Vuko</span>
+
+
+        <span class="chatlog__timestamp">06-Oct-18 01:29 PM</span>
+
+            <div class="chatlog__message " data-message-id="498185136911941656" id="message-498185136911941656">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><u>Vuko:</u>
+    - “Wow....” - <em>He says quietly in amazement as the city along with the enormous auction house comes into view.</em> - “I thought it’s going to be... smaller? I guess?.. And more exclusive?...” - <em>His eyes pacing back and forth, trying to memorise the layout of the city, ships, and the cruiser.</em> - “How is anyone supposed to find anything in here? It’s like looking for a needle in a haystack.” - <em>He says as he follows in Devros’ steps, trying not to trip over any flora.</em></span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/4404de0ba7e5c9a4d627695dfa3192f4-7C2F8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Rozencratz#3124" data-user-id="339116401815977986" style="color: rgb(135,157,189)">Rozencratz - Sonera</span>
+
+
+        <span class="chatlog__timestamp">06-Oct-18 01:44 PM</span>
+
+            <div class="chatlog__message " data-message-id="498188890964885519" id="message-498188890964885519">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">(Size difference and locations of the Gas city to the Harlegand)</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="498188938586882049" id="message-498188938586882049">
+
+                    <div class="chatlog__attachment">
+                        <div class="" onclick="">
+                            <div class="">
+                                    <a href="side-story-03.html_Files/Devros_rp_3-5DB9A.png">
+                                        <img class="chatlog__attachment-thumbnail" src="side-story-03.html_Files/Devros_rp_3-5DB9A.png" alt="Image attachment" title="Image: Devros_rp_3.png (539.48 KB)">
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="498188977317085188" id="message-498188977317085188">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Devros von Inie
+He glances towards Vuko and smirks
+
+“It waz…from waaat oi &#39;eard de aucshun gaff started from de back alleys av Venus. A couple av desperate Solaris jist itchin&#39; for sum queck earnin&#39; ter pay bak deir debt as fast as possable an&#39; well…word got oyt, it expanded, they bought dis ship &#39;ere they are nigh, pullin&#39; in sum av de richest masses in de sytum.”
+
+He returns his gaze towards the window as the Orbiter flies around the station, maneuvering around the other flying ships. He leans over the navigator and punches in a couple of commands to keep the orbiter steady since he has no Cephalon at the moment to automatically do it.
+
+“Oh…they &#39;av almost al&#39; av their &#39;aul in a digital list, easy ter fend things dere…if yer nu waaat yer are lookin&#39; for…if not den somethin&#39; might fend yer!”
+
+He playfully winks at the other before looking back at his sensors.
+
+“Betta leave it at de outskirts,  we &#39;ill drop down via craft.”
+
+Devros twirls on his heels and heads down towards his landing craft. Along the way, as he passes his foundry system, he pulls out from it the Kuaka arfiact that Vuko has seen before and boards his vessel, he will wait for Vuko before departing towards the gas city.
+
+“Ah and…if anyone asks…ye work fer me. &#39;opin&#39; not a problem aye?”
+
+He will offer another playful wink, but this one more silly as his whole face twists down to pull that one eyelid making him look sort of comical</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/a61ca3ad057e19655043ca7f29c5f0f3-83927.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="TheFafalStudios#8672" data-user-id="236097848586797057" style="color: rgb(204,85,0)">TheFafaltudios - Vuko</span>
+
+
+        <span class="chatlog__timestamp">06-Oct-18 01:45 PM</span>
+
+            <div class="chatlog__message " data-message-id="498188995121905665" id="message-498188995121905665">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><u>Vuko:</u>
+    - “Solaris? Are they some kind of sun worshipers?” - <em>He looks at Devros with a clear look of confusion. The Tenno did not have much time to catch up on all the current events and factions due to other things always taking priority. Like shaking off the tail of the grineer empire, who have been tracking him since his awakening in one of their excavation sites.</em> - “They did achieve quite a lot. I can respect that.” - <em>He exclaims, looking away for a moment to admire the cruiser. He snaps back to his companion as he mentions a list.</em> - “A catalogue you say? Hmmm... Where could I access one of those?” - <em>When the messy haired boy mentions using the craft alone, the Tenno simply nods and begins to pace behind his host. As they enter the landing craft Vuko’s eyes shift for a moment at one of the pockets above the ramp, almost like he was checking if something is there, even though it was clearly empty.</em> - “Uhhh... sure. I trust you have a valid reason, and I’m not gonna question it.” - <em>As Devros tries to do his wink, Vuko will cringe lightly and nod out of politeness.</em> - “Let’s roll then! I’m very curious as to what we’ll find there.”</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/4404de0ba7e5c9a4d627695dfa3192f4-7C2F8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Rozencratz#3124" data-user-id="339116401815977986" style="color: rgb(135,157,189)">Rozencratz - Sonera</span>
+
+
+        <span class="chatlog__timestamp">06-Oct-18 01:45 PM</span>
+
+            <div class="chatlog__message " data-message-id="498189091054288916" id="message-498189091054288916">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Devros von Inie
+His head reels back in disbelief as the other didn’t know of the Solari. Has he been going out?! Or Mata keeping a tighter leash? Then again, this system is vast and people live out their lives on one planet let alone know what’s going on 4 moons away. The glasses wearing Tenno closes the entrance of the landing craft as soon as Vuko stepped in. While punching in some of the commands, he speaks over his shoulder to Vuko
+
+“Paddy, after dis oi’m takin&#39; yer dare ter clap fer yerself, nu av a class boozer dare dat is alwus lively.”
+
+He pauses and turns to look towards Vuko, eying the other from the tips of his hair to the soles of his boots, as if looking for something with that intense golden gaze of his. Then, with a smile, he turns his head back towards the navigation and continues his button pressing as he speaks in his dense accent.
+
+“Oi’m sure yer &#39;ill loike it.”
+
+He smirks and braces as the Scimitar craft whirrs and ejects from the Orbiter, wiggling towards the Gas City. The smooth ride doesn’t take too long for it to reach the landing area of the floating outpost, maybe 2 min at best.
+
+A light shake tumbles across the landing craft as it hits the ground and the doors twirl open to reveal the overcrowded hangar that was once the naked roof of the outpost, but now fitted to house ships of all sizes and designs. It’s a very crowded assortment despite it being out in the open. The walkways on the other hand are as barren as a desert since everyone have already scurried inside the auction house. Not a soul in sigh apart from the workers that are shuffling about checking who paid what parking fee and checking the elevators that are lined up against the left corner. The travel miles these elevators have traveled now...
+
+Devros steps out of his craft, smiling like a little kid, and turns to Vuko with his eyes bright of excitement</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="498189109718679552" id="message-498189109718679552">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><em> </em>
+“De Catalogue &#39;ill be inside, they &#39;av a speshal room dedicated jist for dat. But! More importantly!”
+
+He twirls around on his heels with the grace of a tango dancer, to look towards the walkways. Narrowing his eyes, he frowns and mutters under his breath
+
+“Wha is dat infested sikat? Tart &#39;e’d be &#39;ere already.”</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/a61ca3ad057e19655043ca7f29c5f0f3-83927.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="TheFafalStudios#8672" data-user-id="236097848586797057" style="color: rgb(204,85,0)">TheFafaltudios - Vuko</span>
+
+
+        <span class="chatlog__timestamp">06-Oct-18 01:45 PM</span>
+
+            <div class="chatlog__message " data-message-id="498189139624198148" id="message-498189139624198148">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><u>Vuko:</u>
+    <em>At the mention of a ‘boozer’ or what Vuko assumes is a bar, his eyes light up and he responds to Devros in a lively manner.</em> - “Deal. I love exploring such... uhh... fine establishments.” - <em>His face frowns in a confused manner as he is friends gaze scans his attire, but other than making a weird face he remains silent, assuming it’s all being done for a reason.</em>
+
+    <em>Vuko follows his companion outside, his cloak swaying with a quiet whoosh from the heavy strides. Upon</em> <em>noticing how empty of people the hangar is, he comments.</em> - “Well, we are late just like you said. And there is no Kapak in sight... great... Can you call the dumbass and tell him to hurry up?”</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/4404de0ba7e5c9a4d627695dfa3192f4-7C2F8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Rozencratz#3124" data-user-id="339116401815977986" style="color: rgb(135,157,189)">Rozencratz - Sonera</span>
+
+
+        <span class="chatlog__timestamp">06-Oct-18 01:46 PM</span>
+
+            <div class="chatlog__message " data-message-id="498189262743928832" id="message-498189262743928832">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Devros von Inie
+The bulky build boy frowns, one corner of his lips pulling down accompanied by a light wrinkling of his brows. He pulls out his data pad and punches in the infested frames number, hoping he’d reach him. As his pad rings he starts walking towards the elevators, motioning to Vuko to follow him.
+
+“Oi swear, if &#39;e’s still back at de base oi won’t let ‘im ayt me cookin&#39; nomore.”
+
+A subtle smirk spread across his face as he finished what he said, unable to keep a straight face at that joke. BUT STILL! Deadlines!</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/b03fcd29a75bcceadb0df5c8129d39ef-42318.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="jado the man#0685" data-user-id="136944676849582080" style="color: rgb(173,20,87)">Almighty_Jado - Kapak</span>
+
+
+        <span class="chatlog__timestamp">06-Oct-18 01:48 PM</span>
+
+            <div class="chatlog__message " data-message-id="498189768719466506" id="message-498189768719466506">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><u>⇝Helminth:</u>
+<div class="pre pre--multiline language-diff">-WHO DARES SPEAK TO THE MASTER? DOES THOU PRESENT THYSELF IN A MANNER  HUMBLE ENOUGH TO.... OH. DEVROS VON INIE. IT IS WITH GREAT PLEASURE THAT I ADDRESS YOU. DO YOU WISH TO SPEAK WITH MY MASTER? I BELIEVE HE IS CURRENTLY DEPLOYED INTO THE DEN OF MERCHANTS, AMONGST THE LEGION OF THE OLD FAMILY. HIS FLESH HOLDS A SUBSTANTIAL QUANTITY OF THE LIQUID FIRE... SHALL I DEPOSIT A POINT TO SHOW YOU THE WAY?</div></span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/a61ca3ad057e19655043ca7f29c5f0f3-83927.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="TheFafalStudios#8672" data-user-id="236097848586797057" style="color: rgb(204,85,0)">TheFafaltudios - Vuko</span>
+
+
+        <span class="chatlog__timestamp">06-Oct-18 01:51 PM</span>
+
+            <div class="chatlog__message " data-message-id="498190499870539776" id="message-498190499870539776">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><u>Vuko:</u>
+    - “So you’re telling me the bastard went ahead without us? Ugh.” - <em>He says in a very much annoyed voice as he shifts his balance from leg to leg getting anxious to get moving.</em> - “Let’s just go Devros, I’m sure we’ll have plenty of time to find him once we’re there. It’s not like we aren’t looking for a giant, towering Nidus with a moustache. He’s pretty easy to spot.” - <em>He says, itching to get moving, while gesturing towards the elevators, where he assumes they have to go.</em>
+
+~As the two chat, call, and try to find each other, the mysterious invisible something is following up to them once again. And just as before, someone with an advanced enough scanner, dedicated to finding the hidden, would be able to pick it up.~</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/4404de0ba7e5c9a4d627695dfa3192f4-7C2F8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Rozencratz#3124" data-user-id="339116401815977986" style="color: rgb(135,157,189)">Rozencratz - Sonera</span>
+
+
+        <span class="chatlog__timestamp">06-Oct-18 01:52 PM</span>
+
+            <div class="chatlog__message " data-message-id="498190876212985859" id="message-498190876212985859">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Devros von Inie
+*Devros pursed his lips as the vocal Cephalon spoke through his pad. ”Never git used ter dat voice.” He chuckled under his breath as he called the elevator. It didn’t take it that long to come up and with a ding it announces it’s arrival. The messy haired boy speaks to the Cephalon as he gets on
+
+“Trollied already &#39;uh? Well…tell &#39;imself ter wait fer us in de catalogue room…. if yer man passed by de chicken&#39;s greg” (check point)
+
+As soon as Vuko (and the mysterious invisible presence) get on, he will press the lowest button on it to start the descend. Unless the Cephalon has anything to say to him, he will shut off the data pad and pocket it in one of the leg pockets he made in his suit. If it’s one thing that Devros hates about the current state of the Tenno wardrobe is that they all LACK POCKETS!
+
+“Let’s &#39;ope yer man didn’t trash anythin&#39; aye?”
+
+---A couple of seconds later and the elevator slows down, jerking at the stop and with a hiss the door opens. Devros and Vuko will be presented in to a long, very lit corridor, and at the end of it is a terminal upon which two Corpus guars sat at, dressed in black jumpsuits with purple linings.---
+
+Devros von Inie
+“Oi assume yer did as oi towl an&#39; lef anythin&#39; deadly on board?”
+
+He eyes the other from the corner of his vision as he started walking towards the check point.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/b03fcd29a75bcceadb0df5c8129d39ef-42318.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="jado the man#0685" data-user-id="136944676849582080" style="color: rgb(173,20,87)">Almighty_Jado - Kapak</span>
+
+
+        <span class="chatlog__timestamp">06-Oct-18 02:17 PM</span>
+
+            <div class="chatlog__message " data-message-id="498197011842072606" id="message-498197011842072606">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">~Helminth remained silent, either having hung up on Devros, or just shunning him with silence. One could never tell with such a strange pile of data.
+Still no sign of Kapak, however. The Infested Oaf must be up ahead.~</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/a61ca3ad057e19655043ca7f29c5f0f3-83927.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="TheFafalStudios#8672" data-user-id="236097848586797057" style="color: rgb(204,85,0)">TheFafaltudios - Vuko</span>
+
+
+        <span class="chatlog__timestamp">06-Oct-18 02:24 PM</span>
+
+            <div class="chatlog__message " data-message-id="498198814377771020" id="message-498198814377771020">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><u>Vuko:</u>
+    <em>He follows Devros in step, making little to no sound as usual, just nodding along as they enter the elevator. Vuko goes through the door with quick and short steps, as to make sure the cloak covering his armour does not reveal anything, but comes to a halting stop as his companion pops the question.</em> - “<strong>I</strong> didn’t bring anything.” - <em>He responds in a sly manner, while at the same time gesturing a stop sign behind himself with the hand that’s further away from the messy haired boy. He then proceeds to unconspicuosly scan the entire room for cameras, scanners, vents, consoles, or anything that would help him bypass the guards.</em></span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/4404de0ba7e5c9a4d627695dfa3192f4-7C2F8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Rozencratz#3124" data-user-id="339116401815977986" style="color: rgb(135,157,189)">Rozencratz - Sonera</span>
+
+
+        <span class="chatlog__timestamp">06-Oct-18 06:06 PM</span>
+
+            <div class="chatlog__message " data-message-id="498254861356236810" id="message-498254861356236810">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">---As Vuko looks around he will spot that the hallway itself is one of those temporary joints. The walls and floors are made out of cheap materials, parts are not even covered with metal, just the wiring hanging loose in the walls. Along the right facade, Vuko will spot a low hanging vent that is mot likely the air ventilation system for this joint. But, just as this entire hallway, that too is made flimsy and in a hurry, would mostly likely take one tug to pull the grid off---
+
+Devros von Inie
+He narrows his twinkling eyes at his friend&#39;s choice of tone when he spoke. His gaze traveling across his form as if looking for anything concealed in his robes, but seeing no unusual bulges anywhere he shrugs his shoulders and walks on.
+
+---As soon as the duo get within a close enough distance, the two Corpus guards step forward, one of them – the one on the right with a slightly brighter purple colors – motions for the duo to stop---</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="498255004071886859" id="message-498255004071886859">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><em> </em>
+Corpus guard 1
+“Damn! Never pegged you as a lazy fella. Draft already started“
+
+ Spoke the bright purple one in a slurry rough tone as if he’s speaking through rubble. He drops his hands to grab on to both sides of his hip, his posture relaxed and calm. You can almost feel the smirk resting behind his helmet.
+
+Devros von Inie
+The glasses wearing Tenno puffed air through his nose, a smirk of matching sass spreading across his face
+
+“Even after al&#39; dees years, ye still on chicken&#39;s greg point duty? Waaat? Didn’t collect enoof points fer a upgrade?“
+ 
+Corpus guard 1
+He scoffed, lifting his arms up from his hip to cross them over his chest in a more defiant stance
+
+“Psh! I’m not upgrading to hangar duty, ain’t got the medical to cover all the back ache.”
+
+Devros von Inie
+Devros throws his hands up in a shrug, his eyes traveling to the side to add to the motion
+
+“Well &#39;ey, at laest they &#39;av better pay.”</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="498255077379801099" id="message-498255077379801099">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><em> </em>
+Corpus guard 1
+The black jumpsuit wearing Corpus let out a grumble that can be both interpreted as a very grumpy laugh or another more deeper scoff…my money is on the later. He uncoils his right hand from their previous lock across his chest and waves it in the air in a dismissive manner.
+
+“Anyways, you know the drill and…”
+
+He trailed off as he lifts his helmet, his cyan visor falling on Vuko
+
+“Who’s this?”
+
+Devros von Inie
+With that dumb smile of his, he lifts his palm up and will roughly slap it on the others shoulder
+
+“Dis is me new scrounger. Gran&#39; wan too, managed ter fend dis fer me”
+
+He lifts his palm from Vuko to dig through his makeshift pockets and pull out the Kuria, throwing it towards the guard.
+
+Corpus guard 1
+He snatches the ornament from the air in one smooth motion and brings it closer towards his visor
+
+“Oooooh! This is a treat indeed! Haven’t seen that many of em, and with a low pitch too”
+
+He twirls it around his hand for a moment before handing it over to his partner.
+
+“Run that through”
+
+He orders and the other quickly scurries towards the terminal to put it through the scanner that determines if it’s a fake or not.
+
+“This is a much better pawn than that garbage from last time, what was it? A Paris prime bow?”
+
+The lighter purpled guard spoke through a grin as he unclenched his pocked scanner and stepped to the side, motioning for Vuko to step up towards him with a coaxing gesture of his hand.
+
+“Hope he told you about the policy here eh? Don’t worry, light check up cause we can’t have every rabble rouser bringing in weapons in there, not after the dock at Lua.”(edited)</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/a61ca3ad057e19655043ca7f29c5f0f3-83927.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="TheFafalStudios#8672" data-user-id="236097848586797057" style="color: rgb(204,85,0)">TheFafaltudios - Vuko</span>
+
+
+        <span class="chatlog__timestamp">06-Oct-18 06:14 PM</span>
+
+            <div class="chatlog__message " data-message-id="498256701724557323" id="message-498256701724557323">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><u>Vuko:</u>
+    ’Darn. This won’t do at all.’ - <em>He thinks upon noticing the shoddy vent.</em> - ‘This’ll collapse even if I tried to climb into it, never mind her. Guess I’ll have to do it the other way. Here’s hoping that they’re dumb enough for it to work.’
+    <em>After stopping as instructed by the guards, he gives a curious glance towards one, and then the other as they chat away with Devros. Vuko proceeds to just stand there, until being represented as a ‘scrounger’ - whatever that is supposed to be - to which he replies with a simple nod.</em>
+    <em>As the first guard mentions a ‘check up’ and ‘weapons’ Vuko sees his moment and speaks up.</em> - “Go ahead then. Make sure I don’t have anything you deem a <em>weapon</em>.” - <em>With that, Vuko does raises both his hands, hoping that the jagged nature of his armour, covered by the cloak, will raise suspicion, as the fabric tightens around the metal parts.</em>
+
+~In the meantime, the invisible figure will attempt to sneak by the guards by waiting for one of them to come and check up on Vuko, by hugging one of the corridor walls.~</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/4404de0ba7e5c9a4d627695dfa3192f4-7C2F8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Rozencratz#3124" data-user-id="339116401815977986" style="color: rgb(135,157,189)">Rozencratz - Sonera</span>
+
+
+        <span class="chatlog__timestamp">07-Oct-18 07:17 AM</span>
+
+            <div class="chatlog__message " data-message-id="498453749728280586" id="message-498453749728280586">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">---Lucky for Vuko, one of the guards was focused on him while the other was scanning the Kuria, so this invisible presence slipped by without a hitch---
+
+<strong>Corpus guard 1</strong>
+He turned on the scanner and started to run it up and down the boys body, looking for any outlines that might point to possible hidden weapons. The jagged construction of his armor did raise a eyebrow but the scanner didn’t pick up on any real danger…even thought he’s sure that the Tenno can poke a eye out with those shoulders.
+
+Satisfied with the scan, the turns it off and straightens up, taking two steps backwards from Vuko
+
+“Alright, you’re clean…but careful with those pointy things eh?”
+
+<strong>Devros</strong>
+The messy haired fellow smirked and slapped the shoulder of the Corpus guard in a playful manner
+
+“Don’ worry! &#39;e’s gran&#39;! as scon as I”
+
+<strong>Corpus guard 1</strong>
+He scoffed and shook his shoulder
+
+“I’ll humor you, just cause I know you’re not stupid enough to bring in weapons”
+
+<strong>Devros</strong>
+He chuckled under his breath
+
+“Awwww oi knew yer &#39;ad &#39;eart.”
+
+<strong>Corpus guard 2</strong>
+Before the other had a chance to throw a backlash to that, the guard scanning the Kuria lifts his head up towards his superior
+
+“It checks out, worthy for the next flight”
+
+He simply states
+
+<strong>Corpus guard 1</strong>
+The other one nodded his heavy helmed head and turned his cyan visor towards the two Tenno
+
+“Go on then, you know where the Catalogue room is so run before the good stuff is snagged”
+
+<strong>Devros</strong>
+He smiled and nodded his head, walking past the check point and motioning to Vuko to follow
+
+“Tell Efus oi said &#39;owaya!”
+
+He hollered over his shoulder as he briskly walked towards the door at the end of the hall
+
+“Now…the rayle craic begins!”
+
+He stated with a excited tone as he glanced towards the other boy</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/a61ca3ad057e19655043ca7f29c5f0f3-83927.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="TheFafalStudios#8672" data-user-id="236097848586797057" style="color: rgb(204,85,0)">TheFafaltudios - Vuko</span>
+
+
+        <span class="chatlog__timestamp">10-Oct-18 03:12 PM</span>
+
+            <div class="chatlog__message " data-message-id="499660639724371978" id="message-499660639724371978">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><u>Vuko:</u>
+    <em>He follows Devros, walking by his right side, with a big cheery smile on his face.</em> - “Let us see if this place is really all you tell it up to be! I have a weird feeling in my gut that’s telling me this is going to be a fun trip!”</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/4404de0ba7e5c9a4d627695dfa3192f4-7C2F8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Rozencratz#3124" data-user-id="339116401815977986" style="color: rgb(135,157,189)">Rozencratz - Sonera</span>
+
+
+        <span class="chatlog__timestamp">11-Oct-18 01:17 PM</span>
+
+            <div class="chatlog__message " data-message-id="499994044794011648" id="message-499994044794011648">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Devros</strong>
+The bushy haired tenno smirked as his comrades remark, believing himself that this truly will be a exciting outing. Honestly…nothing can top this feeling.
+
+The boy lead the way down the hall, entering through it and leading Vuko towards the Y shaped corridor. He takes a left at the parting and approaches a grand door that has intricate patterns of iron flowers on it. It shimmers in a dim sapphire color, snakes of gold coiling around the rims and meeting at the middle, both hissing at each other. 
+
+As Devros approached it triggered the sensors and the snakes parted the doors to reveal the Directory.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="499994385392467988" id="message-499994385392467988">
+
+                    <div class="chatlog__attachment">
+                        <div class="" onclick="">
+                            <div class="">
+                                    <a href="side-story-03.html_Files/The_Directory-7D40E.jpg">
+                                        <img class="chatlog__attachment-thumbnail" src="side-story-03.html_Files/The_Directory-7D40E.jpg" alt="Image attachment" title="Image: The_Directory.jpg (195.95 KB)">
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="499994432918257664" id="message-499994432918257664">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">---A grand room means one of two things. It was either built to project power and standing or it’s purpose is pure function. The Directory of the Cobalt Needle Syndicate is a delicate thing, they have crates upon crates of rare and exotic goods, so if anyone hacks the list they can find out the location of such items onboard the Harlegand. To counter this they have built a room special just for that with it’s own central computer, managed by a unique Cephalon that is detached from the Weave. 
+
+As the doors parted the duo will be presented in to a wide and very well lit circular room. The entirety of it’s walls are covered by screens, all projecting images and words in the Corpus language. They flicker with a bombardment of information that if Vuko is curious enough to read will range from item descriptions to pictures and at what time the item is going to be auctioned at. The information doesn’t linger too long on any of the screens as the words and pictures slowly travel to the bottom before it is replaced by another set of items and images from the top.
+
+If you aim to make a full circle around the room then every 10 paces you will be greeted by smaller computer terminals with it’s screens waiting for input. They are mainly there for if anyone sees anything interesting from the main screens to look it up…or if they have a specific item to search for though key words.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="499994758530465797" id="message-499994758530465797">
+
+                    <div class="chatlog__attachment">
+                        <div class="" onclick="">
+                            <div class="">
+                                    <a href="side-story-03.html_Files/Cephalon_Heimdall-C3652.jpg">
+                                        <img class="chatlog__attachment-thumbnail" src="side-story-03.html_Files/Cephalon_Heimdall-C3652.jpg" alt="Image attachment" title="Image: Cephalon_Heimdall.jpg (125.71 KB)">
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="499994777853624320" id="message-499994777853624320">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">In the middle of the room is a grand gold ornamented pillar, framed on four points by additional outward facing screens and in the middle of it is the master of the room – Cephalon Heimdall. The stoic data being is projecting itself as a enormous rainbow feathered owl sitting atop of a floating branch, the colors mashing and fight one another on it’s glorious plumage, always shifting, always hungry for domination. The digital animal consumes the entire tip of the pillar as if it absorbed it but at the same time appearing like a large painting accompanying the room with the slightest of twitches of it’s head indicating that is indeed “living” 
+
+The digital animal simply looks at the arrivals as the doors open with it&#39;s dark orbed eyes but otherwise says nothing, continuing to silently sit on top of the branch, pressing it’s wings closer against it’s sides and only turning it’s head to gaze at the data dripping screens.</span>
+
+                                <span class="chatlog__edited-timestamp" title="11-Oct-18 01:27 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="499994836410171394" id="message-499994836410171394">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><em> </em>
+There are still people in the room, some going around it and browsing, some with their data pads recording the items they wish to buy and some just scrolling through one of the computer terminals. Legend says that you need to spend 1000 years reading in the Directory to engulf all of it’s information.---</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="499994875157020673" id="message-499994875157020673">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><em> </em>
+<strong>Devros</strong>
+The brutish looking boy smiles, his eyes hungrily scanning the screens, he nudges Vuko with a gentle jab of his elbow and motions with his chin to the right, where a table was set up containing a number of data pads
+
+“Grab yerself wan av dohs an&#39; start &#39;eadin&#39; raun de room, scan de screens maybe yer fend somethin&#39; yer loike aye?” 
+
+Devros walks over and takes one himself, it’s of simple design for mass production so it’s not very sturdy, but Vuko will find a search engine on it…all that is missing are key words that he might spot from the screens around the room or just stuff he might think the Syndicate might have in it’s vaults. Ask Cephalon Heimdall of how much the phrase “Primed pleasure rod” is searched…you’d be surprised of the result.
+
+“Nigh wha is dat infesto?”
+
+Devros hums as he turns around on his heels and looks about the room, trying to spot a tall Nidus…not a difficult task…right?</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/b03fcd29a75bcceadb0df5c8129d39ef-42318.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="jado the man#0685" data-user-id="136944676849582080" style="color: rgb(173,20,87)">Almighty_Jado - Kapak</span>
+
+
+        <span class="chatlog__timestamp">19-Oct-18 11:04 AM</span>
+
+            <div class="chatlog__message " data-message-id="502859503767781377" id="message-502859503767781377">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">~Across the room, almost masked by the glow of all the screens and the giant avian form of the Cephalon, Vuko or Devros may be able to make out a tall silhouette. A splash of familiar magenta appeared for a moment as it moved by a display.~</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/4404de0ba7e5c9a4d627695dfa3192f4-7C2F8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Rozencratz#3124" data-user-id="339116401815977986" style="color: rgb(135,157,189)">Rozencratz - Sonera</span>
+
+
+        <span class="chatlog__timestamp">23-Oct-18 11:12 AM</span>
+
+            <div class="chatlog__message " data-message-id="504311225824444416" id="message-504311225824444416">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Devros</strong>
+The beefy boy squints as his golden kissed eyes stop on a familiar sight. A wide smile started to crack across his expression as he reached out to tug Vuko by the… uhhhh… less pointy parts of his left sleeve.
+
+“Dare yer man is, de mucker”
+
+He huffed through his smile and started walking towards the fleshy colored blob.
+
+“Oi! yer mangy fecker! yer ditched us aye? So rude!”
+
+He hollered as he approached the Nidus with that wide friendly smile of his, aiming to land a playful punch to the others shoulder…or err…near it at least.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/a61ca3ad057e19655043ca7f29c5f0f3-83927.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="TheFafalStudios#8672" data-user-id="236097848586797057" style="color: rgb(204,85,0)">TheFafaltudios - Vuko</span>
+
+
+        <span class="chatlog__timestamp">27-Oct-18 06:00 PM</span>
+
+            <div class="chatlog__message " data-message-id="505863472563617793" id="message-505863472563617793">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Vuko:</strong>
+    The bright, vivid colours blinded him at first. Then, as his eyes slowly adjusted, his pupils shrinking, they became beautiful. Ecstatic even. He could not look away. The colours overtaking each other like waves fighting on the surface of the ocean were just hypnotising.
+
+    Devros tugging him by the sleeve had the effect of literally yanking Vuko out of a different reality, causing him to look around confused, like he had just woken up from a dream.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/b03fcd29a75bcceadb0df5c8129d39ef-42318.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="jado the man#0685" data-user-id="136944676849582080" style="color: rgb(173,20,87)">Almighty_Jado - Kapak</span>
+
+
+        <span class="chatlog__timestamp">28-Oct-18 09:51 PM</span>
+
+            <div class="chatlog__message " data-message-id="506283954312314891" id="message-506283954312314891">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">~Kapak was leaning against a holographic display case, a bright coloured drink in hand while he chatted with two Corpus- one of them was rather old, with wrinkles adorning his face and an uncharacteristic full head of fluffy, greyish hair. The other Corpus was younger, and looked almost unrecognizable to literally every other Corpus- thanks to genetic preferences- but was distinguishable by his facial tattoos- most of them were curse words written in Corpus block letters.
+Both of them wore some casual-formal Corpus wear, and were holding drinks not unlike the one in Kapak&#39;s hand, although the monstrous Nidus had a larger glass than the others.~
+
+<u>Kapak:</u>
+&quot;...and then I told her that it got really hard!!&quot; Kapak burst into laughter alongside the Corpus all of them giggling and trying to suppress their laughter by taking sips of their different beverages.
+&quot;Oh, man, I never thought I&#39;d run into you guys here. Actually I didn&#39;t even know this was a thing! How long have you been coming to this thing, Halcyon?&quot;
+
+<u>Halcyon:</u>
+The old Corpus responded.
+&quot;Well, it&#39;s not a common occurance, but I&#39;ve been coming to this little event here for years and years, whenever it opens. Or maybe it just feels like years and years. These old bones certainly feel that way.&quot;
+Halcyon shifted his drink from his right hand into the other, slowing winding his arm and rolling his neck.
+
+<u>Kapak:</u>
+&quot;The arthritis acting up again, huh?&quot; Kapak inquired, sipping from his drink, &quot;It figures- synovectomies don&#39;t really offer a permanent solution, and I can&#39;t ever fully eliminate autoimmune disorders without... y&#39;know... innnnnnn....vesting people.&quot;
+Kapak caught his words as some other wealthy looking Corpus strolled by, giving Kapak a dirty look.
+&quot;TAKE A PICTURE! IT&#39;LL LAST LONGER!&quot; Kapak spat at them, stroking his moustache while he glared at the passers without even using any eyes of his own.
+
+[1/2]</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="506284675694723073" id="message-506284675694723073">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><u>Halcyon:</u>
+&quot;Cyrus, how many times have you come?&quot; The old Corpus asked the younger.
+
+<u>Cyrus:</u>
+&quot;Oh, I dunno, probably like only 2. We stayed for a really long time the first time, so it felt like more. Wasn&#39;t here where we bought that super early prototype of the Lenz?&quot;
+
+<u>Halcyon:</u>
+&quot;You mean the one that exploded and killed that Perrin Sequence fellow at the shooting range when we went to go test it? <em>Ayuk</em>, it was. Hey, K, how did you find out about this place?&quot;
+
+<u>Kapak:</u>
+&quot;Oh, well I&#39;m with a new crew now, and one of the guys just mentioned it and it seemed interesting... in fact, there he is now! Hey, Devros!&quot;
+Kapak waved his hands at Devros and Vuko, who was trailing behind him.
+&quot;I didn&#39;t ditch y&#39;all, I just ran into these two muckers on the landing zone and hit the bar real quick. Anddddd from there we ended up here.&quot;
+Kapak shrugged before wrapping an arm around each Corpus, knocking Cyrus in the head with his drink.
+&quot;Cyrus, Halcyon, this is Devros and Vuko. Vuko and Devros, Cyrus and Halcyon.&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/a61ca3ad057e19655043ca7f29c5f0f3-83927.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="TheFafalStudios#8672" data-user-id="236097848586797057" style="color: rgb(204,85,0)">TheFafaltudios - Vuko</span>
+
+
+        <span class="chatlog__timestamp">05-Nov-18 09:27 AM</span>
+
+            <div class="chatlog__message " data-message-id="509010754645655555" id="message-509010754645655555">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Vuko:</strong>
+    After being almost literally dragged across the room towards Kapak and his friends, he stood still, watching their faces with an uncanny fascination as if they were all one big Jackson Pollock painting. His eyes jumping from the weird Nidus to one corpus, then to the other, only to jump back to the fleshy mutant.
+
+    He continued to stare at the trio until he heard Kapak say his name, to which he responded with a small, startled jump. After the Nidus was done introducing everyone, Vuko extended his hand towards his torso, despite Kapak’s hands being wrapped around the corpus brothers.
+
+    - “Hello, and I’m Vuko.” - He said while looking right into the mutated head, clearly not recognizing that it’s his friend behind the mustache. - “Do we know each other?”</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/4404de0ba7e5c9a4d627695dfa3192f4-7C2F8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Rozencratz#3124" data-user-id="339116401815977986" style="color: rgb(135,157,189)">Rozencratz - Sonera</span>
+
+
+        <span class="chatlog__timestamp">06-Nov-18 11:24 AM</span>
+
+            <div class="chatlog__message " data-message-id="509402819963518997" id="message-509402819963518997">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Devros</strong>
+A loud cackle spills from the messy haired boys throat at Vuko’s question, he reaches out to playfully bump the other with his shoulder
+
+“Oy oy, Oi never tart dat stuff worked!
+
+He continues laughing, pointing at Kapak’s mustache. With a nod at the two Corpus he says to them
+
+“Ah aye aye. Alwus a pleasure meetin&#39; folks dat don’t run frem dis mug”
+
+He smirked pointing with his chin at the Nidus.
+
+“But! anyway! Yer foun&#39; somethin&#39; yer fancy?
+
+He eyes the enormous screens surrounding the entire room, reading the falling information, waiting to spot what he came in here to find.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/b03fcd29a75bcceadb0df5c8129d39ef-42318.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="jado the man#0685" data-user-id="136944676849582080" style="color: rgb(173,20,87)">Almighty_Jado - Kapak</span>
+
+
+        <span class="chatlog__timestamp">07-Nov-18 07:08 PM</span>
+
+            <div class="chatlog__message " data-message-id="509881827050389520" id="message-509881827050389520">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><u>Kapak:</u>
+“It’s me you dunce,” Kapak hissed, momentarily lifting his hands away from the Corpus brothers and detaching the moustache from his face.
+“I figured you’ve seen my disguises enough to recognize me with this one! ...although, this IS a new ‘stache. I guess I haven’t really used it before.”
+The Corpus duo remained quiet but smiled and bowed their heads to Devros. Kapak continued.
+“As a matter of fact I HAVE found something interesting. It isn’t quite a rare ancient artifact, but it is most interesting- Infested debris from some Corpus research base. It’s some kind of structural support, or maybe even a tool, covered in a low-aggression strain. The most intriguing aspect is that the Technocyte have appeared to form some kind of cocoon or chrysalis or pupa- like cyst on the end of it. If I can get my hands on it, I might be able to weaponize it!&quot;
+Kapak crossed his arms.
+&quot;And the best thing is- no one wants it! I placed a bid on it for only 5,000 credits, and no one&#39;s beaten me. Makes sense though- not many people would like to buy an Infested and, ah, likely illegal biohazard.&quot;</span>
+
+                                <span class="chatlog__edited-timestamp" title="07-Nov-18 10:03 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/a61ca3ad057e19655043ca7f29c5f0f3-83927.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="TheFafalStudios#8672" data-user-id="236097848586797057" style="color: rgb(204,85,0)">TheFafaltudios - Vuko</span>
+
+
+        <span class="chatlog__timestamp">13-Nov-18 10:25 AM</span>
+
+            <div class="chatlog__message " data-message-id="511924548677926928" id="message-511924548677926928">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Vuko:</strong>
+    “Say whaaaaaaaa...” - He said, leaving his mouth wide open in awe, not believing that the freakishly tall, mustached Nidus was actually Kapak. While he was doing that, everyone could also notice that his pupils were unnaturally dilated.
+
+    “ONWARD TO THE WIERD INFESTY-THING-MAGIG THEN!” - He shouted, letting the entire room know where he’s going, and started heading towards the nearest exit door, while pretending that he’s riding a horse by doing weird steps that resulted in his shoes clicking in the rhythm of a horse’s gait while his hands were holding imaginary reins.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/4404de0ba7e5c9a4d627695dfa3192f4-7C2F8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Rozencratz#3124" data-user-id="339116401815977986" style="color: rgb(135,157,189)">Rozencratz - Sonera</span>
+
+
+        <span class="chatlog__timestamp">14-Nov-18 12:20 PM</span>
+
+            <div class="chatlog__message " data-message-id="512315785654566933" id="message-512315785654566933">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Devros</strong>
+He shook his head at Kapak’s words 
+
+“Yer weponise anythin&#39; yer touch &#39;uh?”
+
+The shout from Vuko made the bushy haired man flinch and he quickly turned his head towards the air-horse-riding mofo that yelled out so close to his ear, ready to clap his ass. However, as his head turned he caught a glimpse in the corner of his eye, a shadow…no…not a shadow…a person? However, before he could fully focus his gaze towards the person it went away…within his next blink. Devros narrows his brows but eventually shrugs his shoulders…a trick of the light perhaps!
+
+Turning fully towards Vuko, he reaches out and grabs the hopping cheer by the collar, attempting to fix him in place
+
+“Whoat dare rider! Yer not evn’ gonna gie de directory a glance?”
+
+This is weird indeed…but…he hasn’t known Vuko for that long to know what’s normal and what’s weird with him. Devros throws Kapak a glance as if saying <em>is this normal?</em>
+
+---The large rainbow-bleeding owl turned his head to gaze at the one starting this commotion,, his feathers ruffling as he&#39;s obviously not pleased by the sudden outburst in the Directory---</span>
+
+                                <span class="chatlog__edited-timestamp" title="14-Nov-18 12:26 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/b03fcd29a75bcceadb0df5c8129d39ef-42318.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="jado the man#0685" data-user-id="136944676849582080" style="color: rgb(173,20,87)">Almighty_Jado - Kapak</span>
+
+
+        <span class="chatlog__timestamp">19-Nov-18 03:30 PM</span>
+
+            <div class="chatlog__message " data-message-id="514175778292760593" id="message-514175778292760593">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><u>Kapak:</u>
+&quot;Keep your voice down, Vuko!&quot; Kapak hissed to Vuko after wearily eyeing the digital bird.
+&quot;Also,&quot; he sniffed, &quot;Vuko... are you...&quot; his voice dropped to a whisper.
+&quot;<em>High?!</em>&quot;
+
+<u>Cyrus:</u>
+&quot;Whoa-ho!&quot; The Corpus giggled, nudging his brother. The older Corpus smirked.
+
+<u>Kapak:</u>
+&quot;My Void, you ate some of those brownies Koya made this morning, didn&#39;t you? I can smell it.&quot;
+He sighed.
+&quot;They&#39;re the ones with the extra.... special... ingredient, aren&#39;t they?&quot;</span>
+
+                                <span class="chatlog__edited-timestamp" title="19-Nov-18 03:31 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/a61ca3ad057e19655043ca7f29c5f0f3-83927.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="TheFafalStudios#8672" data-user-id="236097848586797057" style="color: rgb(204,85,0)">TheFafaltudios - Vuko</span>
+
+
+        <span class="chatlog__timestamp">19-Nov-18 03:51 PM</span>
+
+            <div class="chatlog__message " data-message-id="514181063552270347" id="message-514181063552270347">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Vuko:</strong>
+    He turns around on his imaginary horse, and does the same gallop routine, but this time with no shouting and with a hunched back, like he’s trying to gallop while sneaking. 
+
+    Vuko comes uncomfortably close to Kapak’s face, and mirroring him with the whispering he says - “What? Me? Neeeeever. You know too good a boy for such wild and nasty things.” - he mocks the idea in a voice that makes it clear the opposite is true. - “And I don’t know what you are talking about. I just grabbed some chocolate deliciousness from the kitchen...” - He finishes up the sentence with a weird, and much exaggerated wink.
+
+    Before the Nidus had time to respond, Vuko looked past him, and with a “Ooooh! Shiny!” maneuvered around him to the nearest directory terminal.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/4404de0ba7e5c9a4d627695dfa3192f4-7C2F8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Rozencratz#3124" data-user-id="339116401815977986" style="color: rgb(135,157,189)">Rozencratz - Sonera</span>
+
+
+        <span class="chatlog__timestamp">20-Nov-18 11:28 AM</span>
+
+            <div class="chatlog__message " data-message-id="514477252986142720" id="message-514477252986142720">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Devros</strong>
+Devros’ expression went from wide-eyed surprise, to confusion and eventually ending up at horror, his hand shooting up to cover his mouth. Brownies?! Wan av de brownies oi ate?!<em>” His gaze shifts towards Vuko as he clenched his teeth *” Wait…he ate lashings more than me so maybe…dat is not me future…but…</em>he* can cum back. <em>”
+
+Panicked eyes quickly dart around the room, looking for someone…something, that doesn’t belong here. *” Maybe ‘e ‘ill not…It ‘as been donkey&#39;s years.”</em> He consoles himself and smiles <em>”Yeah!</em>”
+
+Feeling more at ease, his hand drops from his face and he straightens up, his playful sandy orbs twirling towards Vuko as he hopped towards one of the consoles. He looks up at Kapak and points towards the runaway vagabond
+
+“Can you…keep a mince pie on &#39;imself? Oi nade ter chicken&#39;s greg somethin&#39; oyt”</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/b03fcd29a75bcceadb0df5c8129d39ef-42318.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="jado the man#0685" data-user-id="136944676849582080" style="color: rgb(173,20,87)">Almighty_Jado - Kapak</span>
+
+
+        <span class="chatlog__timestamp">30-Nov-18 12:36 PM</span>
+
+            <div class="chatlog__message " data-message-id="518118101762441226" id="message-518118101762441226">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><u>Kapak:</u>
+&quot;Don&#39;t worry, my culinary friend,&quot; Kapak said, patting Devros&#39; shoulder, &quot;Only eating one of those things&#39;ll give you a little bit of a buzz, but nothing more. Unless you&#39;re allergic to the contents, but that I can deal with.&quot;
+Kapak coughed.
+&quot;Vuko needs to brush his teeth though, voiddamn that be some hot breath.&quot;
+Kapak jogged towards Vuko, calling his name.
+
+<u>Cyrus:</u>
+&quot;So, uh......&quot; the young Corpus commented, &quot;come here often?&quot;
+
+<u>Halcyon:</u>
+&quot;Shut the <em>suy&#39;k</em> up you trashbin,&quot; the older one hissed, &quot;you suck at small talk.&quot;
+He turned and smiled at Devros.
+&quot;Apologies for my dumbarse brother, he&#39;s probably lost some brain cells after being trapped on an Infested vessel.&quot;
+
+<u>Cyrus:</u>
+&quot;Hey! That was a traumatizing experience!&quot;
+
+<u>Halcyon:</u>
+&quot;Clearly.&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/a61ca3ad057e19655043ca7f29c5f0f3-83927.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="TheFafalStudios#8672" data-user-id="236097848586797057" style="color: rgb(204,85,0)">TheFafaltudios - Vuko</span>
+
+
+        <span class="chatlog__timestamp">30-Nov-18 12:48 PM</span>
+
+            <div class="chatlog__message " data-message-id="518121263848226817" id="message-518121263848226817">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">~As Kapak gets closer to the terminal and Vuko he will see that he is utterly and fully immersed in watching what seems to be a golden statue in a phallic shape while giggling uncontrollably.~</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/4404de0ba7e5c9a4d627695dfa3192f4-7C2F8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Rozencratz#3124" data-user-id="339116401815977986" style="color: rgb(135,157,189)">Rozencratz - Sonera</span>
+
+
+        <span class="chatlog__timestamp">06-Dec-18 01:12 PM</span>
+
+            <div class="chatlog__message " data-message-id="520301466301497370" id="message-520301466301497370">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Devros</strong>
+The bushy haired man let out a chuckle at the brothers antics, despite still feeling a splinter of unease about the brownie situation. It won’t happen right? Yeah yeah! Even if Garhul isn’t here, he’s confidant it will stay as it is.
+
+He lifts his glassed eyes towards the two brothers and waves his hand in the air in a dismissive manner
+
+“Not nade for that…”
+
+He paused his waving as a through just hit him. The expression on the boy changes from friendly to excited.
+
+“Actually…you two might actually &#39;elp me oyt!”
+
+He boasted, almost sending a echo around the screen-lit room. Hopping on his heels, he sprungs around and darts towards the nearest terminal which was a couple of paces away, up against the large wall sized screens. He turns around towards the two brothers, coaxing them to come towards him.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/b03fcd29a75bcceadb0df5c8129d39ef-42318.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="jado the man#0685" data-user-id="136944676849582080" style="color: rgb(173,20,87)">Almighty_Jado - Kapak</span>
+
+
+        <span class="chatlog__timestamp">10-Dec-18 03:30 PM</span>
+
+            <div class="chatlog__message " data-message-id="521785925353603072" id="message-521785925353603072">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><u>Kapak:</u>
+&quot;Vuko, what th-&quot; Kapak stopped when he saw the golden figure and couldn&#39;t help but give out a snort.
+&quot;Okay, that&#39;s pretty funny, but Vuko you gotta reel it in-&quot; Kapak began to reach for Vuko&#39;s arm.
+&quot;Geez, it&#39;s like someone swapped out the tetrahydrocannabinol in the cookies for cocaine...&quot;
+
+~In the meantime, the two brothers exchanged a brief glance before shrugging and following Devros to the terminal&#39;s screen.~
+
+<u>Halcyon:</u>
+&quot;What can we do for you? Any friend of K&#39;s a friend of ours.&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/a61ca3ad057e19655043ca7f29c5f0f3-83927.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="TheFafalStudios#8672" data-user-id="236097848586797057" style="color: rgb(204,85,0)">TheFafaltudios - Vuko</span>
+
+
+        <span class="chatlog__timestamp">10-Dec-18 06:33 PM</span>
+
+            <div class="chatlog__message " data-message-id="521831734581526561" id="message-521831734581526561">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Vuko:</strong>
+As Kapak grabs his arm, he simply turns around and looks at him confused. “Reel it in? Are we going fishing? I could go for some fish. I love me some lungfish.”</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/4404de0ba7e5c9a4d627695dfa3192f4-7C2F8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Rozencratz#3124" data-user-id="339116401815977986" style="color: rgb(135,157,189)">Rozencratz - Sonera</span>
+
+
+        <span class="chatlog__timestamp">21-Dec-18 11:59 AM</span>
+
+            <div class="chatlog__message " data-message-id="525718986902601735" id="message-525718986902601735">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Devros</strong>
+He types in a few commands on the available list that is bleeding on all of the screens, and out a image of a Cephalon pops up as one of the listed items. The Cephalon is depicted as a purple feather with one single white strand poking up from the base. The two Corpus can read on the screen, if they wished so, that the Cephalon is named Q’ara as well as a short description of the item that went:
+
+<div class="pre pre--multiline nohighlight">Item name: Q’ara
+Acquisition: Bought
+Item information: High class Cephalon of Orokin craftmanship. Can be used as a Orbiter companion or personal assistant. A plant garden is advised to be kept in or around the ship/home
+Rarity: High
+Top Bidders: 
+-Varund Vagatosh – 100.000
+- Unakok Falum – 98.000
+- Akir – 97.400
+- Girum Opanil Carik – 94.100
+- Hangal – 90.000
+                           </div>
+
+Devros looks towards the duo, pointing towards the screen with a nudge of his chin
+
+“Can yer fellas &#39;elp oyt an&#39; put down a offer for dat? Chucker not, Oi’ll pay it oyt wi&#39; me credits oi just…
+
+He paused looking to the side, as if searching for someone, before returning his gaze back at the brothers
+
+“…don’t want me name ter be up there…personal reasons yer nu.”
+
+He chuckled, nervously, hoping the duo would understand. 
+
+---The screen in front of Vuko lit up with a flash as a window popped up saying “Do you wish to set a offer?” for the item he was viewing---</span>
+
+                                <span class="chatlog__edited-timestamp" title="21-Dec-18 11:59 AM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/b03fcd29a75bcceadb0df5c8129d39ef-42318.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="jado the man#0685" data-user-id="136944676849582080" style="color: rgb(173,20,87)">Almighty_Jado - Kapak</span>
+
+
+        <span class="chatlog__timestamp">23-Dec-18 04:01 PM</span>
+
+            <div class="chatlog__message " data-message-id="526504574341873702" id="message-526504574341873702">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><u>Kapak:</u>
+&quot;Now don&#39;t you press that!&quot; Kapak said sternly as he kept his grip on the Tenno&#39;s arm. He pulled him away from the screen and attempted to drag him back to the the others.
+&quot;Don&#39;t make me dialyze you!&quot;
+
+<u>Cyrus:</u>
+Back where Devros was, the Corpus brothers leaned over to look at the Cephalon&#39;s page.
+&quot;Oh, my! An older model of Cephalon, quite high class indeed. Well, me and my brother DO have quite deep pockets, so...&quot;
+Within seconds, and following a flurry of keystrokes across the screen, the entry for Q&#39;ara now had a new top bidders&#39; list:
+<div class="pre pre--multiline nohighlight">Top Bidders:
+- Cyrus Prodman - 150.000
+- Varund Vagatosh - 100.000
+- Unakok Falum – 98.000
+- Akir – 97.400
+- Girum Opanil Carik – 94.100</div>
+
+<u>Halcyon:</u>
+&quot;It&#39;s my brother <em>and I</em>,&quot; the older Corpus corrected, taking a sip from his drink. He didn&#39;t seem perplexed at all by the random and sudden bid of his brother.
+&quot;I thought you went to school, bro.&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/a61ca3ad057e19655043ca7f29c5f0f3-83927.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="TheFafalStudios#8672" data-user-id="236097848586797057" style="color: rgb(204,85,0)">TheFafaltudios - Vuko</span>
+
+
+        <span class="chatlog__timestamp">23-Dec-18 04:11 PM</span>
+
+            <div class="chatlog__message " data-message-id="526507122427428896" id="message-526507122427428896">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Vuko:</strong>
+Hearing Kapak scream not to do it, there was only one possible outcome. With a big, dumb smile painted across his face Vuko was about to press the button just mere milliseconds before the Nidus yanked his hand away, ending in him hitting a random part of the screen. 
+
+As he was being quite literally dragged away from the terminal, he decided halfway through that the best way to go about things is to go limp. 
+
+And so he did. Just as his body hit the ground with a <em>thump</em> and laid down on the ground, Vuko attempted to escape his friends clutches by rolling on the ground sideways, somehow thinking that it’ll make him unnoticeable.</span>
+
+                                <span class="chatlog__edited-timestamp" title="23-Dec-18 04:11 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/4404de0ba7e5c9a4d627695dfa3192f4-7C2F8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Rozencratz#3124" data-user-id="339116401815977986" style="color: rgb(135,157,189)">Rozencratz - Sonera</span>
+
+
+        <span class="chatlog__timestamp">28-Dec-18 12:29 PM</span>
+
+            <div class="chatlog__message " data-message-id="528263351298555924" id="message-528263351298555924">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Devros</strong>
+The boy smiled and nodded at the two brothers
+
+“Tanks lads, oi owe yer wan!”
+
+He chuckled and looked over his shoulder to see the situation with Kapak and Vuko…which wasn’t a great one to boot. He tilts his head and looks back at the Corpus
+
+“Alright let’s uh…get one with some sight seeing huh?”
+
+He pushes himself off the console and started briskly walking towards Kapak, to try and give a hand <u><strong>”You cannot help”</strong></u> A voice ringed through his head and he froze mid step, his eyes narrowing. It’s been a long time since he’s heard <em>his</em> voice…this is not good… Garhul is not here to fix it! He felt panic rising from deep within him, cold sweat dripping down his forehead. <u><strong>”You cannot help”</strong></u> He heard it repeating again  and he clenched his teeth, his hands coiling in to fists <em>”Go away</em>” He growled from under his breath. Whatever he ate, whatever Vuko gave him…was spoiled!
+
+He started walking, stomping towards Kapak and Vuko, stopping just a few paces from them and from the limp boy.
+
+“Can we move on?”
+
+He huffed from under his nose, his voice sounding more irritated than from his usual cheerful self, the smell of unease oozing from him. His golden eyes dropping to gaze at Vuko</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/b03fcd29a75bcceadb0df5c8129d39ef-42318.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="jado the man#0685" data-user-id="136944676849582080" style="color: rgb(173,20,87)">Almighty_Jado - Kapak</span>
+
+
+        <span class="chatlog__timestamp">04-Jan-19 06:23 PM</span>
+
+            <div class="chatlog__message " data-message-id="530889070121975808" id="message-530889070121975808">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><u>Kapak:</u>
+&quot;You daft c- come here!&quot;
+Kapak followed after Vuko&#39;s rolling torso at walking pace, his massive stride allowing him to keep pace with the Tenno.
+&quot;Move aside people! Move please, thank you!&quot;
+Kapak yelled and waved his arms to move bystanders out of the path of the &#39;furiously&#39; rolling Tenno.
+
+<u>Cyrus:</u>
+&quot;Is he usually like that?&quot; Cyrus turned to Devros as the group casually followed Vuko.
+
+<u>Kapak:</u>
+&quot;We can move on as soon as Vuko&#39;s back under control- yagh!&quot;
+Kapak extended his palm, and like a dart, out shot a slimy tendril with a needle-like tip. It penetrated Vuko&#39;s side and was enough to stop him from rolling. A quick injection of morphine from the tendril would also ensure a painless prick, although it was likely Vuko was already high enough to not even feel it.
+Kapak stood Vuko up forcefully and gripped him by the shoulders.
+&quot;Now, I&#39;m gonna soak up all that junk that&#39;s flowing through your veins and you&#39;re gonna stand by me while I do. Then we&#39;re going to continue on our nice little trip with no problems, y&#39;hear me?&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/a61ca3ad057e19655043ca7f29c5f0f3-83927.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="TheFafalStudios#8672" data-user-id="236097848586797057" style="color: rgb(204,85,0)">TheFafaltudios - Vuko</span>
+
+
+        <span class="chatlog__timestamp">13-Jan-19 11:16 AM</span>
+
+            <div class="chatlog__message " data-message-id="534043013245304832" id="message-534043013245304832">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Vuko:</strong>
+With his body a jellyfish, Kapak had basically no problem securing him. He also was successful injecting Vuko, as his patient didn’t even realise what had happened.
+
+Once on his feet, the Tenno was looking right at the Nidus’ head as he was explaining something that was clearly going over his head.  He was just nodding along, pretending to know exactly what he means. “Yes daddy.” He finished up once his friend stopped speaking, a daft smile on his face.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/4404de0ba7e5c9a4d627695dfa3192f4-7C2F8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Rozencratz#3124" data-user-id="339116401815977986" style="color: rgb(135,157,189)">Rozencratz - Sonera</span>
+
+
+        <span class="chatlog__timestamp">15-Jan-19 12:47 PM</span>
+
+            <div class="chatlog__message " data-message-id="534790846781063168" id="message-534790846781063168">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Devros</strong>
+The flat faced boy turned to look at one of the Corpus, providing a simple shrug of his shoulders as a opening answer to his question
+
+“If he is den i’d invite &#39;imself more frequently ter me grub parties.”
+
+A shadow of a smirk can be seen spreading across his lips, but the joke itself didn’t feel as hearty as it should have been, his mind fighting on two fronts.
+
+Noticing that the Nidus got it under control, he quickly cast a glance at the perched digital owl sitting atop the middle of the room – only to be greeted by two unblinking obsidian gems staring at him. <em>”YIKES</em>” He invardly jumps at their intensity and quickly turns around
+
+“Gran&#39; so let’s uhhh….scurry along fast. We can catch wan av de aucshuns.”
+
+He starts briskly walking towards the only door in the room, which they entered through. &quot;<u><strong>You cannot run</strong></u> &quot;He hears it again but choses to ignore it, getting through this shit and going back to Garhul is priority one right now!</span>
+
+                                <span class="chatlog__edited-timestamp" title="15-Jan-19 12:48 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/b03fcd29a75bcceadb0df5c8129d39ef-42318.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="jado the man#0685" data-user-id="136944676849582080" style="color: rgb(173,20,87)">Almighty_Jado - Kapak</span>
+
+
+        <span class="chatlog__timestamp">04-Feb-19 09:25 AM</span>
+
+            <div class="chatlog__message " data-message-id="541987745892007939" id="message-541987745892007939">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><u>Kapak:</u>
+The Nidus did his best not to react to Vuko&#39;s.... suggestive remark.
+Kapak wrapped his fleshy claw over Vuko&#39;s shoulder, guiding the Tenno towards the door that Devros was headed for. Hopefully he would be a little more grounded now that Kapak had started filtering his blood.
+&quot;After you, Devros! Everything should be much better now that we have this guy under control. Um, sorry Mr. Owl!&quot; Kapak waved apologetically at the cephalon&#39;s holographic form before hurrying to catch up with Devros.
+
+<u>Cyrus &amp; Halcyon:</u>
+The two Corpus giggled amongst themselves before following the rest of them, sipping down the last remains of their drinks.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/a61ca3ad057e19655043ca7f29c5f0f3-83927.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="TheFafalStudios#8672" data-user-id="236097848586797057" style="color: rgb(204,85,0)">TheFafaltudios - Vuko</span>
+
+
+        <span class="chatlog__timestamp">21-Mar-19 07:07 AM</span>
+
+            <div class="chatlog__message " data-message-id="558245199562932224" id="message-558245199562932224">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Vuko:</strong>
+He compliantly walked towards where Kapak was guiding him, giggling under his breath the entire time, clearly not giving a flying f about the entire situation, and instead suddenly becoming mesmerized by how his feet were able to walk one in front of the other.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/4404de0ba7e5c9a4d627695dfa3192f4-7C2F8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Rozencratz#3124" data-user-id="339116401815977986" style="color: rgb(135,157,189)">Rozencratz - Sonera</span>
+
+
+        <span class="chatlog__timestamp">09-Apr-19 10:05 AM</span>
+
+            <div class="chatlog__message " data-message-id="565175566152761345" id="message-565175566152761345">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Devros</strong>
+The boy leads the group out of the Directory and back at the corridor which they used before. This time, however he takes a left turn, down the intricate designed hallway that looked to be fit more for a royal castle than a auction ship. However, the beauty did little to distract Devros, and the boy was getting more jittery, his hands frequently brushing the back of his neck, his eyes bouncing to corners as if he’s looking out for sudden jump scares, his forehead slowly getting damp.
+
+“So uh…”
+
+I clears his throat, maybe some talking will ease his racing mind?
+
+“Oi wus tinkin we cud chuck oyt wan av de aucshuns in progress while we wait on de final verdicts for our items &#39;m?”
+
+He smiled as he glanced at Kapak and the Corpus brothers, his sunset-painted eyes dimming behind his old busted glasses. 
+
+“Lot’s av interestin&#39; stuff ter clap there….”
+
+He brushed behind his neck, dipping his gaze at Vuko’s state.
+
+…maybe even distract &#39;imself.”
+
+He chuckled under his breath and returned his gaze to the hallway in front of him, which was getting more rich with every step. The ferrite floor is morphing in to a vibrant red and gold accented carpet, the boring metallic walls turning in to something akin to wall paintings with the intricate designs and use of decoration. The light also taking a dimmer tune to accommodate the shift in theme as the party moves deeper in to the belly of the ship.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-03.html_Files/a61ca3ad057e19655043ca7f29c5f0f3-83927.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="TheFafalStudios#8672" data-user-id="236097848586797057" style="color: rgb(204,85,0)">TheFafaltudios - Vuko</span>
+
+
+        <span class="chatlog__timestamp">25-Jul-19 03:53 PM</span>
+
+            <div class="chatlog__message " data-message-id="604038476056363099" id="message-604038476056363099">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Vuko:</strong>
+Gives <span class="mention" style="color: rgb(173, 20, 87); background-color: rgba(173, 20, 87, 0.1);">@Kapak</span> da gae</span>
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="eyesintensifies" title="eyesintensifies" src="side-story-03.html_Files/466062511066841109-FD65B.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="gay" title="gay" src="side-story-03.html_Files/488407118345535498-78F49.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="kreygasm" title="kreygasm" src="side-story-03.html_Files/465411106253570061-F84B4.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="Dabalternate" title="Dabalternate" src="side-story-03.html_Files/491758706120196098-8C69D.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="Dab" title="Dab" src="side-story-03.html_Files/455224652885786644-0A1DB.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#127987;️‍&#127752;" title="&#127987;️‍&#127752;" src="https://twemoji.maxcdn.com/2/72x72/1f3f3-200d-1f308.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="happak" title="happak" src="side-story-03.html_Files/479784073963765778-64506.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="thunkplant" title="thunkplant" src="side-story-03.html_Files/476559716210835467-E04A1.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+</div>
+
+<div class="postamble">
+    <div class="postamble__entry">Exported 88 message(s)</div>
+</div>
+
+</body>
+</html>

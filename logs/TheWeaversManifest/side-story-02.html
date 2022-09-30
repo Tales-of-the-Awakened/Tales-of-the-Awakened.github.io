@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html class="gr__archivesoftheawakened_appspot_com" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Tales of the Awakened {Warframe Discord RP Community} - side-story-02</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <style>
+        /* === GENERAL === */
+
+body {
+    font-family: "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    object-fit: contain;
+}
+
+.markdown {
+    white-space: pre-wrap;
+    line-height: 1.3;
+    overflow-wrap: break-word;
+}
+
+.spoiler {
+    border-radius: 3px;
+}
+
+.pre {
+    font-family: "Consolas", "Courier New", Courier, Monospace;
+}
+
+.pre--multiline {
+    margin-top: 4px;
+    padding: 8px;
+    border: 2px solid;
+    border-radius: 5px;    
+}
+
+.pre--multilineDis {
+    margin-top: 4px;
+    padding: 8px;
+    border: 2px solid;
+    border-radius: 5px;    
+}
+
+.pre--multilineLek {
+    margin-top: 4px;
+    padding: 8px;
+    border: 2px solid;
+    border-radius: 5px;    
+}
+
+.pre--multilineElla {
+    margin-top: 4px;
+    padding: 8px;
+    border: 2px solid;
+    border-radius: 5px;    
+}
+
+.pre--multilineKapak {
+    margin-top: 4px;
+    padding: 8px;
+    border: 2px solid;
+    border-radius: 5px;    
+}
+
+.pre--inline {
+    padding: 2px;
+    border-radius: 3px;
+}
+
+.mention {
+    font-weight: 500;
+}
+
+.emoji {
+    width: 1.45em;
+    height: 1.45em;
+    margin: 0 1px;
+    vertical-align: -0.4em;
+}
+
+.emoji--small {
+    width: 1rem;
+    height: 1rem;
+}
+
+.emoji--large {
+    width: 2rem;
+    height: 2rem;
+}
+
+/* === INFO === */
+
+.info {
+    display: flex;
+    max-width: 100%;
+    margin: 0 5px 10px 5px;    
+}
+
+.info__guild-icon-container {
+    flex: 0;
+}
+
+.info__guild-icon {
+    max-width: 88px;
+    max-height: 88px;
+}
+
+.info__metadata {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.info__guild-name {
+    font-size: 1.4em;
+}
+
+.info__channel-name {
+    font-size: 1.2em;
+}
+
+.info__channel-topic {
+    margin-top: 2px;
+}
+
+.info__channel-message-count {
+    margin-top: 2px;
+}
+
+.info__channel-date-range {
+    margin-top: 2px;
+}
+
+/* === CHATLOG === */
+
+.chatlog {
+    max-width: 100%;
+    margin-bottom: 24px;
+}
+
+.chatlog__message-group {
+    display: flex;
+    margin: 0 10px;
+    padding: 15px 0;
+    border-top: 1px solid;
+}
+
+.chatlog__author-avatar-container {
+    flex: 0;
+    width: 40px;
+    height: 40px;
+}
+
+.chatlog__author-avatar {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.chatlog__messages {
+    flex: 1;
+    min-width: 50%;
+    margin-left: 20px;
+}
+
+.chatlog__author-name {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.chatlog__timestamp {
+    margin-left: 5px;
+    font-size: .75em;
+}
+
+.chatlog__content {
+    padding-top: 5px;
+    font-size: .9375em;
+    word-wrap: break-word;
+}
+
+.chatlog__edited-timestamp {
+    margin-left: 3px;
+    font-size: .8em;
+}
+
+.chatlog__attachment {
+    margin: 5px 0;
+}
+
+.chatlog__attachment-thumbnail {
+    max-width: 50%;
+    max-height: 500px;
+    border-radius: 3px;
+}
+
+.chatlog__embed {
+    display: flex;
+    max-width: 520px;
+    margin-top: 5px;
+}
+
+.chatlog__embed-color-pill {
+    flex-shrink: 0;
+    width: 4px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.chatlog__embed-content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 10px;
+    border: 1px solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.chatlog__embed-content {
+    width: 100%;
+    display: flex;
+}
+
+.chatlog__embed-text {
+    flex: 1;
+}
+
+.chatlog__embed-author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.chatlog__embed-author-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 9px;
+    border-radius: 50%;
+}
+
+.chatlog__embed-author-name {
+    font-size: .875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-title {
+    margin-bottom: 4px;
+    font-size: .875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-description {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.chatlog__embed-fields {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chatlog__embed-field {
+    flex: 0;
+    min-width: 100%;
+    max-width: 506px;
+    padding-top: 10px;
+}
+
+.chatlog__embed-field--inline {
+    flex: 1;
+    flex-basis: auto;
+    min-width: 150px;
+}
+
+.chatlog__embed-field-name {
+    margin-bottom: 4px;
+    font-size: .875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-field-value {
+    font-size: .875em;
+    font-weight: 500;
+}
+
+.chatlog__embed-thumbnail {
+    flex: 0;
+    margin-left: 20px;
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-image-container {
+    margin-top: 10px;
+}
+
+.chatlog__embed-image {    
+    max-width: 500px;
+    max-height: 400px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-footer {
+    margin-top: 10px;
+}
+
+.chatlog__embed-footer-icon {
+    margin-right: 4px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.chatlog__embed-footer-text {
+    font-weight: 600;
+    font-size: .75em;
+}
+
+.chatlog__reactions {
+    display: flex;
+}
+
+.chatlog__reaction {
+    display: flex;
+    align-items: center;
+    margin: 6px 2px 2px 2px;
+    padding: 3px 6px;
+    border-radius: 3px;
+}
+
+.chatlog__reaction-count {
+    min-width: 9px;
+    margin-left: 6px;
+    font-size: .875em;
+}
+    </style>
+    <style>
+        /* === GENERAL === */
+
+body {
+    background-color: #36393e;
+    color: #dcddde;
+}
+
+a {
+    color: #0096cf;
+}
+
+.spoiler {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.pre {
+    background-color: #2f3136 !important;
+}
+
+.pre--multiline {
+    border-color: #282b30;
+    color: #839496;
+}
+
+.pre--multilineDis {
+    border-color: #282b30;
+    color: #b58900;
+}
+
+.pre--multilineLek {
+    border-color: #282b30;
+    color: #cb4b20;
+}
+
+.pre--multilineElla {
+    border-color: #282b30;
+    color: #268bd2;
+}
+
+.pre--multilineKapak {
+    border-color: #282b30;
+    color: #dc322f;
+}
+
+.mention {
+    color: #7289da;
+}
+
+/* === INFO === */
+
+.info__guild-name {
+    color: #ffffff;
+}
+
+.info__channel-name {
+    color: #ffffff;
+}
+
+.info__channel-topic {
+    color: #ffffff;
+}
+
+/* === CHATLOG === */
+
+.chatlog__message-group {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.chatlog__author-name {
+    color: #ffffff;
+}
+
+.chatlog__timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__edited-timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__embed-content-container {
+    background-color: rgba(46, 48, 54, 0.3);
+    border-color: rgba(46, 48, 54, 0.6);
+}
+
+.chatlog__embed-author-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-author-name-link {
+    color: #ffffff;
+}
+
+.chatlog__embed-title {
+    color: #ffffff;
+}
+
+.chatlog__embed-description {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-field-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-field-value {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-footer {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__reaction {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.chatlog__reaction-count {
+    color: rgba(255, 255, 255, 0.3);
+}
+    </style>
+
+    <link rel="stylesheet" href="side-story-02_files/solarized-dark.css">
+    <script src="side-story-02_files/highlight.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.pre--multiline').forEach((block) => {
+                hljs.highlightBlock(block);
+            });
+        });
+    </script>
+</head>
+<body data-gr-c-s-loaded="true">
+    
+<div class="info">
+    <div class="info__guild-icon-container">
+        <img class="info__guild-icon" src="side-story-02_files/e787a6474749f69864faf5b56c1e9478.png">
+    </div>
+    <div class="info__metadata">
+        <div class="info__guild-name">Tales of the Awakened {Warframe Discord RP Community}</div>
+        <div class="info__channel-name">side-story-02</div>
+        
+
+        <div class="info__channel-message-count">23 messages</div>
+        
+    </div>
+</div>
+
+<div class="chatlog">
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-02_files/290779f99a7d8e2b6ff5d6d447ab4680.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">11-Sep-18 12:50 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">[Closed RP]
+Space, aboard Kapak's Infested Orbiter
+(3/22 AR)
+
+~Darkness.
+And then light. Dim, pale bulbs embedded in the ceiling shine down on the flesh-covered floor of the Orbiter, revealing a network of Infested webs snaking over every visible surface. The soft dripping of fluids mixes with the sounds of creaking metal and groaning organs, as if the ship itself was the belly of a beast.
+There's a clunking noise, metal hooking to metal. Then, with a loud hiss of air, a ramp descends from the ceiling to reveal a figure. It's Kapak, returning to his Orbiter from some kind of trip.
+His usual enthusiastic demeanour seems sullied by something. Well, not something. Really it's many things. Too many things.
+Kuve was dead. Vuko and Muro likewise. Mataeru long gone, and Sigyn was deceased as well. Disruptis had disappeared, and Devros never surfaced either.
+Kapak had almost always preferred to be alone... but now he could truly feel the weight of loneliness. Well, kind of. Kapak was greeted immediately by three Helminth chargers that gurgled excitedly with their tails- er, tentacles wagging. Their mandible hung open sideways in joy to see their master home again.
+"Oh, you guys," Kapak grinned like a child, "I missed you too!" He hugged and scratched his monstrous pets before continuing deeper into his Orbiter.
+He passed by various random flowerpots strewn across the floor next to his foundry and relic refiner, each containing some strange amalgamation of an internal organ and a plant. They were fun little biological experiments Kapak often passed the time with, although as of late he hadn't been keeping up with them. Several of them had grown out of control and were now fused to the already quite Infested walls of the ship.
+
+[1/x]</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-02_files/290779f99a7d8e2b6ff5d6d447ab4680.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">11-Sep-18 01:02 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Kapak waltzed down the back ramp of the Orbiter compartment, passing by a pair of familiar faces. Two of his Engineers, both of them working on repairing some damage dealt to the corner of the wall by the Infirmary. One of them was furiously scrubbing the charred hull with a wash cloth and a bucket of soapy blood(?) while the other was peeling necrotic flesh from around the area and tossing it into a nearby bin.~
+
+<u>Kapak:</u>
+"Great job, guys," Kapak spoke as he passed them by. One of them turned around and pointed at the wall, retching in annoyance before pointing at Kapak in defiance.
+"Hey, not my fault! What did you guys expect? She lit me on fire earlier, what the void did you expect when we brought her here? Just keep cleaning it, we should've had this finished 2 months ago. Don't procrastinate otherwise I'll rip your eyes from their sockets and then break all your limbs. I know you hate that."
+The Engineers both grumbled incoherently before returning to their work.
+
+~Continuing forward, Kapak passed by an dark, grey figure strung against the wall. A fossilized Sentient Battalyst. Something that he had captured and immobilized during the Remnant's time on Lua. Hundreds of these minor Sentients were lurking within the deepest halls of Lua, and Kapak had decided to capture one for fun in order to study the infesticidal properties of their innards.
+He reminisced about a past event that had occurred here. Rast, that wiley old bounty hunter Tenno. He'd found himself aboard Kapak's Orbiter while it was being repaired on Lua. Devros, Disruptis and Kapak had come and caught the tresspasser right at this spot.
+Kapak sighed as he rubbed his hands along the alien grooves upon the Sentient's bones.
+
+[2/x]</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Kapak left the Sentient's side and entered the personal quarters. The room was quite dark, as the only source of natural light (the window) was completely covered in Infested vines.
+The room was rather cluttered, as it had always been. The fish tanks and central display vignette were broken open and covered with more infested experiment flowerpots, providing the room with a twisted sense of beauty. It was a garden of flesh, the strange organisms' bioluminescence lighting up with room in an unnatural, spectacular, and slightly unsettling way. Amber spores flit about the air like whimsical fairy dancers.
+The musical somachord unit that usually say in the middle of the room seemed to have been removed; in its place was a fleshy pit surrounded by toothy spines. It appeared to be filled with an amber fluid that matched the colour of the spores in the air.
+The large glass window that usually showed the exterior of the ship was covered in Infestation as well, effectively blocking any view to the outside.
+The corner of the room was an absolute pigsty. On the shelves lay an incredible mess of relics: a black donda; a deactivated Sentient core; a broken Ayatan; a rusty looking Orokin weapon of unknown origin; several depleted Tigris Prime shells; a Dark Dagger with a shattered blade; a Corpus datapad with a spiderweb cracked screen; the stock of an Arca Plasmor; several Void Keys; the handle for an Ostron tool; a small bronze, tarnished statue of a Dax warrior; the mechanical eyeball from a Grineer; a boot; even more lay beneath the list of things that anyone could make out.
+On the wall next to the pile were three weapons mounted: a pulsating Hema glowing with the same magenta light as Kapak's boils on his body; a massive blade made of bone and fleshy tentacles; and a rusted, tarnished Tigris Prime, its golden leaf peeling off. ~
+
+[3/x]</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-02_files/290779f99a7d8e2b6ff5d6d447ab4680.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">11-Sep-18 01:24 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">~And in the middle of it all, in the usually empty Warframe display, knelt The Strider.
+Or at least, what had been left behind of him. The prosthetic-ful Loki remained kneeling in a respectful and peaceful position inside its case, its lights completely dark in the absence of the Void energy required to power it. Its usual brilliant sunny eye extinguished like a candle left in a crypt for a thousand years.~
+
+<u>Kapak:</u>
+"Hey, Strider!" Kapak spoke happily to the frame, although not expecting any answers. He looked at the Loki, his hands on his hips and shook his head with a big smile. "Just got back from a little mission to try and get some more credits. Gotta buy another container of Corpus hands from the black market soon. Turns out that Debt Internment place on Venus lobs off the hands of the criminals there all the time! Some dude in Anyocorp collects 'em and sells them for a pretty cheap price, so that's cool."
+Kapak had been talking to the Warframe for a while now. Probably for the last month and a half, everyday. It helped him avoid becoming too lonely, and he figured he still had enough 'real' people to talk to without going absolutely crazy.
+He walked away from the Warframe to the corner of the room.
+"So, I tried my hand at making Ruk's Klaw tea again last night," Kapak called over his shoulder as he fished through his pile of junk. Finally, he managed to pull an old Orokin tea set that he'd recovered from a derelict long ago. Lately he'd found more use for it thanks to Lekalis, in a way.
+He set the tray down on the ledge by the central display and set two cups down atop it.
+
+[4/x]</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-02_files/290779f99a7d8e2b6ff5d6d447ab4680.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">11-Sep-18 01:32 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><u>Kapak:</u>
+"Hopefully I got the proportions right this time," Kapak said sheepishly as he produced a ceramic &amp; gold teapot from nowhere. With a flourish, he set it down on the tray's heater and it began to warm it up.
+"Also this time I actually remembered to let the leaf grains soak in the water beforehand. Hopefully it won't taste like that void-awful garbage like last time, eh?"
+As the teapot began to boil, a massive, glaring red eye surfaced in the middle of the room.
+
+<img class="emoji " alt="⇝" title="⇝" src="side-story-02_files/21dd.html">Helminth:
+<div class="pre pre--multilineKapak language-diff">-MASTER, WHOM DO YOU SPEAK TO? DID YOU REQUEST MY PRESENCE?</div><u>Kapak:</u>
+Kapak sighed patiently as he turned to face the hologram.
+"No, Helminth. I did not. You are dismissed."
+
+<img class="emoji " alt="⇝" title="⇝" src="side-story-02_files/21dd.html">Helminth:
+<div class="pre pre--multilineKapak language-diff">-YOU WERE SPEAKING TO THE SHELL, WERE YOU NOT?</div>
+The eye glanced about the room before settling its gaze on the Loki.
+<div class="pre pre--multilineKapak language-diff">-A TRUE SHAME, MASTER. IT IS NOTHING BUT A LIFELESS CORPSE IN THE ABSENCE OF ITS DEMON. BUT FEAR NOT, MASTER. TOGETHER WE COULD BREATH NEW LIFE INTO HIM WITHOUT THE FILTHY PRESENCE OF THE-</div>
+
+<u>Kapak:</u>
+"NO, Helminth," Kapak spoke firmly. He looked away from the eye and back at the Warframe. "This is something to treat with respect. It deserves its rest."
+Before Helminth could say any more, the teapot began to whistle. The tea was finally done! And to Kapak's olfactory senses, it seemed a lot more like Lekalis' signature tea than what he had made last time.
+He poured the cups of tea and set one of them down next to the still Warframe. The fragrant steam wafted up and around the room, calming Kapak's nerves with its reassuring odor.
+He knelt down on the floor before the Warframe, his rear resting on his heels.
+"To Lekalis," Kapak toasted, as he raised the cup of tea. He turned the cup twice in his hands before taking a sip.
+"Hum! Wow! Doesn't actually taste like sewage this time!" He giggled. It still wasn't as perfect as <span class="mention">@Lekalis the Strider</span> could make, but at least it was tolerable.
+
+[5/5]</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-02_files/d73030fb7f7872bb9df7d8d905bbb49e.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Blood🍶Strider#5557">Blood🍶Strider</span>
+                <span class="chatlog__timestamp">11-Sep-18 09:38 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">/The Corpse/
+
+The garish and gruesome visage of the Strider's half-detonated helm stared down at the ground, at the tea. Where Isa's head once laid in his lap and palms.
+There, amidst the charred biometal, were two sockets; circular and embedded amidst desperately clinging meat. Lightless, they delighted in the sight of the Orokin teaset. With his scarf and sash so charred, and the alloys peeled away evermore from his helm, the grim smile over the Strider's facing was more apparent than ever.
+
+Half his torso was missing, where the prosthetic and Harkonar breastplate had been; the Grineer alloys had been vaporized in light of the expent void-energy, both from Isa's outburst and from Lekalis' own stores.
+What was left was only the vaguest sense of ribs, spine, and meat. In truth, it was a marvel of Warframe creation that the Corpse didn't collapse.
+
+Besides that, the Frame looked darker than usual, but only near the leylines that conducted energy to the various bulbous prosthetics at his joints. 
+
+His good hand still remained, unblemished by any of the flames or implosion, the long and lithe digits were slightly curled in contemplative grace. The burnt metal, copper tinged, still glimmered in the pinkish lights exuded from Kapak's demesne.
+
+Even amongst the gruesome displays of Helminth Infestation, The Strider's Corpse held an art to its desecration.
+
+Indeed, it was almost an aura that... until today, had been little more than a tingling, prickling sensation.
+The Infestation nearest the Strider had changed in the subtlest of ways; the winding flesh no longer coiled and spread in an organic sense, rather, the meat looked smoothed out... But tense. Hairs and folicles and antennae in the room seemed a bit less lively, standing straighter.
+
+There was an unmistakeable crackle, with Kapak sitting so close; Radiation.
+[1/3]</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">[2/3]
+The tea infront of The Corpse began to fizz, and eventually, so did the tea in Kapak's hand.
+
+Slowly, like rain winding its way down a pane of glass, the One Hand of The Corpse reached out and scooped up the tea cup. There was a flicker of almost blindingly sun-hued energy that crackled across the open wound of his chest, and the room vanished...
+
+The Infestation was gone, the Orbiter was gone, the Black Sea between the stars was gone. Instead of Infested flesh, Kapak knelt with the Corpse of The Strider atop an unending Red Sea whose surface glimmered in the light of a Red sun in a pale sky. 
+"Press the leaves of Ruk's Klaw, dry them. 
+Then put them in water that is simmering, not boiling.
+Don't forget to stir--" The Corpse raised its little finger with the fluid grace of a fish in a stream,
+"-- Once.", The little finger danced in a single revolution. The Red Sun blinked out of existence, the Red Sea turned from a cherry red to a bloody vermillion. The sky turned black.
+"Twice.", It twirled in counter to its initial twist, and a long red line was drawn in the ink black sky. A crescent over a sickened, green-yellow planet. A planet of Harvest and festival, plagued to produce weapons of war.
+"Three times and--", The Strider's jubilant tone vanished as quickly as the Blood Red Sea. Screams became the World; Men, Women, Children, Mothers and the Elderly howled in Pain and Sorrow. Their screams echoed in the sudden blank Void where the only reprieve from The Dark was the Corpse of the Strider.
+
+It stared, eyeless from it sockets, at the tea offered; it boiled and the cup shook as if something beneath the waters was fighting to break free. The Orokin gold stained red and the pale white turned pinkish in hue. Veins and Skin. A heartbeat thrummed in the distance, faster and faster.
+The water turned to blood and, just as the screams seemed like to cut one's mind in twain... It vanished.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">[3/3]
+The Orbiter, the familiar Infested Flesh, the gloomsome light filled reality with light. The sudden vision had felt like an entire lifetime gone by... Perhaps it had. But whatever had happened had vanished as quick as it had arose.
+
+The Corpse's hand still lay in its stricken grace. The Infested Flesh nearest the Strider had coiled back into familiar biological spontaneiety.
+
+Though, one thing remained; the Orokin teacup had been chipped and turned over, its contents spilling out onto the meaty floor. It had burned into the meat, scarring it for as long as it took to heal.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-02_files/290779f99a7d8e2b6ff5d6d447ab4680.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">12-Sep-18 03:19 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><u>Kapak:</u>
+Kapak shook his head, clearing the cloudy vision from his sight. Was that... a dream? A memory? A wild daydream? How long had he been th- oh, muck!
+"<em>Ay yi yi</em>," Kapak exclaimed as he spotted the teacup. He quickly leaned over and picked it up, gazing into the empty vessel as if staring at it would refill it. He shook his head and sighed.
+"Sorry Helminth," Kapak said as he stood up, rubbing his smooth, glistening temples before setting the spilled cup back onto the tray with the teapot, "just spilled some tea. Nothing but a burn, probably only second degree. Minor drain on resources."
+Helminth didn't respond, but the doors to the personal quarters opened up again and one of Kapak's already disdainful Engineers marched in.
+"Yeah, sorry," Kapak said to his dwarven helper, "more burns, I know. Small this time though. No fire involved either."
+The creature seemed to roll its pupil-less, glowing red eyes before getting down on its hands and knees and beginning to peel the burned flesh off before tossing it into its vertical slit mouth.
+Kapak stood up and emptied the remainder of his cup into his mouth, setting it back onto the tray.
+
+[1/2]</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-02_files/290779f99a7d8e2b6ff5d6d447ab4680.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">12-Sep-18 03:26 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">He marched to the center of the room and dipped the front of his foot into the amber liquid pooled inside the bizarre organ bathtub. Satisfied with the feel, Kapak slipped his entire body into the fluid, relishing in the feel of his muscles becoming less tense, relaxing. He laid his head back and hummed before beginning to sing.
+It was a song he didn't know where he had learned it from. But he'd done research and discovered it was a hymn from the ancient world, resurrected into a Dax war song often chanted by the gilded warriors on their way to battle.
+<em>Red sun
+Red sun over paradise
+Red sun
+Red sun over paradise
+Golden rays of the glorious sunshine
+Setting down such a bloodred light
+now the animals slowly retreat
+to the shadows, out of sight
+And a breeze blows across the mountains
+giving flight to the birds of prey
+In the distance machines come
+To transform Eden, day by day...</em>
+
+Kapak paused his singing to reflect on the vivid vision which had reminded him of the song. Had that been a memory the Strider had shared with him at some point? Or some kind of fever dream induced by his terrible teamaking? Something told him that it was real though...</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">[2/2]</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-02_files/d73030fb7f7872bb9df7d8d905bbb49e.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Blood🍶Strider#5557">Blood🍶Strider</span>
+                <span class="chatlog__timestamp">21-Sep-18 05:30 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">/The Corpse/
+
+... Indeed, foggy memory or dream, voidly manipulation or something else entirely, lingered still in the aura of The Corpse of The Strider; breaking away from its air seemed to take effort unto itself. An effort, not upon the bound nerves and musculature of the Nidus' Warframe, but upon a distant meat and bone rent asunder by the void and pieced together by the powers that be.
+It was as if Kapak had strode through water, that he managed to tear himself away from the aura of the Corpse.
+
+Kapak's head would sting, still, a lingering sensation as he pulled farther away. What felt like fingers dragged their ragged nails across his skin, tugging at sinews and veins and nerve pathways.
+<div class="pre pre--multilineLek language-css">[REMEMBER. ME.]</div>
+It insisted, it carved, this ephemeral entity that whispered into the back of his mind, gouged the message into the back of his eyelids; cutting through reality like one would carve into a pumpkin.
+The letters seemed to be there infront of him, yet vanish with every blink.
+
+There was a pause to the intrusion, before it whispered into his ear; a melancholic, gilded tune that ran like a river. Its will of its tide, undeniable.
+
+<em>Only sorrow is with us now...</em>, it mused
+<em>Something cold and pure</em>, it yearned
+<em>Find the peace within ourselves</em>, it knew
+<em>No need for a cure</em>, it insisted, in a breathy tone, as those nails dug deep then... let go.
+
+<div class="pre pre--multilineLek language-css">[DO YOU : SEE ME. HEAR ME. REMEMBER ME.]</div>
+The words behind his eyelids changed, shifted, then paused.
+
+<div class="pre pre--multilineLek language-css">[COME BACK. SEE ME. HEAR ME. REMEMBER ME.]
+[REMEMBER : FRIENDS, FAMILY, FEAR.]
+[REMEMBER : YOU.]</div>
+[1/2]</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">[2/2]
+
+Like a distant whirlpool, the lusting Charybdis, fingers graced and soothed Kapak's shoulders and spine, drifting into and past the flesh of his Warframe with the cool touch of the Void. Whispers wormed into every passing phantom, a thousand voices unto a thousand more.
+<em>Do you hear them too..?</em>, a tune like a song wove through the touches of the sea of voices,
+<em>... Do you remember the sorrow? The blood on your hands, her hair in a pool of blood. It is so hard to remember the sorrow. Share it with me. Forget them not, with me.</em>, the words invited Kapak, desperately tugging at his arms and scalp,
+<em>Remember me... say my name..?</em>
+
+In the glaze of liquid, what could only be a bubble floated in the distance; a perfect circle, a sun amidst a burning sea.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-02_files/290779f99a7d8e2b6ff5d6d447ab4680.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">23-Sep-18 12:11 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">~Kapak stood up, the liquid of the pool dripping from his body- except he wasn't in his Orbiter anymore. He walked to the side, stepping onto the sandy shores of a fog-covered cove. He couldn't see anything around himself, save for the burning orb that hung in the sky over the whimsical ocean.
+What felt like years passed, as the Nidus stood and stared, soaking in the fiery sky and water, a burning, fitful light cast over his nonexistent surroundings.
+All at once, the air erupted into gunfire. Laser beams scorched the air, the smell of burning flesh and molten metal assaulting Kapaks' olfactory cells. He dove down, seeking cover behind a fallen piece of Orokin architecture that had materialized in the moment.~
+
+"Move!!" A voice called out, as an entourage of soldiers charged towards Kapak from behind. Their numbers rose as more and more of the golden-clad warriors appeared from the mist. The Zero-Tech suits gave it away- Dax Soldiers, bristling with blades and Orokin rifles, returning fire to whatever was on the other side of Kapak's cover.
+"High command, this is Penjaga Squadron, enemy forces have been spotted, Ceres coordinates one-"
+The Dax speaking was abruptly silenced as the entire plain lit up with a blue glow. There was an ear-deafening shriek as a ray of scorching light blasted over from behind Kapak's cover and vaporised the Dax into a shower of red mist- all that was left of the once proud warrior was a baked, part-molten shell of his armour.
+The ray continued to move, seeking out other Orokin soldiers, each one meeting a similar fate as the deadly cascade of light embraced their body.
+
+[1/3]</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-02_files/290779f99a7d8e2b6ff5d6d447ab4680.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">23-Sep-18 12:21 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">~Kapak gripped his head, trying to shut out the vision, the smells, the sounds. Something tugged at his soul, something telling him he should not be observing this. Something else tugged against that, telling him he needed to see this. He lay prone on the ground, clutching his fleshy bulb of a head as the red, insect like carapaces of the Orokin's most deadly enemies leapt over his cover, their tuning-fork like arms sending forth barrages of supressing fire into the remaining (and now retreating) Dax.
+
+More and more of the unnervingly symmetrical, alien-like creatures joined the fray. They outnumbered the Dax a thousand to one. How could they win?
+Kapak snapped himself out of it. He looked up. In front of him, the sand of the beach blew away by an unphysical wind, revealing the rocky ground of some distant planetoid, and lying in the center of it was a gleaming, golden weapon. The predator, the hunter. The wildcat of rage, the river of destiny. Kapak reached forward, his arm growing clad in a dark grey armour until upon wrapping his palm around the gun's handle, his entire limb was covered in a menacing second skin.
+He got to his feet and loaded the shells into the weapon, whirling about to face the Sentient menace...
+
+But it was gone. He was alone in a dark room. An Orokin tower, by the architecture. The reddened mist still lingered even here- the crimson star that had cast its blood-red light upon the shores from earlier now hovered outside the windows of the magnificent ancient structure.
+
+[2/3]</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-02_files/290779f99a7d8e2b6ff5d6d447ab4680.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">23-Sep-18 12:30 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">~"Lekalis...?" Kapak called out. Was he dreaming...? It felt too real to be a vision. Too vivid. But if this were memory, why could he not remember it?
+Kapak looked down at his hands, which had now returned to their grotesque, twisted and rather normal form. The shotgun was still in his hands though, which was a comforting feeling. He began to tread through the darkened halls, looking for something, anything. Perhaps another vision of the Strider? Or someone else from his past?Kapak stopped as he rounded a corner, peering down an abnormally long hallway. Something glowed at the end of it, something brilliantly white.
+"Lekalis?" Kapak called out again as he began to move down the hallway, approaching the white light. It was a figure, but not of the Loki he thought he might find here.
+Upon slightly closer inspection, it was revealed to be a feminine figure. Someone familiar from his... past...? Kapak couldn't tell anymore.
+"...Kára ?" He knew this face. It was a face he knew all too well. Someone... someone he had loved? But it wasn't her.
+"...Lis-" Before Kapak could get any closer, or finish the name, his mind blanked. It was as if someone had reached into his very skull and had torn out his hippocampus. Who was she??
+He reached out, but her face was now featureless, like an unfinished sculpture. She cried out, screams emanating from a nonexistent mouth before her white skin melted into a crimson pool of blood.
+The rest of the surroundings also began to liquefy, raining down a ferocious downpour of ruby fluid.
+Soon enough, Kapak found himself treading water in the middle of a scarlet sea, with nothing but a scorching, burning orb hanging over him.~
+
+[3/3]</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-02_files/d73030fb7f7872bb9df7d8d905bbb49e.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Blood🍶Strider#5557">Blood🍶Strider</span>
+                <span class="chatlog__timestamp">25-Sep-18 05:20 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">/Lekalis/
+
+In the smallest glances away, the briefest blink of an eye, a humble silhouette of a man in a red, red robe stood before Kapak, treading in the sea... Though, not above the waters, but below. 
+It stood upon the underside of the sea and looked down... or, up to Kapak.
+There was no skin to be seen on him, all encased in a silk casket of red, only a diamond porthole showed a mask of pale white, and a singular kite-like hole cut into its forhead. Like some futile attempt at an eye.
+"We were weapons... We were nothing." The jubilancy of The Strider spoke from the mask, and without the rasped filter of his jury-rigged vox, the words he spoke flowed like a stream in spring. His words were kind, as he strode to kneel close to Kapak; his mask looked at his legs beneath the sea with a small hum and laugh before he looked down... Up? To Kapak.
+
+"I doubt I ever met your friends, your comrades..." Lekalis mused as he reached out to place his hand on the surface beneath the water, his limb was porcelain and gold, like a doll of yore. Yet, at his palm reached the surface, it turned to a frightful familiar ashen hue.
+"... but you remember them still: Suffering, Sorrow, Pain... It's what lingers, what's carved into the meat of our minds." The hand pushed on, and chitinous plating burned into existence, each cell could be seen binding to another to form over his graceful hands which became stiff and dead as he pushed his hand through.
+"It is... frightening. It hurts... But you can't let go of it; it is your pain, your sorrow, your suffering. Don't be the fool I was. I am." His tone drew melancholic, as the mask idly examined the calcified forearm he'd pushed through the water, into the sun.
+[1/2]</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">[2/2]
+"We have nothing, but our Sorrow." He began to pull the limb back beneath the waves, the stream of his voice became dry, crestfallen.
+"Vesper, Kuiper, Leonov, Strata... Remember the Fallen." the sun that filtered through the red veil of the sea caught on the cheeks, noses, and brows of faces... Young faces, some that have never been seen from behind a mask. His hand continued to pull away,
+"Mataeru, Mistaya, Orokino..." There was a pause, the mask looked up and away for a moment, quirked to the other shoulder, before it looked back to Kapak.
+"... Sigyn... Remember the Remnant."
+His hand lingered, his restraining chitin dissolved beneath the waves, but the ephemeral thing beneath the waves hesitated.
+
+"Kára, Lisa... Remember the Pain." His tone was somber in that moment, melancholic in its tenor and pace. 
+"I... Remember it all. They made me a soldier without sorrow..." Yet it bristled now, a tsunami brewing, the waves disheveled in the distance and the Corpse hand flexed, as the figure began to fade; faces pressed into his robes t'ill they became his robes.
+"... it's... all I am."
+
+There was a flicker of light beneath the waves, the figure changed; wreathed in lightning, pale as bone with ribbons of blood and a gem of gore at the core of a faceless helm.
+"I am the fist of fury. A deadly weapon... The Rapier of Havoc."
+Lekalis pulled the hand away yet... the Corpse hand remained, floating in the waves as the pale figure stood and looked up to Kapak.
+
+"My trail is Mayhem. Destruction always followed..." The Strider's visage flickered, then vanished though his voice lingered still.
+"... In a forgotten tongue, they named it for the God of Harvest. Ceres..."
+
+It fell to a whisper now, emanating from the hand left behind. It was sweet and flowing again, a whirlpool threatening to steer the tide astray,
+"...You know the bloody trail we walk, Killer. Never forget it."</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-02_files/290779f99a7d8e2b6ff5d6d447ab4680.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">06-Oct-18 10:57 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">~Kapak's gaze went foggy as he tried to walk forward, track down the Strider. With every pace, his vision become unfocused, fuzzy.~
+
+<u>Kapak:</u>
+"W-wait! I don't know who you're talking about! Who is she? What are you talking abou-" Kapak's stride across the bizarre, watery plain faltered as the waves gave way, plunging the Nidus' body deep into the enigmatic ocean.
+He sank deeper and deeper into the red waters, Lekalis' form now dissolved. Kapak tried to swim up, but he couldn't. His limbs felt like they were made of ferrite. He struggled, but only sank deeper and deeper into the sea, which faded from its scarlet hue to a cold, dark blue. Soon, Kapak was floating not through the depths of the Strider's ocean, but through space. Star after star flickered into view until the Origin System's astral lights had filled his surroundings.
+An eye, as Red as that ominous Crimson Sun flickered into view. A familiar face- or moreover, form- for Kapak.
+"Helminth! What's.... what's going on?"
+
+<u><img class="emoji " alt="⇝" title="⇝" src="side-story-02_files/21dd.html">Helminth:</u>
+<div class="pre pre--multilineKapak language-diff">-MASTER? YOU CAN HEAR US?</div>
+
+<u>Kapak:</u>
+"Yes! Helminth, what is- my head... is this... real??"
+
+<u><img class="emoji " alt="⇝" title="⇝" src="side-story-02_files/21dd.html">Helminth:</u>
+<div class="pre pre--multilineKapak language-diff">-MASTER, YOU MUST ESCAPE. A DEMON HAS LATCHED TO YOUR MIND, POISONING YOU WITH THE DARKNESS OF LIES. PLEASE MASTER, YOU MUST RESIST THE SUN DEMON.</div>
+
+<u>Kapak:</u>
+"It- it's Lekalis! He's good!"
+
+<u><img class="emoji " alt="⇝" title="⇝" src="side-story-02_files/21dd.html">Helminth:</u>
+<div class="pre pre--multilineKapak language-diff">-THE DEMON OF THE STRIDER ENVENOMS YOU WITH A TOXIC UNTRUTH. RESIST IT, SO THAT YOU ARE NOT LOST.</div>
+The eye closed, and with it, the stars exploded, blinding Kapak with a shower of light.
+
+<u>Kapak:</u>
+"Argh...!" Kapak covered his eyespot, but it wasn't enough to block out the white avalanche of photons. His ear sensors rang.
+A moment passed.
+Then another.
+
+[1/2]</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">And then the light faded as quickly as it came, and Kapak fell from the sky into a muddy puddle.
+Lightning crackled throughout the dark grey-green sky. The scent of battery acid, sewage, metal and oil assaulted Kapak's olfactory cells. Kapak sat upright, wiping the grey mud from his body. He knew where he was. The half-finished Grineer galleon just over the nearby hill made it all too obvious.
+Ceres. But why here again? It was like he was anchored to this place, at least in this bizarre fever dream.
+Kapak rubbed his head. Things were going by so fast. Was that even Helminth? Or just another delusion? And was Lekalis actually speaking to him?
+The Remnant... Kapak had tried to not think about his old allies. As far he knew, only Isa and Cev survived out of all of them. And possibly the Strider, as well as Ella.
+After years of running, dishonesty, and killing, they were... they were a family. His family. People who were willing to work with him rather than turn him in for cash. People who watched his back, and didn't stab it.
+The Nidus stood up. He didn't know what was going on anymore, or what to do.
+So he began to walk. He began to stride forward.
+
+[2/2]</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-02_files/d73030fb7f7872bb9df7d8d905bbb49e.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Blood🍶Strider#5557">Blood🍶Strider</span>
+                <span class="chatlog__timestamp">07-Oct-18 08:07 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">/The Corpse/
+
+<div class="pre pre--multilineLek language-css">[remember me]</div>
+It pounded in the air, beat like a heart; electricity snapped across the sky, an engine revving. 
+
+<div class="pre pre--multilineLek language-css">[remember you]</div>
+
+The sun was hidden behind a choked sky, and in this shadowed light, he was yet still in a shadow; a shadow of a shard of metal, a brick of technology corroding slowly against the sickly atmosphere. The earth below him was slush made of rust and blood.
+Atop the shard stood a woman, looking off to a horizon hidden behind the jagged bones of mechanical corpses. 
+A dull thunder echoed across the world, drowned in an unseen rain. Fiery lightning illuminated the sky. In this light, metal turned to flesh : mushroom-like helms were split and cracked, they clutched primitive weaponry. They became corpses of metal again, but they were still in frames of meat.
+
+The Lightning faded, The woman stumbled and fell backwards, she hit the ground in the blink of an eye, impaled upon one of the fingers of scrap that jutted out from the toxic soil. The world became metal again.
+
+<div class="pre pre--multilineLek language-css">[You can't hear them anymore : barely whispering anymore.]</div>
+
+There was no rain, the poisoned ground beneath the Nidus began to dry at a rapid rate, the Woman's corpse stared blankly at the Nidus, rotting slowly in the preserved yet compromised atmos-suit. In the reflection of her helm, there was no Nidus; only the Pale Silhouette. On the shadowed surface of the brick of technology was a Corpus brand; a triangle caging a circle.
+
+The crackle of radiation faded, the tide of the abherrant void waned; a curiously grounded and real message pinged him, no sender and riddled with garbled data. There were only two lines rightly decipherable from the immediate glance.
+<div class="pre pre--multilineLek language-css">[(WE {c}an H{E}a{R} : th{E})m : (A)gain : together]
+[P{S}: (M)An(I)fest Lost shipMent 88]</div>
+
+The Corpse became dormant again.
+\</span>
+
+                                <span class="chatlog__edited-timestamp" title="07-Oct-18 08:11 PM"></span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-02_files/290779f99a7d8e2b6ff5d6d447ab4680.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">25-Oct-18 01:47 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><u>Kapak:</u>
+"Lost... shipment... 88?" Kapak reached for the woman's body, throttling it as if it would give him answers.
+"What the Void's going on??" The Nidus reached out, attempting to wrench the body from the metal claws that trapped it in place, but as he did, the ground became as water. Slowly at first, and then with frightening speed, the rust and dirt sifted like fluid, causing Kapak's hulking mass to sink quickly into it.
+"No...!" Kapak uttered before the dirt closed in around his head.
+
+Kapak sat upright, choking and coughing on the mineral rich, orange fluid of his bizarre, fleshy bathtub.
+As he wheezed and gasped for air, he looked around. He was back inside his Orbiter.
+His gaze darted over to the Strider's old Loki. It sat there, unlit, unmoving, as dark and cold as the metal that its false limbs were crafted from. Its head was drooping slightly to the side, but other than that nothing seemed out of place.
+"Ugh," he muttered as he crawled out of the citrine bath, "I don't know what is in that tea, but I need less of it."
+Kapak emptied the rest of now (now cold) tea onto the Orbiter floor where it was quickly absorbed by the nearby Infested tissues.
+He packed up the remaining tea leaves into a small golden urn plucked from his messy pile of treasure and began to exit the room. He stopped by Lekalis' silent body and lightly squeezed his shoulder.
+"Until we drink again, friend."
+
+[END RP]</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+</div>
+
+
+</body></html>

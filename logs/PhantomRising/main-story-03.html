@@ -1,0 +1,2481 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tales of the Awakened [Warframe RP Community] - main-story-03</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <style>
+        @font-face {
+            font-family: Whitney;
+            src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-300.woff);
+            font-weight: 300;
+        }
+
+        @font-face {
+            font-family: Whitney;
+            src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-400.woff);
+            font-weight: 400;
+        }
+
+        @font-face {
+            font-family: Whitney;
+            src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-500.woff);
+            font-weight: 500;
+        }
+
+        @font-face {
+            font-family: Whitney;
+            src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-600.woff);
+            font-weight: 600;
+        }
+
+        @font-face {
+            font-family: Whitney;
+            src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-700.woff);
+            font-weight: 700;
+        }
+
+        body {
+            background-color: #36393e;
+            color: #dcddde;
+            font-family: "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 17px;
+            font-weight: 400;
+        }
+
+        a {
+            color: #00aff4;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        img {
+            object-fit: contain;
+        }
+
+        .markdown {
+            max-width: 100%;
+            line-height: 1.3;
+            overflow-wrap: break-word;
+        }
+
+        .preserve-whitespace {
+            white-space: pre-wrap;
+        }
+
+        .spoiler-text {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+        }
+
+        .spoiler-text--hidden {
+            cursor: pointer;
+            background-color: #202225;
+            color: rgba(0, 0, 0, 0);
+        }
+
+        .spoiler-text--hidden:hover {
+            background-color: rgba(32, 34, 37, 0.8);
+        }
+
+        .spoiler-text--hidden::selection {
+            color: rgba(0, 0, 0, 0);
+        }
+
+        .quote {
+            display: flex;
+            margin: 0.05em 0;
+        }
+
+        .quote::before {
+            content: "";
+            margin-right: 0.5em;
+            border: 2px solid #4f545c;
+            border-radius: 3px;
+        }
+
+        .pre {
+            background-color: #2f3136;
+            font-family: "Consolas", "Courier New", Courier, monospace;
+        }
+
+        .pre--multiline {
+            margin-top: 0.25em;
+            padding: 0.5em;
+            border: 2px solid #282b30;
+            border-radius: 5px;
+            color: #b9bbbe;
+        }
+
+        .pre--multiline.hljs {
+            background-color: #2f3136;
+            color: #b9bbbe;
+        }
+
+        .pre--inline {
+            padding: 2px;
+            border-radius: 3px;
+            font-size: 0.85em;
+        }
+
+        .mention {
+            border-radius: 3px;
+            padding: 0 2px;
+            color: #7289da;
+            background-color: rgba(114, 137, 218, .1);
+            font-weight: 500;
+        }
+
+        .timestamp {
+            border-radius: 3px;
+            padding: 0 2px;
+            background-color: rgba(255, 255, 255, 0.06);
+        }
+
+        .emoji {
+            width: 1.325em;
+            height: 1.325em;
+            margin: 0 0.06em;
+            vertical-align: -0.4em;
+        }
+
+        .emoji--small {
+            width: 1em;
+            height: 1em;
+        }
+
+        .emoji--large {
+            width: 2.8em;
+            height: 2.8em;
+        }
+
+        .preamble {
+            display: grid;
+            margin: 0 0.3em 0.6em 0.3em;
+            max-width: 100%;
+            grid-template-columns: auto 1fr;
+        }
+
+        .preamble__guild-icon-container {
+            grid-column: 1;
+        }
+
+        .preamble__guild-icon {
+            max-width: 88px;
+            max-height: 88px;
+        }
+
+        .preamble__entries-container {
+            grid-column: 2;
+            margin-left: 0.6em;
+        }
+
+        .preamble__entry {
+            font-size: 1.4em;
+            color: #ffffff;
+        }
+
+        .preamble__entry--small {
+            font-size: 1em;
+        }
+
+        .chatlog {
+            max-width: 100%;
+        }
+
+        .chatlog__message-group {
+            display: grid;
+            margin: 0 0.6em;
+            padding: 0.9em 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            grid-template-columns: auto 1fr;
+        }
+
+        .chatlog__reference-symbol {
+            grid-column: 1;
+            margin: 8px 4px 4px 18px;
+            border-left: 2px solid #4f545c;
+            border-top: 2px solid #4f545c;
+            border-radius: 8px 0 0 0;
+        }
+
+        .chatlog__reference {
+            display: flex;
+            grid-column: 2;
+            margin-bottom: 0.25em;
+            font-size: 0.875em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            align-items: center;
+            color: #b5b6b8;
+        }
+
+        .chatlog__reference-avatar {
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            margin-right: 0.25em;
+        }
+
+        .chatlog__reference-name {
+            margin-right: 0.3em;
+            font-weight: 600;
+        }
+
+        .chatlog__reference-content {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .chatlog__reference-content a:hover {
+            text-decoration: none;
+        }
+
+        .chatlog__reference-link {
+            cursor: pointer;
+            color: #b5b6b8;
+        }
+
+        .chatlog__reference-link * {
+            display: inline;
+            pointer-events: none;
+        }
+
+        .chatlog__reference-link:hover {
+            color: #ffffff;
+        }
+
+        .chatlog__reference-link:hover *:not(.spoiler-text) {
+            color: #ffffff;
+        }
+
+        .chatlog__reference-edited-timestamp {
+            margin-left: 0.25em;
+            font-size: 0.8em;
+            color: rgba(255, 255, 255, 0.2);
+        }
+
+        .chatlog__author-avatar-container {
+            grid-column: 1;
+            width: 40px;
+            height: 40px;
+            margin-right: 16px;
+        }
+
+        .chatlog__author-avatar {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+        }
+
+        .chatlog__messages {
+            grid-column: 2;
+            min-width: 50%;
+        }
+
+        .chatlog__author-name {
+            font-weight: 500;
+            color: #ffffff;
+        }
+
+        .chatlog__timestamp {
+            margin-left: 0.3em;
+            font-size: 0.75em;
+            color: rgba(255, 255, 255, 0.2);
+        }
+
+        .chatlog__message {
+            padding: 0.1em 0.3em;
+            margin: 0 -0.3em;
+            background-color: transparent;
+            transition: background-color 1s ease;
+        }
+
+        .chatlog__message--highlighted {
+            background-color: rgba(114, 137, 218, 0.2);
+        }
+
+        .chatlog__message--pinned {
+            background-color: rgba(249, 168, 37, 0.05);
+        }
+
+        .chatlog__content {
+            font-size: 0.95em;
+            word-wrap: break-word;
+        }
+
+        .chatlog__edited-timestamp {
+            margin-left: 0.15em;
+            font-size: 0.8em;
+        }
+
+        .chatlog__attachment {
+            display: inline-block;
+            position: relative;
+            margin-top: 0.3em;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .chatlog__attachment--hidden {
+            cursor: pointer;
+            box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+        }
+
+        .chatlog__attachment--hidden * {
+            pointer-events: none;
+        }
+
+        .chatlog__attachment-spoiler-caption {
+            display: none;
+            z-index: 999;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            padding: 0.4em 0.8em;
+            background-color: rgba(0, 0, 0, 0.9);
+            border-radius: 20px;
+            color: #dcddde;
+            font-size: 0.9em;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+
+        .chatlog__attachment--hidden .chatlog__attachment-spoiler-caption {
+            display: block;
+        }
+
+        .chatlog__attachment--hidden:hover .chatlog__attachment-spoiler-caption {
+            color: #fff;
+        }
+
+        .chatlog__attachment-media {
+            vertical-align: top;
+            max-width: 45vw;
+            max-height: 500px;
+            border-radius: 3px;
+        }
+
+        .chatlog__attachment--hidden .chatlog__attachment-media {
+            filter: blur(44px);
+        }
+
+        .chatlog__attachment-generic {
+            width: 100%;
+            max-width: 520px;
+            height: 40px;
+            padding: 10px;
+            background-color: #2f3136;
+            border: 1px solid #292b2f;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .chatlog__attachment--hidden .chatlog__attachment-generic {
+            filter: blur(44px);
+        }
+
+        .chatlog__attachment-generic-icon {
+            float: left;
+            width: 30px;
+            height: 100%;
+            margin-right: 10px;
+        }
+
+        .chatlog__attachment-generic-size {
+            color: #72767d;
+            font-size: 12px;
+        }
+
+        .chatlog__attachment-generic-name {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .chatlog__edited-timestamp {
+            color: rgba(255, 255, 255, 0.2);
+        }
+
+        .chatlog__embed {
+            display: flex;
+            margin-top: 0.3em;
+            max-width: 520px;
+        }
+
+        .chatlog__embed-color-pill {
+            flex-shrink: 0;
+            width: 0.25em;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+        }
+
+        .chatlog__embed-color-pill--default {
+            background-color: #202225;
+        }
+
+        .chatlog__embed-content-container {
+            display: flex;
+            flex-direction: column;
+            padding: 0.5em 0.6em;
+            background-color: rgba(46, 48, 54, 0.3);
+            border: 1px solid rgba(46, 48, 54, 0.6);
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+        }
+
+        .chatlog__embed-content {
+            display: flex;
+            width: 100%;
+        }
+
+        .chatlog__embed-text {
+            flex: 1;
+        }
+
+        .chatlog__embed-author {
+            display: flex;
+            margin-bottom: 0.3em;
+            align-items: center;
+        }
+
+        .chatlog__embed-author-icon {
+            margin-right: 0.5em;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+
+        .chatlog__embed-author-name {
+            font-size: 0.875em;
+            font-weight: 600;
+            color: #ffffff
+        }
+
+        .chatlog__embed-author-name-link {
+            color: #ffffff;
+        }
+
+        .chatlog__embed-title {
+            margin-bottom: 0.2em;
+            font-size: 0.875em;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .chatlog__embed-description {
+            font-weight: 500;
+            font-size: 0.85em;
+            color: #dcddde;
+        }
+
+        .chatlog__embed-fields {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0 0.5em;
+        }
+
+        .chatlog__embed-field {
+            flex: 0;
+            min-width: 100%;
+            max-width: 506px;
+            padding-top: 0.6em;
+            font-size: 0.875em;
+        }
+
+        .chatlog__embed-field--inline {
+            flex: 1;
+            flex-basis: auto;
+            min-width: 150px;
+        }
+
+        .chatlog__embed-field-name {
+            margin-bottom: 0.2em;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .chatlog__embed-field-value {
+            font-weight: 500;
+            color: #dcddde;
+        }
+
+        .chatlog__embed-thumbnail {
+            flex: 0;
+            margin-left: 1.2em;
+            max-width: 80px;
+            max-height: 80px;
+            border-radius: 3px;
+        }
+
+        .chatlog__embed-image-container {
+            margin-top: 0.6em;
+        }
+
+        .chatlog__embed-image {
+            max-width: 500px;
+            max-height: 400px;
+            border-radius: 3px;
+        }
+
+        .chatlog__embed-footer {
+            margin-top: 0.6em;
+            color: #dcddde;
+        }
+
+        .chatlog__embed-footer-icon {
+            margin-right: 0.2em;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            vertical-align: middle;
+        }
+
+        .chatlog__embed-footer-text {
+            vertical-align: middle;
+            font-size: 0.75em;
+            font-weight: 500;
+        }
+
+        .chatlog__embed-plainimage {
+            vertical-align: top;
+            max-width: 45vw;
+            max-height: 500px;
+            border-radius: 3px;
+        }
+
+        .chatlog__embed-spotify {
+            border: 0;
+        }
+
+        .chatlog__embed-youtube-container {
+            margin-top: 0.6em;
+        }
+
+        .chatlog__embed-youtube {
+            border: 0;
+            border-radius: 3px;
+        }
+
+        .chatlog__reactions {
+            display: flex;
+        }
+
+        .chatlog__reaction {
+            display: flex;
+            align-items: center;
+            margin: 0.35em 0.1em 0.1em 0.1em;
+            padding: 0.2em 0.35em;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 3px;
+        }
+
+        .chatlog__reaction-count {
+            min-width: 9px;
+            margin-left: 0.35em;
+            font-size: 0.875em;
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .chatlog__bot-tag {
+            position: relative;
+            top: -.1em;
+            margin-left: 0.3em;
+            padding: 0.05em 0.3em;
+            border-radius: 3px;
+            line-height: 1.3;
+            background-color: #5865F2;
+            color: #ffffff;
+            font-size: 0.625em;
+            font-weight: 500;
+        }
+
+        .postamble {
+            margin: 1.4em 0.3em 0.6em 0.3em;
+            padding: 1em;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .postamble__entry {
+            color: #ffffff;
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.pre--multiline').forEach(block => hljs.highlightBlock(block));
+        });
+    </script>
+
+    <script>
+        function scrollToMessage(event, id) {
+            var element = document.getElementById('message-' + id);
+
+            if (element) {
+                event.preventDefault();
+
+                element.classList.add('chatlog__message--highlighted');
+
+                window.scrollTo({
+                    top: element.getBoundingClientRect().top - document.body.getBoundingClientRect().top - (window.innerHeight / 2),
+                    behavior: 'smooth'
+                });
+
+                window.setTimeout(function() {
+                    element.classList.remove('chatlog__message--highlighted');
+                }, 2000);
+            }
+        }
+
+        function showSpoiler(event, element) {
+            if (element && element.classList.contains('spoiler-text--hidden')) {
+                event.preventDefault();
+                element.classList.remove('spoiler-text--hidden');
+            }
+            if (element && element.classList.contains('chatlog__attachment--hidden')) {
+                event.preventDefault();
+                element.classList.remove('chatlog__attachment--hidden');
+            }
+        }
+    </script>
+
+    <svg style="display: none">
+        <symbol id="icon-attachment" viewBox="0 0 720 960">
+            <path fill="#f4f5fb" d="M50,935a25,25,0,0,1-25-25V50A25,25,0,0,1,50,25H519.6L695,201.32V910a25,25,0,0,1-25,25Z" />
+            <path fill="#7789c4" d="M509.21,50,670,211.63V910H50V50H509.21M530,0H50A50,50,0,0,0,0,50V910a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50h0V191Z" />
+            <path fill="#f4f5fb" d="M530,215a25,25,0,0,1-25-25V50a25,25,0,0,1,16.23-23.41L693.41,198.77A25,25,0,0,1,670,215Z" />
+            <path fill="#7789c4" d="M530,70.71,649.29,190H530V70.71M530,0a50,50,0,0,0-50,50V190a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50Z" />
+        </symbol>
+    </svg>
+</head>
+<body>
+
+<div class="preamble">
+    <div class="preamble__guild-icon-container">
+        <img class="preamble__guild-icon" src="main-story-03.html_Files/53926fd90f2c07d8f8a7d6fbee76bb17-34E69.png" alt="Guild icon" loading="lazy">
+    </div>
+    <div class="preamble__entries-container">
+        <div class="preamble__entry">Tales of the Awakened [Warframe RP Community]</div>
+        <div class="preamble__entry">PHANTOM RISING [RP] / main-story-03</div>
+
+
+    </div>
+</div>
+
+<div class="chatlog">
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/96a3fdee81be693f146ed8c30d101851-2E500.png" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Disruptis#5503" data-user-id="152349834785849344" style="color: rgb(255,210,0)">Disruptis - Disruptis</span>
+
+
+        <span class="chatlog__timestamp">10-Feb-21 11:50 AM</span>
+
+            <div class="chatlog__message " data-message-id="809104135991197697" id="message-809104135991197697" title="Message sent: 10-Feb-21 11:50 AM">
+
+                    <div class="chatlog__attachment " onclick="">
+
+                            <a href="main-story-03.html_Files/Warframe0045-3B917.jpg">
+                                <img class="chatlog__attachment-media" src="main-story-03.html_Files/Warframe0045-3B917.jpg" alt="Image attachment" title="Image: Warframe0045.jpg (2.75 MB)" loading="lazy">
+                            </a>
+                    </div>
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="809104141825212466" id="message-809104141825212466" title="Message sent: 10-Feb-21 11:50 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">[AR 1/5/3] CLOSED RP - Space, Uranus
+Some say the Solar Rails are the best place to catch a passing Tenno by the toe. There’s some truth to that as they frequent them on their trips. Detecting a Tenno Orbiter is a much more difficult task than it seems, however, so they fear no travel. Especially when said orbiter is suited for very abnormal excursions.
+
+The familiar sight of shifting Void space dissolved into a view of Uranus as an Orbiter emerged from a Solar Rail not far from it. There were no other ships in their vicinity to greet them, just the ocean planet of Uranus.
+
+A black and yellow Limbo observed this sight from the inside of his personal quarters. He knelt in the alcove just before the viewport, feeling the cool of the artificial rain currently cascading down from the roof of his entire quarters. He reached out and put a hand to the cold glass, as if he could sense his own connection to the water-logged planet.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/9197db7241269767e71abb5ba126ca7d-8AFB3.png" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Cephalon Svytoj#6006" data-user-id="280507184318775298" style="color: rgb(17,128,106)">EscortAlpha - Chegar &amp; Svytoj</span>
+
+
+        <span class="chatlog__timestamp">10-Feb-21 12:53 PM</span>
+
+            <div class="chatlog__message " data-message-id="809119818900832358" id="message-809119818900832358" title="Message sent: 10-Feb-21 12:53 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>CHEGAR</strong>
+
+The stark grey and green form of a Vauban stood just outside the door to the Limbo&#39;s quarters. His kept an uneasy posture, rattling off his equipment in his head. After a few seconds, he reached out, and landed several hefty taps on the door; As unsure as he was to the exact etiquette for something more professional, it seemed right to start with the basics.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/96a3fdee81be693f146ed8c30d101851-2E500.png" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Disruptis#5503" data-user-id="152349834785849344" style="color: rgb(255,210,0)">Disruptis - Disruptis</span>
+
+
+        <span class="chatlog__timestamp">11-Feb-21 04:37 PM</span>
+
+            <div class="chatlog__message " data-message-id="809538669333446666" id="message-809538669333446666" title="Message sent: 11-Feb-21 04:37 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Disruptis:</strong>
+Disruptis languidly pushed himself to his feet, artificial rain pouring off his chassis. He snapped his fingers, a wisp of Rift energy curling off them and finding its way into a hole in the side of the wall. Something clicked and the ceiling slid back into place. The water stopped.
+
+The Limbo dragged his arms past his collection of odd plants and opened the door. The still damp warframe was met with the sight of a familiar Vauban. Disruptis stood there, hanging his arms in front of him for a moment, before a tired smile found its way onto his unseen face. He recomposed himself.
+
+“Well, we’re here. Are you ready for this, Chegar?” he said, placing a hand on his shoulder and moving past him to grab his syandana off a hook on the wall.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/9197db7241269767e71abb5ba126ca7d-8AFB3.png" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Cephalon Svytoj#6006" data-user-id="280507184318775298" style="color: rgb(17,128,106)">EscortAlpha - Chegar &amp; Svytoj</span>
+
+
+        <span class="chatlog__timestamp">11-Feb-21 09:33 PM</span>
+
+            <div class="chatlog__message " data-message-id="809613132296093746" id="message-809613132296093746" title="Message sent: 11-Feb-21 09:33 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>CHEGAR</strong>
+&quot;As ready as I can be.&quot; Chegar said, turning to face Disruptis.  The Vauban gave a slight chuckle, thinking over his response.
+&quot;It&#39;s funny; You&#39;d think after five months of this, I&#39;d finally be able to give a definite yes.&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/96a3fdee81be693f146ed8c30d101851-2E500.png" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Disruptis#5503" data-user-id="152349834785849344" style="color: rgb(255,210,0)">Disruptis - Disruptis</span>
+
+
+        <span class="chatlog__timestamp">13-Feb-21 09:43 PM</span>
+
+            <div class="chatlog__message " data-message-id="810340376883101706" id="message-810340376883101706" title="Message sent: 13-Feb-21 09:43 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Disruptis:</strong>
+“Heh, you’re right, Chegar. Though eventually, you learn it’s not worth the time fussing over how prepared you are when it’ll blow all your plans out the water anyways.”
+
+Disruptis sidled over to the wall, where he snatched his new favourite weapon and deposited it on his hip. It was a plasma sword. Shorter than his guandao, but way better at cutting. He always kept it at his side.
+
+The ramp to his landing craft opened with a hiss, and the Limbo pushed his way through the dangling jungle of cords and tubes hanging from the ceiling to be greeted with a familiar orbiter out the front viewport. He connected to a nostalgic communication channel.
+
+“Thanks for making it, Isa.”</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/a_a0b899049ff668cddb4e3fc3767d7056-0D23D.gif" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="leirynot#7248" data-user-id="132350882825240577" style="color: rgb(255,243,0)">leirynot - Isa</span>
+
+
+        <span class="chatlog__timestamp">14-Feb-21 04:25 PM</span>
+
+            <div class="chatlog__message " data-message-id="810622787437723649" id="message-810622787437723649" title="Message sent: 14-Feb-21 04:25 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Isa:
+Isa&#39;s voice echoed over the comms with its usual distortion.
+&quot;You&#39;re welcome. Have you learned anything else about this so far?&quot; She asked. &quot;Approximate location, capabilities, and most importantly, do you have a plan to reach it?&quot;
+She asked. She didn&#39;t project any image at the moment, only voice.
+&quot;And what other Tenno reinforcements to you have? Only that Vauban user?&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/9197db7241269767e71abb5ba126ca7d-8AFB3.png" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Cephalon Svytoj#6006" data-user-id="280507184318775298" style="color: rgb(17,128,106)">EscortAlpha - Chegar &amp; Svytoj</span>
+
+
+        <span class="chatlog__timestamp">15-Feb-21 02:14 AM</span>
+
+            <div class="chatlog__message " data-message-id="810770953541124097" id="message-810770953541124097" title="Message sent: 15-Feb-21 02:14 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>CHEGAR</strong>
+The Vauban made his way up to the viewport, standing behind Disruptis and off to the side. His ears were keenly fixed on the conversation, with Isa&#39;s questions now fixed in his mind. He looked to the Limbo, waiting to see what his response was.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/96a3fdee81be693f146ed8c30d101851-2E500.png" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Disruptis#5503" data-user-id="152349834785849344" style="color: rgb(255,210,0)">Disruptis - Disruptis</span>
+
+
+        <span class="chatlog__timestamp">15-Feb-21 05:23 PM</span>
+
+            <div class="chatlog__message " data-message-id="810999795132399676" id="message-810999795132399676" title="Message sent: 15-Feb-21 05:23 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Disruptis:</strong>
+Disruptis planted himself in his communications chair and swiped some info onto the screen.
+
+“We snooped through some ledgers Earth-side and found a ship was going to a base on Uranus we’ve never heard of. Either it’s a decoy, or something new is here,” Disruptis explained, pronouncing the word ‘Uranus’ in its classical form ‘oo-rah-nuss’.
+
+“We’ve been tracking what we’re calling SED-003-K for a while now. As you know, the Weaver, SED-003, hasn’t been making any big moves, but she’s been sending a lot of drones to get resources for her. Ol’ K here really likes to drown Grineer settlements and ships in a lot of water. It also has the ability to cut Troopers into pieces. We’re not sure which resources it sticky fingers, but we think it’s something to do with cloned flesh. Most of the people killed have been cleaned of their brain.”</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/9197db7241269767e71abb5ba126ca7d-8AFB3.png" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Cephalon Svytoj#6006" data-user-id="280507184318775298" style="color: rgb(17,128,106)">EscortAlpha - Chegar &amp; Svytoj</span>
+
+
+        <span class="chatlog__timestamp">15-Feb-21 07:07 PM</span>
+
+            <div class="chatlog__message " data-message-id="811025911528030228" id="message-811025911528030228" title="Message sent: 15-Feb-21 07:07 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>CHEGAR</strong>
+<em>I can imagine Svytoj making some joke about head-cheese right now.</em> Chegar thought to himself. That&#39;s when a a thought struck him.
+&quot;Rewind there for a moment: Have the Casualties been exclusively Grineer? Or have there been other parties with their brains removed?&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/96a3fdee81be693f146ed8c30d101851-2E500.png" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Disruptis#5503" data-user-id="152349834785849344" style="color: rgb(255,210,0)">Disruptis - Disruptis</span>
+
+
+        <span class="chatlog__timestamp">15-Feb-21 07:12 PM</span>
+
+            <div class="chatlog__message " data-message-id="811027080355643393" id="message-811027080355643393" title="Message sent: 15-Feb-21 07:12 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Disruptis:</strong>
+Disruptis turned to Chegar for a second. &quot;Just Grineer, though I&#39;m not sure it&#39;s had the chance to kill anything else. Why?&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/9197db7241269767e71abb5ba126ca7d-8AFB3.png" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Cephalon Svytoj#6006" data-user-id="280507184318775298" style="color: rgb(17,128,106)">EscortAlpha - Chegar &amp; Svytoj</span>
+
+
+        <span class="chatlog__timestamp">16-Feb-21 01:47 AM</span>
+
+            <div class="chatlog__message " data-message-id="811126699772084254" id="message-811126699772084254" title="Message sent: 16-Feb-21 01:47 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>CHEGAR</strong>
+“Just trying to rule out some variables.” The Vauban replied. “If we find something non-Grineer that’s experienced the same trauma, we may have to amend our hypothesis’.” He said.
+“Sorry. Continue.” With that, Chegar folded his arms behind his back.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/a_a0b899049ff668cddb4e3fc3767d7056-0D23D.gif" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="leirynot#7248" data-user-id="132350882825240577" style="color: rgb(255,243,0)">leirynot - Isa</span>
+
+
+        <span class="chatlog__timestamp">17-Feb-21 05:22 PM</span>
+
+            <div class="chatlog__message " data-message-id="811724362595172352" id="message-811724362595172352" title="Message sent: 17-Feb-21 05:22 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Isa:
+&quot;Did the victims have any other parts taken, or just the brains?&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/96a3fdee81be693f146ed8c30d101851-2E500.png" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Disruptis#5503" data-user-id="152349834785849344" style="color: rgb(255,210,0)">Disruptis - Disruptis</span>
+
+
+        <span class="chatlog__timestamp">18-Feb-21 02:37 PM</span>
+
+            <div class="chatlog__message " data-message-id="812045098086039583" id="message-812045098086039583" title="Message sent: 18-Feb-21 02:37 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Disruptis:</strong>
+Disruptis put a hand to his chin. “Hard to say. They were all in very different states of messed up. Some cut more than others. The only thing reliable is that most brains were scooped. Some looked like they had been drowned first, then scooped later.”</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/9197db7241269767e71abb5ba126ca7d-8AFB3.png" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Cephalon Svytoj#6006" data-user-id="280507184318775298" style="color: rgb(17,128,106)">EscortAlpha - Chegar &amp; Svytoj</span>
+
+
+        <span class="chatlog__timestamp">20-Feb-21 02:03 PM</span>
+
+            <div class="chatlog__message " data-message-id="812761287057866822" id="message-812761287057866822" title="Message sent: 20-Feb-21 02:03 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>CHEGAR</strong>
+“Any other commonalities between the victims?” Chegar asked. “ besides being grineer and brainless of course.”</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/96a3fdee81be693f146ed8c30d101851-2E500.png" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Disruptis#5503" data-user-id="152349834785849344" style="color: rgb(255,210,0)">Disruptis - Disruptis</span>
+
+
+        <span class="chatlog__timestamp">23-Feb-21 11:38 AM</span>
+
+            <div class="chatlog__message " data-message-id="813812032385450006" id="message-813812032385450006" title="Message sent: 23-Feb-21 11:38 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Disruptis:</strong>
+“Not that we could really piece together,” Disruptis replied with a shrug. His eyes wandered over to where Coal sat in his usual cavity controlling the functions of the orbiter. “Any other questions? I think I’ve covered everything?”</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/9197db7241269767e71abb5ba126ca7d-8AFB3.png" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Cephalon Svytoj#6006" data-user-id="280507184318775298" style="color: rgb(17,128,106)">EscortAlpha - Chegar &amp; Svytoj</span>
+
+
+        <span class="chatlog__timestamp">23-Feb-21 01:24 PM</span>
+
+            <div class="chatlog__message " data-message-id="813838743832231966" id="message-813838743832231966" title="Message sent: 23-Feb-21 01:24 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>CHEGAR</strong>
+The Vauban pondered for a moment before shaking his head; nothing else came to mind. He listened for Isa’s response, watching out the view port in the meanwhile.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/a_a0b899049ff668cddb4e3fc3767d7056-0D23D.gif" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="leirynot#7248" data-user-id="132350882825240577" style="color: rgb(255,243,0)">leirynot - Isa</span>
+
+
+        <span class="chatlog__timestamp">23-Feb-21 06:25 PM</span>
+
+            <div class="chatlog__message " data-message-id="813914569981296651" id="message-813914569981296651" title="Message sent: 23-Feb-21 06:25 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Isa:</strong>
+&quot;I see. So it will be just us three? Do you have any particular plan or is the current one just to infiltrate and search for data and materials?&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/96a3fdee81be693f146ed8c30d101851-2E500.png" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Disruptis#5503" data-user-id="152349834785849344" style="color: rgb(255,210,0)">Disruptis - Disruptis</span>
+
+
+        <span class="chatlog__timestamp">25-Feb-21 08:35 PM</span>
+
+            <div class="chatlog__message " data-message-id="814671900767682572" id="message-814671900767682572" title="Message sent: 25-Feb-21 08:35 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Disruptis:</strong>
+“Yeah, this is a rush job so this is all we have. I could only get you because you happened to be nearby, and I don’t have any of my satellites near here right now. The plan is this: Fly close enough for a visual and once we have somewhere safe enough to drop to, we drop out, kill all the Grineer around us, and make a beeline for the ship that arrived. If it’s not on there it’s probably started killing. We see how close we can get to it to scan it, then get out if it seems like we can’t handle it. Stay on transcendence only just in case.”</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/a_a0b899049ff668cddb4e3fc3767d7056-0D23D.gif" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="leirynot#7248" data-user-id="132350882825240577" style="color: rgb(255,243,0)">leirynot - Isa</span>
+
+
+        <span class="chatlog__timestamp">25-Feb-21 10:36 PM</span>
+
+            <div class="chatlog__message " data-message-id="814702387641319434" id="message-814702387641319434" title="Message sent: 25-Feb-21 10:36 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Isa</strong>
+&quot;I assume we&#39;ll be moving quietly if we can. I&#39;ll bring something quiet, but will still bring my Zarr in case of heavier security, or if we do wind up having to fight the creature. Proxies will be available via air drop if needed, but I only brought a few.&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/9197db7241269767e71abb5ba126ca7d-8AFB3.png" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Cephalon Svytoj#6006" data-user-id="280507184318775298" style="color: rgb(17,128,106)">EscortAlpha - Chegar &amp; Svytoj</span>
+
+
+        <span class="chatlog__timestamp">28-Feb-21 12:25 AM</span>
+
+            <div class="chatlog__message " data-message-id="815454715247853599" id="message-815454715247853599" title="Message sent: 28-Feb-21 12:25 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>CHEGAR</strong>
+The Vauban looked at the Angstrum on his hip sheepishly, and contemplated the logistics of silencing his Sobek; at least he had his nikana if he needed to kill quietly.</span>
+
+                                <span class="chatlog__edited-timestamp" title="03-Mar-21 11:36 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/96a3fdee81be693f146ed8c30d101851-2E500.png" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Disruptis#5503" data-user-id="152349834785849344" style="color: rgb(255,210,0)">Disruptis - Disruptis</span>
+
+
+        <span class="chatlog__timestamp">20-Mar-21 09:25 PM</span>
+
+            <div class="chatlog__message " data-message-id="823004307950927902" id="message-823004307950927902" title="Message sent: 20-Mar-21 09:25 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Disruptis:</strong>
+“Knew I could count on you, Isa,” Disruptis quipped, re-engaging his orbiter’s Void Cloak and telling Coal to press forward.
+
+<em>We’ll be there soon enough,</em> he thought.
+
+Disruptis reached into a fold in his syandana and clutched a small cylindrical object. His thumb hovered over the top of it for a few seconds, in which he did nothing but stare. Stare into the oncoming space, into the approaching seas, into these sunless expanses.
+
+He clenched his fist around the object. After a tense second, he released it and sent his hand back down towards the console.
+
+<em>We’ll be there soon enough.</em></span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/96a3fdee81be693f146ed8c30d101851-2E500.png" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Disruptis#5503" data-user-id="152349834785849344" style="color: rgb(255,210,0)">Disruptis - Disruptis</span>
+
+
+        <span class="chatlog__timestamp">24-Apr-21 11:41 PM</span>
+
+            <div class="chatlog__message " data-message-id="835722089360654356" id="message-835722089360654356" title="Message sent: 24-Apr-21 11:41 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Disruptis:</strong>
+The slightly salty mists of Uranus wafted past Disruptis’s Limbo in chaotic waves carried by the erratic winds. He stood on the landing ramp of his Scimitar which was fully extended despite the craft still hovering a few dozen feet in the air. He took in the view of their target. The underwater facility’s surface platform was dark when they arrived.
+
+Well, mostly.
+
+Disruptis caught the sight of a Grineer Birger laying belly up inside the entrance to the sealab, as well as the chaos of shredded ferrite and bloodied corpses strewn across the accompanying floors. He ignited his plasma sword, letting its neon cyan light fill the air around him. The black and yellow Limbo willed himself inside the Rift and lept off.
+
+He started a preliminary search of the ground while engaging his comms.
+
+“Heads up guys, our target’s already made a terrible mess of things.”</span>
+
+                                <span class="chatlog__edited-timestamp" title="25-Apr-21 12:30 AM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/a_a0b899049ff668cddb4e3fc3767d7056-0D23D.gif" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="leirynot#7248" data-user-id="132350882825240577" style="color: rgb(255,243,0)">leirynot - Isa</span>
+
+
+        <span class="chatlog__timestamp">24-Apr-21 11:45 PM</span>
+
+            <div class="chatlog__message " data-message-id="835723273944956948" id="message-835723273944956948" title="Message sent: 24-Apr-21 11:45 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Isa:</strong>
+Isa&#39;s Saryn dropped from her landing craft as it passed over. She landed just a few feet away from Disruptis&#39;s Limbo, sniper rifle in hand, she began looking around as well, inspecting the corpses first, investigating to see if their brains had been removed like the other victims.
+
+&quot;Hopefully it left a convenient corpse trail.&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/9197db7241269767e71abb5ba126ca7d-8AFB3.png" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Cephalon Svytoj#6006" data-user-id="280507184318775298" style="color: rgb(17,128,106)">EscortAlpha - Chegar &amp; Svytoj</span>
+
+
+        <span class="chatlog__timestamp">25-Apr-21 04:00 PM</span>
+
+            <div class="chatlog__message " data-message-id="835968616721416242" id="message-835968616721416242" title="Message sent: 25-Apr-21 04:00 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>CHEGAR</strong>
+Chegar followed quickly behind the two, Sobek at the ready.  He took note of the location of the various casualties, trying to work out the order in which they were killed.
+
+&quot;The paranoid part of me asks if a convenient trail is actually desirable.&quot; Chegar questioned aloud. &quot;All it takes is a lack of attentiveness for hunters to become hunted.&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/96a3fdee81be693f146ed8c30d101851-2E500.png" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Disruptis#5503" data-user-id="152349834785849344" style="color: rgb(255,210,0)">Disruptis - Disruptis</span>
+
+
+        <span class="chatlog__timestamp">25-Apr-21 08:45 PM</span>
+
+            <div class="chatlog__message " data-message-id="836040149778432031" id="message-836040149778432031" title="Message sent: 25-Apr-21 08:45 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">~Most of the victims had been killed using a bludgeoning force to crack various bones, usually the skull. None of their brains seemed to be missing, save the ones who were also missing their heads. Most of the corpses hadn’t entered rigor mortis yet despite the intense activity they most likely saw before their demise. 
+
+To Chegar, most of the scattered bodies seemed like they had been dead for over 30 minutes, yet a trail of them leading to the wreck at the entrance of the facility seemed to be much more fresh. Most of the old bodies trailed from the inside of another ship wreckage, this one on the platform to their right.~
+
+<strong>Disruptis:</strong>
+“If either of you want a ticket to the Rift give me a shout,” Disruptis announced, pulling the modified Synoid Gammacor from his hip and dispersing his own rift energy. He squeezed on the alternate trigger and a UI popped into existence floating around the tool. He effortlessly swung his wrist around to select one of the items and scanned the air for signals. He mulled over the data running down a screen hovering inside his gammacor as it displayed the results.
+
+“Not seeing any comm activity in the air. Inside seems dark to me; this seed’s moved fast. We should go after it quick.”</span>
+
+                                <span class="chatlog__edited-timestamp" title="26-Apr-21 05:54 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/a_a0b899049ff668cddb4e3fc3767d7056-0D23D.gif" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="leirynot#7248" data-user-id="132350882825240577" style="color: rgb(255,243,0)">leirynot - Isa</span>
+
+
+        <span class="chatlog__timestamp">27-Apr-21 12:13 AM</span>
+
+            <div class="chatlog__message " data-message-id="836454898454495273" id="message-836454898454495273" title="Message sent: 27-Apr-21 12:13 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Isa:
+&quot;It may not be our target...&quot;
+The Saryn says, looming over a corpse for a moment.
+&quot;The brains of these ones are intact.&quot;
+She walked over to stand beside Disruptis.
+&quot;Though it could of course be trying to escape rather than harvest.&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/9197db7241269767e71abb5ba126ca7d-8AFB3.png" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Cephalon Svytoj#6006" data-user-id="280507184318775298" style="color: rgb(17,128,106)">EscortAlpha - Chegar &amp; Svytoj</span>
+
+
+        <span class="chatlog__timestamp">27-Apr-21 09:32 PM</span>
+
+            <div class="chatlog__message " data-message-id="836776850302435338" id="message-836776850302435338" title="Message sent: 27-Apr-21 09:32 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>CHEGAR</strong>
+&quot;Probably no electrical activity left.&quot; Chegar said, now looking over the same corpse as Isa. &quot;Maybe if we got lucky, we could map out the chemical makeup of the brain, see if we could deduce the last thoughts of the victim...&quot; He paused with a miffed sigh. &quot;long shot. Extreme long shot.&quot;</span>
+
+                                <span class="chatlog__edited-timestamp" title="27-Apr-21 09:54 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/96a3fdee81be693f146ed8c30d101851-2E500.png" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Disruptis#5503" data-user-id="152349834785849344" style="color: rgb(255,210,0)">Disruptis - Disruptis</span>
+
+
+        <span class="chatlog__timestamp">28-Apr-21 06:14 PM</span>
+
+            <div class="chatlog__message " data-message-id="837089300037763153" id="message-837089300037763153" title="Message sent: 28-Apr-21 06:14 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Disruptis:</strong>
+Disruptis shelved his gammacor and kicked over another one of the corpses to see its head still fully intact. He put a hand to his chin in thought.
+
+“Maybe it feeds after taking care of all threats and not as it kills? Either way, we don’t have time to linger,” the Limbo pointed towards the path of destruction leading to the entrance, “it looks like it’s already made its way inside. We should move.”
+
+Disruptis pushed off the body and walked towards the upside down wreck wedged into the front of the facility. Since it was thoroughly blocking their way in, he had to jump onto the wall, run a couple steps across it, then bullet jump onto the top of it before sliding down the other side. Three more fresher bodies met him on the other side, but at least the cockpit of the overturned vessel could be seen from this side. He climbed up into it and jammed his parazon into a console on the bridge and quickly scrubbed it for data, reading the output on his gammacor.
+
+“Nothing abnormal about this ship. Logs are telling me it travelled here from Earth with a bunch of nondescript cargo.”
+
+~The elevator shaft leading into the facility held no working elevators, as they were properly destroyed and sitting at the bottom of it. A long yellow-and-black cord was tied to the platform and descended the length of the shaft.~</span>
+
+                                <span class="chatlog__edited-timestamp" title="28-Apr-21 06:14 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/9197db7241269767e71abb5ba126ca7d-8AFB3.png" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Cephalon Svytoj#6006" data-user-id="280507184318775298" style="color: rgb(17,128,106)">EscortAlpha - Chegar &amp; Svytoj</span>
+
+
+        <span class="chatlog__timestamp">30-Apr-21 03:23 PM</span>
+
+            <div class="chatlog__message " data-message-id="837771139563388948" id="message-837771139563388948" title="Message sent: 30-Apr-21 03:23 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>CHEGAR</strong>
+The Vauban followed Disruptis&#39;s path, making sure to avoid stepping on any of the corpses on the other side.  Chegar began looking over the scene, trying to determine if anything had been moved or changed before their arrival, all while listening to Distruptis&#39;s report from the cock-pit.
+
+&quot;Any sensor data? Indications that the ship was moved after the crash, or interactions with it before we arrived?&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/a_a0b899049ff668cddb4e3fc3767d7056-0D23D.gif" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="leirynot#7248" data-user-id="132350882825240577" style="color: rgb(255,243,0)">leirynot - Isa</span>
+
+
+        <span class="chatlog__timestamp">30-Apr-21 06:17 PM</span>
+
+            <div class="chatlog__message " data-message-id="837814961005920350" id="message-837814961005920350" title="Message sent: 30-Apr-21 06:17 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Isa:
+Isa followed the Limbo and Vauban, as Disruptis gathered data she walked over to the elevator shaft and looked down it, raising her rifle to her shoulder to use her scope as needed to more easily see what lie at the bottom of the shaft.
+
+&quot;Security logs may be helpful if you can get them.&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/96a3fdee81be693f146ed8c30d101851-2E500.png" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Disruptis#5503" data-user-id="152349834785849344" style="color: rgb(255,210,0)">Disruptis - Disruptis</span>
+
+
+        <span class="chatlog__timestamp">30-Apr-21 08:27 PM</span>
+
+            <div class="chatlog__message " data-message-id="837847666104598591" id="message-837847666104598591" title="Message sent: 30-Apr-21 08:27 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">~It was too hard for Chegar to determine anything of the sort other than the differing freshness of the bodies. Isa found the two elevator platforms trashed at the bottom of the shaft, one of which was entirely ripped in two.~
+
+<strong>Disruptis:</strong>
+“I’m barely pulling anything out of this hunk of junk as-is. The back half of it exploded into smithereens a while ago and there’s a lot of corrupt data here. Any sort of video feed is long gone.”
+
+Disruptis yanked his parazon from the slot, instead electing to probe around the ship’s exposed wiring and systems with his gammacor. Long beams of energy lashed out and began reading the raw electrical signals.
+
+“I do see something that might’ve caused this one to crash. Someone basically pushed down on the steering wheel which caused it to full-send right into the side of the entrance supposedly. That’s the last thing it was doing before it exploded.”
+
+The Limbo spent a couple more seconds investigating the data before he caught something that made him frown. “This ship was commissioned on behalf of Vay Hek obviously because it was from Earth, but before going there it stopped somewhere around Venus’ airspace for some reason. What the muck have Grineer been doing with Venus? Am I out of touch or something?”</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/a_a0b899049ff668cddb4e3fc3767d7056-0D23D.gif" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="leirynot#7248" data-user-id="132350882825240577" style="color: rgb(255,243,0)">leirynot - Isa</span>
+
+
+        <span class="chatlog__timestamp">01-May-21 03:18 AM</span>
+
+            <div class="chatlog__message " data-message-id="837951030473130015" id="message-837951030473130015" title="Message sent: 01-May-21 03:18 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Isa:
+&quot;Unsure, but this thing did rip one of the elevator platforms in half.&quot;
+She stood at the top for a few more moments, then put her rifle on her back before drawing her pistol.
+&quot;Descending.&quot;
+She said before jumping and grabbing the elevator cable and beginning to slide down, one hand gripping the cable, the other holding her gun.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/9197db7241269767e71abb5ba126ca7d-8AFB3.png" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Cephalon Svytoj#6006" data-user-id="280507184318775298" style="color: rgb(17,128,106)">EscortAlpha - Chegar &amp; Svytoj</span>
+
+
+        <span class="chatlog__timestamp">02-May-21 03:28 AM</span>
+
+            <div class="chatlog__message " data-message-id="838315955632996392" id="message-838315955632996392" title="Message sent: 02-May-21 03:28 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>CHEGAR</strong>
+
+&quot;Out of touch? I seriously doubt it; the Corpus have a tight hold on Venus. Without a hefty treaty, or an overwhelming attack force, neither Hek nor the Corpus would want anything to do with each-other.&quot; Chegar stated. He began looking over the ship in earnest, looking to determine if this was a specialty built ship, or a more common Vessel such as the Gokstad or Bolkor. And more importantly, If the cargo hold was even partially intact.
+
+&quot;Isa, are you seeing anything that looks like part of this ship down there?&quot; Chegar asked, calling down the elevator shaft.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/96a3fdee81be693f146ed8c30d101851-2E500.png" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Disruptis#5503" data-user-id="152349834785849344" style="color: rgb(255,210,0)">Disruptis - Disruptis</span>
+
+
+        <span class="chatlog__timestamp">04-May-21 12:37 PM</span>
+
+            <div class="chatlog__message " data-message-id="839179019660034170" id="message-839179019660034170" title="Message sent: 04-May-21 12:37 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">~Isa didn’t find any remnants of the ship as she descended into the wreck at the bottom of the shaft. She noted that the windows on the way down had been slightly breached, and a small amount of water was trickling down from them, though that wasn’t necessarily an unusual sight in a Grineer Sealab. She touched down at the bottom of the shaft to find the connector to the second one trashed in a similar manner to the rest of the facility.
+
+Chegar found the ship to be a typical transport vessel of the Birger class. Not used in deep space like Gokstad, but mainly stuck in the interplanetary transport area of operations.~
+
+<strong>Disruptis:</strong>
+Disruptis wrapped up his scan and dropped from the wreckage. He pulled open a direct transmission to ARI-1101, hoping to grab one of them not preoccupied with something else.
+
+“Hey, can someone do some research into what I’m sending? Let me know if you find something.”
+
+After a couple seconds, he got a response from a very enthusiastic, cross-mark shaped cephalon.
+
+<strong>Active:</strong>
+“Oh, yes! Of cour--#@^1 Mr. Disruptis --@!%(0 sir. Leave th--#!@*^&amp; me! I won’t let you --)#%&amp;@!”
+
+<strong>Disruptis:</strong>
+Disruptis winced as a small amount of interference fuzzed some of the message coming back to him. He hoped his data transferred back to base in one piece.
+
+“Hey guys,” he announced to his partners, “I’m getting a little bit of interference around us. Just a heads-up.”</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/a_a0b899049ff668cddb4e3fc3767d7056-0D23D.gif" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="leirynot#7248" data-user-id="132350882825240577" style="color: rgb(255,243,0)">leirynot - Isa</span>
+
+
+        <span class="chatlog__timestamp">04-May-21 07:46 PM</span>
+
+            <div class="chatlog__message " data-message-id="839286905606766624" id="message-839286905606766624" title="Message sent: 04-May-21 07:46 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Isa:</strong>
+&quot;Nothing down here.&quot; <em>She reported over comms.</em> &quot;Beyond damage to the elevator nothing out of usual. Mind the windows. They&#39;re already already leaking.&quot;
+<em>She decided to stay where she was a t the moment to allow the others to catch up, and went about more closely examining the damage to the connector and the platforms to see what sort of weaponry may have been used to tear them asunder.</em></span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/9197db7241269767e71abb5ba126ca7d-8AFB3.png" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Cephalon Svytoj#6006" data-user-id="280507184318775298" style="color: rgb(17,128,106)">EscortAlpha - Chegar &amp; Svytoj</span>
+
+
+        <span class="chatlog__timestamp">07-May-21 03:46 AM</span>
+
+            <div class="chatlog__message " data-message-id="840132376092606464" id="message-840132376092606464" title="Message sent: 07-May-21 03:46 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>CHEGAR</strong>
+
+&quot;A good case to have a set of wings ready to go.&quot; Chegar responded, contemplating the pressured involved in rapid flooding.
+
+&quot;Any fix on the source of interference?&quot; Chegar asked, Moving towards where the Birger&#39;s Cargo hold would be.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/96a3fdee81be693f146ed8c30d101851-2E500.png" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Disruptis#5503" data-user-id="152349834785849344" style="color: rgb(255,210,0)">Disruptis - Disruptis</span>
+
+
+        <span class="chatlog__timestamp">09-May-21 08:17 PM</span>
+
+            <div class="chatlog__message " data-message-id="841106594904145941" id="message-841106594904145941" title="Message sent: 09-May-21 08:17 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">~From the looks of the jagged teeth that comprised the sundered portion of the elevator it was hard for Isa to tell what did the job. Elements of corrosion could be traced on both halves, as well as a large impact from the bottom. If anything it looks like it somehow split in two upon falling down from the top of the shaft.~
+
+<strong>Disruptis:</strong>
+“Checking,” Disruptis replied, gammacor in hand again. He switched to a different icon and held the tool while swiveling around in a circle around him. At the end read off the data from its display again.
+
+“Not sure. Some sort of signal is being sent out from somewhere below, inside this base. It’s only loud enough to mess with the SNR on my long-range comms. It might be have something to do with our target.”
+
+Disruptis paced over to the edge of the elevator shaft and peered down.
+
+“Only one way to find out.”
+
+The Limbo leapt down the shaft, lightly engaging the grav on his palms and sliding it against the walls to slow his descent. He landed into a crouch across the shaft from Isa and began inspecting the connector with her.</span>
+
+                                <span class="chatlog__edited-timestamp" title="11-May-21 12:16 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/a_a0b899049ff668cddb4e3fc3767d7056-0D23D.gif" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="leirynot#7248" data-user-id="132350882825240577" style="color: rgb(255,243,0)">leirynot - Isa</span>
+
+
+        <span class="chatlog__timestamp">10-May-21 07:09 PM</span>
+
+            <div class="chatlog__message " data-message-id="841451832551276555" id="message-841451832551276555" title="Message sent: 10-May-21 07:09 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Isa:
+&quot;Sounds similar to what happened with the Weaver. Local comms worked, but we lost contact with you.&quot;
+
+Isa says over comms, still looking over the connector.
+
+&quot;Looks like this thing has some sort of corrosive abilities. It weakened the structure before smashing and breaking it from below. If it relies on corrosion, then it may well have been created to combat Grineer.&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/9197db7241269767e71abb5ba126ca7d-8AFB3.png" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Cephalon Svytoj#6006" data-user-id="280507184318775298" style="color: rgb(17,128,106)">EscortAlpha - Chegar &amp; Svytoj</span>
+
+
+        <span class="chatlog__timestamp">15-May-21 10:13 PM</span>
+
+            <div class="chatlog__message " data-message-id="843310119616905247" id="message-843310119616905247" title="Message sent: 15-May-21 10:13 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>CHEGAR</strong>
+With his search of the wreckage inconclusive, Chegar made his way down the elevator shaft.
+
+&quot;Any residue left over from the corrosion? If we can identify the chemical, we might gain some insight as to the structure of our target.&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/96a3fdee81be693f146ed8c30d101851-2E500.png" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Disruptis#5503" data-user-id="152349834785849344" style="color: rgb(255,210,0)">Disruptis - Disruptis</span>
+
+
+        <span class="chatlog__timestamp">19-May-21 06:57 PM</span>
+
+            <div class="chatlog__message " data-message-id="844710302146363442" id="message-844710302146363442" title="Message sent: 19-May-21 06:57 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">~Isa did see one or two very small pools containing a corrosive liquid of some kind.~
+
+<strong>Disruptis:</strong>
+Disruptis tilted his head. “Kinda. That time it was the migraine modulators those bases used to keep the wildlife from swallowing them whole. The desert worms get pretty big around there. Weaver changed its frequency so it would mess with the comms, so it was just something anybody could do. At least, I <em>think</em> that’s all it was.”
+
+The black and yellow Limbo approached the other side of the connector and leaned over the second shaft down. “I think that’s a good idea, Chegar. Someone swab a bit if there is any and let’s keep moving,” he called back.
+
+Disruptis located a rope similar to the one tied to the first shaft. He let himself drop off the edge and grab it, then slid down into the first floor of the facility.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/a_a0b899049ff668cddb4e3fc3767d7056-0D23D.gif" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="leirynot#7248" data-user-id="132350882825240577" style="color: rgb(255,243,0)">leirynot - Isa</span>
+
+
+        <span class="chatlog__timestamp">23-May-21 09:51 PM</span>
+
+            <div class="chatlog__message " data-message-id="846203734950150175" id="message-846203734950150175" title="Message sent: 23-May-21 09:51 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Isa:
+Isa left an AR ping for Chegar on the pools of fluid.
+
+&quot;I don&#39;t have anything to gather the residue for analysis... Do you have anything, Chegar, or shall I call in a proxy to do so?&quot;
+
+She responds to her companions before following behind Disruptis, pistol in her free hand as she slid down the cable.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/9197db7241269767e71abb5ba126ca7d-8AFB3.png" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Cephalon Svytoj#6006" data-user-id="280507184318775298" style="color: rgb(17,128,106)">EscortAlpha - Chegar &amp; Svytoj</span>
+
+
+        <span class="chatlog__timestamp">27-May-21 07:48 PM</span>
+
+            <div class="chatlog__message " data-message-id="847622390661120000" id="message-847622390661120000" title="Message sent: 27-May-21 07:48 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>CHEGAR</strong>
+&quot;I should have some spare sample Vials on me.&quot; Chegar said, moving over to the pool.
+&quot;At worst, I can take a synthesis scan of the substance.&quot;
+The Vauban calmly produced an empty vial, and gingerly attempted to take a sample of the corrosive.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/96a3fdee81be693f146ed8c30d101851-2E500.png" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Disruptis#5503" data-user-id="152349834785849344" style="color: rgb(255,210,0)">Disruptis - Disruptis</span>
+
+
+        <span class="chatlog__timestamp">31-May-21 03:51 PM</span>
+
+            <div class="chatlog__message " data-message-id="849012322135834725" id="message-849012322135834725" title="Message sent: 31-May-21 03:51 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">~Chegar swabbed a glob of corrosive liquid and found it to have a consistency standard with water. Nothing special there. 
+
+Isa joined Disruptis at the bottom of the shaft that opened up into the twisting stairways that led to all three floors of this level. The top two doors were sealed shut, while the bottom-most one had been broken open.~
+
+<strong>Disruptis:</strong>
+“I think it’s been making its way down…” Disruptis remarked, pulling his Synoid Gammacor back off his hip and slinking towards the door. Pushed himself through and came upon another sealed door immediately to his left. It’s bright orange light spilled over him as he engaged a different core on his gammacor. He pointed it at the door itself, rather than the broken console next to it. Three beams of light shot out towards it, manipulating the very circuits of the door to slide open.
+
+Which it did.
+
+The door opened, revealing a massive chamber. Walkways and staircases spread across the walls of the towering room like veins. An utterly rancid miasma greeted the party as the door opened, the chamber itself seeming to exhale a long-held breath. What lay beyond was nothing short of desolation: through the low light Disruptis could make out dozens, if not hundreds of Grineer corpses strewn about the walkways and floors, some piled high enough to barricade off some of the walkways that led to other doorways out of the chamber.
+
+“Guys?” The Limbo’s voice came through comms, “you’re gonna wanna see this.”</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/9197db7241269767e71abb5ba126ca7d-8AFB3.png" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Cephalon Svytoj#6006" data-user-id="280507184318775298" style="color: rgb(17,128,106)">EscortAlpha - Chegar &amp; Svytoj</span>
+
+
+        <span class="chatlog__timestamp">02-Jun-21 05:28 PM</span>
+
+            <div class="chatlog__message " data-message-id="849761492941013013" id="message-849761492941013013" title="Message sent: 02-Jun-21 05:28 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>CHEGAR</strong>
+The Vauban reluctantly followed the scent to the door. He took a moment to take in the scenery, contemplating how best to respond
+
+“I’m not sure what I was expecting; the infested are certainly messy when it comes to collecting flesh, but this is of a completely different order.”</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/a_a0b899049ff668cddb4e3fc3767d7056-0D23D.gif" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="leirynot#7248" data-user-id="132350882825240577" style="color: rgb(255,243,0)">leirynot - Isa</span>
+
+
+        <span class="chatlog__timestamp">02-Jun-21 07:12 PM</span>
+
+            <div class="chatlog__message " data-message-id="849787549786439690" id="message-849787549786439690" title="Message sent: 02-Jun-21 07:12 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Isa:</strong>
+The Saryn nodded, following behind the Limbo, pistol now at the ready as it approached the door. She cautiously begins to advance in now, turning about, analyzing the area for threats, unperturbed by the smell nor sight of the carnage.
+&quot;Check their heads. Brains still intact like the ones on the surface?&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/96a3fdee81be693f146ed8c30d101851-2E500.png" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Disruptis#5503" data-user-id="152349834785849344" style="color: rgb(255,210,0)">Disruptis - Disruptis</span>
+
+
+        <span class="chatlog__timestamp">08-Jun-21 10:23 AM</span>
+
+            <div class="chatlog__message " data-message-id="851828913524310067" id="message-851828913524310067" title="Message sent: 08-Jun-21 10:23 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">~As Disruptis moved towards the center of the room, the nature of this scene came into sharper relief, the injuries of the Grineer as numerous as they were gruesome. Some were missing heads, others had been eviscerated, their torsos and vital organs reduced to lumps of bent metal and meaty paste. Others still, though rarer in number, had been ripped in half, their other half no doubt somewhere else among the carnage. The sheer number of bodies seemed to thin towards the true center of the room, replaced with small piles of spent casings littering the floor. 
+
+Isa detected no other threats around the room, but a faint glimmer caught her eye. Within the discarded casings at her feet was a shotgun shell, but conspicuously not of Grineer make. In fact, the design looked more Orokin at a glance.
+
+Disruptis dipped into the back of one of the corpse’s heads with his plasma sword. It fizzed open, revealing an interior devoid of a brain. He repeated the action to two other corpses nearby and found the same thing.~
+
+<strong>Disruptis:</strong>
+“No brains,” Disruptis remarked, “this is looking a lot more like our target now.”</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/a_a0b899049ff668cddb4e3fc3767d7056-0D23D.gif" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="leirynot#7248" data-user-id="132350882825240577" style="color: rgb(255,243,0)">leirynot - Isa</span>
+
+
+        <span class="chatlog__timestamp">09-Jun-21 02:34 AM</span>
+
+            <div class="chatlog__message " data-message-id="852073047519395890" id="message-852073047519395890" title="Message sent: 09-Jun-21 02:34 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Isa</strong>
+Seeing no immediate threats, Isa&#39;s gaze shifted downward toward the peculiar glimmer. She knelt down to pick up the shell and examine it more closely.
+&quot;We may have more company, likely Tenno.&quot; 
+She says, standing to hold the shell out to Disruptis.
+&quot;Shotgun shell, Tenno or Orokin origin.&quot; She looked around at the shells all scattered about. &quot;Likely something with a decent rate of fire as well.&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/9197db7241269767e71abb5ba126ca7d-8AFB3.png" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Cephalon Svytoj#6006" data-user-id="280507184318775298" style="color: rgb(17,128,106)">EscortAlpha - Chegar &amp; Svytoj</span>
+
+
+        <span class="chatlog__timestamp">10-Jun-21 08:03 PM</span>
+
+            <div class="chatlog__message " data-message-id="852699537578917938" id="message-852699537578917938" title="Message sent: 10-Jun-21 08:03 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>CHEGAR</strong>
+“Noted.” Chegar replied “let’s keep our fingers crossed; perhaps whomever we come across  will have goals aligned with ours.” He paused for a second, thinking through the other variables
+“Or at least hope that there isn’t any rogue corrupted near by.”</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/96a3fdee81be693f146ed8c30d101851-2E500.png" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Disruptis#5503" data-user-id="152349834785849344" style="color: rgb(255,210,0)">Disruptis - Disruptis</span>
+
+
+        <span class="chatlog__timestamp">14-Jun-21 04:22 PM</span>
+
+            <div class="chatlog__message " data-message-id="854093518104428595" id="message-854093518104428595" title="Message sent: 14-Jun-21 04:22 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Disruptis:</strong> 
+Disruptis took the shell from Isa and ran a quick scan over it with his synoid gammacor. He pursed his lips.
+
+“Can’t tell what this came from; It’s a little too warped for my scanner,” he thought aloud, “I should probably code a better module for that later.”
+
+At that moment, a low cranking sound could barely be heard from somewhere below them. Disruptis pushed himself back into the rift and crept towards the door they entered from. He instinctively began to motion a hand signal, but cut it off and called to the others over comms.
+
+“Something’s happening, let’s move.”</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/a_a0b899049ff668cddb4e3fc3767d7056-0D23D.gif" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="leirynot#7248" data-user-id="132350882825240577" style="color: rgb(255,243,0)">leirynot - Isa</span>
+
+
+        <span class="chatlog__timestamp">17-Jun-21 12:40 AM</span>
+
+            <div class="chatlog__message " data-message-id="854943609408454667" id="message-854943609408454667" title="Message sent: 17-Jun-21 12:40 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Isa:
+Isa nodded once more. She held her pistol up at the ready once more and began backing her way toward their entrance.
+&quot;Falling back? The longer we delay the less likely we are to find this thing.&quot;
+She says.
+&quot;If you want to wait for something to come up, we could take up defensive positions in here.&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/9197db7241269767e71abb5ba126ca7d-8AFB3.png" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Cephalon Svytoj#6006" data-user-id="280507184318775298" style="color: rgb(17,128,106)">EscortAlpha - Chegar &amp; Svytoj</span>
+
+
+        <span class="chatlog__timestamp">17-Jun-21 08:42 PM</span>
+
+            <div class="chatlog__message " data-message-id="855246049584611368" id="message-855246049584611368" title="Message sent: 17-Jun-21 08:42 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>CHEGAR</strong>
+The Vauban readied his shotgun. He dropped low against a wall, keeping an eye on their exit point, and the path ahead.
+
+&quot;I go were you two go: Stay, retreat, or proceed?&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/96a3fdee81be693f146ed8c30d101851-2E500.png" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Disruptis#5503" data-user-id="152349834785849344" style="color: rgb(255,210,0)">Disruptis - Disruptis</span>
+
+
+        <span class="chatlog__timestamp">17-Jun-21 08:59 PM</span>
+
+            <div class="chatlog__message " data-message-id="855250441352642581" id="message-855250441352642581" title="Message sent: 17-Jun-21 08:59 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Disruptis:</strong> 
+“I’m willing to bet a couple platinum the only thing moving in this base right now is it, unless it was somehow taken out by the defense team. But looking at this room, I feel that’s <em>really</em> unlikely,” Disruptis explained, waving his free hand through the air. “If this is a servant from Weaver, we don’t want it eating any more than it already has. We can’t just wait it out here.”
+
+Disruptis strode out the room and slinked through the hallways, towards the source of the sound.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/a_a0b899049ff668cddb4e3fc3767d7056-0D23D.gif" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="leirynot#7248" data-user-id="132350882825240577" style="color: rgb(255,243,0)">leirynot - Isa</span>
+
+
+        <span class="chatlog__timestamp">21-Jun-21 01:40 AM</span>
+
+            <div class="chatlog__message " data-message-id="856408233244885012" id="message-856408233244885012" title="Message sent: 21-Jun-21 01:40 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Isa:
+&quot;We shouldn&#39;t discount other Tenno, still.&quot;
+Isa said as she followed Disruptis out, switching to her rifle now.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/9197db7241269767e71abb5ba126ca7d-8AFB3.png" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Cephalon Svytoj#6006" data-user-id="280507184318775298" style="color: rgb(17,128,106)">EscortAlpha - Chegar &amp; Svytoj</span>
+
+
+        <span class="chatlog__timestamp">21-Jun-21 02:16 AM</span>
+
+            <div class="chatlog__message " data-message-id="856417200415965224" id="message-856417200415965224" title="Message sent: 21-Jun-21 02:16 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>CHEGAR</strong>
+&quot;Whatever&#39;s down there, I&#39;ve got your back.&quot; 
+Chegar followed closely behind Isa and Disruptis. He was mindful to keep close to one of the walls without scraping his armor against it. He kept his breath steady and his sobek trained on the path ahead, making sure to keep his team out of his line of fire.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="main-story-03.html_Files/96a3fdee81be693f146ed8c30d101851-2E500.png" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Disruptis#5503" data-user-id="152349834785849344" style="color: rgb(255,210,0)">Disruptis - Disruptis</span>
+
+
+        <span class="chatlog__timestamp">22-Jun-21 02:54 PM</span>
+
+            <div class="chatlog__message " data-message-id="856970345113059429" id="message-856970345113059429" title="Message sent: 22-Jun-21 02:54 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Disruptis:</strong> 
+Disruptis cracked a weak smile as he realized he was starting to like working with Chegar more and more.
+
+“Oh don’t worry Isa, I’m getting more worried about that by the second.”
+
+The black and yellow Limbo stalked through the facility, leading the group downwards.
+...........
+.........
+........
+......
+....
+..
+.
+.
+.</span>
+
+                                <span class="chatlog__edited-timestamp" title="22-Jun-21 02:54 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+</div>
+
+<div class="postamble">
+    <div class="postamble__entry">Exported 56 message(s)</div>
+</div>
+
+</body>
+
+</html>

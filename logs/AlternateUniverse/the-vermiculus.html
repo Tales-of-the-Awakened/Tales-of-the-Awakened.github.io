@@ -1,0 +1,1053 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tales of the Awakened [Warframe RP Community] - the-vermiculus</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <style>
+        /* General */
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-300.woff);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-400.woff);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-500.woff);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-600.woff);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-700.woff);
+    font-weight: 700;
+}
+
+body {
+    font-family: "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    object-fit: contain;
+}
+
+.markdown {
+    max-width: 100%;
+    line-height: 1.3;
+    overflow-wrap: break-word;
+}
+
+.preserve-whitespace {
+    white-space: pre-wrap;
+}
+
+.spoiler {
+    /* width: fit-content; */
+    display: inline-block;
+    /* This is more consistent across browsers, the old attribute worked well under Chrome but not FireFox. */
+}
+
+.spoiler--hidden {
+    cursor: pointer;
+}
+
+.spoiler-text {
+    border-radius: 3px;
+}
+
+.spoiler--hidden .spoiler-text {
+    color: rgba(0, 0, 0, 0);
+}
+
+.spoiler--hidden .spoiler-text::selection {
+    color: rgba(0, 0, 0, 0);
+}
+
+.spoiler-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.spoiler--hidden .spoiler-image {
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.spoiler--hidden .spoiler-image * {
+    filter: blur(44px);
+}
+
+.spoiler--hidden .spoiler-image:after {
+    content: "SPOILER";
+    color: #dcddde;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    padding: 100%;
+    border-radius: 20px;
+    letter-spacing: 0.05em;
+    font-size: 0.9em;
+}
+
+.spoiler--hidden:hover .spoiler-image:after {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.quote {
+    margin: 0.1em 0;
+    padding-left: 0.6em;
+    border-left: 4px solid;
+    border-radius: 3px;
+}
+
+.pre {
+    font-family: "Consolas", "Courier New", Courier, monospace;
+}
+
+.pre--multiline {
+    margin-top: 0.25em;
+    padding: 0.5em;
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+.pre--inline {
+    padding: 2px;
+    border-radius: 3px;
+    font-size: 0.85em;
+}
+
+.mention {
+    border-radius: 3px;
+    padding: 0 2px;
+    color: #7289da;
+    background: rgba(114, 137, 218, .1);
+    font-weight: 500;
+}
+
+.emoji {
+    width: 1.25em;
+    height: 1.25em;
+    margin: 0 0.06em;
+    vertical-align: -0.4em;
+}
+
+.emoji--small {
+    width: 1em;
+    height: 1em;
+}
+
+.emoji--large {
+    width: 2.8em;
+    height: 2.8em;
+}
+
+/* Preamble */
+
+.preamble {
+    display: grid;
+    margin: 0 0.3em 0.6em 0.3em;
+    max-width: 100%;
+    grid-template-columns: auto 1fr;
+}
+
+.preamble__guild-icon-container {
+    grid-column: 1;
+}
+
+.preamble__guild-icon {
+    max-width: 88px;
+    max-height: 88px;
+}
+
+.preamble__entries-container {
+    grid-column: 2;
+    margin-left: 0.6em;
+}
+
+.preamble__entry {
+    font-size: 1.4em;
+}
+
+.preamble__entry--small {
+    font-size: 1em;
+}
+
+/* Chatlog */
+
+.chatlog {
+    max-width: 100%;
+}
+
+.chatlog__message-group {
+    display: grid;
+    margin: 0 0.6em;
+    padding: 0.9em 0;
+    border-top: 1px solid;
+    grid-template-columns: auto 1fr;
+}
+
+.chatlog__reference-symbol {
+    grid-column: 1;
+    border-style: solid;
+    border-width: 2px 0 0 2px;
+    border-radius: 8px 0 0 0;
+    margin-left: 16px;
+    margin-top: 8px;
+}
+
+.chatlog__reference {
+    display: flex;
+    grid-column: 2;
+    margin-left: 1.2em;
+    margin-bottom: 0.25em;
+    font-size: 0.875em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    align-items: center;
+}
+
+.chatlog__reference-avatar {
+    border-radius: 50%;
+    height: 16px;
+    width: 16px;
+    margin-right: 0.25em;
+}
+
+.chatlog__reference-name {
+    margin-right: 0.25em;
+    font-weight: 600;
+}
+
+.chatlog__reference-link {
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.chatlog__reference-link:hover {
+    text-decoration: none;
+}
+
+.chatlog__reference-content > * {
+    display: inline;
+}
+
+.chatlog__reference-edited-timestamp {
+    margin-left: 0.25em;
+    font-size: 0.8em;
+}
+
+.chatlog__author-avatar-container {
+    grid-column: 1;
+    width: 40px;
+    height: 40px;
+}
+
+.chatlog__author-avatar {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.chatlog__messages {
+    grid-column: 2;
+    margin-left: 1.2em;
+    min-width: 50%;
+}
+
+.chatlog__author-name {
+    font-weight: 500;
+}
+
+.chatlog__timestamp {
+    margin-left: 0.3em;
+    font-size: 0.75em;
+}
+
+.chatlog__message {
+    padding: 0.1em 0.3em;
+    margin: 0 -0.3em;
+    background-color: transparent;
+    transition: background-color 1s ease;
+}
+
+.chatlog__content {
+    font-size: 0.95em;
+    word-wrap: break-word;
+}
+
+.chatlog__edited-timestamp {
+    margin-left: 0.15em;
+    font-size: 0.8em;
+}
+
+.chatlog__attachment {
+    margin-top: 0.3em;
+}
+
+.chatlog__attachment-thumbnail {
+    vertical-align: top;
+    max-width: 45vw;
+    max-height: 500px;
+    border-radius: 3px;
+}
+
+.chatlog__attachment-container {
+    height: 40px;
+    width: 100%;
+    max-width: 520px;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.chatlog__attachment-icon {
+    float: left;
+    height: 100%;
+    margin-right: 10px;
+}
+
+.chatlog__attachment-icon > .a {
+    fill: #f4f5fb;
+    d: path("M50,935a25,25,0,0,1-25-25V50A25,25,0,0,1,50,25H519.6L695,201.32V910a25,25,0,0,1-25,25Z");
+}
+
+.chatlog__attachment-icon > .b {
+    fill: #7789c4;
+    d: path("M509.21,50,670,211.63V910H50V50H509.21M530,0H50A50,50,0,0,0,0,50V910a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50h0V191Z");
+}
+
+.chatlog__attachment-icon > .c {
+    fill: #f4f5fb;
+    d: path("M530,215a25,25,0,0,1-25-25V50a25,25,0,0,1,16.23-23.41L693.41,198.77A25,25,0,0,1,670,215Z");
+}
+
+.chatlog__attachment-icon > .d {
+    fill: #7789c4;
+    d: path("M530,70.71,649.29,190H530V70.71M530,0a50,50,0,0,0-50,50V190a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50Z");
+}
+
+.chatlog__attachment-filesize {
+    color: #72767d;
+    font-size: 12px;
+}
+
+.chatlog__attachment-filename {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.chatlog__embed {
+    display: flex;
+    margin-top: 0.3em;
+    max-width: 520px;
+}
+
+.chatlog__embed-color-pill {
+    flex-shrink: 0;
+    width: 0.25em;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.chatlog__embed-content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em 0.6em;
+    border: 1px solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.chatlog__embed-content {
+    display: flex;
+    width: 100%;
+}
+
+.chatlog__embed-text {
+    flex: 1;
+}
+
+.chatlog__embed-author {
+    display: flex;
+    margin-bottom: 0.3em;
+    align-items: center;
+}
+
+.chatlog__embed-author-icon {
+    margin-right: 0.5em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.chatlog__embed-author-name {
+    font-size: 0.875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-title {
+    margin-bottom: 0.2em;
+    font-size: 0.875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-description {
+    font-weight: 500;
+    font-size: 0.85em;
+}
+
+.chatlog__embed-fields {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chatlog__embed-field {
+    flex: 0;
+    min-width: 100%;
+    max-width: 506px;
+    padding-top: 0.6em;
+    font-size: 0.875em;
+}
+
+.chatlog__embed-field--inline {
+    flex: 1;
+    flex-basis: auto;
+    min-width: 150px;
+}
+
+.chatlog__embed-field-name {
+    margin-bottom: 0.2em;
+    font-weight: 600;
+}
+
+.chatlog__embed-field-value {
+    font-weight: 500;
+}
+
+.chatlog__embed-thumbnail {
+    flex: 0;
+    margin-left: 1.2em;
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-image-container {
+    margin-top: 0.6em;
+}
+
+.chatlog__embed-image {
+    max-width: 500px;
+    max-height: 400px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-footer {
+    margin-top: 0.6em;
+}
+
+.chatlog__embed-footer-icon {
+    margin-right: 0.2em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.chatlog__embed-footer-text {
+    font-size: 0.75em;
+    font-weight: 500;
+}
+
+.chatlog__reactions {
+    display: flex;
+}
+
+.chatlog__reaction {
+    display: flex;
+    align-items: center;
+    margin: 0.35em 0.1em 0.1em 0.1em;
+    padding: 0.2em 0.35em;
+    border-radius: 3px;
+}
+
+.chatlog__reaction-count {
+    min-width: 9px;
+    margin-left: 0.35em;
+    font-size: 0.875em;
+}
+
+.chatlog__bot-tag {
+    position: relative;
+    top: -.2em;
+    margin-left: 0.3em;
+    padding: 0.05em 0.3em;
+    border-radius: 3px;
+    vertical-align: middle;
+    line-height: 1.3;
+    background: #7289da;
+    color: #ffffff;
+    font-size: 0.625em;
+    font-weight: 500;
+}
+
+/* Postamble */
+
+.postamble {
+    margin: 1.4em 0.3em 0.6em 0.3em;
+    padding: 1em;
+    border-top: 1px solid;
+}
+    </style>
+    <style>
+        /* General */
+
+body {
+    background-color: #36393e;
+    color: #dcddde;
+}
+
+a {
+    color: #0096cf;
+}
+
+.spoiler-text {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.spoiler--hidden .spoiler-text {
+    background-color: #202225;
+}
+
+.spoiler--hidden:hover .spoiler-text {
+    background-color: rgba(32, 34, 37, 0.8);
+}
+
+.quote {
+    border-color: #4f545c;
+}
+
+.pre {
+    background-color: #2f3136 !important;
+}
+
+.pre--multiline {
+    border-color: #282b30 !important;
+    color: #b9bbbe !important;
+}
+
+/* === Preamble === */
+
+.preamble__entry {
+    color: #ffffff;
+}
+
+/* Chatlog */
+
+.chatlog__message-group {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.chatlog__reference-symbol {
+    border-color: #4f545c;
+}
+
+.chatlog__reference {
+    color: #b5b6b8;
+}
+
+.chatlog__reference-link {
+    color: #b5b6b8;
+}
+
+.chatlog__reference-link:hover {
+    color: #ffffff;
+}
+
+.chatlog__reference-edited-timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__author-name {
+    color: #ffffff;
+}
+
+.chatlog__timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__message--highlighted {
+    background-color: rgba(114, 137, 218, 0.2) !important;
+}
+
+.chatlog__message--pinned {
+    background-color: rgba(249, 168, 37, 0.05);
+}
+
+.chatlog__attachment-container {
+    background-color: #2f3136;
+    border-color: #292b2f;
+}
+
+.chatlog__edited-timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__embed-color-pill--default {
+    background-color: rgba(79, 84, 92, 1);
+}
+
+.chatlog__embed-content-container {
+    background-color: rgba(46, 48, 54, 0.3);
+    border-color: rgba(46, 48, 54, 0.6);
+}
+
+.chatlog__embed-author-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-author-name-link {
+    color: #ffffff;
+}
+
+.chatlog__embed-title {
+    color: #ffffff;
+}
+
+.chatlog__embed-description {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-field-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-field-value {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-footer {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__reaction {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.chatlog__reaction-count {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* Postamble */
+
+.postamble {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.postamble__entry {
+    color: #ffffff;
+}
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.pre--multiline').forEach(block => hljs.highlightBlock(block));
+        });
+    </script>
+
+    <script>
+        function scrollToMessage(event, id) {
+            var element = document.getElementById('message-' + id);
+
+            if (element) {
+                event.preventDefault();
+
+                element.classList.add('chatlog__message--highlighted');
+
+                window.scrollTo({
+                    top: element.getBoundingClientRect().top - document.body.getBoundingClientRect().top - (window.innerHeight / 2),
+                    behavior: 'smooth'
+                });
+
+                window.setTimeout(function() {
+                    element.classList.remove('chatlog__message--highlighted');
+                }, 2000);
+            }
+        }
+
+        function showSpoiler(event, element) {
+            if (element && element.classList.contains('spoiler--hidden')) {
+                event.preventDefault();
+                element.classList.remove('spoiler--hidden');
+            }
+        }
+    </script>
+</head>
+<body>
+
+<div class="preamble">
+    <div class="preamble__guild-icon-container">
+        <img class="preamble__guild-icon" src="the-vermiculus.html_Files/53926fd90f2c07d8f8a7d6fbee76bb17-34E69.png" alt="Guild icon">
+    </div>
+    <div class="preamble__entries-container">
+        <div class="preamble__entry">Tales of the Awakened [Warframe RP Community]</div>
+        <div class="preamble__entry">Personal Roleplaying / the-vermiculus</div>
+
+            <div class="preamble__entry preamble__entry--small">[6/12 AR] OPEN RP - solar orbit between Mars and Ceres | Narrated by Cephalon Karsk | A Grineer Nightwatch squad, a Solari rail jockey, a mad cephalon, a very angry Nidus, and a shipment of Moas ~~walk into a bar~~ are stuck on a dead Galleon in the middle of nowhere.  What could possibly go wrong that hasn&#39;t already?</div>
+
+    </div>
+</div>
+
+<div class="chatlog">
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="the-vermiculus.html_Files/976f799a2de24047391f44469636a79f-8F4F1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Chronically Dehydrated#7813" data-user-id="482587075602808851" style="color: rgb(108,63,0)">UnremarkableUsername - Karsk</span>
+
+
+        <span class="chatlog__timestamp">29-Feb-20 07:18 PM</span>
+
+            <div class="chatlog__message " data-message-id="683468291796238349" id="message-683468291796238349">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">[6/12 AR] OPEN RP - solar orbit between Mars and Ceres
+
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+Hello Drusus,
+
+I am Cephalon Karsk.  I have been looking through the Leverian lately, and although I must admit your collection is imressive, I have noticed several trends that I find problematic.  Relatedly, as one who is has led a long and adventurous life, I have some stories to tell which may be of interest to you.
+
+I notice that your approach to history is centered around the great and powerful, in other words, around the Tenno and Orokin.  You draw your information from archaeology and inspiration from legend.  You portray the Tenno either as beneficient, godly heroes, or as obedient champions of the Orokin.
+
+My approach to history is based on people, on everyday occurences.  I draw my information and inspiration from what is happening around me.  I know that the Tenno are niether godly, nor heroes, nor obedient, nor champions.  You concern yourself with giants, but forget the worms that they step on.  
+
+The story of the Vermiculus is one of many that the Leverian has missed, and which I hope will encourage you to take a more nuanced view of this system&#39;s history, and the people who live in it.
+((1/3))</span>
+
+                                <span class="chatlog__edited-timestamp" title="10-Mar-20 07:56 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="683468497585569814" id="message-683468497585569814">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">There was little unusual about the Vermiculus, it was a Grineer galleon like any other.  On its way to Ceres for decomissioning after many eventful years of service in Vay Hek&#39;s fleet, the final crew of the Vermiculus had an unexpected spark of luck.  It intercepted a Solari rail tractor carrying a shipment of assorted proxies from production facilities on Pluto, intended for deployment on the Orb Vallis.  This great windfall was reported to Grineer command, and a Nightwatch squad was sent to secure this trove of forbidden technology and potentially valuable intelligence.  At that point, luck ran out.
+
+The Nightwatch squad arrived to find the Vermiculus dark.  Its engines and communications were silent.  Upon entering, they found the crew dead, many of them spead across the walls and some even dripping from the ceiling, their remains beginning to freeze as the broken reactor bled its heat into space and its coolant into the ship.  Meanwhile, the unseen enemy had stupidly left their landing craft docked to the other end of a shipful of doors that, without power, could only be opened manually.
+
+How do I know this?  My proxy was stowed away among the Moas on that rail tractor.  I saw the whole thing.
+
+I heard when the rail jockey began to beat out an ancient call for help on the wall of her abandoned holding cell, hoping that someone might hear, and perhaps that someone might even recognize it.
+
+TAP TAP TAP
+SCRAPE, SCRAPE, SCRAPE
+TAP TAP TAP
+
+TAP TAP TAP
+SCRAPE, SCRAPE, SCRAPE
+TAP TAP TAP
+
+The Tenno heard.
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+((2/3))</span>
+
+                                <span class="chatlog__edited-timestamp" title="13-Apr-20 06:18 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="683468744256913508" id="message-683468744256913508">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">((Hello and welcome to the <em>Vermiculus</em>!
+
+If you join as a Tenno, you are on what was until now a normal sabotage/exterminate mission, run by a standard squad of four.
+
+If you join as a member of the Nightwatch, please be aware that your character <s>will definitely</s> <em>might possibly</em> die.
+
+Don&#39;t kill Esk please.
+
+My only rp experience so far is in <span class="mention">#fortuna-hub-ar</span>, so we&#39;ll see how this goes. <img class="emoji " alt="😀" title="😀" src="https://twemoji.maxcdn.com/2/72x72/1f600.png"> ))
+((3/3))</span>
+
+                                <span class="chatlog__edited-timestamp" title="29-Feb-20 07:21 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="the-vermiculus.html_Files/976f799a2de24047391f44469636a79f-8F4F1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Chronically Dehydrated#7813" data-user-id="482587075602808851" style="color: rgb(108,63,0)">UnremarkableUsername - Karsk</span>
+
+
+        <span class="chatlog__timestamp">06-Mar-20 04:47 PM</span>
+
+            <div class="chatlog__message " data-message-id="685604600769675328" id="message-685604600769675328">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Esku Kterst:</strong>
+&quot;You done there?  got anything?&quot;
+The voice made the Bombard jump slightly.  She turned away from the dim yellow glow of the console toward the armored bulk of a Nightwatch reaver, the squad leader.
+
+&quot;Nothing we couldn&#39;t tell from the ouside, sir,&quot;  she answered.  &quot;The reactor&#39;s broke and the CO2 scrubbers and ventilation is down.  The cargo seems to be safe, but we have only an hour until the emergency batteries run out.&quot;
+
+The squad leader nodded his acknowledgement.  Today was definitely shaping up to be a bad day, but perhaps the situation could be salvaged.
+
+&quot;We proceed,&quot; he said, as he began to turn the crank wheel to open the door to the next room.  &quot;Our goal is the cargo bay.  Stay close together.  Radio silence unless absolutely necessary.  Tenno may still be here.  And someone help with this door!&quot;
+
+Esk concealed a gulp as the door opened, the squad collectively readying their weapons in case the door concealed a Tenno.  Nothing moving in the next room, just more corpses.  Safe.  With a nod, the squad leader crossed the threshold, tonkor ready, followed by a few brunt lancers, a few flameblades and powerclaws, the main group of lancers, a pair of seekers, a hyekka master, and at the rear with a bailiff and a few more brunt lancers, Esk, the bombard.  Somewhere in the vents, there was a manic scouting ahead.</span>
+
+                                <span class="chatlog__edited-timestamp" title="06-Mar-20 04:56 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="the-vermiculus.html_Files/fc2f31cda0d8ead570778ff1a96b18c5-4549C.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="DoubleDamages#7343" data-user-id="193359028880015363" style="color: rgb(132,88,0)">DoubleDamages - Kha&#39;dra Rham</span>
+
+
+        <span class="chatlog__timestamp">10-Mar-20 09:30 AM</span>
+
+            <div class="chatlog__message " data-message-id="686929079785881662" id="message-686929079785881662">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Gli’Vun Korr</strong>
+
+Finally, the Vermiculus. The name was not familiar to Gli’Vun, intel’ only indicated it was one of the many Galleons that made up Vay Hek’s infamous fleet. Their objective was the recovery of valuables Corpus proxies, a routine job by the look of it. Boring, that was the only word that went through her mind. She would have rather taken part in a Rathuum Trial then playing fetch for the Queens.
+But everything changed when they arrived on-board. It was a ghost ship, or what was left of it. There was blood and corpses everywhere while the reactor coolant was leaking through the ship. They picked up an unknown signature at the end of the ship’s, a landing craft. Probably whoever attacked the galleon to begin with. Finally a change of pace for her, but probably not exactly what she had in mind.
+
+The Hyekka Mistress was silently following the main bulk of her Nightwatch squad. Positioned in the middle section of their unit’s column formation it was the perfect spot to prevent her soon-to-be death at the hands of an unknown assailant.
+Both her tamed Hyekkas, Ogsk and Karsk, were gently and silently strolling alongside their master. Each was equipped with some kind of grineer-manufactured collar, courtesy of Gli’Vun herself. They were designed to enhance reaction response time and to assure their blind loyalty, a cruel method but a necessary evil. Korr had a sadistic reputation to uphold and both her &quot;pets&quot; would suffer from her egotistical approach to battle.
+
+Something was off. Whatever happened aboard this ship ... It was far from over.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="the-vermiculus.html_Files/0149348555df7fb9989730124c84f6b5-BFCE4.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="jado the man#0685" data-user-id="136944676849582080" style="color: rgb(173,20,87)">Almighty_Jado - Kapak</span>
+
+
+        <span class="chatlog__timestamp">17-Mar-20 01:30 PM</span>
+
+            <div class="chatlog__message " data-message-id="689525963184406594" id="message-689525963184406594">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><u>Kapak:</u>
+Somewhere within the ventilation tubes of the galleon, a wet crunching noise resonated. The source was Kapak, whose Nidus feasted upon the lifeless shell of a lancer. The Grineer&#39;s armour was pried open, like a fruit revealing its juicy innards to a hungry animal.
+Kapak&#39;s mutant jaws tore what organic matter remained inside out, swallowing the pieces of flesh whole. Delicious. But satisfying? That was another question.
+No matter what Kapak consumed, it would never fill the void in his soul. The Grineer had taken the closest thing to a family he had. Kuve. Kino. Disruptis. Muro. Vuko. Mata. Names upon names and faces upon faces scrolled through his mind, haunting him. With every memory, his rage and sadness continued to flood back to him, and he savaged the corpse with ever increasing brutality.
+These emotions were new to him. Never had he been so attached to people in this way. This weakness in his soul only fueled his hatred even more. He knew he could dismember oceans of Grineer clones, and it would never amount to even a fraction of the justice they deserved.
+
+((Leaving my post off here in case other Tenno join. Typically Kapak doesn&#39;t work with other Tenno he doesn&#39;t know well because he&#39;s got a massive bounty on him, so we&#39;ll figure that out if that bridge gets crossed.))</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="the-vermiculus.html_Files/976f799a2de24047391f44469636a79f-8F4F1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Chronically Dehydrated#7813" data-user-id="482587075602808851" style="color: rgb(108,63,0)">UnremarkableUsername - Karsk</span>
+
+
+        <span class="chatlog__timestamp">14-Apr-20 07:07 PM</span>
+
+            <div class="chatlog__message " data-message-id="699757670575374346" id="message-699757670575374346">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">((<span class="mention" style="color: rgb(173, 20, 87); background-color: rgba(173, 20, 87, 0.1);">@Kapak</span> <span class="mention" title="DoubleDamages#7343">@DoubleDamages - Kha&#39;dra Rham</span>  Here we go!))
+As the squad entered the next room, a tap from the vent in an air duct announced the return of the scout.
+
+&quot;<em>Nearby, in ducts, something big.  Smell Infested, sound like eating Grineer.  Farther, hear survivor.  They signal: three taps, three scratch, three taps again.  Risk investigate?</em>&quot;
+
+The Squad Leader answered with the quick confidence of someone who knew exactly what they were doing.  &quot;No.  Leave the survivor, they&#39;re not Grineer.  Gli&#39;vun, watch for Infested.&quot;
+
+Apparently this Squad leader was a sharp fellow, which, for an experienced officer in the most elite division under the Queens, doesn&#39;t surprise me.  He knew that few Grineer would be taught a coded call for help, especially one so ancient, and even fewer would bother to use it.  After all, they&#39;re supposed to be expendable.  It wouldn&#39;t surprise me if he even recognized it as SOS.
+
+I&#39;d love to make fun of him for his confidence, putting one soldier with a flamethrower and a few hyekkas in charge of dealing with an angry Nidus, but I can&#39;t.  He probably thought the Infested thing in the vents was a brood mother or something like that.  His response makes complete sense given what he knew at the time, and if he was right, the Nightwatch would probably have completed their mission with few or no casualties, and I wouldn&#39;t have a story to tell you.
+
+Whether our friend in the vents recognized the SOS, I&#39;m not sure, but he certainly heard it.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="the-vermiculus.html_Files/fc2f31cda0d8ead570778ff1a96b18c5-4549C.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="DoubleDamages#7343" data-user-id="193359028880015363" style="color: rgb(132,88,0)">DoubleDamages - Kha&#39;dra Rham</span>
+
+
+        <span class="chatlog__timestamp">25-Apr-20 03:05 PM</span>
+
+            <div class="chatlog__message " data-message-id="703683218951635105" id="message-703683218951635105">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Gli’Vun Korr</strong>
+
+And that was her cue. With a silent smirk under her hood, she activated her head’s up display, and the special sensors that came with it. A few taps on a wrist-mounted grineer terminal and the onboard sensors located into her Hyekkas collars began to cycle through the surrounding area aswell. Sure, theses beasts were naturally good at hunting and feeding of infested creatures, but an extra-effort couldn’t hurt, right ? 
+A few seconds went by, nothing yet on the nearby sonar pings, good enough. She checked her current ammunition with a slight glimpse at her waist. Four additional canisters for her Ignis handheld flamethrower were gently attached to a tactical belt, alongside a Sheev combat blade. It was probably good enough for whatever was left aboard this wreck. Probably.
+
+She signaled the squad leader that they were in the clear for now and that she was doing, well, whatever she was tasked to do to begin with.
+It was up to Ogsk and Karsk, for now.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="the-vermiculus.html_Files/976f799a2de24047391f44469636a79f-8F4F1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Chronically Dehydrated#7813" data-user-id="482587075602808851" style="color: rgb(108,63,0)">UnremarkableUsername - Karsk</span>
+
+
+        <span class="chatlog__timestamp">26-Apr-20 11:20 PM</span>
+
+            <div class="chatlog__message " data-message-id="704170198764093470" id="message-704170198764093470">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">((I probably should&#39;ve posted something like this sooner, but here&#39;s the room the nightwatch squad is in right now))</span>
+
+                        </div>
+                    </div>
+
+                    <div class="chatlog__attachment">
+                        <div class="" onclick="">
+                            <div class="">
+                                    <a href="the-vermiculus.html_Files/room-7A5F6.png">
+                                        <img class="chatlog__attachment-thumbnail" src="the-vermiculus.html_Files/room-7A5F6.png" alt="Image attachment" title="Image: room.png (3.31 MB)">
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="704170295770087576" id="message-704170295770087576">
+
+                    <div class="chatlog__attachment">
+                        <div class="" onclick="">
+                            <div class="">
+                                    <a href="the-vermiculus.html_Files/room_1_map-BBA93.png">
+                                        <img class="chatlog__attachment-thumbnail" src="the-vermiculus.html_Files/room_1_map-BBA93.png" alt="Image attachment" title="Image: room_1_map.png (75.93 KB)">
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+            </div>
+    </div>
+</div>
+
+</div>
+
+<div class="postamble">
+    <div class="postamble__entry">Exported 10 message(s)</div>
+</div>
+
+</body>
+
+</html>

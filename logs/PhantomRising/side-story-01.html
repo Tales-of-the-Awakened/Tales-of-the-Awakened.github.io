@@ -1,0 +1,2134 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tales of the Awakened [Warframe RP Community] - side-story-01</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <style>
+        /* General */
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-300.woff);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-400.woff);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-500.woff);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-600.woff);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-700.woff);
+    font-weight: 700;
+}
+
+body {
+    font-family: "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    object-fit: contain;
+}
+
+.markdown {
+    max-width: 100%;
+    line-height: 1.3;
+    overflow-wrap: break-word;
+}
+
+.preserve-whitespace {
+    white-space: pre-wrap;
+}
+
+.spoiler {
+    /* width: fit-content; */
+    display: inline-block;
+    /* This is more consistent across browsers, the old attribute worked well under Chrome but not FireFox. */
+}
+
+.spoiler--hidden {
+    cursor: pointer;
+}
+
+.spoiler-text {
+    border-radius: 3px;
+}
+
+.spoiler--hidden .spoiler-text {
+    color: rgba(0, 0, 0, 0);
+}
+
+.spoiler--hidden .spoiler-text::selection {
+    color: rgba(0, 0, 0, 0);
+}
+
+.spoiler-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.spoiler--hidden .spoiler-image {
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.spoiler--hidden .spoiler-image * {
+    filter: blur(44px);
+}
+
+.spoiler--hidden .spoiler-image:after {
+    content: "SPOILER";
+    color: #dcddde;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    padding: 100%;
+    border-radius: 20px;
+    letter-spacing: 0.05em;
+    font-size: 0.9em;
+}
+
+.spoiler--hidden:hover .spoiler-image:after {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.quote {
+    margin: 0.1em 0;
+    padding-left: 0.6em;
+    border-left: 4px solid;
+    border-radius: 3px;
+}
+
+.pre {
+    font-family: "Consolas", "Courier New", Courier, monospace;
+}
+
+.pre--multiline {
+    margin-top: 0.25em;
+    padding: 0.5em;
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+.pre--inline {
+    padding: 2px;
+    border-radius: 3px;
+    font-size: 0.85em;
+}
+
+.mention {
+    border-radius: 3px;
+    padding: 0 2px;
+    color: #7289da;
+    background: rgba(114, 137, 218, .1);
+    font-weight: 500;
+}
+
+.emoji {
+    width: 1.25em;
+    height: 1.25em;
+    margin: 0 0.06em;
+    vertical-align: -0.4em;
+}
+
+.emoji--small {
+    width: 1em;
+    height: 1em;
+}
+
+.emoji--large {
+    width: 2.8em;
+    height: 2.8em;
+}
+
+/* Preamble */
+
+.preamble {
+    display: grid;
+    margin: 0 0.3em 0.6em 0.3em;
+    max-width: 100%;
+    grid-template-columns: auto 1fr;
+}
+
+.preamble__guild-icon-container {
+    grid-column: 1;
+}
+
+.preamble__guild-icon {
+    max-width: 88px;
+    max-height: 88px;
+}
+
+.preamble__entries-container {
+    grid-column: 2;
+    margin-left: 0.6em;
+}
+
+.preamble__entry {
+    font-size: 1.4em;
+}
+
+.preamble__entry--small {
+    font-size: 1em;
+}
+
+/* Chatlog */
+
+.chatlog {
+    max-width: 100%;
+}
+
+.chatlog__message-group {
+    display: grid;
+    margin: 0 0.6em;
+    padding: 0.9em 0;
+    border-top: 1px solid;
+    grid-template-columns: auto 1fr;
+}
+
+.chatlog__reference-symbol {
+    grid-column: 1;
+    border-style: solid;
+    border-width: 2px 0 0 2px;
+    border-radius: 8px 0 0 0;
+    margin-left: 16px;
+    margin-top: 8px;
+}
+
+.chatlog__reference {
+    display: flex;
+    grid-column: 2;
+    margin-left: 1.2em;
+    margin-bottom: 0.25em;
+    font-size: 0.875em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    align-items: center;
+}
+
+.chatlog__reference-avatar {
+    border-radius: 50%;
+    height: 16px;
+    width: 16px;
+    margin-right: 0.25em;
+}
+
+.chatlog__reference-name {
+    margin-right: 0.25em;
+    font-weight: 600;
+}
+
+.chatlog__reference-link {
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.chatlog__reference-link:hover {
+    text-decoration: none;
+}
+
+.chatlog__reference-content > * {
+    display: inline;
+}
+
+.chatlog__reference-edited-timestamp {
+    margin-left: 0.25em;
+    font-size: 0.8em;
+}
+
+.chatlog__author-avatar-container {
+    grid-column: 1;
+    width: 40px;
+    height: 40px;
+}
+
+.chatlog__author-avatar {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.chatlog__messages {
+    grid-column: 2;
+    margin-left: 1.2em;
+    min-width: 50%;
+}
+
+.chatlog__author-name {
+    font-weight: 500;
+}
+
+.chatlog__timestamp {
+    margin-left: 0.3em;
+    font-size: 0.75em;
+}
+
+.chatlog__message {
+    padding: 0.1em 0.3em;
+    margin: 0 -0.3em;
+    background-color: transparent;
+    transition: background-color 1s ease;
+}
+
+.chatlog__content {
+    font-size: 0.95em;
+    word-wrap: break-word;
+}
+
+.chatlog__edited-timestamp {
+    margin-left: 0.15em;
+    font-size: 0.8em;
+}
+
+.chatlog__attachment {
+    margin-top: 0.3em;
+}
+
+.chatlog__attachment-thumbnail {
+    vertical-align: top;
+    max-width: 45vw;
+    max-height: 500px;
+    border-radius: 3px;
+}
+
+.chatlog__attachment-container {
+    height: 40px;
+    width: 100%;
+    max-width: 520px;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.chatlog__attachment-icon {
+    float: left;
+    height: 100%;
+    margin-right: 10px;
+}
+
+.chatlog__attachment-icon > .a {
+    fill: #f4f5fb;
+    d: path("M50,935a25,25,0,0,1-25-25V50A25,25,0,0,1,50,25H519.6L695,201.32V910a25,25,0,0,1-25,25Z");
+}
+
+.chatlog__attachment-icon > .b {
+    fill: #7789c4;
+    d: path("M509.21,50,670,211.63V910H50V50H509.21M530,0H50A50,50,0,0,0,0,50V910a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50h0V191Z");
+}
+
+.chatlog__attachment-icon > .c {
+    fill: #f4f5fb;
+    d: path("M530,215a25,25,0,0,1-25-25V50a25,25,0,0,1,16.23-23.41L693.41,198.77A25,25,0,0,1,670,215Z");
+}
+
+.chatlog__attachment-icon > .d {
+    fill: #7789c4;
+    d: path("M530,70.71,649.29,190H530V70.71M530,0a50,50,0,0,0-50,50V190a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50Z");
+}
+
+.chatlog__attachment-filesize {
+    color: #72767d;
+    font-size: 12px;
+}
+
+.chatlog__attachment-filename {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.chatlog__embed {
+    display: flex;
+    margin-top: 0.3em;
+    max-width: 520px;
+}
+
+.chatlog__embed-color-pill {
+    flex-shrink: 0;
+    width: 0.25em;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.chatlog__embed-content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em 0.6em;
+    border: 1px solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.chatlog__embed-content {
+    display: flex;
+    width: 100%;
+}
+
+.chatlog__embed-text {
+    flex: 1;
+}
+
+.chatlog__embed-author {
+    display: flex;
+    margin-bottom: 0.3em;
+    align-items: center;
+}
+
+.chatlog__embed-author-icon {
+    margin-right: 0.5em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.chatlog__embed-author-name {
+    font-size: 0.875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-title {
+    margin-bottom: 0.2em;
+    font-size: 0.875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-description {
+    font-weight: 500;
+    font-size: 0.85em;
+}
+
+.chatlog__embed-fields {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chatlog__embed-field {
+    flex: 0;
+    min-width: 100%;
+    max-width: 506px;
+    padding-top: 0.6em;
+    font-size: 0.875em;
+}
+
+.chatlog__embed-field--inline {
+    flex: 1;
+    flex-basis: auto;
+    min-width: 150px;
+}
+
+.chatlog__embed-field-name {
+    margin-bottom: 0.2em;
+    font-weight: 600;
+}
+
+.chatlog__embed-field-value {
+    font-weight: 500;
+}
+
+.chatlog__embed-thumbnail {
+    flex: 0;
+    margin-left: 1.2em;
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-image-container {
+    margin-top: 0.6em;
+}
+
+.chatlog__embed-image {
+    max-width: 500px;
+    max-height: 400px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-footer {
+    margin-top: 0.6em;
+}
+
+.chatlog__embed-footer-icon {
+    margin-right: 0.2em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.chatlog__embed-footer-text {
+    font-size: 0.75em;
+    font-weight: 500;
+}
+
+.chatlog__reactions {
+    display: flex;
+}
+
+.chatlog__reaction {
+    display: flex;
+    align-items: center;
+    margin: 0.35em 0.1em 0.1em 0.1em;
+    padding: 0.2em 0.35em;
+    border-radius: 3px;
+}
+
+.chatlog__reaction-count {
+    min-width: 9px;
+    margin-left: 0.35em;
+    font-size: 0.875em;
+}
+
+.chatlog__bot-tag {
+    position: relative;
+    top: -.2em;
+    margin-left: 0.3em;
+    padding: 0.05em 0.3em;
+    border-radius: 3px;
+    vertical-align: middle;
+    line-height: 1.3;
+    background: #7289da;
+    color: #ffffff;
+    font-size: 0.625em;
+    font-weight: 500;
+}
+
+/* Postamble */
+
+.postamble {
+    margin: 1.4em 0.3em 0.6em 0.3em;
+    padding: 1em;
+    border-top: 1px solid;
+}
+    </style>
+    <style>
+        /* General */
+
+body {
+    background-color: #36393e;
+    color: #dcddde;
+}
+
+a {
+    color: #0096cf;
+}
+
+.spoiler-text {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.spoiler--hidden .spoiler-text {
+    background-color: #202225;
+}
+
+.spoiler--hidden:hover .spoiler-text {
+    background-color: rgba(32, 34, 37, 0.8);
+}
+
+.quote {
+    border-color: #4f545c;
+}
+
+.pre {
+    background-color: #2f3136 !important;
+}
+
+.pre--multiline {
+    border-color: #282b30 !important;
+    color: #b9bbbe !important;
+}
+
+/* === Preamble === */
+
+.preamble__entry {
+    color: #ffffff;
+}
+
+/* Chatlog */
+
+.chatlog__message-group {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.chatlog__reference-symbol {
+    border-color: #4f545c;
+}
+
+.chatlog__reference {
+    color: #b5b6b8;
+}
+
+.chatlog__reference-link {
+    color: #b5b6b8;
+}
+
+.chatlog__reference-link:hover {
+    color: #ffffff;
+}
+
+.chatlog__reference-edited-timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__author-name {
+    color: #ffffff;
+}
+
+.chatlog__timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__message--highlighted {
+    background-color: rgba(114, 137, 218, 0.2) !important;
+}
+
+.chatlog__message--pinned {
+    background-color: rgba(249, 168, 37, 0.05);
+}
+
+.chatlog__attachment-container {
+    background-color: #2f3136;
+    border-color: #292b2f;
+}
+
+.chatlog__edited-timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__embed-color-pill--default {
+    background-color: rgba(79, 84, 92, 1);
+}
+
+.chatlog__embed-content-container {
+    background-color: rgba(46, 48, 54, 0.3);
+    border-color: rgba(46, 48, 54, 0.6);
+}
+
+.chatlog__embed-author-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-author-name-link {
+    color: #ffffff;
+}
+
+.chatlog__embed-title {
+    color: #ffffff;
+}
+
+.chatlog__embed-description {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-field-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-field-value {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-footer {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__reaction {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.chatlog__reaction-count {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* Postamble */
+
+.postamble {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.postamble__entry {
+    color: #ffffff;
+}
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.pre--multiline').forEach(block => hljs.highlightBlock(block));
+        });
+    </script>
+
+    <script>
+        function scrollToMessage(event, id) {
+            var element = document.getElementById('message-' + id);
+
+            if (element) {
+                event.preventDefault();
+
+                element.classList.add('chatlog__message--highlighted');
+
+                window.scrollTo({
+                    top: element.getBoundingClientRect().top - document.body.getBoundingClientRect().top - (window.innerHeight / 2),
+                    behavior: 'smooth'
+                });
+
+                window.setTimeout(function() {
+                    element.classList.remove('chatlog__message--highlighted');
+                }, 2000);
+            }
+        }
+
+        function showSpoiler(event, element) {
+            if (element && element.classList.contains('spoiler--hidden')) {
+                event.preventDefault();
+                element.classList.remove('spoiler--hidden');
+            }
+        }
+    </script>
+</head>
+<body>
+
+<div class="preamble">
+    <div class="preamble__guild-icon-container">
+        <img class="preamble__guild-icon" src="side-story-01.html_Files/53926fd90f2c07d8f8a7d6fbee76bb17-34E69.png" alt="Guild icon">
+    </div>
+    <div class="preamble__entries-container">
+        <div class="preamble__entry">Tales of the Awakened [Warframe RP Community]</div>
+        <div class="preamble__entry">PHANTOM RISING [RP] / side-story-01</div>
+
+
+    </div>
+</div>
+
+<div class="chatlog">
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-01.html_Files/96a3fdee81be693f146ed8c30d101851-3860B.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Disruptis#5503" data-user-id="152349834785849344" style="color: rgb(255,210,0)">Disruptis - Disruptis</span>
+
+
+        <span class="chatlog__timestamp">06-Jan-21 11:03 PM</span>
+
+            <div class="chatlog__message " data-message-id="796589798205685800" id="message-796589798205685800">
+
+                    <div class="chatlog__attachment">
+                        <div class="" onclick="">
+                            <div class="">
+                                    <a href="side-story-01.html_Files/Warframe0027-35C41.jpg">
+                                        <img class="chatlog__attachment-thumbnail" src="side-story-01.html_Files/Warframe0027-35C41.jpg" alt="Image attachment" title="Image: Warframe0027.jpg (2.13 MB)">
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="796589823531810816" id="message-796589823531810816">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">[AR 1/5/1 9:35PM] CLOSED RP - Fortuna, Venus
+
+~The soft purple and blue glows of neon lights lit up a myriad of bodies and mechanisms travelling through the underground settlement of Fortuna. The fading chill of the cold shift lingered on everyone’s limbs as they came from the outside. They shuffled along with their tasks, letting out deep breaths as they feel the short period of warm weather about to grace their weary souls. The iconic clang of hammers, the spinning of gyros, and the disgruntled humming of electronics filled the air with their noise. It was a busy time.
+
+Amidst all this hustle and bustle, a figure deftly darted through the alleys and walkways, moving towards a certain secluded room in the back of Fortuna.~</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-01.html_Files/7f47652625893f2bbf186a805da9aea8-8EB9D.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Askaris#3478" data-user-id="165971422278189056" style="color: rgb(37,224,130)">Askaris - Narakis</span>
+
+
+        <span class="chatlog__timestamp">07-Jan-21 05:30 PM</span>
+
+            <div class="chatlog__message " data-message-id="796868517722456084" id="message-796868517722456084">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">The passage of the visitor went unnoticed to most Solaris hurrying through the alleyways of their subterranean home. A few may have briefly seen the faint glint of gold and a pair of glowing orbs watching from a shadowy corner, but as soon as one took notice they winked out; easily dismissed as a hallucination brought on by faulty optics or mainlining stims for too long.
+
+The truth was, as is oft the case, far stranger.
+
+To the figure the sights and sounds of the back-alleys were muted, distant, echoes from realspace to the parallel emptiness she stalked through. Many Tenno could dip briefly into the Void-shadow of reality, but to drink deep of its waters and descend beneath its surface for a lengthy sojourn required one to follow a particular path; the path of Zenurik. For her it was a path well trod, and well worth the effort to traverse when discretion was key.
+
+She slowed as she approached an intersection of walkways, sidling up to the railing and peering over the edge. Nestled between a block of apartments and the rocky cavern wall was a maintenance access door, poorly lit and easily forgotten; a perfect place for those who want to conduct their business unobserved. In one practiced movement she vaulted over the guardrail, willing herself to a gradual stop before touching the ground. She took a deep shuddering breath, letting <em>real</em> air fill her rapidly re-materialising lungs as she breached the skein between dimensions. Where there was once no-one stood a tall, willowy young woman, wrapped in dark finery that contrasted sharply with her silver hair. Between her pale blue-tinged pallor, blank ocular implants and golden cybernetic pins, she looked like could have walked straight out of the history books along with the rest of the Vallis&#39; resurrected fauna.
+
+Taking a moment to compose herself (and surreptitiously check the load on the ornate revolver at her hip), she strode toward the door, rapping out a short musical sequence with a gloved fist.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-01.html_Files/96a3fdee81be693f146ed8c30d101851-3860B.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Disruptis#5503" data-user-id="152349834785849344" style="color: rgb(255,210,0)">Disruptis - Disruptis</span>
+
+
+        <span class="chatlog__timestamp">07-Jan-21 06:06 PM</span>
+
+            <div class="chatlog__message " data-message-id="796877446770982922" id="message-796877446770982922">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">~Nothing happened for a couple seconds. Then the door hissed open, revealing a muscular Vox Solaris worker wiedling a rifle disguised as a tool-gun. His mechanical gear shone with a certain polish that dimly reflected the colourful lights. He took a look past Narakis, then leaned against the door to make way for her to pass.~</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-01.html_Files/7f47652625893f2bbf186a805da9aea8-8EB9D.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Askaris#3478" data-user-id="165971422278189056" style="color: rgb(37,224,130)">Askaris - Narakis</span>
+
+
+        <span class="chatlog__timestamp">07-Jan-21 06:09 PM</span>
+
+            <div class="chatlog__message " data-message-id="796878229125464135" id="message-796878229125464135">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">&quot;My thanks.&quot;
+
+With a polite incline of her head toward the guard she headed inside, the metallic heels of her boots rhythmically clinking on the deck plating.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-01.html_Files/976f799a2de24047391f44469636a79f-8F4F1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hactar42#7813" data-user-id="482587075602808851" style="color: rgb(108,63,0)">UnremarkableUsername - Karsk</span>
+
+
+        <span class="chatlog__timestamp">07-Jan-21 07:35 PM</span>
+
+            <div class="chatlog__message " data-message-id="796899734945529866" id="message-796899734945529866">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">The room was dimly lit.  Pipes snaked and intertwined across the walls and through the middle of the room, pointing their valves into what little walkable space there was.  For anyone larger than a ventkid, this extend about two meters to the right and three forward from the door.
+
+As Narakis stepped forward into the room, something crunched under her foot.  A stim cartridge.  The sound of the contents of the pipes heading off to wherever they were going filled the air, softly, unobtrusively, yet completely.  <em>...hhsssshhhhh...</em>
+
+In the far corner of the room was a neatly-stacked pile of rusty, dented boxes.  From it, a voice issued, a grating monotone through speakers that belonged in the scrap-heap, singing softly.
+
+&quot;<em><strong>...<s>It&#39;s a beautiful day</s>...<s>Don&#39;t let it get away</s>...</strong></em>&quot;</span>
+
+                                <span class="chatlog__edited-timestamp" title="07-Jan-21 07:36 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-01.html_Files/7f47652625893f2bbf186a805da9aea8-8EB9D.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Askaris#3478" data-user-id="165971422278189056" style="color: rgb(37,224,130)">Askaris - Narakis</span>
+
+
+        <span class="chatlog__timestamp">07-Jan-21 09:02 PM</span>
+
+            <div class="chatlog__message " data-message-id="796921724960636928" id="message-796921724960636928">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Nudging the shattered remains of the cartridge to one side, Narakis sauntered in. She stroked her chin as she took in the dingy surroundings, a smile creeping over her face as she eyed the singing scrapheap.
+
+&quot;Do I have the pleasure of addressing one Cephalon Karsk?&quot;</span>
+
+                                <span class="chatlog__edited-timestamp" title="07-Jan-21 09:03 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-01.html_Files/976f799a2de24047391f44469636a79f-8F4F1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hactar42#7813" data-user-id="482587075602808851" style="color: rgb(108,63,0)">UnremarkableUsername - Karsk</span>
+
+
+        <span class="chatlog__timestamp">07-Jan-21 09:44 PM</span>
+
+            <div class="chatlog__message " data-message-id="796932247432331295" id="message-796932247432331295">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">&quot;<em><strong><s>You do.</s></strong></em>&quot;
+
+The stack of scrap was silent for a moment, then it began to unfold, narrowly missing the protruding valves.  It was a Moa, of the sort usually deployed on the Orb Vallis, but this one was scratched and dented, obviously having gone far too long without the touch of a Corpus technician.
+
+The moa made no sound as it stood up, no creak of un-lubricated joints, no hiss of leaky pneumatics, no drip of leaky hydraulics, no hum of electric motors.  Despite the poor condition of its armor, its inner workings were in good repair.
+
+&quot;<em><strong><s>I suppose you are Narakis Agni.</s></strong></em>&quot;
+He parsed the name.
+&quot;<em><strong><s>Hellborn firegod.</s>    <s>Hkh.</s>    <s>How much have they told you, little sister?</s></strong></em>&quot;</span>
+
+                                <span class="chatlog__edited-timestamp" title="07-Jan-21 09:44 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-01.html_Files/7f47652625893f2bbf186a805da9aea8-8EB9D.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Askaris#3478" data-user-id="165971422278189056" style="color: rgb(37,224,130)">Askaris - Narakis</span>
+
+
+        <span class="chatlog__timestamp">08-Jan-21 01:03 PM</span>
+
+            <div class="chatlog__message " data-message-id="797163541596602398" id="message-797163541596602398">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">She beamed at the moa; if she was at all put off by his apparent state of disrepair, she was doing a fine job of hiding it. &quot;They told me that <em>you</em> and <em>I</em> shall be going on a journey together, with yours truly as your faithful bodyguard. The honour of detailing our itinerary, however, was left to you.&quot; 
+
+Her eyes slid away from Karsk, pursing her lips and gazing up at the nest of pipes above them, tapping her chin as if in deep thought. &quot;Of course, if I were to <em>speculate,</em> the fact that <em>I</em> was the one offered the job implies a requirement for certain skills and assets on this little excursion. To whit-&quot;
+
+She held up a finger. &quot;-One: a vessel quiet and fast enough to bypass conventional blockades and interdiction fleets. An Orokin-era Tenno orbiter, for example.&quot;
+
+Her eyes flicked back toward the cephalon as a second finger rose. &quot;And two: a guardian for whom the worst this blighted system can offer holds no fear.&quot;
+
+She raised an eyebrow. &quot;Who knew that archaeolinguistics was such a fraught field?&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-01.html_Files/976f799a2de24047391f44469636a79f-8F4F1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hactar42#7813" data-user-id="482587075602808851" style="color: rgb(108,63,0)">UnremarkableUsername - Karsk</span>
+
+
+        <span class="chatlog__timestamp">08-Jan-21 02:51 PM</span>
+
+            <div class="chatlog__message " data-message-id="797190748708798474" id="message-797190748708798474">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">&quot;<em><strong><s>Every field is, if you have personal experience in it.</s></strong></em>&quot;
+The moa paused for a moment.
+
+&quot;<em><strong><s>Here is what they did not tell you, then.</s>  <s>Anyocorp shipped something to Uranus.</s>  <s>We know where, but we do not know what, or why.</s>  <s>And that, of course, is the question we are tasked with answering.</s></strong></em>&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-01.html_Files/7f47652625893f2bbf186a805da9aea8-8EB9D.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Askaris#3478" data-user-id="165971422278189056" style="color: rgb(37,224,130)">Askaris - Narakis</span>
+
+
+        <span class="chatlog__timestamp">08-Jan-21 05:17 PM</span>
+
+            <div class="chatlog__message " data-message-id="797227622307987476" id="message-797227622307987476">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Narakis seemed to consider this for some moments, before nodding emphatically. &quot;Intriguing. Most intriguing! Almost as as much as it is hazardous, I&#39;d wager.&quot; 
+
+Her hand returned once more to her chin, propping it up on her palm. &quot;Now, what do we know of the &#39;where&#39;? A submerged Grineer facility, I presume?&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-01.html_Files/976f799a2de24047391f44469636a79f-8F4F1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hactar42#7813" data-user-id="482587075602808851" style="color: rgb(108,63,0)">UnremarkableUsername - Karsk</span>
+
+
+        <span class="chatlog__timestamp">08-Jan-21 09:32 PM</span>
+
+            <div class="chatlog__message " data-message-id="797291567148433438" id="message-797291567148433438">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">&quot;<em><strong><s>Yes.</s>  <s>I can give a more detailed description, but doing so out loud would be ill-advised, and also an unnecessary annoyance.</s></strong></em>&quot;
+
+The moa extended a foot forward, ready to take a step.
+&quot;<em><strong><s>We can  speak more freely aboard your ship, and if you allow me to interface with the shipboard systems, I can load the navigational data diectly.</s>  <s>Also I am hungry</s> -- <s>uh.  My moa needs to be charged.</s></strong></em>&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-01.html_Files/7f47652625893f2bbf186a805da9aea8-8EB9D.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Askaris#3478" data-user-id="165971422278189056" style="color: rgb(37,224,130)">Askaris - Narakis</span>
+
+
+        <span class="chatlog__timestamp">09-Jan-21 11:39 AM</span>
+
+            <div class="chatlog__message " data-message-id="797504902061490206" id="message-797504902061490206">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">&quot;If you require recharging, I&#39;d be more that happy to oblige.&quot; She eyed the the moa&#39;s tattered casing. &quot;And I&#39;m sure I could get some fresh armour plating printed <em>before</em> we have to exchange fire with Uranus&#39; locals.&quot;
+
+Narakis smiled once more at Karsk, but this time there was a hard edge to it. &quot;But direct access to my ships computers? Come now, we only just met, Cephalon Karsk. Don&#39;t you think that&#39;s a little forward? No no, I think it would be better for you to forward that information to <em>my</em> ship&#39;s cephalon once we&#39;re aboard. Now, if that&#39;s all-&quot;
+
+She stepped to one side, one arm sweeping out toward the doorway. &quot;-Shall we be off?&quot;</span>
+
+                                <span class="chatlog__edited-timestamp" title="09-Jan-21 11:48 AM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-01.html_Files/976f799a2de24047391f44469636a79f-8F4F1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hactar42#7813" data-user-id="482587075602808851" style="color: rgb(108,63,0)">UnremarkableUsername - Karsk</span>
+
+
+        <span class="chatlog__timestamp">09-Jan-21 01:31 PM</span>
+
+            <div class="chatlog__message " data-message-id="797533036618186782" id="message-797533036618186782">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">&quot;<em><strong><s>Yes.</s></strong></em>&quot;
+
+The moa stepped forward, its feet tapping lightly on the floor.  As it passed the Vox Solaris operative, it inclined its weapon pod, as if nodding slightly.  Once outside, it halfway turned around.
+
+&quot;<em><strong><s>Forward is always an interesting direction, I find.</s>  <s>Where are you docked?</s></strong></em>&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-01.html_Files/7f47652625893f2bbf186a805da9aea8-8EB9D.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Askaris#3478" data-user-id="165971422278189056" style="color: rgb(37,224,130)">Askaris - Narakis</span>
+
+
+        <span class="chatlog__timestamp">09-Jan-21 02:22 PM</span>
+
+            <div class="chatlog__message " data-message-id="797545883780644904" id="message-797545883780644904">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Narakis stood just in the shadow of the doorway, eyes flicking to and fro as she took in their surroundings. Apparently satisfied with what she saw (or indeed, what she <em>didn&#39;t</em> see), she turned back to the moa. 
+
+&quot;Bay eighteen, beta pad. I feel it would be better if we made our respective ways there separately.&quot;</span>
+
+                                <span class="chatlog__edited-timestamp" title="09-Jan-21 02:22 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-01.html_Files/976f799a2de24047391f44469636a79f-8F4F1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hactar42#7813" data-user-id="482587075602808851" style="color: rgb(108,63,0)">UnremarkableUsername - Karsk</span>
+
+
+        <span class="chatlog__timestamp">09-Jan-21 07:19 PM</span>
+
+            <div class="chatlog__message " data-message-id="797620635416395796" id="message-797620635416395796">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">&quot;<em><strong><s>Do not worry.</s>  <s>I am taking a circuitous route.</s>  <s>I will arrive in about 30 minutes.</s></strong></em>&quot;
+
+The moa turned, and disappeared into the darkness, its footsteps blending smoothly into the drip of condensation from pipes and tap of myriad Solari feet on walkways.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-01.html_Files/7f47652625893f2bbf186a805da9aea8-8EB9D.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Askaris#3478" data-user-id="165971422278189056" style="color: rgb(37,224,130)">Askaris - Narakis</span>
+
+
+        <span class="chatlog__timestamp">12-Jan-21 03:53 PM</span>
+
+            <div class="chatlog__message " data-message-id="798655947123458058" id="message-798655947123458058">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">The Tenno waved jauntily to the departing moa, before vanishing from sight once more.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-01.html_Files/7f47652625893f2bbf186a805da9aea8-8EB9D.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Askaris#3478" data-user-id="165971422278189056" style="color: rgb(37,224,130)">Askaris - Narakis</span>
+
+
+        <span class="chatlog__timestamp">12-Jan-21 04:35 PM</span>
+
+            <div class="chatlog__message " data-message-id="798666593710243870" id="message-798666593710243870">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><div class="pre pre--multiline nohighlight">FORTUNA HANGAR, DOCKING BAY 18, PAD BETA. APPROX 30 MINUTES LATER.</div>
+
+Nestled between a pair of heavy duty rail tractors, the gold-trimmed liset on pad beta looked distinctly out of place amidst the blocky aesthetics common to Corpus engineering; much like its owner. Narakis was by the boarding ramp, footfalls echoing around the bay as she paced back and forth, casting her eyes around in search of her cephalon passenger. Occasionally she slowed and glanced off into space, focusing on apparently nothing; her eyes tracking something unseen to all but her.</span>
+
+                                <span class="chatlog__edited-timestamp" title="12-Jan-21 04:42 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-01.html_Files/976f799a2de24047391f44469636a79f-8F4F1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hactar42#7813" data-user-id="482587075602808851" style="color: rgb(108,63,0)">UnremarkableUsername - Karsk</span>
+
+
+        <span class="chatlog__timestamp">14-Jan-21 09:41 PM</span>
+
+            <div class="chatlog__message " data-message-id="799468263125549076" id="message-799468263125549076">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">~ ~ ~
+It is not unusual to find an old Corpus proxy, past its design life, repurposed for some menial task within the limited capabilities of its machine brain.  Some are used as factory machines.  Some are guards.  Others are modified to carry loads around the city.  
+
+Near the landing docks, one particular one, its gun replaced with a welding arm, was following its owner, a mechanic on his way to repair some ship.  He turned around, and was surprised to find a second moa following him.  He stopped and looked at it, his expression unreadable.  It lifted a foot and waved.  &quot;<em><strong><s>Don&#39;t worry about it, brother,</s></strong></em>&quot; it said.
+~ ~ ~
+
+A Solari worker carrying a toolbox walked past landing pad 18B.  Two moas followed him, one with a welding arm, the other with its original weapon pod.  A tool, and a guard.  Nothing out of the ordinary.  Both had seen better days.
+
+The second moa slipped away, changing fluidly from an unassuming member of a group to an individual walking alone up the ramp toward Narakis.
+
+&quot;<em><strong><s>Kälâmnen.</s></strong></em>&quot;
+((Old Plutonic greeting, means &quot;much health&quot;.  Up to you if Narakis recognizes it.))</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-01.html_Files/7f47652625893f2bbf186a805da9aea8-8EB9D.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Askaris#3478" data-user-id="165971422278189056" style="color: rgb(37,224,130)">Askaris - Narakis</span>
+
+
+        <span class="chatlog__timestamp">18-Jan-21 05:09 PM</span>
+
+            <div class="chatlog__message " data-message-id="800849354184327169" id="message-800849354184327169">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Narakis stopped mid-pace, pivoting around sharply to face the moa. &quot;Ah, there you are! You&#39;re-&quot; She paused, eyes flicking to the side to look at apparently nothing. One eyebrow arched ever so slightly. 
+
+&quot;-<em>...Exactly</em> on time. Capital! Let&#39;s be off.&quot;
+
+Without waiting for a response she climbed up the short ramp into the dimly lit interior of her vessel. The ship&#39;s livery continued into the passenger compartment; glossy black panelling stencilled with teal scrollwork, control panels casting the cabin in an eerie green light, and accented with the tell-tale gold brackets of Orokin manufacture. 
+
+&quot;Prepare to get us airborne, Devika,&quot; the Tenno said, sinking into the only seat in the diminutive craft. &quot;We&#39;ll take off as soon as our passenger&#39;s settled.&quot;
+
+A disembodied feminine voice replied. &quot;Engines are warmed up and ticking over. Whenever you&#39;re ready.&quot; To one as well travelled as Karsk, the accent would be familiar; Devika&#39;s voice carried the distinctive twang of the Martian outback, in sharp contrast to Old Lua tones of her charge.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-01.html_Files/976f799a2de24047391f44469636a79f-8F4F1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hactar42#7813" data-user-id="482587075602808851" style="color: rgb(108,63,0)">UnremarkableUsername - Karsk</span>
+
+
+        <span class="chatlog__timestamp">19-Jan-21 09:25 PM</span>
+
+            <div class="chatlog__message " data-message-id="801276217851772998" id="message-801276217851772998">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">The moa crouched against the back wall behind the codex console, so that the accelerations of takeoff could not push it anywhere except where it already was.
+
+&quot;<em><strong><s>I am ready.</s></strong></em>&quot;
+
+Devika would receive a ping from the moa.  She could, if she chose, open a communications channel with it, but the connection would be slow and minimally-secured.  Besides being several years old and in need of a firmware update, the moa&#39;s communications equipment was obviously not intended for sensitive information or large quantities of it.</span>
+
+                                <span class="chatlog__edited-timestamp" title="19-Jan-21 09:33 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-01.html_Files/7f47652625893f2bbf186a805da9aea8-8EB9D.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Askaris#3478" data-user-id="165971422278189056" style="color: rgb(37,224,130)">Askaris - Narakis</span>
+
+
+        <span class="chatlog__timestamp">21-Jan-21 11:54 AM</span>
+
+            <div class="chatlog__message " data-message-id="801857201882005544" id="message-801857201882005544">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">&quot;Very well! Take us up Devika, nice and easy.&quot;
+
+The hum of the engines rose to a low throb as the lander ascended smoothly into the air, morphing into a roar as the vessel burned toward the sky. Karsk&#39;s request for a commlink was met with a chime, followed by a channel opening; audio and file transfer only, the scrutinous gaze of anti-viral algorithms probing against Karsk&#39;s consciousness. After a moment a voice spoke into his mind.
+
+<em>&quot;So. Hear you&#39;ve got some data for us.&quot;</em>
+
+
+<span class="pre pre--inline">A cluster of cybernetic studs on Narakis&#39; temple flickered with green light as Devika connected to her neural comm.</span>
+
+<span class="pre pre--inline">&quot;No wonder he didn&#39;t want to talk in public. His rig security&#39;s got holes you could fly a bolkor through.&quot;</span>
+
+<span class="pre pre--inline">&quot;Going to be a problem?&quot;</span>
+
+<span class="pre pre--inline">&quot;We&#39;re alone in a shielded stealth ship at 20,000 feet and rising. -You- tell -me-, lil&#39; sis.&quot;</span>
+
+ <span class="pre pre--inline">&quot;No, then.&quot;</span></span>
+
+                                <span class="chatlog__edited-timestamp" title="22-Jan-21 12:21 AM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-01.html_Files/976f799a2de24047391f44469636a79f-8F4F1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hactar42#7813" data-user-id="482587075602808851" style="color: rgb(108,63,0)">UnremarkableUsername - Karsk</span>
+
+
+        <span class="chatlog__timestamp">21-Jan-21 12:13 PM</span>
+
+            <div class="chatlog__message " data-message-id="801861941706489907" id="message-801861941706489907">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Devika&#39;s communication was met with a piece of text:
+<span class="pre pre--inline">I do.  It would probably be easier to communicate through a physical cable, to be honest.  Here you go.</span>
+Then a set of coordinates, just three numbers: latitude, longitude, and depth.
+<span class="pre pre--inline">How much detail do you want?</span>
+
+((<span class="mention" style="color: rgb(178, 111, 190); background-color: rgba(178, 111, 190, 0.1);">@dISBOI</span> how much detail does Karsk have?))
+((<span class="mention" title="Askaris#3478">@Askaris - Narakis</span> Karsk was a shipboard cephalon for a Tenno during the Old War -- up to you if Devika recognizes him.))</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-01.html_Files/7f47652625893f2bbf186a805da9aea8-8EB9D.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Askaris#3478" data-user-id="165971422278189056" style="color: rgb(37,224,130)">Askaris - Narakis</span>
+
+
+        <span class="chatlog__timestamp">21-Jan-21 12:20 PM</span>
+
+            <div class="chatlog__message " data-message-id="801863914371547176" id="message-801863914371547176">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">A port on the wall irised open, revealing a data socket.
+
+<em>&quot;Everything you&#39;ve got.&quot;</em></span>
+
+                                <span class="chatlog__edited-timestamp" title="21-Jan-21 12:31 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-01.html_Files/976f799a2de24047391f44469636a79f-8F4F1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hactar42#7813" data-user-id="482587075602808851" style="color: rgb(108,63,0)">UnremarkableUsername - Karsk</span>
+
+
+        <span class="chatlog__timestamp">21-Jan-21 12:34 PM</span>
+
+            <div class="chatlog__message " data-message-id="801867335001964574" id="message-801867335001964574">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">The moa&#39;s grating voice reached Narakis&#39;s ears, physically.
+&quot;<em><strong><s>On the back of my moa, there is a short piece of cable.</s>  <s>Can you lend a hand?</s>  <s>I wish to interface more directly.</s></strong></em>&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-01.html_Files/7f47652625893f2bbf186a805da9aea8-8EB9D.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Askaris#3478" data-user-id="165971422278189056" style="color: rgb(37,224,130)">Askaris - Narakis</span>
+
+
+        <span class="chatlog__timestamp">21-Jan-21 12:42 PM</span>
+
+            <div class="chatlog__message " data-message-id="801869278851891270" id="message-801869278851891270">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><span class="pre pre--inline">&quot;He clear this with you?&quot;</span>
+
+<span class="pre pre--inline">&quot;Yep. Hook him in.&quot;</span>
+
+&quot;...Certainly!&quot;
+
+Narakis pulled herself out of her seat and strode over to the moa, peering round the back in search of the connector. After a brief moment of fumbling Karsk was connected to the socket; that same sense of being watched returned, security algorithms sniffing at the foreign cephalon&#39;s datascape before withdrawing.</span>
+
+                                <span class="chatlog__edited-timestamp" title="21-Jan-21 03:50 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-01.html_Files/976f799a2de24047391f44469636a79f-8F4F1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hactar42#7813" data-user-id="482587075602808851" style="color: rgb(108,63,0)">UnremarkableUsername - Karsk</span>
+
+
+        <span class="chatlog__timestamp">21-Jan-21 02:28 PM</span>
+
+            <div class="chatlog__message " data-message-id="801895960250286100" id="message-801895960250286100">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">&quot;<em><strong><s>Thanks.</s></strong></em>&quot;
+...and the data began to flow.  Information about a Corpus vessel, its service history, its arrival and departure times on one specific journey, the course it flew from Venus to Uranus, its annoyingly vague cargo manifest, Vox Solaris reports speculating what may be inside it, logs from banking servers tracing the money that funded this particular flight...
+
+At the end, and old man with leathery skin, a white beard, receding hairline, and a bushy unibrow stood in Devika&#39;s datascape with his arms crossed calmly.
+
+&quot;That&#39;s it, then,&quot; he said.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-01.html_Files/7f47652625893f2bbf186a805da9aea8-8EB9D.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Askaris#3478" data-user-id="165971422278189056" style="color: rgb(37,224,130)">Askaris - Narakis</span>
+
+
+        <span class="chatlog__timestamp">22-Jan-21 06:13 PM</span>
+
+            <div class="chatlog__message " data-message-id="802315135484952619" id="message-802315135484952619">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">The datascape Karsk found himself in appeared as a branching mass of tunnels, the odd pulse of light passing lazily along the winding passage. Before him stood a polygonal impression of a woman, all knife edges and sharp points. She hummed tunelessly to herself as the data scrolled before her on an array of panes, before they suddenly winked out. Devika looked up at the old man.
+
+&quot;Interesting. Real interesting.&quot; The floor between then yawned open, revealing another passageway. &quot;Holo-projector&#39;s all yours. Figure you&#39;re better qualified to give this briefing.&quot;
+
+Her head tilted to one side. &quot;Slick look, by the way. Don&#39;t know many of us who can pull off a render like that.&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-01.html_Files/976f799a2de24047391f44469636a79f-8F4F1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hactar42#7813" data-user-id="482587075602808851" style="color: rgb(108,63,0)">UnremarkableUsername - Karsk</span>
+
+
+        <span class="chatlog__timestamp">22-Jan-21 08:57 PM</span>
+
+            <div class="chatlog__message " data-message-id="802356266688970762" id="message-802356266688970762">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">&quot;It&#39;s not really that hard.  All it takes is a bit of commitment and a good memory.  Or an active imagination.&quot;
+
+His voice could not have been more unlike the moa&#39;s gravelly monotone.  It was raw yet fluid, confident yet reserved.  Despite his calm modesty, his voice had an edge to it, like a knife that could just as easily spread butter on toast or turn a ham into a stack of paper-thin slices.
+
+He stepped out into the hole.
+((I&#39;m assuming this is the way to take control of the holoprojector))
+((briefing in next post))</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-01.html_Files/7f47652625893f2bbf186a805da9aea8-8EB9D.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Askaris#3478" data-user-id="165971422278189056" style="color: rgb(37,224,130)">Askaris - Narakis</span>
+
+
+        <span class="chatlog__timestamp">22-Jan-21 08:57 PM</span>
+
+            <div class="chatlog__message " data-message-id="802356411211186207" id="message-802356411211186207">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">((correct))</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-01.html_Files/976f799a2de24047391f44469636a79f-8F4F1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hactar42#7813" data-user-id="482587075602808851" style="color: rgb(108,63,0)">UnremarkableUsername - Karsk</span>
+
+
+        <span class="chatlog__timestamp">22-Jan-21 09:44 PM</span>
+
+            <div class="chatlog__message " data-message-id="802368185088868353" id="message-802368185088868353">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Cephalon Karsk&#39;s projection appeared sitting on the codex console.  &quot;Hey kiddo.&quot;
+
+He stood up.
+
+&quot;This is the situation, then.  A Corpus vessel flew from Venus to Uranus.&quot;
+A holographic image of the ship appeared in front of him.  It was a small transport, not in any way remarkable.
+
+&quot;The shipment was ordered and funded by Anyocorp.  Not directly, of course, but any digital trail can be followed if you&#39;re bored enough.  Devika has the data if you want to see it yourself.&quot;
+
+&quot;Obviously, it did not fly along normal shipping lanes.&quot;
+
+A solar system map appeared, with the course charted.
+
+&quot;They made minimal use of the solar rail, instead using orbital transfers to avoid passing though the control points.  Several times they matched the orbits of asteroid families, likely to hide among them.  All of this did, of course, make the journey take quite a bit longer.  Until, near Mars, they met up with a Grineer vessel, which then escorted them directly to Uranus on the rail.  &quot;
+
+&quot;Now, it may appear that the Corpus vessel was captured.  But just days later, the same ship is back on its normal route under Corpus ownership.&quot;
+((1/2))</span>
+
+                                <span class="chatlog__edited-timestamp" title="22-Jan-21 10:55 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="802368244685864970" id="message-802368244685864970">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">&quot;Publicly, the ship was just out for routine maintenance.  But it was not recorded at any shipyard.  Shortly before the flight in question, a Solaris United member saw something very interesting.&quot;
+
+A series of grainy images appeared in the air.
+
+&quot;This looks like the same ship, in the Orb Vallis spaceport.&quot;
+
+Another image, taken from much closer.  &quot;And it is!  There&#39;s the serial number.  And what&#39;s in those crates they&#39;re loading?&quot;
+
+The image dissipated.  &quot;I got my hands on the manifest.  It just says, &#39;mining products&#39;.  Which doesn&#39;t seem suspicious.  Honestly, if they just followed normal routes, I doubt it would draw any notice from anyone.  But they didn&#39;t.  Now, we&#39;re supposed to see what Nef sent, and what Tyl is doing with it, but really, knowing all that, and knowing what what Nef gets up to&quot; --a hologram of a battacor appeared in Karsk&#39;s hands-- &quot;I think anyone could tell.&quot;
+((2/2))</span>
+
+                                <span class="chatlog__edited-timestamp" title="22-Jan-21 10:54 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-01.html_Files/7f47652625893f2bbf186a805da9aea8-8EB9D.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Askaris#3478" data-user-id="165971422278189056" style="color: rgb(37,224,130)">Askaris - Narakis</span>
+
+
+        <span class="chatlog__timestamp">24-Jan-21 11:32 AM</span>
+
+            <div class="chatlog__message " data-message-id="802938845935042600" id="message-802938845935042600">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Though her expression remained serene, there was a subtle tensing of Narakis&#39; posture as Karsk conjured the Battacor. Her eyes lingered on the arcane weapon before she replied. 
+
+&quot;...Quite. Still, it behooves us to learn exactly <em>what</em> Regor&#39;s making below the waves.&quot; A mirthless smile crossed her face. &quot;After all, there&#39;s far worse one can make with a Sentient&#39;s bones than a rifle. Especially with an ample supply of clones to experiment on.&quot;
+
+She looked back at the projector. &quot;What do we have on the facility this cargo presumably went to? Location, layout, personnel...?&quot;</span>
+
+                                <span class="chatlog__edited-timestamp" title="24-Jan-21 11:35 AM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-01.html_Files/976f799a2de24047391f44469636a79f-8F4F1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hactar42#7813" data-user-id="482587075602808851" style="color: rgb(108,63,0)">UnremarkableUsername - Karsk</span>
+
+
+        <span class="chatlog__timestamp">24-Jan-21 11:57 AM</span>
+
+            <div class="chatlog__message " data-message-id="802945241476497409" id="message-802945241476497409">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">&quot;Location.  Nothing else.&quot;
+He held up a globe of Uranus with the spot marked with an X and labeled with the coordinates and depth.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-01.html_Files/7f47652625893f2bbf186a805da9aea8-8EB9D.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Askaris#3478" data-user-id="165971422278189056" style="color: rgb(37,224,130)">Askaris - Narakis</span>
+
+
+        <span class="chatlog__timestamp">24-Jan-21 03:50 PM</span>
+
+            <div class="chatlog__message " data-message-id="803003775253872650" id="message-803003775253872650">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">&quot;Well then.&quot;
+
+Narakis lowered herself back into her seat as the sulphurous Venusian sky gave way to the starry expanse above. A patch of it shimmered, before solidifying into a spacecraft; an orbiter. The Liset slowed and yawed, sliding into the bridge socket with a muted clunk.
+
+&quot;No time like the present, is there?&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-01.html_Files/976f799a2de24047391f44469636a79f-8F4F1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hactar42#7813" data-user-id="482587075602808851" style="color: rgb(108,63,0)">UnremarkableUsername - Karsk</span>
+
+
+        <span class="chatlog__timestamp">24-Jan-21 06:01 PM</span>
+
+            <div class="chatlog__message " data-message-id="803036845944078357" id="message-803036845944078357">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">&quot;Never has been,&quot; he agreed with a smile and a finger gun.
+
+&quot;How good are you with stealth?&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-01.html_Files/7f47652625893f2bbf186a805da9aea8-8EB9D.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Askaris#3478" data-user-id="165971422278189056" style="color: rgb(37,224,130)">Askaris - Narakis</span>
+
+
+        <span class="chatlog__timestamp">24-Jan-21 06:59 PM</span>
+
+            <div class="chatlog__message " data-message-id="803051347893026818" id="message-803051347893026818">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Narakis leaned back in her chair, hooking one leg over the other. 
+
+&quot;I can do many things with antimatter, but going unnoticed isn&#39;t one of them. With the heat vents along Uranus&#39; reef I should be able to find a way to mask my archwing signature, but they&#39;ll spot me soon enough when I enter.&quot;
+
+She looked up at the holographic old man. &quot;And what of yourself? A moa in Fortuna is one thing, but in Grineer space quite another.&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-01.html_Files/976f799a2de24047391f44469636a79f-8F4F1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hactar42#7813" data-user-id="482587075602808851" style="color: rgb(108,63,0)">UnremarkableUsername - Karsk</span>
+
+
+        <span class="chatlog__timestamp">24-Jan-21 07:10 PM</span>
+
+            <div class="chatlog__message " data-message-id="803054062500446231" id="message-803054062500446231">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">&quot;I was hoping you could plug in a datamass in without them noticing, and I&#39;d have free range in their network.  Of course, I prefer to be in person, but obviously I can&#39;t do that there.&quot;
+
+He paused a moment, scowling.
+
+&quot;And you have antimatter?  Nova probably?  Nevermind being noticed, you risk blowing up whatever might be there before we can get a good look.&quot;
+
+&quot;Although,&quot; he mused to himself, &quot;on the plus side, that would be a very short mission, and I could get on with my life...&quot;
+
+He looked back at Narakis.  &quot;You wouldn&#39;t happen to have a spare frame, would you, like an Ivara or something?  Or could you void-walk the whole way?&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-01.html_Files/7f47652625893f2bbf186a805da9aea8-8EB9D.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Askaris#3478" data-user-id="165971422278189056" style="color: rgb(37,224,130)">Askaris - Narakis</span>
+
+
+        <span class="chatlog__timestamp">24-Jan-21 08:52 PM</span>
+
+            <div class="chatlog__message " data-message-id="803079707892908042" id="message-803079707892908042">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">She shook her head. &quot;It&#39;s the Nova or nothing. And &#39;nothing&#39; lacks a certain appeal where Grineer bases are concerned.&quot; 
+
+She sighed and looked up through the canopy at the stars beyond.
+
+&quot;A voidwalk is possible, and if that&#39;s our only option, so be it. However, before we resort to that I&#39;d rather scout the exterior first, see if there&#39;s another way to the command centre. This Liset&#39;s electronic warfare suite can easily jam their alarms, for a while; with a short enough route, I could get your datamass uploaded in-frame before they can alert the whole facility.&quot; 
+
+She shrugged, and gave Karsk a conciliatory smile. &quot;In any case, this is all a little academic; there&#39;s no point in us committing to a plan before we&#39;ve even seen what we&#39;re dealing with, or what opportunities present themselves. A rough idea pending refinement will suffice for now.&quot;</span>
+
+                                <span class="chatlog__edited-timestamp" title="24-Jan-21 10:10 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-01.html_Files/976f799a2de24047391f44469636a79f-8F4F1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hactar42#7813" data-user-id="482587075602808851" style="color: rgb(108,63,0)">UnremarkableUsername - Karsk</span>
+
+
+        <span class="chatlog__timestamp">25-Jan-21 09:06 PM</span>
+
+            <div class="chatlog__message " data-message-id="803445807139127307" id="message-803445807139127307">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">&quot;Indeed.  And we&#39;ve some time until then.&quot;
+
+He stared out into space.
+
+&quot;How much time do we have?&quot;</span>
+
+                                <span class="chatlog__edited-timestamp" title="25-Jan-21 09:10 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-01.html_Files/7f47652625893f2bbf186a805da9aea8-8EB9D.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Askaris#3478" data-user-id="165971422278189056" style="color: rgb(37,224,130)">Askaris - Narakis</span>
+
+
+        <span class="chatlog__timestamp">27-Jan-21 03:05 PM</span>
+
+            <div class="chatlog__message " data-message-id="804079625055371284" id="message-804079625055371284">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Devika&#39;s voice chimed in.
+
+&quot;About 40 hours. Might as well get comfortable.&quot;
+
+Narakis&#39; face lit up. &quot;Ah yes, of course! My apologies Karsk, I was so keen to get down to business that I completely forgot you were in need of recharging. Please, follow me.&quot;
+
+She rose from her seat and descended down the ramp into the depths of the orbiter. Tools and machinery were racked neatly along what looked to be the standard manufacturing deck common to all such craft, a partly disassembled rifle left suspended in the air above the foundry. The tenno crouched down by a particular alcove and pulled out a universal charging cable.
+
+&quot;Will this suffice?&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-01.html_Files/976f799a2de24047391f44469636a79f-8F4F1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hactar42#7813" data-user-id="482587075602808851" style="color: rgb(108,63,0)">UnremarkableUsername - Karsk</span>
+
+
+        <span class="chatlog__timestamp">27-Jan-21 05:14 PM</span>
+
+            <div class="chatlog__message " data-message-id="804112132051304498" id="message-804112132051304498">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">&quot;Yes.  Thank you.&quot;
+
+The old man blinked out of existence, and the moa began to shuffle forward, pulling the data plug out of its port.  Once free, it followed Narakis down the ramp and crouched in the alcove.
+
+&quot;<em><strong><s>The plug in on the back.</s>  <s>Insert ass joke.</s></strong></em>&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-01.html_Files/7f47652625893f2bbf186a805da9aea8-8EB9D.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Askaris#3478" data-user-id="165971422278189056" style="color: rgb(37,224,130)">Askaris - Narakis</span>
+
+
+        <span class="chatlog__timestamp">27-Jan-21 06:01 PM</span>
+
+            <div class="chatlog__message " data-message-id="804124033137770566" id="message-804124033137770566">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Narakis&#39; hand flew to her mouth in an exaggerated gesture of faux-shock.
+
+&quot;I would never <em>dream</em> of making such a joke about a guest! That would be most improper, and best left to the professionals. Devika?&quot;
+
+&quot;Guess we&#39;re probing Uranus ahead of schedule.&quot; replied the cephalon smoothly.
+
+&quot;Perfect! Thank you.&quot; And without further ado, she plugged the cable into the back of the moa. Straightening up, she smoothed out her dress and brushed off an imaginary layer of dust from her knees. 
+
+&quot;If you require anything else, please don&#39;t hesitate to ask. I&#39;ll be on the bridge if you need me.&quot; She turned to leave, before stopping short and spinning around. &quot;Oh, and before I forget, what colour would you like the new plating in?&quot;
+
+Underscoring this all was the rising thrum of the engines spooling up.</span>
+
+                                <span class="chatlog__edited-timestamp" title="28-Jan-21 01:08 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-01.html_Files/976f799a2de24047391f44469636a79f-8F4F1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hactar42#7813" data-user-id="482587075602808851" style="color: rgb(108,63,0)">UnremarkableUsername - Karsk</span>
+
+
+        <span class="chatlog__timestamp">29-Jan-21 04:52 PM</span>
+
+            <div class="chatlog__message " data-message-id="804831417875693599" id="message-804831417875693599">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">The holographic old man rematerialized as Narakis plugged the cable in.
+
+&quot;Kiddo, if I had new plating, I wouldn&#39;t have been able to hide in the pipe closet like that.  And walking to your ship?  No way.  If I walked around a brand-new moa in Fortuna, all the Solari would think it was a Taxman proxy, and all the taxmen would think it was stolen.&quot;
+
+He sat down atop the folded robot.  &quot;And anyway, what kind of philosopher walks around looking rich?&quot;</span>
+
+                                <span class="chatlog__edited-timestamp" title="29-Jan-21 04:54 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-01.html_Files/7f47652625893f2bbf186a805da9aea8-8EB9D.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Askaris#3478" data-user-id="165971422278189056" style="color: rgb(37,224,130)">Askaris - Narakis</span>
+
+
+        <span class="chatlog__timestamp">30-Jan-21 09:10 PM</span>
+
+            <div class="chatlog__message " data-message-id="805258624100335637" id="message-805258624100335637">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">&quot;I can think of a few who pulled it off.&quot; She shrugged. &quot;But to each their own; far be it from me to criticize your commitment to your, ah, <em>aesthetic.</em> In any case, if plating isn&#39;t needed there&#39;s little else for us to do but relax and enjoy the ride; I&#39;ll let you know once we&#39;re on our final approach.&quot;
+
+With that Narakis politely inclined her head toward the old man before departing for the bridge. Once certain that she was alone, she leaned against the metal wall, cupping her face in her hands as she felt the tension creeping up between her shoulder blades. After a few moments she began to pace between the consoles, barely taking in their readouts before finally giving up and slumping heavily into her chair. Her fingers drummed relentlessly on the armrest as she stared silently out at the starlit cosmos.
+
+<span class="pre pre--inline">&quot;You good?&quot;</span> Came Devika&#39;s voice through the comm implant.
+
+Narakis exhaled sharply. <span class="pre pre--inline">&quot;I&#39;ll be fine. Just... not used to having passengers.&quot;</span>
+
+The angular cephalon manifested in her charge&#39;s vision, perched atop the holo-projector. <span class="pre pre--inline">&quot;Intruder in your personal space, right?&quot;</span>
+
+<span class="pre pre--inline">&quot;Yes. Hearing someone other than you onboard feels... wrong.&quot;</span> She pinched the bridge of her nose. <span class="pre pre--inline">&quot;Keeping up appearances is hard.&quot;</span></span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="805258891969036318" id="message-805258891969036318">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">The cephalon folded her blade-like arms. <span class="pre pre--inline">&quot;Only person who says you have to do that is -you-, Nar.&quot;</span>
+
+Narakis sighed, sinking deeper into her seat. <span class="pre pre--inline">&quot;I&#39;m not letting my guard down when there&#39;s a strange cephalon I don&#39;t know wandering around my ship.&quot;</span> She sat up, agitation writ across her features. <span class="pre pre--inline">&quot;And even without him, this job would have me on edge. Anyocorp wouldn&#39;t go to all this trouble just for some part-Sentient small arms; whatever we find down there&#39;s going to be seriously nasty. Amalgams, or worse; I&#39;d bet my last ducat on-&quot;</span>
+
+<span class="pre pre--inline">&quot;-Then FOCUS on being ready for that; seen you work too many times to think you can&#39;t break whatever the copycats cooked up. Meanwhile, let the cephalon you -do- know keep an eye on the other. This is -your- ship, and -I- run it for you. You need some space, it&#39;s as simple as asking me to lock the door. I can even look into who this Karsk is, if it&#39;ll help you rest easy.&quot;</span>
+
+<span class="pre pre--inline">&quot;...Yeah. Thanks, Dev.&quot;</span>
+
+<span class="pre pre--inline">&quot;Anytime, lil&#39; sis. -Someone&#39;s- gotta stop you thinking yourself into a hole, after all.&quot;</span>
+
+The pair fell silent as the engines roared; cephalon and tenno watching as the Venusian junction crackled to life, hurling their vessel across the gulf between worlds. The first of several jaunts before they would reach whatever lurked beneath the Uranian seas.</span>
+
+                                <span class="chatlog__edited-timestamp" title="30-Jan-21 09:30 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="side-story-01.html_Files/96a3fdee81be693f146ed8c30d101851-3860B.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Disruptis#5503" data-user-id="152349834785849344" style="color: rgb(255,210,0)">Disruptis - Disruptis</span>
+
+
+        <span class="chatlog__timestamp">01-Feb-21 11:58 AM</span>
+
+            <div class="chatlog__message " data-message-id="805844482159018025" id="message-805844482159018025">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>[END RP]</strong></span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+</div>
+
+<div class="postamble">
+    <div class="postamble__entry">Exported 47 message(s)</div>
+</div>
+
+</body>
+
+</html>

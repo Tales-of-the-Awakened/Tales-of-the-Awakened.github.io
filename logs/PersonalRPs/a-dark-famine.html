@@ -1,0 +1,1981 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tales of the Awakened {Warframe Discord RP Community} - a-dark-famine</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <style>
+        /* === GENERAL === */
+
+body {
+    font-family: "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    object-fit: contain;
+}
+
+.markdown {
+    white-space: pre-wrap;
+    line-height: 1.3;
+    overflow-wrap: break-word;
+}
+
+.spoiler {
+    border-radius: 3px;
+}
+
+.pre {
+    font-family: "Consolas", "Courier New", Courier, Monospace;
+}
+
+.pre--multiline {
+    margin-top: 4px;
+    padding: 8px;
+    border: 2px solid;
+    border-radius: 5px;    
+}
+
+.pre--inline {
+    padding: 2px;
+    border-radius: 3px;
+}
+
+.mention {
+    font-weight: 500;
+}
+
+.emoji {
+    width: 1.45em;
+    height: 1.45em;
+    margin: 0 1px;
+    vertical-align: -0.4em;
+}
+
+.emoji--small {
+    width: 1rem;
+    height: 1rem;
+}
+
+.emoji--large {
+    width: 2rem;
+    height: 2rem;
+}
+
+/* === INFO === */
+
+.info {
+    display: flex;
+    max-width: 100%;
+    margin: 0 5px 10px 5px;    
+}
+
+.info__guild-icon-container {
+    flex: 0;
+}
+
+.info__guild-icon {
+    max-width: 88px;
+    max-height: 88px;
+}
+
+.info__metadata {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.info__guild-name {
+    font-size: 1.4em;
+}
+
+.info__channel-name {
+    font-size: 1.2em;
+}
+
+.info__channel-topic {
+    margin-top: 2px;
+}
+
+.info__channel-message-count {
+    margin-top: 2px;
+}
+
+.info__channel-date-range {
+    margin-top: 2px;
+}
+
+/* === CHATLOG === */
+
+.chatlog {
+    max-width: 100%;
+    margin-bottom: 24px;
+}
+
+.chatlog__message-group {
+    display: flex;
+    margin: 0 10px;
+    padding: 15px 0;
+    border-top: 1px solid;
+}
+
+.chatlog__author-avatar-container {
+    flex: 0;
+    width: 40px;
+    height: 40px;
+}
+
+.chatlog__author-avatar {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.chatlog__messages {
+    flex: 1;
+    min-width: 50%;
+    margin-left: 20px;
+}
+
+.chatlog__author-name {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.chatlog__timestamp {
+    margin-left: 5px;
+    font-size: .75em;
+}
+
+.chatlog__content {
+    padding-top: 5px;
+    font-size: .9375em;
+    word-wrap: break-word;
+}
+
+.chatlog__edited-timestamp {
+    margin-left: 3px;
+    font-size: .8em;
+}
+
+.chatlog__attachment {
+    margin: 5px 0;
+}
+
+.chatlog__attachment-thumbnail {
+    max-width: 50%;
+    max-height: 500px;
+    border-radius: 3px;
+}
+
+.chatlog__embed {
+    display: flex;
+    max-width: 520px;
+    margin-top: 5px;
+}
+
+.chatlog__embed-color-pill {
+    flex-shrink: 0;
+    width: 4px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.chatlog__embed-content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 10px;
+    border: 1px solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.chatlog__embed-content {
+    width: 100%;
+    display: flex;
+}
+
+.chatlog__embed-text {
+    flex: 1;
+}
+
+.chatlog__embed-author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.chatlog__embed-author-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 9px;
+    border-radius: 50%;
+}
+
+.chatlog__embed-author-name {
+    font-size: .875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-title {
+    margin-bottom: 4px;
+    font-size: .875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-description {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.chatlog__embed-fields {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chatlog__embed-field {
+    flex: 0;
+    min-width: 100%;
+    max-width: 506px;
+    padding-top: 10px;
+}
+
+.chatlog__embed-field--inline {
+    flex: 1;
+    flex-basis: auto;
+    min-width: 150px;
+}
+
+.chatlog__embed-field-name {
+    margin-bottom: 4px;
+    font-size: .875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-field-value {
+    font-size: .875em;
+    font-weight: 500;
+}
+
+.chatlog__embed-thumbnail {
+    flex: 0;
+    margin-left: 20px;
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-image-container {
+    margin-top: 10px;
+}
+
+.chatlog__embed-image {    
+    max-width: 500px;
+    max-height: 400px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-footer {
+    margin-top: 10px;
+}
+
+.chatlog__embed-footer-icon {
+    margin-right: 4px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.chatlog__embed-footer-text {
+    font-weight: 600;
+    font-size: .75em;
+}
+
+.chatlog__reactions {
+    display: flex;
+}
+
+.chatlog__reaction {
+    display: flex;
+    align-items: center;
+    margin: 6px 2px 2px 2px;
+    padding: 3px 6px;
+    border-radius: 3px;
+}
+
+.chatlog__reaction-count {
+    min-width: 9px;
+    margin-left: 6px;
+    font-size: .875em;
+}
+    </style>
+    <style>
+        /* === GENERAL === */
+
+body {
+    background-color: #36393e;
+    color: #dcddde;
+}
+
+a {
+    color: #0096cf;
+}
+
+.spoiler {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.pre {
+    background-color: #2f3136 !important;
+}
+
+.pre--multiline {
+    border-color: #282b30 !important;
+    color: #839496 !important;
+}
+
+.mention {
+    color: #7289da;
+}
+
+/* === INFO === */
+
+.info__guild-name {
+    color: #ffffff;
+}
+
+.info__channel-name {
+    color: #ffffff;
+}
+
+.info__channel-topic {
+    color: #ffffff;
+}
+
+/* === CHATLOG === */
+
+.chatlog__message-group {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.chatlog__author-name {
+    color: #ffffff;
+}
+
+.chatlog__timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__edited-timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__embed-content-container {
+    background-color: rgba(46, 48, 54, 0.3);
+    border-color: rgba(46, 48, 54, 0.6);
+}
+
+.chatlog__embed-author-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-author-name-link {
+    color: #ffffff;
+}
+
+.chatlog__embed-title {
+    color: #ffffff;
+}
+
+.chatlog__embed-description {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-field-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-field-value {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-footer {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__reaction {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.chatlog__reaction-count {
+    color: rgba(255, 255, 255, 0.3);
+}
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.pre--multiline').forEach((block) => {
+                hljs.highlightBlock(block);
+            });
+        });
+    </script>
+</head>
+<body>
+    
+<div class="info">
+    <div class="info__guild-icon-container">
+        <img class="info__guild-icon" src="https://cdn.discordapp.com/icons/440597295726067712/e787a6474749f69864faf5b56c1e9478.png" />
+    </div>
+    <div class="info__metadata">
+        <div class="info__guild-name">Tales of the Awakened {Warframe Discord RP Community}</div>
+        <div class="info__channel-name">a-dark-famine</div>
+        
+            <div class="info__channel-topic">[UNKNOWN DATE, THE OLD WAR] OPEN RP - Ahuna Mons Valley, Ceres | &quot;Hello? Is anyone out there? We need-&quot;
+&quot;Vah-Thirty Epsilon, you have hostiles on your six, engage your shields!&quot;
+&quot;There&#39;s too many of them! Aah!!&quot;
+&quot;Sir, we need to pull out! We&#39;re surrounded!&quot;
+&quot;This is Skyton Seven-Zero, coordinates locked for payload. Prepare for...&quot; BOOM
+&quot;MAYDAY! MAYDAY!&quot;
+&quot;All forces, fall back! High command says we&#39;ll have Tenno reinforcements by dawn. Get your asses back to camp by nightfall or you&#39;ll be left behind.&quot;
+&quot;EAT THIS YOU VOIDFORSAKEN INSECTS! DIE!!!&quot; *Machine gun fire*
+&quot;Captain, Sentients have reclaimed the western bank. They&#39;re hiding in the Voiddamn trees.&quot;
+&quot;All Tenno forces, if you&#39;re receiving this broadcast, make your way to the front, pronto! Fight on, and claim victory in the name of our exalted majesties!&quot;</div>
+
+        <div class="info__channel-message-count">70 messages</div>
+        
+    </div>
+</div>
+
+<div class="chatlog">
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/136944676849582080/290779f99a7d8e2b6ff5d6d447ab4680.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">23-Feb-19 07:57 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">[UNKNOWN DATE, THE OLD WAR] OPEN RP - Ahuna Mons Valley, Ceres
+
+~The blue skies of Ceres were unrecognizable under the darkness of smoke. Fires raged along the pristine shorelines, the acidic lakes bubbling beyond as it attempted to dissolve the wreckage of skips and monstrous machines alike.
+Bullets and lasers pierced the air, scorching metal armour and sizzling as flesh was seared.
+Along the shore, a squad of warriors, Dax, clad in bronze armour, fired their weapons down the sandy shores as a wave of vicious, undulating forms writhed across the sand.
+Their weapons rattled as they expelled bullets at the encroaching beasts, their zero-tech armour reflecting both the faint rays of light that shone through the smoke, as well as the brilliant blue beams that aimed to disintegrate them. Every so often, a stray ray would strike one of the warriors on the flesh- their hand, perhaps, or their exposed mouths- and soon enough, their body was nothing more than a spray of red mist.
+The squad of 8- no, 5 left now, stepped backwards, continually retreating as their enemy tried to weather their gunfire.
+The Sentients.
+Their forms were abstract, almost shapeless, not yet fully decided as to what form would be best suited for this mission. But that didn&#39;t stop them. The Dax&#39;s bullets that grazed the red shells of the vile machines only caused them to strengthen, visibly causing the formless masses to gain some shape for a moment, if not permanently. They adapted slowly, constantly, as the bullets continued to pelt them.
+But it wasn&#39;t in vain. The projectiles striking the Sentients often hit exposed internal organs, not yet adapted to take such damage, causing the owner of such a flaw to fall to pieces, quickly trampled by its brethren behind.~
+
+<u>Dax 1:</u>
+&quot;Voiddamnit where&#39;s everyone else?&quot; One of the Dax screamed over the unholy chorus of gunfire and Sentient song, &quot;We had at least thirty men!&quot;</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><u>Dax 2:</u>
+&quot;Sir, it was that big one! It wiped out nearly the entire platoon in one strike! We&#39;re not equipped for this!&quot; The Dax closest to the first tossed his Braton Prime aside, its magazine empty and his own pockets devoid of ammo. He pulled out a Lato and began to unload the weapon all the same.
+
+<u>Dax 1:</u>
+&quot;You bet your kubrow-eating rump we aren&#39;t equipped for this! By their holiness, this is Voiddamn Tenno work, I tell you!&quot;
+The Dax tripped over an acid-gnawed log of driftwood sticking out from the sand.
+
+<u>Dax 3:</u>
+The Dax behind the first caught his ally, halting both of their gunfire for a moment.
+&quot;Cassious, watch your footing, huh?!&quot;
+
+<u>Dax 2:</u>
+&quot;We should just run for it! We can&#39;t kill them all!&quot; The second Dax struggled, fumbling to reload his Lato.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><u>Dax 3:</u>
+&quot;Oh Void no! We can&#39;t outrun these things! Our bullets are literally the only thi-&quot;
+The Dax couldn&#39;t finish his sentence. The mere 2 second decrease in bullets was enough to let one of the Sentients catch up with them. It leapt forward, its &#39;head&#39; splitting open into a myriad of horrifying, bladed tendrils. They hooked the first Dax, scooping it up into its face before expelling the gore outside of its hollow chest. In his shock, the third Dax&#39;s guard fell, a bolt of electricity striking his face, sending a massive current through his body until his blood boiled and his veins erupted.
+
+<u>Dax 2:</u>
+&quot;Okay, RUN! THE TREES!&quot; The second Dax dropped his Lato and sprinted sideways, perpendicular to the other Dax&#39;s path. He headed straight for the trees, away from the shore.
+
+<u>Dax 4:</u>
+&quot;The evac zone is further down the beach! They&#39;ll never find us...&quot; but it was too late. The fifth and final Dax warrior followed after the second, not wasting a single breath on words. With a grunt, the fourth Dax rolled to the side, narrowly dodging the Sentients&#39; far more intense output of fire now that the humans had halted their own return.
+The Sentients created a mighty crashing sound as their seemingly endless swarm hit the treeline, but it slowed them down enough for the few surviving Dax to escape.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">~Days passed. The Dax warriors hacked through the jungle, their Nikanas dulling on the tree branches that barred their way. But it wasn&#39;t in vain. Soon enough, they found their way to a clearing, and caught the attention of a passing Orokin gunship. The three Dax exfiltrated quickly, not wasting a single second- for how far behind could the Sentients truly be?
+
+More days passed, and the Dax survivors returned to the Orokin planetside fortress- Udanta, the base of operations for the Ceres campaign. It had been forty seven days since initial Sentient contact here, and things had only recently taken a turn for the worse. Tenno involvement had been considered unnecessary due to the seemingly weak numbers of Sentients here, but it was a grave mistake- the Sentients appeared to have erected some kind of replication facility to churn out massive amounts of their own kind, sucking out the raw minerals on Ceres in the process. Now, Sentient Brood Ships had arrived, guarding the facility from orbital bombardment, and delivering even more reinforcements. The Dax forces were being pushed back, and the three survivors&#39; tale was just one of the many ill news delivered to the commander stationed at Udanta.
+Commander Tamaska. He was no war hero- he was a student of war, as many of the Dax were. But these Sentients followed no tactics ever recorded in human warfare. The Executors Tamaska had to report to were so far sated by his lies of success, but it was only a matter of time before the Sentients were on Udanta&#39;s doorstep.
+And that is why he is requesting Tenno aid.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">((Enter this RP by having your Tenno arrive at Udanta&#39;s landing site! Remember, all Dax technically outrank you, and will likely treat you with great disrespect!))</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/227906898219892736/40e4c7aff7c8d404f6fccbbbf93f0c86.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ross#8154">Ross</span>
+                <span class="chatlog__timestamp">23-Feb-19 10:27 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">One particular Dax found himself thinking too deeply about recent events, and shook his head slightly to clear his mind. He rested one hand on his holstered Nikana and grounded himself by focusing on the texture of the tiny, faded orange thread beneath his thumb. He&#39;d tied it just below the guard of his sword, hoping it was small enough to not draw attention, as it was against regulations for someone like him to carry...keepsakes.
+
+The latron on his back was standard issue, and aside from a half-healed split lip and his mostly unadorned armor - which served to mark his relatively low rank - this particular Dax didn&#39;t have many identifying features.
+
+Trying to keep his mind from wandering to where it had been far too much lately, the Dax reviewed information in his head as he waited to see what kind of Tenno he might be working with.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/215616399911944193/7d2ad1deb614c52d42ae671b94385ab6.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Pryde#0661">Pryde</span>
+                <span class="chatlog__timestamp">23-Feb-19 10:32 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Elizabeth</strong>
+Elizabeth Marise-Cain’s Trinity alighted gracefully upon Udanta&#39;s laughable landing zone, unflappably reading from a collection of poems clasped in her right hand. Ambling across the dirt and earth, she took five minutes to cross a distance one might traverse in seconds, her leisurely gait at odds with the armaments she carried on her battle-scarred Warframe. 
+
+Some Tenno were difficult to please. Others had heartbreakingly simple requests. Elizabeth had only two guilty pleasures; oversized greatswords, and antique books. When given a steady supply of both, the combat medic was pleased. For this reason, the Vectis slung over her right shoulder and the Akbolto strapped to her hips seemed accessories in the face of a massive, two-handed kriegsmesser upon her back. 
+
+Stopping by the entrance, she slowly turned a page, lowered the book just enough for her halo and helm to become visible, speaking in a clarion call, “I am here to see Commander Tamaska,” thumbing the book shut, she clasped it with both hands by her waist, inquiring in total faith that someone was nearby, “May I enter?” 
+
+And so it was, there happened to be exactly one Dax directly in front of her who had been too lost in thought to move from her path...</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/358680374022242324/814092b501b8881e5c4d758c8fec6a16.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Darkjunior#0813">Darkjunior</span>
+                <span class="chatlog__timestamp">24-Feb-19 01:20 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>TARNAS</strong>
+Okay, okay... Just more Sentients. He could do this, right? The Tenno nervously walked around the mess that was his ship. Shiny on the outside, but... Well, he found his way through here, right? Orbiter and landing craft were all shiny on the outside, they just never inspected the inside. Anyway, as the landing craft prepared to split off from the rest of the golden Orbiter orbiting Ceres, he ran a hand across the recently-polished Warframe. A Loki, maintained better than any other piece of equipment he had. Why even try to maintain his Hikou, if he would just throw them away?
+
+&quot;Operator, all systems are clear... Diagnostics done... I guess we&#39;re ready to launch?&quot; The quiet voice of his Cephalon echoed through the ship. Tarnas sighed, looking to his weapons piled up next to him. He would be fine. Right? He was trained, prepared... &quot;Are you okay...?&quot;
+
+&quot;Yeah... Tycho, I&#39;m okay...&quot; Tarnas answered, but he hardly sounded like he believed it himself. But, no going back now. With another sigh, he put his hand gently on the Loki, looking up at the Frame. Then, in a sudden burst of Void energy, he found himself looking down from a new, taller vantage point. The shiny, golden Loki took a step forward, crouching down and picking up the Tigris Prime next to him. With a flick of his wrist, he picked up the two golden Fang daggers next to it, holstering the both of them. Then, finally, he grabbed the pouch of throwing stars. Simplistic, but silent.
+
+[1/2]</span>
+
+                                <span class="chatlog__edited-timestamp" title="28-Feb-19 01:53 PM">(edited)</span>
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Then, with a hiss and a click, the landing craft undocked from the Orbiter. The equally shiny Liset drifted away for a moment, before the main engines activated and the craft began on a course down to the planet. As they tended to do, Tarnas and his Cephalon had a conversation on the way down, mostly to keep Tarnas calm. Just normal, random things. Neither were good conversationalists, though...
+
+Finally, the landing site came into view. Tarnas took a deep breath, trying not to let the anxiety get to him... His Cephalon landed the ship for him. It touched down gently, as Tarnas finally stepped down the ramp. Another Tenno was here, already. Backup, hopefully. He didn&#39;t approach anyone, standing there at the bottom of the ramp with the shining Tigris in his hands.
+
+[2/2]</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/136944676849582080/290779f99a7d8e2b6ff5d6d447ab4680.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">24-Feb-19 12:55 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">~There were plenty of other Dax soldiers mulling about the landing zone. It appeared that this large, open area doubled as a sort of common area for the troops to reside in. All along the edges of the area, white tents flapped in the light breeze, their gold trims flashing whenever brief rays of sun pierced the dark fog rolling across the sky.~
+
+(( <span class="mention">@Elizabeth the Striker</span>, <span class="mention" title="Ross#8154">@Ross</span> ))
+~It wasn’t long before the new Trinity caught the attention of the Dax. After all, she was the first Tenno to arrive.~
+
+<u>Dax:</u>
+One of the many soldiers approached the Trinity, one hand on his hip, and the other resting on his Nikana’s hilt.
+“A real Tenno. Would you look at that.”
+The Dax, named Ihan, tapped his boot lightly against the other Dax sitting before the Trinity.
+“Hey, Bochra! You got company. Unless of course, this thing was bothering you while you tried to meditate?”
+Ihan looked the Trinity up and down, clicking his tongue at the scriptures clenched in her hand.
+“Void, you Tenno look so Voiddamn weird... also, you don’t ask to see the Commander. He asks to see you.”
+
+[1/2]</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">(( <span class="mention" title="Darkjunior#0813">@Darkjunior</span> ))
+~Tarnas’ arrival forced a round of groans from the Dax warriors.
+“More of them? Voiddamnit how many of these things did Tamaska order?”
+Several Dax began to gather around each other, their voices rising as they began to argue over the usefulness of the Tenno and their Warframes.
+Others began to approach Tarnas as he stood in place. A golden warrior, with gleaming weapons- the Dax may have differing opinions regarding the Tenno, but one thing that could not be disputed was the majestic appearance of a Warframe.
+“Wow! Look at that!”
+“Amazing artistry!”
+“That’s a big gun. Hopefully it can actually put a dent in those Sentients!”
+“I heard that they Sacrifice the soul of a child to bring these Warframes to life!”
+“We have to fight alongside this thing?”~</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/215616399911944193/7d2ad1deb614c52d42ae671b94385ab6.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Pryde#0661">Pryde</span>
+                <span class="chatlog__timestamp">24-Feb-19 01:52 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Elizabeth</strong>
+Elizabeth&#39;s optics flickered and darkened, her voice unwavering and firm as she continued to address &#39;Bochra,&#39; &quot;You misunderstand, Dax. I <em>am here</em> to speak with Commander Tamaska. <em>You</em> are there, &#39;tween me and mine goal. Now ...&quot; she halts for but a span, raising up her book to politely halt any interruption, &quot;... I&#39;ve reading I may attend to, and time aplenty; can you say the same?&quot;
+
+With a satisfying rush of paper and antique leather, Elizabeth thumbed the book open and clasped it daintily in one hand, her helmet - while unnecessarily - canted low to make plain her intent to outwait the stubborn Dax. Meanwhile, her offhand calmly wrestled with her cloak, keeping the persimmon space-cloth&#39;s antics from becoming overtly exuberant. 
+
+The treasures of words writ within, however, were untended to by Elizabeth; instead, she began organizing her interface and issued a request to squad link to Tarnas. To any onlooker, she was simply a lifeless golem armed and armoured liken to a paladin of old, listlessly reading from a tome for all eternity.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/358680374022242324/814092b501b8881e5c4d758c8fec6a16.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Darkjunior#0813">Darkjunior</span>
+                <span class="chatlog__timestamp">24-Feb-19 02:44 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>TARNAS</strong>
+Same thing he heard every time. Always about how ornate this body was, the craftsmanship of it... These Dax always acted the same. He stood there unmoving, towering over these soldiers, shotgun in hand. Did they always have to argue about how useful they were, when they were the only ones that could even fight these... things?
+
+When he received that request from this other Tenno, he immediately accepted. He stayed where he stood at the bottom of the ramp, waiting to accept orders, before he did anything. Better that than someone yelling at him. Why did everyone always act so... above him? Well, no point in asking these people. Better to be silent and unmoving.
+
+<em>Name?</em> He sent a simple message to Elizabeth. He couldn&#39;t hear what the other Tenno was saying from over here, so he just stood here and silently messaged them. Behind him, the ramp of his shining Liset closed behind him, as it otherwise sat there dormant. Everything about what he did made him appear less like a real person, and more like some sort of machine.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/227906898219892736/40e4c7aff7c8d404f6fccbbbf93f0c86.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ross#8154">Ross</span>
+                <span class="chatlog__timestamp">24-Feb-19 03:02 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Bochra</strong>
+The Dax frowned slightly.
+&quot;No, not meditating. Just...thinking. Bothered, though? Somewhat. I don&#39;t like this one&#39;s tone...&quot; he said, turning the frown towards the Trinity. The words themselves were harsh but there was little weight behind them. He didn&#39;t have the energy to spare on arguing with a Tenno, he knew how stubborn they could be. Instead, it seemed he was just trying to hint that maybe the Trinity should tread a bit more lightly. At least the other Tenno seemed respectful enough, for now.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/151377797623971840/9e1de936b3ce4f0cf454e75ca9af76d5.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Vosen#9137">Vosen</span>
+                <span class="chatlog__timestamp">24-Feb-19 04:13 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Cephalon Huginn</strong>
+&quot;Sir, we will have arrived at destination in T minus sixty seconds. Prepare for drop.&quot; The charming robotic ship&#39;s voice announced as the Mantis began it&#39;s deacceleration over the Dax encampment. &quot;Good luck, Sir.&quot;
+
+<strong>Lupin</strong>
+&quot;Your kind words are appreciated, Hue. Deploying now.&quot; He added as the warframe docking unit hissed and spun around, exposing the golden Inaros to the harsh arid weather of Ceres. The metal slate demagnetized, releasing the Tenno into a 30 meter free fall onto the landing area. The comings and goings of supply ships and landing crafts had left the pair with little room for manevuering or docking.
+
+A loud thump and a small cloud of dust picked up as the heavily armed soldier finally reached the ground, luckily missing any Dax soldiers or Tenno with their forced entry.
+
+&quot;Apologies for the inconvenience.&quot; He said courteously with a bow, their voice a deep raspy tone reminiscent of a heavy smoker. &quot;Tenno &#39;Heretic&#39;, reporting for duty.&quot; He added as he rose from his greeting, checking the Vectis strapped to his back had not slid off from the fall, he took a step aside, clearing the landing area, should any further support be deployed. A black and gold Magistar hummed softly on one side of his hips, while a Pyranna rested against the other.</span>
+
+                                <span class="chatlog__edited-timestamp" title="24-Feb-19 05:15 PM">(edited)</span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/215616399911944193/7d2ad1deb614c52d42ae671b94385ab6.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Pryde#0661">Pryde</span>
+                <span class="chatlog__timestamp">24-Feb-19 04:36 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Elizabeth</strong>
+Blatantly ignoring Bochra&#39;s warning, Elizabeth dispatched another invitation for the newly-arrived Inaros. As she did so, a morass of data drifted onto her heads-up display, momentarily overwhelming the Tenno; but it was soon sorted and became background data the dreaming pilot was well accustomed to. She was even able to focus her attention to the book she had feigned reading just moments ago, her voice calling out over squad comms, &quot;Striker, showing ready-op. The Dax soldiers are being ... Their usual, fettered selves.&quot;
+
+Concluding the poem upon the pages before her, she uttered aloud its closing line, &quot;All this the world well knows; yet none knows well --To shun the heaven that leads men to this hell.&quot; Folding the book with a loud thump, she mused aloud to Bochra, &quot;More and more Tenno shall be arriving, I warrant. Are you truly willing to hazard your fortune with they that follow? Their temperament may not prove as winsome as mine own. I repeat a <em>third</em> time-- I am here to speak with Commander Tamaska. May I enter? Or shall the Commander be conveyed here?&quot;</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/378654719557632000/c7a95cd189576c531a1e1e4162eb4c86.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Nicolos#7107">Nicolos</span>
+                <span class="chatlog__timestamp">24-Feb-19 04:38 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">While the Dax detachment was preoccupied, another Tenno ship darkened the sky above the camp, right on the tail of the Mantis that had just been there. Unlike the previous vessel however, no humanoid shape emerged from the vessel. Instead, a mass of what appeared to be some kind of liquid dropped from the vessel, screaming towards the center of the camp before splashing down to the ground,  scattering water around the immediate vicinity and forming a sizeable puddle. No sooner had the water made contact than a form began to emerge from the water, drawing all the water to itself. In a moment the form solidified, revealing a Hydroid armed with a Corinth Prime over his shoulder and a glittering  Fragor Prime hanging sideways from his lower back. Not wasting a step, the Hydroid strode up to the gathered Dax and Tenno, before speaking confidently.
+
+<strong>Muro:</strong>
+&quot;Hey,&quot; he began, offering a stilted wave. &quot; Buccaneer, reporting. We going to fight these freaks or what?&quot;</span>
+
+                                <span class="chatlog__edited-timestamp" title="24-Feb-19 04:57 PM">(edited)</span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/236097848586797057/4a9793d3ba2288d3b2117cba15667d57.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="TheFafalStudios#8672">TheFafalStudios</span>
+                <span class="chatlog__timestamp">26-Feb-19 05:44 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Like a shadow following the previous craft, yet another scimitar has entered the airspace, swooping down as low as it could without disturbing the tents. From there an ashen gray and gold Ivara jumped gracefully down into the square, mere meters behind the Hydroid. 
+
+An uncommon, yet still golden Vectis on his back, a Ballistica on the hip, and confidence in his steps. Those were the things most noticeable about the newcomer as he made his way towards his brother.
+
+Before he could say anything, a little Taxon that seems to have dropped after the frame has finally caught up, wiggling it’s way towards the people. Upon hearing Muro speak, it perked up, trying to say something.
+
+<strong>Ide:</strong>
+“Oh Muro, it’s so ni-“
+
+<strong>Vuko</strong>
+“Witchfyre reporting for duty.” The warframe interrupted its companion, giving it a quick dirty look before shifting attention back to the Dax.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/136944676849582080/290779f99a7d8e2b6ff5d6d447ab4680.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">06-Mar-19 01:21 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">(( <span class="mention">@Elizabeth the Striker</span>, <span class="mention" title="Ross#8154">@Ross</span>))
+
+<u>Dax:</u>
+The Dax stepped up a little closer to the Trinity, his hand now shifted from resting on his sword&#39;s handle to wrapped around it.
+&quot;I told you, you oversized, faceless weirdo. The Commander will meet with you when he&#39;s ready. Go wait with the others.&quot;
+The eyes of the Dax were hidden beneath his helmet, but his mouth was turned in a grim frown.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/136944676849582080/290779f99a7d8e2b6ff5d6d447ab4680.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">06-Mar-19 01:28 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">(( <span class="mention" title="Darkjunior#0813">@Darkjunior</span> ))
+~The Dax surrounding the Loki continued to gaze upon the marvel and mystery of advanced Orokin engineering, some of them even inching close enough to poke at the suit.~
+
+<u>Dax Lieutenant:</u>
+&quot;Alright troops, back off from the bloody Warframe, would you?&quot; A Dax called from across the courtyard, standing amidst several other high ranking Dax. Their ornate, mushroom-like helms proudly displayed their positions.
+&quot;Don&#39;t get so close to them, alright?! You might break something, or hurt their feelings!&quot;
+As the Dax backed off from Tarnas, they stifled their giggles as they returned to sitting around their tents. Soon enough, the sounds of flames licking as Dax cooked food and the grinding of steel as they sharpened their blades filled the landing zone&#39;s air.
+It seemed like after Tarnas, the arrival of more and more Tenno did little to surprise the Orokin warriors. They looked up momentarily to regard the newcomers, but none of the incoming Tenno generated the same amount of wonder Tarnas and Elizabeth had.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/136944676849582080/290779f99a7d8e2b6ff5d6d447ab4680.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">06-Mar-19 01:39 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">(( <span class="mention">@Lupin</span> ))
+
+~Many of the Dax nodded to him, admiring the weapons the Tenno bore.~
+
+<u>Short Dax:</u>
+A much shorter than normal Dax, alongside a very fat one were the two audience members directly in front of Lupin. They watched as he rose, a grin on their mouths as they looked at the Inaros up and down.
+&quot;Hullo &#39;Heretic&#39;!&quot; The short one said, his grin plastered to his face, or at least what could be seen of it.
+
+<u>Fat Dax:</u>
+The Dax next to the short one stretched, his flabby body putting his bronze armour under what looked like quite a bit of stress.
+&quot;Ah swear, youse Tennos got the weirdo-est names.&quot; He shook his head, his blubbery cheeks wobbling as they protruded from the helmet&#39;s opening.
+
+<u>Short Dax:</u>
+&quot;Well, I&#39;ve &#39;eard that they&#39;ve got some real skill inside their muscles. They&#39;ve been taking out them bloody Sentients left right an&#39; center, I &#39;eard! Some Yuvan colony in Earth&#39;s orbit was protected by a single Tenno, as th&#39; rumour goes!&quot;
+
+<u>Fat Dax:</u>
+&quot;Well, I dun&#39; know, Crec. Ah do hope we&#39;ll get t&#39; watch these thingies fight. All rumours is what ah know, ah wanna see sum&#39;o their stuff in action, ayup?&quot;</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/136944676849582080/290779f99a7d8e2b6ff5d6d447ab4680.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">06-Mar-19 01:46 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">(( <span class="mention">@Vuko Drakkainen</span>, <span class="mention">@Muro</span> ))
+
+~There was an outcry from the nearby Dax as Muro&#39;s splashy arrival sprayed outwards. Of course, none of the Dax were injured, or soaked to a high degree, but the arrival of a Tenno via liquid form was quite an alien sight to behold.~
+
+<u>Dax Lieutenant:</u>
+A high-ranking Dax (at least, according to the ridiculously ornate hat he bore) approached Vuko and Muro, with two slightly lower ranking officers behind him.
+&quot;Wytchfire  and Buccaneer, you say? Welcome to Udanata, Tenno. If I recall correctly, Commander Tamaska had told us to watch out for you... you are specialists or something, he said something about. Anyways, follow me, if you would please.&quot;
+The Lieutenant turned and led the way towards the dirt-stained, gold and white structure that surrounded the Landing Zone on all sides. He made his way to a door, producing a Dragon Key from his ringlet-bound cape, and opened the door.
+&quot;Hurry up then, soldiers.&quot;</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/136944676849582080/290779f99a7d8e2b6ff5d6d447ab4680.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">06-Mar-19 01:58 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Legend:
+<strong>1.</strong> First Floor: Grineer Hibernation storage. Second Floor: Officers&#39; Quarters
+<strong>2.</strong> First Floor: Vehicle and weapon maintenance and storage. Second floor: Central Command (Overlooks both Landing Zone and the Beach) and highest ranking officer quarters.
+<strong>3.</strong> Landing Zone
+<strong>4.</strong> Dax tents
+<strong>5.</strong> Ceres jungle
+<strong>6.</strong> Ahuna Mons Mountain
+<strong>7.</strong> Radar, Comms, Anti-Ship Battery and Cascade Mortar Station
+<strong>8.</strong> Acid Beach</span>
+
+                                <span class="chatlog__edited-timestamp" title="06-Mar-19 02:06 PM">(edited)</span>
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/542100015603253289/552927897686376448/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/542100015603253289/552927897686376448/unknown.png" />
+                            </a>
+                        </div>
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/151377797623971840/9e1de936b3ce4f0cf454e75ca9af76d5.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Vosen#9137">Vosen</span>
+                <span class="chatlog__timestamp">06-Mar-19 08:39 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Lupin</strong>
+His head zigzagged from one to the other, following the uninterrupted cheerful banter of the two Dax, an odd sight compared to the dire situation depicted by the call for reinforcements.
+
+&quot;You are in luck then. We are here to make sure this new threat is properly extinguished. Though I would recommend you maintain a cautionary distance.&quot; He said with a tone to match the rotation of his shoulders, gently relaxing his body, letting himself mentally adjust to the new atmosphere and gravity. &quot;However, I will need to speak with the commanding officer for deployment first. Would you care to point me in the right direction?&quot; He added towards the shorter Dax first, then turned to extend the same blank expression to their companion.</span>
+
+                                <span class="chatlog__edited-timestamp" title="07-Mar-19 01:19 PM">(edited)</span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/378654719557632000/c7a95cd189576c531a1e1e4162eb4c86.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Nicolos#7107">Nicolos</span>
+                <span class="chatlog__timestamp">08-Mar-19 02:17 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Muro:</strong>
+Muro stole a glance skyward as the sounds of yet another landing craft&#39;s engines filled the air,  a grin forming underneath his Warframe&#39;s exterior as he recognized both the craft and the Warframe that so elegantly dropped from it. As the Ivara landed, Muro turned slightly and looked over his shoulder at his approaching ally, stifling a chuckle as Ide tried to start a conversation, only to be cut off by her operator.  He might have offered a greeting to his friend and brother in arms, but the garish hat of the higher ranked Dax stole Muro&#39;s attention, so he stood, arms crossed as the Dax spoke to the two of them. He had to admit, this was a warmer reception than Muro had expected, especially given how most Dax regarded the Tenno. Before he followed the officer, however, he leaned towards Vuko, raising his fist for a fist bump as a low-profile greeting. As he did so, he briefly looked towards the floating Taxon and whispered,
+
+&quot;Nice to see you too Ide. We&#39;ll catch up later.&quot;</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/236097848586797057/4a9793d3ba2288d3b2117cba15667d57.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="TheFafalStudios#8672">TheFafalStudios</span>
+                <span class="chatlog__timestamp">08-Mar-19 08:42 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Vuko:</strong>
+The Tenno stood rigidly still, like a soldier listening to a higher ranking officer. However once the Dax turned the other way, he very quickly relaxed his body and fist bumped Muro back. It was yet another job, and he was just happy to have his bro with him.
+
+Hearing the lieutenant, he tensed once again, attempting to look presentable, and nodded to Muro in a well known to him fashion which meant ‘let’s just get this over with so we can go and chill’ before going where he was ordered to.
+
+In the meantime the little Taxon flashed it’s light a little brighter after Muro responded to her. She then went about her merry way, swaying through the air and investigating just about anything that moved, like a little puppy being let outside after a long while.</span>
+
+                                <span class="chatlog__edited-timestamp" title="08-Mar-19 08:46 AM">(edited)</span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/136944676849582080/290779f99a7d8e2b6ff5d6d447ab4680.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">08-Mar-19 09:36 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">(( <span class="mention">@Vuko Drakkainen</span>, <span class="mention">@Muro</span> ))
+~The ornate door opened, revealing the polished hallway of Udanta&#39;s interior. The Dax officers led the two Veiled Tenno through the halls, passing by other Dax officers and Orokin staff members- medics, scientists, engineers. An open door to the left of the group as they travelled revealed a large hangar, Orokin gunships and assault vehicles waiting for someone to bring them to life.
+Finally, the group reached an elevator which opened up to receive them, quickly sending them to the second floor as soon as they stepped on.~
+
+<u>Dax Lieutenant:</u>
+&quot;A word of advice, Tenno,&quot; the Dax leading Muro and Vuko said as they waited for the elevator to stop, &quot;the Commander is... not very fond of your kind. He&#39;s got several decades of crushing those who oppose the Empire, and hasn&#39;t lost a battle for a very, very long time. The fact that he has to resort to using you and your brethren isn&#39;t exactly something that brings him joy. So, when you meet him... tread lightly, alright?&quot;
+As the officer finished, the elevator door opened, revealing a short hallway and a door at the end of it.
+&quot;The War Room is behind those doors. The Commander and his generals will be found through there. According to his orders, he&#39;s expecting you two.&quot;
+The Lieutenant stepped to the side and outstretched his arm towards the door.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/136944676849582080/290779f99a7d8e2b6ff5d6d447ab4680.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">08-Mar-19 09:43 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">(( <span class="mention">@Lupin</span> ))
+
+<u>Fat Dax:</u>
+&quot;&#39;Nfortunately tha&#39; Commander is busy &#39;r something roight now, guv. I think he wants all you Tennos to wait in the courtyard. &#39;Ventually he&#39;ll call yous in.&quot;
+He reached behind, scratching his rump before patting his belly. Was it just Lupin, or did it sound like this Dax&#39;s armour was actually creaking under the weight of this obese warrior?
+
+<u>Crec Dax:</u>
+&quot;I bet you know all kinds of weird Orokin secrets, heh?&quot; The short Dax, named Crec according to the fat one, inquired to Lupin.
+
+<u>Fat Dax:</u>
+&quot;Oi, shat da fadge up you midget,&quot; the Fat Dax slapped Crec&#39;s back, his jello-like arms jiggling as he did.
+&quot;&#39;Tis not our place to poke around in the business of their Excellencies. Ah swear, Crec, sometimes you act like you&#39;ve never been a Dax.&quot;</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/358680374022242324/814092b501b8881e5c4d758c8fec6a16.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Darkjunior#0813">Darkjunior</span>
+                <span class="chatlog__timestamp">08-Mar-19 02:08 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>TARNAS</strong>
+Well... where did he go now? Dax always told him what to do, right? Maybe he should just stand here? Really, the whole &#39;stand perfectly still until given orders&#39; approach tended to work. He thought he was more... intimidating? Was that the right word? Whatever. Anyway, the shiny Loki Prime stood completely still, even as the Dax walked away. Should he try and contact one of the other Tenno? What if he annoyed them? Better to wait. He&#39;d tell them his callsign if they asked, right? He didn&#39;t want to seem weird...
+
+&quot;<em>Er... Operator?</em>&quot; His cephalon spoke up, sounding concerned. The communication was directly to Tarnas, so no one else would hear it. &quot;<em>Are you okay? You don&#39;t seem to be... doing anything.</em>&quot;
+
+&quot;<em>I&#39;m alright..</em>&quot; Tarnas answered, on that same private communication. Why did his Cephalon always worry so much about him? &quot;<em>Just... waiting, I guess..</em>&quot;</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/227906898219892736/40e4c7aff7c8d404f6fccbbbf93f0c86.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ross#8154">Ross</span>
+                <span class="chatlog__timestamp">09-Mar-19 12:15 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Bochra</strong>
+Politely keeping his distance from the Tenno newcomers - less likely to get into any trouble that way, he found - Bochra watched the other Dax soldiers interact with their new allies.
+
+The Loki seemed to just be standing still. Thinking or waiting, he assumed. At least this one wasn&#39;t already talking back, unlike...other ones he&#39;d met, and, evidently, ones he might be working with soon. With the tiniest of sighs, he looked to the Trinity again, waiting for her undoubtedly disdainful response.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/215616399911944193/7d2ad1deb614c52d42ae671b94385ab6.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Pryde#0661">Pryde</span>
+                <span class="chatlog__timestamp">10-Mar-19 12:55 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Elizabeth Prime</strong>
+If ever optics could squint, they did now; the scarred helm was, indeed, faceless-- but hardly featureless. The cant of its neck, the flex of her fingers &#39;round her book&#39;s spine, and her sharp reply all spoke to the internal expression of displeasure, &quot;If, you, Dax,&quot; she pointedly directed the seated Bochra, &quot;would happily recall mine words before the generals, I am certain it could only be a positive report.&quot;
+
+Glancing up to the nameless Dax, the Trinity muttered, &quot;Ah. Hello -- were you just there all a long? Pardon; I shall remove myself from your conversation...&quot; And with that, Elizabeth turned on her heel and took long strides to cross the landing field towards the Tarnas, a predator&#39;s lope read clearly.
+
+&quot;I say again; Striker, ready-op,&quot; began her brusque, cordial tone over the squad comms, &quot;Dear Loki, are you a mute? Or have <em>you</em> no name?&quot; Stopping directly in front of her fellow Tenno, she seemed silent to all the world as she issued an invitation to the Inaros, appending to the request the note: <u>The Loki is mute. Dax quarrelsome. Striker, ready-op. Awaiting mission to execute.</u></span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/358680374022242324/814092b501b8881e5c4d758c8fec6a16.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Darkjunior#0813">Darkjunior</span>
+                <span class="chatlog__timestamp">10-Mar-19 01:28 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>TARNAS</strong>
+Oh, Void. One of them was talking to him. Did he respond? What did he do? They were fellow Tenno, right? Other Tenno were always less mean to him. There was a bit of an awkward silence, as he tried to formulate a decent response. Okay, going invisible and running away is <em>not</em> the right course of action. Not this time, at least. Now his Cephalon had gone silent, too...
+
+&quot;N-not mute...&quot; He answered over the comms quietly, just to clear things up. He spoke in a hushed voice, as if he was scared to speak any louder. He should tell them his name, right? Or his callsign? Maybe his callsign. That was what everyone else was doing. This is why he never worked with teams. &quot;Er... Wraith. Callsign is Wraith.&quot;</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/151377797623971840/9e1de936b3ce4f0cf454e75ca9af76d5.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Vosen#9137">Vosen</span>
+                <span class="chatlog__timestamp">11-Mar-19 03:11 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Lupin</strong>
+&quot;Of course, I know many secrets.&quot; He responded to Crec after his companion had reprimanded them. &quot;And the knowledge of any one of them would call for me to crush your oro on the spot.&quot; He added in a deadpan tone, and after a moment let out a small chuckle that only gently hinted at the jesting nature of the threat.
+
+&quot;Unfortunate, but surely the situation keeps them tied down.&quot; He picked the subject back after a breathing moment. &quot;I had hoped to begin preparations as soon-&quot; He was mid-sentence when the chime of an incoming message interrupted him. The note displayed in the edge of his vision like a hologram invisible to all others. &quot;-as soon as possible.&quot; He finished after a second&#39;s interruption, then turned his head in the Trinity&#39;s direction.
+
+A quick hand gesture banished the note, and his head was turned back to the Dax. The fingers of his right hand twitched as he replied in kind to the message, while maintaining the guise of full attention on the pair before him. <u>Callsign Heretic, awaiting debrief.</u></span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/378654719557632000/c7a95cd189576c531a1e1e4162eb4c86.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Nicolos#7107">Nicolos</span>
+                <span class="chatlog__timestamp">12-Mar-19 02:27 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Muro:</strong>
+It may have just been the effect of Orokin architecture, but Muro had to admit this place seemed pretty luxurious for a base in a warzone. He couldn&#39;t help but shake his head at the supply of gunships and other vehicles in the hangar: when were the Orokin going to put it together that that junk wouldn&#39;t do a thing against the Sentients? The elevator ride was brief, but Muro listened attentively to what their escort had to say, nodding along to his advice. 
+
+&quot;Nothing we aren&#39;t used to Chief, trust me.&quot; Muro said lightly as the trio strode out of the elevator. &quot;Thanks for the heads up though.&quot; Leaving the Dax behind, strolled up to the next door, pausing before getting close enough to trigger the door&#39;s motion sensor. Looking over his shoulder, he called to  Vuko. 
+
+&quot;You wanna take point here bro?&quot;</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/136944676849582080/290779f99a7d8e2b6ff5d6d447ab4680.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">13-Mar-19 03:28 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">(( <span class="mention">@Elizabeth the Striker</span> You can continue conversation with <span class="mention" title="Darkjunior#0813">@Darkjunior</span>))</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">(( <span class="mention">@Lupin</span> you can also join in their conversation.))</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/236097848586797057/4a9793d3ba2288d3b2117cba15667d57.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="TheFafalStudios#8672">TheFafalStudios</span>
+                <span class="chatlog__timestamp">14-Mar-19 04:46 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Vuko:</strong>
+Opposite to Muro, he didn’t seem to care to even look around at what was happening around the base. He was tired of these missions, furious with them even. Why the void has he, an elite agent of the Empire, been sent away for yet another mission tasked with helping these Dax idiots when all they succeed at in this war is getting themselves killed! It doesn’t matter if he helps them now, because as soon as he leaves, they’ll just get into a similar or even bigger mess and this camp and all it’s residents will be wiped or assimilated by the sentients. He should be back in the inner system, hunting that damned Loki and his insurgency or there won’t be an Empire left to protect. He’s doing grunts work, void be damned!
+
+And that’s when he heard Muro asking him to take charge, realizing that he’s standing just before the commander’s door. 
+“Yeah, I got it.” He said, heading straight for the entrance.
+
+Once inside, before even taking in how the office looks, he salutes the commander.
+“Buccaneer and Witchfyre, reporting for duty.”</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/136944676849582080/290779f99a7d8e2b6ff5d6d447ab4680.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">17-Mar-19 12:01 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">(( <span class="mention">@Muro</span> <span class="mention">@Vuko Drakkainen</span> ))
+
+~The interior of the circular Orokin War Room was brightly lit. The sunlight pouring in from its glass walls reflected off the pristine white walls and gold fixtures. At the center of the room, a table in which several Dax officers were huddled over. A holographic map of the coast line floated over the surface.
+It was easy to pick out which of the Dax officers was the Commander. Dramatically situated on the other side of the table to the entrance was a Dax adorned in ornate bronze armour while golden trim. An elegant, wide, flowing syandana was draped across his shoulders, inflating his figure as he leaned over the table. His helmet was like a blooming flower, decorated with intricate engravings and ornaments.~
+
+<u>Tamaska Dax:</u>
+The Dax looked up, his helmet&#39;s visors retracted to allow Vuko and Muro a direct look at his deep brown eyes.
+&quot;Ah, excellent. The specialists have arrived. At ease, soldiers. Jalla, bring up the schematics of the two VIPs, would you?&quot;
+One of the officers replied with a quick &quot;Yes, sir!&quot; before pressing a few buttons on the side of the table, causing the map to disappear.
+&quot;I&#39;ve heard a little bit of your field reports. Definitely impressive, and I&#39;m sure there are even higher levels of secrecy encompassing some of your missions. That being said, I can assure you that you are here today for something a bit more important than just helping our forces annihilate those bloody robots.&quot;
+
+[1/2]</span>
+
+                                <span class="chatlog__edited-timestamp" title="17-Mar-19 12:11 AM">(edited)</span>
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">The Commander stopped leaning on the table and walked around the room, approaching the Tenno. He was a very large man- nearly the same height as the Warframes.
+&quot;You and those other Tenno who&#39;ve landed here... you aren&#39;t the first Tenno to be here. There were two stationed here before the Sentients launched their assault. They attacked the Sentients early on, and were presumed KIA... except we recently received a transmission from them. I have no clue how they got a transmission through from Sentient controlled, nor how they&#39;ve even survived for this long. But what I do know is that they have some kind of Sentient technology in their possession. I&#39;m sure their Excellencies would be interested in some information on how these Voiddamn things live and work. &quot;
+
+The table flickered to life, summoning up the image of two Warframes, a Chroma and a Limbo.
+&quot;One&#39;s some kind of technician, the other some kind of medic. That&#39;s really all we got from them- couldn&#39;t even get their callsigns. Their transmission didn&#39;t last very long.&quot;
+Tamaska sighed and rubbed his chin with his gauntlet-bound hand.
+&quot;Apparently the Tenno still had some Grineer grunts still alive, but I don&#39;t expect those cloned numbnuts to still be alive at this point.&quot;
+Tamaska paused, raising his eyebrows to his two Tenno listeners for any questions.
+
+[2/2]</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/378654719557632000/c7a95cd189576c531a1e1e4162eb4c86.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Nicolos#7107">Nicolos</span>
+                <span class="chatlog__timestamp">20-Mar-19 03:52 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Muro:</strong>
+In less dire circumstances, Muro might have whistled in admiration of the picturesque scene before him. Damned if it wasn&#39;t impressive. As the one who was fairly obviously the commander approached them, Muro was kind of surprised with how polite he was. Wasn&#39;t this the same guy that doesn&#39;t like Tenno all that much? All the same, Muro stood quietly and listened to the briefing. Once the commander got to the end, Muro decided to speak.
+
+&quot;I kind of figured we weren&#39;t called here for pest control,&quot; he began.  &quot;So if I&#39;m hearing you right, you want my friend and I to go in and rescue these two and get back here, right? You sure that&#39;s all you want us to do? No disrespect here Commander, but I&#39;ve seen what you&#39;ve got on hand here, and I think you&#39;re gonna need all the extra firepower you can get.&quot;</span>
+
+                                <span class="chatlog__edited-timestamp" title="20-Mar-19 04:04 PM">(edited)</span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/236097848586797057/4a9793d3ba2288d3b2117cba15667d57.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="TheFafalStudios#8672">TheFafalStudios</span>
+                <span class="chatlog__timestamp">21-Mar-19 07:02 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Vuko:</strong>
+<em>’Great. A whole room of bucket heads.’</em> He thought to himself as he saw what was inside the room. The decor was definitely impressive, but it wasn’t unlike countless other he had seen in other places where rich a-holes lived. So there wasn’t that much to admire. Whilst the Dax seemed to be nice, he knew it all to be facade they all need to put up.
+
+“Just send over all the intel and consider it done.” He spoke out, in complete opposition to what Muro was inquiring about a second ago, crossing his arms in the process. “Wouldn’t want to overstay your <em>welcome</em>.”</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/136944676849582080/290779f99a7d8e2b6ff5d6d447ab4680.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">23-Mar-19 09:52 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><u>Tamaska Dax:</u>
+&quot;Leave the big decisions to me, soldier,&quot; the commander said with an unpleasant tone in response to Muro, &quot;You worry about what I&#39;ve assigned you to do, and I&#39;ll handle my job. Got it?&quot;
+He crossed his arms, his gaze drilling into Vuko as the two seemed to mirror each others&#39; actions.
+&quot;Hmm. That&#39;s what I like to hear,&quot; the Dax said with a frown. After regarding Vuko for what was likely just on the cusp of an uncomfortable amount of time, he turned to one of his fellow Dax and signalled to him.
+&quot;Your Cephalons should receive all the necessary information that you will require for this mission. You won&#39;t need anything else, assuming you&#39;re as good as I&#39;ve read. Now, gentlemen, if you&#39;ll excuse us, my comrades and I have important matters to discuss.&quot;
+The Dax officer who the Commander had signalled pressed some more buttons on the console, sending the information to Ide and Aurelia.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/378654719557632000/c7a95cd189576c531a1e1e4162eb4c86.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Nicolos#7107">Nicolos</span>
+                <span class="chatlog__timestamp">25-Mar-19 12:02 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Muro:</strong>
+Ah, there it was. Any questioning of their plans and they get all defensive. Muro stepped back a bit, before shrugging. &quot;Alright, you&#39;re the boss.&quot; The Hydroid cast a quick glance to his comrade before turning on his heel and strolling out of the room, not even bothering to bow or salute the Dax. Once out of the room and back in the antechamber before the elevator, he turned to Vuko.
+
+&quot;Think the top brass will be upset if all these guys die while we&#39;re here? I don&#39;t want to go home and get chewed out again.&quot;</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/215616399911944193/7d2ad1deb614c52d42ae671b94385ab6.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Pryde#0661">Pryde</span>
+                <span class="chatlog__timestamp">25-Mar-19 03:28 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Elizabeth Prime</strong>
+The Trinity canted her head to one side, miming surprise. Refraining from words, she reached out with her right hand and gingerly patted the Loki on the shoulder, her left lingering behind her back. The gesture was uniquely soothing, wholly juxtaposed to her erstwhile raging.
+
+From this distance, the prominent scars could be discerned upon the Prime&#39;s torso; liken an enso, the marring of war has reflected kindly upon the Warframe-- likely why its Operator had not repaired it in full after each sortie. The superficial wounds added a certain, indecipherable <em>age</em> to the golem. 
+
+She was not wholly uncommunicative, however, as her right hand typed out to the Loki, <u>I shall keep you alive, Wraith.</u> Thence, to the Inaros, <u>Loki, Wraith. Seems strangely unsettled.</u></span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/358680374022242324/814092b501b8881e5c4d758c8fec6a16.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Darkjunior#0813">Darkjunior</span>
+                <span class="chatlog__timestamp">25-Mar-19 09:54 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>TARNAS</strong>
+Quite unlike the Trinity, the Loki was almost entirely devoid of scratches, dents, or anything else. Meticulously polished and maintained, mostly out of a fear of sticking out like a sore thumb. It had the... unfortunate downside od making it look like he had never been in combat. He <em>had</em>, but...
+
+Regardless of how gentle the pat may or may not have been, &#39;Wraith&#39; flinched and seemed to freeze up for a moment. Out of panic, clearly. Considering the kind of mission this was, that was hardly a good sign. He seemed to recover, very slightly nodding his head to show that <em>yes</em>, he did understand what the Trinity had said.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/236097848586797057/4a9793d3ba2288d3b2117cba15667d57.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="TheFafalStudios#8672">TheFafalStudios</span>
+                <span class="chatlog__timestamp">26-Mar-19 05:00 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Ide:</strong>
+The tiny Taxon that has been silent ever since the Tenno went into the command room beeped gently, letting Vuko know that the information has been received.
+
+<strong>Vuko:</strong>
+After one unnecessarily staring contest and a received data package, Vuko, without any ceremony, left the room leaving the Dax to their business.
+
+“Screw the brass.” He said, leaning over to press the button to call in the elevator. “The Dax requested us to complete a task, and that’s what we’re going to do. No more, no less. We weren’t sent to babysit them.”</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/151377797623971840/9e1de936b3ce4f0cf454e75ca9af76d5.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Vosen#9137">Vosen</span>
+                <span class="chatlog__timestamp">26-Mar-19 11:40 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Lupin</strong>
+A small cloud of sand and dust puffed out of his mouth as he sighed. &quot;You will have to excuse me, esteemed Dax.&quot; He apologized with a bow. &quot;It seems my peers require assistance.&quot; He added, waiting for a brief moment to be dismissed, before turning over to the two Tenno now seemingly sharing a  fraternal scene.
+
+&quot;I would have to recommend you relax now; once deployed there will be little time for it.&quot; He said out loud as he approached them, his voice was aimed at the both of them, though the feeling was more so for the Loki. &quot;And if we do our job right there will be time for it upon our return.&quot; He finished as he moved into range to stretch a hand out to the Loki, expecting a traditional handshake. &quot;Wraith, correct? Callsign Heretic here.&quot; He finally added.</span>
+
+                                <span class="chatlog__edited-timestamp" title="26-Mar-19 11:41 AM">(edited)</span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/136944676849582080/290779f99a7d8e2b6ff5d6d447ab4680.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">27-Mar-19 09:45 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">(( <span class="mention">@Vuko Drakkainen</span>, <span class="mention">@Muro</span> ))
+
+~The elevator arrived, empty, allowing the two Tenno to traverse back to the ground floor in privacy. There was no one waiting for them at the bottom either. It seems like the Tenno were free to go about their mission as they pleased.
+There were some Dax speaking with an Orokin scientist further down the hall, next to the door into the hangar/garage they had passed earlier.~</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">(( <span class="mention" title="Ross#8154">@Ross</span> <span class="mention">@Lupin</span> <span class="mention">@Elizabeth the Striker</span> <span class="mention" title="Darkjunior#0813">@Darkjunior</span> ))
+
+~There was a whistle, loud yet not entirely unpleasant, and all of the Dax lounging about the landing zone courtyard suddenly sprung up, arranging themselves into neat rows until nearly all of the Dax were forming a square.~
+
+<u>Random Dax:</u>
+As one of the warriors passed by the group of conversing Tenno, they spoke, &quot;Hey Tenno, the Commander is coming down pretty soon. Get off your lazy metal butts and line up, hey?&quot;
+
+~Those of the Tenno with experience knew that in these formations, the standard thing was to have the Tenno positioned at the side of the Dax formation, similarly to how Grineer were lined up relative to the royal Orokin warriors. ~</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/215616399911944193/7d2ad1deb614c52d42ae671b94385ab6.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Pryde#0661">Pryde</span>
+                <span class="chatlog__timestamp">28-Mar-19 10:49 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Elizabeth Prime</strong>
+Canting her head to a side, the Trinity stepped past the Inaros and spun nonchalantly aside from Wraith. Clasping her book in one hand, her offhand grasped her wrist and she stood a silent vigil over the exchange, hands crossed before her lap.
+
+<em>Oh, good. A mature sort who doesn&#39;t mind children.</em> 
+With a haughty glance over her shoulder, the youth mused with lips pursed, <em>All though -- they are, the both of them, thespians; how quaint. The one, brash, the other, bashful. Heh...</em> 
+
+With the sounding of the whistle, the Warframe&#39;s gaze snapped forward and she lingered for only a moment, her book folded smartly against her hip as she cradled it far more professionally. Over the squad comms, she cut in, &quot;Exercitum. Fall in.&quot; 
+
+The golem then strode across the field without further delay, standing tall in the arbitrary vacancy ascribed to Warframes and their pilots. 
+<em>Chin up, firm footing, shoulders back. They can rob many, many things of you, but they shan&#39;t ever steal away Emily Post&#39;s undying lessons on military discipline and honour.</em></span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/358680374022242324/814092b501b8881e5c4d758c8fec6a16.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Darkjunior#0813">Darkjunior</span>
+                <span class="chatlog__timestamp">28-Mar-19 02:56 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>TARNAS</strong>
+Okay... Just don&#39;t do anything stupid. Stay calm, don&#39;t draw attention... The Loki followed the Trinity toward the rest of the Dax, doing his absolute best not to panic.  His Cephalon saying encouraging things over private comms helped a fair bit, really. While outwardly his walking seemed almost mechanical, inside he was already thinking of all of the things that could go wrong on this mission. He could die, let someone else die, completely mess this whole thing up...
+
+He stood where he was about 95% sure he was supposed to line up, it taking all of his self control to not glance around nervously. Just don&#39;t move... don&#39;t do anything... Just wait...</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/227906898219892736/40e4c7aff7c8d404f6fccbbbf93f0c86.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ross#8154">Ross</span>
+                <span class="chatlog__timestamp">28-Mar-19 03:33 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Bochra</strong>
+His place in this formation was slightly different than what he was used to. The ranks of the other Dax weren&#39;t quite the same. Bochra had to actively think to remember where he was supposed to be in <em>this</em> line, not....
+Another slight shake of the head. No, don&#39;t think about that.
+
+Bochra stood at attention and waited for the Tenno to also get in line. He hoped the rebellious Trinity would be more bark than bite, and a small glance to the side as he adjusted his position reassured him that all the Tenno <em>seemed</em> to be cooperating.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/151377797623971840/9e1de936b3ce4f0cf454e75ca9af76d5.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Vosen#9137">Vosen</span>
+                <span class="chatlog__timestamp">28-Mar-19 03:38 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Lupin</strong>
+The Inaros turned his head towards the source of the sound, straightening their back even more so than it already was. When their gaze returned to where the Loki had been, they&#39;d already walked past him, following after the Trinity and falling into formation. <em>Well, that is quite riveting: a Loki making me feel invisible.</em> He chuckled once before retrieving their hand, having been silently rejected.
+
+He wrapped one hand around the other behind his back, just beneath the Rubico&#39;s barrel, then marched into his position within the ranks. He took his place behind the other two Tenno, standing cold and still he looked much like a statue.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/236097848586797057/4a9793d3ba2288d3b2117cba15667d57.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="TheFafalStudios#8672">TheFafalStudios</span>
+                <span class="chatlog__timestamp">29-Mar-19 07:56 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Vuko:</strong>
+After an awkwardly quiet ride in the elevator after his comment, Vuko spoke up to discuss the plan. “I think we should head towards the targets last know location, try to find some clues while the girls comb through the information.” He pauses for a moment, the nearby people’s discussion distracting him enough for a sentence or two of their conversation to be overheard before his mind went back to Muro. “What do you think?”</span>
+
+                                <span class="chatlog__edited-timestamp" title="29-Mar-19 12:59 PM">(edited)</span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/136944676849582080/290779f99a7d8e2b6ff5d6d447ab4680.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">29-Mar-19 12:08 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">(( <span class="mention">@Vuko Drakkainen</span> ))
+
+<u>Orokin Scientist:</u>
+&quot;...yeah, but you musn&#39;t be to hard on the steering! These things aren&#39;t exactly built for that!&quot;
+
+<u>Dax:</u>
+&quot;You&#39;re right, I suppose. I&#39;d blame our losses on the Sentients forcing us to use archaic technology, but I suppose only poor craftsmen blame their tools. After all, look at those Tenno...&quot;</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/378654719557632000/c7a95cd189576c531a1e1e4162eb4c86.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Nicolos#7107">Nicolos</span>
+                <span class="chatlog__timestamp">29-Mar-19 11:23 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Muro:</strong>
+Muro had nodded in a muted agreement with Vuko&#39;s comment, and followed him down the elevator and back towards the base&#39;s entrance. He had a point, in spite of the splendid display that they had seen in the command room, these Dax were not particularly important to his and Vuko&#39;s superiors. That Sentient tech, on the other hand... The very fact that the both of them were there at all was testament to its importance. Though his mind was wandering, as it tended to in situations like this, he had listened to Vuko&#39;s basic plan.
+
+&quot;Yeah, that sounds good.&quot; Muro said, rolling some stiffness from his shoulders. It won&#39;t take em&#39; very long to figure everything out.&quot; Muro paused for a moment, seemingly considering what he just said. &quot;Of course,&quot; he said, while chuckling nervously, &quot;that&#39;s only if they can go more than a couple minutes without getting into another spat. Anyway, no sense in just lazing around while they&#39;re at it, so we might as well head out that way.&quot; He hadn&#39;t been paying the scientists any mind, instead, he reflexively reached for the Corinth prime on his back and pulled it out, doing a quick check on it before the pair ventured out.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/136944676849582080/290779f99a7d8e2b6ff5d6d447ab4680.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">09-Apr-19 07:44 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">(( <span class="mention">@Lupin</span> <span class="mention">@Elizabeth the Striker</span> <span class="mention" title="Ross#8154">@Ross</span> <span class="mention" title="Darkjunior#0813">@Darkjunior</span> ))
+
+~The courtyard descended into silence as the Dax soldiers&#39; chatter and movement died down, until there was nothing but silence, save for the distant calls of wildlife and the wind.
+An Orokin hover platform departed from the main tower of the base, and standing aboard it was a collection of high ranking Dax, at least judging by their headwear. The platform moved slowly, its gentle hum not disturbing the silent courtyard by much. Eventually, it touched down, and the Dax officers stepped off. It was likely evident to those who didn&#39;t already know who the Commander was. The Dax leading the group was tall, wide shouldered, and donned an impressively ornate set of armour. Equally impressive was his long, flowing cape and accompanying flower-like helmet.~
+
+<u>Tamaska Dax:</u>
+&quot;At ease, my warriors!&quot; The Commander called out. There was a resounding clank as the Dax congregation shuffled slightly, shifting from a pillar-like still position to a slightly more relaxed position where their feet were spread apart.
+&quot;As many of you know, we&#39;ve been in combat with the Sentients here for a while now, and we have had rather lackluster returns in terms of success. Our battlefield operations have not been successful, and so we have now publicly enlisted the aid of these Tenno here,&quot; the Command held his arm out, gesturing to the 3 Tenno standing by.
+
+[1/2]</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/136944676849582080/290779f99a7d8e2b6ff5d6d447ab4680.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">09-Apr-19 08:08 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">&quot;More may come later, but for now, these are who you will be working with. Many of you have seen and heard what they are capable of, so our chances of success have skyrocketed greatly.&quot;
+There was a quick, brief cheer from the Dax, but silence quickly followed.
+&quot;Now, our objective remains unchanged. It was established earlier that if we can retake the area to the northern side of the mount, we will be able to limit the movement of the Sentients and therefore contain their spread. Intelligence states that the Sentients have not yet adapted to swim through the bodies of acid surrounding the area, but it is doubted that that will last long. The sooner we wipe these crimson maggots out, the greater our chance of isolating their pestilent multiplication.&quot;
+Tamaska paced along the front row of the Dax, towards the Tenno.
+&quot;I&#39;ll be sending necessary data to all platoons&#39; Cephalons, as well as each of your personal ones, Tenno. All pilots, please remember to activate your blackbox vitruvians, and do not engage in any bombardment of enemy forces unless given the all-clear. We don&#39;t want to grant our foes too much exposure to adaptable damage before we commit to any attacks.&quot;
+He paused, standing in front of the Tenno.
+&quot;If any of you have any questions for me, voice them now. Although, I&#39;m sure warriors as great as yourselves have no need for excessive details?&quot;
+
+[2/2]</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/215616399911944193/7d2ad1deb614c52d42ae671b94385ab6.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Pryde#0661">Pryde</span>
+                <span class="chatlog__timestamp">10-Apr-19 03:23 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Elizabeth Prime</strong>
+&quot;Lucy, stand by for incoming data,&quot; Elizabeth murmured in private to her Cephalon, the personality construct brief and direct in its reply, &quot;Yes, Operator.&quot;
+
+<em>A Dax of actual consequence. Admirable in form, lethal in execution; worthy of respect, so unlike his fellow peons.</em> When prompted by the lattermost part of the briefing, the Trinity unslung her Vectis, wheeled it sharply before her, thumb dexterously thrusting a round into the loading chamber, her off-hand continuing the spin as her right wrist whipped &#39;round, caught the stock, spun the rifle <em>back</em> around with the barrel pointing heavenwards - a satisfying <em>ka-click</em> heard as the round entered the firing chamber - and throwing the metallic strap skillfully over her left shoulder. Beyond this, the Vectis remained as silent as a dormant viper. <em>Discipline and precision. Assurance and shine.  Life and death. This is who you are, Marise.</em> 
+
+&quot;No, sir!&quot; she barked over the external comms, scarlet energy flaring in a nimbus about her &#39;Frame, and just as suddenly as it came, the orderly show of readiness ends. A golem once more, awaiting direction.</span>
+
+                                <span class="chatlog__edited-timestamp" title="10-Apr-19 03:29 PM">(edited)</span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/151377797623971840/9e1de936b3ce4f0cf454e75ca9af76d5.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Vosen#9137">Vosen</span>
+                <span class="chatlog__timestamp">10-Apr-19 10:51 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Lupin</strong>
+Hand behind his back, feet exactly one shoulder&#39;s width apart, back straight, head forward, and not a grain of sand dared so much as break the alignment. Thus was Heretic&#39;s immaculate stance to attention. Even the call to ease was in turn responded synchronized with that of the rank and file.
+
+&quot;Hue, standby for upload.&quot; The orbiter&#39;s lights flickered and sparked to life at the command. &quot;Notify me when you&#39;ve plotted the initial route.&quot; A holographic projection of the topological map of the area replaced a set of unfinished schematics in the operator&#39;s private quarters.
+
+<span class="pre pre--inline">Standing by, Sir.</span> The cephalon&#39;s response was quick yet soothing in its tone.
+
+As the commander paced, inspecting their ranks and continuing the debrief, the Heretic remained immutable, their head looking not at the imposing Dax, but straight ahead towards the horizon. <em>Are you the masters&#39; hound or a viper?</em> A shimmer of pale lilac energy echoed his interest in his fellow Tenno.
+
+A moment went by as he waited for the Loki in front of him to voice their questions before he himself answered with a concise: &quot;No questions, sir!&quot;</span>
+
+                                <span class="chatlog__edited-timestamp" title="08-May-19 10:23 AM">(edited)</span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/227906898219892736/40e4c7aff7c8d404f6fccbbbf93f0c86.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ross#8154">Ross</span>
+                <span class="chatlog__timestamp">11-Apr-19 06:43 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Bochra</strong>
+Although he relaxed slightly right along with the rest of his Dax brethren, it still took Bochra a little bit of extra willpower to not flinch at the clicking of the mechanics of Elizabeth&#39;s gun and the flare of scarlet energy. He&#39;d been on edge before, but now, knowing that she&#39;d <em>chambered a round,</em> Bochra knew he wouldn&#39;t be able to stop thinking about it until the weapon was either fired or unloaded.
+
+Discreetly running a fingertip over the orange thread once more, Bochra attempted to refocus his mind and pay attention to the more important matters at hand.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/236097848586797057/4a9793d3ba2288d3b2117cba15667d57.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="TheFafalStudios#8672">TheFafalStudios</span>
+                <span class="chatlog__timestamp">12-Apr-19 05:01 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Vuko:</strong>
+“Let’s get to it then.” He said just as he exited the main building to witness the display of obedience and troop rallying. Seeing it did make him flinch a little. “See?” He voxed over private comms. “They’ve got other Tenno to support the main front.”
+
+Trying to raise as little attention as possible he casually walked from the view to behind the tents, looking for a spot big enough for archwing deployment. Once there he took one of the little spheres, pressing a button on it and throwing it to the ground nearby.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/358680374022242324/814092b501b8881e5c4d758c8fec6a16.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Darkjunior#0813">Darkjunior</span>
+                <span class="chatlog__timestamp">12-Apr-19 08:41 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>TARNAS</strong>
+Oh, a lot of Sentients... He didn&#39;t like that. He really didn&#39;t like that. Immediately, his Cephalon was back to trying to calm him. The Loki remained entirely immobile and seemed stoic enough, even with the absolute panic he was feeling. The longer Tamaska spoke, the more worried and nervous Tarnas was. Of course, he was too busy thinking about everything that could possibly go wrong. And nothing else.
+
+He stood there in complete silence, as Tamaska talked. He kept silent for a bit longer as the other two Tenno replied, trying to formulate a response himself. There would be a thankfully very short awkward silence, and then...
+
+&quot;Understood, sir...&quot; The Loki answered very quietly, barely audible. He stood as still as always, but his rather soft voice hardly seemed to match the appearance of the Warframe he used.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/378654719557632000/c7a95cd189576c531a1e1e4162eb4c86.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Nicolos#7107">Nicolos</span>
+                <span class="chatlog__timestamp">14-Apr-19 01:59 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Muro:</strong>
+Muro watched the military display with Vuko from a distance. The chest thumping looked ridiculous from where he was standing, causing him to turn away.  &quot;Yeah, support. Something tells me they&#39;re going to be doing most of the heavy lifting out there.&quot; Following Vuko, he tossed out an archwing launcher of his own a few feet from where Vuko&#39;s landed, waiting for his ride to arrive.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/136944676849582080/290779f99a7d8e2b6ff5d6d447ab4680.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">02-May-19 07:11 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">(( <span class="mention">@Lupin</span> <span class="mention">@Elizabeth the Striker</span> <span class="mention" title="Ross#8154">@Ross</span> <span class="mention" title="Darkjunior#0813">@Darkjunior</span> ))
+
+Tamaska Dax:
+&quot;Excellent. You are dismissed.&quot; The Dax turned on his feet and returned to the floating platform, his officers in tow.
+
+~The Dax warriors assembled quickly dispersed into their respective platoons. There there 3 platoons total, plus the air and space forces. Each Tenno&#39;s respective cephalon filled in their owner with this information.
+Platoons 1 and 2 were charged with heading the front. They consisted of a small group of Dax, accompanied by a large amount of Grineer grunts- cannon fodder, no doubt.
+The third platoon was comprised of the squad of Tenno and the remaining Grineer Dax warriors. Bochra was also in this platoon.
+The first two Platoons set out right away, one moving through the jungles while the other followed the beachline. The Tenno squadron would wait for now, until they had info on where the fighting would be most fierce.~
+
+~Some time passes, enough for the Tenno to briefly return to their ships and stock up on any supplies they might need. There would be no more time after this to return to their Orbiter. Just outside Udanta&#39;s walls, on the beach, the platoon assembled. The Grineer lined up in orderly, obedient rows while the Dax waited around more casually- some of them lying down or sitting, playing Komi or void-chess.
+The platoon leader, Lieutenant Mena, stood next to the white walls of Udanta, rubbing her boots across the sand. She waited, almost nervously for the Tenno she had been assigned to return. After witnessing the horrors the Sentients were capable of, she had a shred of doubt in her mind- perhaps the Tenno wouldn&#39;t come back?~
+
+Mong Dax:
+&quot;Hey, Bochra, right?&quot; Wherever it was that Bochra was waiting, a smiling face appeared. A fellow Dax, gazing upon his comrade with kind eyes despite his half-scarred face. The mark of a burn, although unclear from what. &quot;My my, those eyes of yours. You&#39;ve seen action lately, haven&#39;t you?&quot;</span>
+
+                                <span class="chatlog__edited-timestamp" title="02-May-19 07:11 PM">(edited)</span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/227906898219892736/40e4c7aff7c8d404f6fccbbbf93f0c86.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ross#8154">Ross</span>
+                <span class="chatlog__timestamp">06-May-19 12:33 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Bochra</strong>
+The somewhat shellshocked Dax had drifted off to the side, absently finding a place to stand that was more out of the way. The other Dax&#39;s friendly expression helped keep his anxiety in check, and he nodded sheepishly. &quot;Yes...I&#39;m... the only one left in my platoon. You know how it is...&quot;
+
+As the words left his mouth, it felt like his chest was being actively compressed by something. He reminded himself not to think about it too much. Bochra forced a deep breath and shook his head slightly. &quot;It&#39;s all hands on deck at this point, though, so I&#39;ve been cleared. I&#39;m sure I&#39;ll be fine.&quot;</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/151377797623971840/9e1de936b3ce4f0cf454e75ca9af76d5.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Vosen#9137">Vosen</span>
+                <span class="chatlog__timestamp">08-May-19 10:58 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Lupin</strong>
+&quot;All the intel on the target amounts to this?&quot; The voice projected from the Inaros was as coarse as always, but there was a distinct intensity in its rhythm. &quot;We have only two Tenno and a few Dax on deck, we will need every advantage attainable.&quot;
+
+<strong>Huginn</strong>
+&quot;These are the most recent battle reports the Commander could provided us, though they are certainly...lacking, sir.&quot; The holographic display showing the Dax&#39; first hand reports followed the strategist around the ship, and shortly behind them trailed a plethora of nodes linked into an impressive infestation-looking webbing, each node accounting for another detail in the preparations. &quot;Would you like me to begin a search for sentient signatures?&quot;
+
+<strong>Lupin</strong>
+&quot;Run it in the background; bring me the updated topological projection for the platoons&#39; planned routes and a five kilometer radius around them.&quot; The requests continued to come one after another as he went over the reports once again, adding yet more notes to the growing dossier network. &quot;Scan for underground cavernous formations in the area, down to a diameter of 1 meter.&quot; A brief pause followed as his eyes scanned the archwing perched at the foundry for repairs . &quot;Ready up some mining charges as well, aim for minimal weight accounting for local ground composition.&quot;
+
+<strong>Huginn</strong>
+&quot;I&#39;m afraid repairs are taking longer than expected, sir.&quot; The apologetic tone came in stark contrast to their efforts; the ship was alive with the frantic lights flickering across the decks and the thumping beat of the foundry and arsenal. Soon their charge would have to depart once more to join the troops on the ground.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/358680374022242324/814092b501b8881e5c4d758c8fec6a16.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Darkjunior#0813">Darkjunior</span>
+                <span class="chatlog__timestamp">09-May-19 01:53 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>TARNAS</strong>
+The Loki had really been there for a while. Hiding out of sight, honestly working up the nerve to go in there and face the rest of the platoon. Some hushed conversation with Tycho had been going on for most of this, almost unsurprisingly. He was terrified, of course. Frightened beyond belief. Fighting sentients? He put down Grineer uprising, not sentients! He wasn&#39;t ready for this, he wasn&#39;t ready for this... Still, he had to do this. Right?
+
+Finally, having cloaked himself moments before and made his way to a spot without sand (Didn&#39;t want to leave footsteps, of course), he reappeared among the platoon. Still stoic and unmoving, but panicking on the inside. What was new? Shotgun in hand, standing up as straight as one conceivably could, staying entirely still... Again, he looked more like a statue.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/136944676849582080/290779f99a7d8e2b6ff5d6d447ab4680.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">09-May-19 07:13 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">(( <span class="mention">@Vuko Drakkainen</span> <span class="mention">@Muro</span> ))
+
+~The Tenno&#39;s gleaming, wings of war descended quickly from the sky, stopping before them to allow the two to strap in. Once properly harnessed, waypoints formed on their HUDs, likely fed to them by their respective Cephalons, pointing the pair towards Northeast. Before them, the vast green jungles planted by Orokin Terraforming craft mere years ago stretched out. The trees were named Illongs- genetically modified flora designed to soak up acid and produce oxygen.
+
+The ride was quiet, fortunately. Nothing else competed for airspace other than the occasional bird or aerial protozoan.~
+
+((Now is a good time to ask your Cephalons for info!))</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/378654719557632000/c7a95cd189576c531a1e1e4162eb4c86.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Nicolos#7107">Nicolos</span>
+                <span class="chatlog__timestamp">12-May-19 04:14 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Muro:</strong>
+Times like this were Muro&#39;s most beloved and most despised part of any of his missions: the calm before the storm. All seemed well at this altitude, but who knew what lurked in the jungles beneath? Were they not so pressed for time, he would have argued against flying in so directly like this. If any Sentients were watching the skies, which knowing them they were, they&#39;d see the two of them coming from miles off.
+
+&quot;Aurelia?&quot; Muro called over the squad comms. &quot;Did that General give you and Ide any idea on what we should be expecting? Maybe a quick and quiet way in?&quot;</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+</div>
+
+</body>
+</html>

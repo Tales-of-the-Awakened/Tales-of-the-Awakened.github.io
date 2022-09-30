@@ -1,0 +1,1961 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tales of the Awakened {Warframe Discord RP Community} - madam-bourgoars-carnival</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <style>
+        /* === GENERAL === */
+
+body {
+    font-family: "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    object-fit: contain;
+}
+
+.pre {
+    font-family: "Consolas", "Courier New", Courier, Monospace;
+    white-space: pre-wrap;
+}
+
+.pre--multiline {
+    margin-top: 4px;
+    padding: 8px;
+    border: 2px solid;
+    border-radius: 5px;    
+}
+
+.pre--inline {
+    padding: 2px;
+    border-radius: 3px;
+}
+
+.emoji {
+    width: 24px;
+    height: 24px;
+    margin: 0 1px;
+    vertical-align: middle;
+}
+
+.emoji--small {
+    width: 16px;
+    height: 16px;
+}
+
+.emoji--large {
+    width: 32px;
+    height: 32px;
+}
+
+.mention {
+    font-weight: 600;
+}
+
+/* === INFO === */
+
+.info {
+    display: flex;
+    max-width: 100%;
+    margin: 0 5px 10px 5px;    
+}
+
+.info__guild-icon-container {
+    flex: 0;
+}
+
+.info__guild-icon {
+    max-width: 88px;
+    max-height: 88px;
+}
+
+.info__metadata {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.info__guild-name {
+    font-size: 1.4em;
+}
+
+.info__channel-name {
+    font-size: 1.2em;
+}
+
+.info__channel-topic {
+    margin-top: 2px;
+}
+
+.info__channel-message-count {
+    margin-top: 2px;
+}
+
+.info__channel-date-range {
+    margin-top: 2px;
+}
+
+/* === CHATLOG === */
+
+.chatlog {
+    max-width: 100%;
+}
+
+.chatlog__message-group {
+    display: flex;
+    margin: 0 10px;
+    padding: 15px 0;
+    border-top: 1px solid;
+}
+
+.chatlog__author-avatar-container {
+    flex: 0;
+    width: 40px;
+    height: 40px;
+}
+
+.chatlog__author-avatar {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.chatlog__messages {
+    flex: 1;
+    min-width: 50%;
+    margin-left: 20px;
+}
+
+.chatlog__author-name {
+    font-size: 1em;
+}
+
+.chatlog__timestamp {
+    margin-left: 5px;
+    font-size: .75em;
+}
+
+.chatlog__content {
+    padding-top: 5px;
+    font-size: .9375em;
+    word-wrap: break-word;
+}
+
+.chatlog__edited-timestamp {
+    margin-left: 5px;
+    font-size: .8em;
+}
+
+.chatlog__attachment {
+    margin: 5px 0;
+}
+
+.chatlog__attachment-thumbnail {
+    max-width: 50%;
+    max-height: 500px;
+    border-radius: 3px;
+}
+
+.chatlog__embed {
+    display: flex;
+    max-width: 520px;
+    margin-top: 5px;
+}
+
+.chatlog__embed-color-pill {
+    flex-shrink: 0;
+    width: 4px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.chatlog__embed-content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 10px;
+    border: 1px solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.chatlog__embed-content {
+    width: 100%;
+    display: flex;
+}
+
+.chatlog__embed-text {
+    flex: 1;
+}
+
+.chatlog__embed-author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.chatlog__embed-author-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 9px;
+    border-radius: 50%;
+}
+
+.chatlog__embed-author-name {
+    font-size: .875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-title {
+    margin-bottom: 4px;
+    font-size: .875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-description {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.chatlog__embed-fields {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chatlog__embed-field {
+    flex: 0;
+    min-width: 100%;
+    max-width: 506px;
+    padding-top: 10px;
+}
+
+.chatlog__embed-field--inline {
+    flex: 1;
+    flex-basis: auto;
+    min-width: 150px;
+}
+
+.chatlog__embed-field-name {
+    margin-bottom: 4px;
+    font-size: .875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-field-value {
+    font-size: .875em;
+    font-weight: 500;
+}
+
+.chatlog__embed-thumbnail {
+    flex: 0;
+    margin-left: 20px;
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-image-container {
+    margin-top: 10px;
+}
+
+.chatlog__embed-image {    
+    max-width: 500px;
+    max-height: 400px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-footer {
+    margin-top: 10px;
+}
+
+.chatlog__embed-footer-icon {
+    margin-right: 4px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.chatlog__embed-footer-text {
+    font-weight: 600;
+    font-size: .75em;
+}
+
+.chatlog__reactions {
+    display: flex;    
+}
+
+.chatlog__reaction {
+    margin: 6px 2px 2px 2px;
+    padding: 2px 6px 2px 2px;
+    border-radius: 3px;
+}
+
+.chatlog__reaction-emoji {
+    margin-left: 3px;
+    vertical-align: middle;
+}
+
+.chatlog__reaction-count {
+    font-size: .875em;
+    vertical-align: middle;
+}
+/* === GENERAL === */
+
+body {
+    background-color: #36393e;
+    color: #ffffffb3;
+}
+
+a {
+    color: #0096cf;
+}
+
+.pre {
+    background-color: #2f3136;
+}
+
+.pre--multiline {
+    border-color: #282b30;
+    color: #839496;
+}
+
+.mention {
+    background-color: #738bd71a;
+    color: #7289da;
+}
+
+/* === INFO === */
+
+.info__guild-name {
+    color: #ffffff;
+}
+
+.info__channel-name {
+    color: #ffffff;
+}
+
+.info__channel-topic {
+    color: #ffffff;
+}
+
+/* === CHATLOG === */
+
+.chatlog__message-group {
+    border-color: #ffffff0a;
+}
+
+.chatlog__author-name {
+    color: #ffffff;
+}
+
+.chatlog__timestamp {
+    color: #ffffff33;
+}
+
+.chatlog__edited-timestamp {
+    color: #ffffff33;
+}
+
+.chatlog__embed-content-container {
+    background-color: #2e30364d;
+    border-color: #2e303699;
+}
+
+.chatlog__embed-author-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-author-name-link {
+    color: #ffffff;
+}
+
+.chatlog__embed-title {
+    color: #ffffff;
+}
+
+.chatlog__embed-description {
+    color: #ffffff99;
+}
+
+.chatlog__embed-field-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-field-value {
+    color: #ffffff99;
+}
+
+.chatlog__embed-footer {
+    color: #ffffff99;
+}
+
+.chatlog__reaction {
+    background-color: #ffffff0a;
+}
+
+.chatlog__reaction-count {
+    color: #ffffff4d;
+}
+    </style>
+</head>
+<body>
+    
+<div class="info">
+    <div class="info__guild-icon-container">
+        <img class="info__guild-icon" src="https://cdn.discordapp.com/icons/440597295726067712/e787a6474749f69864faf5b56c1e9478.png" />
+    </div>
+    <div class="info__metadata">
+        <div class="info__guild-name">Tales of the Awakened {Warframe Discord RP Community}</div>
+        <div class="info__channel-name">madam-bourgoars-carnival</div>
+        
+            <div class="info__channel-topic">[12/28 AR] OPEN RP - Madam Bourgoar&#39;s Carnival | Experience the first traveling carnival onboard Madam Bourgoars spaceship. Games, rides, food, it&#39;s all here onboard this dark purple Corpus warship that has been retrofitted for games and rides. Come and join the fun! (Sonera&#39;s rp)</div>
+
+        <div class="info__channel-message-count">101 messages</div>
+        
+    </div>
+</div>
+
+<div class="chatlog">
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/339116401815977986/3518ddf298607e561f49eef2e8b79a79.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rosencratz#3124">Rosencratz</span>
+                <span class="chatlog__timestamp">16-Sep-18 11:42 AM</span>
+
+                        <div class="chatlog__content">
+                            [Open RP]<br />(Around Pluto airspace, onboard Madam Bourgoars traveling carnival)<br />[12/28 AR 11:54]<br /><br />A wide beam broadcast ripples through the system, speaking to anyone that picks it up no matter if it’s a Grineer warship a Corpus delegate or a Tenno adventurer. The voice doesn’t sound like it came from the lips of a living soul, but it is more of a digital making that resembles the voice of a young man. It speaks out with a showman like vigor, each sylable loling off its “tongue” like a serpent.<br /><br />“Hear one, hear all! Feeling a bit under the weather? Want to break the boring daily grind? Want to go fucking wild? Show off your skills maybe? Then do I have the thing for you! Turn those shit burning ships back round here and endluge yoursef in Madam Bourgoars carnival! That’s right! A carneval of space shanking proportions, seen first ever here near Pluto’s orbit. Come and experience the luxurious zoo that would have awed even the void assed Orokin. The entricing games, stocked with unique fucking prizes. Rides that will have you puking, shitting and screaming at the same time! If that doesn’t tickle your Tigris then drop down to our food courts and dip that slutty tongue of yours in our special dishes that will have you babbling by the end of the day.<br />So?!<br />What are you waiting for?!<br />Come down for the second best time of your life! Right behind a good morning shit.”<br /><br />The message is repeated again In the Corpus and Grineer language before fizzling out.<br /><br />To anyone curious enough, or is just looking for exactly what the broadcast said, then all it takes is to follow the source of the transmission which will lead you towards – yes, you guessed it – Pluto!
+
+                                <span class="chatlog__edited-timestamp" title="14-Nov-18 03:46 PM"></span>
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/490872041759571979/490913214071308298/1.jpg">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/490872041759571979/490913214071308298/1.jpg" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            _ _<br /><b>???</b><br />“Ai yo! Another one surah!”<br /><br />Yelled a young man standing next to one of the many gaming booths on the higher levels of the enormous ship. A wide array of prizes dangle from the booth, plushies, bags of mystery gifts, toys, and so on. <br /><br />The mans powerful jawed and rugged face coiling in to a teasing smirk causing a long scar that spans from his left eyebrow down across his cheek and ending at the tip of his chin, to stretch back due to the expression. The clerk at the booth rolls his eyes and hands him another loaded toy Sybaris.<br /><br />The man quickly snatches it, the tiny movement causing a symphony of metallic jingles to ring out from him, caused by the many necklaces he has wearing around his neck, as well as the leather and fish boned leather braces that he has on both of his wrists.<br /><br />He lifts the gun up to his scarred face, lining the barrel to aim at the rapidly traveling toy kavats that he has to hit for a prize. The motion causing his naked biceps to firm up, bulging from his torn and ancient sleeveless vest which at some point in it’s past must have been a full shirt. Nothing else covers his upper torso, showing his well toned and tattooed body to all the pretty ladies.<br /><br />His dark brown eyes bare down the barrel of the gun, following the kavats that are made out of metal plates. <br /><br />Taking in a deep breath, through his crooked nose, he lowers his shooting finger to rest against the trigger, one of his many alloy rings producing a low clang as he grasps it. Smiling, he starts shooting at the fast moving targets
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            _ _<br />But…he misses all of his three shots causing him to let out a loud groan and fling the gun back at the clerk. He lifts a hand to fix the hairband that is keeping his dreadlocked hair back and away from his face – a motion he does out of habit. The man purses his lips, determined to win a prize from this booth! So, he dugs his hand in to one of the many satchels and pouches that are lined around his hip, along with a single dagger sheet that is dangling from the right side.<br /><br />He pulls out one piece of platinum and flings it towards the clerk, smiling<br /><br />“Another one!”<br /><br />---The level at which the young man is is littered with booth games. Shoot the Kavats. Pick the rotten Maprico. Roll to 100. Pretty much any you can imagine, they are all here. People flood the floor, all looking for fun and entertainment. Laughs and cries alike filling the air.---
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/136944676849582080/290779f99a7d8e2b6ff5d6d447ab4680.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">17-Sep-18 12:14 AM</span>
+
+                        <div class="chatlog__content">
+                            ~Among the crowds of people, it would be hard for anyone to notice the three midget-like figures swimming through the throngs like fish in white water rapids. Each step for the trio was carefully placed- in this kind of human traffic, getting stepped on was always a looming threat.<br />The beings were almost like apes, or perhaps more like dwarves. Well, whatever they were, they were definitely Infested of some nature- tumor-like boils clung to their bodies, and fungal stalks protruded from their skin in patches all over their back and arms. Each creature possessed a wide, vertically-slit maw and two big, red, lidless, bulging eyes.<br />The tallest of the creatures seemed to be leading the way. The other two trailed behind it, babbling at each other with incoherent, guttural burps and belches.<br />The smallest of the three trailed behind the others, and for good reason- the poor thing was lugging a Synapse, the Infested equivalent of a taser. Normally in the hands of a human, let alone a Warframe, such a weapon would have little impact in terms of weight. But for such a petite thing, it was much, much more massive.<br />The the middle of the other two, there was one last monkey-like fiend. He wasn&#39;t the tallest, but did come close to the three&#39;s leader&#39;s height. He possessed much thicker limbs however, and appeared to be equivalently as strong. Over his shoulder was slung a bag, made of some kind of a thick cloth canvas. Aside from a multitude of dried bloodstains on the bag, there wasn&#39;t much bizarre features about it; &#39;twas simply something to carry prizes in, perhaps.<br />The three creatures continued to wade through the tides of pedestrians, eagerly looking for something.~
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/358680374022242324/814092b501b8881e5c4d758c8fec6a16.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Darkjunior#0813">Darkjunior</span>
+                <span class="chatlog__timestamp">17-Sep-18 01:16 AM</span>
+
+                        <div class="chatlog__content">
+                            <b>FREZ</b><br />Man, Frez sucks at vacations. At least, if the Fortuna was any indication. Still, though, after lots of debating with himself, here he was. On another ship. Frez was able to navigate the place without too much issue, knowing Corpus ship schematics like the back of his hand. He wore something not unlike his clothes on the Fortuna, civilian clothes able to hide his (honestly pretty ugly) face. This time, though, paranoid after the Fortuna incident(s), Frez had ended up taking a Cestra with him this time. Just in case Infested showed up. Or Grineer. Or Tenno. Man, there were a lot of things that could kill people, huh? Frez hardly looked threatening like this, though. He&#39;s too lanky to look intimidating, and the civilian clothes, a bit on the expensive side, didn&#39;t really help.<br />Right now, Frez was really looking for something to do. Nothing in particular, just something to waste as much time as possible. He had brought plenty of money with him, so that certainly wouldn&#39;t be a problem. Here&#39;s hoping that there would be actual vacation, and not a desperate fight for his life.
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/152349834785849344/5ba42f7d6d8f91f8ffafbc4bca9469db.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Disruptis#5503">Disruptis</span>
+                <span class="chatlog__timestamp">17-Sep-18 12:12 PM</span>
+
+                        <div class="chatlog__content">
+                            <b>Stahk:</b><br />Stahk was nothing but a run-of-the-mill Corpus corporate slave.<br /><br />He worked from 9 to 5 every single day with a 1 day weekend, of which he’d spend doing next to nothing due to his lack of any hobbies aside from a mild interest in gardening. He had friends in the office, but never saw them outside of work hours. The 35 year old Corpus man was an empty husk used for business.<br /><br />He had, however, always been a good shot.<br /><br />Dressed in a sleek, white corpus suit, Stahk waited at the front of the line for KavatHunt™. He stood right behind a bronzed, muscular demigod who had played just a little too much to hold up the small line. Not that Stahk was in any form of rush.<br /><br />The business man reached into his left pocket, where two magnetic balls of neodymium held fast to each other. He fiddled with them absentmindedly, rolling them around each other and pulling them apart.
+
+                                <span class="chatlog__edited-timestamp" title="17-Sep-18 04:51 PM"></span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/227906898219892736/40e4c7aff7c8d404f6fccbbbf93f0c86.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ross#8154">Ross</span>
+                <span class="chatlog__timestamp">17-Sep-18 01:30 PM</span>
+
+                        <div class="chatlog__content">
+                            <b>Kinsey and Rakko</b><br />Having elected to stash their rather somewhat imposing warframe out of sight for the time being, Kinsey was glad to have Rakko in the lead as the pair made their way through the crowd. Wearing a similar color scheme to Kinsey on her armor, Rakko was a female Grineer who seemed too small to be a Heavy Gunner but too large to fit the role of a Ballista. She towered above the rest of the crowd from the waist up, wading heron-like through the crowd on the modified stilts that currently made up the lower third of her prosthetic legs. Should any doubt her allegiance, she wore a modified Steel Meridian sigil on her shoulder. She had a white Argonak strapped safely to her back, slightly hidden amongst the various chunks of armor and prosthetics she carried. Admittedly, the stilts made Rakko look rather like a circus performer herself. <br /><br />The two weaved between people as they searched the booths for any interesting games to participate in, chatting back and forth in Grineer.
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/136944676849582080/290779f99a7d8e2b6ff5d6d447ab4680.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">17-Sep-18 01:31 PM</span>
+
+                        <div class="chatlog__content">
+                            
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/490872041759571979/491300237890158604/grineerlady.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/490872041759571979/491300237890158604/grineerlady.png" />
+                            </a>
+                        </div>
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/339116401815977986/3518ddf298607e561f49eef2e8b79a79.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rosencratz#3124">Rosencratz</span>
+                <span class="chatlog__timestamp">17-Sep-18 04:35 PM</span>
+
+                        <div class="chatlog__content">
+                            ---The level itself is lit very dimly lit so that the main source of light is coming from the many booths scattered across it. Well…that and the star mimicking bulbs that are aligned across the ceiling. The entire floor is covered in a rug that feels soft to walk on – kind of like earth after a night of rain without the mud. All in all, to walk through this floor is like walking through a grass field with a orchestra of different shining fireflies surrounding you – each begging for your attention. ---<br /><br /><u><b>Clerk</b></u><br />“Ey! You! Yeah, little ones! Come come!”<br /><br />Shouted a man towards the little infested children. And once they turn towards it they will see the man that called for them sitting in a glass case suspended over water. A huge man at that, weighting at least 100kg over his prime weight, wearing a tight purple latex suit that emphasize all of his delicious rolls of fat. The man smiles at them through his bushy dark brown mustache, a warm and welcoming one as he coaxes them towards the booth that is titled “Dunk the Fatto”<br /><br />Another clerk is standing beside the glass container, leaning against it with his shoulder. He is dressed in a pink Corpus suit but the helmet is replaced with a simple made bird like mask.<br /><br />---Many sounds dance around this place, from people laughing to clerks shouting for attention. One such shouts, booms close to Frez---
+
+                                <span class="chatlog__edited-timestamp" title="17-Sep-18 05:13 PM"></span>
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            _ _<br /><u><b>Clerk</b></u><br />“Step right up, step right up! You think you are good with your mouth? Well put that to the fucking test and prove it! Come and catch a apple with nothing but your mouth and have a chance to win a VIP ticket for the circus show happening at the seventh level! You know good shit happens there then!”<br /><br />The booth from which the man shouted is more spacious than the rest with bright purple lights flashing above the sign that read “Mouth fishing”<br /><br />---But wait! That’s not all! On the opposite end of the yelling clerk is a much calmer booth. The bright light flashing atop it read “Octavia’s Rush” And from his spot, Frez will be able to see the setup inside it. Line up against the wall of the back of the booth are wide plasma screens, on which ran a continuation of colors all matching a certain pattern that which one will find on a Octavia’s Mandachord. Since nobody is playing at it at the moment, the machine itself is rolling the game on it’s own as a display to hook in people. The clerk sitting inside has his head buried in his data pad which projected fast paced lights on to his pale and brown haired face, his brows scrunched up in complete focus as he tilts and moves the pad in fast jerking movements – he seems to be playing on the job!
+
+                                <span class="chatlog__edited-timestamp" title="17-Sep-18 04:45 PM"></span>
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            _ _<br />--Kinsey and Rakko were coming up on a patch of the “exibit” that more barren than usual. On it was a very long vertical pole all flashing in various rapid changing lights. Bellow it, at it’s base is a enormous Jat Kitag resting atop a anvil. The bright orange light that flashed on the top of this opened booth reads – in all capital leathers “PROVE YOUR STRENGTH” The clerk for this booth is standing next to the enormous pole, his arms crossed over his chest as he scans the moving crowd for any interested faces.<br /><br />However, that is not the only booth that surrounds the playful duo. On the opposite end of the strength game – right across it – is a face painting booth. Hanging from the poles beside the area are rolls of paper with all of the offered face painting combinations. There is a playful kubrow one, a kavat with whiskers. A Eidolon themed one. Some yin and yang fish kind of thing going on and much more.<br /><br />Oh?! What&#39;s the sound? Near the face painting booth is another one...but with a much bigger crowd. The bright neon sign atop it read &quot;Whack the larvae&quot; The sound of people hitting something hard rings though this section. From what little they can see, people are gathered around small tables from which mechanical mimicks of Nidus&#39; larvae pop out from. People try to hit them fast with their soft batterangs before the little rascals retreat inside their infested holes. Each pop-up speeding up the movement of all the other---
+
+                                <span class="chatlog__edited-timestamp" title="17-Sep-18 05:05 PM"></span>
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            _ _<br /><u><b>???</b></u><br />“Bah!”<br /><br />The almost naked man spat out as he lost yet another round, not really caring that a line has been forming behind him. He coaxed the clerk forwards with one if his ringed fingers and leaned over the counter to speak to him more privately<br /><br />“So errr…seeing as how I spat out a lot of dough on his game can I…”<br /><br />The man trailed off as he points with his eyes towards the enormous Atlas plushie resting in the booth. The clerk follows his gaze towards it and scoffs, shaking his head <br /><br />“You have to win it, not my problem your aim is shit!”<br /><br />The clerk spat at the man with a amused grin. The tattooed and ripped fellow frowned and pushed himself from the booth<br /><br />“Khanung! This game be rigged! Here”<br /><br />He turns around to eye the man behind him but steps to the side, somewhat comically bowing to him and motioning for him to step up to the booth.<br /><br />“I prove it! He looks capable enough ey? If he can shoot even one down I’ll back down”<br /><br />He looks back towards the man, his dark brown eyes barring down at him, waiting to see if he agrees
+
+                                <span class="chatlog__edited-timestamp" title="17-Sep-18 04:45 PM"></span>
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/490872041759571979/491350550000959491/Madams_carnival_-_placing_1.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/490872041759571979/491350550000959491/Madams_carnival_-_placing_1.png" />
+                            </a>
+                        </div>
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/358680374022242324/814092b501b8881e5c4d758c8fec6a16.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Darkjunior#0813">Darkjunior</span>
+                <span class="chatlog__timestamp">17-Sep-18 09:45 PM</span>
+
+                        <div class="chatlog__content">
+                            <b>FREZ</b><br />Frez decided to ignore the &quot;Octavia&#39;s Rush&quot; game. He was never good at that kind of stuff. And he may as well let the clerk play. He felt sorta out of place here, come to think of it. Corpus, expensive clothes, and whatnot. Eh, whatever. Looking around for something, he headed toward the game currently being played by this really salty shirtless guy. That looked pretty fun. He counted his credits as he walked over, confident he had plenty of money to afford pretty much anything. Several thousand was enough, right? He kept an eye out for anything even remotely threatening, as always.
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/136944676849582080/290779f99a7d8e2b6ff5d6d447ab4680.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">17-Sep-18 10:37 PM</span>
+
+                        <div class="chatlog__content">
+                            <u>Tall Thing:</u><br />The leader of the trio raised its disproportionately long arm in the air, signaling the other to stop. The muscular one behind it walked face-first into the tall one&#39;s back, and the small one likewise.<br />&quot;<i>Gurgle slorp! Blehh!</i>&quot; It snarled back at the other two in response to the mishap.<br /><br /><u>Muscular Thing:</u><br />&quot;<i>Gorgle gorgle hurff...</i>&quot; The muscular one&#39;s shoulder sunk as the leader growled, and unfortunately caused the bag to drop onto his feet, causing it to howl in pain.<br /><br /><u>Small Thing:</u><br />&quot;<i>Grak! Gak gak gak gak!</i>&quot; The small one emitted some strange combination of a gurgle and a giggle at the same time in response.<br /><br />~The trio, after recovering from their clumsiness, inched forward towards the fat man.~<br /><br /><u>Tall Thing:</u><br />&quot;<i>Gorg gahhgh gethar slorp burp</i> CHUBBS <i>gurf</i>!&quot; The leader pointed at the fat man before gesturing with its arms towards its own belly, imitating having a massive gut.<br /><br /><u>Small Thing:</u><br />&quot;<i>Gak gak gak!</i> MISTER <i>clorp slup gethar blech snarf</i> CHUBBS!&quot; The small one responded in glee.<br />Now excited, the three Infested &#39;children&#39; waddled towards the clerk standing beside the chamber.
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            [1/2]
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <u>Tall Thing:</u><br />&quot;<i>Bloh blach slurgle gurgle plup!</i>&quot; The leader announced in a seemingly dignified manner, puffing out its chest... which also happened to be where its mouth was.<br /><br /><u>Muscular Thing:</u><br />&quot;<i>Blorg,</i>&quot; the bag-carrying one added.<br /><br /><u>Tall Thing:</u><br />&quot;<i>Gorg, blorg blah blech!</i>&quot; it spoke as it waved down the muscled creature and kept its gaze on the clerk. In the meantime, the small one stood in awe of the fat man, Synapse cradled in its arms.<br /><br />[2/2]
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/227906898219892736/40e4c7aff7c8d404f6fccbbbf93f0c86.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ross#8154">Ross</span>
+                <span class="chatlog__timestamp">18-Sep-18 12:10 AM</span>
+
+                        <div class="chatlog__content">
+                            <b>Kinsey and Rakko</b><br />Seeing the strength challenge, Kinsey smacked Rakko&#39;s hand a few times to catch her attention. &quot;Hey, whaddaya think? Am I strong enough?&quot; they asked, flexing dramatically. Rakko gave a slight smile and nodded. &quot;Why not try?&quot; she said encouragingly.<br /><br />Kinsey grinned and approached the strength test game with determination, Rakko following close behind, though still towering above the crowd.
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/152349834785849344/5ba42f7d6d8f91f8ffafbc4bca9469db.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Disruptis#5503">Disruptis</span>
+                <span class="chatlog__timestamp">18-Sep-18 03:50 PM</span>
+
+                        <div class="chatlog__content">
+                            <b>Stahk:</b><br />The muscular Ostron intimidated Stahk by no small margin.<br /><br />Stahk shifted uncomfortably under the man’s piercing glare. He hadn’t really been paying attention to his surroundings, so he was confused as to why the stranger was talking to him.<br /><br />“Wha- what?” he stammered, “Sorry, what’s wrong?”
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/339116401815977986/3518ddf298607e561f49eef2e8b79a79.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rosencratz#3124">Rosencratz</span>
+                <span class="chatlog__timestamp">19-Sep-18 12:52 PM</span>
+
+                        <div class="chatlog__content">
+                            <u><b>Dunk the Fatto booth</b></u><br />The two employees exchange glances as the infested children started grumbling and bubbling between themselves. The obvious stab at his weight made the large fellow chuckle – his impressive mass jiggling to the tune of the laughs. His helper – the much thinner and short man – stiffens his amusement and clears his throat. Pushing himself off the glass tank he approaches the children, along the way he grabs one of the alloy made balls there were on the counter of the booth. He stops a couple of paces from them and crouches down so to be to their eye level. He lifts his hand that held the ball and says to them in a calm and sing-song voice<br /><br />“See this? Throw it to hit-“<br /><br />He pauses as he looks over his shoulder to the 40 by 40 cm white and red target that is put up to the left of the glass tank in which the large man sat in.<br /><br />“-that! Hit the middle and –“<br /><br />He whips back around to face them and imitates the splash of water by throwing his arms up<br /><br />“Ploosh!”<br /><br />He extends the ball towards them and holds up three fingers with his other<br /><br />“300 credits for 3 throws! And you can take any of that with you if you hit”<br /><br />The hand that held the digits up turns to point towards the prizes that are dangling from the poles of the booth. Toys, bags, trinkets and so on.
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            _ _<br /><u><b>Test your strength booth</b></u><br />The man leaning against the pole shoots his gaze towards the approaching duo and he quickly pushes himself off it and gives his pink jumpsuit a good brush down to straighten any wrinkles. Smiling, the bald headed but dark bearded Corpus walks a bit to stand right next to the Jat Kitag and the anvil. Throwing a arm in the air as a wave he will stop once they get within a arm-shake distance from him.<br /><br />“Heya ladies”<br /><br />He muses with a gravely voice<br /><br />“Interested eh? Well let me tell you this one can get brutal, but it gets your adrenaline pumping”<br /><br />He points at the Jat Kitag that was purposely made to be twice the size of a normal one.<br /><br />“Lift it, bang It on the anvil and the prize depends on how high it reaches. Hit the max and everyone on this floor will feel your might! 500 credits per try and you might even taste fame”<br /><br />He playfully winks at them
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            _ _<br /><u><b>???</b></u><br />The Ostron gazes at the confused man through half opened eyelids, with a disappointed expression on his rugged face. <i>”Is he deaf?</i>” He pondered for a moment but shook his head, the many trinkets and pendants hanging off of him producing their metallic melodies. <br /><br />“Ai yo, how have you not walked in to a post with that attention span?”<br /><br />He smirks at the man unable to contain the teasing. But, the takes a step back so to give the spooked one some breathing space. Lifting a hand up he waves it in the air in a dismissive manner, as if shaking his previous statement out of the air.<br /><br />“But, I was saying how you look good enough to shoot at least one of those”<br /><br />He points with his left little finger towards the fast traveling kavats that are spazzing out behind the booth<br /><br />“Either I am utz utz bad or this be very khut-khut . Shoot eh? Only 400”<br /><br />He smiles at the man, flashing him his yellow teeth, his breath smelling of fish.
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/227906898219892736/40e4c7aff7c8d404f6fccbbbf93f0c86.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ross#8154">Ross</span>
+                <span class="chatlog__timestamp">19-Sep-18 01:20 PM</span>
+
+                        <div class="chatlog__content">
+                            <b>Kinsey and Rakko</b><br />Kinsey couldn&#39;t help but scowl briefly. &quot;Ladies? You say that to everyone you meet?&quot; they said, then switched to a confident grin. &quot;Ha! I&#39;ll kick everyone&#39;s ass at this!&quot;<br /><br />Rakko had squeezed her eyes shut in anticipation of the Tenno&#39;s grumpy onslaught, but blinked them open again when Kinsey announced they&#39;d best everyone else, and she smiled as though nothing had happened.<br /><br />The slender operator passed over the credits needed to play, then approached the massive hammer. They blew on their hands and rubbed them together, still grinning confidently. The Jat Kittag was absurdly oversized in Kinsey&#39;s hands, but they gripped the handle with practiced confidence and hefted it over their shoulder. &quot;Let&#39;s see if I get called a lady after this!&quot; they announced, swinging the hammer down with surprising power and accuracy, sending the slider about halfway up the length of the colorfully-lit game.
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/152349834785849344/5ba42f7d6d8f91f8ffafbc4bca9469db.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Disruptis#5503">Disruptis</span>
+                <span class="chatlog__timestamp">19-Sep-18 06:30 PM</span>
+
+                        <div class="chatlog__content">
+                            <b>Stahk:</b><br />“Uh-- y-yeah sure,” Stahk stuttered, clumsily failing the unexpected social interaction. Void he hated that.<br /><br />The awkward business man dug out a couple bronze credits from the left pocket of his suit and held them out to the stall-runner, as if he were unsure how to hand them over.
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/358680374022242324/814092b501b8881e5c4d758c8fec6a16.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Darkjunior#0813">Darkjunior</span>
+                <span class="chatlog__timestamp">22-Sep-18 05:49 PM</span>
+
+                        <div class="chatlog__content">
+                            <b>FREZ</b><br />Frez got into the line for the shooting game Stahk and the other guy were at, sorta interested in it.  This game sorta played to his strengths, and what could <i>possibly</i> go wrong? He was trying his best to relax, but as it turned out, forcing oneself to relax rarely worked. Anywho, now he was standing in line, waiting for his turn at the game. He <i>really</i> hoped that he didn&#39;t look too out of place here.
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/136944676849582080/290779f99a7d8e2b6ff5d6d447ab4680.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">23-Sep-18 11:32 AM</span>
+
+                        <div class="chatlog__content">
+                            <u>Tall Thing:</u><br />The tallest of the group put its hands on its hips, its comically long arms sticking out incredibly wide. As it turned around, its elbow landed smack-dab in the middle of the Small Thing&#39;s face.<br />&quot;<i>Grorg argh blah frrrrrrrrrrr</i> THREE <i>gurgle girg.</i>&quot;<br /><br /><u>Small Thing:</u><br />&quot;<i>OORP</i>&quot;<br /><br /><u>Muscular Thing:</u><br />&quot;<i>Margh grah rahh grug grug snort blech!</i>&quot; The Muscular Thing flexed its arms and pointed at the ball while facing the leader.<br /><br /><u>Tall Thing:</u><br />&quot;*Gurgh. Gruh. Gurgle gurgle borgh hurgh!&quot; *The tall thing shook its head and pointed at the random prizes displayed within the booth. The creature hummed disapprovingly and continued to shake its head, while the Small Thing jumped up and down excitedly, the oversized weapon rattling in its grotesque grip.<br />With a sigh, the Tall Thing waved a twisted hand towards the Muscular Thing, who proceeded to drop the bag to the floor and reach inside. When its hand exited the sack&#39;s aperture, it had a fistful of credits. The creature stepped forward and burbled, extending its arm forward to the clerk.
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/339116401815977986/3518ddf298607e561f49eef2e8b79a79.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rosencratz#3124">Rosencratz</span>
+                <span class="chatlog__timestamp">24-Sep-18 08:49 AM</span>
+
+                        <div class="chatlog__content">
+                            <u><b>Dunk the Fatto booth</b></u><br />The thinner clerk sat crouched in front of the grumbling creatures, his gaze jumping from one to the next as they seemed to argue with each other. Extending his free hand to pick out 300 credits from the fistful that one of them offered, he stood up and threw the ball he had with him towards the smallest one that was jumping around all excited.<br /><br />“Alright, let it rip!”<br /><br />He stands aside and motions towards the throwing line with a opened palm. The distance from the throwing line to the target is a mere 20m.<br /><br />The skinny clerk walks back towards the booth to pick up two balls and shove the 300 credits in the bank. The walks back with the two balls and throws them towards the tall one.<br /><br />Meanwhile, the fat guy in a purple tight spandex smiled and teased<br /><br />“Well common! I’ve been thirsty all day and nobody dunked me yet!”<br /><br /><u><b>Test your strength booth</b></u><br />The bald headed Corpus watched from the sidelines with a curious gaze, pocketing the 500 credits that the bubbling Tenno had given him. Sure, it’s a mock Jat Kitag but it still requires strength to lift it, and he watched as the challenger hoists it up with ease. Ge pursed his lips as it hit down on the anvil and sent the piston charging upwards with haste…only to slow down a bit over half and then drop down.<br /><br />“Ha!”<br /><br />The clerk boomed as he crossed his arms over his chest<br /><br />“Guess you kiddoes aren’t all about warframes, you got spunk on your own!”<br /><br />He smirks and points at the top of the pole<br /><br />“That’s it? Why not going again, or let your friend have a shot eh? A grand prize is in it if you hit the top…or…you’ve had enough of a workout?”<br /><br />He grins through his chapped lips, lifting a hand to scratch his chin.
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <u><b>Shoot the Kavats booth</b></u><br />The clerk working at this booth shrugs his shoulders and grabs the credits that the other was offering. He turns around to pick up one of the toy Sybaris from the wall and hands it to the jittery man, saying<br /><br />“You got 10 shots to use in a span of 20 seconds, so shoot fast. If you hit the – “<br /><br />He pauses as he turns to face the mechanical wonder of fast moving kavats just rushing about on the conveyer belt. There are four belts in total and the higher it goes the faster the kavats move. The one of the lowers are colored gray and there are a total of 10 of them on it, the ones on the second belt are blue and they are 7, on the third are 5 purple and finally the last stage to where the clerk was pointing at there were three golden kavats that are moving at the fastest speed. The clerk points to it and looks back at the man, continuing what he was saying from before.<br /><br />“- the golden kavat then you win one of the mystery prizes that you pull out of this box ‘ere”<br /><br />He lowers the hand  that was pointing at the golden kavats and uses it to point towards a pink box on the highest shelf in the booth. The clerk nods at him and steps back from the shooting range, motioning with his hand that he can start shooting if he doesn’t have any questions.<br /><br /><u><b>???</b></u><br />The Ostron stepped aside too, his dark gaze leering at the clerk but he stayed focused to see how the jittery man does….or if he’s really a lousy shot!
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            _ _<br /><u><b>Man</b></u><br />The man in front of Frez that was also standing in line at the Kavat shooting game let out a loud sigh and looked over his shoulder.<br /><br />“Can you believe this guy? He holds the line for 30 fucking minutes and has the gall to say that it’s rigged. Just fricking move your lousy shooting ass and let people have their fun no?”<br /><br />He made sure not to speak loud enough so that the said “lousy shooting ass” wouldn’t hear him. He’s frustrated that he had to wait but he also values his face and the buff Ostron looks like he could whack anyone in here.
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/227906898219892736/40e4c7aff7c8d404f6fccbbbf93f0c86.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ross#8154">Ross</span>
+                <span class="chatlog__timestamp">26-Sep-18 12:24 AM</span>
+
+                        <div class="chatlog__content">
+                            <b>Kinsey and Rakko</b><br />&quot;Hah! I&#39;m only getting warmed up!&quot; the Tenno announced, passing over another game&#39;s worth of credits. Rakko could only watch and smile quietly as Kinsey grabbed the oversized hammer once again and prepared for another swing.<br /><br />&quot;Don&#39;t worry Rakko, I won&#39;t be here all night. We can go look at the other stalls as soon as I-&quot; they grunted, heaving the hammer into position, &quot;finish up here!&quot;<br /><br />Kinsey gave a sound not unlike a war cry as they swung the hammer down in a clean ark over their head and onto the pressure plate of the game in front of them. They watched with a confident grin as the marker sailed upwards, passing their previous hit, but not by as much as they would have liked.<br /><br />&quot;Rahm, this is harder than it looks! I bet Uvo would be really good at this, though.&quot; They concluded before turning to Rakko. &quot;Whaddaya think, should I go again?&quot;<br /><br />&quot;Your choice, Kinsey.&quot; the Grineer woman replied, not entirely sure what else to say.
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/136944676849582080/290779f99a7d8e2b6ff5d6d447ab4680.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">27-Sep-18 12:23 AM</span>
+
+                        <div class="chatlog__content">
+                            <u>Small Thing:</u><br />With all of its feeble might, the short Infested  cretin whipped the ball with its right hand- sending it flying to the left, no where even near the target. The ball passed through the adjacent stall and disappeared into the other aisle.<br />The other creatures both began to slap and punch the small thing while screeching in an unholy Infested symphony of twistedness.
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/358680374022242324/814092b501b8881e5c4d758c8fec6a16.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Darkjunior#0813">Darkjunior</span>
+                <span class="chatlog__timestamp">27-Sep-18 12:32 AM</span>
+
+                        <div class="chatlog__content">
+                            <b>FREZ</b><br />Frez only just now got in line, and wasn&#39;t entirely sure what this person was ranting about. He looked at the lineup, trying to get an idea of how long it would be before he was at the front. He was taking a look at how the game worked, and was interested in how well the toy sybaris worked.<br /><br />&quot;I mean... it can&#39;t be <i>that</i> hard, can it?&quot; Frez commented, glancing at the kavats. They certainly didn&#39;t seem impossible to hit. A bit difficult, sure, but not impossible. &quot;Maybe if he tried leading his shots, or something...&quot;
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/152349834785849344/5ba42f7d6d8f91f8ffafbc4bca9469db.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Disruptis#5503">Disruptis</span>
+                <span class="chatlog__timestamp">30-Sep-18 11:31 PM</span>
+
+                        <div class="chatlog__content">
+                            <b>Stahk:</b><br />Stahk fumbled around with the gun.<br /><br />It took him a good half-minute before he found comfortable way of holding it. He almost looked like he didn’t know what to do with it. The slight, nervous trembling of his hands didn’t help the image either.<br /><br />Fortunately concentrating on the targets’ movements and the task at hand let him forget about it all. The business man didn’t quite know what to do, but he felt like getting to know how the gun fires would be a good idea. He aimed at a small white mark on the mechanism propelling the kavats and fired.<br /><br /><i>Bang</i>. He missed. The one practice shot alone wasn’t enough to satisfy him. 9 shots...<br /><br /><i>Bang.</i> The bullet came pretty close, pulling a small spark into existence for a millisecond. 8 shots...<br /><br /><i>Bang.</i> This one was aimed at a gray kavat. It hit, but not enough to knock it over. Stahk pursed his lips. 7 shots…<br /><br /><i>Bang</i>. A silvery feline fell over backwards. That was the trick.<br /><br /><i>Bang</i>. Another.<br /><br /><i>Bang</i>. A third. Stahk was on a roll. The excitement of success drove him to aim his barrel higher, to the blue row. 4 shots...<br /><br /><i>Bang</i>. A cyan runner struck out of the race. Quite a surprise for the corpus, but a much welcome one. He barely knew what he was doing, but the continued victory served to push him even further. To aim higher. To track the magical golden furballs at the top with a hungering gaze. He could see their movements whizzing past him; could feel the pattern of appearances beating to the sound of invisible drums. 3 shots...<br /><br /><i>BANG</i>. The shot went wide fr-- <i>Dingg--!</i><br /><br />Stahk instinctively whipped to the source of the sound and shot a bell mounted to the booth dead-center just as it declared his time over.
+
+                                <span class="chatlog__edited-timestamp" title="30-Sep-18 11:32 PM"></span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/339116401815977986/3518ddf298607e561f49eef2e8b79a79.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rosencratz#3124">Rosencratz</span>
+                <span class="chatlog__timestamp">04-Oct-18 11:47 AM</span>
+
+                        <div class="chatlog__content">
+                            <u><b>Test your strength booth</b></u><br />The man at the booth watched with a smug look on his face as the piston went up once again, this time a bit father than the last time. He let out a scoff from under his breath<br /><br />&quot;Come now love! You can do better, I feel it in your presence!&quot;<br /><br />He points towards the pillar and  with a wiggle of his eyebrows adds<br /><br />&quot;I&quot;ll even throw in a something special for ya&quot;<br /><br /><u><b>Dunk the Fatto booth</b></u><br />The spandex wearing fat guy inside the tank let&#39;s out a loud laugh, his jellatunous mass jiggling under the effort.<br /><br />&quot;Oh come now little one, put some elbow grease in it!&quot;<br /><br />The skinnier clerk shook his head in a mused manner as the others started beating up the little one. He pushed himself off the stall and walked over towards where the ball flew towards, not wanting for any poor sod to walk on it, trip and break a hip or something.
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            _ _<br /><u><b>Man</b></u><br />The man in front of Frez chuckled softly<br /><br />&quot;Nah, he&#39;s just really bad. Ostron fellow, savage ya know?&quot;<br /><br />He smirked under his half trimmed mustache. He looked back the booth and licked his lower lip before looking back over his shoulder to the fellow behind him. Saying in a hushed tone<br /><br />&quot;But...you also here for...that?&quot;<br /><br />He made a motion with his eyes towards the mystery box that is perched on one of the higher shelves near the clerk running the booth.<br /><br /><u><b>???</b></u><br />He watched with a stern look in his eyes as the spooked man raised the toy Sybaris and started firing. A small smile tugged at the corner of his lips as he missed the first couple of shots but it soon pulled back as the other man started landing them. His brows furrowed and his jaw clenched as he watched the shots whizz by and topple the whizzing kavats. However, as the last shot flew out towards one of the gold ones and miss em, he let out a soft smile and chuckled, lifting a heavy hand to slap it on Stahk&#39;s back, hoping his strength doesn&#39;t topple the man. As bright as his smile, he says in his rugged voice<br /><br />&quot;Ai yo surah! So it&#39;s not rigged eh? Just bad eyesight!&quot;<br /><br />He let out a comical &quot;HA HA HA&quot; with his head thrown back <br /><br /><u><b>Shoot the Kavats booth</b></u><br />The clerk at the booth jerked a little as the shooter let one loose at the timer bell...that sure wasn&#39;t expected. He looks behind him to the toppled kavats and glances at the golden ones, seeing all of them intact. He nods his head and steps back to give the player a good view of the prizes in the booth.<br /><br />&quot;Alrigh so, you can pick one of these out&quot;<br /><br />He motions towards the plushy and toy section with a flicker of his wrist
+
+                                <span class="chatlog__edited-timestamp" title="06-Oct-18 06:25 PM"></span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/227906898219892736/40e4c7aff7c8d404f6fccbbbf93f0c86.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ross#8154">Ross</span>
+                <span class="chatlog__timestamp">04-Oct-18 12:12 PM</span>
+
+                        <div class="chatlog__content">
+                            <b>Kinsey and Rakko</b><br />&quot;Hah! I&#39;m not here for loot, I&#39;m just here to prove I&#39;m strong!&quot; the tenno laughed, again flexing dramatically. &quot;Both?&quot; Rakko added insightfully, and Kinsey nodded with enthusiasm. &quot;Alright, I&#39;ll give it another shot!&quot;<br /><br />Kinsey again passed over another game&#39;s worth of credits, rubbing their hands together and rolling their shoulders in preparation. Gripping the handle with what confidence they had left, Kinsey took a moment to center themself and prepare for a mighty swing. They heaved the hammer backwards - still lighter than a real Jat Kittag, they realized, but close enough for a small operator - and brought it down on its mark with a grunt of effort.<br /><br />To Kinsey&#39;s frustration, there was no ding to mark the slider reaching the top. They looked up in time to see it slide past the 3/4 mark before falling back down to the base.<br /><br />&quot;UGH! So much closer that time!&quot; they exclaimed.
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/136944676849582080/290779f99a7d8e2b6ff5d6d447ab4680.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">05-Oct-18 01:40 PM</span>
+
+                        <div class="chatlog__content">
+                            ~The trio of Infested creatures grumbled and growled, pushing each other with forceful shoves. The smallest of the three couldn&#39;t retain its balance after being pushed, and fell flat onto its behind. It remained seated on the ground, obviously too sad to get back up.<br />The muscular one went next. It gurgled triumphantly and began to spin the ball  on its thin, long finger. Of course, just because this creature was stronger looking than the rest, didn&#39;t mean that it was particularly more skilled. The ball tipped off of its claw almost instantly, rolling off to the side and becoming lost in the tides of people passing by.~<br /><br /><u>Muscular Thing:</u><br /><i>Gulp.</i>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/358680374022242324/814092b501b8881e5c4d758c8fec6a16.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Darkjunior#0813">Darkjunior</span>
+                <span class="chatlog__timestamp">07-Oct-18 02:15 AM</span>
+
+                        <div class="chatlog__content">
+                            <b>FREZ</b><br />&quot;I mean, hopefully... It shouldn&#39;t be too hard to hit the golden one. It&#39;s fast, but not impossible.&quot; Frez was indeed particularly interested in the golden Kavat targets, and was trying to figure out how he was gonna get one of them. Maybe if he took a test shot or two at the slower ones, he could figure out how to lead the shot... &quot;That box looks interesting, and seeing how hard it supposedly is to hit, there could be something good in there.&quot; For someone in clear civilian clothing who was very clearly sorta wealthy, he seemed confident in his skill with a gun.
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/152349834785849344/5ba42f7d6d8f91f8ffafbc4bca9469db.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Disruptis#5503">Disruptis</span>
+                <span class="chatlog__timestamp">09-Oct-18 12:34 AM</span>
+
+                        <div class="chatlog__content">
+                            <b>Stahk:</b><br />“O-oh,” Stahk faltered as he rigidly placed the toy sibaris down and took a look at the prizes. If the business man was honest with himself, he really didn’t care for any of them. A few seconds of awkward shuffling ensued. “You just choose me one,” he ended up blurting.<br /><br />Then someone slung an arm around his shoulder.<br /><br /><br /><b>???:</b><br />The clack of mechanical feet sounded off Stahk’s left.<br /><br />“Aaah HA! Nice shot ace,” a stranger boisterously exclaimed through kubuchi-stained breath. “Let me buy you a drink.”<br /><br />Stahk glanced over to find a grinning, middle-aged corpus man in a standard green slim-suit, donning a thin, white coat over-top that had clearly been stained yellow from prolonged use. None of that registered within Stahk’s mind however; he was too busy feeling slightly anxious from the direct physical contact.
+
+                                <span class="chatlog__edited-timestamp" title="09-Oct-18 04:11 PM"></span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/339116401815977986/3518ddf298607e561f49eef2e8b79a79.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rosencratz#3124">Rosencratz</span>
+                <span class="chatlog__timestamp">10-Oct-18 08:59 AM</span>
+
+                        <div class="chatlog__content">
+                            <u><b>Test your strength booth</b></u><br />“Uuuuuuuf! Very close indeed. I think you’re wearing it down…maybe if you try jumping eh?”<br /><br />The clerk smirked<br /><br />“What about you? Not interested or don’t want to jump in your friends competitive spirit?”<br /><br />He gazed at the grineer woman, motioning towards the piston with a opened palm<br /><br /><u><b>Dunk the Fatto booth</b></u><br />The fat man inside the booth watched the ball roll away with a flat expression<br /><br />&quot;Honestly...common fellas!&quot;<br /><br />He hollered at them.<br /><br />The much thinner worker returned with one of the balls that flew off to the sides and put it down on the counter. He managed to catch the display by the muscular child and let out a soft giggle.<br /><br />&quot;Here&quot;<br /><br />He says to them as he approaches. He bends down to grab the ball and crouches in front of the muscular fleshling, the ball in his opened palm<br /><br />&quot;Just uhhhhh....make sure to put one leg behind the other...balance&quot;<br /><br />He straightens up and shows them how to stand for a throw, a firm and efficient pose.<br /><br /><u><b>Man</b></u><br />“Oh interesting for sure! I heard that one of the prizes is a exclusive tour with Madam Bourgoar herself! Though…not sure if the guards are spreading that rumor just to push people to play the mystery box games but eh! Makes things interesting eh?”<br /><br /><u><b>Shoot the Kavats booth</b></u><br />The clerk blinks two times but then shrugs his shoulders as the player had no desire to pick out the reward. He turns around and grabs the first thing that was under his hand…which is a stuffed plushie of the Jackal, all cute and huggable looking. He reaches out to hand it to the man.<br /><br /><u><b>???</b></u><br />The Ostron stands back from the sudden appearance of the other Corpus and uses this development to slowly slink away from the crowd…circling around the booth.
+
+                                <span class="chatlog__edited-timestamp" title="10-Oct-18 12:04 PM"></span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/358680374022242324/814092b501b8881e5c4d758c8fec6a16.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Darkjunior#0813">Darkjunior</span>
+                <span class="chatlog__timestamp">12-Oct-18 01:50 AM</span>
+
+                        <div class="chatlog__content">
+                            <b>FREZ</b><br />&quot;I guess I&#39;ll find out, then. Just gotta hit the kavat.&quot; Frez shrugged, now just sorta anxious to get to the end of the line. He was pondering what the guy had said, about one of the prizes. Was that really such a big deal? Frez still had no idea who Madam Bourgoar was, honestly. Besides sharing a name with this place, of course. &quot;Are there any more rumors about what&#39;s in the mystery box? How often do people win them?&quot;
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/152349834785849344/5ba42f7d6d8f91f8ffafbc4bca9469db.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Disruptis#5503">Disruptis</span>
+                <span class="chatlog__timestamp">14-Oct-18 12:18 AM</span>
+
+                        <div class="chatlog__content">
+                            <b>???:</b><br />The man currently locking an arm with Stahk reached out and received the business man’s prize for him. <br /><br />“Come, let me treat you,” he said without waiting for a response from the confused Stahk. He turned and dragged him toward the strength booth.<br /><br />“Sorry, I don’t mean to make you uncomfortable,” the stranger continued with a devious grin, “but I have something to talk to you about.”
+
+                                <span class="chatlog__edited-timestamp" title="09-Jan-19 06:03 PM"></span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/227906898219892736/40e4c7aff7c8d404f6fccbbbf93f0c86.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ross#8154">Ross</span>
+                <span class="chatlog__timestamp">14-Oct-18 12:23 AM</span>
+
+                        <div class="chatlog__content">
+                            <b>Kinsey and Rakko</b><br />The Tenno stared up at the top of the slider with a slight scowl. Kinsey was eager to prove themself, after all, and this stupid game was proving to be more of a challenge than they expected.<br /><br />&quot;No,&quot; Rakko responded as politely as she could, &quot;Not...my thing.&quot;<br />&quot;I&#39;ll do one more round and then we&#39;ll find something for you to have fun with, alright?&quot; Kinsey announced, producing yet another swing&#39;s worth of credits and passing it to the clerk. &quot;Rahm, if I&#39;d brought my frame, I&#39;d be able to smash this thing no problem!&quot;<br /><br />Again they approached and readied the hammer, then swung it down with a grunt of effort. And....the slider made its way up no further than it had before. Kinsey shook a fist and grumbled in frustration. &quot;UGH! Well, I did say that&#39;d be the last one. Let&#39;s go find another booth...&quot;<br /><br />&quot;No no no,&quot; Rakko said hurriedly, &quot;Try it one more time. You can do it!&quot;
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/136944676849582080/290779f99a7d8e2b6ff5d6d447ab4680.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">20-Oct-18 04:45 PM</span>
+
+                        <div class="chatlog__content">
+                            <u>Tall Thing:</u><br />The tallest of the trio picked up a ball and began to mirror the clerk&#39;s actions. After rehearsing several time, it chittered and wound itself up to throw it for real. The muscular and short one, in awe of their (apparent) leader, stood in awe- and also coincidently, in his way.<br />As the tall creature release the ball, it flew straight into the muscular one&#39;s face, since he was standing directly in front.
+
+                                <span class="chatlog__edited-timestamp" title="20-Oct-18 04:45 PM"></span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/339116401815977986/3518ddf298607e561f49eef2e8b79a79.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rosencratz#3124">Rosencratz</span>
+                <span class="chatlog__timestamp">22-Oct-18 01:46 PM</span>
+
+                        <div class="chatlog__content">
+                            <u><b>Man</b></u><br />The man looks around him for a bit, as if trying to spot a unwanted mouse that could be eaves dropping on the conversation. Finding no such thing, he looks back over his shoulder to Frez and says under his breath, making sure not to speak too loud<br /><br />“I heard…that there are special VIP tickets for a variety of things. One of them…”<br /><br />He pauses to look around him once more before returning his dull gaze at the curious fellow behind him<br /><br />“…is for a very exclusive side viewing of the Zoo…apparently, it’s a real masterpiece with…unusual animals.”<br /><br />As the jittery business man got toed away, the clerk working the stall coaxed towards the line to keep it moving and the man in front f Frez was next. The man lit up with excitement and rubbed his white hands together<br /><br />“Oh and…a golden raffle ticket”<br /><br />He whispered out with a wink as he stepped up to the booth. However before he could even pick up the toy Sybaris…<br /><br />“ENDAL!”<br /><br />A loud womanly shriek tore through the crowd that made the man jump up in shock. His face went white with dread as he looked to his left to spot a overweight woman all dressed up in nice feathers and pelts, her puffy cheeks red and her breath coming out in puffs of air.<br /><br />“Oh Ffffff”<br /><br />The man exclaimed and gave the Sybaris back to the Clerk, thanking him with a nod and a smile and quickly taking off towards the crowd<br /><br />“DON’T YOU DARE! STOP SPENDING OUR VACATION MONEY ON THIS SHIT YOU ADDICT!”<br /><br />The woman continued to wail as she ran after him, albeit in a much slower pace. Both disappearing in the crowd.<br /><br />The clerk at the booth, quite dumbfolded and surprised, looked towards Frez and nodded his head to him, saying that he can step up and play if he so chooses.
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            _ _<br /><u><b>Test your strength booth</b></u><br />The clerk let out a chuckle<br /><br />“But where is the challenge in that? You void ones with your faceless titans, you depend on them too much! Common now! Show me what YOU can do.”<br /><br />He crossed his arms over his chest and smirked<br /><br /><u><b>Dunk the Fattoo booth</b></u><br />Both clerks burst out in laughter as the last ball ended up in his friends face. It’s a unexpected turn of events but a welcomed one at least…well…depending on who you ask cause that body tight suit is starting to wedge in to uncomfortable places.<br /><br />“Oh Voidness me! You fellas really know how to entertain! Say, Heirik! I bet they’d make a great comic addition to the cabaret show on the seventh floor”<br /><br />Said the chubby man in between giggles, wipping away tears from his wrinkled face.<br /><br />“My Alad V! They’d wipe the crowd! But- no no, I don’t think they understand us and you know what they said about the-“<br /><br />“OH Hek it!”<br /><br />The fat man waves his hands around at his friend and looks towards the trio<br /><br />“Say you uh…fellas…wanna entertain or…is your calling more in being entertained?”
+
+                                <span class="chatlog__edited-timestamp" title="22-Oct-18 01:47 PM"></span>
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            _ _<br />---In the middle of the all the hussle and bussle, a loud jingle rings out through the floor from the communication devices set up at the highest points of all of the beams in the room. The very voice that addressed everyone at the beginning, the showman like voice that dripped with a snake like hiss<br /><br />“Hello hello you gorgeous fuckers! This is just a small announcement to keep things copptering like those damned Tenno with their polearms, so don’t stop humping on my behalf! The buffet at the sixth floor is now open! So come on down you hungry sluts and enjoy the exotic and unique dishes that we have to offer! If that is not to your liking you boring kubrow-humpers, then the Carnival show on the fifth floor is starting soon, so you might wanna wrap up that dong and head there if you wanna see a awe inducing spectacle.”<br /><br />The transmission cuts off the with the same ping it arrived with, but it gets cut off at the middle as the voice speaks through once more<br /><br />“OH! Also! Hussle on those games you lazy fuckos! Winners of the VIP tickets got one more hour before the greatness starts! And believe me, you want in!”<br /><br />The jingle resumes to it’s end and life continues onboard the traveling Carnival---
+
+                                <span class="chatlog__edited-timestamp" title="22-Oct-18 01:47 PM"></span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/136944676849582080/290779f99a7d8e2b6ff5d6d447ab4680.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">23-Oct-18 10:56 AM</span>
+
+                        <div class="chatlog__content">
+                            ~The creatures all gurgled to each other in a circle, as if conversing about what the fat man had proposed.<br />After several minutes passed, the three broke the circle and approached the clerks. The tall Infested raised a gangly finger as if to announce their decision before being interrupted by the announcement. They stopped and listened, and instantly began to screech and froth at the mouth at the mention of a buffet.<br />The strong creature snagged its bag, the small creature picked its weapon back up, and the tall creature quickly whipped the ball in the general direction of the dunk tank- and miraculously managed to hit the target dead on??<br />Before the clerks could say anything, the trio made a beeline to the lift  to the 6th.~
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/227906898219892736/40e4c7aff7c8d404f6fccbbbf93f0c86.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ross#8154">Ross</span>
+                <span class="chatlog__timestamp">26-Oct-18 12:05 PM</span>
+
+                        <div class="chatlog__content">
+                            <b>Kinsey and Rakko</b><br />&quot;Ugh! Fine! Asshole....&quot; Kinsey grumbled, angrily paying for another round. They&#39;d planned on saving some of their budget for trinkets for the rest of the team, but it was starting to look like they might overspend a bit. <br /><br />They&#39;d never been good at controlling anger. Every so often they&#39;d focus it though, and this was one of those times. They weren&#39;t too happy with the way the man at the booth was teasing them, all but milking them for cash at this point. But hey, it was anger they could work with.<br /><br />Gripping the hammer one more time, they hefted it over their shoulder and prepared to swing. They could feel the palms of their hands warming up slightly, but didn&#39;t bother trying to reign in their power. Muck this guy, honestly.<br /><br />With a grunt of effort that nearly turned into a yell, Kinsey brought the hammer slamming down onto the pressure plate. The little slider made its way upwards until.......<br /><br /><i>tink!</i><br /><br />The smallest possible ding rang out.<br /><br />&quot;HA! TAKE THAT! I KNEW I COULD DO IT! I&#39;M STRONG AS MUCK! HA! SEE THAT? I&#39;M STRONG AS HELL!&quot; Kinsey yelled, dancing around and flexing dramatically.
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/358680374022242324/814092b501b8881e5c4d758c8fec6a16.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Darkjunior#0813">Darkjunior</span>
+                <span class="chatlog__timestamp">30-Oct-18 11:00 PM</span>
+
+                        <div class="chatlog__content">
+                            <b>FREZ</b><br />Well, that was unexpected. Glancing at the man as he was dragged away, Frez stepped up to the booth. Okay, he can do this. He can do this. He looked around and at the line behind him. He passed the clerk a few credits, enough to play once right now. With that dealt with, the seemingly inconspicuous Corpus picked up the toy replica of the Tenno weapon. He took a moment to see how heavy it was and how easily he could hold it, before getting a firm grip on the gun. Nodding at the clerk and taking a deep breath, he raised the toy sybaris.<br /><br />When the game started, Frez worked quickly. He had a basic idea of how much to lead his shots from watching the other person playing, but still tested it on the lowest kavats. In only a couple of seconds, Frez had hit three of the gray kavats. Well, that was easy enough. Aiming up a bit, he aimed for the ones on the second belt, again, hitting all three shots about as fast as the gun could fire. Just as a Corpus crewman, he&#39;s hit faster, smaller targets in far more high-pressure situations. This was a carnival game. Aiming a bit higher again, he took aim at the purple ones. The first shot hit its target, but the second one flew past. His first missed shot. He had a few more seconds, and one last kavat.<br /><br />Frez took a second to breath and calm down, before lining up a shot with the golden kavat. He took a few precious seconds to aim his sybaris, leading the fast-moving target by quite a bit. With only two seconds left, Frez pulled the trigger one last time. He held his breath, watching very intently to see if it would hit the prized target. The final shot sailed through the air, and...
+
+                                <span class="chatlog__edited-timestamp" title="30-Oct-18 11:03 PM"></span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/152349834785849344/5ba42f7d6d8f91f8ffafbc4bca9469db.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Disruptis#5503">Disruptis</span>
+                <span class="chatlog__timestamp">02-Nov-18 01:05 AM</span>
+
+                        <div class="chatlog__content">
+                            <b>Stahk:</b><br />Stahk couldn’t-- didn’t know what to respond to the man beside him. He was dragged forward mercilessly by his sturdy grip. <br /><br />“You see, I’ve been looking for a man like you for who knows how long. Someone in your position tends to escape the grid easily,” he continued, stopping in front of a liquor stall. He threw the vendor a couple of credits and asked for two orders of Kubuchi over the blaring of the announcement intercom.<br /><br />Stahk processed his words, their meanings turning his blood cold. Somehow this man knew him. For some reason the business man felt he should be very concerned, and every one of his instincts screamed run.<br /><br />Stahk didn’t have the willpower to complete such an action, however.
+
+                                <span class="chatlog__edited-timestamp" title="09-Jan-19 06:02 PM"></span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/339116401815977986/3518ddf298607e561f49eef2e8b79a79.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rosencratz#3124">Rosencratz</span>
+                <span class="chatlog__timestamp">05-Nov-18 12:21 PM</span>
+
+                        <div class="chatlog__content">
+                            <u><b>Dunk the Fattoo booth</b></u><br />The two clerks just shook their heads and watched the little infested trio bolt out of their sight as if their life depended on it. Maybe it’s for the better…but…the Fattoo was still thirsty.<br /><br />---Once the announcement ranged out most of the people started flooding towards the lifts lined up against the North section of the floor. The three standard sized elevators started pooling with people, all heading down to the sixth floor. The little creatures will find themselves with faces full of butts as chaotic lines start forming in front of the elevators. People shoving, yelling and quite possibly hungry so the little ones should probably watch their step---<br /><br /><br /><u><b>Test your strength booth</b></u> <br />Exactly two seconds after the itsy bitsy <i>tink</i> rights out, the entirety of the lights lined along the pole lit up with a even brighter display of colors, the top popping up a grand sign with the word “WINNER WINNER” flashing in bright neon which is accompanied by bright flares, a entire spectacle for the first winner at this booth!<br /><br />The clerk looks up at the display in awe as he has yet to see anyone hit the bell and trigger it. However, as Kinsey exploded in to cheer the clerk quickly closed his mouth and looked at them, a smirk spreading across his face.<br /><br />“Alright! Alright! You showed me! I had my doubts but…well! Congratulations!”<br /><br />He flips on his heels and heads towards the booth that is to the right of the grand pole, bending down behind it he flips a switch and the entire show slowly starts dimming down.<br /><br />The clerk stands up from behind the booth, holding a pink box with a cute looking mustache glued at the front. He walks over to Kinsey and holds it out to them<br /><br />“So! As promised! The exclusive box is at your disposal! Dip your hand in and let fate decide”<br /><br />He playfully winks at them at the end.
+
+                                <span class="chatlog__edited-timestamp" title="12-Nov-18 12:18 PM"></span>
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            _ _<br /><u><b>Shoot the Kavats stall</b></u><br />And the last pellet ringed out with a loud PANG marking the downfall of one of the golden ones. The stall owner looked over his shoulder, nodding in respect as he returns his tired gaze back at the shooter<br /><br />“Finally…someone who knows their way around a gun”<br /><br />He smiles and reaches up to grab on to the pink lined box, lowering it to rest in front of Frez<br /><br />“Alright, here is  your chance player! Let’s see if you got luck as well”<br /><br /><u><b>Liquor Stall</b></u><br />The sharply dressed man working the stall nods to the order as the man threw some credits towards the shank. He scoops them up and turns towards his enormous collection of brightly colored bottles. Twirling them around his hand and pouring the right amounts the end up with two glasses of sand colored liquids inside, accompanied by sliced maprico at the top of the glass. He slides the drinks towards the two men and takes a step back from the shank, keeping a eye out for other customers
+
+                                <span class="chatlog__edited-timestamp" title="05-Nov-18 12:21 PM"></span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/136944676849582080/290779f99a7d8e2b6ff5d6d447ab4680.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">06-Nov-18 01:08 PM</span>
+
+                        <div class="chatlog__content">
+                            ~The creatures quickly moved away from the swarms of people until they were on the shore of the stream of bodies on their way to the elevators. The smallest of the trio stumbled about, a bit dizzy, for it had been stepped on multiple times in the torrential current of people. Also, it appears the smallest one had lost its Synapse. With a mighty slap, the tallest one delivered punishment to the petite thing.<br />The tall one stepped back from its retributive act and raised its arms, flexing its long, gangly claws- remnants of their kind&#39;s previous evolutionary form. Perfectly adapted for climbing around in the derelicts they had originated from.<br />The three creatures began to look around for another way up- somewhere that normal people could not go, but creatures of their size could.~
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/152349834785849344/5ba42f7d6d8f91f8ffafbc4bca9469db.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Disruptis#5503">Disruptis</span>
+                <span class="chatlog__timestamp">07-Nov-18 01:41 AM</span>
+
+                        <div class="chatlog__content">
+                            <b>Stahk:</b><br />“Here,” the man said, offering the glass of strong-scented liquor with a crooked grin. Stahk received it, but declined to take a sip. <br /><br />“Aaaah, this is the good stuff,” he continued with a sigh of relief. Judging by his already stained breath he already had his fair share of the drink beforehand. Stahk stirred his own drink for a while before his captor gave him a frown.<br /><br />“What’s the matter, not a fan of the strong stuff? Well, you’re going to need it in your system if you don’t want to suffer a migraine the size of Orb Vallis.”
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/358680374022242324/814092b501b8881e5c4d758c8fec6a16.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Darkjunior#0813">Darkjunior</span>
+                <span class="chatlog__timestamp">08-Nov-18 01:52 AM</span>
+
+                        <div class="chatlog__content">
+                            <b>FREZ</b> <br />Frez took a deep breath, placing the gun down on the counter. He had actually done it. He got the golden kavat. Looks like that training was useful, after all. He glanced at the stall owner, and stared at the box. What could be inside? It had to be good, judging by how excited the guy from earlier had been. Time to find out, then. Frez reached into the box...<br />(You can decide on what he recieves, I don&#39;t trust RPbot)
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/227906898219892736/40e4c7aff7c8d404f6fccbbbf93f0c86.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ross#8154">Ross</span>
+                <span class="chatlog__timestamp">12-Nov-18 01:03 PM</span>
+
+                        <div class="chatlog__content">
+                            <b>Kinsey and Rakko</b><br />After they finished marching around and flexing dramatically at passerby, Kinsey turned back to the clerk and eyed the box excitedly. With a wiggle of their fingers, their reached inside and fished around, pulling out a slip of paper.<br /><br />Rakko approached her Tenno friend, her stilts retracting into her legs with each step until she no longer seemed to have a third joint in her legs. Now at her &#39;actual&#39; height, Rakko looked to be about the average size of a grineer woman, but too small to be a gunner and too large to be a ballista.<br /><br />They peered at the paper together as Kinsey unfolded it....<br />(I&#39;ll let you decide!)
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/339116401815977986/3518ddf298607e561f49eef2e8b79a79.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rosencratz#3124">Rosencratz</span>
+                <span class="chatlog__timestamp">13-Nov-18 12:24 PM</span>
+
+                        <div class="chatlog__content">
+                            ---As the trio look around, they will spot hurried movement from the corner of their eyes, little fast moving blue blurs dashing across the outskirts of the gathering crowd. Children, no taller than them, all dressed in heavy blue clothes and with metallic trinkets dangling from their necks and wrists. The two kids zoom past the crowd, heading left, towards what looks like to be a maintenance corridor. However, another corridor to the right is showing a gleaming vent shaft, propped right against the wall right next to the last lift to the right...which can also be used as a quick drop down to the desired floor...or a quick splat!---<br /><br />---People walk about and brush past Stahk and his mysterious friend as they took point near one of the drinking booths on this level.<br /><br />“Nhhhh another one!”<br /><br />Yelled a toothpick of a man sitting two chairs right from them, a collection of glasses in front of him and his eyes barely keeping themselves opened. His once sharp suit is now a wrinkled mess and his neatly combed light brown hair all poking out.<br /><br />The bartender nods his head towards the drunken man and brings him another glass of a bright green liquid---
+
+                                <span class="chatlog__edited-timestamp" title="14-Nov-18 11:48 AM"></span>
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            _ _<br /><u><b>Shoot the Kavats booth</b></u><br />…and out he pulls out a little piece of paper. The Clerk leans over his stall to take a peek at the numeric code written on it and let’s out a loud whistle<br /><br />“Oh wow! You’re one lucky bastard eh?”<br /><br />He smirked and ducked bellow the booth, shuffling about and rummaging till he finds the prize the man just won. Popping back up not two seconds later, holding out a red Virmink plushie. He reaches out to hand it to the winner, saying through his grin<br /><br />“Carful with that, it’s a collectors edition so some might try and kill ya for it”<br /><br />He chuckles under his breath obviously joking about that last part<br /><br /><u><b>Test your strength booth</b></u><br />…and they get greeted by a eight digit numeric code. The clerk peeks from his position trying to get a glance of the paper…which caused him to let out a surprised gasp<br /><br />“OH!”<br /><br />He does a little hop in place <br /><br />“Damn”<br /><br />He smirked and quickly turned out to scurry back to his booth, ducking behind it once more. It only took him a couple of seconds to resurface again, but this time he’s holding a dark blue envelope in his right hand. The man scurries back towards the duo and with a bright smile reaches out to give it to them, saying:<br /><br />“Either you got luck or you and your void magic have some fingers in this”<br /><br />He chuckles swatting his free hand in front of him, showing that he’s joking about it<br /><br />“Anyways! Here, you won THE exclusive VIP ticket for the circus show on the fourth level, happening…”<br /><br />He pauses to think it over but shrugs at the  end<br /><br />“…I think in forty minutes or something, so no rush!”<br /><br />The envelope doesn’t seem to have anything special about it, apart for the “Prize 3” written on it’s front in bright golden Corpus letters.
+
+                                <span class="chatlog__edited-timestamp" title="13-Nov-18 12:30 PM"></span>
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            (updated location of everyone. If anyone doesn&#39;t agree with something hit me up)
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/490872041759571979/511955159794843649/Madams_carnival_-_placing_2.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/490872041759571979/511955159794843649/Madams_carnival_-_placing_2.png" />
+                            </a>
+                        </div>
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/152349834785849344/5ba42f7d6d8f91f8ffafbc4bca9469db.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Disruptis#5503">Disruptis</span>
+                <span class="chatlog__timestamp">13-Nov-18 01:29 PM</span>
+
+                        <div class="chatlog__content">
+                            <b>Stahk:</b><br />A few minutes of conversation and the stranger had gotten Stahk to drink up. The alcohol was amazing, actually. It had that pungent, thick taste that still managed to slide smoothly down one’s gullet and coat it as well. <br /><br /><b>???:</b><br />“AH. That’s the stuff,” the man declared, slapping his mug down on the table for emphasis.<br /><br /><b>Stahk:</b><br />“That’s uh,” Stahk began, trying his best to make conversation somehow, “some nice… feet.”<br /><br /><b>???:</b><br />“Hm? Oh these,” the man lifted a mechanical foot and inspected it. “Yeah, a shame actually. I don’t like being made of metal parts, I leave that more to the debt interns.”<br /><br />He fished a crumpled paper out of his coat and carefully unfolded it in front of the business man.<br /><br />“Tell me, what do you see here?”<br /><br /><b>Stahk:</b><br />Stahk furrowed his brows and leaned over the tabletop to get a good look at it as the man got up and stood behind his shoulder. Dark blobs of ink swirled in symmetric patterns around the page in an appeasing form. In the center of it all was a single sentence: “Good morning, Stick”.<br /><br />He read it right as a needle entered his neck from behind.
+
+                                <span class="chatlog__edited-timestamp" title="19-Nov-18 03:01 PM"></span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/358680374022242324/814092b501b8881e5c4d758c8fec6a16.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Darkjunior#0813">Darkjunior</span>
+                <span class="chatlog__timestamp">14-Nov-18 12:15 AM</span>
+
+                        <div class="chatlog__content">
+                            <b>FREZ</b><br />&quot;Oh, uh... cool, thanks.&quot; Frez sounded grateful, just a bit surprised that he had hit that last kavat, still. He carefully took the plushie from the clerk&#39;s hands. Wow, it was soft. Very soft. He didn&#39;t particularly care if it was a collector&#39;s item (He had way too much money, anyway), all he cared was that it wasn&#39;t trying to kill him or something.<br /><br />He walked off, carrying the plushie in one hand. Maybe he&#39;d go check out this circus. He could certainly afford a ticket, right? Say what you will about the Corpus, at least he was paid well. He ended up walking by the  Test Your Strength booth, and looked at the Grineer and the... child? Teenager? That was odd. The Grineer had him a bit on-edge (thanks to all of that Corpus training), and it was just weird seeing someone so young here.
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/227906898219892736/40e4c7aff7c8d404f6fccbbbf93f0c86.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ross#8154">Ross</span>
+                <span class="chatlog__timestamp">19-Nov-18 04:23 PM</span>
+
+                        <div class="chatlog__content">
+                            <b>Kinsey and Rakko</b><br />Seeing the man looking in their direction as he passed, Kinsey flexed again and pointed to the bell with a grin. &quot;Betcha can&#39;t hit the dinger like I just did!&quot; they called after him.<br /><br />Turning their attention back to the slip, Kinsey&#39;s grin returned yet more. &quot;You hear that, Rakko? A circus show! We should totally go! Maybe they have cool critters or something like that!&quot;<br /><br />The Grineer woman only smiled and nodded politely. &quot;I&#39;ll go with you, then.&quot;<br /><br />Kinsey nodded excitedly. &quot;Great! let&#39;s wander over in that direction and see what else there is to see around here!&quot;
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/136944676849582080/290779f99a7d8e2b6ff5d6d447ab4680.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">20-Nov-18 10:35 AM</span>
+
+                        <div class="chatlog__content">
+                            ~The Infested scurry through sparse the outskirts of the crowed, in pursuit of the children who had zoomed by not a moment ago.<br />They enter the left corridor.~
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/339116401815977986/3518ddf298607e561f49eef2e8b79a79.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rosencratz#3124">Rosencratz</span>
+                <span class="chatlog__timestamp">22-Nov-18 12:14 PM</span>
+
+                        <div class="chatlog__content">
+                            <b>Duzpin</b><br />You never expect for life to hit you as hard as it has. You always hear stories of what it can do to you, how it can shackle you and break you. The thought of hitting such a low part has been the farthest thing on Duzpin’s mind. Well…until those blasted Tenno started sinking their greedy hands in to the Index, causing a wild shift to the stock market, basically breaking it over night.<br /><br />So…what is a poor fucker with over 1.000 worthless mods to do? Go spend everything you own with a bang? HECK YEAH!<br /><br />So here he was, drinking his sorrow away, knowing he’s fucked and will probably be hunted and dragged to Fortuna…or shelved! HAH! What a horrible place to end up at huh?<br /><br />The commotion from his neighbors grabbed his attention and he peaked at them through his blurry vision. Now…being drunk is awesome! But…sure doesn’t help with boundaries. So, the instant he noticed the needle entering the unaware fucker, Duzpin let out a gasp, yelling over to them. <br /><br />“Ooooo! Ey ey! Gimme summm efff dat! Good shet eh?”<br /><br />He hopped off his seat…which was a bad call as his legs seemed to have lost all strength and he faceplanted the floor.<br /><br /><b>Test your Strength booth</b><br />The stall keeper smiles and nods towards the Tenno and their companion, but his gaze quickly hitches on a bystander that seems to show interest.<br /><br />“Ey ey! Step right up mista! Come on! See if you can outperform that child eh?”<br /><br />He smirked, coaxing Frez towards the booth.
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            _ _<br />---On the opposite end of the strength game – right across it – is a face painting booth. Hanging from the poles beside the area are rolls of paper with all of the offered face painting combinations. There is a playful kubrow one, a kavat with whiskers. A Eidolon themed one. Some yin and yang fish kind of thing going on and much more.<br /><br />Oh?! What&#39;s the sound? Near the face painting booth is another one...but with a much bigger crowd. The bright neon sign atop it read &quot;Whack the larvae&quot; The sound of people hitting something hard rings though this section. From what little they can see, people are gathered around small tables from which mechanical mimicks of Nidus&#39; larvae pop out from. People try to hit them fast with their soft batterangs before the little rascals retreat inside their infested holes. Each pop-up speeding up the movement of all the other<br /><br />BUT WAIT! That’s not all!<br />Nearby is another booth with a much smaller crowd. The writing atop it says “STEAL VAY HEK’S AIR” And from outside glance, it doesn’t seem that special of one. The clerk inside is screwing around on a data pad while the exhibition behind them displays the face of angry Vay Hek with a hollowed out mouth piece, a tube leading from it.---
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            _ _<br />---The little infestos will come across the two children further down the corridor, near it’s end. One was down on their knees, working on opening a shaft, while the other was standing behind them with arms crossed over their chest.---<br /><br /><b>Saggy</b><br />“Wot did I say? we &#39;it the jackpot &#39;ere! We just &#39;ave ter slide daahhhn and we&#39;re spiffy!”<br /><br />Spoke the one standing up with delivish hick in his voice.<br /><br /><b>Telly</b><br />“Oi oi, we still don’t kna if I&#39;m chuffin&#39; de correct shaft.”<br /><br />Mumbled the crouched one in a more stoic voice as they worked on unscrewing the nails on the shaft.<br /><br /><b>Saggy</b><br />“Psh! Ya dare doubt Biz!? &#39;e gave us the schematics &#39;imself&quot;<br /><br /><b>Telly</b><br />“Ey! ya mean &#39;e gave them ter the chuffin&#39; booners, we just &#39;ere cause we bleedin&#39; small enugh ter fit”<br /><br /><b>Saggy</b><br />The one standing just shrugged<br /><br />“Who cares?! We makin&#39; it big &#39;ere sis!&quot;
+
+                                <span class="chatlog__edited-timestamp" title="22-Nov-18 12:17 PM"></span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/136944676849582080/290779f99a7d8e2b6ff5d6d447ab4680.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">23-Nov-18 05:00 PM</span>
+
+                        <div class="chatlog__content">
+                            ~The trio of creature lay in wait, peering around the corner, waiting to see what the children before them would do. The creatures may not be smart, but they weren&#39;t dumb enough to scare the children away from leading them to their ultimate goal; the food!<br />The monsters quivered in excitement about how pleased the master would be if they consumed a lot of food and returned with their bellies full!~
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/490872041759571979/515647907169304591/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/490872041759571979/515647907169304591/unknown.png" />
+                            </a>
+                        </div>
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/358680374022242324/814092b501b8881e5c4d758c8fec6a16.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Darkjunior#0813">Darkjunior</span>
+                <span class="chatlog__timestamp">27-Nov-18 02:16 AM</span>
+
+                        <div class="chatlog__content">
+                            <b>FREZ</b><br />&quot;I mean... sure.&quot; Frez wasn&#39;t exactly &#39;strong&#39;. He was always sort of lanky, and was used to mostly carrying a weapon in his hands, and not too much else.  Sure, he&#39;s lifted his fair share of cargo crates, but this was a Grineer, and a... Okay, why was the kid here being watched by a Grineer? That just seems like a bad idea. Still, though, Frez gave a slight shrug as he changed his course to the Test Your Strength booth, pulling out a couple more credits to cover the cost of playing. Okay, how hard could this game be? Just gotta hit the thing really hard.
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/227906898219892736/40e4c7aff7c8d404f6fccbbbf93f0c86.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ross#8154">Ross</span>
+                <span class="chatlog__timestamp">29-Nov-18 01:50 AM</span>
+
+                        <div class="chatlog__content">
+                            <b>Kinsey and Rakko</b><br />Excited to see a little competition, Kinsey stood confidently next to Rakko with their arms crossed, watching as Frez payed to take a swing - heh - at the strength game.<br /><br />They seemed surprisingly confident for someone who&#39;d barely managed to hit the bell at all. Maybe they were stronger than their young appearance let on?
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/339116401815977986/3518ddf298607e561f49eef2e8b79a79.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rosencratz#3124">Rosencratz</span>
+                <span class="chatlog__timestamp">30-Nov-18 12:55 PM</span>
+
+                        <div class="chatlog__content">
+                            <b>Telly</b><br />The smaller of the kids, that was working on the shaft, managed to unscrew the last connectors, pocketing the last of the nails in one of her front pockets. Careful not to make too much noise, she opens up the shaft and lays the metal next to her.<br /><br />“Alright…you made sure we weren’t followed wite?”<br /><br />She looked up at her partner in crime, brows furrowed<br /><br /><b>Saggy</b><br />“Psh! ya kna me, I’m the bleedin&#39; sneak master!”<br /><br />He boasted with a shaking fist<br /><br /><b>Telly</b><br />She let out a sigh<br /><br />“Whatever! ya first, ya got the cushion!”<br /><br />She doesn’t give Saggy much time to prepare as she stood up and grabbed on to his shoulder, practically throwing him in the newly opened hole. The poor bastard only managed to let out a stiff scream as he flopped inside.<br /><br />Telly pauses and looks over her shoulder, but shrugs and jumps after her partner
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            _ _<br /><b>Test your Strength booth</b><br />“Oh ho ho! You gonna show it how it’s done eh?”<br /><br />He playfully nudges Frez with a bump of his elbow. The clerk nags the credits and steps back from the game, motioning with his hand at the replica Jat Kitag resting on top of the anvil.<br /><br />“Hard as you can now!”<br /><br />“Whoaa….can you feel this?”<br /><br />Spoke up a little cute voice next to Rakko. When looked down at the source of the voice the duo will see a little girl that can’t be older than 3 years. She is wearing a knee long white tunic and a pair of fluffy pink kubrodon ears that sit atop her shoulder length pale hair. She looks up at the grineer lady with those bright baby blue eyes of hers, her hand lightly touching on of Rakko’s leg stilts. That child like awe and amazement clearly evident in her gaze, as if she’s just seen the most wonderful thing in the system.
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/358680374022242324/814092b501b8881e5c4d758c8fec6a16.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Darkjunior#0813">Darkjunior</span>
+                <span class="chatlog__timestamp">06-Dec-18 12:16 PM</span>
+
+                        <div class="chatlog__content">
+                            <b>FREZ</b><br />Frez picked up the Jat Kitag, clearly not 100% sure how to hold it. He had never actually used a hammer, beyond repairs. He could lift a heavier Corpus gun, but he wasn&#39;t sure he had the strength for this. He had been trained to hit things with a prova, but was that the same as using a hammer? Probably not. Well... he already paid. May as well give this a try. Adjusting his grip on the hammer a bit, he shakily raised it over his head. Okay. 3... 2... 1... Wait, was he going on 1, or after 1? Okay, on one. 3... 2... 1! He swung down with the hammer, not even sure if he had a chance of doing well here. Probably not.
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/152349834785849344/5ba42f7d6d8f91f8ffafbc4bca9469db.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Disruptis#5503">Disruptis</span>
+                <span class="chatlog__timestamp">07-Dec-18 03:54 PM</span>
+
+                        <div class="chatlog__content">
+                            <b>???:</b><br />The stranger smiled. This was probably the closest he ever got to actually living up to the title of “doctor”. His profession was a strange one, true, but one he was very effective at it.<br /><br />“NAME UNIT RANK, OPERATIVE!”<br /><br /><b>Stahk:</b><br />“S..” Stahk blinked hard. The world spun woozily around him, like he was downing shots of hard liquor on a ship dodging through an asteroid belt. He didn’t even really put much thought into his next words, they just came out.<br /><br />“S...Stick, ARI-110-SwiftRegret, Rank Calvary…”<br /><br />And in that moment, everything hit him like a sack of nutrition bricks. His life up to that point hadn’t even made a lot of sense, had it? There were plot holes in his own memories. He was…<br /><br />...really mad.<br /><br /><b>Stick:</b><br />“D-Deco you piece of scrap!” the now enlightened Corpus cried out.<br /><br /><b>Dr. Deco:</b><br />Doctor Art Deco yanked the needle from Stick’s neck with a rictuslike grin. &quot;You&#39;ve run out of vacation days, Stick.&quot;
+
+                                <span class="chatlog__edited-timestamp" title="07-Dec-18 04:06 PM"></span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/227906898219892736/40e4c7aff7c8d404f6fccbbbf93f0c86.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ross#8154">Ross</span>
+                <span class="chatlog__timestamp">07-Dec-18 04:03 PM</span>
+
+                        <div class="chatlog__content">
+                            <b>Kinsey and Rakko</b><br />While Kinsey was distracted watching their new challenger, Rakko realized someone small was feeling her leg stilts. She looked down with a smile at the little girl at her feet.<br /><br />&quot;No little one, I don&#39;t feel them. You like them, yes? Long legs?&quot; She lifted her other leg and wiggled her somewhat moa-like toes. &quot;Special design. Makes me tall.&quot;<br /><br />&quot;Or...&quot; she smiled mischievously, &quot;I can be short!&quot; <br /><br />Moving forward slowly so as not to startle her little observer, Rakko slowly retracted the stilt legs until she was standing at her natural height, still smiling.
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/136944676849582080/290779f99a7d8e2b6ff5d6d447ab4680.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">11-Dec-18 12:47 AM</span>
+
+                        <div class="chatlog__content">
+                            ~The three creatures, now with the open passage before them, quickly lurched across the ground next to the hole before peering inside.<br />They babbled amongst each other, arguing and chittering, pointing up and then pointing down.<br />The tallest one grabbed the small one and threw it into the hole, the creature disappearing as the hole gobbled up the creature&#39;s form.<br />The medium one went next, throwing its bag in first before jumping in. The tall one looked around before quickly hopping in after its brethren.~
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/339116401815977986/3518ddf298607e561f49eef2e8b79a79.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rosencratz#3124">Rosencratz</span>
+                <span class="chatlog__timestamp">17-Dec-18 12:03 PM</span>
+
+                        <div class="chatlog__content">
+                            <b>Test your Strength booth</b><br />And the piston went up and up, traveling along the huge pole quite fast but…the velocity quickly cut off and stopped just at the 70% mark before it started it’s decent.<br /><br />“Ouf!”<br /><br />Yelled out the clerk as he started his approach towards Frez with his arms clasped behind his back<br /><br />“Well…don’t feel too bad boyo, you don’t have their…”<br /><br />He pauses to point with a subtle twitch of his chin towards Kinsey<br /><br />“…affinity for power eh?”<br /><br />He chuckled as he stopped just a arms length away from Frez. He takes a second to look at the floof that was in the others possession before lifting his gaze back at his face, smile in place!<br /><br />“Tell you what…you can try and go for another round, OR! We trade huh? The floof for a chance at MY mystery box”<br /><br />He wiggles his eyebrows in a challenging way, waiting for the reply<br /><br /><b>Little girl</b><br />The young child kept observing Rakko with that awe inducing gaze of hers. In her little short life she has never seen anyone like this person, so different, so new, so curious! People like this existed?! Where are they then?! Or is just this one special?! She retreats her hand as Rakko stepped away from her and her mouth only dropped further as the Grineer lady dropped down in her height<br /><br />“Wow!”<br /><br />She exclaimed, her lips pulling back to reveal a true childlike smile. Her hands coming up to clap out of sheer happiness.<br /><br />“Oh oh! It looks funny if you leave one big and one small?”<br /><br />She laughed, trying to imagine the sight.
+
+                                <span class="chatlog__edited-timestamp" title="17-Dec-18 12:08 PM"></span>
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            _ _<br />---The travel down the tube system is all but pleasant, turns here and there that will use the momentum of the slide to violently trash the poor creatures against the walls. However, lucky for them, it doesn’t last long enough to cause any vital damage. At the end of the rough slide, they will be met with a unexpected soft cushion, one that the kids probably used to get down from the ride safely.<br /><br />Despite the soft welcoming, the room they land in is pitch black. A moist air around them that chills the area giving it the feel as if they just dropped in to a freezer---
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/136944676849582080/290779f99a7d8e2b6ff5d6d447ab4680.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">17-Dec-18 09:49 PM</span>
+
+                        <div class="chatlog__content">
+                            ~The trio shivers- they were adapted to survive in warm, humid atmospheres. Fortunately, the beings were used to living in darkness. After a few moments, the perceived darkness of the room would decrease as the Infested things&#39; eyes adjusted.<br />Nonetheless, the trio made a staccato triplet of loud squeaks as they landed on the cushion.<br />They slowly get up, feeling around the room before their vision would reveal what the area actually looked like.~
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/152349834785849344/5ba42f7d6d8f91f8ffafbc4bca9469db.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Disruptis#5503">Disruptis</span>
+                <span class="chatlog__timestamp">18-Dec-18 11:09 PM</span>
+
+                        <div class="chatlog__content">
+                            <b>Stick:</b><br />“So,” Stick continued, now downing the provided drink like it was merely water, “Why in grofit’s sake was I pulled early?”<br /><br /><b>Dr. Deco:</b><br />Dr. Deco held both arms out wide in a grandiose gesture. “The future, Stick. The future,” he waved down a waitress in hope of securing another round of drinks. “Except this time, you’re on a different side. We… ‘traded’ for you.”<br /><br /><b>Stick:</b><br />“What?&quot; Stick interjected in confusion, &quot;what do you mean? Are you not COE anymore? Who would RU even trade to?” <br /><br /><b>Dr. Deco:</b><br />A sly smile parted the doctor’s lips. “A lot changes in a decade, Stick. There’s been a few things that have brought the con’ closer to its enemies...” he leaned forward on both elbows “...and you’re going to find out when you work for them.”<br /><br /><b>Stick:</b><br />Stick’s limbs quickly fell numb. Pure terror splashed across the operative’s face as he looked up into Deco’s snaky eyes. He mouthed two words. <i>They wouldn’t.</i><br /><br /><b>Dr. Deco:</b><br />“You’re being loaned to the Confederation, Stick. Drink up.”
+
+                                <span class="chatlog__edited-timestamp" title="13-Apr-19 07:34 PM"></span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/358680374022242324/814092b501b8881e5c4d758c8fec6a16.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Darkjunior#0813">Darkjunior</span>
+                <span class="chatlog__timestamp">19-Dec-18 09:14 AM</span>
+
+                        <div class="chatlog__content">
+                            <b>FREZ</b><br />Frez was honestly sort of expecting that. He didn&#39;t really figure he had quite the physical strength. But... he had tried. He was about to walk away to go check out that circus, when the clerk interrupted him with the offer. The Floof, for a chance at a better prize... Hmmm... There might be something interesting... but... Well, this was soft, and it didn&#39;t want to kill him. He could always buy a circus ticket, too... right?<br /><br />&quot;I&#39;ll, uh... I&#39;ll pass...&quot; Frez answered the clerk, glancing to the floof quickly, which was currently held under one of his arms. &quot;Thanks for the... er... the offer, though... Think I&#39;ll keep this, though...&quot;
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/227906898219892736/40e4c7aff7c8d404f6fccbbbf93f0c86.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ross#8154">Ross</span>
+                <span class="chatlog__timestamp">24-Dec-18 02:20 PM</span>
+
+                        <div class="chatlog__content">
+                            <b>Kinsey and Rakko</b><br />Kinsey grinned confidently as the slider failed to reach the bell. &quot;Ha-HA!&quot; they cheered! &quot;I&#39;m still the strongest!!&quot;<br /><br />&quot;Good effort though, mister!&quot; they said, still grinning. &quot;Good effort for sure! Maybe with a bit of a workout you can make it!&quot;<br /><br />Rakko, meanwhile, was still having fun with her tiny admirer. &quot;Special design, yes? One of a kind!&quot; she said with a smile. Though her teeth weren&#39;t perfect and her gums were stained with dark splotches, the expression still looked friendly as ever.
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/339116401815977986/3518ddf298607e561f49eef2e8b79a79.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rosencratz#3124">Rosencratz</span>
+                <span class="chatlog__timestamp">28-Dec-18 12:03 PM</span>
+
+                        <div class="chatlog__content">
+                            ---As the light-starved environment starts taking shape to the infested creatures, they will take note of the room they dropped down in to. There are steel pipes going against all of the walls, possibly carrying coolant in to their destinations and thus the cause of the low temperature in the room. The floor is made of marbles, smooth to the touch, cold to be felt. Against the right wall there seems to be a –<br /><br />“WHOS THERE?! HANDS UP!”<br /><br />Shouted a high-pitched, yet demanding voice and the creatures get bombarded by light, coming from the front. The blinding illumination making it impossible for them to see anything past it.---<br /><br /><b>Clerk</b><br />The man pouted, rather deeply, as Frez rejected his proposal. He seemed to really want the plushie but ey…what is a poor fella to do? Steal it? NAH! <br /><br />“Ahhhh…a determined man I see…well…go then! Be free birdie!”<br /><br />He feinted a mocking gesture with his hands, as if shooing a unwanted kitty.<br /><br /><b>Little girl</b><br />She didn’t seem frightened by the crooked smile of the Grineer lady, in fact it caused her to smile wider, giggling all the way.<br /><br />“Did you make them? Or…no wait!”<br /><br />She slapped her right cheek as if being struck by a sudden realization. She outstretches her right hand forwards, towards Rakko, that smile of hers never wavering<br /><br />“Mommy always told me about manners! So…my name is Liliana! You?”<br /><br />---Another jingle rippled through the floor from the speakers mounted at the very top of the supporting pillars, and through them spoke the familiar slithering voice<br /><br />“I’m back you fuckers! But I’m gonna keep this short cause I know you all balls deep in your <b>entertainments</b>, if you know what I mean! Ha-hahaaaa!”<br /><br />The speaker pauses to clear his throat before continuing
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            _ _<br />“Anyways! A tinny bit here. The special circus show will start in some 20-ish minutes! So! Anyone that has one of these brilliant VIP tickets better be stopping fucking about and head down to level two where a escort will point you down the right path. Oh! Also! The Carnival show will be up in…I don’t know! Soon I think! So give that a glance on the fourth floor if you want to fucking enjoy your self. That is all!”<br /><br />The jingle repeats itself and life goes on---
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/136944676849582080/290779f99a7d8e2b6ff5d6d447ab4680.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">04-Jan-19 06:11 PM</span>
+
+                        <div class="chatlog__content">
+                            ~The Infested beings shrieked in alarm, unleashing a cacophony of terrifying noises that had no business being anywhere other than in the oldest, most rotted Orokin Derelicts of them all.<br />In a flash, the three bound around the area in random directions at top speed, partially blinded, swiping at the air with their long fingers. Saliva sprayed from their maws as they frothed in panic.~
+
+                                <span class="chatlog__edited-timestamp" title="05-Jan-19 05:12 PM"></span>
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/490872041759571979/530885990810910730/infesto_ahh.wav">
+                                
+                                    Attachment: infesto_ahh.wav (1 MB)
+                            </a>
+                        </div>
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/358680374022242324/814092b501b8881e5c4d758c8fec6a16.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Darkjunior#0813">Darkjunior</span>
+                <span class="chatlog__timestamp">06-Jan-19 12:15 AM</span>
+
+                        <div class="chatlog__content">
+                            <b>FREZ</b><br />Clearly, he wasn&#39;t wanted here. Frez nodded to the clerk and waved to Kinsey, before walking off to go... somewhere? Maybe he should finally check out the show. What else was he going to do with his time and money, besides play more games? He could always buy some more overpriced food, if he really needed to. He started making his way for the elevator, keeping an eye out for anything out of the ordinary. Even on vacation, he was paranoid. Then again, given his history with vacations, can you really blame him?
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/227906898219892736/40e4c7aff7c8d404f6fccbbbf93f0c86.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ross#8154">Ross</span>
+                <span class="chatlog__timestamp">06-Jan-19 12:42 AM</span>
+
+                        <div class="chatlog__content">
+                            <b>Kinsey and Rakko</b><br />The tall Grineer woman nodded at the young girl&#39;s question. &quot;Not me,&quot; she explained, &quot;my brother at home! Special made, just for me!&quot;<br /><br />Rakko&#39;s eyes widened in exaggerated surprise as the topic of manners was brought up. &quot;Oh! Yes, my name...Rakko!&quot;<br /><br />She smiled down at Lilliana for a moment, and seemed about ready to return to Kinsey, when the chime sounded.<br /><br />&quot;Kinsey!&quot; she called, making use of her long stride to approach the tenno quickly, &quot;You have special ticket?&quot;<br /><br />&quot;Yeah! We should get going. Hey uh, mister!&quot; they said to Frez, patting him on the shoulder to get his attention as he walked away. Once they knew he was listening, they stood up as tall as they could to whisper to him. Up close, they smelled faintly of engine grease.<br /><br /> &quot;I got one of those special tickets! Wanna see how many tickets&#39; worth of folks we can squeeze outta this thing for the tour or whatever it is? I&#39;m thinking maybe I can get a few more people in with just the one ticket.&quot;
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/152349834785849344/5ba42f7d6d8f91f8ffafbc4bca9469db.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Disruptis#5503">Disruptis</span>
+                <span class="chatlog__timestamp">10-Jan-19 04:06 PM</span>
+
+                        <div class="chatlog__content">
+                            <b>Stick:</b><br />The smell of roasting pork filled Stick’s lungs as he and Deco approached an elevator that would take them to the landing hangar.<br /><br />“So will I be getting a briefing or shall I be mission-bound right away?” Stick inquired. His prim, high-class accent was starting to slip back into his pronunciation.<br /><br /><b>Dr. Deco:</b><br />“RU never sleeps, Stick, and neither do we.” Deco was chewing on a tough piece of Kuaka shish kebab as they walked. He always ate meat obnoxiously with his mouth open, unless it was a tender steak.<br /><br />“I’m dropping you right off at our incidence point.”<br /><br /><b>Stick:</b><br />&quot;Wait, <i>what</i>? Incidence?!&quot; Stick exclaimed, &quot;you mean I’m to be a part of one of those shady deals where two organizations ‘lose’ their assets and ‘gain’ the other’s at the same time? Why the shenanigans?&quot; They stopped in front of the elevator shaft and Stick slid a hand over the controls, summoning a transport from far above.<br /><br /><b>Dr. Deco:</b><br />“Beats me,&quot; Deco replied with a lazy shrug, &quot;probably because they don’t want people to know they asked an employee to turn over to the dark side.”<br /><br /><b>Stick:</b><br />“..and yet they told you?”<br /><br /><b>Dr. Deco:</b><br />The high-pitched whine of the moving elevator turned into a clanking as the door swung open. “Yeah. If you haven’t caught on yet, I’m already in the underbelly of, well, everything.”<br /><br />He cracked another sly smile and slurped up the rest of his kebab. “I’m the doc with a body count.”<br /><br /><b>Stick:</b><br />“True,” Stick conceded as they entered, “but that doesn’t mean you aren’t one foot away from being thrown in a cell yourself.”<br /><br /><b>Dr. Deco:</b><br />“Ha!” Deco bellowed. He slapped their designated floor button with the back of his hand. “You think they’ll seed me for having a bit of gadgetry? They’ll get the fathermucker who’s a kavat first!”
+
+                                <span class="chatlog__edited-timestamp" title="22-Jan-19 09:22 AM"></span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/339116401815977986/3518ddf298607e561f49eef2e8b79a79.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rosencratz#3124">Rosencratz</span>
+                <span class="chatlog__timestamp">15-Jan-19 12:25 PM</span>
+
+                        <div class="chatlog__content">
+                            ---The trio infestos scrambled for their lives, walking in a comical fashion in to the cold walls or solid pipe lines that go along the room. If coordinated well they will even find cover behind the pipes---<br /><br /> “&#39;Olly ell! Wot the muck?!<br />Yelled out the voice, unprepared for the unwholly screech, making them let go of the flashlight in a burst of shock. The light lands to the floor with a metallic clang, rolling a bit to the left where it illuminates that part of the room, no longer a weapon of mass interrogation.<br /><br />“Geezus! I’m gonna need a ear peck up, blimey!”<br /><br />Another voice ringed out, a bit deeper than the first one. <br /><br />“Wot the chuffin&#39; &#39;eck was that?! Did ya clock them?” The lighter one spoke through<br /><br />“Bobby did…but uhhhh….&#39;ello?” Yelled out the deeper one<br /><br />Since the flashlight was left on the floor, to cast shadows across the entire room from the left, the creatures will be able to make out two silhouettes standing by the door, small ones at that, children.<br /><br /><b>Liliana</b><br />The little girl smiles at Rakko but she didn’t seem as done with her as the other thought. She will reach out to tug the Grineer lady by the hand, to get her attention<br /><br />“Can I?”<br /><br />I shyly says, her big eyes looking at Rakko’s shoulders<br /><br />“Have a feel? Of how it is to be so tall!”
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            _ _<br />---The elevator preforms it’s duty, bringing the duo up to the top floor of the extravagant entertainment cruiser, where the hangar resided. Once the door opened they will be presented in to a spacious and enormous room that stretches as far as they can see. All of the floors ones bellow the first one are chopped up in to segments, not this one! This one has no walls (apart from the outer ones) stretching in one whole segment with the dual purpose of docking area for ships and at the same time being a storage for them. Across the entire left wall there are docking and takeoff runways which lead like tubes out in to the vastness of space, the end of them enclosed in domes for the oncoming or departing ships. There are mechanical rail leading from each of the runways that carry any docking ship on to the storing area that stretches across the entire right segment of the hangar. Every landing craft has it’s own spot on the mechanical grid that shuffles about the ships when parking or departing, like a huge technological manifestation of the Rubik’s cube. Every resident has a card or a number that has been sent to their pads upon docking with the exact location of their ship within the grid, once that information has been put in to one of the consoles that are stationed up in front of the elevator as well as right next to the runways, the grid will shuffle the landing crafts till the desired ship has been presented in to the runway for a easy getaway. <br /><br />No more walking about endlessly wondering where you parked, or having to stress over your neighbors poor parking skills. No no, Madam Bourgoar takes care of all needs so that you don’t have to fret over little things such as these.---
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/490872041759571979/534785218280816680/Madam_Bourgoar_hangar.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/490872041759571979/534785218280816680/Madam_Bourgoar_hangar.png" />
+                            </a>
+                        </div>
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/358680374022242324/814092b501b8881e5c4d758c8fec6a16.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Darkjunior#0813">Darkjunior</span>
+                <span class="chatlog__timestamp">16-Jan-19 12:58 PM</span>
+
+                        <div class="chatlog__content">
+                            <b>FREZ</b><br />Hmmm... Should he accept the offer? Was it worth it? His inner Corpus was saying to go for it, to save money on this trip. He didn&#39;t want to intrude, though... Then again, Kinsey <i>was</i> offering to let Frez go with them. Decisions were difficult... Frez hesitated before answering as he pondered this. If he <i>was</i> on vacation, it might be worth it.<br /><br />&quot;Uh... sure, thanks.&quot; Frez answered Kinsey finally. He didn&#39;t sound entirely sure, but he agreed nonetheless. He stopped walking away from the booth, but kept an eye on the clerk out of the corner of his eye. Seeing as this guy really wanted the floof, Frez was a bit suspicious. Probably nothing, but... He knew that people sometimes obsessed over stuff like this.
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/227906898219892736/40e4c7aff7c8d404f6fccbbbf93f0c86.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ross#8154">Ross</span>
+                <span class="chatlog__timestamp">20-Jan-19 01:10 PM</span>
+
+                        <div class="chatlog__content">
+                            <b>Kinsey and Rakko</b><br />&quot;Hahaha! Yesss!&quot; Kinsey said, giving Frez a friendly slap on the shoulder. &quot;Good choice, mister! Let&#39;s head on up there and squeeze this ticket for all it&#39;s worth! C&#39;mon Rakko!&quot;<br /><br />Rakko, who was already trying to find a polite explanation to why a grineer woman may get in trouble for picking up someone&#39;s daughter, glanced to Kinsey and nodded. Looking down at Liliana, she smiled again, this time apologetically. &quot;Sorry little sister, I leave now. Maybe we talk again later?&quot;
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/152349834785849344/5ba42f7d6d8f91f8ffafbc4bca9469db.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Disruptis#5503">Disruptis</span>
+                <span class="chatlog__timestamp">27-Jan-19 08:53 PM</span>
+
+                        <div class="chatlog__content">
+                            <b>Dr. Deco</b><br />Deco strode into the spacious hangar with an arm tucked behind his back, Stick following close behind. They pulled up to one of the nearest consoles which Deco began tapping on. The doctor had memorized the number before-hand and deleted the message. Force of habit, at this point.<br /><br /><i>1 0 1 1 E 1 1 0 1 B… uh...</i><br /><br />“Agh,” Deco grunted, pressing a hand against his forehead, “ hey Stick, what was taste of ferrite again?”<br /><br /><b>Stick:</b><br />“Hm?” Stick raised an eyebrow. “Oh, your mind-map techniques with old codes, right. Uh…”<br /><br />The operative leaned over and thought for a moment.<br /><br />“...powdered scrap on Pluto.”<br /><br /><b>Dr. Deco</b><br />“Got it,” Deco responded, finishing the string. He punched the accept button and stepped back to watch the chain.
+
+                                <span class="chatlog__edited-timestamp" title="29-Jan-19 10:59 PM"></span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/136944676849582080/290779f99a7d8e2b6ff5d6d447ab4680.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">15-Feb-19 09:38 AM</span>
+
+                        <div class="chatlog__content">
+                            ~With the light now away, the Infested, roly-poly individuals stopped their screeches and ran to various corners of the room. They kept eyes on each other, using their improved dark-vision to make out each others&#39; shapes.<br />They decreased the brightness of their bioluminescent pustules and remained still, perspiration dripping from their mouths as they lay anxiously in hiding.~
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/339116401815977986/3518ddf298607e561f49eef2e8b79a79.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rosencratz#3124">Rosencratz</span>
+                <span class="chatlog__timestamp">15-Feb-19 11:41 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="mention" title="Ross#8154">@Ross</span> <span class="mention" title="Darkjunior#0813">@Darkjunior</span> <br /><b>Liliana</b><br />A deep pout curled the little girls lip as the big lady didn’t lift her up, she crossed her arms in front of her chest and HUMPED, sticking out her tongue at the lady in a playful manner. She parted her lips to reply to Rakko but a sudden shout made her freeze in shock.<br />“Lilianaaaaa! Where are youuuuuuuu?! We don’t have time for this!”<br />A light voice pierced the crowd and the little girl visibly shook. “Oh hhhhhh” she hissed and quickly turned around, panic evident on her chubby face as she darted down the hall away from the voice, towards a crowd.<br /><br /><span class="mention" title="Disruptis#5503">@Disruptis</span> <br />--The mechanism groaned to life as the matrix started to shift, rearranging the cubicles to present the desired craft atop the domed platform. It didn’t take too long for the craft to pull up to the bay for it was pretty close by to start with. With one final clank, the craft has been strapped in and awaits the launching input from it’s pilot---<br /><br /><span class="mention" title="jado the man#0685">@jado the man</span> <br />“Ah screw it! We don’t &#39;ave nickle and dime for this! Let’s go!”<br />Before the other could protest, they end up being yanked out of the room and through the only door in the room.  The warm smell of something being freshly baked starting to seep through the cold room as the door is left adjacent. The flashlight being abandoned on the floor
+
+                                <span class="chatlog__edited-timestamp" title="01-Mar-19 12:34 PM"></span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/152349834785849344/5ba42f7d6d8f91f8ffafbc4bca9469db.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Disruptis#5503">Disruptis</span>
+                <span class="chatlog__timestamp">18-Apr-19 11:45 PM</span>
+
+                        <div class="chatlog__content">
+                            The two stopped in front of a standard Corpus hopper ship sporting stripes of emerald and ebony painted on its typically plain hull. It regally bore an /RU Corp logo on its roof, and appeared to be outfitted with what looked like outrageous boosters on its back. Deco fished a remote out of his lab coat and activated it, opening the landing ramp in front of them with a hollow hiss.<br /><br />“Do you remember how to fly?” Deco asked the operative behind him.<br /><br /><b>Stick:</b><br />“An ari never forgets.”<br /><br /><b>Dr. Deco</b><br />“Ha! Then you can do it instead!” Deco bellowed, “I’m drunk as an Ostron on new year&#39;s eve!” With that, he stumbled up the rampart as if to emphasize his point. &quot;Get us out of here!”<br /><br /><b>Stick:</b><br />Stick sighed inwardly, then followed the doctor’s clacking metal feet. <i>I hope this trip takes its sweet time...</i><br /><br /><i>TKTKTK</i><br /><br />Three burst shots rang out faster than either RU Corp employee could react, and Deco fell over backwards.<br /><br /><b>???:</b><br />“Good evening, gentlemen,” a guttural, yet distinctly feminine voice called out from up the ramp. Stick instinctively threw himself away but it was too late. A sharp claw-like weapon dug into his right shoulder, sending a vicious pain coursing through his adrenaline-packed nervous system.<br /><br />“I’ll be taking you now. Dispose of the trash if you will, Decore.” As the Corpus’s vision swam, he was able to make out the face of a monster pulled from some sort of wretched depth. He blacked out................
+
+                                <span class="chatlog__edited-timestamp" title="22-Apr-19 01:15 PM"></span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/339116401815977986/3518ddf298607e561f49eef2e8b79a79.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rosencratz#3124">Rosencratz</span>
+                <span class="chatlog__timestamp">22-Apr-19 09:31 AM</span>
+
+                        <div class="chatlog__content">
+                            ---And the show went on. The carnival spinning it’s cotton candy of sweetness, unknown to all that under all the puffy exterior, it hides a murky tale of pasts presents and futures. But it is a story for another time it seems. For now, the laughter and cheer spreads across the massive ship, the passengers content with the shallow mirage.---
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/339116401815977986/3518ddf298607e561f49eef2e8b79a79.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rosencratz#3124">Rosencratz</span>
+                <span class="chatlog__timestamp">22-Apr-19 01:58 PM</span>
+
+                        <div class="chatlog__content">
+                            [END RP]
+
+                        </div>
+
+
+
+                        <div class="chatlog__reactions">
+                                <div class="chatlog__reaction">
+                                    <span class="chatlog__reaction-emoji">
+                                            🇫
+                                    </span>
+                                    <span class="chatlog__reaction-count">2</span>
+                                </div>
+                        </div>
+            </div>
+        </div>
+</div>
+
+</body>
+</html>

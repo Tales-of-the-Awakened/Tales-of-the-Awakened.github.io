@@ -1,0 +1,2555 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tales of the Awakened [Warframe RP Community] - hyperion-ascended</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <style>
+        /* General */
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-300.woff);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-400.woff);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-500.woff);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-600.woff);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-700.woff);
+    font-weight: 700;
+}
+
+body {
+    font-family: "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    object-fit: contain;
+}
+
+.markdown {
+    max-width: 100%;
+    line-height: 1.3;
+    overflow-wrap: break-word;
+}
+
+.preserve-whitespace {
+    white-space: pre-wrap;
+}
+
+.spoiler {
+    /* width: fit-content; */
+    display: inline-block;
+    /* This is more consistent across browsers, the old attribute worked well under Chrome but not FireFox. */
+}
+
+.spoiler--hidden {
+    cursor: pointer;
+}
+
+.spoiler-text {
+    border-radius: 3px;
+}
+
+.spoiler--hidden .spoiler-text {
+    color: rgba(0, 0, 0, 0);
+}
+
+.spoiler--hidden .spoiler-text::selection {
+    color: rgba(0, 0, 0, 0);
+}
+
+.spoiler-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.spoiler--hidden .spoiler-image {
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.spoiler--hidden .spoiler-image * {
+    filter: blur(44px);
+}
+
+.spoiler--hidden .spoiler-image:after {
+    content: "SPOILER";
+    color: #dcddde;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    padding: 100%;
+    border-radius: 20px;
+    letter-spacing: 0.05em;
+    font-size: 0.9em;
+}
+
+.spoiler--hidden:hover .spoiler-image:after {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.quote {
+    margin: 0.1em 0;
+    padding-left: 0.6em;
+    border-left: 4px solid;
+    border-radius: 3px;
+}
+
+.pre {
+    font-family: "Consolas", "Courier New", Courier, monospace;
+}
+
+.pre--multiline {
+    margin-top: 0.25em;
+    padding: 0.5em;
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+.pre--inline {
+    padding: 2px;
+    border-radius: 3px;
+    font-size: 0.85em;
+}
+
+.mention {
+    border-radius: 3px;
+    padding: 0 2px;
+    color: #7289da;
+    background: rgba(114, 137, 218, .1);
+    font-weight: 500;
+}
+
+.emoji {
+    width: 1.25em;
+    height: 1.25em;
+    margin: 0 0.06em;
+    vertical-align: -0.4em;
+}
+
+.emoji--small {
+    width: 1em;
+    height: 1em;
+}
+
+.emoji--large {
+    width: 2.8em;
+    height: 2.8em;
+}
+
+/* Preamble */
+
+.preamble {
+    display: grid;
+    margin: 0 0.3em 0.6em 0.3em;
+    max-width: 100%;
+    grid-template-columns: auto 1fr;
+}
+
+.preamble__guild-icon-container {
+    grid-column: 1;
+}
+
+.preamble__guild-icon {
+    max-width: 88px;
+    max-height: 88px;
+}
+
+.preamble__entries-container {
+    grid-column: 2;
+    margin-left: 0.6em;
+}
+
+.preamble__entry {
+    font-size: 1.4em;
+}
+
+.preamble__entry--small {
+    font-size: 1em;
+}
+
+/* Chatlog */
+
+.chatlog {
+    max-width: 100%;
+}
+
+.chatlog__message-group {
+    display: grid;
+    margin: 0 0.6em;
+    padding: 0.9em 0;
+    border-top: 1px solid;
+    grid-template-columns: auto 1fr;
+}
+
+.chatlog__reference-symbol {
+    grid-column: 1;
+    border-style: solid;
+    border-width: 2px 0 0 2px;
+    border-radius: 8px 0 0 0;
+    margin-left: 16px;
+    margin-top: 8px;
+}
+
+.chatlog__reference {
+    display: flex;
+    grid-column: 2;
+    margin-left: 1.2em;
+    margin-bottom: 0.25em;
+    font-size: 0.875em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    align-items: center;
+}
+
+.chatlog__reference-avatar {
+    border-radius: 50%;
+    height: 16px;
+    width: 16px;
+    margin-right: 0.25em;
+}
+
+.chatlog__reference-name {
+    margin-right: 0.25em;
+    font-weight: 600;
+}
+
+.chatlog__reference-link {
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.chatlog__reference-link:hover {
+    text-decoration: none;
+}
+
+.chatlog__reference-content > * {
+    display: inline;
+}
+
+.chatlog__reference-edited-timestamp {
+    margin-left: 0.25em;
+    font-size: 0.8em;
+}
+
+.chatlog__author-avatar-container {
+    grid-column: 1;
+    width: 40px;
+    height: 40px;
+}
+
+.chatlog__author-avatar {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.chatlog__messages {
+    grid-column: 2;
+    margin-left: 1.2em;
+    min-width: 50%;
+}
+
+.chatlog__author-name {
+    font-weight: 500;
+}
+
+.chatlog__timestamp {
+    margin-left: 0.3em;
+    font-size: 0.75em;
+}
+
+.chatlog__message {
+    padding: 0.1em 0.3em;
+    margin: 0 -0.3em;
+    background-color: transparent;
+    transition: background-color 1s ease;
+}
+
+.chatlog__content {
+    font-size: 0.95em;
+    word-wrap: break-word;
+}
+
+.chatlog__edited-timestamp {
+    margin-left: 0.15em;
+    font-size: 0.8em;
+}
+
+.chatlog__attachment {
+    margin-top: 0.3em;
+}
+
+.chatlog__attachment-thumbnail {
+    vertical-align: top;
+    max-width: 45vw;
+    max-height: 500px;
+    border-radius: 3px;
+}
+
+.chatlog__attachment-container {
+    height: 40px;
+    width: 100%;
+    max-width: 520px;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.chatlog__attachment-icon {
+    float: left;
+    height: 100%;
+    margin-right: 10px;
+}
+
+.chatlog__attachment-icon > .a {
+    fill: #f4f5fb;
+    d: path("M50,935a25,25,0,0,1-25-25V50A25,25,0,0,1,50,25H519.6L695,201.32V910a25,25,0,0,1-25,25Z");
+}
+
+.chatlog__attachment-icon > .b {
+    fill: #7789c4;
+    d: path("M509.21,50,670,211.63V910H50V50H509.21M530,0H50A50,50,0,0,0,0,50V910a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50h0V191Z");
+}
+
+.chatlog__attachment-icon > .c {
+    fill: #f4f5fb;
+    d: path("M530,215a25,25,0,0,1-25-25V50a25,25,0,0,1,16.23-23.41L693.41,198.77A25,25,0,0,1,670,215Z");
+}
+
+.chatlog__attachment-icon > .d {
+    fill: #7789c4;
+    d: path("M530,70.71,649.29,190H530V70.71M530,0a50,50,0,0,0-50,50V190a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50Z");
+}
+
+.chatlog__attachment-filesize {
+    color: #72767d;
+    font-size: 12px;
+}
+
+.chatlog__attachment-filename {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.chatlog__embed {
+    display: flex;
+    margin-top: 0.3em;
+    max-width: 520px;
+}
+
+.chatlog__embed-color-pill {
+    flex-shrink: 0;
+    width: 0.25em;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.chatlog__embed-content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em 0.6em;
+    border: 1px solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.chatlog__embed-content {
+    display: flex;
+    width: 100%;
+}
+
+.chatlog__embed-text {
+    flex: 1;
+}
+
+.chatlog__embed-author {
+    display: flex;
+    margin-bottom: 0.3em;
+    align-items: center;
+}
+
+.chatlog__embed-author-icon {
+    margin-right: 0.5em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.chatlog__embed-author-name {
+    font-size: 0.875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-title {
+    margin-bottom: 0.2em;
+    font-size: 0.875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-description {
+    font-weight: 500;
+    font-size: 0.85em;
+}
+
+.chatlog__embed-fields {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chatlog__embed-field {
+    flex: 0;
+    min-width: 100%;
+    max-width: 506px;
+    padding-top: 0.6em;
+    font-size: 0.875em;
+}
+
+.chatlog__embed-field--inline {
+    flex: 1;
+    flex-basis: auto;
+    min-width: 150px;
+}
+
+.chatlog__embed-field-name {
+    margin-bottom: 0.2em;
+    font-weight: 600;
+}
+
+.chatlog__embed-field-value {
+    font-weight: 500;
+}
+
+.chatlog__embed-thumbnail {
+    flex: 0;
+    margin-left: 1.2em;
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-image-container {
+    margin-top: 0.6em;
+}
+
+.chatlog__embed-image {
+    max-width: 500px;
+    max-height: 400px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-footer {
+    margin-top: 0.6em;
+}
+
+.chatlog__embed-footer-icon {
+    margin-right: 0.2em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.chatlog__embed-footer-text {
+    font-size: 0.75em;
+    font-weight: 500;
+}
+
+.chatlog__reactions {
+    display: flex;
+}
+
+.chatlog__reaction {
+    display: flex;
+    align-items: center;
+    margin: 0.35em 0.1em 0.1em 0.1em;
+    padding: 0.2em 0.35em;
+    border-radius: 3px;
+}
+
+.chatlog__reaction-count {
+    min-width: 9px;
+    margin-left: 0.35em;
+    font-size: 0.875em;
+}
+
+.chatlog__bot-tag {
+    position: relative;
+    top: -.2em;
+    margin-left: 0.3em;
+    padding: 0.05em 0.3em;
+    border-radius: 3px;
+    vertical-align: middle;
+    line-height: 1.3;
+    background: #7289da;
+    color: #ffffff;
+    font-size: 0.625em;
+    font-weight: 500;
+}
+
+/* Postamble */
+
+.postamble {
+    margin: 1.4em 0.3em 0.6em 0.3em;
+    padding: 1em;
+    border-top: 1px solid;
+}
+    </style>
+    <style>
+        /* General */
+
+body {
+    background-color: #36393e;
+    color: #dcddde;
+}
+
+a {
+    color: #0096cf;
+}
+
+.spoiler-text {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.spoiler--hidden .spoiler-text {
+    background-color: #202225;
+}
+
+.spoiler--hidden:hover .spoiler-text {
+    background-color: rgba(32, 34, 37, 0.8);
+}
+
+.quote {
+    border-color: #4f545c;
+}
+
+.pre {
+    background-color: #2f3136 !important;
+}
+
+.pre--multiline {
+    border-color: #282b30 !important;
+    color: #b9bbbe !important;
+}
+
+/* === Preamble === */
+
+.preamble__entry {
+    color: #ffffff;
+}
+
+/* Chatlog */
+
+.chatlog__message-group {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.chatlog__reference-symbol {
+    border-color: #4f545c;
+}
+
+.chatlog__reference {
+    color: #b5b6b8;
+}
+
+.chatlog__reference-link {
+    color: #b5b6b8;
+}
+
+.chatlog__reference-link:hover {
+    color: #ffffff;
+}
+
+.chatlog__reference-edited-timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__author-name {
+    color: #ffffff;
+}
+
+.chatlog__timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__message--highlighted {
+    background-color: rgba(114, 137, 218, 0.2) !important;
+}
+
+.chatlog__message--pinned {
+    background-color: rgba(249, 168, 37, 0.05);
+}
+
+.chatlog__attachment-container {
+    background-color: #2f3136;
+    border-color: #292b2f;
+}
+
+.chatlog__edited-timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__embed-color-pill--default {
+    background-color: rgba(79, 84, 92, 1);
+}
+
+.chatlog__embed-content-container {
+    background-color: rgba(46, 48, 54, 0.3);
+    border-color: rgba(46, 48, 54, 0.6);
+}
+
+.chatlog__embed-author-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-author-name-link {
+    color: #ffffff;
+}
+
+.chatlog__embed-title {
+    color: #ffffff;
+}
+
+.chatlog__embed-description {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-field-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-field-value {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-footer {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__reaction {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.chatlog__reaction-count {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* Postamble */
+
+.postamble {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.postamble__entry {
+    color: #ffffff;
+}
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.pre--multiline').forEach(block => hljs.highlightBlock(block));
+        });
+    </script>
+
+    <script>
+        function scrollToMessage(event, id) {
+            var element = document.getElementById('message-' + id);
+
+            if (element) {
+                event.preventDefault();
+
+                element.classList.add('chatlog__message--highlighted');
+
+                window.scrollTo({
+                    top: element.getBoundingClientRect().top - document.body.getBoundingClientRect().top - (window.innerHeight / 2),
+                    behavior: 'smooth'
+                });
+
+                window.setTimeout(function() {
+                    element.classList.remove('chatlog__message--highlighted');
+                }, 2000);
+            }
+        }
+
+        function showSpoiler(event, element) {
+            if (element && element.classList.contains('spoiler--hidden')) {
+                event.preventDefault();
+                element.classList.remove('spoiler--hidden');
+            }
+        }
+    </script>
+</head>
+<body>
+
+<div class="preamble">
+    <div class="preamble__guild-icon-container">
+        <img class="preamble__guild-icon" src="hyperion-ascended.html_Files/53926fd90f2c07d8f8a7d6fbee76bb17-34E69.png" alt="Guild icon">
+    </div>
+    <div class="preamble__entries-container">
+        <div class="preamble__entry">Tales of the Awakened [Warframe RP Community]</div>
+        <div class="preamble__entry">Personal Roleplaying / hyperion-ascended</div>
+
+            <div class="preamble__entry preamble__entry--small">[4/24 BR] CLOSED RP - Jupiter&#39;s Orbit | Near the orbit of the moon of Io a void fracture poured into the emptiness of space, the fracture opened like a dark storm emitting voice tendrils that reached out trying to reach out into the emptiness of space  finding some foothold. Through the storm and tendril’s, a massive Orokin vessel slips back into the reality that it had been denied since the end days of the Orokin empire. The glistening white hull of the ship was darkened in area from what looked like projectile explosions and plasma burns that had shredded through and ended many of the lives that took up space within its confines, giving a possible record of its final days during the fall. As the ship made its full shift into normal space the dark storm and tendrils of the void vanished as if it had never entered that realm of space. The space hulk of a ship now filled that void in space, resting on its emptiness with dead engines and possible a dead crew.</div>
+
+    </div>
+</div>
+
+<div class="chatlog">
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/395f08e63dc64192f2e49b2c573fe5c4-0675F.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Inarihatta#2828" data-user-id="461333334820257805" style="color: rgb(163,255,226)">Inarihatta(NSW) - Inari</span>
+
+
+        <span class="chatlog__timestamp">21-Sep-18 11:17 AM</span>
+
+            <div class="chatlog__message " data-message-id="492715923178782720" id="message-492715923178782720">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">[Closed  RP]  BR 4/24 in the vicinity of Jupiter |
+
+Near the orbit of the moon of Io a void fracture poured into the emptiness of space, the fracture opened like a dark storm emitting voice tendrils that reached out trying to reach out into the emptiness of space  finding some foothold. Through the storm and tendril’s, a massive Orokin vessel slips back into the reality that it had been denied since the end days of the Orokin empire. The glistening white hull of the ship was darkened in area from what looked like projectile explosions and plasma burns that had shredded through and ended many of the lives that took up space within its confines, giving a possible record of its final days during the fall. As the ship made its full shift into normal space the dark storm and tendrils of the void vanished as if it had never entered that realm of space. The space hulk of a ship now filled that void in space, resting on its emptiness with dead engines and possible a dead crew.</span>
+
+                                <span class="chatlog__edited-timestamp" title="15-Nov-18 05:02 AM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="492715985833558017" id="message-492715985833558017">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Inari: 
+Within her orbiter on the far side of Neptune the young tenno sat in meditation in her lounge, having been out in space for over a month had not helped her mood, as the lack of social interaction and missions was a bit depressing but the alone time had its own benefits. The thought of tea passed through her thoughts, and the memory of her last time on Cetus came up when she met a very social Tenno in a Volt and a more poetic Tenno in his retrofitted Loki frame. They had ended that day with good tea and light conversation after a pretty interesting tussle in the market streets, the Loki had asked for peace from the group and the two were willing to let bygones be bygones, though a Nekros that was with them was less inclined to join.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="492716072235958274" id="message-492716072235958274">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Standing from her meditation cushion, Inari walked out of her lounge towards the main deck where she kept her tea set and the small tea cup that the Loki had gifted both her and the volt as a small sign of friendship between the three of them. But before she could reach the tea kettle klaxons throughout the orbiter started blaring. Leaving the thought behind of the tea, she bore a hard right leading up the ramp into the main pilothouse, “puck give me an update and please shut those alarms off”</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="492716333247758336" id="message-492716333247758336">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Cephalon Puck:
+  Roughly two hours ago, the long-range radar picked up a ship exiting void space near the planet of Jupiter, it’s an Orokin ship….Capitol Class…….an Executor’s Frigate? None of my records show any of these ships surviving after the fall of the empire, it was said these ships couldn’t even leave their respective docks unless the Executor was aboard….strange</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="492716423190413313" id="message-492716423190413313">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Inari:
+
+The blip on the navigation screen indicating were the ship was currently holding position over the moon of Io blinked in her face like a welcome beacon, however this was something that hadn’t appeared in the origin system for a very long time, and going into a situation with very little information and alone was a good mix for a bad situation.
+
+ This left her with only one logical solution to this, going in with back up, “Puck set course toward the frigate and I need you to send out a message on Tenno channels only, see if we can get any back up going into this, I don’t want to be walking into a death trap here.”
+
+She turned on her heels heading back down the ramp, that tea now sounded really good before going into the unknown</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="492716500512145420" id="message-492716500512145420">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Cephalon Puck:
+
+“Understood little clown will transmit immediately”.   
+The cephalon watched as his operator walked back giving him the messages to send out for the assistance needed for this very large and possibly very dangerous new revelation.
+
+--/ Orbiter communication priority 1 --//Transmitter: The Midsummer Night 
+--To any Tenno receiving this message, this is Inari, @ 05:45 GST an orokin capitol class frigate appeared near moon of Io, currently no reports, so threat and possibility of surviving crew are unknown, request assistance of any nearby tenno for immediate investigation and possible retrieval of any data in the ship, rendezvous at given coordinates near the moon of Europa to discuss tactics and planning.
+--/ END TRANSMISSION</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/d13ee7b1a4cabd6925b1b6036190edec-F38A1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Ross#8154" data-user-id="227906898219892736" style="">Ross</span>
+
+
+        <span class="chatlog__timestamp">21-Sep-18 01:06 PM</span>
+
+            <div class="chatlog__message " data-message-id="492743452153610240" id="message-492743452153610240">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Geordie</strong>
+Geordie had always enjoyed finery. His orbiter was no different. Matte grey-browns and pale oranges were complimented by surfaces of glimmering metallic green everywhere in his quarters, where he sat scrolling through information on a modified corpus datapad. Something resembling upbeat swing music played from his somachord, and lights shimmered off the school of hundreds of tiny silver fish filling the tank in the center of the room.
+
+Just as the tenno had flicked to a new article on his datapad, a cluster of mint green pixels pulled together to form Geordie&#39;s cephalon. The three diamond shapes that composed Cephalon Nezim turned clockwise, counter clockwise, then back again, like a Helios adjusting focus.
+
+&quot;Operator,&quot; the cephalon announced in a smooth and melodic voice, &quot;Incoming transmission designated to &quot;Any Tenno receiving this message&quot;. Details and coordinates have been sent to your datapad.&quot;
+
+&quot;Thank you Nezim,&quot; Geordie said, sitting up straight and running a hand through his hair, which immediately fell back into the position it had been in before. He scanned over the transcript of the message quickly, nodding to himself and smiling slightly. &quot;This sounds like a once-in-a-lifetime occurrence, wouldn&#39;t you say? Go to the coordinates, I want in on this.&quot;
+
+Geordie admired the already impressive collection of unusual trinkets and oddities displayed on his shelves, anything from ayatan treasures to a small abstract sculpture made of heavy metal. As his orbiter made course adjustments to head for the source of the signal, he amused himself by imagining what strange finds he might stumble upon in this unusual derelict.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/395f08e63dc64192f2e49b2c573fe5c4-0675F.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Inarihatta#2828" data-user-id="461333334820257805" style="color: rgb(163,255,226)">Inarihatta(NSW) - Inari</span>
+
+
+        <span class="chatlog__timestamp">29-Sep-18 04:27 AM</span>
+
+            <div class="chatlog__message " data-message-id="495511976206794765" id="message-495511976206794765">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Inari
+
+she felt the engines in her orbiter come to a halt as she looked out her front view port seeing the giant gas planet of Jupiter, The &quot;eye&quot; swirled past slowly as if a giant deity was looking down on the galaxy. &quot;Puck have we got any incoming yet?&quot; 
+
+While the cephalon started it&#39;s short range scan looking for an FoF signals, the tenno scanned over the long range visual scans  of the frigate, &quot;this thing looks like it went through one hell of a fight in the end, we still not getting any readings on life signs?&quot;
+
+PUCK:
+
+&quot;negative little clown, void interference on the exterior of the ship are still interfering with any scans internally, we will be going into this completely blind, here is hoping you&#39;ll have back up though...&quot;
+
+The tenno nodded hoping other of her brothers and sisters would heed the call and try to figure why such an out of place ship was back in the origin system.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/d13ee7b1a4cabd6925b1b6036190edec-F38A1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Ross#8154" data-user-id="227906898219892736" style="">Ross</span>
+
+
+        <span class="chatlog__timestamp">29-Sep-18 02:22 PM</span>
+
+            <div class="chatlog__message " data-message-id="495661749853224970" id="message-495661749853224970">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Geordie</strong>
+As his similarly metallic green liset approached the coordinates, Geordie sent out a ping for any nearby Tenno channels, wondering if anyone else would be joining him and Inari on this adventure. Satisfied that he&#39;d be alerted if any other Tenno showed up, he pinged Inari&#39;s ship directly.
+
+Should she accept the communication, a friendly message would be waiting for her.
+
+&quot;Hey Inari, it&#39;s Geordie!&quot; came the familiar cheerful voice of the green Volt from the marketplace not too long ago. &quot;Interesting find you&#39;ve stumbled upon. I&#39;ll be at your position soon. In the meantime, any other details you can scrounge up about the ship?&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/395f08e63dc64192f2e49b2c573fe5c4-0675F.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Inarihatta#2828" data-user-id="461333334820257805" style="color: rgb(163,255,226)">Inarihatta(NSW) - Inari</span>
+
+
+        <span class="chatlog__timestamp">02-Oct-18 02:30 AM</span>
+
+            <div class="chatlog__message " data-message-id="496569764634951694" id="message-496569764634951694">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Inari
+A small chuckle  came from her hearing the familiar voice from Cetus, the irony wasn&#39;t missed on her that it was him out of all the other tenno in the system that was the first to respond to her transmission, &quot;Puck open comms to the incoming lander and have the secondary bay open to receive him&quot;.
+
+The cephalon responded by opening the starboard side landing craft hatch prepping the bay and it&#39;s automative systems to latch onto the incoming landing vessel. He found the coordinates of the incoming ship and brought LOS comms up, after a quick confirmation check with Nezim he came back to the tenno mere seconds later, &quot;comms are open and the porch is lit little clown&quot;
+
+&quot;Thanks Puck&quot; she simply replied as a view screen came up with the bright face of Geordie showing up, &quot;Geordie! small system yeah? I don&#39;t have much currently on the interior of the ship due to all the void radiation coming off it, but I have discovered two pressurized entry points on the foward and aft sections on the port side of the ship, I got my secondary bay open and ready to recieve your Liset, then we can look more into how to get aboard this hulk, sound good?&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/d13ee7b1a4cabd6925b1b6036190edec-F38A1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Ross#8154" data-user-id="227906898219892736" style="">Ross</span>
+
+
+        <span class="chatlog__timestamp">02-Oct-18 09:32 PM</span>
+
+            <div class="chatlog__message " data-message-id="496857016304926720" id="message-496857016304926720">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Geordie</strong>
+&quot;Spooky! I&#39;ve heard about ships like these, I think, but obviously never encountered one. Anyway, coming in to dock now. See you inside.&quot;
+
+Geordie&#39;s ship, just as shiny as his volt had been in the marketplace, docked with Inari&#39;s orbiter without issue. The well-dressed Tenno, not in a warframe at the moment, stepped out and ran a hand through his hair. As always, it flopped back into the same position it was in before. Several coppery somatic implants shimmered on his face, and a larger one was fitted closely to the back of his head. His suit, all angular and metallic green, shimmered in the lights of Inari&#39;s orbiter as well. Geordie stepped forward, politely looking around for Inari before continuing deeper into the ship.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/4404de0ba7e5c9a4d627695dfa3192f4-7C2F8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Rozencratz#3124" data-user-id="339116401815977986" style="color: rgb(135,157,189)">Rozencratz - Sonera</span>
+
+
+        <span class="chatlog__timestamp">04-Oct-18 12:36 PM</span>
+
+            <div class="chatlog__message " data-message-id="497446951411908618" id="message-497446951411908618">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">It seems like this won&#39;t be a duo mission as another landing craft starts approaching the area. A dull white Xiphos waddles forwards, it&#39;s flight pattern erratic and wiggly and yet it&#39;s not jerky but more as if the one operating it is cruising along and enjoying the freedom of having the space to make wide movements. No attempt is made to communicate with the others as it passes the Orbiter and the docking craftto approach the rogue ship.
+
+However, it makes no attempt to board it as it circles around it in it&#39;s wiggly flying pattern as if it&#39;s a paper plane going up and down in the wind.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/395f08e63dc64192f2e49b2c573fe5c4-0675F.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Inarihatta#2828" data-user-id="461333334820257805" style="color: rgb(163,255,226)">Inarihatta(NSW) - Inari</span>
+
+
+        <span class="chatlog__timestamp">06-Oct-18 11:02 PM</span>
+
+            <div class="chatlog__message " data-message-id="498329141255340032" id="message-498329141255340032">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Inari:
+
+She stepped down the ramp way from her navigation room ducking her head under the edge  into the main work space of her orbiter, hearing footsteps coming from the lading dock, she took a right down the hallway to meet up with Geordie to start really planning their infiltration of the frigate. Rounding the bend she stopped  catching a flash of the metallic green of Geordie&#39;s attire.  &quot;Geordie welcome to the Avalon&quot; 
+
+she smiled bowing politely, her ponytail slipping off resting on her right shoulder. She motioned toward the back toward the front of the orbiter, &quot;come let&#39;s go to my quarters and we can start going over things there.&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/d13ee7b1a4cabd6925b1b6036190edec-F38A1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Ross#8154" data-user-id="227906898219892736" style="">Ross</span>
+
+
+        <span class="chatlog__timestamp">08-Oct-18 12:45 PM</span>
+
+            <div class="chatlog__message " data-message-id="498898762496868352" id="message-498898762496868352">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Geordie</strong>
+&quot;Thank you! Indeed, lead the way.&quot; Geordie responded politely, motioning for her to, as he said, lead the way. As they headed for Inari&#39;s quarters, Geordie looked around at the decor. He always found it interesting to see what other Tenno&#39;s orbiters looked like.
+
+&quot;Has anyone else responded to the transmission yet?&quot; he asked as they walked.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/395f08e63dc64192f2e49b2c573fe5c4-0675F.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Inarihatta#2828" data-user-id="461333334820257805" style="color: rgb(163,255,226)">Inarihatta(NSW) - Inari</span>
+
+
+        <span class="chatlog__timestamp">09-Oct-18 06:18 AM</span>
+
+            <div class="chatlog__message " data-message-id="499163648145620992" id="message-499163648145620992">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Inari
+She nodded and walked in front of him seeing that he was eyeing the tribal Cetus markings that she had decorated the metallic walls of her orbiter, &quot;So how have you been since Cetus geordie?&quot; she asked politely as they strolled past her transference room and into her personal quarters.
+
+The room was like most other quarters, with the long couch at the bottom of the short stairs. The design pattern continued into the room giving it a very earthy feel with the dark metallic green and the light brown of the decals. A huge aquarium showed off a very large sharrac floating idly with a few karkinas floating around nibbling on the small plankton in the tank. The secondary aquarium held a few charc eels and a mawfish. 
+
+walking over to one of her tea set, the tenno started brewing a warm pot of herbal tea for the both of them, seeing as it may be a while for them to properly, look over any details of the frigate. Movement outside the viewing window caught her attention as she thought she saw a smaller ship circling her orbiter but the movement was too quick for her to properly register it.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/4404de0ba7e5c9a4d627695dfa3192f4-7C2F8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Rozencratz#3124" data-user-id="339116401815977986" style="color: rgb(135,157,189)">Rozencratz - Sonera</span>
+
+
+        <span class="chatlog__timestamp">09-Oct-18 01:40 PM</span>
+
+            <div class="chatlog__message " data-message-id="499274928487661569" id="message-499274928487661569">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">---The Xiphos continued it’s circular motion around the Orokin vessel, cruising in a slow playful pace, jerking ever so slightly to the sides to create unnecessary wiggles from it’s path. It doesn’t contact the other Orbiters but it doesn&#39;t seem to make a effort to appear stealthy. It&#39;s out there, it&#39;s wobbling and waiting in silence…or maybe perhaps it&#39;s just scanning the strange ship for something---</span>
+
+                                <span class="chatlog__edited-timestamp" title="09-Oct-18 01:41 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/d13ee7b1a4cabd6925b1b6036190edec-F38A1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Ross#8154" data-user-id="227906898219892736" style="">Ross</span>
+
+
+        <span class="chatlog__timestamp">14-Oct-18 01:08 AM</span>
+
+            <div class="chatlog__message " data-message-id="500897650233573378" id="message-500897650233573378">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Geordie</strong>
+Ah, small talk! One of Geordie&#39;s most honed skills. &quot;I&#39;ve been well, thank you! I finally got a chance to spend some time with my sister recently. It was a nice change of pace. And yourself? How&#39;ve you been?&quot; he asked, admiring the decoration of the orbiter around him before observing the fish doing, well, fish things.
+
+The movement outside the ship caught Geordie&#39;s eye as well. He peered out into the vast stretch of space beyond the window, combing through the glitter of stars for anything out of place as he politely waited for Inari to finish before speaking. &quot;I hate to interrupt,&quot; he finally asked, &quot;But did you catch a glimpse of some movement outside just a moment ago?&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/395f08e63dc64192f2e49b2c573fe5c4-0675F.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Inarihatta#2828" data-user-id="461333334820257805" style="color: rgb(163,255,226)">Inarihatta(NSW) - Inari</span>
+
+
+        <span class="chatlog__timestamp">16-Oct-18 04:02 PM</span>
+
+            <div class="chatlog__message " data-message-id="501847481697566740" id="message-501847481697566740">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Inari:
+
+Seeing that Geordie had caught the movement as well she lowered the data pad and looked up calling out to her cephalon, &quot;hey puck give us a quick once around the frigate, make sure we don&#39;t have any extra company that we don&#39;t know of.&quot;
+
+The Cephalon extended the  it&#39;s senses  around the ship like extending it&#39;s limbs, the Xiphos ship was showing up like a  bright spot with absolutely no sign of trying to hide it&#39;s presence, &quot;little clown we do seem to have  company, one small vessel is circling the Orokin ship, showing a sign of low level scanning of the vessel, not sure what it&#39;s scanning for, want me to open communications to the interloper?&quot;
+
+The tenno nodded and brought up her data pad, &quot;yeah go audio only please, if our guest isn&#39;t tenno, I&#39;d rather keep visuals to a minimum.&quot; 
+
+Tapping a few keys on her data pad small static crackled as cephalon tried to open communications, &quot;To the near by ship this is the Avalon, please come in, again this is the Avalon, please respond with intentions&quot; 
+
+She looked at Geordie with an arched brow, the light of the data pad reflecting off her oculus lenses resting under her eyes as they awaited any response from he near by ship.</span>
+
+                                <span class="chatlog__edited-timestamp" title="18-Oct-18 11:24 AM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/4404de0ba7e5c9a4d627695dfa3192f4-7C2F8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Rozencratz#3124" data-user-id="339116401815977986" style="color: rgb(135,157,189)">Rozencratz - Sonera</span>
+
+
+        <span class="chatlog__timestamp">18-Oct-18 11:43 AM</span>
+
+            <div class="chatlog__message " data-message-id="502507040653180958" id="message-502507040653180958">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">--The craft almost immediately ceased it’s wobbling around the Orokin vessel as the transmission hit it. It cut off the scanning procedure as if it got scolded by a parent not to do that, and just floated above the vessel, as if frozen out of fear or confusion…or maybe it’s acting like it cannot be seen when not moving. Whatever the reason for it’s sudden halt in it’s playful motions, it seems to be thinking something over as no imidient reply is sent out to meet the Orbiters.
+
+A couple of seconds of silence go by, like a Tenno standoff on who blinks first…errrrr…who lights up first? Nevermind! The landing craft does a light jerk upwards and then…a buzz transmits out of the ship and through the static a very deep and gravely voice speaks through, in the most monotone and flat voice a boy can have, says.
+
+“Hey…”
+
+A pause, the static still pulsating through, only the sound of fabric shuffling breaking the constant buzzing
+
+“This…where…the Oroking vessel is…”
+
+Every last syllable is dragged out with deep rumbles, as if the speaker is growling under his breath or speaking through clenched teeth.
+
+“Answering…call…”
+
+The pause came once more but this time nothing followed it, and the transmission cut off.
+
+The landing craft didn’t continue it’s pattern around the Orokin brigade, it just float there with no intention of getting close to the Orbiters.---</span>
+
+                                <span class="chatlog__edited-timestamp" title="18-Oct-18 11:46 AM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/d13ee7b1a4cabd6925b1b6036190edec-F38A1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Ross#8154" data-user-id="227906898219892736" style="">Ross</span>
+
+
+        <span class="chatlog__timestamp">18-Oct-18 11:54 AM</span>
+
+            <div class="chatlog__message " data-message-id="502509789654286395" id="message-502509789654286395">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Geordie</strong>
+The well-dressed Tenno raised an eyebrow as well as the gravely voice came through. He listened quietly until the transmission cut off, looking more and more curious.
+
+&quot;I don&#39;t think I&#39;ve ever heard a Tenno with a voice like that,&quot; he commented, &quot;Very unusual. Do you think they&#39;re trustworthy?&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/395f08e63dc64192f2e49b2c573fe5c4-0675F.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Inarihatta#2828" data-user-id="461333334820257805" style="color: rgb(163,255,226)">Inarihatta(NSW) - Inari</span>
+
+
+        <span class="chatlog__timestamp">26-Oct-18 12:04 AM</span>
+
+            <div class="chatlog__message " data-message-id="505230092822118420" id="message-505230092822118420">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Inari
+
+she shrugged not sure what to make of the static filled message  from the unknown vessel, &quot;same here although couldn&#39;t understand them clearly enough, however my message went on our own communication network, we should be good....I hope&quot;
+
+she turned to the data pad keying up the transmit button, &quot;unknown ship can you repeat your last, you aren&#39;t coming in clearly can   you repeat your last?&quot;
+
+She took her finger off the key looking at Geordie, &quot;what you think should we try to bring them over or hold off for now?&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/4404de0ba7e5c9a4d627695dfa3192f4-7C2F8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Rozencratz#3124" data-user-id="339116401815977986" style="color: rgb(135,157,189)">Rozencratz - Sonera</span>
+
+
+        <span class="chatlog__timestamp">29-Oct-18 02:13 PM</span>
+
+            <div class="chatlog__message " data-message-id="506531011455352995" id="message-506531011455352995">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">---A moment of silence passes once more which means that the inhabitant is again debating if he should reply or maybe he’s thinking of HOW to reply. Still…the grim filled voice speaks through once more, the rumbles of his throat causing such a strong vibration that to the others it might feel as if they’re being assaulted by a quake---
+
+“Answering…call…will wait…for…boarding”
+
+The transmission cuts off and the landing craft remains as still as a Kuaka in head lights.---</span>
+
+                        </div>
+                    </div>
+
+                    <div class="chatlog__attachment">
+                        <div class="" onclick="">
+                            <div class="">
+                                    <audio controls class="chatlog__attachment-thumbnail">
+                                        <source src="hyperion-ascended.html_Files/Hyperion_voice-E1B70.mp3" alt="Audio attachment" title="Audio: Hyperion_voice.mp3 (194.53 KB)">
+                                    </audio>
+                            </div>
+                        </div>
+                    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/d13ee7b1a4cabd6925b1b6036190edec-F38A1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Ross#8154" data-user-id="227906898219892736" style="">Ross</span>
+
+
+        <span class="chatlog__timestamp">01-Nov-18 12:07 PM</span>
+
+            <div class="chatlog__message " data-message-id="507586418890244097" id="message-507586418890244097">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Geordie</strong>
+The well-dressed tenno quietly clasped his hands behind his back, waiting for the reply. The voice came again, just as eerie as before.
+
+&quot;Hmm, well, if it was on Tenno frequencies, whoever it is will probably be trustworthy. Ah.....hopefully.&quot;
+
+He turned to Inari. &quot;In any case, it&#39;s your ship. Should we invite them aboard?&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/395f08e63dc64192f2e49b2c573fe5c4-0675F.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Inarihatta#2828" data-user-id="461333334820257805" style="color: rgb(163,255,226)">Inarihatta(NSW) - Inari</span>
+
+
+        <span class="chatlog__timestamp">01-Nov-18 04:23 PM</span>
+
+            <div class="chatlog__message " data-message-id="507650814588878853" id="message-507650814588878853">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Inari:
+
+nodding she checked with Puck first, &quot;Puck open Bay 3 for our new guest but seal the doors until we find out who this new guest is&quot; 
+
+Puck confirmed  her order by opening the outer doors on the third bay of the orbiter but making sure the hatchway to the interior of the ship remained shut, he could understand her logic of not wanting a rowdy guest aboard especially now there were two star children on the ship, cephalon protocols demanded he make their protection top priority.
+
+hitting the transmit key one more time she took a deep breathe before relaying the next message that would bring the unknown party to the avalon, &quot;unknown vessel I was the one who sent out the message  I have opened a bay up for your ship to land in if you would like to join us to go over a plan to explore the ship&quot;
+
+She turned back to Geordie having closed out the communication screen, &quot;well until they get here wanna check to see what we are looking at at least on the exterior of this giant?&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/4404de0ba7e5c9a4d627695dfa3192f4-7C2F8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Rozencratz#3124" data-user-id="339116401815977986" style="color: rgb(135,157,189)">Rozencratz - Sonera</span>
+
+
+        <span class="chatlog__timestamp">05-Nov-18 12:31 PM</span>
+
+            <div class="chatlog__message " data-message-id="509057183175147520" id="message-509057183175147520">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">---The landing craft hesitated for a moment…mainly cause it’s not the ship the pilot had in mind when they said that they are waiting  for boarding…but! What can you do?! Correct yourself? Oh no no! Too awkward and well…socializing is just so damn hard.
+
+Eventually the ship starts to approach in a wobbly manner, looking hesitant in it’s glide, as if it was told my it’s mother they they HAVE to socialize. It seems to be going at the slowest possible speed so the duo will have some time to talk before it docks---</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/e9eed332fafbf2ba662bf0c46411132b-9FB5E.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Naelynn#4585" data-user-id="107795788259696640" style="">Naelynn</span>
+
+
+        <span class="chatlog__timestamp">07-Nov-18 09:33 AM</span>
+
+            <div class="chatlog__message " data-message-id="509737079052304399" id="message-509737079052304399">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">A tenno sat alone by the window-view inside her personal quarters, gazing upon the stars. It was a serene sight, yet, she kept fidgeting. The quiet of the system, the serenity and seeming peace it gave off... it was all merely a lie to hide it&#39;s nature. She knew very well that on each and every of the planets in the system there probably was bloodshed. <em>And nowhere near enough time to give them all the attention they deserve.</em> She mused in her own mind, letting the ambient quiet humming of her orbiter&#39;s engine be the only sound.
+
+&quot;Incoming Transmission!&quot; The scene&#39;s mood came to a screeching halt with the interruption of a synthesized joy-filled voice. &quot;Recieving coordinate data for investigation! Check your in-box for additional information~!&quot; The perpetually and aggrevatingly happy cephalon added.
+
+&quot;Thank you Vaesz.&quot; The female replied in distinctly dry tone before rising up and stretching her arms in the process, her body protesting the sudden burst of activity. The tenno made a point to ignore it, and patched the inbox message into her AR display, reading through it while making her towards the front of the ship.
+
+<div class="pre pre--multiline nohighlight">--/ Orbiter communication priority \--
+//Transmitter: The Midsummer Night\\
+To any Tenno receiving this message, this is Inari, @ 05:45 GST an orokin capitol class frigate appeared near moon of Io, currently no reports, so threat and possibility of surviving crew are unknown, request assistance of any nearby tenno for immediate investigation and possible retrieval of any data in the ship, rendezvous at given coordinates near the moon of Europa to discuss tactics and planning.
+--/ END TRANSMISSION \--</div></span>
+
+                                <span class="chatlog__edited-timestamp" title="07-Nov-18 09:46 AM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="509737094936002570" id="message-509737094936002570">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><em>It seems we&#39;re not the only relics of the old era that remain.</em> She quipped to herself while dismissing the overlayed window as she reached the orbiter&#39;s Navigation. &quot;Vaesz, take us there. This is something worth investigating. Set up loadout Alpha and give Emperor some snacks to wake him up... Oh- and please, switch our ID tag for neutral one. We&#39;re not representing the Veil on this run.&quot; <em>Not officially anyway.</em> She added in her own mind, feeling the orbiter lurching as it&#39;s engines started revving up.
+
+&quot;Acknowledged! Departing in T-5!&quot; Chimed in the compulsively happy cephalon as the tenno groaned ever so slightly, lazily rubbing the temple of her head with her right hand. &quot;You&#39;re gonna be the death of me Vaesz.&quot;
+
+&quot;T-4! Negative operator Naelynn! Odds of your sucessful termination at my hands are approaching $#%^ERR.! T-3!&quot; The tenno winced at the loud error sound and decided to not provoke the cephalon any further, rather shifting her thoughts towards the upcoming mission.
+
+&quot;T-2!&quot;
+
+<em>This thing better be worth it.</em> Naelynn grumbled to herself in her head as the cephalon chimed in helpfully &quot;T-1!&quot;
+
+&quot;Thrusters engaged!&quot; The overjoyed ship-unit said just as the entire ship lurched, launching the deep-red/blue Scimitar landing craft careening towards the nearby waypoint.</span>
+
+                                <span class="chatlog__edited-timestamp" title="07-Nov-18 09:33 AM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/510043f71a932223ab64f94d9cf45170-F7E8A.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Midnight Ξ Runner#9606" data-user-id="208668282646036482" style="color: rgb(0,24,255)">Midnight-Runner - Ella</span>
+
+
+        <span class="chatlog__timestamp">07-Nov-18 09:47 AM</span>
+
+            <div class="chatlog__message " data-message-id="509740569937969153" id="message-509740569937969153">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">~A large, somewhat imposing vessel failing to identify itself of any familiar classes in the Origin’s knowledge, a size akin to the Orokin Derelicts strewn about, or roughly an Oribter, loomed into the area, cautiously sailing towards the massive Orokin vessel before it careened sharply to patrol the location. Several noticeably dangerous gun turrets lined its dark body, making no attempt to engage the Goliath, or any of the Davidic vessels curiously approaching the invitational transmission. A Windforged Scimitar would however, depart one of its four small hangar bays, soaring towards the ancient ship.
+
+The larger ship would suddenly disappear into the folds of space, disappearing as quickly as it had appeared.
+
+Meanwhile, the Scimitar would stalwartly fly closer to the enlarging collection of landing craft and the Oribter ping those nearby, attempting to hail the vessel that sent for explorative assistance.~</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/fc2f31cda0d8ead570778ff1a96b18c5-4549C.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="DoubleDamages#7343" data-user-id="193359028880015363" style="color: rgb(132,88,0)">DoubleDamages - Kha&#39;dra Rham</span>
+
+
+        <span class="chatlog__timestamp">08-Nov-18 01:10 PM</span>
+
+            <div class="chatlog__message " data-message-id="510154284977881097" id="message-510154284977881097">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">-The lone mecanical figure stood tall at the edge of the clearing, arms crossed over it&#39;s chest, silent as a tombstone. Everything was quiet and calm, a rare thing theses day. The clone stood there for a few minutes, without flinching or moving, just for a moment, she was at peace.
+A sudden yell waked her up from her daydreaming; she turned on her heels with a sight and faced the landed Bolkor which was covered in a makeshift camo-net. The shouting kept going on for a few minutes before coming to an end. A large grineer emerged from the ship&#39;s rear hatch and instinctively walked towards Kha&#39;dra who was still intriguied by what was going on inside.-
+
+&quot;Something came up on our transmitter boss, it&#39;s Cressa.&quot; Seegmar said as he streched his arms out, stoping nearby Kha&#39;dra.
+
+&quot;What&#39;s up ?&quot; She replied in a curious tone, uncrossing her arms and looking directly at her comrade.
+
+&quot;Well, she&#39;s not sure. Something appeared on the scanners, nearby Io, she got the call from one of her Tenno contact and she needs somebody to check it out.&quot;
+
+&quot;And that somebody would be us, right ?&quot; Kha&#39;dra replied with a slitghly bored tone.
+
+[1/2]</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="510154312995962901" id="message-510154312995962901">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">-Seegmar simply nodded back to her and shrugged as he walked back towards the ships. The female clone quickly followed him, the two of them entered the Bolkor and closed the rear hatch behind them. A few seconds later the ship&#39;s engines began to roar as it slowly ascended from it&#39;s initial landing zone, droping the camo-net to reveal a battered and crippled Steel Meridian Insignia&#39;s on it&#39;s hull. The ship began to shake as it soared above the clearing, it slowed down for a second before leaving at full throttle towards the darkened skies of Earth.
+
+A few hours later, the Bolkor dropship arrived at the coordinates transmitted inside the message sent back by Cressa Tal. It seemed they weren&#39;t the only ones to receive the message, other numerous Tenno landing crafts were already there, waiting nearby a huge Orokin ship floating in the void of space, silently drifting away. After a few seconds, the Steel Meridian Bolkor attempted to hail the numerous vessels on a open frequency.-
+
+[2/2]</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/395f08e63dc64192f2e49b2c573fe5c4-0675F.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Inarihatta#2828" data-user-id="461333334820257805" style="color: rgb(163,255,226)">Inarihatta(NSW) - Inari</span>
+
+
+        <span class="chatlog__timestamp">08-Nov-18 05:45 PM</span>
+
+            <div class="chatlog__message " data-message-id="510223280146481167" id="message-510223280146481167">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Inari:
+(1/2)
+As she started looking at the data pad with Georgie warning klaxons started blaring as multiple landers and larger ships came into close proximity of the Midsummer night. Standing quickly in her white robes, she saw multiple holo-screens popping up in her quarters with multiple incoming transmissions requests. Taking a deep breathe as she looked back at Geordie for a bit with a little grin, &quot;now looks like it&#39;s a party&quot;.
+
+Turning back to the screens she looked up seeing the floating speck of light that was Puck, keeping track of all the incoming message traffic, &quot;Oh my Oh mY so many people to talk to..&quot;. The tenno sighed a little at the cephalons over excitement with the new company so she had to make sure to keep him working if this exploration of the old vessel was to at least start off well. &quot;Puck cease the transmission, looks like we got enough people to start this investigation. Also try to synch up with the cephalons of the other ships and get a multi-channel communication going so we can reach out to everyone, cause i think at this point there would be too many people to try and fit on the midsummer&quot;</span>
+
+                                <span class="chatlog__edited-timestamp" title="08-Nov-18 05:52 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/395f08e63dc64192f2e49b2c573fe5c4-0675F.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Inarihatta#2828" data-user-id="461333334820257805" style="color: rgb(163,255,226)">Inarihatta(NSW) - Inari</span>
+
+
+        <span class="chatlog__timestamp">08-Nov-18 05:58 PM</span>
+
+            <div class="chatlog__message " data-message-id="510226748848341022" id="message-510226748848341022">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">(2/2)
+
+The Cephalon set out quickly cutting the wide broadcast of the original transmission, while at the same time sending multiple pings to each of the ships cephalons on all the landing craft that just entered as well as the vessel that was still on a slow course toward the group.  He waited the few nano-cycles it was taking for the other vessels to get the multi-channel requests and send back a response to him and the other ships in the group.
+
+&quot;Well here is hoping the little clown can work well with others on a mission as she does with her pals on Cetus&quot; He silently mused to himself with almost what would seem a deep chuckle at the fact that Inari for the first time in a while, was actually working with others when it came to something new.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/d13ee7b1a4cabd6925b1b6036190edec-F38A1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Ross#8154" data-user-id="227906898219892736" style="">Ross</span>
+
+
+        <span class="chatlog__timestamp">12-Nov-18 01:23 PM</span>
+
+            <div class="chatlog__message " data-message-id="511606936853282817" id="message-511606936853282817">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Geordie</strong>
+The well-dressed Tenno was somewhat surprised at how many ships had suddenly arrived. Sure, it made sense for people to be interested in this rare opportunity, but having them all show up at once was a bit of a surprise.
+
+&quot;Indeed,&quot; he added after Inari finished instructing her Cephalon, &quot;Look like this will be a large group. That should be beneficial on a mission in such a large and rare ship, though, wouldn&#39;t you say?&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/4404de0ba7e5c9a4d627695dfa3192f4-7C2F8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Rozencratz#3124" data-user-id="339116401815977986" style="color: rgb(135,157,189)">Rozencratz - Sonera</span>
+
+
+        <span class="chatlog__timestamp">13-Nov-18 11:01 AM</span>
+
+            <div class="chatlog__message " data-message-id="511933734287835136" id="message-511933734287835136">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">---The approaching landing craft made no changes to it&#39;s speed as it continued to slowly creep up towards the other Tenno Orbiter---</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/e9eed332fafbf2ba662bf0c46411132b-9FB5E.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Naelynn#4585" data-user-id="107795788259696640" style="">Naelynn</span>
+
+
+        <span class="chatlog__timestamp">15-Nov-18 02:36 AM</span>
+
+            <div class="chatlog__message " data-message-id="512531288176197642" id="message-512531288176197642">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Naelynn smiled to herself as she took in the majesty of the untouched orokin capital ship. It was massive - actually, that was understating it. Seemingly untouched by the passage of aeons, just like the tenno herself. She reached her hand forward and grasped at the ship, as an old memory resufaces from the deep crevices of her mind. A single fleeting thought - a family lost in the void. She retracts her hand and turns away from the looming vessel, only to flicker out of existence but a blink of an eye later, as a robotic Nova-Prime stirrs to life on the other side of the small compartment.
+
+&quot;Party communications established! Time to make more friends!&quot; announced the cephalon Vaesz, it&#39;s triangular smile-like form swerving from side to side in it&#39;s transmission, seemingly dancing to an unheard tune. &quot;Open comms.&quot; The Nova spoke with a neutral stoic voice. &quot;My name is Naelynn, Silver Sage of the independant Tenno.&quot; The Nova raised it&#39;s chin higher during the introduction. &quot;I&#39;ve recieved your message and arrived to assist in your mission.&quot; The nova looked aside for a moment, seemingly distracted with nothing. She simply shrugged and then continued. &quot;It appears I havn&#39;t worked with any of the gathered here in any noteworthy capacity before, as such, I request mission assesment and briefing as well as establishment of a chain of command. Cephalon Vaesz is hereby authorized to provide access to my tac profile from my previous missions on per-request basis to all assorted operatives relevant to this mission.&quot; The Nova would then proceed to salute in a peculiar way, covering one of it&#39;s eye-ports with her hand, standing in the awkward position for but a moment before the transition ended.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="512531319171842049" id="message-512531319171842049">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">&quot;Vaesz, generate a tactical profile based on non-affiliated missions. This means no Veil or Personal requests missions.&quot; The tenno instructed her cephalon while proceeding with gear checkup. &quot;Acknowledged! Sample package prepared!&quot; echoed the happy cephalon.
+
+<div class="pre pre--multiline nohighlight">Tactical profile: Naelynn
+Commonly used warframes: Nova Prime [Slow], Equinox [Duality], Ash Prime [Smoke Shadow]
+Primary weapons: Vectis Prime, Baza, Cernos Prime, Ignis Wraith, Tigris Prime
+Secondary weapons: Lato Vandal
+Melee weapons: Rakta Dark Dagger, Hirudo, Sarpa
+Companions: Smeeta Kavat &#39;Emperor&#39;
+Focus: Madurai
+
+Squad roles: Shock troop, offensive support, flanker, recon
+Combat styles: Assassination, area denial
+Specializations: Infested, stealth</div></span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/fc2f31cda0d8ead570778ff1a96b18c5-4549C.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="DoubleDamages#7343" data-user-id="193359028880015363" style="color: rgb(132,88,0)">DoubleDamages - Kha&#39;dra Rham</span>
+
+
+        <span class="chatlog__timestamp">15-Nov-18 08:37 AM</span>
+
+            <div class="chatlog__message " data-message-id="512622087148404742" id="message-512622087148404742">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">The Bolkor dropship looked apart from every other ships reunited at this very moment, even in the deep void of space Grineer engineering was a peculiar sight. The Steel Meridian ship actived it&#39;s auxiliary thrusters and moved towards the Orokin capital ship as it was scanning or inspecting it for a few seconds before returning back to it&#39;s original position in a silent and smooth movement.
+
+&quot;What the frak is she mucking &#39;bout ?&quot; Inquired Krog as he looked over his shoulder towards the rest of the squad with a grin on his face.
+&quot;It&#39;s a Tenno Krog, don&#39;t mind their manners and patch me in.&quot; Replied Kha&#39;dra with the same smile as she moved towards the pilot&#39;s seat, dropping her right elbow on the seat&#39;s head rest.
+Krog simply shrugged and turned back towards his console, after a few seconds of pressing several buttons and tuning frequencies he looked over Khe&#39;dra and nodded.
+
+&quot;Iron Legion here, Steel Meridian operatives, we are responding to your transmission as requested. We&#39;ll stand by until you guys are done with- Well, whatever you Tennos&#39; are up too.&quot; She said throught comms with a rather bold tone. Krog smirked again, it seems he was trying not to let out a small laught. Seegmar simply nodded towards Kha&#39;dra and Vak&#39;tal was well, being herself, silently inspecting her rifle in the corner of the room. And Rem, the group&#39;s mascot of some sort, was still sleeping near Kha&#39;dra&#39;s stuff, in some makeshift Kavat sleeping bag. They were ready to go, towards the unknown, perhaps towards their past.</span>
+
+                                <span class="chatlog__edited-timestamp" title="19-Nov-18 10:50 AM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/510043f71a932223ab64f94d9cf45170-F7E8A.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Midnight Ξ Runner#9606" data-user-id="208668282646036482" style="color: rgb(0,24,255)">Midnight-Runner - Ella</span>
+
+
+        <span class="chatlog__timestamp">16-Nov-18 10:19 PM</span>
+
+            <div class="chatlog__message " data-message-id="513191315891027968" id="message-513191315891027968">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">~The Scimitar neared the small part of vessels, making not attempt at docking nor any action besides staying at a difference. A feminine voice would sound on one branch of the new channel.~
+
+/\Astra
+
+&quot;This is Cephalon Astra, caretaker of the Runner, she is standing by and will meet you all aboard the Capital Vessel when ready.&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/395f08e63dc64192f2e49b2c573fe5c4-0675F.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Inarihatta#2828" data-user-id="461333334820257805" style="color: rgb(163,255,226)">Inarihatta(NSW) - Inari</span>
+
+
+        <span class="chatlog__timestamp">20-Nov-18 05:43 PM</span>
+
+            <div class="chatlog__message " data-message-id="514571620782833664" id="message-514571620782833664">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Inari
+
+(1/2)
+&quot;Agreed this should make things a bit safer for us especially if all those Steel Meridian operatives join in the exploration&quot;.
+She turned away from Geordie to the screens with the the Iron legion crew and the tenno Naelynn, two audio channels being left open to the unknown ship that was making it&#39;s way toward the group as well as the Cephalon Astra that was playing messenger to the third known tenno of the group calling herself the Runner. &quot;Well everyone to start off this meeting I would like to first thank all of you for responding to my transmission and would like to welcome you to this very impromptu gathering to a very surprising turn of events.&quot; 
+
+She quickly brought up the data she had collected so far of the capital ship sending it to all the parties, &quot;as you can see the by the current scans I&#39;ve taken of the exterior of the ship, that the frigate is vastly larger than the derelict ship outside the planetoid Europa.&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/395f08e63dc64192f2e49b2c573fe5c4-0675F.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Inarihatta#2828" data-user-id="461333334820257805" style="color: rgb(163,255,226)">Inarihatta(NSW) - Inari</span>
+
+
+        <span class="chatlog__timestamp">20-Nov-18 05:56 PM</span>
+
+            <div class="chatlog__message " data-message-id="514574758290128903" id="message-514574758290128903">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">(2/2)
+She zoomed into multiple areas around the ship showing pot marks of plasma burns along with some practical ballistic damage in other areas, &quot;As everyone can see it seems the frigate was escaping pursuit, from whom, we are not sure, but we can assume that decks in these areas may be compromised, so as we look around the ship we need to keep these areas in mind&quot; 
+
+She then turned the groups attention to the four docking bays in both the forward and aft sections of the frigate, &quot;we have confirmed that these four bays are secure points of access and we may split the group up to try and gain access through these ports and will try to rendezvous at the bridge&quot;  She zoomed back to the overall view of the ship which looking at the size now to her it looked pretty close to the size of a Corpus Obelisk class ship. 
+Looking up at the screens and to the audio channels she waited for everyone to look over the the screen shots and search results before she spoke up again, &quot;So does anyone have any initial questions?&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/d13ee7b1a4cabd6925b1b6036190edec-F38A1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Ross#8154" data-user-id="227906898219892736" style="">Ross</span>
+
+
+        <span class="chatlog__timestamp">21-Nov-18 01:16 PM</span>
+
+            <div class="chatlog__message " data-message-id="514866630694797313" id="message-514866630694797313">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Geordie</strong>
+The well-dressed Tenno rested his elbow in one hand, stroking his chin thoughtfully.
+
+“Have you been able to pick up any life signs or evidence that the frigate may still be operational?” He asked, eyeing the plasma burns displayed on the screen in front of him.
+
+He was also wondering where he might be able to find unique artifacts or remains of the past that he could study, but he figured they’d find some soon enough, and decided to keep that question to himself.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/fc2f31cda0d8ead570778ff1a96b18c5-4549C.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="DoubleDamages#7343" data-user-id="193359028880015363" style="color: rgb(132,88,0)">DoubleDamages - Kha&#39;dra Rham</span>
+
+
+        <span class="chatlog__timestamp">28-Nov-18 10:54 AM</span>
+
+            <div class="chatlog__message " data-message-id="517367766572072961" id="message-517367766572072961">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">&quot;Let&#39;s see what they got, aye ?&quot;
+Krog&#39;s screens where suddenly filled with scans, informations and accurate screenshots of the Orokin frigate; surprised at first he finally shrugged and started looking throught the data.
+Kha&#39;dra stretched her arms out and did the same as Krog. The rest of the squad moved closer to the screens aswell, they needed thoses informations as much as everyone else.
+
+&quot;Nasty damages on theses decks.&quot; Pointed out Seegmar with a slight move of his head.
+&quot;Yeah, we&#39;ll have to avoid thoses areas or grab our zero-G gear aswell.&quot; Responded Kha&#39;dra with a nod.
+Both of them nodded simply and turned back towards the screens. After a few more silent minutes, Kha&#39;dra raised Inari&#39;s ship again.
+
+&quot;So ... Get in, secure the area, make a complet sweep of the ship and rendez-vous at the bridge, correct ? Me and my crew we&#39;ll take the aft landing bay. We&#39;ll secure an entry point and establish a defensive perimeter with our dropship, we&#39;ll grab some zero-G gear, just incase thoses damaged areas havn&#39;t been sealed already. How&#39;s that sound to ya&#39; ?&quot; Kha&#39;dra asked over comms.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/e9eed332fafbf2ba662bf0c46411132b-9FB5E.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Naelynn#4585" data-user-id="107795788259696640" style="">Naelynn</span>
+
+
+        <span class="chatlog__timestamp">07-Dec-18 11:23 AM</span>
+
+            <div class="chatlog__message " data-message-id="520636405890678786" id="message-520636405890678786">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">&quot;I&#39;d like to investigate the ship&#39;s systems, or what&#39;s left of them anyway.&quot; Would come in reply after a pause from the tenno. &quot;Information in the ship&#39;s memory banks should be vital to understanding what it&#39;s doing here. Odds are the databanks are going to be deep into the ship either near the bridge or the core of the thing itself. Also, probably too much to ask for a deep scan of the thing with location of potential data vaults, isn&#39;t it? Especially if it&#39;s a new discovery.&quot;
+
+The Tenno would reply into the shared communications channel and then once again focus on the ar display, going over the submitted data once more. &quot;Oh, one more thing... any bloody idea what could have caused that damage? &#39;Cause if it was damaged via explosions from the inside, odds are whatever damaged it could still be within. If it was crippled via external attack... &quot; Naelynn would merely shake her head, letting the sentence hang in the air.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/510043f71a932223ab64f94d9cf45170-F7E8A.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Midnight Ξ Runner#9606" data-user-id="208668282646036482" style="color: rgb(0,24,255)">Midnight-Runner - Ella</span>
+
+
+        <span class="chatlog__timestamp">08-Dec-18 06:21 AM</span>
+
+            <div class="chatlog__message " data-message-id="520922764110987265" id="message-520922764110987265">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">/Astra\
+
+There was a long pause, before the windswept star bloomed to life. “We will focus on the bridge, perhaps we could find anything pertaining to the cause of the state the vessel is in.”</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/395f08e63dc64192f2e49b2c573fe5c4-0675F.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Inarihatta#2828" data-user-id="461333334820257805" style="color: rgb(163,255,226)">Inarihatta(NSW) - Inari</span>
+
+
+        <span class="chatlog__timestamp">11-Dec-18 06:56 PM</span>
+
+            <div class="chatlog__message " data-message-id="522200020301250560" id="message-522200020301250560">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Inari (1/2)
+
+listening in to all the input from the different members she first turned her direction to the fellow tenno in her quarters, &quot;currently there are no signs of any life , so the most we should run into would be the automated defences, however in saying that we should at least be  cautious and prepared to run into some unknown enemies&quot; 
+
+So the iron legion squad from steel meridian would take the aft section which left the two central docking bays as well as the one all the way forward, on top of that the mysterious little ship that had still not established a proper channel, which made her a little cautious, though if it was hostile at all it would have done something earlier before the rest of the group had shown up.</span>
+
+                                <span class="chatlog__edited-timestamp" title="10-Jan-19 02:30 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/395f08e63dc64192f2e49b2c573fe5c4-0675F.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Inarihatta#2828" data-user-id="461333334820257805" style="color: rgb(163,255,226)">Inarihatta(NSW) - Inari</span>
+
+
+        <span class="chatlog__timestamp">11-Dec-18 07:12 PM</span>
+
+            <div class="chatlog__message " data-message-id="522204016332111888" id="message-522204016332111888">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">(2/2)
+
+&quot;Ok everyone here is the plan, Iron legion crew, head to the aft most docking bay, set yourselves up however you wish and  you can move forward, Naelynn, rendezvous with the runner at the central aft docking bay, you two head straight to the main bridge, and can start data collection, me and Geordie will go to the forward most docking back and work our way back&quot;  
+
+She looked at the digital image of the huge frigate, this thing was old and lord knows how many traps the executor who owned it set up in there. &quot;One last thing everyone, I will take lead on this but if anyone got proper input to make sure we all get out of this alive, make sure to speak up, I&#39;m fine for listening to good ideas that keeps us from dying in there.&quot;
+
+Looking at the few vid screens  she stood  relaxed waiting for the reply of the small alliance.</span>
+
+                                <span class="chatlog__edited-timestamp" title="10-Jan-19 02:31 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/d13ee7b1a4cabd6925b1b6036190edec-F38A1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Ross#8154" data-user-id="227906898219892736" style="">Ross</span>
+
+
+        <span class="chatlog__timestamp">11-Dec-18 09:00 PM</span>
+
+            <div class="chatlog__message " data-message-id="522231351013802028" id="message-522231351013802028">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Geordie</strong>
+&quot;Sounds good to me.&quot; Geordie said, giving a thumbs-up. He was still suspicious of the gravelly-voiced person, but decided not to say anything about it just then. He didn&#39;t want to stir up unrest in the group. If Inari&#39;s prediction was correct, they&#39;d need a fair amount of teamwork to avoid even the automatic defense systems.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/4404de0ba7e5c9a4d627695dfa3192f4-7C2F8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Rozencratz#3124" data-user-id="339116401815977986" style="color: rgb(135,157,189)">Rozencratz - Sonera</span>
+
+
+        <span class="chatlog__timestamp">12-Dec-18 01:19 PM</span>
+
+            <div class="chatlog__message " data-message-id="522477542960005120" id="message-522477542960005120">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">---the landing craft finally arrived near the Orbiter but it made no effort to dock, instead it floated around not wanting to crowd the others ship, seeing as how there are already a lot of crafts near. Instead, it floated near, listening in on the conversations going on across the coms, not saying anything but hearing all.---</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/510043f71a932223ab64f94d9cf45170-F7E8A.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Midnight Ξ Runner#9606" data-user-id="208668282646036482" style="color: rgb(0,24,255)">Midnight-Runner - Ella</span>
+
+
+        <span class="chatlog__timestamp">21-Dec-18 01:47 AM</span>
+
+            <div class="chatlog__message " data-message-id="525564933098831882" id="message-525564933098831882">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">/\Astra
+
+&quot;Affirmative, we&#39;ll start----- 
+
+
+In a quick bout of technical rage, Astra&#39;s comms wither out, the sound of data passing along the entirety of the small fleet of ships in forms of minor screens, or simply along a faint trace of others&#39; views: 01001001 01110100 00100000 01101000 01100001 01110011 00100000 01100010 01100101 01100101 01101110 00100000 01110011 01101111 00100000 01101100 01101111 01101110 01100111... <em>STATIC</em> ... <em>STATIC</em>
+
+/\Astra
+
+In but a second passing, Astra can be heard again. &quot;W....We&#39;re standing by.&quot;</span>
+
+                                <span class="chatlog__edited-timestamp" title="21-Dec-18 01:49 AM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/e9eed332fafbf2ba662bf0c46411132b-9FB5E.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Naelynn#4585" data-user-id="107795788259696640" style="">Naelynn</span>
+
+
+        <span class="chatlog__timestamp">21-Dec-18 03:14 AM</span>
+
+            <div class="chatlog__message " data-message-id="525586752505774092" id="message-525586752505774092">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">&quot;Central Docking Bay, understood. Runner-&quot; She would pause at the sudden burst of static coming in from her partner&#39;s comms. &quot;Vaesz&quot; She adressed her cephalon directly off the comms. &quot;What was that about?&quot; The tenno asked, and a few seconds later a message box with few words appeared, visible only to her thanks to her ar display. She would merely tilt her head to side and scoff ever so slightly. <em>So long..?</em> she&#39;d muse to herself and decide to file it under &#39;think about later&#39; inside her mind. 
+
+&quot;Ready to go.&quot; She&#39;d say over the team&#39;s comms, directing her scimitar next to The Runner. Meanwhile, on the ship itself the Nova warframe the tenno occupies would spend time petting and cuddling a large black/golden kavat, making sure to comfort the creature.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/fc2f31cda0d8ead570778ff1a96b18c5-4549C.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="DoubleDamages#7343" data-user-id="193359028880015363" style="color: rgb(132,88,0)">DoubleDamages - Kha&#39;dra Rham</span>
+
+
+        <span class="chatlog__timestamp">07-Jan-19 11:52 AM</span>
+
+            <div class="chatlog__message " data-message-id="531877757349789696" id="message-531877757349789696">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">&quot;Alright, we are A-OK on our side, ready to move on your order.&quot; Responded Kha&#39;dra before moving away from the pilot&#39;s seat, towards the rear of the ship. Every member of the Iron legion was equiped and ready to go. Zero-G gear ready and extra ammo packed here and there; even Rem&#39;s Kha&#39;dra&#39;s Hyekka was awake and ready to go.
+
+The Bolkdor dropship moved towards the aft section, without moving too close, just at a good distance, waiting for the signal to begin the operation.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/395f08e63dc64192f2e49b2c573fe5c4-0675F.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Inarihatta#2828" data-user-id="461333334820257805" style="color: rgb(163,255,226)">Inarihatta(NSW) - Inari</span>
+
+
+        <span class="chatlog__timestamp">10-Jan-19 02:29 PM</span>
+
+            <div class="chatlog__message " data-message-id="533004557681164288" id="message-533004557681164288">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Inari
+
+Seeing everyone quickly moving into action was a bit of a comfort to her seeing that this small alliance of tenno and grineer would hopefully work out for the best, &#39;alright everyone good luck and send confirmations on safe arrival in your respective landing zones&#39;.
+
+Quietly she motioned for puck to cut off all the screens, but pointed to the one that linked to the silent ship that she had tried to communicate with earlier but was still having a hard time understanding the occupants intention, &#39;I apologize if our communications is still a bit unstable..&#39; she began, &#39;but seeing as how you have yet to show any ill intentions towards me, or anyone else in this group, i will not block you out of this exploration either, if you&#39;d like please join me and my friend in the forward most docking bay, or land in the central forward bay, i&#39;ll leave that choice to you, but i hope we can meet up in there, till then stay safe&#39;.  She cut off the last screen seeing the view of the large Orokin ship coming up in her view port, turning to Geordie, she tilted her head extending a friendly hand to help him off the couch, &#39;well shall we get suited up then and head out?&#39;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/d13ee7b1a4cabd6925b1b6036190edec-F38A1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Ross#8154" data-user-id="227906898219892736" style="">Ross</span>
+
+
+        <span class="chatlog__timestamp">18-Jan-19 11:00 PM</span>
+
+            <div class="chatlog__message " data-message-id="536032223963512842" id="message-536032223963512842">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Geordie</strong>
+Smiling, he accepted the hand up and stood from the couch. Geordie straightened his clothing - though it was hardly wrinkled anyway - and nodded to Inari.
+
+&quot;I&#39;m interested to meet who we&#39;ll be working with,&quot; he mused, &quot;I&#39;m sure with such a large group we&#39;ll be able to handle anything we come across. Let&#39;s just be careful of any traps, I&#39;m sure you recall the orokin are quite fond of their lasers.&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/4404de0ba7e5c9a4d627695dfa3192f4-7C2F8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Rozencratz#3124" data-user-id="339116401815977986" style="color: rgb(135,157,189)">Rozencratz - Sonera</span>
+
+
+        <span class="chatlog__timestamp">22-Jan-19 02:01 PM</span>
+
+            <div class="chatlog__message " data-message-id="537346107601321984" id="message-537346107601321984">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">---Like before, no reply comes from the silent lading craft as it simply starts veering off towards the landing point onboard the Orokin vessel.---</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/395f08e63dc64192f2e49b2c573fe5c4-0675F.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Inarihatta#2828" data-user-id="461333334820257805" style="color: rgb(163,255,226)">Inarihatta(NSW) - Inari</span>
+
+
+        <span class="chatlog__timestamp">27-Jan-19 08:03 AM</span>
+
+            <div class="chatlog__message " data-message-id="539067957540814848" id="message-539067957540814848">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">The two tenno went off to their respective landers, with Inari getting her Mirage Prime set up with her favorite Akbolto prime with her trusted Cernos, and her Kogake primes. The small alliance flew to their agreed upon landing bays, within the massive frigate, each party could see clear signs of plasma burns scaring it’s white and gold hull, with some signs of use of heavy munitions.  
+
+The landing bays were not in good shape either, each bay had three landing platforms, but some had one bay destroyed while others had two, equipment laid strewn across the floor with some corners of the vast rooms being bunched up with cargo, the bay doors sat at the far end of the room sealed shut due to the pressure in the landing bays being compromised.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="539068490217160715" id="message-539068490217160715">
+
+                    <div class="chatlog__attachment">
+                        <div class="" onclick="">
+                            <div class="">
+                                    <a href="hyperion-ascended.html_Files/hyperion-landing-bay-85E73.jpg">
+                                        <img class="chatlog__attachment-thumbnail" src="hyperion-ascended.html_Files/hyperion-landing-bay-85E73.jpg" alt="Image attachment" title="Image: hyperion-landing-bay.jpg (13.31 KB)">
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/4404de0ba7e5c9a4d627695dfa3192f4-7C2F8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Rozencratz#3124" data-user-id="339116401815977986" style="color: rgb(135,157,189)">Rozencratz - Sonera</span>
+
+
+        <span class="chatlog__timestamp">28-Jan-19 12:15 PM</span>
+
+            <div class="chatlog__message " data-message-id="539493781762867220" id="message-539493781762867220">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">---The dull white Xiphos wobbled it’s way towards the landing location, it’s flight as before playful and wiggly. It seems it is the first to approach as the others are either prepping up or thinking about strategies or what not. The landing craft approaches the right bay, slowly straightening up to reveal it’s door. With a hissing kha-chhh, the engines of the craft shut off and the door rotates to reveal the occupant from within---
+
+<strong>Vazan’gul</strong>
+And he steps forth, a warframe that was once a protector and worshiped as a King over Mars. Dark red streaks coil around his dull sand-worn frame giving the image as if he&#39;s just stepped from a fresh battlefield. His chest area is equally bloodied, a mess with varous cloths dangling from between his hungry “mouth“...probably from his latest Devour. The Inaros pauses, lifting his dark Anubis helmet to inspect the area with eyeless eyes. A low growl announces his discomfort at the decompressed room but he still takes three steps from his landing craft to stand further in the room, arms lifting to cross in front of his chest. A Zaw made dagger is holstered on his lower back and Spira Prime bolts in pouches strapped on to his thighs, the red strings aiding in the overall crimson-splashed aesthetic. There seems to be a dark glyph circling around on his lower abdomen but in the dim lighting it would be hard to distinguish it.</span>
+
+                                <span class="chatlog__edited-timestamp" title="28-Jan-19 12:35 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="539493788683468802" id="message-539493788683468802">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><em> </em>
+However he is not alone, from the craft another presence steps up, a athletic built kubrow that reaches around the hip. The creature doesn&#39;t look to be healthy as it&#39;s black coat is patchy, falling off at places from too much scratching. The kubrow whimpers at the uncomfortable atmosphere and quickly rubs it&#39;s forehead on the Inaros&#39; leg, looking for comfort with it&#39;s bright blue eyes. The master looks down and uncoils his crossed hands from his chest, crouching down to cup the Kubrow&#39;s face, giving it a good scratch on the cheeks with his thumbs. At the contact all kind of fleas and insects start spilling from the Kubrow&#39;s pelt, fleeing towards the Inaros, traveling up his arms, crawling across his chest and finally burrowing in to his warm nooks and crannies. This disturbs the crawlies that were already inside the frame, causing a tinny wave of wiggling as the hundreds of insects that call this walking corpse eater home readjust to the extras.</span>
+
+                                <span class="chatlog__edited-timestamp" title="28-Jan-19 12:15 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/510043f71a932223ab64f94d9cf45170-F7E8A.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Midnight Ξ Runner#9606" data-user-id="208668282646036482" style="color: rgb(0,24,255)">Midnight-Runner - Ella</span>
+
+
+        <span class="chatlog__timestamp">01-Feb-19 06:31 PM</span>
+
+            <div class="chatlog__message " data-message-id="541038004584841226" id="message-541038004584841226">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">---Runner&#39;s Scimitar achieved its course, flying alongside Naelyn&#39;s sister-like lander. For a moment, it seemed curious about her twin-ship, before suddenly, and cautiously doubling back, maintaining a timid distance for the later half. Radio silence was heavily apparent after the comm-outage on their side, with only gentle cracks and mechanical beeps, the only remnant voice.---
+
+Eventually, the Winforged Scimitar would slot itself over one of the lesser surviving platforms, its insertion door cycling...---
+
+//Runner
+
+Similar to the crystalline metals of her ship, a decorated Banshee Prime gracefully dropped to the withered floor. A  Wind colored Tiberon and Nikana Prime hung to her back upon a nest of cloth and a hybridized Sydeko, and a Bloody Euphona Prime clasping to her side, almost eager to satiate itself in the blood of the Banshee&#39;s foe.
+
+The Frame seemed to knock its own head a few times before pulling out the Tiberon, checking it over several times in silent vox, awaiting the dispensing of its ally.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/e9eed332fafbf2ba662bf0c46411132b-9FB5E.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Naelynn#4585" data-user-id="107795788259696640" style="">Naelynn</span>
+
+
+        <span class="chatlog__timestamp">07-Feb-19 03:25 AM</span>
+
+            <div class="chatlog__message " data-message-id="542984245027668011" id="message-542984245027668011">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">The other scimitar would seem directly opposite to The Runner - it would seem almost prideful in it&#39;s actions.  After the banshee has been inserted, a second warframe would soon follow, being dropped off by the other vessel - a peculiar Nova Prime that appears to have been heavily cybernitized, carrying a baza, a customized dagger and an oddly miss-colored lato not matching rest of the warframe&#39;s color scheme. That is, the warframe itself was silver-colored, with dashes of red and pink, whilst the pistol used standard issue vandal coloring, teal and black.
+
+Yet, the warframe wasn&#39;t the only thing being dropped off as a moment after it a Kavat leaped out of it&#39;s airlock accompanying the &#39;frame. &quot;The Emperor&quot; as Runner&#39;s Hud would identify it was a large golden smeeta with a set of (mostly) decorative armor in orokin colors. It would take a moment to rub against it&#39;s master&#39;s leg before setting off in exploring the room near the two of them, looking out for traps or signs of infestation.
+
+Naelynn would give a nod to the other tenno in greetings. &quot;Let us proceed. If you spot a terminal let me know, might be a good idea to check if the sector&#39;s automated defenses are turned on.&quot; She&#39;d send a quick communication on the tenno&#39;s channel to Ella whilst pulling out the silenced assault rifle and unlocking it&#39;s safety. &quot;Oh, and you can call me Naelynn, the cat&#39;s called Emperor.&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/fc2f31cda0d8ead570778ff1a96b18c5-4549C.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="DoubleDamages#7343" data-user-id="193359028880015363" style="color: rgb(132,88,0)">DoubleDamages - Kha&#39;dra Rham</span>
+
+
+        <span class="chatlog__timestamp">11-Feb-19 07:22 PM</span>
+
+            <div class="chatlog__message " data-message-id="544674601553100800" id="message-544674601553100800">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">The Steel Meridian drop-ship suddenly moved forward as it&#39;s auxiliary boosters activated, leaving a red-ish orange trail on it&#39;s path, which quickly faded away. Moving towards the landing bays, the Bolkor flew inside the hangar at a dashing speed, quickly rotating on itself, like some-kind of central imaginary axis, it&#39;s rear hatch now facing towards the end of the large Orokin decorated room. A few seconds later and the hatch opened itself in a slight pressurized and hissing sound. Four shapes could be now seen inside the ship, packed with equipment and weapons as it seems.
+A moment passed and the Steal Meridian Bolkor moved closer towards the metallic ground of the landing bays, a simple but precise maneuver. Again, seconds later, the Grineers defectors dropped down from the ship, in a tight and tactical formation, weapons at the ready. Even the squad&#39;s hyekka was already ready to pounce at a moment&#39;s notice. Kha&#39;dra signaled her squad to spread out with a simple hand gesture as each of them slowly moved away from each other, scanning their surrounding with upmost precision and readiness. They were inside, but who knew what was waiting for them, what was lurking in the shadows of this old derelict ...</span>
+
+                                <span class="chatlog__edited-timestamp" title="10-Jul-19 05:24 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/d13ee7b1a4cabd6925b1b6036190edec-F38A1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Ross#8154" data-user-id="227906898219892736" style="">Ross</span>
+
+
+        <span class="chatlog__timestamp">23-Feb-19 09:52 PM</span>
+
+            <div class="chatlog__message " data-message-id="549061136784556033" id="message-549061136784556033">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Gerodie&#39;s lander, with the looming shape of the derelict warping strange patterns on its metallic hull, pulled in neatly and docked with precision among the rest of the group. A similarly metallic green Volt freed himself from the rotating half-cylinder and stepped forward, giving a friendly nod to everyone else. A tiny chain dangled from one side of his helmet with a tiny charm at the end, resembling an earring despite the warframe not having any ears.
+
+&quot;Hello all!&quot; he said cheerfully - and rather formally - as he observed who else was with him. &quot;My name is Geordie. It&#39;s my pleasure to work with you all.&quot;
+
+Considering his introduction taken care of, he drew his Karak - again, plated metallic green - and waited patiently for the group to ready up so they could start investigating this mysterious ship.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/395f08e63dc64192f2e49b2c573fe5c4-0675F.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Inarihatta#2828" data-user-id="461333334820257805" style="color: rgb(163,255,226)">Inarihatta(NSW) - Inari</span>
+
+
+        <span class="chatlog__timestamp">25-Feb-19 02:53 PM</span>
+
+            <div class="chatlog__message " data-message-id="549680263202996236" id="message-549680263202996236">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Inari
+
+Dropping down from her levet beside Geordie, the gigantic docking bay seemed like it had seemed like it had seen better days,  hearing  her friends introduction over the calms brought a small smile to her face. Bringing up her HUD , the tenno opened a channel to the whole team, &quot;Boarding team, this is Inari, status on landing and team members&quot;  
+
+Slipping her Cernos off her back, she nodded toward Geordie as she headed for the main hatchway of the landing platform, &quot;you take a look around Geordie, i&#39;ll see what we got with the doorway here&quot;.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/395f08e63dc64192f2e49b2c573fe5c4-0675F.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Inarihatta#2828" data-user-id="461333334820257805" style="color: rgb(163,255,226)">Inarihatta(NSW) - Inari</span>
+
+
+        <span class="chatlog__timestamp">25-Feb-19 03:08 PM</span>
+
+            <div class="chatlog__message " data-message-id="549684051791839235" id="message-549684051791839235">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Pt.2 Into the past they venture
+
+Each group of the search party could see that things were left messy, as if someone was trying to leave the giant frigate in a hurry, Ella and the Runner, along with the Iron Legion squad both could see some ballistics scoring on the walls, as if some kind of scuffle went down before the ship vanished into the void. Inari’s communication came through somewhat clear, the sheer size of the ship was slightly playing on the comms. 
+
+The main doorways were for the most part unlocked and access to the main hallways of the frigate, though the door way int he iron legions docking bay seemed somewhat jammed.</span>
+
+                        </div>
+                    </div>
+
+                    <div class="chatlog__attachment">
+                        <div class="" onclick="">
+                            <div class="">
+                                    <a href="hyperion-ascended.html_Files/Hyperion_overlay-6A392.jpg">
+                                        <img class="chatlog__attachment-thumbnail" src="hyperion-ascended.html_Files/Hyperion_overlay-6A392.jpg" alt="Image attachment" title="Image: Hyperion_overlay.jpg (22.77 KB)">
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="hyperion-ascended.html_Files/4404de0ba7e5c9a4d627695dfa3192f4-7C2F8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Rozencratz#3124" data-user-id="339116401815977986" style="color: rgb(135,157,189)">Rozencratz - Sonera</span>
+
+
+        <span class="chatlog__timestamp">01-Mar-19 12:26 PM</span>
+
+            <div class="chatlog__message " data-message-id="551093021928718356" id="message-551093021928718356">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Vazan’gul</strong>
+The Inaros grumbles under his throat as his eyeless helmet rests on the door keeping him from advancing. No one around but him it seems…for now. Nothing from him comes to answer Inari’s question as he heads towards the door in a rather slow and regal approach as if his every step should be executed with the utmost care, his discomforted companion following close behind. Once through the door the Anubis-helmed frame takes a pause once more, to absorb the new surrounding and the shambled mess of it. Curiosity about the others rose within him but he kept calm…calm and good…as it should be.
+For now he waits in the area beyond the hangar he exited from, his arms crossed over his chest and his head turning ever so slightly and gracefully to the side, to listen intently to any unusual noises.
+The flea-infected kubrow hangs close to it’s master, head rubbing against the Inaros’ left leg in a search for comfort</span>
+
+                                <span class="chatlog__edited-timestamp" title="30-Mar-19 06:17 AM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+</div>
+
+<div class="postamble">
+    <div class="postamble__entry">Exported 65 message(s)</div>
+</div>
+
+</body>
+
+</html>

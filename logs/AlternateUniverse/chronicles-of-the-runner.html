@@ -1,0 +1,1867 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tales of the Awakened [Warframe RP Community] - chronicles-of-the-runner</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <style>
+        /* General */
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-300.woff);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-400.woff);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-500.woff);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-600.woff);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-700.woff);
+    font-weight: 700;
+}
+
+body {
+    font-family: "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    object-fit: contain;
+}
+
+.markdown {
+    max-width: 100%;
+    line-height: 1.3;
+    overflow-wrap: break-word;
+}
+
+.preserve-whitespace {
+    white-space: pre-wrap;
+}
+
+.spoiler {
+    /* width: fit-content; */
+    display: inline-block;
+    /* This is more consistent across browsers, the old attribute worked well under Chrome but not FireFox. */
+}
+
+.spoiler--hidden {
+    cursor: pointer;
+}
+
+.spoiler-text {
+    border-radius: 3px;
+}
+
+.spoiler--hidden .spoiler-text {
+    color: rgba(0, 0, 0, 0);
+}
+
+.spoiler--hidden .spoiler-text::selection {
+    color: rgba(0, 0, 0, 0);
+}
+
+.spoiler-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.spoiler--hidden .spoiler-image {
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.spoiler--hidden .spoiler-image * {
+    filter: blur(44px);
+}
+
+.spoiler--hidden .spoiler-image:after {
+    content: "SPOILER";
+    color: #dcddde;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    padding: 100%;
+    border-radius: 20px;
+    letter-spacing: 0.05em;
+    font-size: 0.9em;
+}
+
+.spoiler--hidden:hover .spoiler-image:after {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.quote {
+    margin: 0.1em 0;
+    padding-left: 0.6em;
+    border-left: 4px solid;
+    border-radius: 3px;
+}
+
+.pre {
+    font-family: "Consolas", "Courier New", Courier, monospace;
+}
+
+.pre--multiline {
+    margin-top: 0.25em;
+    padding: 0.5em;
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+.pre--inline {
+    padding: 2px;
+    border-radius: 3px;
+    font-size: 0.85em;
+}
+
+.mention {
+    border-radius: 3px;
+    padding: 0 2px;
+    color: #7289da;
+    background: rgba(114, 137, 218, .1);
+    font-weight: 500;
+}
+
+.emoji {
+    width: 1.25em;
+    height: 1.25em;
+    margin: 0 0.06em;
+    vertical-align: -0.4em;
+}
+
+.emoji--small {
+    width: 1em;
+    height: 1em;
+}
+
+.emoji--large {
+    width: 2.8em;
+    height: 2.8em;
+}
+
+/* Preamble */
+
+.preamble {
+    display: grid;
+    margin: 0 0.3em 0.6em 0.3em;
+    max-width: 100%;
+    grid-template-columns: auto 1fr;
+}
+
+.preamble__guild-icon-container {
+    grid-column: 1;
+}
+
+.preamble__guild-icon {
+    max-width: 88px;
+    max-height: 88px;
+}
+
+.preamble__entries-container {
+    grid-column: 2;
+    margin-left: 0.6em;
+}
+
+.preamble__entry {
+    font-size: 1.4em;
+}
+
+.preamble__entry--small {
+    font-size: 1em;
+}
+
+/* Chatlog */
+
+.chatlog {
+    max-width: 100%;
+}
+
+.chatlog__message-group {
+    display: grid;
+    margin: 0 0.6em;
+    padding: 0.9em 0;
+    border-top: 1px solid;
+    grid-template-columns: auto 1fr;
+}
+
+.chatlog__reference-symbol {
+    grid-column: 1;
+    border-style: solid;
+    border-width: 2px 0 0 2px;
+    border-radius: 8px 0 0 0;
+    margin-left: 16px;
+    margin-top: 8px;
+}
+
+.chatlog__reference {
+    display: flex;
+    grid-column: 2;
+    margin-left: 1.2em;
+    margin-bottom: 0.25em;
+    font-size: 0.875em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    align-items: center;
+}
+
+.chatlog__reference-avatar {
+    border-radius: 50%;
+    height: 16px;
+    width: 16px;
+    margin-right: 0.25em;
+}
+
+.chatlog__reference-name {
+    margin-right: 0.25em;
+    font-weight: 600;
+}
+
+.chatlog__reference-link {
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.chatlog__reference-link:hover {
+    text-decoration: none;
+}
+
+.chatlog__reference-content > * {
+    display: inline;
+}
+
+.chatlog__reference-edited-timestamp {
+    margin-left: 0.25em;
+    font-size: 0.8em;
+}
+
+.chatlog__author-avatar-container {
+    grid-column: 1;
+    width: 40px;
+    height: 40px;
+}
+
+.chatlog__author-avatar {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.chatlog__messages {
+    grid-column: 2;
+    margin-left: 1.2em;
+    min-width: 50%;
+}
+
+.chatlog__author-name {
+    font-weight: 500;
+}
+
+.chatlog__timestamp {
+    margin-left: 0.3em;
+    font-size: 0.75em;
+}
+
+.chatlog__message {
+    padding: 0.1em 0.3em;
+    margin: 0 -0.3em;
+    background-color: transparent;
+    transition: background-color 1s ease;
+}
+
+.chatlog__content {
+    font-size: 0.95em;
+    word-wrap: break-word;
+}
+
+.chatlog__edited-timestamp {
+    margin-left: 0.15em;
+    font-size: 0.8em;
+}
+
+.chatlog__attachment {
+    margin-top: 0.3em;
+}
+
+.chatlog__attachment-thumbnail {
+    vertical-align: top;
+    max-width: 45vw;
+    max-height: 500px;
+    border-radius: 3px;
+}
+
+.chatlog__attachment-container {
+    height: 40px;
+    width: 100%;
+    max-width: 520px;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.chatlog__attachment-icon {
+    float: left;
+    height: 100%;
+    margin-right: 10px;
+}
+
+.chatlog__attachment-icon > .a {
+    fill: #f4f5fb;
+    d: path("M50,935a25,25,0,0,1-25-25V50A25,25,0,0,1,50,25H519.6L695,201.32V910a25,25,0,0,1-25,25Z");
+}
+
+.chatlog__attachment-icon > .b {
+    fill: #7789c4;
+    d: path("M509.21,50,670,211.63V910H50V50H509.21M530,0H50A50,50,0,0,0,0,50V910a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50h0V191Z");
+}
+
+.chatlog__attachment-icon > .c {
+    fill: #f4f5fb;
+    d: path("M530,215a25,25,0,0,1-25-25V50a25,25,0,0,1,16.23-23.41L693.41,198.77A25,25,0,0,1,670,215Z");
+}
+
+.chatlog__attachment-icon > .d {
+    fill: #7789c4;
+    d: path("M530,70.71,649.29,190H530V70.71M530,0a50,50,0,0,0-50,50V190a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50Z");
+}
+
+.chatlog__attachment-filesize {
+    color: #72767d;
+    font-size: 12px;
+}
+
+.chatlog__attachment-filename {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.chatlog__embed {
+    display: flex;
+    margin-top: 0.3em;
+    max-width: 520px;
+}
+
+.chatlog__embed-color-pill {
+    flex-shrink: 0;
+    width: 0.25em;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.chatlog__embed-content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em 0.6em;
+    border: 1px solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.chatlog__embed-content {
+    display: flex;
+    width: 100%;
+}
+
+.chatlog__embed-text {
+    flex: 1;
+}
+
+.chatlog__embed-author {
+    display: flex;
+    margin-bottom: 0.3em;
+    align-items: center;
+}
+
+.chatlog__embed-author-icon {
+    margin-right: 0.5em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.chatlog__embed-author-name {
+    font-size: 0.875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-title {
+    margin-bottom: 0.2em;
+    font-size: 0.875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-description {
+    font-weight: 500;
+    font-size: 0.85em;
+}
+
+.chatlog__embed-fields {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chatlog__embed-field {
+    flex: 0;
+    min-width: 100%;
+    max-width: 506px;
+    padding-top: 0.6em;
+    font-size: 0.875em;
+}
+
+.chatlog__embed-field--inline {
+    flex: 1;
+    flex-basis: auto;
+    min-width: 150px;
+}
+
+.chatlog__embed-field-name {
+    margin-bottom: 0.2em;
+    font-weight: 600;
+}
+
+.chatlog__embed-field-value {
+    font-weight: 500;
+}
+
+.chatlog__embed-thumbnail {
+    flex: 0;
+    margin-left: 1.2em;
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-image-container {
+    margin-top: 0.6em;
+}
+
+.chatlog__embed-image {
+    max-width: 500px;
+    max-height: 400px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-footer {
+    margin-top: 0.6em;
+}
+
+.chatlog__embed-footer-icon {
+    margin-right: 0.2em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.chatlog__embed-footer-text {
+    font-size: 0.75em;
+    font-weight: 500;
+}
+
+.chatlog__reactions {
+    display: flex;
+}
+
+.chatlog__reaction {
+    display: flex;
+    align-items: center;
+    margin: 0.35em 0.1em 0.1em 0.1em;
+    padding: 0.2em 0.35em;
+    border-radius: 3px;
+}
+
+.chatlog__reaction-count {
+    min-width: 9px;
+    margin-left: 0.35em;
+    font-size: 0.875em;
+}
+
+.chatlog__bot-tag {
+    position: relative;
+    top: -.2em;
+    margin-left: 0.3em;
+    padding: 0.05em 0.3em;
+    border-radius: 3px;
+    vertical-align: middle;
+    line-height: 1.3;
+    background: #7289da;
+    color: #ffffff;
+    font-size: 0.625em;
+    font-weight: 500;
+}
+
+/* Postamble */
+
+.postamble {
+    margin: 1.4em 0.3em 0.6em 0.3em;
+    padding: 1em;
+    border-top: 1px solid;
+}
+    </style>
+    <style>
+        /* General */
+
+body {
+    background-color: #36393e;
+    color: #dcddde;
+}
+
+a {
+    color: #0096cf;
+}
+
+.spoiler-text {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.spoiler--hidden .spoiler-text {
+    background-color: #202225;
+}
+
+.spoiler--hidden:hover .spoiler-text {
+    background-color: rgba(32, 34, 37, 0.8);
+}
+
+.quote {
+    border-color: #4f545c;
+}
+
+.pre {
+    background-color: #2f3136 !important;
+}
+
+.pre--multiline {
+    border-color: #282b30 !important;
+    color: #b9bbbe !important;
+}
+
+/* === Preamble === */
+
+.preamble__entry {
+    color: #ffffff;
+}
+
+/* Chatlog */
+
+.chatlog__message-group {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.chatlog__reference-symbol {
+    border-color: #4f545c;
+}
+
+.chatlog__reference {
+    color: #b5b6b8;
+}
+
+.chatlog__reference-link {
+    color: #b5b6b8;
+}
+
+.chatlog__reference-link:hover {
+    color: #ffffff;
+}
+
+.chatlog__reference-edited-timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__author-name {
+    color: #ffffff;
+}
+
+.chatlog__timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__message--highlighted {
+    background-color: rgba(114, 137, 218, 0.2) !important;
+}
+
+.chatlog__message--pinned {
+    background-color: rgba(249, 168, 37, 0.05);
+}
+
+.chatlog__attachment-container {
+    background-color: #2f3136;
+    border-color: #292b2f;
+}
+
+.chatlog__edited-timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__embed-color-pill--default {
+    background-color: rgba(79, 84, 92, 1);
+}
+
+.chatlog__embed-content-container {
+    background-color: rgba(46, 48, 54, 0.3);
+    border-color: rgba(46, 48, 54, 0.6);
+}
+
+.chatlog__embed-author-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-author-name-link {
+    color: #ffffff;
+}
+
+.chatlog__embed-title {
+    color: #ffffff;
+}
+
+.chatlog__embed-description {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-field-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-field-value {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-footer {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__reaction {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.chatlog__reaction-count {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* Postamble */
+
+.postamble {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.postamble__entry {
+    color: #ffffff;
+}
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.pre--multiline').forEach(block => hljs.highlightBlock(block));
+        });
+    </script>
+
+    <script>
+        function scrollToMessage(event, id) {
+            var element = document.getElementById('message-' + id);
+
+            if (element) {
+                event.preventDefault();
+
+                element.classList.add('chatlog__message--highlighted');
+
+                window.scrollTo({
+                    top: element.getBoundingClientRect().top - document.body.getBoundingClientRect().top - (window.innerHeight / 2),
+                    behavior: 'smooth'
+                });
+
+                window.setTimeout(function() {
+                    element.classList.remove('chatlog__message--highlighted');
+                }, 2000);
+            }
+        }
+
+        function showSpoiler(event, element) {
+            if (element && element.classList.contains('spoiler--hidden')) {
+                event.preventDefault();
+                element.classList.remove('spoiler--hidden');
+            }
+        }
+    </script>
+</head>
+<body>
+
+<div class="preamble">
+    <div class="preamble__guild-icon-container">
+        <img class="preamble__guild-icon" src="chronicles-of-the-runner.html_Files/53926fd90f2c07d8f8a7d6fbee76bb17-34E69.png" alt="Guild icon">
+    </div>
+    <div class="preamble__entries-container">
+        <div class="preamble__entry">Tales of the Awakened [Warframe RP Community]</div>
+        <div class="preamble__entry">Personal Roleplaying / chronicles-of-the-runner</div>
+
+            <div class="preamble__entry preamble__entry--small">[5/6 AR] CLOSED RP - Eris&#39; Orbit | Out of the ominous blackness of Eris’ graveyard, of an ancient vice that webbed its way across the planet&#39;s shadow, a beacon pulsed irregularly, like a diseased heart struggling with all its feeble might to defy the inevitable. However curious, was the fact the signal and an obscure message attached was only pulsing on the old Remnant encryption, however breaking its intended call to the larger audience on the occasional broken tempo.
+
+---------------------------------------
+//COME TO BRIDGE
+//AID REQUIRED
+
+//IMPERATIVE
+
+
+------------------------------</div>
+
+    </div>
+</div>
+
+<div class="chatlog">
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="chronicles-of-the-runner.html_Files/510043f71a932223ab64f94d9cf45170-F7E8A.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Midnight Ξ Runner#9606" data-user-id="208668282646036482" style="color: rgb(0,24,255)">Midnight-Runner - Ella</span>
+
+
+        <span class="chatlog__timestamp">12-Oct-18 05:04 PM</span>
+
+            <div class="chatlog__message " data-message-id="500413370957037594" id="message-500413370957037594">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">//LOCATION: CLASSIFIED VECTOR AND POSITION 
+//VESSEL: MHOLAH-RE III SPECIAL OPERATIONS VESSEL
+//TIME: 0800 EARTH TIME
+
+
+“How was Mars this time around?” The figure leaned back in the chair, propping his feet up on the command console centered around the dim room of charts and monitored locales, Spheres of blue and red casting their light from the hologram across the room as the occasional crewmember walked past outside.
+
+“Nothing new Rook… aside from shiny warframes and a few Corpus… mercenaries?”
+
+Another figure beside Rook, at true attention, slapped his feet back down to the metal floor, “Corpus mercenaries? Well, haven’t heard of such a thing for quite the while.”
+
+“You’d be surprised Bishop, anything to report?” Ifrit asked, leaning onto the table.
+
+She shook her head. “Nada, scans nominal on the village, nothing to worry. Still barely a sign of Ella though, and Astra is, as per usual, quietly freaking out in her empty orbiter.”
+
+Ifrit sighed, tapping a finger for a moment on the command table’s edge. “I can’t blame her, if I were in her sho-uh-er… place, I’d be just the same way.”
+
+“We’d all be.” Rook added, slumped lazily in his chair. “So, how did the uh... Tomb Raid go?”
+
+...
+
+…
+
+…
+
+<strong>----------------------------------------------------------------------------------------------------</strong>
+<em><strong> DATE: 5/6</strong></em> [<strong>OPEN RP</strong>] (I might set it to CLOSED depending on the situation afterwards.) <span class="mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Remnant Veteran</span> | -Out of the ominous blackness of Eris’ graveyard, of an ancient vice that webbed its way across the planet&#39;s shadow, a beacon pulsed irregularly, like a diseased heart struggling with all its feeble might to defy the inevitable. However curious, was the fact the signal and an obscure message attached was only pulsing on the old Remnant encryption, however breaking its intended call to the larger audience on the occasional broken tempo.-
+
+---------------------------------------
+//COME TO BRIDGE
+//AID REQUIRED
+
+//IMPERATIVE
+
+
+------------------------------</span>
+
+                                <span class="chatlog__edited-timestamp" title="15-Nov-18 02:26 AM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="chronicles-of-the-runner.html_Files/d73030fb7f7872bb9df7d8d905bbb49e-811B6.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Blood&#127862;Strider#5557" data-user-id="235950544630317057" style="color: rgb(255,41,0)">Blood_Strider - Lekalis</span>
+
+
+        <span class="chatlog__timestamp">14-Oct-18 05:15 AM</span>
+
+            <div class="chatlog__message " data-message-id="500959722510221313" id="message-500959722510221313">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">/RED/
+
+<div class="pre pre--multiline language-css">...
+...
+[INTERCEPT LINK ACTIVE]</div>
+Smoke bloomed out from dry lips, curling into a lune that made a waxing moon swoon in envy. 
+&quot;Marvellous...&quot; The words came out like ice amidst the sweating interior of an ashen vessel. Coolant hissed and vents left a mist on the ground so thick it looked like snow. 
+A metal hand, sharp and black as smoke, rose up to push back a strand of maroon hued hair; a few fell as they were cut on the backs of the digits which made the hand.
+&quot;... Locillus, open manual override portals eighty-eight and one-oh-eight.&quot; Its tone was flat, monotonous with a lilt of a flower aflame. 
+[1/6]</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="500959763593428992" id="message-500959763593428992">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">[2/6]
+&quot;Understood.&quot; The rolling and churning tones of Locillus&#39; synthesized vox echoed out from a meek projector that blinked blue as he spoke; a stark contrast to the vermillion banquet of industrial gore and electrical excrement that snapped and fizzled inside the interior of this dire vessel. Infront of the command seat, which was held aloft by a thousand spidery limbs, two rectangular screens of orange flared to life from two square pistons that had risen from the mesh floor below.
+
+The screens took a moment for their holographic displays to boot up and display a river of information that was of the Remnant&#39;s encryption.
+&quot;Ports 88 and 108 have been compromised. PS Subroutines are moving, estimated time--&quot;
+&quot;-- 8.887, rounded, seconds. I know.&quot;
+&quot;-- You don&#39;t. 5.223, rounded. Unscheduled entrances have been noticed and security has been escalated since your last interjection.&quot;
+The talons of obsidian hovered over the two panels, twitching with excitement as glyphs of Orokin design moved in ever erratic patterns; the sea held a billion tides amidst a whirlpool of Grineer texts, trashed with odd Corpus runes.
+The ice clucked its tongue, a glacier about to fall, as RED quirked her head to one side; twelve eyes, divided six and six to either socket, shifted, paused, shifted the other way and waited.
+&quot;Amateurs.&quot; She mumbled and slowly let her fingers drift into the orange holograph; immediately the sea churned in and unto itself, reacting as water was want to do.
+With the nimbleness of a swallow, but the ferocity of a tiger, RED&#39;s sharp digits cut through the water and re-arranged the tides.
+&quot;You won&#39;t crack it...&quot; Locillus grumbled,
+&quot;You know I don&#39;t like it when you talk and I&#39;m busy.&quot;
+&quot;... It&#39;s tuned to the Mantis&#39; reactor&#39;s radiation flux and adjusted by the coolant disposed.&quot; he elaborated,
+&quot;<em>Fekhunderes</em>&quot; RED swore with a careless wave of her hand.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="500959797269626890" id="message-500959797269626890">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">[3/6]
+Locillus&#39; blinking blue port intensified and a scream came out of it; a sound the Cephalon was clearly not designed to make. A sound like an atom being split, water squeezed through a tube too tight. Suffocated. Locillus&#39; voice drowned t&#39;ill there was nothing there but the whisper of the charcoal vessel&#39;s routines.
+RED&#39;s thumb dipped into the whirlpool&#39;s heart; piercing it. The text stopped;
+&quot;...Radiation, coolant...&quot; RED muttered to herself.
+A blinking counter in the corner of the screen counted down her actions. The Corpus sigils were a pain... New. 
+But routine.
+She didn&#39;t distract herself with how much time was left. She spared half a second, it was her gut reaction, before her little finger pierced each sigil and held them in place.
+
+&quot;...Hmhmhahahaahah.&quot; RED chuckled in victory as she flexed her fingers outwards, and the tide&#39;s stopped running, the whirlpool dispersed, and the debris organized into lines for a message to be displayed.
+She made idle clicking noises as she arranged the data to be coherent, her lidless eyes looked over the data and nodded to an soundless beat.
+&quot;Beautiful... Beautiful, beautiful. Frippery, as always.&quot; she sighed,
+&quot;Locillus, destroy Port 88 and 108. Thanks for the--&quot; RED glanced to the dead port of Locillus&#39; vox, &quot;--Oh, right. Sorry.&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="500959851778801664" id="message-500959851778801664">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">[4/6]
+With due haphazardness, she slid herself out of the seat, her metal joins scything through the air before her talon&#39;d foot curled into the dark mesh floor. The Pulsing red of her ship&#39;s reactor below illuminated a similar obsidian array of sharp metal grafted to pulled meat; deep lines were gouged into her meat, winding about her knees, her thigh and waist. Mimicking the musculature beneath like a map marks the tides of an ocean.
+
+She strode forward with regimented fluidity, before her fingers dug into the socket of Locillus&#39; port and turned; there was a synthesized, released, breath of air as the blinking blue light returned.
+&quot;I <em>did</em> warn you.&quot;
+Locillus was silent, as RED rolled her shoulders and scratched at the pale mask of meat that held to her onyx skull.
+&quot;You know my process; remove our trace, overflow the Ports with junk data... Ports should be shut down in a week or so.&quot; She mumbled the last to herself as she strutted underneath the two holograms, Port 88 on the left, Port 108 to the right; she gave each a proper salute, a fist over her heart and a bow of the crown.
+&quot;You&#39;ve served my warband faithfully, Port 88 and 108. Now you will die.&quot; She swiped her hand upwards and the arms rescinded into the floor below her.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="500959876353097728" id="message-500959876353097728">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">[5/6]
+
+&quot;Send a return message, Locillus.&quot; RED decided, turning to face the shut window port of her vessel. She sauntered up to it and placed her razored digits against its surface, she lightly dragged them across the metal, and still, sparks fluttered down into the engine below.
+&quot;This... is a distress beacon. There won&#39;t be a reciever.&quot; Locillus informed,
+&quot;I don&#39;t care. The Gryphon has slept too long.&quot; Her fingers curled around a lever, she pulled it up with such force that it jammed open, sparks exploded out and smoke billowed forth. More mist clouded the floor.
+
+&quot;Send a return pulse along the same frequency:&quot;
+The blast-shudders that shielded the window shuttered and sent shrieks through the hull as it drew back. The sun blinded her for a moment, she flinched and raised her arm with a toothy grin.
+&quot;The Red Sol rises. Break. To meet the Blue Moon. Break. Inspect Alternative Methods When Arrival Roams. Capitalize all first letters. End.&quot;
+Her arm fell and she let the sun bathe her corpus, she felt the singe against her skin as she relished the moment. She heard Locillus sigh and she chuckled again.
+
+RED cleared her throat and her smile faded as she shuffled over to a panel and brought it down, 
+&quot;Eris...&quot; she muttered and aligned her coordinates with it. She sniffed and felt blood in the back of her throat.
+&quot;... already?&quot; She scoffed and shook her head before her vessel jacked into the rail system from its inky void and blinked through the system, towards the Infested cell of Eris.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="500959900742975490" id="message-500959900742975490">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">[6/6]
+
+Immediately, a tendril of infested flesh cut itself in twain across the wedge shaped ramming prow of RED&#39;s vessel, shaking it but not disturbing the glass. Blood smeared across the prow before being swept off into a new orbit. The red stained the black shell, evaporating off the angular plates.
+RED swore and made two long strides before hopping up into her command seat, it bucked as she drew up command holograms and turned the ship to avoid another tendril that almost seemed to try and lash out at her dark vessel. The engine inside whirred and roared as the thrusters hidden inside the hull made RED sweat; more coolant spilled out as she turned the vessel again, and found a safe vector.
+
+She pulled down a slab that displayed a local radar, and then another which she dialled into the hijacked distress-beacon&#39;s coordinates.
+She wiped her brow with the meat of her bicep and began to guide the ship towards the distress-beacon&#39;s coordinates; her eyes peeled for any hints, a ship with an intact bridge would be a start, she imagined...
+
+\</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="chronicles-of-the-runner.html_Files/a0b899049ff668cddb4e3fc3767d7056-D3821.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="leirynot#7248" data-user-id="132350882825240577" style="color: rgb(255,243,0)">leirynot - Isa</span>
+
+
+        <span class="chatlog__timestamp">16-Oct-18 11:49 PM</span>
+
+            <div class="chatlog__message " data-message-id="501965004891750401" id="message-501965004891750401">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Isa:
+
+After receiving a Remnant signal, Isa had set off for Eris. She tracked the message in her orbiter to its source on Eris.
+
+&quot;Ziton. Scan the area for Tenno energy residue and scan for a weak point in the hull to blast through near the bridge. Deploy proxies to prepare breaching charges.&quot;
+
+She said, seated within her transference chair. She closed her eyes, moving her consciousness into her Saryn now. Inside the shining warframe, she quickly made her way through the orbiter to where the archwing was stored. 
+
+She looked down at the doors of the orbiter as she felt her golden wings affix themselves to her back. The doors open and she plummeted out, boosting herself as she did so. The artificial gravity of the ship lost its hold as she exited. She then flew her way out around the Orokin vessel to monitor the proxies planting the charges. It was rather quick, and once the charges were deployed, Isa detonated them, blowing an entrance. With the hole open, she would fly her archwing inside.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="chronicles-of-the-runner.html_Files/a233a24842cecff11a0878b604b115a1-38F11.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Daakjenaar#7018" data-user-id="358680374022242324" style="color: rgb(0,5,46)">Daakjenaar</span>
+
+
+        <span class="chatlog__timestamp">22-Oct-18 02:25 AM</span>
+
+            <div class="chatlog__message " data-message-id="503816121216925706" id="message-503816121216925706">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>KAMOS AND ATELA</strong>
+Atela was only just leaving Mars still, back in her Orbiter. Well, that had happened. Honestly, she was glad to be off of that planet again. Sand was coarse, and rough, and always got stuck in the frames. It was a pain to clean sand out of stuff. But, as the craft ascended into the upper atmosphere, said sand was removed. Mars really was the worst.
+
+&quot;At least when I drag us somewhere, it&#39;s interesting.&quot; Kamos spoke up, currently overseeing something being made in the foundry. &quot;And I never end up anywhere with sand. Maybe acid rain, but not sand. At least acid rain does some cleaning.&quot; He was brushing some red sand from his own Frame, the Rhino looking a tad more silver without it.
+
+&quot;At least we all got out intact, which is more than I can say for half of <em>your</em> ideas. If I wanted a repeat of Sedna again, I would just pilot this ship into the Sun.&quot; Atela was fairly sure that most of the sand was probably out of every nook and cranny, so she started moving on to the weaponry she had brought. &quot;Check scanners, quickly. Make sure no Grineer are following us. And maybe try a fee comm frequencies, just to be sure.&quot;
+
+&quot;Would you stop bringing up Sedna already? It&#39;s not my fault that the acid rain was conductive! I thought it would deal with that arc trap for us.&quot; Kamos grumbled something indecipherable before walking out of sight to go check the scanner. There was absolute silence for a couple precious monents. And then, Kamos answered Atela. &quot;Okay, we don&#39;t have any Grineer. But, uh... I <em>am</em> picking up a really weird message. On an obscure channel, too. Looks like it&#39;s coming from Eris.&quot;
+
+&quot;Let&#39;s check it out, I suppose.&quot; Atela requested from the opposite side of the ship, checking to be sure that none of the guns were jammed. &quot;And relay that message to me. I&#39;m not sure what your definition of &#39;weird&#39; is, still.&quot;
+[1/2]</span>
+
+                                <span class="chatlog__edited-timestamp" title="22-Oct-18 10:36 AM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="chronicles-of-the-runner.html_Files/a233a24842cecff11a0878b604b115a1-38F11.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Daakjenaar#7018" data-user-id="358680374022242324" style="color: rgb(0,5,46)">Daakjenaar</span>
+
+
+        <span class="chatlog__timestamp">22-Oct-18 10:43 AM</span>
+
+            <div class="chatlog__message " data-message-id="503941411175923712" id="message-503941411175923712">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">The Tenno ship had reached Eris, running a few more scans before locking onto the derelict. With the message mentioning a bridge, it certainly seemed like a logical place to go. Remaining cloaked, the ship slowly moved toward the abandoned ship. They were invisible to Grineer scanners,  but it was likely that any Tenno specifically looking for other Tenno out here would find them. Meanwhile, the two were loading their weapons and preparing for the worst, unsure of what to actually expect here.
+[2/2]</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="chronicles-of-the-runner.html_Files/510043f71a932223ab64f94d9cf45170-F7E8A.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Midnight Ξ Runner#9606" data-user-id="208668282646036482" style="color: rgb(0,24,255)">Midnight-Runner - Ella</span>
+
+
+        <span class="chatlog__timestamp">22-Oct-18 09:10 PM</span>
+
+            <div class="chatlog__message " data-message-id="504099181703462963" id="message-504099181703462963">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">//SHADOW OF ERIS
+
+~Those who chose to follow the scent of curiosity, would find a new, short-ranged message of anonymous origin coming from the source; from the near-devoured bridge itself; all would hear this.~
+
+————————————-
+//THE TWILIGHT WANES
+…
+...
+...
+//HURRY
+——————-
+
+~The source however, was to be expected; a vessel of ancient senility, of the lost Orokin age. The bridge and engineering decks having the worst marring of the blight while the midst seems to have the lesser evil, as veins connected either side. While it was hard to make out in the coned lights of <strong>RED</strong>’s vessel, it had its own uniqueness to it
+
+Thankfully, a single location was the only point of safe entry, a massive functioning landing bay with several distinct flag lights spearing the shadows of a nearby hulk.
+
+To the RED, there was plenty of room to land, should she choose, lights flickering on in her presence, revealing a rather cold, and unwelcoming entrance of crates and other .
+
+To <strong>Isa</strong>, her drones closest to the bridge exploded violently upon the sudden introduction of strange, blurred figures flittering about, flashing across the hull of the faded gold of Orokin vessel, the figures however daring not to travel further than they had appeared.
+
+After a moment of further pause, a halfway point of soft flesh could be distinguished midway between the <strong>landing bays</strong> and <strong>bridge</strong>, the remaining proxies deploying charges and vacating back to their mother.
+
+The charges would explode in brief flashes, lighting up the surrounding derelicts as debris and flesh chunks burst out grotesquely, providing entry for a mere soul into an ink black hole.
+
+To <strong>Kamos and Atela</strong>, the vessel loomed in the distance, the invitation of an apparent aid echoing ominously from it. As before, they too would see that the <strong>Landing Bays</strong> were the safest and best option should they choose, being the between point of the bow and stern of the vessel.~</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="504099210384113685" id="message-504099210384113685">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><span class="mention" title="Blood&#127862;Strider#5557">@Blood_Strider - Lekalis</span> <span class="mention" title="leirynot#7248">@leirynot - Isa</span> <span class="mention" title="Daakjenaar#7018">@Daakjenaar</span></span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="chronicles-of-the-runner.html_Files/d73030fb7f7872bb9df7d8d905bbb49e-811B6.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Blood&#127862;Strider#5557" data-user-id="235950544630317057" style="color: rgb(255,41,0)">Blood_Strider - Lekalis</span>
+
+
+        <span class="chatlog__timestamp">23-Oct-18 10:18 AM</span>
+
+            <div class="chatlog__message " data-message-id="504297507568877579" id="message-504297507568877579">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">/RED/
+
+With some haste, RED swiftly pushed her vessel towards the Landing Bay; a few Infested chunks splattered against the hull as her eyes twisted and cycled as they watched the Tenno signature blink to life and suddenly spit explosives out onto the husk, suddenly biting out a chunk for its own entrance.
+&quot;Typical.&quot; she muttered as she scratched at her metal jaw, shaving off shards of the steel on accident as she hissed and whipped her head about to stalk over to a retracted spidery limb folded up against the wall; her claws snapped out and pulled it down, muttering obscenities to herself as she adjusted the coolant, causing the mist to rise up to her waist now as she tried to lower her readable signature. 
+All but the soft red glow of her vessel&#39;s vents were alight now, as she went dark.
+
+RED rolled her shoulders and found herself at the command seat; eyeing the landing pad...
+It was a dead giveaway, and she was certain she&#39;d be found by the Tenno but... as seconds dragged to minutes, she noted the Tenno&#39;s typical deadset focus on the objective within.
+Betting on their predictable expedient efficiency, RED&#39;s ship slowly drifted into the <strong>Landing Bay&#39;s</strong> gaping maw. Without the assistance of any external lights, she was forced to drift into the structure blind; although, she dared not venture too deeply into the infested vessel, so she set her ship down near the edge of the open bay. RED&#39;s ship had no &#39;legs&#39;, rather, metal shields shot out and dug into the floor, and braced the ship.
+
+Locillus was quiet, as RED summoned forth another panel set upon a spidery limb; she shutdown the thrusters of her ship and shut the shudders of the cockpit as she initiated a simple scan of the local environs, checking if Life Support was active on the ship, and if there was any gravity...</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="chronicles-of-the-runner.html_Files/a0b899049ff668cddb4e3fc3767d7056-D3821.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="leirynot#7248" data-user-id="132350882825240577" style="color: rgb(255,243,0)">leirynot - Isa</span>
+
+
+        <span class="chatlog__timestamp">27-Oct-18 11:51 PM</span>
+
+            <div class="chatlog__message " data-message-id="505951598027997196" id="message-505951598027997196">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Isa:
+Isa tilted her head to the side somewhat, curious as to what the flashing of the hull was that destroyed her drones. Still, they were expendable, and the others were able to blow an entrance into the ship for her. She flew inside, remaining in flight via her archwing for as long as she could manage with some maneuverability. Once the hallways tightened too much to make flight viable, she would detach and leave it there as a possible escape route from the ship should it be needed. She then contacted her cephalon.
+&quot;Continue scanning the ship and try to make a map of the area and highlight the shortest route to the bridge for me.  Keep track of this exit as well.&quot;
+She drew her Zarr from her back, the metal fingers clacking as she tapped her fingers on the side of the Grineer cannon. She flicked the switch to put it into its flak mode, not wanting to risk blowing herself up should something pop up unexpectedly.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="chronicles-of-the-runner.html_Files/a233a24842cecff11a0878b604b115a1-38F11.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Daakjenaar#7018" data-user-id="358680374022242324" style="color: rgb(0,5,46)">Daakjenaar</span>
+
+
+        <span class="chatlog__timestamp">29-Oct-18 01:05 AM</span>
+
+            <div class="chatlog__message " data-message-id="506332793240944640" id="message-506332793240944640">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>KAMOS &amp; ATELA</strong>
+&quot;I like those landing bays. Probably our best bet for landing.&quot; Atela checked that everything was in working order, as the Liset accelerated slightly. The Tenno ship would be able to get itself docked, but it was always good to check that nothing was about to burst into flames. &quot;Run some scans. Look for anything organic, especially Infested. Something about this seems wrong.&quot;
+
+Kamos grunted, indeed running a couple of quick scans as the ship approached. He also checked the comms quickly, recieving the new message. &quot;Aye, we have another message. Just as cryptic. Why can&#39;t people just talk normally?&quot; He sounded confused as he read and reread the message, not able to make sense of it.
+
+&quot;Probably a disguised ask for help. Can&#39;t be too obvious with it, can you?&quot; Atela read over the message herself, shrugging and all of the systems one last time as the Liset docked with the derelict&#39;s landing bay. &quot;Either way, we&#39;re here. Let&#39;s see what all of this stuff is about, shall we?&quot;</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="chronicles-of-the-runner.html_Files/510043f71a932223ab64f94d9cf45170-F7E8A.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Midnight Ξ Runner#9606" data-user-id="208668282646036482" style="color: rgb(0,24,255)">Midnight-Runner - Ella</span>
+
+
+        <span class="chatlog__timestamp">06-Nov-18 11:44 AM</span>
+
+            <div class="chatlog__message " data-message-id="509407714460434449" id="message-509407714460434449">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>RED</strong> <span class="mention" title="Blood&#127862;Strider#5557">@Blood_Strider - Lekalis</span> 
+~The beastly groaning of the derelict echoed back into her ship as it dug into the interior metal of the landing bay. Darkness permeated around the vessel, only the RED’s lights dared reach into the into the ocean of black ink enveloping the exterior. Indeed, power did seem to flow through the interior conduits, but with severe degradation throughout.
+
+The cautious scan revealed that the vessel&#39;s gravity had not been tampered with after its maiden defeat and perversion of its former majesty, the oxygen, or what was left of it, now resided in stale patches of the vessel deeper within, however absent in the hangar. The hangar itself was deathly empty of any movement, or readings, aside form the occasional tendon or patch of Infestation throbbing at the unwelcome entrance of the Plow. A path to the bridge would begin to the left-most side of the bay.~</span>
+
+                                <span class="chatlog__edited-timestamp" title="06-Nov-18 11:44 AM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="509407805825089536" id="message-509407805825089536">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>ISA</strong> <span class="mention" title="leirynot#7248">@leirynot - Isa</span> 
+~Isa’s Cephalon would find it difficult to track her the further she delved into the vessel, however reading that she was on the correct path towards the bridge; that which took her deeper into the center, before turning truthfully towards the bridge’s direction.
+
+Isa would soon pass through an airlock, welcomed by the old cycling of oxygen in the air, just after her landing. Darkness, it was all around her the moment the airlock’s bright doors shut, and locked behind her. The only such to call a glow being the Infested masses around her. No warning or signs of impending attack could be heard, or seen for that matter, as she walked through the disfigured hallway to arrive at a closed blast door, a functional panel located to its flank, covered in putrid flesh.
+
+What was intriguing, other than the fact the door was still being powered, and it being closed since time had been lost, was a perfect circle before it, untouched, untainted by the Infestation, albeit scorched by some sudden blast within the middle, as if some invisible wall was blocking it from blossoming.
+
+A presence could be felt within its center…~</span>
+
+                                <span class="chatlog__edited-timestamp" title="06-Nov-18 11:45 AM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="509407872690552861" id="message-509407872690552861">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>KAMOS AND ATELA</strong> <span class="mention" title="Daakjenaar#7018">@Daakjenaar</span> 
+
+~The scans would surprisingly come up barren of mobile organics relating to the Infestation, save for a distorted dot further towards the bridge, and another closer to them in the land bay one section to their right. Again, Kamos and Atela’s bay was of similar concoction to RED’s, a door presenting itself towards the Bridge, the infested grasp barely held in their bays.~</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="chronicles-of-the-runner.html_Files/a233a24842cecff11a0878b604b115a1-38F11.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Daakjenaar#7018" data-user-id="358680374022242324" style="color: rgb(0,5,46)">Daakjenaar</span>
+
+
+        <span class="chatlog__timestamp">17-Nov-18 02:43 AM</span>
+
+            <div class="chatlog__message " data-message-id="513257971497566208" id="message-513257971497566208">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>KAMOS AND ATELA</strong>
+Sensors are clear. Wait... two pings. We have one on the Bridge, and the other is near our LZ.&quot; Kamos tried running a few more scans, just to make sure it was working. Nope, the scan was accurate. Where were the Infested, though? Kamos shrugged, and gave Atela a thumbs-up.
+
+&quot;We should probably check out the thing nearby, then. Worst-case scenario, we still outnumber it.&quot; Atela suggested, allowing the landing craft to land in the hangar. As Kamos did one last sensor sweep, the ramp hissed open. Once the two were completely ready a moment later, they exited via the ramp and glanced around the landing bay, each checking different spots. 
+
+&quot;Not seeing anything out of the ordinary, here. Bit of Infested here and there, but nothing big. Think we&#39;re clear.&quot; He kept his shotgun raised, as he swiveled around. So far, nothing had jumped out. That was always nice. &quot;Still have that sensor ping nearby, though. Should we check it out?&quot;
+
+&quot;Better idea. Let it come to us. Or ignore us. Either one.&quot; Atela put the sniper rifle away, and stretched out her arm in front of her. The intricate, possibly void-based bow (Artemis will always be the best bow) appeared from thin air, materializing in her hand. Taking an arrow from one of the several flechettes she had, Atela shot directly at the ground under them. Immediately, both became invisible. &quot;Just... try to be quiet, and see if they&#39;re hostile before you shoot.&quot;
+
+( <span class="mention" title="Blood&#127862;Strider#5557">@Blood_Strider - Lekalis</span> This is sorta directed at your character, by the way)</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="chronicles-of-the-runner.html_Files/d73030fb7f7872bb9df7d8d905bbb49e-811B6.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Blood&#127862;Strider#5557" data-user-id="235950544630317057" style="color: rgb(255,41,0)">Blood_Strider - Lekalis</span>
+
+
+        <span class="chatlog__timestamp">17-Nov-18 04:12 AM</span>
+
+            <div class="chatlog__message " data-message-id="513280320582189076" id="message-513280320582189076">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">/RED/
+
+She hummed, though it came out more as a bestial growl as she scratched at the sharp metallic jawline of her skull; the subtle reverberations that hissed through her mind kept her awake and on edge as she watched the scanners read out the simple baseline checks for any Op.
+Though, given the presence of these Tenno... One and Two respectively, this Op was going to be anything but.
+
+With a huff, she batted away the spidery panel like a fly, and it pulled back into the gothic interior of her ship, becoming one of many riblike arms that reinforced the interior of her hull and provided some utility.
+&quot;Lockdown the ship, Locilus. Dump coolant on anyone that tries to break in, yeah?&quot; She ordered curtly as she felt stress mounting in the back of her mind. She was here for Recon, not Extermination... She didn&#39;t know much else besides that.
+[1/3]</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="513280341507833856" id="message-513280341507833856">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">[2/3]
+Her anxiety grew as she noted the two Tenno vanish from sight as they touched down; a predictable trick, but an unwelcome one all the same. Though, with only the barest of hesitations, she swept herself out from the chair and tore a Life Support unit from the containers near the airlock-hatch embedded just below the primary forward thrusters of her ship; the pressurization chamber was just large enough to fit RED, and maybe an Atlas, though even RED had to shuffle abit and hold her arms close to her chest to initiate the exiting procedures.
+
+With cold practice, RED went through basic checks on all her systems; swapping through a variety of visual spectrums from ECM to Infrared and Low-Light functions, to long-range scans and sonar. She ensured her heartrate was under regulated control, with adrenal plugs secured from potential impact and breaks. For a moment, she intentionally activated the nerve-stapling  junction at the base of her neck and felt her limbs go numb in an ever unenticing manner.
+She idly flexed her hands in this numbness before allowing her synthetic nervous system to simulate touch again. Her final checks were her combat subroutines; her claws clicked out to their full length, each digit being made from extracted Venka blades. They slowly began to  glow with a signature super-heated Grineer orange as she directed her system&#39;s heat into those blades. 
+It was often enough to stop Tenno so she could escape and let the meat of the local operations weaken them for an easy kill.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="513280360558100481" id="message-513280360558100481">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">[3/3]
+The pressurization chamber&#39;s hissing had activated and stopped just as she telescopic blades cooled and retracted into her digits; the bottom hatch clicked open and RED dropped unceremoniously out into the gutted landing bay&#39;s redecorated interior.
+
+For a moment, her ship&#39;s interior lighting spotlighted RED&#39;s silhouette, the bloody red strands of her hair floating as she looked off to where the Tenno signatures had vanished with a small sneer; she wasn&#39;t too far from them, enough that a long range shot would no doubt decimate her... It was nerve-racking, to say the least.
+
+All the same... they could well be on their own misbegotten mission; grinding for resources or practicing. With any luck, they&#39;d pass on, clear out a path for her.
+Her fingers flexed and she shifted her weight from one leg to the other in anticipation before shaking her head and marching off towards the most immediate opening she could see; a <strong>path on left-most side of the bay</strong>.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="chronicles-of-the-runner.html_Files/a0b899049ff668cddb4e3fc3767d7056-D3821.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="leirynot#7248" data-user-id="132350882825240577" style="color: rgb(255,243,0)">leirynot - Isa</span>
+
+
+        <span class="chatlog__timestamp">18-Nov-18 12:31 PM</span>
+
+            <div class="chatlog__message " data-message-id="513768181790146562" id="message-513768181790146562">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Isa:
+The golden Saryn continued to move along through the ship, now seemingly on a clear path to the bridge running down the center of the ship. It was oddly quiet for an infested vessel. Not that she minded, rescuing whoever this was without having to fight would be rather convenient.
+
+She took note of the odd circle of untainted floor. Drawing her sword, she poked at it, feeling like something was there. If her sword simply moved through clean air, she would shrug it off and   slice away at the flesh covering the panel to gain access, then start working on opening the door with it.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="chronicles-of-the-runner.html_Files/510043f71a932223ab64f94d9cf45170-F7E8A.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Midnight Ξ Runner#9606" data-user-id="208668282646036482" style="color: rgb(0,24,255)">Midnight-Runner - Ella</span>
+
+
+        <span class="chatlog__timestamp">27-Nov-18 07:24 AM</span>
+
+            <div class="chatlog__message " data-message-id="516952462511570971" id="message-516952462511570971">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><em><strong>KAMOS AND ATELA</strong></em>
+
+Empty, and devoid were the answers to their sights, no Infested entity revealed itself, only the pulsating mounds and soaring clouds of tiny spores blindly navigating above them. 
+
+They would enter into an oval shaped room, the   Door behind them sliding level with them shut, revealing various instruments and a panel necessary to an airlock. The light above them exploded harmlessly as it attempted to bathe them in a radiance of security, leaving them within the dark ink. Thankfully, though, they had no need to access the nearby panel as the automated process filtered the stale oxygen, allowing the door ahead to curve away, leading them through the inky black of the ship. They would move through a slightly longer corridor, which in turn opened to a grand hall. To their right, towards the aft, stood a blast door barely alit by the pulsing growth of the infestation lacing through it, jammed open just a splinter; enough for one to slide through without trouble, however, to their left, the path where their map highlighted itself towards the bridge, was without obstacle, save for the tendrils of Infestation having slowly penetrated the main hall, disfiguring its golden beauty.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="516952576063832065" id="message-516952576063832065">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><em><strong>RED</strong></em>
+
+Such too did RED’s investigating of the outside of her ship, as she moved towards the access point.
+
+RED would come into the oval room, the door behind sliding shut, a light successfully clicking on above her, cycling oxygen, before the one ahead of hers opened, showing a slightly longer, abyssal hall, which would open up into a giant, grand hall, between the aft and bow, blast doors would separate each landing bay’s respective section. The aft’s door was shut tight with no life to it.
+
+Towards the bow however, where the bridge would be, a wall sloping down from the ceiling to another blast door, seemingly broken down during its closing sequence, revealed a small crack she could easily squeeze through. The panels on each side were without life, and small coils of infested flesh laced through the small opening, unabated, though giving the small entrance away from its pulsating glow.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="516952668346908674" id="message-516952668346908674">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><em><strong>ISA</strong></em>
+
+Her prodding of the blade held no fruit, not until she entered the circle.
+
+—-
+Before she could react, her vision went white, gradually adjusting to a new sight. The sound of gunfire blared in her ears, yelling and screaming, and the familiar click and screech of the Infestation deafened her. Where the untainted circle would have been, a lone, decorated Excalibur was swarmed by an insurmountable odd of Infested from three directions as the door before him shut closed and cycled its locks.
+
+The entranced Warframe had kept this fighting up for an impressive time, before the Infested suddenly stopped just beyond where the circle used to be, backing away from the now baffled warrior. Its gaze turned to Isa, body language showing hesitation, intimidation… fear.
+
+A strange, ominous growl could be heard behind her warframe, the vision snapping back to the dark, dreary hall before she had a chance to find its origin.
+—-
+
+Thus it had faded, the circle remained, and she had found herself already playing across the controls. The blast door clicked, cycled, and ground open; a metal slab loudly being pulled across a metal floor.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="chronicles-of-the-runner.html_Files/a233a24842cecff11a0878b604b115a1-38F11.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Daakjenaar#7018" data-user-id="358680374022242324" style="color: rgb(0,5,46)">Daakjenaar</span>
+
+
+        <span class="chatlog__timestamp">27-Nov-18 05:15 PM</span>
+
+            <div class="chatlog__message " data-message-id="517101267793870861" id="message-517101267793870861">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>KAMOS AND ATELA</strong>
+&quot;Alright, I&#39;ll go ahead and check it out. You&#39;ve got a good... uh... 30 seconds left on that arrow. Once it runs out, head toward that exit. <em><strong>Quietly.</strong></em>&quot; Atela almost hissed that last part, while gesturing to the exit. &quot;Just leave them alone. Don&#39;t let them see you.&quot; And with that, Atela rolled backward out of the area made invisible by the arrow, only visible for a split second before entering a Prowl.
+
+And so, Kamos sat there until the arrow wore off, while Atela went ahead to make sure that there was indeed nothing else. And, during her search, she found nothing. When he uncloaked, Kamos stood up from his kneeling position, going the direction Atela had told him to go. Indeed, a few seconds later, Atela uncloaked while peeking through the door, gesturing at Kamos to follow. He tried his hardest to be quiet, but even his softest footsteps echoed a bit.
+
+Wordlessly, the two nodded at each other and drew their weapons, entering the oval room. When the light exploded, they both immediately raised their weapons up, before realizing it was just the old electronics failing. Atela sighed, and the two switched on the flashlight things Warframes apparently have. They followed the corridors, and eventually reached the grand hall.
+[1/2]</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="chronicles-of-the-runner.html_Files/a233a24842cecff11a0878b604b115a1-38F11.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Daakjenaar#7018" data-user-id="358680374022242324" style="color: rgb(0,5,46)">Daakjenaar</span>
+
+
+        <span class="chatlog__timestamp">27-Nov-18 05:28 PM</span>
+
+            <div class="chatlog__message " data-message-id="517104440440913922" id="message-517104440440913922">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">&quot;Two directions. One leads to the Bridge, but the other one...&quot; Kamos observed, not entirely sure where this other one even went. He shrugged, gesturing toward the blast door. &quot;Dunno which way we should go, though. Bridge is the objective, but there could be something over there.&quot;
+
+&quot;This seems like a bad idea, but... we should split up. I&#39;m sure you can handle whatevers on the way to the Bridge. I can head through the blast door, just in case. I&#39;ll try and meet back up with you ASAP.&quot; Sure, the main objective was to reach the Bridge, but doing a full sweep of the area could be helpful. Atela looked around in every direction, just making sure she didn&#39;t miss anything. &quot;Just contact me if you find anything.&quot;
+
+&quot;Same with you.&quot; Kamos did his usual grunt, lumbering over in the direction of the Bridge, as Atela slipped through the gap in the blast door. Here&#39;s hoping that this plan didn&#39;t get both of them killed.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="chronicles-of-the-runner.html_Files/d73030fb7f7872bb9df7d8d905bbb49e-811B6.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Blood&#127862;Strider#5557" data-user-id="235950544630317057" style="color: rgb(255,41,0)">Blood_Strider - Lekalis</span>
+
+
+        <span class="chatlog__timestamp">22-Dec-18 03:40 PM</span>
+
+            <div class="chatlog__message " data-message-id="526137099682840591" id="message-526137099682840591">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">/RED/
+
+&quot;<em>Surtruks suk ruk...</em>&quot; She grumbled to herself as she stalked into the room, happily switching off of her internal Life Support systems. Relaxing just a touch.
+Though, she kept her atmos-filters hot and burning to make sure the Infestation would take root in anywhere particularly difficult to operate on. The decision made the air that what few tracer nodules on her tongue tasted taste like licking a heater unit. The dusty and acrid scent of thin smoke... There was a bizzare delight, she couldn&#39;t admit, to the odour.
+
+She huffed and idly swiped at the air to clear it of the folicles fluttering and blinking about the space. Her Red eyes twitched and rotated as they scanned the environs for any movement, particularly of masses equal to or greater than her own; the Warframe&#39;s could get by with blitzing past some void spawn, dealing with the pests later and in a swarm... But RED couldn&#39;t. RECON was her first directive, after all.
+
+Slowly, idly, as she swept a scan over the room, she flicked her wrist and made to cut some of the small coils lacing the opening. She couldn&#39;t take the risk of getting even a drop of the gunk on her own form. It was bad enough she dared tred in the place at all.
+There weren&#39;t many things that turned RED&#39;s gut to butterflies, but all combat subroutines were screaming at her to evacuate the location Destroy the ship from a distance. Not that she had the means to pull off such a manoveur, but such was reflex... She did find herself wondering just what in the blazes this distress beacon was doing in an Infested ship. Not that it didn&#39;t have reason, the only rational response to the Infestation was distress...</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="chronicles-of-the-runner.html_Files/a0b899049ff668cddb4e3fc3767d7056-D3821.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="leirynot#7248" data-user-id="132350882825240577" style="color: rgb(255,243,0)">leirynot - Isa</span>
+
+
+        <span class="chatlog__timestamp">29-Dec-18 04:34 PM</span>
+
+            <div class="chatlog__message " data-message-id="528687171385819166" id="message-528687171385819166">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Isa:
+Whatever memories there were in this place, they landed in the hands of one who was blind and deaf to them. She caught glimpses. She heard distant echoes of battle and an ominous growl, but that was it. Whatever message behind any of it was, whatever details there may have been, were lost to the Tenno. She strode through the door, paying barely any heed to the ghost sounds other than a passing thought regarding them as mildly interesting.</span>
+
+                                <span class="chatlog__edited-timestamp" title="29-Dec-18 04:34 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="chronicles-of-the-runner.html_Files/510043f71a932223ab64f94d9cf45170-F7E8A.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Midnight Ξ Runner#9606" data-user-id="208668282646036482" style="color: rgb(0,24,255)">Midnight-Runner - Ella</span>
+
+
+        <span class="chatlog__timestamp">10-Jan-19 05:15 PM</span>
+
+            <div class="chatlog__message " data-message-id="533046242440380430" id="message-533046242440380430">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><em><strong>KAMOS &amp; ATELA</strong></em>
+
+A ---- The gap was rather right as Atela maneuvered through the jammed crevice, into another similar room that they had previously entered, only this one was blocked by both sides. It was wholly unexceptional, as it too was dark, hiding anything not within her Warframe’s cone of light.
+
+K ---- Kamos’ journey was rather bland, as he walked through an ajar bulkhead, the occasionally increasing patch of Infestation, and the silence that was a dead ship, its metal body groaning like that of an ancient spirit at rest. Kamos had wandered quite a length until a sudden figure came into the sight of their light.
+
+A figure that had recently been deceased by a violent storm of blade and gun was propped against one of the corridor walls; a Tenno’s doing. The armor sported the Grineer’s empirical symbol, and another that was much more unique than its owner had a right to bear, although, unfortunately indistinguishable from the amount of armor breaches from a sharp blade.
+
+
+<em><strong>RED</strong></em>
+
+Red would spot nothing of interest, other than newer approaches to navigating the ship; vents that seemed to have been used by smaller infested forms long ago, now agape with an ominous welcome. However, during the end of her scans, a form would waltz into the room from the infested jam of the bulkhead directly before her at a roughly twenty foot distance, a Warframe of Atela’s origin.
+
+<em><strong>ISA</strong></em>
+
+The hall ahead of her was once more unappealing as the doors rumbled open. Though as the glittering warframe passed through, ominous cries, that of a distorted child screeching in anger pierced Isa’s ears. Like demon children rushing at her, several crawler-esc entities snapped after her with blinding speed, leaping with the snap of a finger atop her Saryn, ripping at her with large, razor sharp claws. Their bodies were terribly light for whatever infested monstrosity it was, that being, none she knew offhand.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="chronicles-of-the-runner.html_Files/a233a24842cecff11a0878b604b115a1-38F11.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Daakjenaar#7018" data-user-id="358680374022242324" style="color: rgb(0,5,46)">Daakjenaar</span>
+
+
+        <span class="chatlog__timestamp">11-Jan-19 08:03 PM</span>
+
+            <div class="chatlog__message " data-message-id="533450816476938241" id="message-533450816476938241">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>KAMOS</strong>
+He was starting to get sort of bored. Nothing to fight, not even anything interesting to look at. Just Infested, and metal. Atela probably found something way more interesting. Maybe he should head back... No, she said she&#39;d meet back up at some point. Best to keep moving forward and assume she&#39;ll be able to track him down. Then, he saw the body.
+
+Finally, something. Just a corpse, but still. He crouched down in front of the thoroughly eviscerated body, trying to identify what he could. Grineer markings, armor... So, it had to be a Grineer. Made sense that there were Tenno weapons, then. That means someone had been through here very recently. That, and it meant there were possibly Grineer somewhere around here. That symbol... Way too much for a Grineer, but he couldn&#39;t say he&#39;s seen many symbols. Maybe it was the Tenno marking the corpse for whatever reason? Had it been that one they had seen in the hangar? So many questions... Atela was better at this than he was.
+
+<strong>ATELA</strong>
+Maybe there was something here. A vent, at least. Some sort of way to keep moving. Atela was quite thorough, and tried to search every bit of this room. A vent, a door, a hull breach, something in the room itself... Here&#39;s hoping Kamos hasn&#39;t gotten himself killed yet.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="chronicles-of-the-runner.html_Files/a0b899049ff668cddb4e3fc3767d7056-D3821.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="leirynot#7248" data-user-id="132350882825240577" style="color: rgb(255,243,0)">leirynot - Isa</span>
+
+
+        <span class="chatlog__timestamp">11-Jan-19 09:48 PM</span>
+
+            <div class="chatlog__message " data-message-id="533477286305988609" id="message-533477286305988609">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Isa:
+
+Vigilant and more than ready for combat, Isa reacted immediately to the screeches of these new infested forms. They approached quickly, though not in too large of numbers. Still, having not encountered such things before, she would want to take no risks. She leaped backwards, molting the skin of her warframe as she did so, leaving it a nice target for the creatures, more than able to take a few seconds of punishment from them. With the flick of a switch, the cannon in her hands clicked a few times as it shifted from its flak firing mode to its cluster charge mode. Continuing her backward motion, she took aim, then once she was at safe distance from  the molted form, she pulled the trigger, letting loose a cluster bomb from the Zarr. It would land directly at the molt&#39;s feet, or possibly impact one of the creatures, detonating and releasing the cluster bombs, each of which would home in on a target and detonate. She was confident that a single grenade should make short work of the clustered creatures.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="chronicles-of-the-runner.html_Files/d73030fb7f7872bb9df7d8d905bbb49e-811B6.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Blood&#127862;Strider#5557" data-user-id="235950544630317057" style="color: rgb(255,41,0)">Blood_Strider - Lekalis</span>
+
+
+        <span class="chatlog__timestamp">07-Feb-19 07:09 PM</span>
+
+            <div class="chatlog__message " data-message-id="543221813145239582" id="message-543221813145239582">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">/RED/
+
+... She ceased her idle incisions on the Infestation as the scans blipped back a single reading.
+A Warframe.
+No doubt one of the pair that had initially landed here along with her in that gutted docking bay.
+
+RED didn&#39;t waste time with watching where she was going; she immediately vented the heat in her talons and retracted them as she doused her signature in hopes of escaping whatever systems those Warframe&#39;s used to detect people on radar.
+She didn&#39;t have high hopes, but she had to do something.
+
+She flattened herself against whichever wall nearest the door boasted the most dead Infestation as she waited for the Warframe to pass.
+
+Though, even in those brief moments she couldn&#39;t help but contemplate the pace of the Warframe; it wasn&#39;t blitzing through the corridor at breakneck speeds, which alone was bizarre enough. If they were hunting for the distress beacon, surely they would be sprinting and blasting their way to their objective.
+RED waited there, beside the door, wondering and waiting for the Warframe to wander off...</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="chronicles-of-the-runner.html_Files/510043f71a932223ab64f94d9cf45170-F7E8A.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Midnight Ξ Runner#9606" data-user-id="208668282646036482" style="color: rgb(0,24,255)">Midnight-Runner - Ella</span>
+
+
+        <span class="chatlog__timestamp">07-Jul-19 08:37 AM</span>
+
+            <div class="chatlog__message " data-message-id="597405824687669249" id="message-597405824687669249">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><em><strong>RED</strong></em> --- Thankfully, there was a large mass of dead flesh she could easily hide from the blip that was now entering the room, she and the Warframe were out of eyesight, but caution should always be taken near even the most withered of tendrils. For now, she was safely blended into the background of lowly incandescent lesh nodules.
+
+<em><strong>KAMOS AND ATELA</strong></em>
+
+<strong>A</strong> ---- There were indeed vents above each airlock going into their respective hangar. However, her minimap would detect that going any further past these blast doors would take longer than one would wish to stay; the vents only looped back due to a pair of doors on either side aiding the Bulkhead before her deterring any from Engineering.
+
+<strong>K</strong> ---- There was no discernable nor concrete evidence to finalize that this was a kill mark, or a new faction of Grineer.
+
+A sudden flurry of static would reach Kamos from the body.The flurry and sickly lapping of an Ignis went off through the comms and a Grineer voice yelling in panic and fear, before a lowly, animalistic growl and claw slid its way into flesh, causing the commlink to go silent.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="597405829242683425" id="message-597405829242683425">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Isa</strong> ---- They took the bait just as any other Infested creature would, slashing at it without hesitation, their large claws brutally tearing away chunks much quicker than most other beings in their right would.
+
+However, the incessant screeches and wretched clawing of metal and entropied warframe skin would be drowned out by the explosion of a well placed Zarr bomb, enveloping the room in bright flashes of exploding bomblets deafening the small corridor. Infested blood splayed across the floor from the initial, and bomblet&#39;s impacts, creating a vivid scene of art and sharp ligaments that were safe enough away from their ill bodies to remain. She could have sworn she could <em>hear</em> their bodies exploding from the Zarr&#39;s fury.
+
+Not a moment to spare of plan, several suddenly came out of the corridor behind her, crawling across the walls, foors, ceiling; all retreating into vents, cracks and otherwise unreachable exteriors Isa&#39;s Saryn could not enter.
+
+All was eerily quiet again, the Molt was destroyed, the smoke had cleared in an instant, and once more she was alone with a viscuous crater before her.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="597406081651834891" id="message-597406081651834891">
+
+                    <div class="chatlog__attachment">
+                        <div class="" onclick="">
+                            <div class="">
+                                    <a href="chronicles-of-the-runner.html_Files/Warframe_Grineer_Symbol-1D99E.png">
+                                        <img class="chatlog__attachment-thumbnail" src="chronicles-of-the-runner.html_Files/Warframe_Grineer_Symbol-1D99E.png" alt="Image attachment" title="Image: Warframe_Grineer_Symbol.png (33.57 KB)">
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="597406173666476032" id="message-597406173666476032">
+
+                    <div class="chatlog__attachment">
+                        <div class="" onclick="">
+                            <div class="">
+                                    <a href="chronicles-of-the-runner.html_Files/WARFRAME_COTR_DERELICT_MAP-EEAB0.png">
+                                        <img class="chatlog__attachment-thumbnail" src="chronicles-of-the-runner.html_Files/WARFRAME_COTR_DERELICT_MAP-EEAB0.png" alt="Image attachment" title="Image: WARFRAME_COTR_DERELICT_MAP.png (267.87 KB)">
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="597406183967686656" id="message-597406183967686656">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><span class="mention" title="leirynot#7248">@leirynot - Isa</span>  <span class="mention" title="Daakjenaar#7018">@Daakjenaar</span> <span class="mention" title="Blood&#127862;Strider#5557">@Blood_Strider - Lekalis</span></span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="chronicles-of-the-runner.html_Files/a0b899049ff668cddb4e3fc3767d7056-D3821.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="leirynot#7248" data-user-id="132350882825240577" style="color: rgb(255,243,0)">leirynot - Isa</span>
+
+
+        <span class="chatlog__timestamp">15-Jul-19 11:45 PM</span>
+
+            <div class="chatlog__message " data-message-id="600533562004996096" id="message-600533562004996096">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Isa:
+Isa paused a moment as the creatures retreated. This seemed unlike the usual swarming nature of the infested. Nonetheless, she needed to press forward.  She continued along toward the bridge, loading a new grenade into the Zarr as she did so, all the while remaining vigilant, her warframe stalking silently through the corridors in a rather odd contrast to the weapon she carried with her.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="chronicles-of-the-runner.html_Files/a0b899049ff668cddb4e3fc3767d7056-D3821.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="leirynot#7248" data-user-id="132350882825240577" style="color: rgb(255,243,0)">leirynot - Isa</span>
+
+
+        <span class="chatlog__timestamp">12-Nov-19 12:12 PM</span>
+
+            <div class="chatlog__message " data-message-id="643860785973428225" id="message-643860785973428225">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><img class="emoji emoji--large" alt="unimpressedisa" title="unimpressedisa" src="https://cdn.discordapp.com/emojis/621814954743562260.png"></span>
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="unimpressedisa" title="unimpressedisa" src="chronicles-of-the-runner.html_Files/621814954743562260-19499.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+</div>
+
+<div class="postamble">
+    <div class="postamble__entry">Exported 41 message(s)</div>
+</div>
+
+</body>
+
+</html>

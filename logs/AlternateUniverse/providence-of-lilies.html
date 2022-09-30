@@ -1,0 +1,1400 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tales of the Awakened [Warframe RP Community] - providence-of-lilies</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <style>
+        /* General */
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-300.woff);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-400.woff);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-500.woff);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-600.woff);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-700.woff);
+    font-weight: 700;
+}
+
+body {
+    font-family: "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    object-fit: contain;
+}
+
+.markdown {
+    max-width: 100%;
+    line-height: 1.3;
+    overflow-wrap: break-word;
+}
+
+.preserve-whitespace {
+    white-space: pre-wrap;
+}
+
+.spoiler {
+    /* width: fit-content; */
+    display: inline-block;
+    /* This is more consistent across browsers, the old attribute worked well under Chrome but not FireFox. */
+}
+
+.spoiler--hidden {
+    cursor: pointer;
+}
+
+.spoiler-text {
+    border-radius: 3px;
+}
+
+.spoiler--hidden .spoiler-text {
+    color: rgba(0, 0, 0, 0);
+}
+
+.spoiler--hidden .spoiler-text::selection {
+    color: rgba(0, 0, 0, 0);
+}
+
+.spoiler-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.spoiler--hidden .spoiler-image {
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.spoiler--hidden .spoiler-image * {
+    filter: blur(44px);
+}
+
+.spoiler--hidden .spoiler-image:after {
+    content: "SPOILER";
+    color: #dcddde;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    padding: 100%;
+    border-radius: 20px;
+    letter-spacing: 0.05em;
+    font-size: 0.9em;
+}
+
+.spoiler--hidden:hover .spoiler-image:after {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.quote {
+    margin: 0.1em 0;
+    padding-left: 0.6em;
+    border-left: 4px solid;
+    border-radius: 3px;
+}
+
+.pre {
+    font-family: "Consolas", "Courier New", Courier, monospace;
+}
+
+.pre--multiline {
+    margin-top: 0.25em;
+    padding: 0.5em;
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+.pre--inline {
+    padding: 2px;
+    border-radius: 3px;
+    font-size: 0.85em;
+}
+
+.mention {
+    border-radius: 3px;
+    padding: 0 2px;
+    color: #7289da;
+    background: rgba(114, 137, 218, .1);
+    font-weight: 500;
+}
+
+.emoji {
+    width: 1.25em;
+    height: 1.25em;
+    margin: 0 0.06em;
+    vertical-align: -0.4em;
+}
+
+.emoji--small {
+    width: 1em;
+    height: 1em;
+}
+
+.emoji--large {
+    width: 2.8em;
+    height: 2.8em;
+}
+
+/* Preamble */
+
+.preamble {
+    display: grid;
+    margin: 0 0.3em 0.6em 0.3em;
+    max-width: 100%;
+    grid-template-columns: auto 1fr;
+}
+
+.preamble__guild-icon-container {
+    grid-column: 1;
+}
+
+.preamble__guild-icon {
+    max-width: 88px;
+    max-height: 88px;
+}
+
+.preamble__entries-container {
+    grid-column: 2;
+    margin-left: 0.6em;
+}
+
+.preamble__entry {
+    font-size: 1.4em;
+}
+
+.preamble__entry--small {
+    font-size: 1em;
+}
+
+/* Chatlog */
+
+.chatlog {
+    max-width: 100%;
+}
+
+.chatlog__message-group {
+    display: grid;
+    margin: 0 0.6em;
+    padding: 0.9em 0;
+    border-top: 1px solid;
+    grid-template-columns: auto 1fr;
+}
+
+.chatlog__reference-symbol {
+    grid-column: 1;
+    border-style: solid;
+    border-width: 2px 0 0 2px;
+    border-radius: 8px 0 0 0;
+    margin-left: 16px;
+    margin-top: 8px;
+}
+
+.chatlog__reference {
+    display: flex;
+    grid-column: 2;
+    margin-left: 1.2em;
+    margin-bottom: 0.25em;
+    font-size: 0.875em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    align-items: center;
+}
+
+.chatlog__reference-avatar {
+    border-radius: 50%;
+    height: 16px;
+    width: 16px;
+    margin-right: 0.25em;
+}
+
+.chatlog__reference-name {
+    margin-right: 0.25em;
+    font-weight: 600;
+}
+
+.chatlog__reference-link {
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.chatlog__reference-link:hover {
+    text-decoration: none;
+}
+
+.chatlog__reference-content > * {
+    display: inline;
+}
+
+.chatlog__reference-edited-timestamp {
+    margin-left: 0.25em;
+    font-size: 0.8em;
+}
+
+.chatlog__author-avatar-container {
+    grid-column: 1;
+    width: 40px;
+    height: 40px;
+}
+
+.chatlog__author-avatar {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.chatlog__messages {
+    grid-column: 2;
+    margin-left: 1.2em;
+    min-width: 50%;
+}
+
+.chatlog__author-name {
+    font-weight: 500;
+}
+
+.chatlog__timestamp {
+    margin-left: 0.3em;
+    font-size: 0.75em;
+}
+
+.chatlog__message {
+    padding: 0.1em 0.3em;
+    margin: 0 -0.3em;
+    background-color: transparent;
+    transition: background-color 1s ease;
+}
+
+.chatlog__content {
+    font-size: 0.95em;
+    word-wrap: break-word;
+}
+
+.chatlog__edited-timestamp {
+    margin-left: 0.15em;
+    font-size: 0.8em;
+}
+
+.chatlog__attachment {
+    margin-top: 0.3em;
+}
+
+.chatlog__attachment-thumbnail {
+    vertical-align: top;
+    max-width: 45vw;
+    max-height: 500px;
+    border-radius: 3px;
+}
+
+.chatlog__attachment-container {
+    height: 40px;
+    width: 100%;
+    max-width: 520px;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.chatlog__attachment-icon {
+    float: left;
+    height: 100%;
+    margin-right: 10px;
+}
+
+.chatlog__attachment-icon > .a {
+    fill: #f4f5fb;
+    d: path("M50,935a25,25,0,0,1-25-25V50A25,25,0,0,1,50,25H519.6L695,201.32V910a25,25,0,0,1-25,25Z");
+}
+
+.chatlog__attachment-icon > .b {
+    fill: #7789c4;
+    d: path("M509.21,50,670,211.63V910H50V50H509.21M530,0H50A50,50,0,0,0,0,50V910a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50h0V191Z");
+}
+
+.chatlog__attachment-icon > .c {
+    fill: #f4f5fb;
+    d: path("M530,215a25,25,0,0,1-25-25V50a25,25,0,0,1,16.23-23.41L693.41,198.77A25,25,0,0,1,670,215Z");
+}
+
+.chatlog__attachment-icon > .d {
+    fill: #7789c4;
+    d: path("M530,70.71,649.29,190H530V70.71M530,0a50,50,0,0,0-50,50V190a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50Z");
+}
+
+.chatlog__attachment-filesize {
+    color: #72767d;
+    font-size: 12px;
+}
+
+.chatlog__attachment-filename {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.chatlog__embed {
+    display: flex;
+    margin-top: 0.3em;
+    max-width: 520px;
+}
+
+.chatlog__embed-color-pill {
+    flex-shrink: 0;
+    width: 0.25em;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.chatlog__embed-content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em 0.6em;
+    border: 1px solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.chatlog__embed-content {
+    display: flex;
+    width: 100%;
+}
+
+.chatlog__embed-text {
+    flex: 1;
+}
+
+.chatlog__embed-author {
+    display: flex;
+    margin-bottom: 0.3em;
+    align-items: center;
+}
+
+.chatlog__embed-author-icon {
+    margin-right: 0.5em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.chatlog__embed-author-name {
+    font-size: 0.875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-title {
+    margin-bottom: 0.2em;
+    font-size: 0.875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-description {
+    font-weight: 500;
+    font-size: 0.85em;
+}
+
+.chatlog__embed-fields {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chatlog__embed-field {
+    flex: 0;
+    min-width: 100%;
+    max-width: 506px;
+    padding-top: 0.6em;
+    font-size: 0.875em;
+}
+
+.chatlog__embed-field--inline {
+    flex: 1;
+    flex-basis: auto;
+    min-width: 150px;
+}
+
+.chatlog__embed-field-name {
+    margin-bottom: 0.2em;
+    font-weight: 600;
+}
+
+.chatlog__embed-field-value {
+    font-weight: 500;
+}
+
+.chatlog__embed-thumbnail {
+    flex: 0;
+    margin-left: 1.2em;
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-image-container {
+    margin-top: 0.6em;
+}
+
+.chatlog__embed-image {
+    max-width: 500px;
+    max-height: 400px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-footer {
+    margin-top: 0.6em;
+}
+
+.chatlog__embed-footer-icon {
+    margin-right: 0.2em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.chatlog__embed-footer-text {
+    font-size: 0.75em;
+    font-weight: 500;
+}
+
+.chatlog__reactions {
+    display: flex;
+}
+
+.chatlog__reaction {
+    display: flex;
+    align-items: center;
+    margin: 0.35em 0.1em 0.1em 0.1em;
+    padding: 0.2em 0.35em;
+    border-radius: 3px;
+}
+
+.chatlog__reaction-count {
+    min-width: 9px;
+    margin-left: 0.35em;
+    font-size: 0.875em;
+}
+
+.chatlog__bot-tag {
+    position: relative;
+    top: -.2em;
+    margin-left: 0.3em;
+    padding: 0.05em 0.3em;
+    border-radius: 3px;
+    vertical-align: middle;
+    line-height: 1.3;
+    background: #7289da;
+    color: #ffffff;
+    font-size: 0.625em;
+    font-weight: 500;
+}
+
+/* Postamble */
+
+.postamble {
+    margin: 1.4em 0.3em 0.6em 0.3em;
+    padding: 1em;
+    border-top: 1px solid;
+}
+    </style>
+    <style>
+        /* General */
+
+body {
+    background-color: #36393e;
+    color: #dcddde;
+}
+
+a {
+    color: #0096cf;
+}
+
+.spoiler-text {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.spoiler--hidden .spoiler-text {
+    background-color: #202225;
+}
+
+.spoiler--hidden:hover .spoiler-text {
+    background-color: rgba(32, 34, 37, 0.8);
+}
+
+.quote {
+    border-color: #4f545c;
+}
+
+.pre {
+    background-color: #2f3136 !important;
+}
+
+.pre--multiline {
+    border-color: #282b30 !important;
+    color: #b9bbbe !important;
+}
+
+/* === Preamble === */
+
+.preamble__entry {
+    color: #ffffff;
+}
+
+/* Chatlog */
+
+.chatlog__message-group {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.chatlog__reference-symbol {
+    border-color: #4f545c;
+}
+
+.chatlog__reference {
+    color: #b5b6b8;
+}
+
+.chatlog__reference-link {
+    color: #b5b6b8;
+}
+
+.chatlog__reference-link:hover {
+    color: #ffffff;
+}
+
+.chatlog__reference-edited-timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__author-name {
+    color: #ffffff;
+}
+
+.chatlog__timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__message--highlighted {
+    background-color: rgba(114, 137, 218, 0.2) !important;
+}
+
+.chatlog__message--pinned {
+    background-color: rgba(249, 168, 37, 0.05);
+}
+
+.chatlog__attachment-container {
+    background-color: #2f3136;
+    border-color: #292b2f;
+}
+
+.chatlog__edited-timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__embed-color-pill--default {
+    background-color: rgba(79, 84, 92, 1);
+}
+
+.chatlog__embed-content-container {
+    background-color: rgba(46, 48, 54, 0.3);
+    border-color: rgba(46, 48, 54, 0.6);
+}
+
+.chatlog__embed-author-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-author-name-link {
+    color: #ffffff;
+}
+
+.chatlog__embed-title {
+    color: #ffffff;
+}
+
+.chatlog__embed-description {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-field-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-field-value {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-footer {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__reaction {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.chatlog__reaction-count {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* Postamble */
+
+.postamble {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.postamble__entry {
+    color: #ffffff;
+}
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.pre--multiline').forEach(block => hljs.highlightBlock(block));
+        });
+    </script>
+
+    <script>
+        function scrollToMessage(event, id) {
+            var element = document.getElementById('message-' + id);
+
+            if (element) {
+                event.preventDefault();
+
+                element.classList.add('chatlog__message--highlighted');
+
+                window.scrollTo({
+                    top: element.getBoundingClientRect().top - document.body.getBoundingClientRect().top - (window.innerHeight / 2),
+                    behavior: 'smooth'
+                });
+
+                window.setTimeout(function() {
+                    element.classList.remove('chatlog__message--highlighted');
+                }, 2000);
+            }
+        }
+
+        function showSpoiler(event, element) {
+            if (element && element.classList.contains('spoiler--hidden')) {
+                event.preventDefault();
+                element.classList.remove('spoiler--hidden');
+            }
+        }
+    </script>
+</head>
+<body>
+
+<div class="preamble">
+    <div class="preamble__guild-icon-container">
+        <img class="preamble__guild-icon" src="providence-of-lilies.html_Files/53926fd90f2c07d8f8a7d6fbee76bb17-34E69.png" alt="Guild icon">
+    </div>
+    <div class="preamble__entries-container">
+        <div class="preamble__entry">Tales of the Awakened [Warframe RP Community]</div>
+        <div class="preamble__entry">Personal Roleplaying / providence-of-lilies</div>
+
+            <div class="preamble__entry preamble__entry--small">[15/01 AR] CLOSED RP - *The Providence,* Void | A terrible, freak accident led to a non-aligned passenger liner being conveyed into the Void. Not only that, but a murderer stalks its savaged decks; /RU has been contracted by Elizabeth to get this ship back in normal space, and to save as many lives as possible. Being otherwise occupied at the present, /RU handed the contract over, in turn, to a relay job board. This is the tale of the six Tenno who took up said job, and decided the fate of *The Providence&#39;s* final voyage.</div>
+
+    </div>
+</div>
+
+<div class="chatlog">
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="providence-of-lilies.html_Files/7d2ad1deb614c52d42ae671b94385ab6-09169.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Pryde#0661" data-user-id="215616399911944193" style="color: rgb(255,0,0)">StrikerSkirata - Elizabeth</span>
+
+
+        <span class="chatlog__timestamp">16-Jul-19 02:48 PM</span>
+
+            <div class="chatlog__message " data-message-id="600760673785348108" id="message-600760673785348108">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">[15/01 AR] CLOSED RP - <em>The Providence,</em> Void
+<strong>Elizabeth</strong>
+&quot;...Oh! And, if you should find any books, I would, as always, happily accept them. Striker, <em>out.</em>&quot;
+Reaching over, Elizabeth pressed the &#39;send&#39; key with complete finality. The redhead leaned back in her orbiter and smiled to herself, taking in the great starscape stretched out before her in all directions. Content that all things would work out, she closed her eyes and ran one hand over the large tome that lay open before her. 
+
+&quot;Mucking spacewalks,&quot; she muttered, &quot;I&#39;m reading.&quot;
+----------------------</span>
+
+                                <span class="chatlog__edited-timestamp" title="17-Jul-19 06:53 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="600760726461743104" id="message-600760726461743104">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">~For whatever reason, the six of you accepted Elizabeth&#39;s mission. It was a very well written message, and it really showed how the Trinity had grown out of her shell and become more comfortable with asking favours. Upon receiving the choppy camera feed of <em>The Providence&#39;s</em> interior, it became crystal clear why Elizabeth refused to go herself-- while her anxiety around people has certainly been dulled, this mission would easily prey upon her healthy anxiety of spacewalks and, to a lesser extent, heights. 
+
+Very little data and intelligence was available; not even a total crew complement could be found. <em>The Providence</em> valued its privacy, and because of its nature as a family-run passenger liner, the owners - the Luta family - could take on passengers who found themselves between a rock and a hard place. Paradoxically, it always had every document in order when approaching to land or moor, but when departing, those documents mysteriously vanished as the port&#39;s wealth suddenly multiplied. Because of this, the Corpus and Grineer authorities could never quite track down <em>The Providence</em> and its illegal passengers, nor bring enough evidence to bear against the Luta&#39;s to shut them down.</span>
+
+                                <span class="chatlog__edited-timestamp" title="17-Jul-19 01:33 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="600760756790886420" id="message-600760756790886420">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Now, seeing <em>The Providence</em> in person, it is difficult to not feel a trace of fear: it hang, suspended in the milky whites and greys of the Void, liken some beast with a maggot-infested wound on its flank. Very few lights shone in the windows, most concentrated around the aft. Bodies drift freely in the gap, issuing from that terrible explosion on the port side of the vessel. Judging by the twisted metal, it is easy to estimate that a massive detonation tore the ship apart from the inside. Main power is certainly off-line, and back-up systems are struggling to keep up. Bodies drift and twist, gravitating towards the centre of the ship, but evidencing that artificial gravity is, at the least, working at less than nominal status. The Corpus engineering of this ship has ensured that even with so grievous a wound, the remainder of <em>The Providence</em> is mostly intact and habitable. Heat can not be detected through the thick hull, and most scanners are scattered. Clearly, the Lutas decided to <em>really</em> value their privacy.
+
+The superstructure of the ship presents a challenge to land; only one orbiter can actually dock at a time, and must do so near the aft part of the ship. The deck lettering is scorched clean off in some places, but it appears that the Tenno can land on deck 13. No blueprints could be found on record for <em>The Providence.</em> 
+
+But the most remarkable aspect of <em>The Providence</em> is the strange string of golden void-energy which traverses its length. Running from aft to fore, it loops endlessly around the ship; slowly, as though a calm heartbeat. No sensors can detect it save for the naked eye. At times, it encompasses the entire height of the ship in a meter-wide band of golden energy; others, it is only a deck tall; on one loop, it was hardly visible as little more than a Moa-sized speck of gold. Clearly, there is something more afoot here than just a wayward shuttle.</span>
+
+                                <span class="chatlog__edited-timestamp" title="16-Jul-19 02:50 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="providence-of-lilies.html_Files/d6cb9e6e1021fb4b9ba81ed4c9c3d2a3-B27E9.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Kelimnac#5629" data-user-id="150334554295631872" style="color: rgb(139,100,255)">Kelimnac - Dominus</span>
+
+
+        <span class="chatlog__timestamp">16-Jul-19 03:16 PM</span>
+
+            <div class="chatlog__message " data-message-id="600767652578983938" id="message-600767652578983938">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>DOMINUS</strong>
+
+<em>Hell...this line of work is not complimentary to my mental stability....game face, Max.</em>
+
+Dominus rotated out of his landing craft, his Orbiter at a distance to preserve it from any possible debris. Leaning out of the Xiphos, he gently pushed off, drifting down to the landing pad and feeling the soft <em>thunk</em> of his Excalibur’s magnetics attaching him to the structure. Raising his Latron more out of routine than anything else, he scans the surrounding area with a pit in his stomach.
+
+“Touchdown, Intellectus. Get the Xiphos clear to free the airspace. Am I on sensors and comms?”
+
+His Cephalon chimes in, fear infused in his digital presence. “...Faint, but I can see you for now, Master. Are you sure this is wise, sir? This might be...dangerous.”
+
+“Job’s a job, Intellectus. This has my hackles on end, but if there’s survivors, I have to help.”
+
+The surrounding area mostly clear, he holds a hand up to his temple, triggering his wideband comms.
+
+“This is Dominus, on site. Any other operatives joining this mission, deck 13 is clear for now. I’ll hold position here so we can move as a team.”</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="providence-of-lilies.html_Files/7d2ad1deb614c52d42ae671b94385ab6-09169.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Pryde#0661" data-user-id="215616399911944193" style="color: rgb(255,0,0)">StrikerSkirata - Elizabeth</span>
+
+
+        <span class="chatlog__timestamp">16-Jul-19 03:35 PM</span>
+
+            <div class="chatlog__message " data-message-id="600772462782841065" id="message-600772462782841065">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">&lt;Deck 13, Entry/Exit Point.&gt;
+~Immediately behind Dominus is the entry/exit point to <em>The Providence,</em> as accessible by Orbiter. To the left is a locked door, leading off to the null-gravity, decompressed, void-exposed swath of the ship. Stretching off to the right is a long corridor. Directly overhead is a maintenance hatch which has been unlocked. This section of the ship is somewhat stable. Some debris does lay scattered about, but the hall is, on the balance, clean and cleared. Atmospheric pressure is maintained, but gravity is almost non-existent.
+
+The corridor leading off to the right would doubtless wind to the aft, eventually. It is partially illuminated by a flickering runway of overheads. A single camera has been torn from its mount, dangling from its wires and staring straight down; it would have once overlooked the comings and goings through the leftwards door. For now, it emits a rasping crackle and creak as servos insistently work to twist that which is broken. 
+
+A monumental groaning reverberates throughout the ship, some small remnant of momentum still bleeding away. It sounds of being swallowed up by some mighty sea behemoth. This is no place mortals were ever meant to tread.~</span>
+
+                                <span class="chatlog__edited-timestamp" title="16-Jul-19 03:36 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="providence-of-lilies.html_Files/a233a24842cecff11a0878b604b115a1-38F11.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Daakjenaar#7018" data-user-id="358680374022242324" style="color: rgb(0,5,46)">Daakjenaar</span>
+
+
+        <span class="chatlog__timestamp">16-Jul-19 10:33 PM</span>
+
+            <div class="chatlog__message " data-message-id="600877820540878860" id="message-600877820540878860">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>KAMOS</strong>
+This was an Atela job. Now, if only that weren&#39;t for the fact she was <em>still</em> so angry about Vuko&#39;s mere existence, she would be here. But no, Kamos&#39; time to shine. As the Liset closes in on the abandoned ship, the diminutive Operator leaned forward and stared out the window. The Void always looked so... weird. At least stars didn&#39;t move much. All that wavy... energy... stuff, always bugged him. But, no time to dwell on that.  Besides, he had a communication to respond to.
+
+&quot;This is, uh... Kamos. Landing on deck 13, so I hope no one&#39;s in the way.&quot; Well, <em>he</em> wasn&#39;t landing. He had a cephalon for that. No, he took the time to get his various things together. Gun, check. Smaller gun, check. Big sword, check. Big frame, check. Yeah, Atela could just do whatever it was Atela was doing for now. He could handle this. Totally. The Rhino stomped off, heading for the ramp whilst he loaded that shotgun. Nw, he wasn&#39;t particularly interested in the books. Now, on the other hand, what <em>caused</em> that damage... Anyway, the dull-colored liset lowered its ramp, a fair distance from the ship. Instead of drifting all the way, Kamos broke out the Archwing.
+
+The Rhino basically hurled himself at the landing pad, the full thrust of an Elytron propelling him onward and faster. It wasn&#39;t until the last second he tried braking, right as he separated from it and plowed into the landing pad. Okay, maybe he should&#39;ve planned that out. Still, he managed to get himself attached to the ground, and back on his feet. Okay, only Dominus saw that. Good. He glanced over at the Excalibur, grunted something indistinguishable, and reached for his shotgun at a rather slow pace. Well, this was boring. No hordes of things to murder.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="providence-of-lilies.html_Files/7d2ad1deb614c52d42ae671b94385ab6-09169.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Pryde#0661" data-user-id="215616399911944193" style="color: rgb(255,0,0)">StrikerSkirata - Elizabeth</span>
+
+
+        <span class="chatlog__timestamp">16-Jul-19 10:46 PM</span>
+
+            <div class="chatlog__message " data-message-id="600880915626852376" id="message-600880915626852376">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">&lt;Deck 13, Entry/Exit Point.&gt;
+~The impact of Kamos upon the landing pad would cause some small alarm; the airlock hardly had time to open and cycle him through, ere the Rhino was digging his heels against flooring. The impact was such that the whole deck shuddered, an alarming shift and sickening &#39;fall&#39; felt before the floor stopped moving again. Stable again for the time being, the ship seemed mostly at peace. 
+
+Beyond the door to the left, a rapid, violent beating could be heard-- it was as though someone was trying desperately to punch and hammer their way into the ship, but to no avail. After a moment, the blows dragged along the surface of the door, and were soon heard no more. Whatever it was had passed on.~</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="providence-of-lilies.html_Files/c934e31b4352e0651630fff4b1227f7e-887B8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Sorin#9212" data-user-id="161233261987627009" style="color: rgb(255,210,86)">SorinJr - Sorin</span>
+
+
+        <span class="chatlog__timestamp">16-Jul-19 10:46 PM</span>
+
+            <div class="chatlog__message " data-message-id="600881071961407488" id="message-600881071961407488">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Sorin</strong>
+
+A white and gold Liset is seen shimmering through the field of debris surrounding The Providence. Maneuvering towards the landing pad, the craft’s belly rotates, revealing the knight within; Sorin’s Chroma Prime. Coloured similarly to the Liset, it unlatches itself and glides casually towards the landing, crimson repala syandana trailing behind. With a front roll followed by a superhero landing made rather lack-luster from zero-g, he props himself up in a relaxed fashion with his polearm.
+
+After a brief pause, scanning the area, Sorin relays to his ship’s Cephalon, “Aegis has landed. Confirm comms and make your presence scarce, Prise.” Sorin turns halfway around to look at his Liset.
+
+The Cephalon, Prise, replies with a rather paternal sounding response. Strong, sturdy, Cephalon Prise opens comms, “Landing acknowledged. Comms online. Repositioning now. Take care, Operator.”
+
+“Copy confirmation. Prise, put me through to local operatives, I’d like to say hi.” Sorin chuckles as he hops gracefully onwards, aided by lack of gravity.</span>
+
+                                <span class="chatlog__edited-timestamp" title="16-Jul-19 10:46 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="providence-of-lilies.html_Files/7d2ad1deb614c52d42ae671b94385ab6-09169.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Pryde#0661" data-user-id="215616399911944193" style="color: rgb(255,0,0)">StrikerSkirata - Elizabeth</span>
+
+
+        <span class="chatlog__timestamp">16-Jul-19 10:55 PM</span>
+
+            <div class="chatlog__message " data-message-id="600883312218734608" id="message-600883312218734608">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">&lt;Deck 13, Entry/Exit Point.&gt;
+~Short-range communication seems to be working fairly well, for the time being. Unfortunately, contact with the Cephalons and Orbiters is all ready becoming difficult; clearly, the Luta&#39;s emphasis on their customer&#39;s privacy is not a one-way street. It is doubtless that communication between decks will be all but impossible, and even a short distance from the entry/exit point will quickly result in complete isolation of the Tenno. 
+
+But such is fine-- after all, you are Tenno: you <em>are</em> the things that go &#39;bump&#39; in the night.
+Right?
+
+And such is certainly evidenced here as the third Warframe&#39;s arrival is heralded by a faint shower of sparks down the right-wards corridor. There, one of the overheads decides the strain is too much and gives up the ghost, rendering yet more of the path in total darkness.~</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="providence-of-lilies.html_Files/8e446829900f880b733924301e9e6d5b-EF893.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Vosen#9137" data-user-id="151377797623971840" style="color: rgb(197,95,238)">Vosenedich - Lupin</span>
+
+
+        <span class="chatlog__timestamp">17-Jul-19 01:26 PM</span>
+
+            <div class="chatlog__message " data-message-id="601102342976438278" id="message-601102342976438278">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Lupin</strong>
+The black and gold Mantis struggled to weave its way through the undulating trail of distorted space and flying debris left behind by its quarried Liset.
+
+&quot;I specifically instructed him to wait!&quot; The operator sternly complained at the purple-translucent hologram of a large low polygon rendering of a raven. &quot;One word of innocence in trouble has him chasing bullets head-first.&quot; The ship groaned and shook on a tight turn, dropping him on all fours for support.
+
+<strong>Huginn</strong>
+&quot;I&#39;m sorry, Sir. Communication with Cephalon Prise are currently down.&quot; The soothing deep voice lit the inside of the landing craft as it rocked violently at the slightest sign of turbulence.
+
+<strong>Lupin</strong>
+The scarred face of the operator, contorted with frustration, finally relaxed with a sigh before the Tenno melded back into the Inaros kneeling behind him.
+
+&quot;It is fine, Hue. We simply have yet another rescue mission with minimal intel ahead of us.&quot; He relented dismissively, moving to the back of the landing craft and taking his position to disembark.
+
+A few moments later, the Mantis broke through and arrived in the somewhat cleaner space surrounding Deck 13, slowing to a crawl as it approached the docks, unceremoniously it whirled and wheezed as it spat out its master unto the ship. A loud pair of clunks announced his touchdown.
+
+&quot;<em>Stay within visual range, Hue. I will not have a repeat of Ceres.</em>&quot; He ordered over internal comms before signaling with one hand for the ship to detach and circle around.
+
+&quot;Now... &#39;wherefore hath this fate befell you, Prominence?&#39;&quot; He asked in a fitting tone in the stead of his companion turned client, marching towards the familiar silhouette of a gilded Chroma Prime.</span>
+
+                                <span class="chatlog__edited-timestamp" title="17-Jul-19 01:42 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="providence-of-lilies.html_Files/510043f71a932223ab64f94d9cf45170-F7E8A.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Midnight Ξ Runner#9606" data-user-id="208668282646036482" style="color: rgb(0,24,255)">Midnight-Runner - Ella</span>
+
+
+        <span class="chatlog__timestamp">17-Jul-19 01:31 PM</span>
+
+            <div class="chatlog__message " data-message-id="601103738605797419" id="message-601103738605797419">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>//Runner</strong>
+
+-------------------------
+
+Everything was black, the world around her was a blur, light flashed across the horizon, but nothing would allow clarity, save for the negative voices that emanated and echoed around her.
+
+“Couldn’t even save yourself…”
+
+“Mistake, is that what you <em>always</em> call your failures?”
+
+“...severely disappointed in you Ella.”
+
+“You just make things worse!”
+
+Ella tried to say she was sorry, to say she tried, to say she was not at fault, but only the feeling of choked guilt overtaking her.
+
+-------------------------
+
+She woke with a start, cold sweat wetting her face, tears trickled down her auroran eyes, the hands of a familiar Banshee slowly sliding from her body, limp from her sleep. She wept silently, face buried in the warframe’s stomach.
+
+--- SOMETIME LATER ---
+
+A light blue sheen glinted the arrival of a Windforged Scimitar as it came out of punch, its frame showing signs of a battle that happened sometime ago, flying towards the rear of the Providence. Its movement was graceful, quick, and almost errorless as it landed within the Providence itself; the only section, Deck 13, that was available to her. The Banshee Prime got up from the cockpit section to move towards the limited armory she had within the isolated vessel, before moving on the exit point while broadcasting a message on a global channel.
+
+<div class="pre pre--multiline nohighlight">[This is the Runner, I’m here to answer the aid of the Providence.]</div>
+
+She turned to Striker switching back to local comms. “Ready?” The Sentinel happily beeped thrice in response, before following its owner out of the Scimitar. The moment she stepped off her landing craft, it began closing its ramp on an automated command, quickly parting from the scene to an unreserved section of space.
+
+The Tenno within sighed shakily, before beginning her walk towards the others, wherever that may be.</span>
+
+                                <span class="chatlog__edited-timestamp" title="17-Jul-19 01:32 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="providence-of-lilies.html_Files/3f0bf704015137cec989dbd7785f896b-A8F30.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Evakylir#3726" data-user-id="151175479582392321" style="color: rgb(0,255,255)">Evakylir - Cyan</span>
+
+
+        <span class="chatlog__timestamp">17-Jul-19 06:50 PM</span>
+
+            <div class="chatlog__message " data-message-id="601183956028751876" id="message-601183956028751876">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Cyan</strong>
+The <em>Providence</em> mission would have been fairly intriguing to Cyan either way - solving mysteries, dealing with the Void, and saving lives were the tasks he looked for most of the time anyway - but upon seeing that a familiar name was behind the request, he accepted it with a wry smile. What were the chances he would encounter Elizabeth again after all these months?
+
+As his orbiter approached the injured ship, surrounded by strange Void energies almost blindingly bright through his blindfold, he said to the young girl’s image hovering next to him, “We’ll find out if your projecting is easier or harder here, eh, Jade?” Though he could only see or hear his ever-sleeping Tenno passenger’s Void projections while outside of his Warframe, he hoped she could slip through the signal shielding around the ship - provided the Void itself didn’t interfere, of course.
+
+“Cyan... I have a bad feeling about this. <em>Really</em> bad. This is several levels of ‘not right’ above even the stuff you like to mess with,” the illusion said with a gesture out at the wreckage. “Do you really have to go?”
+
+“I’ll be fine. There are...” He counted the assembled Tenno craft as a Scimitar pulled away from the liner. “...five other Tenno here. More than enough for most situations, right?” 
+
+Seeing the hovering girl looking unconvinced, he promised as he sank backward into his Vauban, “I’ll Transfer out when we find a habitable area, see if we can reach each other.” She disappeared as he switched from his Naramon Void-vision to Warframe optics. <em>See you soon, sis.</em></span>
+
+                                <span class="chatlog__edited-timestamp" title="17-Jul-19 06:51 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="601183999297060875" id="message-601183999297060875">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">~Now, a navy-blue and Orokin-gold Liset pulls into range of Deck 13, and a similarly colored Vauban Prime pushes off through the zero-G atmosphere to a graceful landing just behind the gathered Tenno. The Warframe stands at attention with a Grineer-styled rifle on his back, a Solaris-crafted pistol on his thigh, and a retracted throwing disc under his wrist.~
+
+Cyan looks over the newly formed team as Cephalon Pandora attempts to reach him. “Signal is weak, Oper—— advise—-ion inside.”
+
+On a private channel, “We’ll be careful, Pan. Keep our ships safe. Over and out.” Then, an even-toned voice comes over team comms, “Greetings everyone. Good to see you, Lupin,” with an invisible smile to the one teammate he’s sure he recognizes.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="providence-of-lilies.html_Files/7d2ad1deb614c52d42ae671b94385ab6-09169.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Pryde#0661" data-user-id="215616399911944193" style="color: rgb(255,0,0)">StrikerSkirata - Elizabeth</span>
+
+
+        <span class="chatlog__timestamp">17-Jul-19 09:23 PM</span>
+
+            <div class="chatlog__message " data-message-id="601222493818322963" id="message-601222493818322963">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">&lt;Deck 13, Entry/Exit Point.&gt;
+~A melodic chime rang throughout the hall, followed by a soothing chorus of piano keys and violin strings. This haunting tune heralds a cheerful, doubtless canned, recorded message which plays in stark contrast to the structural wailing.~
+
+<u>P.A.</u>
+&quot;Welcome, travelers! Are you seeking adventure between the stars? Or safe haven from the oppressive mien of foreign, tyrannical powers that seek the complete annihilation of you and your ilk? Well, you&#39;ve found the right <em>Providence!</em> I am Carly Luta, third-generation inheritor of this family-run, integrity-founded, customer-centric business. Please follow the signage to check-in down the hallway on your left, or list special concerns to our experienced customer-service representatives by walking calmly to your right. We hope your journey with us is a pleasant and uneventful one; and as always, may <em>you</em> find <em>your</em> --&quot;
+
+~Just as the male speaker was winding to a conclusion, a gold, shimmering hoop of energy flashed like electricity from below the deck, not five meters distant, spat out a bloodied, mangled pile of flesh and gore, then resumed its merry way, flashing and flaring as it vanished into deck 14. The hissing of the corpse&#39;s final death-sigh punctuated the falsely joyful words.~
+
+<u>Carly Luta</u>
+&quot;-- Personal <em>Providence!&quot;</em> 
+
+~Silence reigned anew, save for the hideous sounds of the mangled body settling upon the floor.~</span>
+
+                                <span class="chatlog__edited-timestamp" title="17-Jul-19 09:23 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="providence-of-lilies.html_Files/d6cb9e6e1021fb4b9ba81ed4c9c3d2a3-B27E9.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Kelimnac#5629" data-user-id="150334554295631872" style="color: rgb(139,100,255)">Kelimnac - Dominus</span>
+
+
+        <span class="chatlog__timestamp">17-Jul-19 09:38 PM</span>
+
+            <div class="chatlog__message " data-message-id="601226263448780806" id="message-601226263448780806">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>DOMINUS</strong>
+
+Turning  towards first the speakers announcing their piece, and then the hoop of energy depositing a pile of meat and gnarliness, Dominus is silent for a long second after the moment passes.
+
+He then fires a single round from his Latron into the mass of meat, before turning to the others.
+
+“So, that just set the mood. Glad to have more then a few bodies for this mission. Looks like...six, which would make maneuvers in the ship complicated if we stuck together.”
+
+He manually assigns IFF tags to the other Tenno in his HUD, then nods.
+
+“So the obvious solution is two teams of three. I’m thinking we keep our options diverse, since we probably won’t have comms available between the teams.” He points at each Tenno as he acknowledges them, not fully aware of names yet. “Rhino goes with one team, Inaros another. You’re both durable, you’ll be frontliners. Chroma and myself, primarily damage dealers, so the same story. Banshee and Vauban, you two are more useful in general for both finding and exploiting weaknesses, albeit in different ways. Now, I know I’m unfamiliar, so I’ll let you guys divvy things up, especially if you’ve got history/chemistry with one another I don’t know about. I’m flexible no matter what.”
+
+He drops his hand back under his rifle, idly checking his various pouches and belts to make absolutely sure he’s brought enough ammunition and supplies as the team talks it out.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="providence-of-lilies.html_Files/7d2ad1deb614c52d42ae671b94385ab6-09169.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Pryde#0661" data-user-id="215616399911944193" style="color: rgb(255,0,0)">StrikerSkirata - Elizabeth</span>
+
+
+        <span class="chatlog__timestamp">17-Jul-19 09:45 PM</span>
+
+            <div class="chatlog__message " data-message-id="601227946270654464" id="message-601227946270654464">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">&lt;Deck 13, Entry/Exit Point.&gt; 
+~Having met an untimely and hapless end, the lump of limbs and damp flesh is tormented one shade further by the impact of the Latron round. Presumably untainted, humanoid blood pools about the pile liken some demonic circle, elongating into a teardrop which stretches slowly towards the Tenno, following the slant of the deck.~</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="providence-of-lilies.html_Files/a233a24842cecff11a0878b604b115a1-38F11.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Daakjenaar#7018" data-user-id="358680374022242324" style="color: rgb(0,5,46)">Daakjenaar</span>
+
+
+        <span class="chatlog__timestamp">18-Jul-19 12:54 PM</span>
+
+            <div class="chatlog__message " data-message-id="601456653325434969" id="message-601456653325434969">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>KAMOS</strong>
+&quot;Who... even are you? Any of you? Besides Lupin.&quot; Kamos mumbled at the end, paying little mind to the big ol&#39; pile of flesh at first. When it started bleeding <em>everywhere</em>, though, he shrugged and took a few shots himself. Hey, might be infested. Can&#39;t be too sure, of course. Maybe a  few shotgun blasts would fix the gross, bleeding pile of problems. It was <em>worrying</em>, but... Anyway. Not his business, probably. &quot;I&#39;m with /RU, and I&#39;m who /RU sent. So, I <em>guess</em> that puts me in charge. Or something.&quot; He sort of grunted.
+
+&quot;Teams are good, though. Good, smart idea. Yeah. But you&#39;re probably all small and weak.&quot; Wasn&#39;t even smug about it. He seemed genuinely convinced about that. He didn&#39;t even seem to be adding anything to the plan, despite proclaiming himself leader. He only glanced between the whole group, at the five others here. He rather idly reloaded his shotgun, tossing the slightly-emptied clip away as a fresh one was put in. &quot;Except for Lupin. Maybe. But still.&quot;</span>
+
+                                <span class="chatlog__edited-timestamp" title="27-Jul-19 11:53 AM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="providence-of-lilies.html_Files/c934e31b4352e0651630fff4b1227f7e-887B8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Sorin#9212" data-user-id="161233261987627009" style="color: rgb(255,210,86)">SorinJr - Sorin</span>
+
+
+        <span class="chatlog__timestamp">19-Jul-19 12:36 PM</span>
+
+            <div class="chatlog__message " data-message-id="601814679203086336" id="message-601814679203086336">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Sorin</strong>
+Striding past Kamos with a clear intent to disregard his words, the white and gold Chroma Prime contrasts the exceptionally bleak scene. Approaching Lupin and stopping at his side, Sorin turns to the squad arms crossed, he nods a few times.
+
+Providing his introduction with an unyielding tone, &quot;I&#39;m Sorin, codename Aegis. Shield of Cetus, Guardian of Sol, and-&quot; he pauses, awkwardly, after delivering his introduction, &quot;and this guy&#39;s brother!&quot; Sorin chuckles, and delivers a harmless punch to the Inaros standing beside him. &quot;In arms, of course.&quot;
+
+The Chroma turns to face the Inaros, and gestures at Kamos, &quot;Lupe, you&#39;re telling me that you haven&#39;t once mentioned me to Mr. Overcompensation over there?&quot; He shrugs lazily with arms open, &quot;I guess I&#39;ll just have to show him what I&#39;m made of first-hand.&quot; The Chroma turns on a dime and squares himself to Kamos, saluting with rigid demeanor, &quot;Operative Sorin, reporting.&quot;</span>
+
+                                <span class="chatlog__edited-timestamp" title="19-Jul-19 12:37 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="providence-of-lilies.html_Files/3f0bf704015137cec989dbd7785f896b-A8F30.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Evakylir#3726" data-user-id="151175479582392321" style="color: rgb(0,255,255)">Evakylir - Cyan</span>
+
+
+        <span class="chatlog__timestamp">19-Jul-19 02:10 PM</span>
+
+            <div class="chatlog__message " data-message-id="601838327972495360" id="message-601838327972495360">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Cyan</strong> 
+Though the gold-trimmed Vauban’s face shows none of it, inside Cyan winces a little more with every shot that impacts the mangled body. <em>Good, perfect, cover up</em> all <em>that evidence of what happened</em> before <em>those bullets...</em>
+
+“I’m... Cyan,” he offers a bit distractedly. “Scholar, I suppose. For instance, I would have <em>liked</em> to look at this... individual... and figure out what deadly forces we’re dealing with, but...” A little shrug, and a sigh. 
+
+“If we <em>must</em> split up immediately, let’s have our goals clear beforehand. Get the ship out of the Void and save any survivors. We don’t have much info on what is where, but perhaps each team could prioritize one of those.”</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="providence-of-lilies.html_Files/8e446829900f880b733924301e9e6d5b-EF893.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Vosen#9137" data-user-id="151377797623971840" style="color: rgb(197,95,238)">Vosenedich - Lupin</span>
+
+
+        <span class="chatlog__timestamp">20-Jul-19 02:21 PM</span>
+
+            <div class="chatlog__message " data-message-id="602203470199521280" id="message-602203470199521280">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Lupin</strong>
+<em>There goes the evidence.</em> He sighed a long sigh that was accompanied by a noticeable cloud of golden dust, the whole situation seemed almost routinely comedic already. &quot;Kamos was part of the group I joined back in Ceres a couple weeks ago, as well as Atela&#39;s blood brother.&quot; He explained in a whisper back to his brother-in-arms, loud enough that he could be overheard by the others without interrupting whoever spoke next.
+
+&quot;Comms are already strained; assume we will not be able to contact the other team once we split.&quot; He added after Cyan&#39;s suggested goals. &quot;As such, I propose adding locating the communications or command deck to the list of objectives.&quot; He would pause for a moment taking a good look at everyone gathered there, uselessly scratching his cheek with one hand.
+
+&quot;On the subject of team composition, I suggest you take Sorin with you, Kamos.&quot; He said, placing a hand on the Chroma&#39;s shoulder with a nod to its operator. &quot;You will then have no trouble dispatching threats at minimal cost; whereas I can provide a modicum of healing for my team.&quot; He then let go of his friends shoulder and addressed Cyan. &quot;If Cyan would join my group, both will have mechanics, which, given the state of the ship, are in high demand. I believe the two remaining volunteers should mesh well into either group too.&quot; He concluded, placing his hand back on the pommel of his Magistar.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="providence-of-lilies.html_Files/510043f71a932223ab64f94d9cf45170-F7E8A.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Midnight Ξ Runner#9606" data-user-id="208668282646036482" style="color: rgb(0,24,255)">Midnight-Runner - Ella</span>
+
+
+        <span class="chatlog__timestamp">21-Jul-19 03:03 PM</span>
+
+            <div class="chatlog__message " data-message-id="602576286866472963" id="message-602576286866472963">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">//Runner
+
+Runner was mute witness to the gory event before them, silently listening and watching the other from a detached standpoint. For the better part of the conversation, she was in a distant thought, up until Cyan suggested to split. Her head perked up from the key word.
+
+“I-... I’ll can head towards Engineering as well.”</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+</div>
+
+<div class="postamble">
+    <div class="postamble__entry">Exported 21 message(s)</div>
+</div>
+
+</body>
+
+</html>

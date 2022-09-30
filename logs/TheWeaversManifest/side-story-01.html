@@ -1,0 +1,2132 @@
+<!DOCTYPE html>
+<html class="gr__archivesoftheawakened_appspot_com" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Tales of the Awakened {Warframe Discord RP Community} - side-story-01</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <style>
+        /* === GENERAL === */
+
+body {
+    font-family: "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    object-fit: contain;
+}
+
+.markdown {
+    white-space: pre-wrap;
+    line-height: 1.3;
+    overflow-wrap: break-word;
+}
+
+.spoiler {
+    border-radius: 3px;
+}
+
+.pre {
+    font-family: "Consolas", "Courier New", Courier, Monospace;
+}
+
+.pre--multiline {
+    margin-top: 4px;
+    padding: 8px;
+    border: 2px solid;
+    border-radius: 5px;    
+}
+
+.pre--multilineDis {
+    margin-top: 4px;
+    padding: 8px;
+    border: 2px solid;
+    border-radius: 5px;    
+}
+
+.pre--multilineLek {
+    margin-top: 4px;
+    padding: 8px;
+    border: 2px solid;
+    border-radius: 5px;    
+}
+
+.pre--multilineElla {
+    margin-top: 4px;
+    padding: 8px;
+    border: 2px solid;
+    border-radius: 5px;    
+}
+
+.pre--multilineKapak {
+    margin-top: 4px;
+    padding: 8px;
+    border: 2px solid;
+    border-radius: 5px;    
+}
+
+.pre--inline {
+    padding: 2px;
+    border-radius: 3px;
+}
+
+.mention {
+    font-weight: 500;
+}
+
+.emoji {
+    width: 1.45em;
+    height: 1.45em;
+    margin: 0 1px;
+    vertical-align: -0.4em;
+}
+
+.emoji--small {
+    width: 1rem;
+    height: 1rem;
+}
+
+.emoji--large {
+    width: 2rem;
+    height: 2rem;
+}
+
+/* === INFO === */
+
+.info {
+    display: flex;
+    max-width: 100%;
+    margin: 0 5px 10px 5px;    
+}
+
+.info__guild-icon-container {
+    flex: 0;
+}
+
+.info__guild-icon {
+    max-width: 88px;
+    max-height: 88px;
+}
+
+.info__metadata {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.info__guild-name {
+    font-size: 1.4em;
+}
+
+.info__channel-name {
+    font-size: 1.2em;
+}
+
+.info__channel-topic {
+    margin-top: 2px;
+}
+
+.info__channel-message-count {
+    margin-top: 2px;
+}
+
+.info__channel-date-range {
+    margin-top: 2px;
+}
+
+/* === CHATLOG === */
+
+.chatlog {
+    max-width: 100%;
+    margin-bottom: 24px;
+}
+
+.chatlog__message-group {
+    display: flex;
+    margin: 0 10px;
+    padding: 15px 0;
+    border-top: 1px solid;
+}
+
+.chatlog__author-avatar-container {
+    flex: 0;
+    width: 40px;
+    height: 40px;
+}
+
+.chatlog__author-avatar {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.chatlog__messages {
+    flex: 1;
+    min-width: 50%;
+    margin-left: 20px;
+}
+
+.chatlog__author-name {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.chatlog__timestamp {
+    margin-left: 5px;
+    font-size: .75em;
+}
+
+.chatlog__content {
+    padding-top: 5px;
+    font-size: .9375em;
+    word-wrap: break-word;
+}
+
+.chatlog__edited-timestamp {
+    margin-left: 3px;
+    font-size: .8em;
+}
+
+.chatlog__attachment {
+    margin: 5px 0;
+}
+
+.chatlog__attachment-thumbnail {
+    max-width: 50%;
+    max-height: 500px;
+    border-radius: 3px;
+}
+
+.chatlog__embed {
+    display: flex;
+    max-width: 520px;
+    margin-top: 5px;
+}
+
+.chatlog__embed-color-pill {
+    flex-shrink: 0;
+    width: 4px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.chatlog__embed-content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 10px;
+    border: 1px solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.chatlog__embed-content {
+    width: 100%;
+    display: flex;
+}
+
+.chatlog__embed-text {
+    flex: 1;
+}
+
+.chatlog__embed-author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.chatlog__embed-author-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 9px;
+    border-radius: 50%;
+}
+
+.chatlog__embed-author-name {
+    font-size: .875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-title {
+    margin-bottom: 4px;
+    font-size: .875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-description {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.chatlog__embed-fields {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chatlog__embed-field {
+    flex: 0;
+    min-width: 100%;
+    max-width: 506px;
+    padding-top: 10px;
+}
+
+.chatlog__embed-field--inline {
+    flex: 1;
+    flex-basis: auto;
+    min-width: 150px;
+}
+
+.chatlog__embed-field-name {
+    margin-bottom: 4px;
+    font-size: .875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-field-value {
+    font-size: .875em;
+    font-weight: 500;
+}
+
+.chatlog__embed-thumbnail {
+    flex: 0;
+    margin-left: 20px;
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-image-container {
+    margin-top: 10px;
+}
+
+.chatlog__embed-image {    
+    max-width: 500px;
+    max-height: 400px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-footer {
+    margin-top: 10px;
+}
+
+.chatlog__embed-footer-icon {
+    margin-right: 4px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.chatlog__embed-footer-text {
+    font-weight: 600;
+    font-size: .75em;
+}
+
+.chatlog__reactions {
+    display: flex;
+}
+
+.chatlog__reaction {
+    display: flex;
+    align-items: center;
+    margin: 6px 2px 2px 2px;
+    padding: 3px 6px;
+    border-radius: 3px;
+}
+
+.chatlog__reaction-count {
+    min-width: 9px;
+    margin-left: 6px;
+    font-size: .875em;
+}
+    </style>
+    <style>
+        /* === GENERAL === */
+
+body {
+    background-color: #36393e;
+    color: #dcddde;
+}
+
+a {
+    color: #0096cf;
+}
+
+.spoiler {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.pre {
+    background-color: #2f3136 !important;
+}
+
+.pre--multiline {
+    border-color: #282b30;
+    color: #839496;
+}
+
+.pre--multilineDis {
+    border-color: #282b30;
+    color: #b58900;
+}
+
+.pre--multilineLek {
+    border-color: #282b30;
+    color: #cb4b20;
+}
+
+.pre--multilineElla {
+    border-color: #282b30;
+    color: #268bd2;
+}
+
+.pre--multilineKapak {
+    border-color: #282b30;
+    color: #dc322f;
+}
+
+.mention {
+    color: #7289da;
+}
+
+/* === INFO === */
+
+.info__guild-name {
+    color: #ffffff;
+}
+
+.info__channel-name {
+    color: #ffffff;
+}
+
+.info__channel-topic {
+    color: #ffffff;
+}
+
+/* === CHATLOG === */
+
+.chatlog__message-group {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.chatlog__author-name {
+    color: #ffffff;
+}
+
+.chatlog__timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__edited-timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__embed-content-container {
+    background-color: rgba(46, 48, 54, 0.3);
+    border-color: rgba(46, 48, 54, 0.6);
+}
+
+.chatlog__embed-author-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-author-name-link {
+    color: #ffffff;
+}
+
+.chatlog__embed-title {
+    color: #ffffff;
+}
+
+.chatlog__embed-description {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-field-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-field-value {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-footer {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__reaction {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.chatlog__reaction-count {
+    color: rgba(255, 255, 255, 0.3);
+}
+    </style>
+
+    <link rel="stylesheet" href="side-story-01_files/solarized-dark.css">
+    <script src="side-story-01_files/highlight.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.pre--multiline').forEach((block) => {
+                hljs.highlightBlock(block);
+            });
+        });
+    </script>
+</head>
+<body data-gr-c-s-loaded="true">
+    
+<div class="info">
+    <div class="info__guild-icon-container">
+        <img class="info__guild-icon" src="side-story-01_files/e787a6474749f69864faf5b56c1e9478.png">
+    </div>
+    <div class="info__metadata">
+        <div class="info__guild-name">Tales of the Awakened {Warframe Discord RP Community}</div>
+        <div class="info__channel-name">side-story-01</div>
+        
+
+        <div class="info__channel-message-count">77 messages</div>
+        
+    </div>
+</div>
+
+<div class="chatlog">
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/290779f99a7d8e2b6ff5d6d447ab4680.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">28-May-18 09:29 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">[Closed RP <span class="mention">@Isa Tekchen</span> <span class="mention">@Lekalis the Strider</span> <span class="mention">@Kuve O'helix</span> <span class="mention">@Cev</span> <span class="mention">@Kapak</span>  ]
+Eurasian Zone Shores, Plains of Eidolon, Earth
+(1/01 AR: 24 hours after Orokin Remnant Tower Siege)
+
+~The sky was brilliant blue, contrasted only by the pure white, wispy clouds, and the dark, sinister plumes of smoke rising from the sea. Over the ocean, an enormous Orokin Tower ship creaked and groaned, water slowly rising along its flank, promising eventual and imminent submergence.
+Upon the rocky shore stood a figure, a tall bodied one that would have normally stood proud over such a majestic view, but was slumped over now. Accompanying his side were 2 short, squat creatures that held their forearms close to each other, shuffling nervously and periodically shooting curious glances at the large Warframe, the Nidus.~
+
+<u>Kapak:</u>
+Kapak looked behind him, piles of bodies lined up in rows, their faces covered by white linen. Too many dead for too long. They were beyond his help. Kapak could heal all wounds, but death was the one thing he could not undo. Their Oro extinguished, their bodies already cold and stiff.
+Kapak kept his eyes focused on the rough sea, his neuroptics peeled for any sign of life.
+There was a burble as a third short, midget-like creature lined up another body in the rows, a female Tenno wearing tough combat armour that hadn’t done anything to protect her from the Void Pulse. In her hands, a string of Dax prayer beads lay, clasped in her rigor mortus induced, iron grip. Sigyn joined the list of confirmed dead in Kapak’s mental list.
+
+((To everyone else in this RP, you can have your character alive already and arrive via landing craft, or your character can be found injured/unconscious in the water etc))</span>
+
+                                <span class="chatlog__edited-timestamp" title="14-Jun-18 09:43 AM"></span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/d73030fb7f7872bb9df7d8d905bbb49e.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Blood🍶Strider#5557">Blood🍶Strider</span>
+                <span class="chatlog__timestamp">28-May-18 10:53 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">/Lekalis/
+
+With a gutteral roar, The Strider's Mantis broke through the heavens like a meteor; its hull peeled to an ashen hue, an impulse thruster flickered as it turned in for a hard brake beside the beach, sending a few waves to break the shoreline.
+
+Its leg struts swivelled and pierced the earth, bracing the landing craft up nearby the line of bodies. 
+
+The ramp hissed and popped in a grossly metallic tune that implied severe damage within, despite the otherwise pristine, if not stripped, appearance of the vessels exterior.
+There was a loud thunk, as the ramp was pushed downwards and The Strider, still bedecked in battle attire, strode down in both grace and shame.
+
+Damage from the forray upon the Balor Fomorian still glimmered, though the subtle glow matched the starscape of lights that pocked The Strider's evermore damaged Loki Prime.
+His Sydon still hummed with energy, and cast a dusky second sun's light across the water as he approached Kapak and the corpses.
+"W-w-we were not : Successful, good enough, fast eno-o-ough?"
+
+The Strider's Vox, and indeed, the rest of his prosthetics seemed to struggle to keep up now. His joints glowed a soft orange light, where the metal acted as a conduit for void energy. Steam actively spilled out of his gill-like vents, and from those glowing limbs.
+
+He stepped from one foot to the other, his knee hitching and dragging across the stones as he looked across the bodies with a lost, desparaged look.
+[1/2]</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">[2/2]
+"Already?"
+Lekalis continued to question, more to himself as he took slower steps towards Sigyn's corpse. His Sydon slipped free from his good hand and buried itself in the pebbles as he made to stand beside Kapak, peering down at the Unairu Tenno's veil.
+
+"There are more."
+A statement, more than a question, he looked off to the Orokin Tower Ship; his fingers flexing anxiously, his head wobbled to one shoulder as his hitched knee shuddered and gave in, the Loki Prime sitting down, overwhelmed.
+"O... Kay."
+With shaky hands, he struggled to produce an iron cannister and cup; the cup fell out of his prosthetic hand almost immediately, and the cannister had been turned to scrap from the cap down.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/290779f99a7d8e2b6ff5d6d447ab4680.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">29-May-18 09:17 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><u>Kapak:</u>
+“Strider, my friend,” Kapak said, putting his hand on Lekalis’ shoulder with a firm, friendly squeeze. “I’m glad to see you’re still alright, at least for the most part. It wasn’t our fault. The decision made to advance on Earth was a poor choice.”
+Kapak tilted his head at the strained whirring from his prosthetics. “I wish I could help you with all this, but you know I’m not much of a wizard in the world of machines.”
+Kapak nodded behind him, revealing a larger pile of bodies, stacked with reckless abandon to a height of nearly 4 meters, comprised of humanoid figures in bloated metal armour.
+“All Grineer from the assault,” Kapak said as he lowered his hand, crouching down to pick up the cup that had dropped. “Perhaps you can salvage some of their life support modules and prosthetics for parts to help repair your Warframe?”
+Kapak sighed as he covered Sigyn’s face along with the others. “So far I’ve found the bodies of Orokino, Sigyn, Mistaya, among others. Their bodies and Grineer alike have been popping up onto the surface all night that I’ve been here.” To emphasize his point, two of Kapak’s engineers passed them by, dragging a headless Grineer Butcher by the legs towards the pile.
+“I spent the night fighting off Eidolon freaks in order to stay vigilant in my search for any survivors. I hope I didn’t miss any.”
+[1/2]</span>
+
+                                <span class="chatlog__edited-timestamp" title="29-May-18 07:39 PM"></span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/290779f99a7d8e2b6ff5d6d447ab4680.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">29-May-18 07:49 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Kapak pointed at a girl’s body lying off to the side of the rest of the bodies, head still uncovered by the linen. It was the Corpus Savvy Tenno <span class="mention">@Isa Tekchen</span>.
+"Found her last night," he said solemnly. "She's the latest Tenno I managed to recover thus far."
+Isa's face was covered in a major scarring of flesh, similar to the appearance of the Somatic markings that many Tenno bore. The girl's face was almost indistinguishable thanks to the strange colouration and warped flesh that sat upon it. Something told Lekalis that more of the same injuries lay beneath the linen that lay across her chest.
+"Dead like the others."</span>
+
+                                <span class="chatlog__edited-timestamp" title="29-May-18 08:53 PM"></span>
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">[2/2]</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/d73030fb7f7872bb9df7d8d905bbb49e.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Blood🍶Strider#5557">Blood🍶Strider</span>
+                <span class="chatlog__timestamp">30-May-18 12:22 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">/Lekalis/
+
+<em>The Strider quickly rose his good arm to dismiss Kapak's attempt to grab his shoulder, bringing a knee up in smooth locomotion, he doubly brought the good hand down to pull the prayer beads away from Sigyn's corpse.</em>
+"There is nothing to help, Kapak. But I am : Grateful, Hopeful, Understanding..."
+
+<em>He rose now in fluid ease, whatever had perturbed his motions with stiffness had abated with the last expulsions of steam from his vents.  His good hand's fingers wriggled as they let the sphere of the beads play between his fingers and in his palm.</em>
+
+"... I will reap trophies, not repairs."
+
+<em>He mused, his staticky tune subsided, matching the subtle crush and sigh of the waves nearby. Lekalis turned to face Kapak, watching his finger point to Isa, he moved to approach her corpse too.</em>
+
+"I will remember them, it is the least I can do."
+
+<em>He explained, squatting down beside the small fragile and battered frame of Isa. He reached out and curled his fingers across her cheek, as if he could still remember its contours and smallest of smiles.
+A finger wrapped her hair around his finger, while another held her scalp in place as he rather brutishly tore a lock of hair from her head.</em>
+
+"And you : Kapak, Comrade, Doctor... How do you fare?"
+
+<em>He rose again, tossing aside the broken canister, Lekalis turned to face Kapak with the same ceaseless glimmer in the Strider's Sunny Eye. His gaze held steady on the larger Nidus, his tone curious and chipper as per quo... Lekalis bound the beads around his own neck with a single easy toss and saw to binding either end of Isa's hair...</em></span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/290779f99a7d8e2b6ff5d6d447ab4680.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">30-May-18 07:35 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><u>Kapak:</u>
+He sighed and gave a pained smile. "I'm alright. In the physical sense anyways. I can heal from pretty much anything." He held out the cup to Lekalis, in an offer to return it.
+"It's just... everytime I make new allies, I seem to lose them just as fast. I keep looking out onto these waters, and I daydream seeing Devros riding on the back of his giant oaf, or Disruptis rising awkwardly from the water in his archwing... but then I snap back to reality, seeing all these lost ones here." He turned to look upon his collection of corpses once again.
+"Still haven't seen Bossma- I mean, Mataeru. Haven't seen Vuko either. I know Dormin and the Sectarus bailed on us as soon as Vay Hek broadcasted his ugly muckin' face."
+The distant rumbling of Dargyn engines resonated throughout the sky.
+"Won't be long until the Grineer begin to descend upon this mess. They'll probably strip the remains of the tower of whatever Orokin tech they can get their grubby, greasy hands on. I'm going to stick around for another eight-ish hours, in case more appear."</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/d73030fb7f7872bb9df7d8d905bbb49e.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Blood🍶Strider#5557">Blood🍶Strider</span>
+                <span class="chatlog__timestamp">30-May-18 08:15 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">/Lekalis/
+
+<em>The Strider pinned the lock of Isa's hair between his horn and the braid there, before looking out to the waters. As if trying to see what Kapak saw. He nodded somberly, before taking the cup with a bow,</em>
+"They are not lost if you keep them here..."
+<em>Lekalis gave the cup a playfull toss, before catching it in his good hand and pushing it against the approximation of where a heart would be on the gross amalgamation of Infested meat that made Kapak's Nidus.</em>
+"... Anaheidr. The Heart. Hold the Love close, it is where the lost can find a home again."
+<em>The Strider hummed happily and looked out to the waters again, giving the cup another little toss in his palm as his prosthetic arm rested itself behind his back.</em>
+
+"Disruptis never gave me my cup back..."
+<em>He mused with a pang of sadness as he caught the cup one last time and looked at the gruel that coated the parts of the cup that had pressed against Kapak's frame.</em>
+"... Oh well..."
+<em>Lekalis looked over to Kapak and nodded,</em>
+
+"I will stay too. Help: Search, Comfort, and Remember."
+<em>The Strider replied as he rolled his good shoulder and threw the cup far off into the water, where it skipped across the gentle waves.</em>
+"I am happy, to be honest. I Remember Sorrow... I have missed this pain."</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/efa3cfe038427c28c9919138c554ac6a.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="leirynotٴٴ#7248">leirynotٴٴ</span>
+                <span class="chatlog__timestamp">30-May-18 11:03 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Isa:
+<em>There is a sound of fabric rustling behind the Tenno as Isa's body twitches beneath the sheet. It grows louder as it begins to violently convulse. The sound of static can be heard coming from her as her artificial larynx receives random electrical signals, likely the closest sound a Corpus would make to gasping.</em></span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/290779f99a7d8e2b6ff5d6d447ab4680.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">30-May-18 11:28 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><u>Kapak:</u>
+“Disruptis never returned the pipe yet set I lended to him either,” The Nidus smiled. “In fact, I-
+Holy muck,” Kapak gasped in surprise as Isa moved. “She might be alive! Mephalus! Bring the softer cloth! Gorrus, bring the firewood we gathered!”
+Kapak swiftly descended upon Isa’s thrashing body, grabbing her arms and pinning them to her sides. He needed to keep her from injuring herself while she convulsed.
+“Strider! Come here and help me keep her head still! Can’t let her hurt herself!” In the meantime, Kapak tried to listen for a heartbeat through the contact of his hands on her forearms.
+The two Engineers of Kapak returned with their supplies in hand.</span>
+
+                                <span class="chatlog__edited-timestamp" title="30-May-18 11:29 PM"></span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/d73030fb7f7872bb9df7d8d905bbb49e.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Blood🍶Strider#5557">Blood🍶Strider</span>
+                <span class="chatlog__timestamp">31-May-18 12:16 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">/Lekalis/
+<em>His helm slowly swivelled to peer at Isa's twitching form,</em>
+"Curious..."
+<em>The Strider muttered as he watched the bustle of infested creatures rush around her like so many hens. Flies, more like, around a corpse he took easy strides towards. 
+He moved to stand behind her head wherein he knelt, and brought her head into his lap; his skeletal and charred fingers cupping her temples. His sunny lights that pocked his Frame's surface flickered out, and milk hued phantom image of those arms began to raise out from the scarred  limbs. Though these were evermore pristine, yet somehow, more grotesque in their pallid hue and ghostly air.
+
+A chitinous armor seemed to break past the skin, leaving it taught and peeled around where the bonelike designs had burst through and made to cover the pale meat and skin. The only saving grace was the mesmerizing nature of the delicate and long fingers that now pressed themselves onto the collar of Isa; a faint haze, like mist trailed behind it in the ghosting image of the apparated arms.
+
+Ripples of vibrant red energy flickered out from the long fingers and soaked into the ragged wounds of the void-warped Tenno; the Vazarin energies sinking in and causing the flesh to bubble and boil, like pink soda. Yet, the meat slowly built upwards, and made to mend the wounds instead of sinking deeper...</em></span>
+
+                                <span class="chatlog__edited-timestamp" title="31-May-18 12:16 AM"></span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/efa3cfe038427c28c9919138c554ac6a.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="leirynotٴٴ#7248">leirynotٴٴ</span>
+                <span class="chatlog__timestamp">31-May-18 01:04 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Isa:
+<em>Isa's head bled a bit where her hair was ripped out as her heart began to pump blood once more. It seemed that her Oro was still alive, though this resurrection was a far more difficult one than Tenno normally faced after death. Yellow void energy began to shine from her eyes as they shot open, her seizing body began to glow with it. Her vocal processor was screeching now. Flames formed in her hands and spread up her arms. Parts of her began to be masked and unmasked as it seemed that her body went through the use of all of the Madurai-focused Tenno's void abilities.</em></span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/290779f99a7d8e2b6ff5d6d447ab4680.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">31-May-18 06:01 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><u>Kapak:</u>
+Similarly to Lekalis, Kapak’s body flickered with a green wave of energy, the lime coloured light creating stark contrast against his red muscle and rose coloured bioluminescence. Two hands appeared from Kapak’s chest in a flash and swirl of energy, both clad in gauntlets made of calcified flesh. Obviously whoever the hands belonged to didn’t want to fully come out into the open.
+“My Void, she’s got a lot of energy pent up in there....!” Kapak’s voice came out, although his Warframe’s mouth did not move. Green cones of energy shot out of the hands, generating small fields of energy along her arms in a attempt to protect the Nidus’ own arms from Isa’s flames.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/d73030fb7f7872bb9df7d8d905bbb49e.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Blood🍶Strider#5557">Blood🍶Strider</span>
+                <span class="chatlog__timestamp">31-May-18 07:22 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">/Lekalis/
+
+<em>The ephemeral hands moved still, without reply in wordless grace as they paused for but a moment with the assistance of Kapak, before the hands moved to cradle the chin of Isa.
+
+The misting haze surrounding the ghostly limbs now crackled and popped with interference, intensifing until it seemed like to vanish entirely, before it suddenly became manifest again, and caught the mask whilst it was undone.
+
+Void Energy dripped from growing cracks in the Strider's phantom limbs, the dusklight hued energy dripped across the leylines of his blood veins and arteries.
+The energy floated away, once it hit the pebbly beach, like dust in the wind.
+
+The Strider's form weathered whatever savagery exploded out from the Madurai Tenno; carving yet more wounds across the Warframe, revealing a morbid mockery of anatomy beneath.
+
+Yet still, the pale arms struggled to soothe the strained Isa. With a vehement focus, The Strider's ghastly fingers slowly extended t'ill they pressed into the temples of Isa. And, not unlike roots of a weed, the fingers split and began to sink into the skin of Isa; finding and burrowing into where the various pathways of blood might flow.
+A voice tried to echo into what might remain of her Oro, trying to meld with it for but a moment to speak in the yet unspoken realm it resided within.</em>
+<div class="pre pre--multilineLek language-prolog">SEE. HERE. LIVE.</div>
+<em>It intoned as he tried to stabilize and raise Isa's Oro from whatever dark and quiet it had fallen into. To share what the Oro experienced with his own, to shoulder the burden, the pain, too. Almost eagerly, it groped for what sensations flared out of Isa.</em>
+<div class="pre pre--multilineLek language-prolog">THE SYSTEM NEEDS YOU.</div></span>
+
+                                <span class="chatlog__edited-timestamp" title="31-May-18 07:27 AM"></span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/efa3cfe038427c28c9919138c554ac6a.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="leirynotٴٴ#7248">leirynotٴٴ</span>
+                <span class="chatlog__timestamp">31-May-18 06:37 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Isa:
+<em>The Tenno's seizing reached its peak. Her voice box made a popping sound, then went quiet. She relaxed now, her convulsions ending. The void anomalies surrounding her body faded and her eyes closed. She was relaxed now, but still breathing, some of her wounds healed by the efforts of the Vazarin users. Her Oro had remained shut to Lekalis, locking him out, seemingly unable to form a connection with his own. It felt both damaged and defected. The explosion from the tower had taken its toll, but it seemed as though it was never 'right' to begin with. Her eyelids opened to see the Nidus over her. Upon seeing some infested being, she did not hesitate, raising her left hand, still bearing the scars of the void. She let loose a ball of fire aimed at the Nidus's chest. Should it hit him, it would explode, catching the Loki in the resulting blast of both normal and void fire. Though unlike the earlier flames, this one seemed entirely inentional, no doubt a panicked reaction to spotting something that looked vaguely like it could be hostile.</em></span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/290779f99a7d8e2b6ff5d6d447ab4680.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">31-May-18 08:37 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><u>Kapak:</u>
+Kapak flailed wildly, his Tenno hands vanishing as his Warframe began to move again. The front half of his body took a hefty blast of the searing heat, igniting him into flames.
+"HOLY MOTHER OF PEYPIYPE PIYKPIT'J TAJITA JOTSY" Kapak screamed as he burned in agony. He flailed his arms while his Engineers ran around him in circles, smacking him occasionally in attempts to put out the flames, all while screaming in gurgly, guttural burps.
+Fortunately, in Kapak's phobia-induced panic, he tipped over the edge of the rocky shoreline, dropping into the water below, a cloud of steam puffing up for a moment as it doused the inferno that had ravaged his body.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/d73030fb7f7872bb9df7d8d905bbb49e.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Blood🍶Strider#5557">Blood🍶Strider</span>
+                <span class="chatlog__timestamp">02-Jun-18 10:34 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">/Lekalis/
+
+<em>The limbs hardened, manifesting themselves in what looked to be something close to tangible as the mist was all but vaporized as the musculature upon the forearms tensed, the chitin digging deeper at the disturbance but no doubt protecting whatever meat now manifested itself.
+
+However, the Loki-Prime suffered vicious burns; the void-fire streaking across its armor, scoring several new deep gouges that bared a gunmetal meat and brass bone structure beneath. The previously cut and scarred left facing of the Strider's helm now was all but bare of its protective casing, leaving a grim, skull like visage peaking out from the metal flesh.
+
+That is none to say the damage suffered by the Grineer prosthetics; his arm most immediately showed damage, as it hung loosely from its socket, boiling blood still clung to the struts that had secured its position inside the Strider's Torso. The Harkonar breastplate there had all but ruptured, the fan incapable of dispersing the heat, much less weathering the storm, now lay open and bare with a veritable clockwork of systems turning in broken loops within.
+
+The Gill-like vents had imploded too in light of the firey backlash, and had made long craters along what could have been ribs along the Strider's sides.</em>
+[1/2]</span>
+
+                                <span class="chatlog__edited-timestamp" title="02-Jun-18 10:37 PM"></span>
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">[2/2]
+<em>The Loki Prime looked to be in severe need of repairs.
+
+Yet the phantom limbs still remained, and the flickers of a face and torso remained in place where the Loki-Prime had been blasted back a few inches.
+Specific features were yet difficult to make out, but there was a frightful phantom image of horns and a face not unlike the face of a Loki. If anything, what now flickered infront of the Loki Prime's torso looked to be a milky mirage of the battered frame's prime. Far before the Frame's state of disrepair.
+
+With a gentle sigh, a breath long held, a pulse of Void energy opened up around The Strider in a rough meter around him. Enveloping himself and Isa in a Void Shield, hoping to smother the flames in a surplus of Void energy.</em>
+
+<div class="pre pre--multilineLek language-prolog">FRIENDS. FAMILY. FEAR NOT : THE MEAT.
+Remember... Me : The Strider, Lekalis. Him : Kapak, Comrade, Doctor.</div></span>
+
+                                <span class="chatlog__edited-timestamp" title="02-Jun-18 10:37 PM"></span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/efa3cfe038427c28c9919138c554ac6a.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="leirynotٴٴ#7248">leirynotٴٴ</span>
+                <span class="chatlog__timestamp">02-Jun-18 10:57 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Isa:
+<em>Isa's eyes were open now, watching as the Nidus screamed in Corpus as it ran around in a panic. A single word slipped from her mouth now, her voice sounded far more robotic and full of static, no doubt her voice box had been damaged.</em>
+"Oops."
+<em>She looked up at the Loki above her. </em>
+"I'm alright now, Lekalis."
+<em>She reached up to gently try to remove his hands from her head.</em>
+"I am sorry for damaging your Loki."
+<em>With the Nidus having tumbled over the edge of the shoreline, Isa decided it would be best to wait to try apologizing.</em></span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/290779f99a7d8e2b6ff5d6d447ab4680.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">03-Jun-18 09:33 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><u>Kapak:</u>
+A pink fleshy hand appeared at the edge of the rocky shore, followed by the rest of Kapak’s Warframe’s grotesque body. His aberrantly mutated and twisted body was now amplified in terms of appearance: his entire front half was seared, patches of black, crispy burnt skin hanging from the pectoral region; swathes of flesh that been swirled into strange patterns by the Void glowed with a dim, yellow light, and steam still rising from basically everywhere.
+The Nidus’ partial face didn’t display anger or vengeance, but rather shock and relief mixed together (albeit with a little bit of fear) into a single facial expression: his jaw dropped and hung open.
+“I-Isa...? You’re alive...? Your body was dead! You had no pulse, lethal void scarring, multiple lacerations, and I believe a set of broken ribs...” Kapak wrung his hands.
+“Of course, that’s all superficial, though... your <em>Oro</em>, I could not sense it. You were as dead as the rest of them.” Kapak stepped forward, slowly and cautiously, as if afraid another wave of hell’s wrath would pour forth from Isa’s hands.
+“But your power, it’s definitely not weak. Last time I got burned by a Tenno was when Vuko had to cauterize-“ Kapak’s voice broke for a moment, and began coughing.
+“Excuse me, something in my throat.” He waved away an invisible cloud and gestured to Isa.
+“Are you going to need me to fix you up? Both your uh, face, and internals. Or will you be doing something with your robotics like you usually do?”
+
+As Kapak queried her, two of Kapak’s Engineers scurried over to Isa, one holding a small glass jug of water, the other holding a small first aid box. The Engineer with the water jug burbled at the other, before slapping the kit out of the other’s arms and pointing at Kapak.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/d73030fb7f7872bb9df7d8d905bbb49e.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Blood🍶Strider#5557">Blood🍶Strider</span>
+                <span class="chatlog__timestamp">04-Jun-18 11:25 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">/Lekalis/
+
+<div class="pre pre--multilineLek language-prolog">REMEMBER ME : 
+THE MOTHER OF THE DEEP
+AND THE DEITY OF THE PLEBIAN.
+FIND :
+THE CRIMSON SUN</div>
+
+<em>The last fleeting words faded as the phantom limbs of The Strider pulled back into its corpus, curling into itself as if to lay into a Casket.
+
+A flickering sunny spark crackled over his frame as his hands pulled away quietly and stiffly, before he rested his hands in his lap and fell still.</em>
+
+--
+
+The Strider's Mantis' engines suddenly kicked on once again, a spat of smoke spilled out from a thin crack along its hull, as the ramp cackled and began to rise, rescinding back into its natural state; it prepared to rise.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/efa3cfe038427c28c9919138c554ac6a.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="leirynotٴٴ#7248">leirynotٴٴ</span>
+                <span class="chatlog__timestamp">04-Jun-18 04:46 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Isa:
+"Yes... it was an interesting sensation."
+
+<em>She said, starting to sit up.</em>
+ 
+"I do suspect that something is wrong with my Oro, but for the time being I'm... in need of medical attention. These burns are rather painful."
+
+<em>Absolutely nothing in her voice hinted at her feeling any pain, though that may have just been from the fact that it was artificial... either that or she had a surprisingly high pain tolerance. She made no point about her power not being weak. Most things seem rather strong when they're setting the observer on fire. She would have to test herself to see if what had happened did weaken her or not. She turned to Lekalis now.</em>
+
+"Are you alright Lekalis... it seems you were caught in the blast as well."
+
+<em>She squinted at the Mantis, then at the immobile Loki.</em>
+
+"Where is he going?"</span>
+
+                                <span class="chatlog__edited-timestamp" title="04-Jun-18 04:46 PM"></span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/290779f99a7d8e2b6ff5d6d447ab4680.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">05-Jun-18 09:18 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><u>Kapak:</u>
+Kapak barked orders at his Engineers, who scurried away to grab some of Kapak’s equipment.
+“They’ll just be a moment. I’ll give you a nice skin graft and you’ll be right as rain. You might lose any Corpus tattoos that you have though.” He put his hand on her shoulder as she tried to sit up. “Whoa there, take it easy! You may be half machine, but there’s still living stuff inside you that could get damaged further. Also, I generally have no idea what’s wrong with you right now, and I’d like to avoid risks. At least until I can further analyze your health.”
+Kapak looked at Lekalis and the Mantis, following Isa’s gaze.
+“...what the Void?”</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/efa3cfe038427c28c9919138c554ac6a.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="leirynotٴٴ#7248">leirynotٴٴ</span>
+                <span class="chatlog__timestamp">07-Jun-18 04:59 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Isa:
+<em>The Corpus Tenno gave Kapak a look of annoyance as he prevented her from sitting up. She looked to the Mantis, then back to him.</em>
+"Very well, but go check on Lekalis. This is strange, even for him. I assure you I'll be fine. Diagnostic implants are indicating that you and he managed to repair most of the internal damage."
+<em>She lie back down.</em>
+"The burns are superficial."</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/290779f99a7d8e2b6ff5d6d447ab4680.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">08-Jun-18 11:55 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><u>Kapak:</u>
+He looked at his hands.
+“Void, I should use the Vazarin healing techniques more,” he said, but with a tone that stated that this was unlikely.
+Kapak walked over to the hunched over Loki, pushing two fingers against its temple, trying to get it to move.
+“Strider- I mean, Lekalis? You still in there?” He looked up at the ship. “Or you In There?! Can you hear me!?”</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/d73030fb7f7872bb9df7d8d905bbb49e.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Blood🍶Strider#5557">Blood🍶Strider</span>
+                <span class="chatlog__timestamp">08-Jun-18 09:26 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">The Mantis' impulse thrusters warbled and suddenly spat a vicious amount of force out from its blazing thrusters; waves rose and pebbles stirred before the Mantis turned and seemed to snap out of existence as it accelerated off and out of atmos, the sunlight hued contrails of the thrusts giving the sole implication that the vessel had ever been so close to the beach at all.
+
+--
+
+Erstwhile, the Strider's Frame only sputtered and sparked at the prodding of the Nidus; there was a presence within the Frame but extracting it to be interacted with would require dedicated meditation or some other means.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/290779f99a7d8e2b6ff5d6d447ab4680.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">08-Jun-18 09:44 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><u>Kapak:</u>
+He stood bewildered as Lekalis' ship zoomed away, not even a black dot in the distance left behind to watch.
+"Did he just... leave us....?" Kapak's gaze looked back over at the lifeless husk of the Strider's Loki. He knelt down next to it, looking into the fizzled out diode where the amber light of his 'eye' had once shone from. "Leaving his Warframe here too... peculiar." He stood back up and walked back over to Isa, stopping to let one of his Engineers drag the upper torso of a Grineer Dargyn Pilot across the brown grass towards the pile.
+"I guess I'll hang onto his Loki for now," Kapak said, slightly shaken at the strange events. He shook his head to clear it as a spider-like, robotic infested mass shambled towards Isa and the Nidus, its drunken steps being guided by more of the ape-like creatures at Kapak's disposal. "Ah, here we are. I'll need a quick sample of flesh and then I can replicate skin cells in this machine here."</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">(( <span class="mention">@Kuve O'helix</span> <span class="mention">@Cev</span> u can join whenever btw))</span>
+
+                                <span class="chatlog__edited-timestamp" title="08-Jun-18 09:45 PM"></span>
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Kapak took another glance towards the sinking Orokin Tower. Muro, Vuko, Mataeru, Ella, Devros... Among others, these Tenno had still not been accounted for. He tried to calm his nerves by turning his attention back to Isa.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/7d7e597a38b7327c4f8bbe696d279580.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Cev#3310">Cev</span>
+                <span class="chatlog__timestamp">09-Jun-18 10:48 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">~Beneath the rubble of the tower, a drum-like sound began reverberated. The sound held a recognizable pattern, consisting of notes with two distinct lengths: 1 quarter second length and 1 half second length. Each note sound was separated by regular intervals of space. After a few measures, it paused for about two seconds. Then the same sequence started again, its intensity picking up with each iteration. As the Tenno on land went about their business, large waves began to form. They pushed a small piece of the tower’s exterior to the shore. A battered Octavia hung to it.~</span>
+
+                                <span class="chatlog__edited-timestamp" title="09-Jun-18 10:48 PM"></span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/efa3cfe038427c28c9919138c554ac6a.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="leirynotٴٴ#7248">leirynotٴٴ</span>
+                <span class="chatlog__timestamp">11-Jun-18 03:33 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Isa:
+"It would seem so... I recall him mentioning being unable to transfer out of the frame... I may have damaged it too much for him to use with my blast.."
+<em>She looekd toward the infested drone now.</em>
+"I never thought I would be so eager to receive a skin graft. Take whatever sample you need."
+<em>She would look back towards the tower and let the machine do its work.. She saw the waves form.</em>
+"Kapak, I think there may be another survivor."
+<em>She told the Nidus. And sure enough, a panel came into sight carrying an Octavia.</em>
+"I believe that is Cev's Octavia."</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/290779f99a7d8e2b6ff5d6d447ab4680.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">14-Jun-18 06:21 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><u>Kapak:</u>
+Isa would have (or maybe would have not) felt a slight prick as Kapak used his clawed fingers to scratch a thin layer of Isa’s cells from her cheek before unceremoniously wiping them onto the infested spider-thing’s “tongue”.
+“There we go, and in a couple of minutes we should have some beautiful material for me to weave some skin for you! It might look a little patchy for the first little while, but I can always clean it up a bit after it’s settled in.” Kapak kissed his fingers as if he were a satisfied gourmet chef. “4 months as a cosmetic surgeon at a Corpus resort. Got to meet a lot of ladies, y’know? Heh heh.”
+Kapak snapped his head towards the water as Isa informed him.
+“Hey!! Over here!!” Kapak yelled, waving his arms.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/7d7e597a38b7327c4f8bbe696d279580.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Cev#3310">Cev</span>
+                <span class="chatlog__timestamp">15-Jun-18 09:16 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Cev:
+The Octavia’s head turned lethargically towards the shouting Nidus. Snapping to his senses, he quickly pushed off the rubble and rolled onto the ground. He landed with a <em>thud</em> and coughed profusely. He attempted to cry out but his speech came out all breathless and broken up.
+Cev eventually managed to squeeze some words out. “Good to know I’m not the only one who made it out.”
+He forced himself to his feet and walked over to Isa and Kapak. When he reached them, he exited his frame and fell to the ground.
+“I barely got out of there without getting my eyebrows singed off.”
+Cev chuckled which quickly turned into a hacking cough.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/efa3cfe038427c28c9919138c554ac6a.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="leirynotٴٴ#7248">leirynotٴٴ</span>
+                <span class="chatlog__timestamp">16-Jun-18 11:52 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Isa:
+<em>Isa felt the prick, though she gave no reaction to it. She dealing with far more noticeable things at the moment.</em>
+"How wonderful. I assume you worked using your true body, or were they put under before they got the chance to see you?"
+<em>She looked towards Cev as he appeared in front of his Warframe.</em>
+"That must have been a very close call."
+<em>If it weren't for her damaged voice synthesizer, the remark would have been obviously dripping with enough sarcasm that it could melt a Grineer helmet within seconds. However, the damage to her voice masked it too effectively for it to be noticeable.</em>
+"Your eyebrows have fared well, but it would seem that your lungs have received some damage."</span>
+
+                                <span class="chatlog__edited-timestamp" title="16-Jun-18 11:53 PM"></span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/290779f99a7d8e2b6ff5d6d447ab4680.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">18-Jun-18 09:08 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><u>Kapak:</u>
+Kapak threw his head back at Isa's comment at his obvious ugliness. "Ha ha ha!!" He guffawed, pleased that she felt good enough to make a crack at humor. He approached Cev and knelt down to eye level with the Tenno as he coughed.
+"Hmmm.... that doesn't sound too good. You were in your Warframe when the Pendulum erupted, right? That would mean possible Void scarring in your bronchi or alveoli. What do you feel? Hurts to breathe at all?"</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/7d7e597a38b7327c4f8bbe696d279580.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Cev#3310">Cev</span>
+                <span class="chatlog__timestamp">21-Jun-18 11:48 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Cev:
+As his cough calmed down, Cev took a moment to catch his breath.
+“Yeah I got way too lucky mate.” he muttered in a somber, more serious tone as his face fell. After a moment of stillness, he turned his gaze to Kapak to respond to his question.
+“Yeah It hurts a little when I breathe mate just glad that’s all that's wrong.”
+Cev sat up slowly, resting his arms on his knees and quickly and rhythmically tapped his left foot against the ground. He hadn’t been able to listen to his music since the crash landing, so his pseudo-withdrawal symptoms began to kick in.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/efa3cfe038427c28c9919138c554ac6a.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="leirynotٴٴ#7248">leirynotٴٴ</span>
+                <span class="chatlog__timestamp">22-Jun-18 05:35 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Isa:
+"What was so funny?"
+<em>She asked, not seeing any humor in her question about how exactly a Tenno would be accepted as a surgeon on a Corpus ship while operating through their Warframe. She didn't speak more, instead  choosing to just rest as best she could, despite the fact that there was no side of her really that wasn't burned to lie down on without causing additional pain.</em></span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/290779f99a7d8e2b6ff5d6d447ab4680.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">23-Jun-18 09:28 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><u>Kapak:</u>
+This Nidus cleared his throat as his smile faltered for a moment. He walked over to Cev and gestured with his hands for him to open his mouth.
+“It was a pleasure cruiser,” Kapak said to answer Isa’s question while he looked at Cev. “Anyone who had the money was welcome aboard it. Including Tenno. And of course, being the greedy money-whores that they are, you can bribe your way into any situation. Including allowing them to bring your Warframe with you.” He glances up to observer the waters again to make sure no other bodies had surfaced.
+“I got the actual job mostly because one of the executives on the cruiser had heard of my skills. They thought I would bring in loads of revenue- and that I did. Corpus noblepeople enjoy modifying their bodies in more ways that one. Who am I to judge though? It paid real good. Real, real good,” he said with a devious smirk.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/290779f99a7d8e2b6ff5d6d447ab4680.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">23-Jun-18 09:38 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">~One of Kapak’s engineers arrived with a rather large jug of water, which was sealed with some kind of purification unit. Along with it, some old Orokin ceramic tea cups, a plastic bag filled with a brown, squishy jello, and an IV bag with “C17H19NO3” written on the side of it were all offered to to Isa wordlessly.~</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/9e3ba236586c7ed1f1be40387e383591.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Kortium#0384">Kortium</span>
+                <span class="chatlog__timestamp">25-Jun-18 04:14 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">~From within the pile of Grineer bodies, a damaged radio comes to live and struggles to broadcast one last message. It is faint at first, and the words drown in a sea of static, as if the device is agonizing from its wounds.
+
+Its beeping and vibration, although weak, manage to reach the ears of those positioned at the shore.~
+
+<div class="pre pre--multiline language-tex">\Wed... min... \ah...! Hek...! \Imb... brea... ir...!</div>
+
+~The broadcast remains erratic and incomplete for a couple minutes, but the radio does not seem to give up. It continues spitting high and low frequencies, and pulsing behind bent metal and burned flesh, but its last words become less and less legible with every attempt, and soon, it is silenced by the equivalent of technological death.
+
+Further along the shore where damaged Grineer ships lie stranding, another surviving radio begins broadcasting the continuation of the message.~</span>
+
+                                <span class="chatlog__edited-timestamp" title="25-Jun-18 04:16 PM"></span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/7d7e597a38b7327c4f8bbe696d279580.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Cev#3310">Cev</span>
+                <span class="chatlog__timestamp">28-Jun-18 06:46 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Cev:
+Cev looked at Kapak as his face was slighted by a look of disgust <em>‘Oh guts what’s he got planned.’</em> He opened his mouth to voice a statement before the broken message caught his attention.
+“What the muck was that?”
+He coughed for a moment after he spoke.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/efa3cfe038427c28c9919138c554ac6a.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="leirynotٴٴ#7248">leirynotٴٴ</span>
+                <span class="chatlog__timestamp">28-Jun-18 09:28 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Isa:
+"Still, it's surprising that they would be willing to be operated on by a Tenno."
+<em>Isa waved the engineers off. She didn't need any morphine. Pain was something she was more than capable of dealing with. She sat quietly for a short time before hearing the transmission.</em>
+"Sounds like someone is trying to communicate with these Grineer."
+<em>She grimaced and pushed herself into a sitting position, then started to force herself onto her feet, wincing. She quickly fell down onto her knees.</em> 
+"Oh... that ankle is broken..." 
+<em>Nonetheless, the stubborn Tenno continued to crawl her way over to the radio to take a look at it.</em></span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/290779f99a7d8e2b6ff5d6d447ab4680.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">28-Jun-18 09:34 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><u>Kapak:</u>
+"Cev! Don't talk!!" Kapak grabbed Cev's mouth by the cheeks to hold it open but quickly let go as Isa crawled away.
+"Isa!!! What the Void!!??" He exclaimed as he stormed after her. "Stop this at once, you're in no shape-" Kapak trailed off as he finally heard the radio. "Bloody Void, what is that? Kapak slowly moved up to Isa's side and crouched down next to her, inspecting the radio as well.
+"Calling for reinforcements? Status report? I mean, to the Grineer we're as good as dead." Kapak hesitated for a moment as he said that, the echoing growl of Dargyn engines once more penetrating the sky as the Grineer aircraft flew through the distance.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/c5101e6517cc87a0d13a3d976b51b994.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="The Ξ Runner#9606">The Ξ Runner</span>
+                <span class="chatlog__timestamp">29-Jun-18 02:31 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">-As the radio continued its own chorus of panic. The internal comms of the surviving Tenno bleeped with familar names, if not an unfamiliar voice. It was certainly of their kith, if they had been able to access this channel in particular.-
+
+/Astra\
+"(static)-Strider-(static)-Runner-(static)-Ella, come in! Ella! Anyone?!" <em>Her voice was panicked, worried, and a bit angry all in the same. It seems she had been attempting this for quite a while..</em></span>
+
+                                <span class="chatlog__edited-timestamp" title="29-Jun-18 02:39 PM"></span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/290779f99a7d8e2b6ff5d6d447ab4680.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">29-Jun-18 02:37 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">(( <span class="mention" title="Kortium#0384">@Kortium</span> it’s all yours! ))</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/290779f99a7d8e2b6ff5d6d447ab4680.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">01-Jul-18 08:59 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><u>Kapak:</u>
+The Nidus pulled away from the radio at the interruption of the Cephalon’s voice.
+“Aye, I’m receiving you! This is Kapak! Identify yourself, Cephalon!”
+
+((I guess I’ll just give this train a push))</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/9e3ba236586c7ed1f1be40387e383591.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Kortium#0384">Kortium</span>
+                <span class="chatlog__timestamp">02-Jul-18 03:14 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">~Whatever Grineer comms that remain decently functional suddenly come to live to broadcast more bits and pieces of their electronic martyr's last will.~
+<div class="pre pre--multiline language-tex">...\all \invited... \my \wed...!
+...OLS...!
+\Hek... \tress nam... \me...!
+....AAAAAAAH...!</div>
+~Sounds of struggle in the background are faint but noticeable; beams, bullets, and explosions are clearly the leads of the chaotic melody, while some grunting and shouting, foul language in guttural languages, threats and one or two girly giggles here and there harmonize along. Of all the participants three voices sound nearly identical, except for the intonation and the accent.~
+
+<div class="pre pre--multiline language-tex">...\ack \off... \Koy...!
+...RSE YOU T...!
+...\weeee...!
+...THER OF...!
+...\need... \elp..!
+...BECILES...!
+...\kidnapped...!</div></span>
+
+                                <span class="chatlog__edited-timestamp" title="02-Jul-18 03:16 PM"></span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/efa3cfe038427c28c9919138c554ac6a.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="leirynotٴٴ#7248">leirynotٴٴ</span>
+                <span class="chatlog__timestamp">02-Jul-18 06:49 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Isa:
+"Well it would seem someone has been captured. You should probably do something about that Kapak."
+<em>Isa says.</em>
+"Provided my orbiter is intact I could assist, unless of course you insist on acting like an overprotective parent to someone who accidentally set you on fire with little effort."</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/c5101e6517cc87a0d13a3d976b51b994.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="The Ξ Runner#9606">The Ξ Runner</span>
+                <span class="chatlog__timestamp">04-Jul-18 02:20 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">/Astra\
+<em>The female voice cut out for a quiet moment, before she answered again with a change of excitement and relief.</em>
+
+"Skymen above! Someone did make it out! T-this is Cephalon Astra, caretaker of Ella Rafaanis; The Runner. I've been trying to hail anyone-especially her, but to no avail. You are Kapak I presume?"</span>
+
+                                <span class="chatlog__edited-timestamp" title="04-Jul-18 02:22 PM"></span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/290779f99a7d8e2b6ff5d6d447ab4680.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">04-Jul-18 03:59 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><u>Kapak:</u>
+Kapak ignored Isa's comment and internalized the message from Kuve. Hopefully Helminth wasn't being stupid and had been smart enough to record the message.
+"Aye! This is he! By the sound of it you can't locate her.... um, well, good news and bad news time! The good news is her body isn't in the pile along with the rest of the um...." he gulped. "deceased. The bad news.... well, I haven't found her. The only living people I've happened upon are Isa, Cev and... well, The Strider, but he kind of just.... left?"</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">~Kapak's minions continued to pull Grineer corpses from the water. There was a loud bubbling noise as the tower continued to sink at its slow but unstoppable pace.~</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/c5101e6517cc87a0d13a3d976b51b994.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="The Ξ Runner#9606">The Ξ Runner</span>
+                <span class="chatlog__timestamp">07-Jul-18 05:11 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">/Astra\
+<em>Astra's voice deteriorated into chaotic mublings.</em> "Oh no-no-no-no, this is bad... If Ella's not here... Eris? Crimson Sun? So many places to search... maybe Earth, Lua? Mars... no-no-No!
+...
+Strider! Do you know where he could be or have headed!?"</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/efa3cfe038427c28c9919138c554ac6a.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="leirynotٴٴ#7248">leirynotٴٴ</span>
+                <span class="chatlog__timestamp">07-Jul-18 06:57 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Isa:
+"His Loki is right here. His ship flew off."
+<em>She looked over at the limp warframe on the ground.</em>
+"I accidentally set it on fire beforehand."</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/7d7e597a38b7327c4f8bbe696d279580.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Cev#3310">Cev</span>
+                <span class="chatlog__timestamp">08-Jul-18 01:05 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Cev:
+Cev craned his neck towards Kapak as the Nidus’ hand grasped Cev’s face. His eyes darted towards the crawling Isa, and a large grin grew on his face as Kapak stormed after her.
+“Ah muck it, you guys handle that. Imma see if we can’t get one of those comms working properly.”
+Cev slid forward and grabbed hold of his Octavia’s legs. He shakily pulled himself to his feet and hobbled over to the pile of bodies Kapak’s engineer had dragged out of the water</span>
+
+                                <span class="chatlog__edited-timestamp" title="08-Jul-18 01:06 PM"></span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/290779f99a7d8e2b6ff5d6d447ab4680.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">09-Jul-18 12:14 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><u>Kapak:</u>
+He cleared his throat at the mention of setting Lekalis on fire. “Yes, we haven’t seen her but... how could she have gone anywhere else unless she ejected? Did she evacuate the Tower? I honestly couldn’t make out who was going where and doing what because of all the voiddamn Grineer mucking guts up.”
+
+~The Engineer must have heard Cev, since he grabbed the helmet of a Grineer lancer from the pile and tore it off of the body, the head alongside it. But before Cev would be able to marvel at the tiny, ape-like creature’s seemingly super strength, he would notice that there was a large shard of metal stuck through the neck of the Grineer; its head had already been severed for the most part.
+The Engineer chattered and babbled excitedly as it held up the head like a trophy or crown for Cev.~</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/c5101e6517cc87a0d13a3d976b51b994.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="The Ξ Runner#9606">The Ξ Runner</span>
+                <span class="chatlog__timestamp">13-Jul-18 07:42 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">/Astra\
+
+<em>The Cephalon made a panicked noise.</em>
+
+"The last time I saw any trace of her was her Scimitar leaving the hangar during the assault, her Forge Mark was on its wings-I swear it had to be her! But... I... was forced to retreat from the Grineer..."
+
+<em>There was a discomforting pause, then a sigh.</em>
+
+"If I am to find Runner, I need the Strider, he is the only key to finding her! ...And if his Mantis... ..."
+
+<em>Astra's commlink goes dark.</em></span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/efa3cfe038427c28c9919138c554ac6a.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="leirynotٴٴ#7248">leirynotٴٴ</span>
+                <span class="chatlog__timestamp">14-Jul-18 10:00 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Isa:
+"Well... I guess we won't be of much help there unless we find Lekalis."
+<em>She said, before standing and limping on her broken ankle to get to where Cev was, provided Kapak did nothing to stop her.</em></span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/7d7e597a38b7327c4f8bbe696d279580.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Cev#3310">Cev</span>
+                <span class="chatlog__timestamp">16-Jul-18 12:10 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Cev:
+He knelt down towards the engineer and took the helmet from it.
+“Thanks little guy.”
+Cev said as he rose again to his feet. He walked back to his Octavia and leaned against it. Cev opened a small pouch on his waist, revealing various tools and blades. He took one of the blades and went about forcibly removing the grineer’s head from its helmet. The head fell to the ground with a dull thud. He then began to dig out the communication device as Isa approached.
+“Isa you got any fire left in ya?”</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/290779f99a7d8e2b6ff5d6d447ab4680.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">16-Jul-18 05:56 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><u>Kapak:</u>
+The Nidus solemnly followed after Isa, his mind deep in thought. Ella had to still be alive. She didn’t go down so easily, and plus if she got off the station in time she would’ve been able to clear the Cascade wave.
+As for Kuve.... Kapak didn’t have a clue in hell where her voice was coming from. He suspected along with Isa that Kuve and her sisters were abducted, or at least locked in combat somewhere.
+Kapak let out a whistle-like screech, calling over the spider-thing.
+“Here Isa, let’s at least try to get those scars of yours cleaned up first.” He stepped toward her but promptly stepped backwards at the word “fire”.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/9e3ba236586c7ed1f1be40387e383591.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Kortium#0384">Kortium</span>
+                <span class="chatlog__timestamp">19-Jul-18 02:34 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">~The radio resuscitates on borrowed time, its background static ever present but its message now valiantly overcoming the sea of distortion to convey additional information to its audience. The sea appears to silent as well, as if curious for what the device has to say.~
+
+<div class="pre pre--multiline language-tex">y'all need grammar in your lives, ignorant muffins! Anyhow, the celebration will take place in the castle named after moi, naturally. Everyone's invited except those who died, I need only positive thoughts here. Kapak, you're not invited either unless you clean your ship. Who else...? Ah...! I'm not done yet, wait...!</div>
+
+~The familiar voice sounds excited though out of breath, and the quick exhalation between words hint at her running. Additional curses in the Grineer tongue are heard while some commotion involving two other childish voices in the background continue; soon, an alarm starts.
+
+<div class="pre pre--multiline language-tex">Gotta go! Get a nice suit or get the heck out. Love y'all. Hate you, Zavis, if you're alive, that is. Vuko, you're obligated to come here, or I'll hunt you. I will. Hugs and Kisses!</div>
+
+~As soon as the broadcast finishes, the device releases a spark and drops dead in the Tenno's hands.~</span>
+
+                                <span class="chatlog__edited-timestamp" title="19-Jul-18 02:35 PM"></span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/efa3cfe038427c28c9919138c554ac6a.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="leirynotٴٴ#7248">leirynotٴٴ</span>
+                <span class="chatlog__timestamp">22-Jul-18 01:02 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Isa:
+"Well it seems we will be going to Kuva Fortress, then."
+Isa said. She looked to Kapak.
+"If you're so insistent upon healing me then do so."
+She sat down, though it was really more of just letting her legs collapse beneath her as they had been screaming at her to do for a while now.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/7d7e597a38b7327c4f8bbe696d279580.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Cev#3310">Cev</span>
+                <span class="chatlog__timestamp">29-Jul-18 10:11 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Cev:
+Cev winced as the comms sparked in his face and caused him to drop the helmet. 
+“Muck! Guess it was working better than I expected,” he said as he turned to look towards Isa and Kapak. “Wonder what’s happening at the fortress.”
+He slowly fell to the ground and sat against his Octavia.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/290779f99a7d8e2b6ff5d6d447ab4680.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">01-Aug-18 09:19 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><u>Kapak:</u>
+“The Voiddamn Kuva Fortress!?” Kapak moaned as he walked over to Isa, the spider-like infested machine joining him.
+“Muck that place, been there once and I almost died. They have some advanced mucking technology there- some kind of machine capable of sucking your Oro right outta your frame!”
+His hand split apart into an aperture of insect-like legs, which were prompt to perform a tap dance on Isa’s face. With his other hand, he made a fist and thrust it into the mouth of the spider machine, presumably to harvest out the cloned flesh of Isa.
+With each stroke of the insect claws on Isa’s face, a strip of epidermis was torn off. A second stroke soon followed, covering the open scar with a brand new strip of smooth, soft skin. Slowly but surely, Isa’s beat-up, scarred and discoloured face began to look normal once more.
+
+~In the waters, a dark humanoid body surfaced. It definitely wasn’t the shape of a Grineer~</span>
+
+                                <span class="chatlog__edited-timestamp" title="01-Aug-18 09:19 AM"></span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/efa3cfe038427c28c9919138c554ac6a.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="leirynotٴٴ#7248">leirynotٴٴ</span>
+                <span class="chatlog__timestamp">11-Aug-18 10:32 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Isa:
+Isa just shrugged in response to Kapak's complaints about Kuva fortress. She let out a very telling.
+"Mmh"
+As she did so, clearly unimpressed by it. She felt that she had dealt with worse. She would say that, though she decided it would be for the best to not speak and hold still to let the <s>quack</s> good doctor do his work on her face without her doing anything to make it more difficult for him.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/7d7e597a38b7327c4f8bbe696d279580.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Cev#3310">Cev</span>
+                <span class="chatlog__timestamp">12-Aug-18 08:17 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Cev:
+“Really? Huh never actually been ther…”
+His speech was cut off short by a hoarse cough. The sudden fit brought him heeling over for a moment.. When he raised his head he squinted, looking towards the body in the water.
+“What the guts is that?”</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/290779f99a7d8e2b6ff5d6d447ab4680.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">13-Aug-18 09:25 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><u>Kapak:</u>
+In a slightly alarming but also impressive display of skill, Kapak turned away from Isa to look at whatever Cev had spotted while still repairing her face with the utmost dexterity.
+“Is... that’s not...” the Nidus retracted his hand from the spider and raised it to shield his eyespot from the sun and drink in the view.
+“...that’s.... THAT’S A TENNO!”
+Abruptly, there was a squishing noise as Kapak’s surgical arm separated from his arm socket, the hand still clasping and healing Isa’s face despite its disembodiment. Kapak sprinted towards the rocky shore, his massive gait carrying him forward multiple meters over the water before he crashed into the ocean with a mighty splash.
+Kapak swam forward as his empty arm socket began to grow a new limb. He continued grunting as he approached the now obviously Tenno body. Tendrils extended from Kapak, wrapping around the Tenno and drawing him in until the Nidus was essentially carrying the unconscious figure like a backpack. He began to swim back to shore, the almost fully submerged wreckage of the Tower groaning and bubbling behind him.</span>
+
+                                <span class="chatlog__edited-timestamp" title="13-Aug-18 09:26 AM"></span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/efa3cfe038427c28c9919138c554ac6a.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="leirynotٴٴ#7248">leirynotٴٴ</span>
+                <span class="chatlog__timestamp">14-Aug-18 09:50 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Isa:
+Isa let out an annoyed sigh at the sudden large weight attached to her face. She reached up to take hold of the arm, then simply looked on in silence as she let it continue to work on her face. She looked at the Nidus, the eyebrow on opposite side of her face from the arm raised slightly, curious as to who the new body belonged to, but not curious enough to actually ask or do anything that might disrupt the medical arm's work.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/7d7e597a38b7327c4f8bbe696d279580.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Cev#3310">Cev</span>
+                <span class="chatlog__timestamp">23-Aug-18 04:02 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Cev:
+Cev watched Kapak run frantically towards the ocean and laughed silently to himself at the sight.He peered out as the Nidus returned, unable to make out who he was carrying. He stood up and stretched his arms before entering his Octavia.
+“Who you got there mate?”
+Cev shouted as he approached the Nidus and stopped at the shore.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/290779f99a7d8e2b6ff5d6d447ab4680.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">23-Aug-18 05:25 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><u>Kapak:</u>
+The Nidus knelt down as the tentacles sprouting from his back eased the corpse onto the ground. Kapak stood up to reveal the Tenno in dark clothing- none other than the Remnant’s once mighty leader, Mataeru Lloria.
+“I... he’s got no pulse. No vitals.” Kapak ran his fingers down Mataeru’s side, flipping him over to reveal a gash in his side, deep and wide enough for the others to get a view of the fallen Tenno’s pancreas.
+Mataeru’s face was pale, his lips blue from blood loss. There was no way the Tenno’s body had survived the Void wave, the crash, drowning, a wound as severe as that, and haemorrhagic shock.
+“It’s.... it’s over.” Kapak said as he stood back up, taking a step away from Mataeru.
+“In our hubris, we exposed ourselves.” Kapak shook his head as he ran his hands over his cherry-red scalp. “And now, the Remnant dies with its leader.”
+To the left, Kapak’s Engineers gurgled and chirped quietly to each other, watching the scene. Eventually, one of them dragged Mataeru’s body to the pile alongside the rest of the deceased members of the Orokin Remnant, shrouding his body.
+
+[1/4]</span>
+
+                                <span class="chatlog__edited-timestamp" title="23-Aug-18 05:47 PM"></span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/290779f99a7d8e2b6ff5d6d447ab4680.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">23-Aug-18 05:46 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Kapak walked towards the lined up bodies, then turned to face the last two allies he had left.
+“Well... um. I’d like to say a few words.”
+The Nidus held out his hand  to his Engineers, and the nearest of them presented Kapak with a black bound book- an ancient form of literature- to him. The book’s cover bore the mark of the Red Veil.
+“This is an excerpt from the Red Veil’s death ceremony scriptures,” Kapak said sheepishly. “Personally I think their whole religion is varminkwash, but there might be something of comfort in here.”
+
+[2/4]</span>
+
+                                <span class="chatlog__edited-timestamp" title="23-Aug-18 05:47 PM"></span>
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">He cleared his throat.
+“I dedicate this death ceremony to the fallen ones whose bodies are both present or lost to us. Vuko Drakkainen, Mataeru Lloria, Sigyn, Disruptis, Muro, Kopi Tacosa, Rast, Orokino Novatosha, Calia Aloysus, Devros von Inie, Mistaya...” he glanced towards Lekalis’ motionless Warframe, then to the radio Kuve had spoken through. He thought about Ella as well, hopefully alive out there somewhere...
+He cleared his throat once more as his throat had begun to swell up for a moment.
+“‘I commit thy souls to the Void, beyond the guardianship of the Lidless Eye who watches and protects us from the unknown. May your essences find solace and meaning in the world beyond the realm of matter. There in the Void, May your ethereal bodies be flegellated and ravaged by the pleasures of the one who dwells within the gap. May his.... um... eternal might and uh... lust... uh... penetrate...”
+Kapak slammed the book shut and tossed it over his head several meters out into the ocean.
+“Oooooook. Not reading that again.”
+He shuffled for a moment before speaking up once more.
+“Often times when someone dies, people need time to grieve. But we do not have that time now. Despite the fact that the Remnant is destroyed, our little family we had forged has not. Kuve and her sisters... OUR sisters. They’re out there. And we can save them.”
+He made a fist and raised it.
+“Throwing ourselves against the Grineer once more may not be the thing that we really want to do after yesterday, but I refuse to leave behind one of our last remaining allies. We’re going to get into those clones’ giant floating uterus, and we’re gonna get Kuve out of there.”
+
+[3/4]</span>
+
+                                <span class="chatlog__edited-timestamp" title="23-Aug-18 05:48 PM"></span>
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">He gazed upwards at the sky as another pair of Dargyns flew overhead, obviously scanning and observing what little remained of the Orokin Remnant’s Tower ship.
+“Lekalis is still out there though,” Kapak said grimly, “and so is Ella. We will not leave them either! We will find them, and save them!”
+Kapak’s Engineers jumped up and down behind the Nidus, screeching monstrously in support.
+
+[4/4]</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/efa3cfe038427c28c9919138c554ac6a.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="leirynotٴٴ#7248">leirynotٴٴ</span>
+                <span class="chatlog__timestamp">24-Aug-18 06:04 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Isa:
+The arm finished its work as Mataeru was brought ashore. Isa pried it off and dropped it on the ground.  "That is... unfortunate."
+She said, her voice lacking emotion, whether it was because she felt nothing or because of the damage to her voice modulator was unknown. "But not entirely surprising."
+She gave Kapak an annoyed stare as he recited the Red Veil's scriptures.
+"This is why I don't work the Veil..."
+She closed her eyes now, resting them. These rescues should be interesting, though where Lekalis disappeared to was a mystery to her. Still, as she thought about it, two words came to mind.
+<em>Crimson Sun.</em>
+Astra had mentioned that, hadn't she? Though Isa wasn't sure why that of all places stuck out to her.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/7d7e597a38b7327c4f8bbe696d279580.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Cev#3310">Cev</span>
+                <span class="chatlog__timestamp">24-Aug-18 10:35 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Cev:
+Cev followed Kapak over to the line of their deceased comrades. He froze for a moment at the mention of Disruptis the realization that his friend was likely gone finally hitting him. After the others spoke he let the silence stand for a time before speaking.
+“I didn’t know most yall that well and it’s sad to say I never will. Disruptis mate knowing my luck and yours, you’re probably dead… and for once I can’t say I’m happy about winning a bet with you. I really hope I roll a 1 here mate if you are alive I hope you do find me.” 
+He let out a breath quietly lowered his head. The music he was listening to slowly faded into a melancholic sound barely at a barely audible level.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="side-story-01_files/290779f99a7d8e2b6ff5d6d447ab4680.png">
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="jado the man#0685">jado the man</span>
+                <span class="chatlog__timestamp">25-Aug-18 01:54 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">~With a last nod of his head, Kapak and his last allies returned to their orbiters and set course for the heart of the Kuva Fortress, where Kuve and her sisters were being held captive, prisoners of war from Vay Hek's conquest against the Orokin Remnant.
+The three Tenno charged through the gates, laying waste to legions of clones, making their way to the sisters' holding cells. Reunited with hope once more, the Tenno together made their way towards the extraction point, but before they could make it, the group was intercepted by some diabolical Grineer squad equipped with reverse engineered Orokin tools, manufactured courtesy of the dastardly Captain Vor.
+The Grineer-Orokin freaks used a unique and deadly beam cannon to blast the Oro right out of Kuve's body, and quickly following up with its destruction before Kapak could do anything with his Vazarin powers.
+Isa and Cev together killed the elite Grineer before they could cause further harm, and they escaped unharmed- at least physically.
+After a wordless operation in Kapak's Infested Orbiter, Isa's other void scars on her body were fixed, and Cev's breathing issues were sorted out. The group decided to split up, as their spirits were down; their last chance to save a member of their family disappeared. As far as they were concerned, the order of the Veiled Tenno was over- the Orokin Remnant laid to rest.
+Isa departed to focus on working. Besides, that's where her mind always was.
+Cev decided to go on his own once more as a mercenary to make his living and one day find his fortune.
+And Kapak descended back into the criminal underworld to pursue the career he'd always had even since before he joined the Remnant so long ago...~
+
+[END RP]</span>
+
+                        </div>
+            </div>
+        </div>
+        </div>
+
+
+
+</body></html>

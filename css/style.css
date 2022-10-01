@@ -1,10 +1,12 @@
 body {
-  text-align: center;
   background-color: #36393e;
   color: #c3c4c5;
   font-family: "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
 }
 a {
-	color: #8ca2ff;
+  color: #8ca2ff;
+}
+a:hover {
+  color: #aebdfe;
 }

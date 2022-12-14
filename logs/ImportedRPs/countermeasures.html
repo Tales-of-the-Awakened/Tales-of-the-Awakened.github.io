@@ -1,0 +1,708 @@
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+    <link rel="stylesheet" href="../../css/solarized-dark.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/imported.css">
+    <style type="text/css">
+      @import url("https://themes.googleusercontent.com/fonts/css?kit=lhDjYqiy3mZ0x6ROQEUoUw");
+      ol {
+        margin: 0;
+        padding: 0;
+      }
+      table td,
+      table th {
+        padding: 0;
+      }
+      .c7 {
+        border-right-style: solid;
+        padding-top: 0pt;
+        border-top-width: 0pt;
+        border-right-width: 0pt;
+        padding-left: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1.15;
+        border-left-width: 0pt;
+        border-top-style: solid;
+        margin-right: 20pt;
+        margin-left: 15pt;
+        border-left-style: solid;
+        border-bottom-width: 0pt;
+        border-bottom-style: solid;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+        padding-right: 0pt;
+        height: 16pt;
+      }
+      .c10 {
+        border-right-style: solid;
+        padding-top: 0pt;
+        border-top-width: 0pt;
+        border-right-width: 0pt;
+        padding-left: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1.15;
+        border-left-width: 0pt;
+        border-top-style: solid;
+        margin-right: 20pt;
+        border-left-style: solid;
+        border-bottom-width: 0pt;
+        border-bottom-style: solid;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+        padding-right: 0pt;
+        height: 16pt;
+      }
+      .c0 {
+        margin-left: 15pt;
+        padding-top: 5pt;
+        padding-bottom: 0pt;
+        line-height: 1.1;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+        margin-right: 20pt;
+      }
+      .c14 {
+        padding-top: 5pt;
+        padding-bottom: 0pt;
+        line-height: 1.1;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+        margin-right: 20pt;
+      }
+      .c1 {
+        font-weight: 700;
+        text-decoration: none;
+        vertical-align: baseline;
+        font-size: 12pt;
+        font-family: "Arial";
+        font-style: normal;
+      }
+      .c12 {
+        padding-top: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1.15;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+      }
+      .c5 {
+        font-weight: 400;
+        text-decoration: none;
+        vertical-align: baseline;
+        font-family: "Arial";
+      }
+      .c8 {
+        text-decoration: none;
+        vertical-align: baseline;
+        font-size: 11.5pt;
+        font-family: "Arial";
+      }
+      .c13 {
+        font-size: 9.5pt;
+        font-family: "Consolas";
+        font-style: italic;
+        font-weight: 400;
+      }
+      .c17 {
+        background-color: #ffffff;
+        max-width: 468pt;
+        padding: 72pt 72pt 72pt 72pt;
+      }
+      .c2 {
+        font-size: 11.5pt;
+        font-style: italic;
+      }
+      .c15 {
+        font-size: 11.5pt;
+      }
+      .c4 {
+        font-weight: 700;
+      }
+      .c11 {
+        height: 11pt;
+      }
+      .c9 {
+        font-size: 11pt;
+      }
+      .c6 {
+        font-style: normal;
+      }
+      .c16 {
+        font-size: 10.5pt;
+      }
+      .c3 {
+        font-size: 12pt;
+      }
+      .title {
+        padding-top: 0pt;
+        font-size: 26pt;
+        padding-bottom: 3pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+      }
+      .subtitle {
+        padding-top: 0pt;
+        color: #666666;
+        font-size: 15pt;
+        padding-bottom: 16pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+      }
+      li {
+        font-size: 11pt;
+        font-family: "Arial";
+      }
+      p {
+        margin: 0;
+        font-size: 11pt;
+        font-family: "Arial";
+      }
+      h1 {
+        padding-top: 20pt;
+        font-size: 20pt;
+        padding-bottom: 6pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+      }
+      h2 {
+        padding-top: 18pt;
+        font-size: 16pt;
+        padding-bottom: 6pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+      }
+      h3 {
+        padding-top: 16pt;
+        color: #434343;
+        font-size: 14pt;
+        padding-bottom: 4pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+      }
+      h4 {
+        padding-top: 14pt;
+        color: #666666;
+        font-size: 12pt;
+        padding-bottom: 4pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+      }
+      h5 {
+        padding-top: 12pt;
+        color: #666666;
+        font-size: 11pt;
+        padding-bottom: 4pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+      }
+      h6 {
+        padding-top: 12pt;
+        color: #666666;
+        font-size: 11pt;
+        padding-bottom: 4pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        font-style: italic;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="c14">
+      <span class="c3">&nbsp; &nbsp; &nbsp;</span><span class="c3">[</span
+      ><span class="c3 c4">Closed RP: </span
+      ><span class="c15">@Almighty_Jado - Kapak</span
+      ><span class="c5 c6 c3">&nbsp;]</span>
+    </p>
+    <p class="c0">
+      <span class="c5 c6 c3">-Lua, Veiled Tenno Sanctuary Hangar-</span>
+    </p>
+    <p class="c0"><span class="c5 c6 c3">&lt;03/29 01:25&gt;</span></p>
+    <p class="c0 c11"><span class="c5 c6 c3"></span></p>
+    <p class="c0"><span class="c1">Mataeru:</span></p>
+    <p class="c0">
+      <span class="c5 c2"
+        >he briskly walks up Kapak&#39;s landing craft and pings him to request
+        entry</span
+      >
+    </p>
+    <p class="c0">
+      <span class="c5 c6 c3"
+        >&quot;Kapak, If you are in there I would like to discuss something with
+        you.&quot;</span
+      >
+    </p>
+    <h2 class="c7" id="h.wpt2gxv6s9x5"><span class="c5 c6 c3"></span></h2>
+    <p class="c0"><span class="c1">Kapak:</span></p>
+    <p class="c0">
+      <span class="c5 c2"
+        >There&rsquo;s another ping as a voice responds over the comms</span
+      >
+    </p>
+    <p class="c0">
+      <span class="c3">&ldquo;I&rsquo;m in the Bio Lab, boss!&rdquo; </span
+      ><span class="c5 c2"
+        >Kapak&rsquo;s voice sounded out- it was partially drowned out by static
+        and what sounded like... a Cephalon yelling?</span
+      >
+    </p>
+    <h2 class="c7" id="h.oj0xnzpmsl6t"><span class="c5 c6 c3"></span></h2>
+    <p class="c0"><span class="c1">Mataeru:</span></p>
+    <p class="c0">
+      <span class="c5 c2">a minute later Mataeru enters the bio lab</span>
+    </p>
+    <p class="c0">
+      <span class="c5 c6 c3"
+        >&quot;Kapak, we need to have a discussion about your infestation. It
+        needs to remain quarantined to your Orbiter. i do not want any of it
+        running around Lua.&quot;(edited)</span
+      >
+    </p>
+    <h2 class="c7" id="h.lh6njfp4e7qx"><span class="c5 c6 c3"></span></h2>
+    <p class="c0"><span class="c1">Kapak:</span></p>
+    <p class="c0">
+      <span class="c5 c2"
+        >Mata enters the bio lab, which has the lights turned off, save for the
+        lights of a screen set up in the corner.</span
+      >
+    </p>
+    <p class="c0">
+      <span class="c5 c2"
+        >Kapak is sitting next to a lab bench, with a burette slowly dripping a
+        green fluid into a flask filled with a clear coloured liquid sitting
+        atop it. To his left, a Charger sat on the floor, panting happily as
+        Kapak stroked its head. In front of Kapak, sitting on the floor before
+        the screen, were three of his Engineers. The first was holding a cup
+        with 3 straws sticking out of it. The second held a bowl of colourful,
+        bean-shaped pills. Perhaps some kind of candy, as the Engineer holding
+        the bowl stuffed them periodically into its gaping maw. The third
+        Engineer was wearing and empty paper bowl on its head, and was waving a
+        Corpus flag in its hand. The paper bowl on its head had &quot;G0 CLAMES
+        INFESTIGASHUNS GO&quot; written in red, drippy ink. Finally, the screen
+        itself displayed some kind of Corpus warrior wearing read sawing a Hyena
+        model Corpus robot in half with a Serro.</span
+      >
+    </p>
+    <p class="c0 c11"><span class="c5 c2"></span></p>
+    <p class="c0"><span class="c1">Cephalon Sark:</span></p>
+    <p class="c0">
+      <span class="c5 c6 c3"
+        >&quot;Carnage! Points everywhere!! Wonderful!!!&quot;</span
+      >
+    </p>
+    <p class="c0"><span class="c1">Kapak:</span></p>
+    <p class="c0">
+      <span class="c2"
+        >As the motley group of odd beings stood up to cheer, they heard Mataeru
+        and stopped, all five of them turning to face him simultaneously.</span
+      ><span class="c3">&nbsp;&quot;Oh, Bossman, what is up?&quot; </span
+      ><span class="c2"
+        >Kapak smiled as he reached across the room, pulling a chair out from
+        behind a lab bench.</span
+      ><span class="c3"
+        >&nbsp;&quot;Care to join? It&#39;s still only the first third!&quot; </span
+      ><span class="c2"
+        >Kapak smiles for a bit before faltering as Mataeru didn&#39;t budge. He
+        sighed.</span
+      ><span class="c3"
+        >&nbsp;&quot;I told you I&#39;d keep my help inside the Bio Lab. Why
+        ar-&quot; </span
+      ><span class="c2"
+        >Kapak stopped and looked at the Charger before nodding.</span
+      ><span class="c3"
+        >&nbsp;&quot;Ooooooohhhhhhhhhhhhhhh......... ahh. I know what&#39;s up.
+        You saw ol&#39; Yrogeth trotting off to get a snack, eh? He was getting
+        a bit hungry, and you have a bunch of perfectly good corpses just lying
+        around that tunnel of yours. Don&#39;t like that?&quot; </span
+      ><span class="c5 c2"
+        >He stood up and waltzed over the the other corner of the lab, flicking
+        on the lights. He stumbled for a moment as his vision adjusted to the
+        drastic light change before pulling a heavily secured, thick metal
+        cylinder, about 20 centimeters in diameter and 30 in length. He set it
+        on the lab bench with a CLUNK.</span
+      >
+    </p>
+    <p class="c0">
+      <span class="c3"
+        >&quot;Ah, I know what it is! You&#39;re getting a little antsy because
+        I haven&#39;t delivered, yet, huh? Well, you&#39;re fortunate enough to
+        come merely hours after the synthesis was completed. Here&#39;s my
+        promise right here, in this thick sucker.&quot; </span
+      ><span class="c5 c2"
+        >He patted the containment unit with his wrinkly, twisted hand.</span
+      >
+    </p>
+    <h2 class="c7" id="h.b9gc6721bdp8"><span class="c5 c6 c3"></span></h2>
+    <p class="c0"><span class="c1">Mataeru:</span></p>
+    <p class="c0">
+      <span class="c2 c5"
+        >He shakes his head to each statement before raising a hand</span
+      >
+    </p>
+    <p class="c0">
+      <span class="c5 c6 c3"
+        >&quot;I just brought a new Tenno to our number. And she claims to have
+        seen some creature wandering the halls of Lua. If that was your charger,
+        I am no longer requesting that you keep it contained to the base, but am
+        now requiring it remain on board your Orbiter. If the Lotus discovers
+        any hint of infestation in Lua, there is no number of Tenno corpses that
+        will determine her from coming here and eradicating everything. I
+        tolerate your pets, but if they are not contained with more rigorous
+        diligence, I will put them down as I see them.&quot;</span
+      >
+    </p>
+    <p class="c0">
+      <span class="c2">He remains motionless looking at Kapak</span>
+    </p>
+    <p class="c0 c11"><span class="c5 c6 c3"></span></p>
+    <p class="c0"><span class="c1">Kapak:</span></p>
+    <p class="c0">
+      <span class="c3"
+        >&quot;Y&#39;hear that Yrogeth? You gotta stay with Razogoth and the
+        others on the Orbiter!&quot; </span
+      ><span class="c5 c2"
+        >Kapak chuckled as the Charger lowered its head and whimpered, as if
+        fearful of something. One of the Engineers poked the Charger with his
+        flag, causing the monstrous wolf to snarl at it.</span
+      >
+    </p>
+    <p class="c0">
+      <span class="c3"
+        >&quot;I can guarantee you that I&#39;ll handle &#39;containment&#39;
+        better. I&#39;m a man of my word. Which is also why you should take
+        this.&quot; </span
+      ><span class="c2">Kapak held out the containment unit.</span
+      ><span class="c5 c6 c3"
+        >&nbsp;&quot;As promised, Plaguewatch Infesticide Antiserum 3LL. There
+        are 3 vials inside this unit, each one with 20 ccs of the nasty stuff.
+        One drop of that cologne and you can kill an entire tumour network-
+        assuming it matches my lovely, er, strain. Basically don&#39;t try it on
+        anything that doesn&#39;t come from me. It won&#39;t work, and could
+        possibly act as a mutagen.&quot;</span
+      >
+    </p>
+    <p class="c0 c11"><span class="c5 c6 c3"></span></p>
+    <p class="c0"><span class="c1">Mataeru:</span></p>
+    <p class="c0">
+      <span class="c5 c2"
+        >He steps forward and takes the phial, cradling the jug before moving
+        over and taking a seat near the Nidus and gesturing to the screen as he
+        places the jug on the floor</span
+      >
+    </p>
+    <p class="c0"><span class="c5 c6 c3">&quot;Who is winning?&quot;</span></p>
+    <p class="c0 c11"><span class="c5 c6 c3"></span></p>
+    <p class="c0"><span class="c1">Kapak:</span></p>
+    <p class="c0">
+      <span class="c2">Kapak smiled raised a fist in the air.</span
+      ><span class="c3"
+        >&nbsp;&quot;Currently, CLAIMS INVESTIGATIONS! GO TEAM!!!!!&quot; </span
+      ><span class="c5 c2"
+        >The Engineers whooped and belched, waving their hands in the air for a
+        brief moment before sheepishly looking at Mataeru and sitting back down
+        quietly.</span
+      >
+    </p>
+    <p class="c0 c11"><span class="c5 c2"></span></p>
+    <p class="c0"><span class="c1">Cephalon Sark:</span></p>
+    <p class="c0">
+      <span class="c3">&quot;What a transaction!&quot; </span
+      ><span class="c5 c2"
+        >On screen, a Red MOA fired a stream of fearsome lightning at a Corpus
+        individual wielding a flamethrower. He proceeded to explode in a spray
+        of red across the camera, which then promptly switched to another
+        angle.</span
+      >
+    </p>
+    <p class="c0 c11"><span class="c5 c2"></span></p>
+    <p class="c0"><span class="c1">Kapak:</span></p>
+    <p class="c0">
+      <span class="c3"
+        >&quot;Ouch. &nbsp;Poor Loss Control. They used to be a decent team.
+        That is, before the Tenno started participating in the Index. Anyocorp
+        decided to let the better fighters go because they got scared of losing
+        too much money. Pfsh. Ah, looks like they&#39;re switching up
+        teams.&quot; </span
+      ><span class="c2"
+        >A bell rung, and the Cephalon hosting the event went wild with
+        excitement.</span
+      ><span class="c3"
+        >&nbsp;&quot;Bloodsports are quite strange, aren&#39;t they?&quot; </span
+      ><span class="c2">Kapak said,</span
+      ><span class="c5 c3 c6"
+        >&nbsp;&quot;You&#39;ve been around for a while. You&#39;ve probably
+        heard of the Grineer&#39;s perverse justice system. They call it
+        &#39;vacuum&#39; or somethin&#39;. This though, The Index, I can get
+        behind, because everyone who enters it does so willingly!&quot;</span
+      >
+    </p>
+    <p class="c0 c11"><span class="c5 c6 c3"></span></p>
+    <p class="c0"><span class="c1">Mataeru:</span></p>
+    <p class="c0">
+      <span class="c5 c6 c3"
+        >&quot;Rathuum. Yes, I am familiar with it... It is far too gladiatorial
+        for me. The index is only a little better. But I keep tabs on it in
+        order to keep track of the foes I may need to fight. It is also useful
+        in learning the enemy strategies before fighting them.&quot;</span
+      >
+    </p>
+    <p class="c0"><span class="c1">Kapak:</span></p>
+    <p class="c0">
+      <span class="c2">He wrapped his hands around the back of his head.</span
+      ><span class="c3"
+        >&nbsp;&quot;Think you&#39;ll leave some semblance of the sport once we
+        kick the Corpus&#39; rumps? Perhaps some of that Conclave racket that
+        old Teshin Dax is always broadcasting about. Some sort of way to hone
+        our skills while we wait in anticipation for those red armoured insects
+        from Tau to visit.&quot; </span
+      ><span class="c2">He waved his hand.</span
+      ><span class="c5 c6 c3"
+        >&nbsp;&quot;And of course, for entertainment.&quot;(edited)</span
+      >
+    </p>
+    <p class="c0 c11"><span class="c5 c6 c16"></span></p>
+    <p class="c0"><span class="c1">Mataeru:</span></p>
+    <p class="c0">
+      <span class="c2">He nods</span
+      ><span class="c5 c6 c3"
+        >&nbsp;&quot;Of course. But it will likely be less... fatalistic. Much
+        of the sports in this age are life or death oriented, and it should not
+        be.&quot;</span
+      >
+    </p>
+    <h2 class="c7" id="h.fguiaz2jwmiz"><span class="c5 c6 c3"></span></h2>
+    <p class="c0"><span class="c1">Kapak:</span></p>
+    <p class="c0">
+      <span class="c3"
+        >&quot;I&#39;ve seen quite a few bloodsports in my day. But many are
+        more crime based. I guess that&#39;s something much harder to topple
+        than the Grineer Empire. Crime will always be around no matter what.
+        Even the Orokin couldn&#39;t fully eliminate robbery and murder.&quot; </span
+      ><span class="c2"
+        >Kapak lazily turned his head to the burette beside him.</span
+      ><span class="c3"
+        >&nbsp;&quot;Ah, would you look at that! It&#39;s complete. Time to test
+        out this enzyme!&quot; </span
+      ><span class="c5 c2"
+        >Kapak motioned to his Engineers, and they scrambled to get up, one of
+        them flicking the light switch on. Kapak covered his face as he adjusted
+        to the light change.</span
+      >
+    </p>
+    <p class="c0">
+      <span class="c3">&quot;Alrighty then,&quot; </span
+      ><span class="c2"
+        >Kapak said as he got up, closing the burette&#39;s tap and picking up
+        the flask of now black fluid,</span
+      ><span class="c3"
+        >&nbsp;&quot;I&#39;ve got to finish up these test runs now. If you would
+        like to stick around, that would be fine, I suppose. It&#39;s your lab,
+        after all. I must say, thank you for using your equipment. It really
+        helps me out quite a bit.&quot; </span
+      ><span class="c2"
+        >Kapak fished around in a drawer, pulling out a spherical glass orb
+        filled with a pink liquid, suspending a very small sized human fetus
+        shape that had tentacles protruding from its orifices.</span
+      ><span class="c3"
+        >&nbsp;&quot;I&#39;ll be sure to take Yrogeth to my ship as soon as I
+        finish these trials, boss.&quot; </span
+      ><span class="c5 c2"
+        >He pulled out another fetus filled glass ball and began to fix rubber
+        hosing to them.</span
+      >
+    </p>
+    <h2 class="c7" id="h.iva4ec6yxpby"><span class="c5 c6 c3"></span></h2>
+    <p class="c0"><span class="c1">Mataeru:</span></p>
+    <p class="c0"><span class="c5 c2">He nods in agreement</span></p>
+    <p class="c0">
+      <span class="c5 c6 c3"
+        >&quot;It is true that crime can never be fully contained, but it can be
+        actively combatted by people willing to put up a fight. I am intrigued
+        to see how well a new system of government will work. I have been
+        drawing up plans for one, but as you already know, it is not simple to
+        actually test it out just yet.&quot;</span
+      >
+    </p>
+    <p class="c0">
+      <span class="c5 c2"
+        >he stands as well and raises his eyebrow at the embryo, moving closer
+        to inspect it</span
+      >
+    </p>
+    <p class="c0">
+      <span class="c5 c6 c3"
+        >&quot;What... is that? It looks like it was once human...&quot;</span
+      >
+    </p>
+    <p class="c0"><span class="c1">Kapak:</span></p>
+    <p class="c0">
+      <span class="c3"
+        >&quot;Oh this? Well, if you consider Grineer human, then this
+        definitely was human at one point.&quot; </span
+      ><span class="c2">Kapak patted the glass ball lightly.</span
+      ><span class="c5 c6 c3"
+        >&nbsp;&quot;An early Stage Grineer clone, only 13.87.... ah no, the
+        label says 13.70 hours. It&#39;s only that many hours old. Grineer
+        accelerated cloning is pretty impressive.&quot;</span
+      >
+    </p>
+    <p class="c0">
+      <span class="c5 c2"
+        >Kapak stuck the end of an octopus hose to the mouth of his black filled
+        flask. He hooked the hose to a retort stand and stuck wire gauze onto a
+        clamp. The Infested Warframe delicated placed the Flask on the wire
+        gauze, whistling to one of his Engineers, who brought him what appeared
+        to be a gutted Grineer flamethrower, an Ignis. He placed it under the
+        flask and turned it on.</span
+      >
+    </p>
+    <p class="c0">
+      <span class="c2"
+        >Kapak&#39;s movements were fast, but methodical and steady. It&#39;s
+        obvious he&#39;s been doing this for a while.</span
+      ><span class="c5 c6 c3"
+        >&nbsp;&quot;And now we wait a few seconds... and the heat and enzyme
+        should hopefully make this a lot faster than waiting around for 32
+        hours, heh heh.&quot;</span
+      >
+    </p>
+    <p class="c0">
+      <span class="c5 c2"
+        >From within the flask, a dark brown steam-like gas swirled off of the
+        surface of the liquid, entering the hose and likely travelling down it
+        into the two glass balls.</span
+      >
+    </p>
+    <h2 class="c10" id="h.sicsj9ako30n"><span class="c5 c6 c3"></span></h2>
+    <p class="c0"><span class="c1">Mataeru:</span></p>
+    <p class="c0">
+      <span class="c5 c2"
+        >he stands on the opposite side of the table to watch and crosses his
+        arms</span
+      >
+    </p>
+    <p class="c0">
+      <span class="c5 c6 c3"
+        >&quot;I do not want this thing to leave slime trails and goop on the
+        floors of this base. Are you planning to birth it here? Or is this just
+        a catalyst to get it ready for birthing later?&quot;</span
+      >
+    </p>
+    <h2 class="c7" id="h.uq14hmcl7r0p"><span class="c5 c6 c3"></span></h2>
+    <p class="c0"><span class="c1">Kapak:</span></p>
+    <p class="c0">
+      <span class="c5 c6 c3"
+        >&quot;On the contrary, boss. My intent is to kill it.&quot;</span
+      >
+    </p>
+    <p class="c0">
+      <span class="c2"
+        >Kapak watched gleefully as the fetuses began to writhe in agony, the
+        tentacles flailing wildly as blood and bodily fluids began to leak from
+        its eyes and ears. Kapak clapped his hands and guffawed as the fetus
+        stopped its movement.</span
+      ><span class="c3"
+        >&nbsp;&quot;Ha ha ha! EXCELLENT! Finally, lethal in under one
+        minute.&quot; </span
+      ><span class="c2"
+        >As Kapak wrung his hands in pleasure, he turned to Mataeru.</span
+      ><span class="c3"
+        >&nbsp;&quot;I conduct many experiments with life and death, boss man.
+        This one happened to be with death.&quot; </span
+      ><span class="c2"
+        >Kapak revealed in his hand a sealed tube with tape on its exterior,
+        which read something </span
+      ><span class="c13">HEY, GRINEER. SUCK ON THIS</span
+      ><span class="c2">.</span
+      ><span class="c3"
+        >&nbsp;&quot;What I&#39;ve been working on is a special, fast growing
+        Infestation that selectively targets individuals with Grineer genes. It
+        causes benign growths throughout their body, but can become malignant
+        when exposed to, </span
+      ><span class="c2">voila</span><span class="c3">&nbsp;THIS!&quot; </span
+      ><span class="c2">He held up the container triumphantly.</span
+      ><span class="c3"
+        >&nbsp;&quot;Perfect as an interrogation tool, or perhaps a way to clear
+        out Grineer very quickly! I&#39;m always playing around with different
+        exciting ways to unravel the bodies of my foes. Not always very
+        practical for the battlefield, but I&#39;m sure if you ever need
+        something put together for you, I can do it.&quot; </span
+      ><span class="c2">He raised his arms, palms to the ceiling.</span
+      ><span class="c3"
+        >&nbsp;&quot;Ahhh... yes. Death is a part of life, and life is my
+        playground. Never fear, my dear leader,&quot; </span
+      ><span class="c2">Kapak said with a sly grin,</span
+      ><span class="c3"
+        >&nbsp;&quot;I&#39;ll see to it that you, me and the rest of our allies
+        stay on the living side of &nbsp;life&#39;s spectrum.&quot; </span
+      ><span class="c2"
+        >Kapak kissed his gnarled fingertips before waving at Mataeru.</span
+      ><span class="c5 c6 c3"
+        >&nbsp;&quot;Now, I have much work to do. I must test that cure
+        composition 58 is still compatible with this, and whether it works on
+        Grineer with the pacifism defect, as well as...&quot;</span
+      >
+    </p>
+    <p class="c0">
+      <span class="c5 c2"
+        >Kapak&#39;s voice was reduced to a mumble as he bent down to inspect an
+        array of petri dishes lined against the opposing wall, his Engineers
+        following behind him, holding various pieces of equipment as he toyed
+        with masses of flesh in the dishes.</span
+      >
+    </p>
+    <p class="c0 c11"><span class="c5 c2"></span></p>
+    <p class="c0"><span class="c1">Mataeru:</span></p>
+    <p class="c0">
+      <span class="c5 c2"
+        >his face visibly grows distressed at the idea of using such a strain of
+        infestation on the living and he slowly backs away towards the
+        door</span
+      >
+    </p>
+    <p class="c0">
+      <span class="c5 c6 c3"
+        >&quot;I will leave you to it. Make sure that this does not get
+        released...&quot;</span
+      >
+    </p>
+    <p class="c0"><span class="c4 c6 c8">[End RP 01:58. 3/29]</span></p>
+    <p class="c11 c12"><span class="c5 c6 c9"></span></p>
+  </body>
+</html>

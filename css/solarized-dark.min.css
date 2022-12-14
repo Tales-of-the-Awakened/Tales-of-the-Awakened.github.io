@@ -61,7 +61,7 @@
   font-weight: bold;
 }
 body {
-    max-width: 800px;
+    max-width: 80ch;
     margin: auto;
 }  
 img {

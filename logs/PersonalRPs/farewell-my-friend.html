@@ -1,0 +1,749 @@
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+    <link rel="stylesheet" href="../../css/solarized-dark.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/imported.css">
+    <style type="text/css">
+      ol {
+        margin: 0;
+        padding: 0;
+      }
+      table td,
+      table th {
+        padding: 0;
+      }
+      .c6 {
+        border-right-style: solid;
+        padding-top: 0pt;
+        border-top-width: 0pt;
+        border-right-width: 0pt;
+        padding-left: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1.15;
+        border-left-width: 0pt;
+        border-top-style: solid;
+        margin-right: 20pt;
+        margin-left: 15pt;
+        border-left-style: solid;
+        border-bottom-width: 0pt;
+        border-bottom-style: solid;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+        padding-right: 0pt;
+        height: 16pt;
+      }
+      .c16 {
+        margin-left: 15pt;
+        padding-top: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1.15;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+        margin-right: 5pt;
+        height: 11pt;
+      }
+      .c0 {
+        margin-left: 15pt;
+        padding-top: 5pt;
+        padding-bottom: 0pt;
+        line-height: 1.1;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+        margin-right: 20pt;
+        height: 11pt;
+      }
+      .c10 {
+        background-color: #2f3136;
+        font-weight: 400;
+        text-decoration: none;
+        vertical-align: baseline;
+        font-size: 12pt;
+        font-family: "Verdana";
+        font-style: normal;
+      }
+      .c8 {
+        background-color: #ff9900;
+        font-weight: 400;
+        text-decoration: none;
+        vertical-align: baseline;
+        font-size: 14pt;
+        font-family: "Verdana";
+        font-style: normal;
+        color: #000000;
+      }
+      .c7 {
+        margin-left: 15pt;
+        padding-top: 10pt;
+        padding-bottom: 0pt;
+        line-height: 1.1;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+        margin-right: 20pt;
+      }
+      .c5 {
+        background-color: #36393e;
+        font-weight: 400;
+        text-decoration: none;
+        vertical-align: baseline;
+        font-size: 10.5pt;
+        font-family: "Arial";
+        font-style: normal;
+      }
+      .c3 {
+        background-color: #2f3136;
+        font-weight: 400;
+        text-decoration: none;
+        vertical-align: baseline;
+        font-size: 10.5pt;
+        font-family: "Verdana";
+        font-style: normal;
+      }
+      .c1 {
+        margin-left: 15pt;
+        padding-top: 5pt;
+        padding-bottom: 0pt;
+        line-height: 1.1;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+        margin-right: 20pt;
+      }
+      .c4 {
+        font-weight: 700;
+        text-decoration: none;
+        vertical-align: baseline;
+        font-size: 12pt;
+        font-family: "Arial";
+        font-style: normal;
+      }
+      .c11 {
+        font-weight: 700;
+        text-decoration: none;
+        vertical-align: baseline;
+        font-size: 11.5pt;
+        font-family: "Arial";
+        font-style: italic;
+      }
+      .c2 {
+        font-weight: 400;
+        text-decoration: none;
+        vertical-align: baseline;
+        font-size: 12pt;
+        font-family: "Arial";
+        font-style: normal;
+      }
+      .c17 {
+        text-decoration: none;
+        vertical-align: baseline;
+        font-size: 11pt;
+        font-family: "Arial";
+        font-style: normal;
+      }
+      .c12 {
+        background-color: #ff9900;
+        font-size: 14pt;
+        font-family: "Verdana";
+        font-weight: 400;
+        color: #000000;
+      }
+      .c9 {
+        background-color: #ffffff;
+        max-width: 451.4pt;
+        padding: 72pt 72pt 72pt 72pt;
+      }
+      .c14 {
+        font-size: 11.5pt;
+        font-style: italic;
+      }
+      .c15 {
+        font-weight: 700;
+      }
+      .c13 {
+        font-size: 12pt;
+      }
+      .c18 {
+        height: 11pt;
+      }
+      .title {
+        padding-top: 0pt;
+        font-size: 26pt;
+        padding-bottom: 3pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+      }
+      .subtitle {
+        padding-top: 0pt;
+        color: #666666;
+        font-size: 15pt;
+        padding-bottom: 16pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+      }
+      li {
+        font-size: 11pt;
+        font-family: "Arial";
+      }
+      p {
+        margin: 0;
+        font-size: 11pt;
+        font-family: "Arial";
+      }
+      h1 {
+        padding-top: 20pt;
+        font-size: 20pt;
+        padding-bottom: 6pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+      }
+      h2 {
+        padding-top: 18pt;
+        font-size: 16pt;
+        padding-bottom: 6pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+      }
+      h3 {
+        padding-top: 16pt;
+        color: #434343;
+        font-size: 14pt;
+        padding-bottom: 4pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+      }
+      h4 {
+        padding-top: 14pt;
+        color: #666666;
+        font-size: 12pt;
+        padding-bottom: 4pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+      }
+      h5 {
+        padding-top: 12pt;
+        color: #666666;
+        font-size: 11pt;
+        padding-bottom: 4pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+      }
+      h6 {
+        padding-top: 12pt;
+        color: #666666;
+        font-size: 11pt;
+        padding-bottom: 4pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        font-style: italic;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="c1">
+      <span class="c2">Earth, island in the middle of the ocean</span>
+    </p>
+    <p class="c1"><span class="c2">(Day 0 A.R.)</span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <p class="c1">
+      <span class="c4"
+        >The sun shines bright on the golden sands, the waves calmly pace back
+        and forth. It is sometime in the morning as the sun can still be spotted
+        steadily climbing towards its zenith. The atmosphere of the beach
+        seems... unreal. The long stretch of sandy land is like a spear cutting
+        the sea. Along the edges of the water a few crabs can be spotted as they
+        search for a place to hide from the unrelenting sun rays. Away from the
+        water, where the sand fades to dirt, and the dirt to grass, starting
+        with small bushes runs a tree line of thick, giant jungle trees that
+        with their heights seem to try and pierce the sky. Among this bliss of
+        uninterrupted nature, an oddity appears, it&rsquo;s presence disrupting
+        the balance of nature . A young man with a void scar across his eye and
+        part of the forehead is gently washed ashore by the waves, sun strongly
+        reflecting off of golden parts of his armor.</span
+      >
+    </p>
+    <p class="c7"><span class="c12">&gt; Vuko:</span></p>
+    <p class="c0"><span class="c3"></span></p>
+    <p class="c1">
+      <span class="c2"
+        >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A few moments after his
+        body is laid on the sand, like out of a tiny fountain, water starts
+        squirting out of his mouth, as he starts coughing violently. During the
+        fit he turns to the side and vomits a large amount of water and coughs
+        up the remaining drops from his lungs.</span
+      >
+    </p>
+    <p class="c1">
+      <span class="c13"
+        >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;After taking a few
+        minutes to completely regain his consciousness, with a big amount of
+        effort, Vuko lifts himself to a kneeling position and starts looking
+        around. </span
+      ><span class="c14"
+        >&ldquo;Aarhh, my head is killing me... Where the void am I? What
+        happened?..... Oh.. right.. the crash..... THE CRASH!&rdquo;</span
+      ><span class="c13"
+        >&nbsp;With a sudden burst of adrenaline he jumps onto his feet and
+        frantically starts looking around, trying to find someone. </span
+      ><span class="c14"
+        >&ldquo;Oh no... oh no... oh no.. where.....&rdquo;</span
+      ><span class="c13"
+        >&nbsp;He freezes instantly at the sight of smoke coming from further
+        down the coastline and a bit more inland. </span
+      ><span class="c14"
+        >&ldquo;No... no.. no.. nonononono it can&rsquo;t be... it
+        can&rsquo;t...&rdquo;</span
+      ><span class="c2"
+        >&nbsp;Vuko says under his nose as he begins rushing towards the source
+        of the smoke, or at least trying to rush as the exhaustion, wet clothes
+        and sand all slow him down to a mere walking speed as he struggles with
+        all his might to reach the destination.(edited)</span
+      >
+    </p>
+    <h2 class="c6" id="h.ibf7r67omnq6"><span class="c2"></span></h2>
+    <p class="c1">
+      <span class="c4"
+        >The forest seems to squeeze down on the exhausted Tenno as he kept
+        pushing deeper into the jungle, the tall ancient trees drawing closer
+        and closer in density causing great shadows to be cast down on the boy
+        from what little light managed to pierce through their tree tops. No
+        sound other than his own can be heard since most of the living creatures
+        ran away from the smoky area long before his appearance, only the
+        occasional rustling on the leaves can be heard.</span
+      >
+    </p>
+    <p class="c0"><span class="c4"></span></p>
+    <p class="c1">
+      <span class="c4"
+        >Eventually, the forest will start to thin out again and the closer he
+        gets to the source of the smoke the more he&rsquo;ll start noticing the
+        charred and ashen land that will start to surround him. Lush and lively
+        fauna turns to dust and blackness from a recent fire, the air thick with
+        it&rsquo;s smell but also with the stench of burnt flesh, possibly from
+        the poor critters that didn&rsquo;t have the time to escape it.</span
+      >
+    </p>
+    <p class="c0"><span class="c4"></span></p>
+    <p class="c1">
+      <span class="c4"
+        >And then he sees it, a enormous metal husk lying in the middle of a
+        dark crater, surrounded by scattered metal and broken objects, all flung
+        out by the vicious impact. It&rsquo;s a piece of the tower that seemed
+        to break off from the main haul mid entry. By the state it is in,
+        it&rsquo;s hard to recognize what part of the tower it was, maybe it was
+        someone&#39;s room, the kitchen, part of the bay, the course, it
+        doesn&rsquo;t matter cause whatever it was it&rsquo;s reduced to nothing
+        more than a heap of metal.</span
+      >
+    </p>
+    <p class="c0"><span class="c4"></span></p>
+    <p class="c1">
+      <span class="c4"
+        >Upon closer inspection, Vuko will notice something far worrying. Lying
+        near the crash site, a couple of meters from it, is a familiar broken
+        and mangled Harka Frost. It&rsquo;s entire left side seems to have been
+        violently torn as if something hit it with great speed causing the great
+        gash that goes from it&rsquo;s left chest down to the hip area. There
+        also seems to be dried blood covering it&rsquo;s arms, as if it was
+        carrying someone before it collapsed. Vuko will also notice drag marks,
+        accompanied by blood, leading from the Frost warframe towards the
+        forest, on the opposite end of where he came from.</span
+      >
+    </p>
+    <h2 class="c6" id="h.9gj6nm4gfp6l"><span class="c2"></span></h2>
+    <p class="c7"><span class="c8">&gt; Vuko:</span></p>
+    <p class="c0"><span class="c3"></span></p>
+    <p class="c1">
+      <span class="c2"
+        >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;He pushes through the
+        jungle with all his strength, multiple times stumbling over the roots
+        sticking out of the ground, but every time he picks himself back up,
+        continuing forward. He doesn&rsquo;t notice anything around him as his
+        mind is consumed with the singular thought and purpose of reaching the
+        source of the smoke.</span
+      >
+    </p>
+    <p class="c1">
+      <span class="c2"
+        >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When the forest finally
+        thins out, he runs out into the middle of the field like a wild animal,
+        the smell of burning only fueling him as he erratically scavenges the
+        area for any sign of life. Upon reaching the crater, he rushes into it,
+        half-sliding, half-walking his way down, while at the same time
+        repeating the word &lsquo;no&rsquo; over and over again under his nose
+        like in some kind of trance. As he finds no sign of what he is looking
+        for inside the crater, with much effort he climbs out of the crater on
+        the other side.</span
+      >
+    </p>
+    <p class="c1">
+      <span class="c2"
+        >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;That is when he notices
+        the remains of the Frost, towards which he runs over. When he reaches
+        the mangled corpse, with a horrified look on his face, he yells out
+        &ldquo;DEVROS!&rdquo; in desperation, trying to find his friend. Instead
+        he notices all the blood covering the frame, and then the blood on the
+        ground, and he follows the trail back into the forest.</span
+      >
+    </p>
+    <h2 class="c6" id="h.w9bykrpcxbmj"><span class="c2"></span></h2>
+    <p class="c1">
+      <span class="c4"
+        >The trail will lead the boy back in to the density of the forest. The
+        more he follows it the more bloody it gets, until eventually he runs
+        into a pair of familiar busted glasses, snapped and abandoned in the
+        dirt. But after a couple of minutes he will come across their end, a
+        small cave embedded in the rocky area of the eastern reach on the
+        island. The blood trail leads in to it&rsquo;s void.</span
+      >
+    </p>
+    <p class="c0"><span class="c4"></span></p>
+    <p class="c1">
+      <span class="c4"
+        >At approach, the boy will hear silent whines resonating from within.
+        The cries ring out in a consistent somber tone as if the one making them
+        is calling for someone, while their hushed intensity speaks volumes of
+        silent sorrow. The sound drags out and bounces off the cave walls making
+        them somewhat eerie to listen to as if the wind itself was
+        howling.</span
+      >
+    </p>
+    <h2 class="c6" id="h.25rb1m9bo1ug"><span class="c2"></span></h2>
+    <p class="c7"><span class="c8">&gt; Vuko:</span></p>
+    <p class="c0"><span class="c3"></span></p>
+    <p class="c1">
+      <span class="c2"
+        >&nbsp; &nbsp;He follows the bloody trail, getting more and more
+        terrified of what he will find at the end of it. As he finds the
+        glasses, he takes them and hides them in one of the pockets, hoping,
+        that by some miracle, he will be able to give them back to their owner,
+        and continues to push onwards, trying to keep the thoughts of the worst
+        possibility at bay. Vuko continues on until stumbling onto the cave. He
+        stops for a moment, making sure the trail leads inside, wandering what
+        thing dragged his friend in there.</span
+      >
+    </p>
+    <p class="c1">
+      <span class="c2"
+        >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The Tenno begins to
+        slowly descend inside, being cautious to make as little noise as
+        possible, while at the same time watching for any foul fiend that might
+        live there. The whining chills him to the bone, but he goes deeper
+        anyways.</span
+      >
+    </p>
+    <h2 class="c6" id="h.j4k61ex6lbf8"><span class="c2"></span></h2>
+    <p class="c1">
+      <span class="c4"
+        >The entry of the cave is wide so what little light that pierced through
+        the treetops illuminated those few steps inside before the shadows take
+        hold. It might take the boy a few seconds to adjust to the light starved
+        surrounding but after a few steps inside the shallow cave, the boy will
+        see a huge shadow hiding in the farthest corner, coiled around
+        something. The silent whines seem to come from it</span
+      >
+    </p>
+    <p class="c0"><span class="c4"></span></p>
+    <p class="c1">
+      <span class="c4"
+        >As Vuko approaches closer, the shadows will start to take shape under
+        what little light managed to reach them.</span
+      >
+    </p>
+    <p class="c0"><span class="c4"></span></p>
+    <p class="c1">
+      <span class="c4"
+        >The much bigger silhouette is none other than Garhul. The kubrows pelt
+        is dark with ash and dust, his once glorious Lotus coat now a blur of
+        bruises and blood. There are many gashes going down his back, some still
+        soaking his fur with fresh blood but none seem life threatening,
+        it&rsquo;s more as if he&rsquo;s been sprinkled with shrapnel and quite
+        possibly still has metal imbedded in to him. His left ear is missing,
+        cut clean at the base by something that whizzed past his head during all
+        the tumbling chaos, the blood that tickles from it continues to drop
+        down his chin. The fur around his left shoulder area is burnt to the
+        skin, revealing a nasty burn mark that stretches from his elbow all the
+        way to the top of his shoulder.</span
+      >
+    </p>
+    <p class="c0"><span class="c4"></span></p>
+    <p class="c1">
+      <span class="c4"
+        >The battered kubrow doesn&rsquo;t seem to notice Vuko entering, nor
+        does he seem to care as all of his attention is turned towards the other
+        occupant of the cave.</span
+      >
+    </p>
+    <p class="c0"><span class="c4"></span></p>
+    <p class="c1"><span class="c4">There</span></p>
+    <p class="c1">
+      <span class="c4">Sitting against the wall of the cave</span>
+    </p>
+    <p class="c1"><span class="c4">Is Devros</span></p>
+    <p class="c1">
+      <span class="c4"
+        >His right leg torn off, his body covered in deep lacerations, his spine
+        in a obvious shamble form a violent crash, scratches going across his
+        face&hellip;his Oro extinguished.</span
+      >
+    </p>
+    <p class="c1">
+      <span class="c4"
+        >And yet the kubrow lies next to him, head in the boys lap, licking the
+        wounds as if they could make it all better. Garhul continues to wail,
+        his cries directed at Devros, hoping it would make him move, make him
+        wake up, make him live. He nudges the boy gently but gets no response,
+        like all the ones before it. He licks his cheek but doesn&rsquo;t get a
+        smile. He paws at his arm but gets no embrace. The kubrow coils himself
+        around the lifeless body, refusing to accept this truth, the truth of
+        losing someone that&rsquo;s been with you from the start, that nurtured
+        you, loved you, cared for you, was there through many adventures.</span
+      >
+    </p>
+    <p class="c0"><span class="c4"></span></p>
+    <p class="c1">
+      <span class="c4"
+        >He will wake up, he will smile, he will laugh again, he will run...he
+        will...he will...</span
+      >
+    </p>
+    <p class="c0"><span class="c4"></span></p>
+    <p class="c1">
+      <span class="c14 c15">&rdquo;He will hug me again&rdquo;</span>
+    </p>
+    <p class="c7"><span class="c8">&gt; Vuko:</span></p>
+    <p class="c0"><span class="c3"></span></p>
+    <p class="c1">
+      <span class="c2"
+        >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;There are no words that
+        can fully describe what he felt when he saw what lies inside the cavern.
+        Anger, anguish, sorrow. All of them true, none adequate.</span
+      >
+    </p>
+    <p class="c0"><span class="c2"></span></p>
+    <p class="c1">
+      <span class="c2"
+        >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The view of his friends
+        dead body was heart wrenching enough, but seeing his life long friend
+        huddled around him shook Vuko to the core. His eyes glossed over and a
+        single tear formed in his eye and slowly made its way down his cheek, a
+        tribute to the fallen comrade. The battle-hardened Tenno, who has never
+        been seen crying before, and never will be, quickly wiped the tear off,
+        and slowly walked over to the body, wanting to close the eyes of the
+        fallen, letting him rest one, final time.</span
+      >
+    </p>
+    <p class="c16"><span class="c5"></span></p>
+    <h2 class="c6" id="h.hqppz5a6jrhc"><span class="c2"></span></h2>
+    <p class="c1">
+      <span class="c4"
+        >Garhul finally acknowledges Vuko&rsquo;s presence as the Tenno starts
+        walking towards him and Devros. The behemoth lifts his head from the
+        still boys lap and lowers his ears out of fear, his fangs barring and a
+        low threatening growl rumbling from his throat. However, as the shadow
+        moved closer he recognized the intruder as a friend and his growls
+        turned to whines, louder and louder as Vuko approached, as if pleading
+        for his help, for the living to help the unmoving. He straightens up,
+        lifting his head off of Devros&rsquo; lap to sit on his hind legs,
+        making way for the boy.</span
+      >
+    </p>
+    <p class="c0"><span class="c4"></span></p>
+    <p class="c1">
+      <span class="c4"
+        >The kubrow watches as Vuko closes the eyes of his life long friend and
+        with a confused gaze, looks back at the living Tenno not understanding
+        the notion. Garhul reaches forward with his muzzle, nudging
+        Devros&rsquo; cheek again, thinking he should be alright now&hellip;but
+        no, the still boy remains unmoving.</span
+      >
+    </p>
+    <p class="c0"><span class="c4"></span></p>
+    <p class="c1">
+      <span class="c4"
+        >Garhul wails again, louder, more panicky, looking for help from Vuko
+        with his dull golden eyes. He starts pawing at Devros&rsquo; arm, more
+        vigorously, desperate for the attention he had lost.</span
+      >
+    </p>
+    <h2 class="c6" id="h.xzqqlzuupmbf"><span class="c2"></span></h2>
+    <p class="c7 c18"><span class="c3"></span></p>
+    <p class="c7"><span class="c8">&gt; Vuko:</span></p>
+    <p class="c0"><span class="c3"></span></p>
+    <p class="c1">
+      <span class="c2"
+        >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;He takes a knee, and
+        shifts his attention to Garhul, looking straight into his golden eyes,
+        with his own, still glossy, amethysts. - &ldquo;There is nothing we can
+        do... I... am sorry.&rdquo; - He tells the faithful Kubrow, despite
+        knowing that he won&rsquo;t understand a single word. It is almost like
+        he is apologizing to his friend for not being able to help him, rather
+        than his companion.</span
+      >
+    </p>
+    <p class="c1">
+      <span class="c2"
+        >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vuko tries to hug
+        Garhul, embracing the giant beast, wanting to ease both their
+        pain.</span
+      >
+    </p>
+    <h2 class="c6" id="h.plc2dzn245er"><span class="c2"></span></h2>
+    <p class="c1">
+      <span class="c4"
+        >His desperate nudges slow down, and finally reach to a stop as he feels
+        Vuko embrace him across his bruised and bloodied body. He stops for a
+        moment, his left front paw lingering in the air above his best friends
+        leg, barely breathing, just staring without blinking at Devros&#39; red
+        stained face, not even whining.</span
+      >
+    </p>
+    <p class="c0"><span class="c4"></span></p>
+    <p class="c1"><span class="c11">So it&#39;s true</span></p>
+    <p class="c1"><span class="c11">He flew away</span></p>
+    <p class="c1"><span class="c11">He has no light in his eyes</span></p>
+    <p class="c1">
+      <span class="c11">The color on his cheeks doesn&#39;t rise</span>
+    </p>
+    <p class="c1"><span class="c11">I tried</span></p>
+    <p class="c1"><span class="c11">Should have helped him more</span></p>
+    <p class="c1"><span class="c11">I even swore</span></p>
+    <p class="c1"><span class="c11">But I can&#39;t</span></p>
+    <p class="c1"><span class="c11">I want him back...</span></p>
+    <p class="c0"><span class="c11"></span></p>
+    <p class="c1">
+      <span class="c15 c13"
+        >His remaining ear dips, his sorrowful gaze hitting the floor.
+        Overwhelmed by this emotion, Garhul let&#39;s out a deep and mournful
+        howl which resonates in the cave, bouncing off it&#39;s walls and
+        hurdling the powerful cry out to die among the trees...as if he threw
+        out his soul.</span
+      >
+    </p>
+    <h2 class="c6" id="h.q64mdp8gowct"><span class="c2"></span></h2>
+    <p class="c7"><span class="c8">&gt; Vuko:</span></p>
+    <p class="c0"><span class="c3"></span></p>
+    <p class="c1">
+      <span class="c2"
+        >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;He let go of the giant,
+        as he began to howl. He understood his pain. He also understood that it
+        was now his duty to take care of Garhul, and help him deal with the
+        loss. Vuko wiped the tear from his cheek and chin as quickly as he
+        could, trying to regain his composure.</span
+      >
+    </p>
+    <p class="c1">
+      <span class="c2"
+        >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The Tenno stood once
+        again, looking at his friends mangled body, but despite trying to remain
+        calm the view made his blood boil. -&ldquo;I told him not bring the
+        tower into orbit... I told him that it won&rsquo;t end well... DAMN YOU
+        AND YOUR WARPED IDEALS! YOU SEE WHAT YOU DID?! ARE YOU PROUD OF
+        YOURSELF?!&rdquo;- He shouts out in anger with the entire might of his
+        voice, the sounds echoing from the walls of the cave.</span
+      >
+    </p>
+    <p class="c1">
+      <span class="c2"
+        >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vuko then closes his
+        eyes, takes a deep breath... and breathes out. He repeats that two more
+        times... and opens his eyes, once again gazing at his dead friend. With
+        a sigh he takes a knee next to the body, and delicately puts one hand
+        behind his back and the other under his knees, lifting the body.</span
+      >
+    </p>
+    <p class="c1">
+      <span class="c2"
+        >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;With Devros in his
+        arms, Vuko heads out of the cave.</span
+      >
+    </p>
+    <h2 class="c6" id="h.80zp5damhlxw"><span class="c2"></span></h2>
+    <p class="c1">
+      <span class="c4"
+        >The kubrows howl died down, his energy almost completely gone as he
+        looks towards Devros, with his ear tipped down. Vuko&rsquo;s shouting
+        brought the companions dull yellow gaze towards him but otherwise
+        didn&rsquo;t react to the boys outburst, seeming too emotionally tired
+        to even give one. He watches as Vuko picks Devros up and he too gets up
+        on all fours to follow after him, limping, knowing all too well that
+        things will never be what they were. That a life without Devros has just
+        begun.</span
+      >
+    </p>
+    <p class="c0"><span class="c4"></span></p>
+    <p class="c1"><span class="c4">If you can call it such.</span></p>
+    <h2 class="c6" id="h.jg0wxepuvh2v"><span class="c2"></span></h2>
+    <p class="c7"><span class="c8">&gt; Vuko:</span></p>
+    <p class="c0"><span class="c10"></span></p>
+    <p class="c1">
+      <span class="c13"
+        >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;He could feel the body
+        slowly stiffening in his hands. The skin drying out as it left the
+        dampness of the cave behind. The stench of decay fading as it met with
+        the gentle breeze of the sea. </span
+      ><span class="c14"
+        >&rsquo;It truly is the end, isn&rsquo;t it?&rsquo;</span
+      ><span class="c2"
+        >&nbsp;He asks himself as the soft grass under his feet makes room for a
+        much harsher, rougher, rocky terrain. Drops of sweat form on his
+        forehead from scaling the increasingly steeper path. He doesn&rsquo;t
+        stop however, but continues forward. Then a familiar sound of waves
+        gently crashing against a cliff join in, telling Vuko he reached his
+        destination.</span
+      >
+    </p>
+    <p class="c1">
+      <span class="c2"
+        >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;He lays the body on the
+        ground a few meters away from the cliffside, covering it with whatever
+        cloth he could find. - &ldquo;Farewell, my friend.&rdquo; - He says,
+        looking at Devros one, last time.</span
+      >
+    </p>
+    <p class="c0"><span class="c2"></span></p>
+    <p class="c1">
+      <span class="c13 c15"
+        >A few hours later, as the sun is setting over the vast ocean and
+        everything is lit orange, Vuko and Garhul can be spotted looking out
+        into the water. Next to them - a barrow made out of rocks. At its base -
+        a tall basalt stone, pointing towards the sky.</span
+      >
+    </p>
+  </body>
+</html>

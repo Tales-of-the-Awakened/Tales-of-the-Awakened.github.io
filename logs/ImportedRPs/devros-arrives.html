@@ -1,0 +1,1010 @@
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+    <link rel="stylesheet" href="../../css/solarized-dark.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/imported.css">
+    <style type="text/css">
+      ol {
+        margin: 0;
+        padding: 0;
+      }
+      table td,
+      table th {
+        padding: 0;
+      }
+      .c7 {
+        border-right-style: solid;
+        padding-top: 0pt;
+        border-top-width: 0pt;
+        border-right-width: 0pt;
+        padding-left: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1.1;
+        border-left-width: 0pt;
+        border-top-style: solid;
+        margin-right: 20pt;
+        margin-left: 15pt;
+        border-left-style: solid;
+        border-bottom-width: 0pt;
+        border-bottom-style: solid;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+        padding-right: 0pt;
+        height: 16pt;
+      }
+      .c13 {
+        border-right-style: solid;
+        padding-top: 0pt;
+        border-top-width: 0pt;
+        border-right-width: 0pt;
+        padding-left: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1.1;
+        border-left-width: 0pt;
+        border-top-style: solid;
+        margin-right: 20pt;
+        border-left-style: solid;
+        border-bottom-width: 0pt;
+        border-bottom-style: solid;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+        padding-right: 0pt;
+        height: 16pt;
+      }
+      .c1 {
+        background-color: #000000;
+        font-weight: 400;
+        text-decoration: none;
+        vertical-align: baseline;
+        font-size: 12pt;
+        font-family: "Arial";
+        font-style: normal;
+      }
+      .c9 {
+        margin-left: 15pt;
+        padding-top: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1.1;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+        margin-right: 5pt;
+      }
+      .c5 {
+        padding-top: 5pt;
+        padding-bottom: 0pt;
+        line-height: 1.1;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+        margin-right: 20pt;
+      }
+      .c18 {
+        padding-top: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1.15;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+      }
+      .c15 {
+        padding-top: 5pt;
+        padding-bottom: 0pt;
+        line-height: 1.1;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+      }
+      .c4 {
+        text-decoration: none;
+        vertical-align: baseline;
+        font-family: "Arial";
+        font-style: normal;
+      }
+      .c10 {
+        font-weight: 400;
+        text-decoration: none;
+        vertical-align: baseline;
+        font-family: "Arial";
+      }
+      .c0 {
+        background-color: #000000;
+        font-size: 12pt;
+        font-style: italic;
+      }
+      .c11 {
+        background-color: #000000;
+        max-width: 451.4pt;
+        padding: 72pt 72pt 72pt 72pt;
+      }
+      .c12 {
+        font-size: 12pt;
+        font-style: italic;
+      }
+      .c2 {
+        background-color: #000000;
+        font-size: 12pt;
+      }
+      .c6 {
+        font-weight: 400;
+        font-size: 12pt;
+      }
+      .c16 {
+        background-color: #36393e;
+      }
+      .c8 {
+        height: 11pt;
+      }
+      .c17 {
+        margin-left: 15pt;
+      }
+      .c3 {
+        font-weight: 700;
+      }
+      .c14 {
+        font-size: 12pt;
+      }
+      .title {
+        padding-top: 0pt;
+        font-size: 26pt;
+        padding-bottom: 3pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+      }
+      .subtitle {
+        padding-top: 0pt;
+        color: #666666;
+        font-size: 15pt;
+        padding-bottom: 16pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+      }
+      li {
+        font-size: 11pt;
+        font-family: "Arial";
+      }
+      p {
+        margin: 0;
+        font-size: 11pt;
+        font-family: "Arial";
+      }
+      h1 {
+        padding-top: 20pt;
+        font-size: 20pt;
+        padding-bottom: 6pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+      }
+      h2 {
+        padding-top: 18pt;
+        font-size: 16pt;
+        padding-bottom: 6pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+      }
+      h3 {
+        padding-top: 16pt;
+        color: #434343;
+        font-size: 14pt;
+        padding-bottom: 4pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+      }
+      h4 {
+        padding-top: 14pt;
+        color: #666666;
+        font-size: 12pt;
+        padding-bottom: 4pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+      }
+      h5 {
+        padding-top: 12pt;
+        color: #666666;
+        font-size: 11pt;
+        padding-bottom: 4pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+      }
+      h6 {
+        padding-top: 12pt;
+        color: #666666;
+        font-size: 11pt;
+        padding-bottom: 4pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        font-style: italic;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="c15">
+      <span class="c14"
+        >[Open]<br />-Lua-<br />&lt;03/28, 17:24&gt; <br /><br /></span
+      ><span class="c3 c14">Devros von Inie</span
+      ><span class="c14"
+        ><br />Lua has always been one of those places that is in a constant
+        state of mystery. No matter how many times you drop down on the pale,
+        barren surface, it still feels like the very first time. Remnants of a
+        glorious empire litter it&#39;s surface like a forgotten memory, and yet
+        feel so familiar that it almost sparks a sentiment of home. Back in its
+        glory days it was once a powerhouse of activity and now only the
+        occasional whisper of a breeze keeps the halls company. It&#39;s quite
+        sorrowful to see what war does&hellip;then again, war is what drives the
+        cogs.<br />He knew this palce long before the collapse or the freeze. He
+        remembers the time his father was called for research and brought the
+        family along for a trip. It was very lively back then, and very vibrant.
+        Now you can almost feel the ghosts coiling around shattered pillars and
+        crumbling rooms, their wails but a silent cry of what once was.<br /><br />Many
+        say that curiosity kills you, and while most are right there are some
+        that dare be driven by it. Where is the fun if you don&#39;t go knocking
+        on hels door every once in a while? Devros is a guy of many quirks,
+        while many pull towards the negative side there are some that make
+        him&hellip;strange. Curiosity is one of those strange quirks, and while
+        it brought him in to some deep toruble it also build up his judgment.<br /><br /></span
+      ><span class="c12"
+        >A Scimitar, painted in reflecting silver and dull red, lowers upon a
+        destroyed landing pad on Lua. Upon opening, it&#39;s not a warframe that
+        steps out, but a boy in a helmless Verida suit. The colors somewhat
+        mimicking the kuva guardians palette with black sleeves, red accents and
+        a light sand like primary color to blend it all together. The boy has
+        spiked dark hair and greenish golden eyes that hide behind busted and
+        old glasses. Stepping forward, he takes a deep breath, stretching out
+        and popping his bulky physique from the discomfort of the travel.</span
+      >
+    </p>
+    <p class="c15 c8"><span class="c4 c6"></span></p>
+    <p class="c15">
+      <span class="c12"
+        >A low whine comes from behind the boy which causes him to smirk and
+        look over his shoulder to a bulky kubrow that is almost as tall as he
+        is.<br /><br />&quot;Come now Garhul, don&#39;t ya worry, I&#39;ll be
+        dandy.&quot; He says in a firm and husky voice, followed by a strange
+        accent.<br /><br />The companion responds with a huff and trots to stand
+        beside his master, rubbing his heavy and broad head against the boys
+        side which almost knocked Devros off balance. Letting out a chuckle he
+        rubs the kubrows head and looks ahead, to the destroyed outpost.<br /><br />&quot;If
+        they wanted meh dead I&#39;d probably be already. Besides, bringing a
+        frame is not very friendly. How&#39;d ye like it if some stranger came
+        with a Opticor in yer home?&quot;<br /><br />The kubrow ruffles his fur
+        and looks at Devros with dim yellow eyes and a
+        are-you-fricking-kidding-me-right-now face. The boy chuckles at his
+        companions expression and adds<br /><br />&quot;Better than a Lenz,
+        eh?&quot;<br /><br />Devros smiles and starts walking ahead, to what he
+        concluded - after days of code breaking - &nbsp;to be the source of the
+        strange message and the epicenter of the disappearing tenno. He might be
+        walking in to certain death without a frame or a amp by his side, but
+        it&#39;s a risk he is willing to take if he is to show them that he
+        comes in peace and not to pick a fight. Getting sniped from afar is not
+        really the way he wants to die, it&#39;s in fact one dumbest ways to go.
+        And there is Garval, who is more than capable of dealing with grineer
+        and corpus stragglers if the threat arises. Driven by the desire to
+        figure out what&#39;s happening in this place, he continues on ahead,
+        hoping that he doesn&#39;t end up in a ditch somewhere as soon as he
+        steps foot near the sanctuary.<br /><br />Garhul, follows close to
+        Devros and keeps on high alert, tilting his ears to the slightest sound
+        and keeping his nose open to any strange smells.</span
+      ><span class="c4 c6"><br /><br />2/2</span>
+    </p>
+    <p class="c15 c8"><span class="c4 c6"></span></p>
+    <p class="c15">
+      <span class="c1"
+        >~The halls are dark and crumbling, with Warframe, Corpus, and Grineer
+        bodies and weapons littering the floor, accompanied by blood stains in
+        random splotches on the walls and floor. The walk is not a terribly long
+        one, and ends in a room with four pillars and a broken Orokin console on
+        the other side of the room at the edge of the platform~<br />(think lua
+        challenge with the giant floating eye orb thing)</span
+      >
+    </p>
+    <p class="c5 c8"><span class="c1"></span></p>
+    <p class="c5">
+      <span class="c2 c3">Devros von Inie</span><span class="c2"><br /></span
+      ><span class="c0"
+        >He wasn&rsquo;t scared of what might find him, in fact he felt
+        excitement boiling up from the pit of his stomach at the promise of
+        experiencing something else apart from war and blood. He carefully
+        advances past the decaying corpses, eying their weapons with regal
+        glances, counting the bodies and guns as if to make sure that everything
+        is accounted for. Wouldn&rsquo;t want to have someone running around
+        with one of those guns eh? Everything must have a pair. He shoots his
+        companion a glance and smirks at his seriousness and alertness.<br /><br />&ldquo;Yes
+        yes, it seems that there is activity &lsquo;ere&rdquo; He seems to muse
+        to himself<br /><br />Garhul wasn&#39;t as cool and collected as the boy
+        and was very much on suspense once the bodies came. He sniffs the air
+        and walks on light steps a few paces in front as if to make sure there
+        are no traps or enemies to threaten Devros.<br /><br />After what seemed
+        to be a very light stroll came the spacious room with the broken
+        console.<br /><br />&ldquo;Too open. Back, back&rdquo;<br /><br />A
+        voice whizzed past his mind but he pushed it back and shook his head to
+        clear it. He scans the room through his optics and eyes his companion
+        who is already near the console which usually means that it&rsquo;s
+        safe.<br /><br />Smirking he follows suit and stops in front of the
+        broken contraption, eying it. Lifting a hand he lightly brushes it along
+        the console as if hoping that it would open some hidden passage or spark
+        a challenge.</span
+      >
+    </p>
+    <h2 class="c13" id="h.6ob7y4gx26vc"><span class="c4 c2 c3"></span></h2>
+    <p class="c5">
+      <span class="c2">Mataeru:<br /></span
+      ><span class="c0"
+        >A voice sounds from the Shadows behind him, near the door they entered
+        through</span
+      ><span class="c2"
+        ><br />&quot;You are quite brave to appear here without a Warframe
+        Tenno... Tell me, why did you leave your protection behind?&quot;</span
+      >
+    </p>
+    <p class="c5 c8 c17"><span class="c4 c2 c3"></span></p>
+    <p class="c5">
+      <span class="c2 c3">Devros von Inie</span><span class="c2"><br /></span
+      ><span class="c0"
+        >A low growl alerted Devros of danger a split second before the voice
+        spoke up. The boys ears perked up and he stood in place for a moment as
+        a curious smirk graced his lips. Finally someone arrives. Straightening
+        up, he gracefully twirls on his heels to face the doorway once more
+        &ndash; a action &nbsp;that might make him look as if he&rsquo;s a lost
+        tap dancer that is about to ask for the nearest toilet. Devros lifts a
+        hand and puts it on Garval&rsquo;s raised hackles, while his golden eyes
+        scan the darkness for clues of the speaker</span
+      ><span class="c2"><br /><br />&ldquo;Cessabit&rdquo; </span
+      ><span class="c0"
+        >He spoke softly to his companion, like a mother trying to soothe her
+        child</span
+      ><span class="c2"><br /><br /></span
+      ><span class="c0"
+        >Garhul&rsquo;s aggressive stance eases up at the command and he
+        straightens to seem less threatening, but still steps closer to the boy
+        just in case some wandering projectiles were to fly out of somewhere.
+        His huge and bulky appearance is enough to cover one side of Devros
+        almost completely.</span
+      ><span class="c2"><br /><br /></span
+      ><span class="c0"
+        >Satisfied with his companions reaction, he turns his attention back
+        towards the darkness. With a curious grin on his face and a calm aura,
+        he says with his husky voice - his accent seeming vanished and replaced
+        by a more formal way of speaking</span
+      ><span class="c2"
+        ><br /><br />&ldquo;Well&hellip;we wear our warframes in needs of
+        aggression and I have not come in the spirit of such a thing. If one
+        enters my house in a suit of armor it is only natural for the host to
+        retaliate&hellip;wouldn&rsquo;t you agree?&rdquo;<br /><br /></span
+      ><span class="c0"
+        >He tilts his head a bit to the side, his eyes looking for the slightest
+        signs of movement that would indicate the speakers location. Garval
+        seems to do the same, his ears rotating on his head like satellites and
+        his nose flaring &ndash; searching for a scent to track down</span
+      ><span class="c2"><br /><br />&ldquo;Now </span><span class="c0">you</span
+      ><span class="c1"
+        >&nbsp;tell me...am I speaking with the creator of the signal that
+        frightened even the oh-so-great Lotus?&rdquo;</span
+      >
+    </p>
+    <h2 class="c7" id="h.n24nnq7egnz6"><span class="c4 c2 c3"></span></h2>
+    <p class="c5">
+      <span class="c2">Mataeru:<br /></span
+      ><span class="c0"
+        >A Tenno steps out of the shadows, dressed in a formal attire not seen
+        often from the Orokin Era, holding his hands at his waist in a non
+        threatening gesture</span
+      ><span class="c2"
+        ><br />&quot;You are the first to enter this area without a Warframe, I
+        am impressed by your faith... Or foolishness. I have yet to determine
+        which governed this action. </span
+      ><span class="c0">he grins for a moment before nodding</span
+      ><span class="c1"
+        ><br />&quot;I am indeed the creator of that signal. Why have you sought
+        it out?&quot;</span
+      >
+    </p>
+    <h2 class="c7" id="h.s628m96g1bu3"><span class="c4 c2 c3"></span></h2>
+    <p class="c5">
+      <span class="c2 c3">Devros von Inie</span><span class="c2"><br /></span
+      ><span class="c0"
+        >A chuckle escaped the boys lips when the other spoke about his way of
+        approaching this situation. Devros is a strong believer in the head
+        first approach cause it goes around all of the silly things that come
+        with being careful &ndash; at least things are more fun this way. The
+        boy brandishes many scars that show off the many results of this
+        approach, but even if one day he &nbsp;ends up without a arm or a leg
+        cause of this he will probably keep walking in to every situation
+        without a care about his wellbeing until he is but a puddle on a wall
+        somewhere. &nbsp;Once again he changes his way of speaking, the
+        formality flying away somewhere as if he never spoke it and in
+        it&rsquo;s place comes a more gruff voice and a accent that sounds like
+        it belongs to old Earth.</span
+      ><span class="c2"
+        ><br /><br />&ldquo;Ayeh, you guessed right, it&rsquo;s teh fool that
+        walks in to danger without a knife&rdquo;<br /><br /></span
+      ><span class="c0"
+        >He pauses to motion to himself with a hand, gesturing for the other to
+        see him from head to toe</span
+      ><span class="c2"
+        ><br /><br />&ldquo;But lookie &lsquo;ere I&rsquo;m still in one piece.
+        Playing the fool pays off eh?&rdquo;<br /><br />Devros taps his
+        companions side twice and approaches the unknown tenno on light strides.
+        Garval protests to the command with a grunt, but still obeys and stays
+        in place, watching the shadows for more danger and especially a close
+        eye on the unknown one just in case he hides a weapon somewhere.<br /><br /></span
+      ><span class="c0"
+        >With a friendly expression on his face, he will stop close to the
+        fellow tenno and extend a hand for a handshake. It doesn&rsquo;t matter
+        if the other accepts or declines as he says in his husky voice</span
+      ><span class="c2"
+        ><br /><br />&ldquo;Congratulations are in order first. I&rsquo;ve never
+        seen teh Lotus so frightened of somefing&hellip;or of somewhere. To
+        think she&rsquo;d pull us back from a sacred place like Lua. I had to
+        come and see for meself if the rumors are true.&rdquo;<br /><br /></span
+      ><span class="c0"
+        >He chuckles, seemingly to himself, before continuing.</span
+      ><span class="c2"
+        ><br /><br />&ldquo;Tell tell, is it true what ye said in teh message?
+        Do ye really believe teh cycle of war, in a system driven by it, can be
+        broken?&rdquo;<br /><br /></span
+      ><span class="c0"
+        >He tilts his head, like a curious puppy awaiting for a treat.</span
+      ><span class="c1">(edited)</span>
+    </p>
+    <h2 class="c7" id="h.f9kxo7dcqltu"><span class="c4 c2 c3"></span></h2>
+    <p class="c5">
+      <span class="c2">Mataeru:<br /></span
+      ><span class="c0"
+        >He raises his eyebrow and watches the Tenno approach, ultimately taking
+        his hand and gently shaking it</span
+      ><span class="c1"
+        ><br />&quot;If I did not believe it could end, I would not be searching
+        for like-minded people to help me fight it. I have been watching the
+        galaxy for thirty five years, learning, and planning. And now, I am
+        ready to make a move, I just need more numbers. However, you mentioned
+        &quot;us&quot; when speaking about the Lotus... Do you... Work for
+        her?&quot;</span
+      >
+    </p>
+    <h2 class="c7" id="h.okogw234u2z9"><span class="c4 c2 c3"></span></h2>
+    <p class="c5">
+      <span class="c2 c3">Devros von Inie</span><span class="c2"><br /></span
+      ><span class="c0"
+        >What shocked Devros, was the fact that this guy in front of him looks
+        very much like him for someone to have spent thirty years wandering
+        about. He pauses for a moment in silence, looking over the other from
+        top to bottom as if looking for the catch. Like damn son&hellip;Devros
+        just might just ask what lotion he uses to look so fresh. Joking aside
+        &ndash; if this guy truly did spend over thirty tears just sneaking
+        about then he wasn&rsquo;t one to wake when the Lotus called to arms.
+        Did his pod malfunction? Or perhaps he&rsquo;s under the command of
+        someone else? Lots of questions and a lots of mines to go around.</span
+      ><span class="c2"><br /><br /></span
+      ><span class="c0"
+        >At the Lotus question, Devros lifts his hand to scratch his cheek in a
+        light manner while his yellowish eyes gaze at the other</span
+      ><span class="c2"
+        ><br /><br />&ldquo;I s&rsquo;pose that can be said&hellip;&rdquo;<br /><br /></span
+      ><span class="c0"
+        >He pauses for a moment, lowering his hand and clasping them both behind
+        his back in a more regal stance while his words become even more
+        slurred, more drenched in his loopy accent which sounds like he is being
+        slapped with a fish across the face while speaking</span
+      ><span class="c2"
+        ><br /><br />&ldquo;After teh awakenin&#39; i&rsquo;ve fought for
+        &#39;er fer years, believin&#39; in &#39;er ways. &#39;owever&hellip;<br /><br /></span
+      ><span class="c0"
+        >His eyes trail to the side as if he&rsquo;s looking at someone behind
+        the other tenno, or listening to silent words that nobody else hears
+        before snapping his attention back to him</span
+      ><span class="c1"
+        ><br /><br />&ldquo;&hellip;she is not de answer ter dis war. we are not
+        &#39;er sheep an&#39; me bein&#39; &#39;ere is a clear violashun av
+        &#39;er ward&rdquo; (violashun is violation and ward is word&hellip;in
+        speech they sound like it but when writing it, it might seem wonky to
+        pronounce xD)</span
+      >
+    </p>
+    <p class="c5 c8"><span class="c0 c10"></span></p>
+    <p class="c5">
+      <span class="c0"
+        >His aura shifted from cheerful and friendly to serious and stern during
+        the speech, as if someone just flipped a switch in his head which caused
+        his whole way or speaking to go down in the drain.</span
+      ><span class="c2"
+        ><br /><br />&ldquo;So naw, scon are in me weck workin&#39; for
+        &#39;er&hellip;.not anymore. oi chucker not want ter partake in &#39;er
+        games&rdquo; (So no, I am not working for her&hellip;.not anymore. I do
+        not want to partake in her games)<br /><br /></span
+      ><span class="c0"
+        >He takes in a breath of air to calm himself. Opening his eyes he
+        fastens a friendly smile once more and leashes back his accent a
+        bit</span
+      ><span class="c2"
+        ><br /><br />&ldquo;So waaat is dis move yer spoke av dat can end a
+        centuries long squabble?&rdquo;<br /><br /></span
+      ><span class="c0"
+        >He found himself even more curious than before. Devros, like many of
+        the tenno, have lived for battle for a long time, trained and purposely
+        kept alive for only that use. Can they truly steer their lives away from
+        it and leave in peace once more?</span
+      ><span class="c2"><br /><br /></span
+      ><span class="c0">Heh&hellip;peace&hellip;did that ever exist?</span>
+    </p>
+    <h2 class="c7" id="h.vzrm421iq96v"><span class="c4 c2 c3"></span></h2>
+    <p class="c5">
+      <span class="c2">Mataeru:<br /></span
+      ><span class="c0"
+        >He listens intently, and struggles a little bit to understand what is
+        being said but he nods in acceptance</span
+      ><span class="c1"
+        ><br />&quot;Well, if you are no longer working with the Lotus, and are
+        here, I assume you would like to join forces with myself and the Other
+        Tenno here?&quot;</span
+      >
+    </p>
+    <h2 class="c7" id="h.cru1t8bpwtpl"><span class="c4 c2 c3"></span></h2>
+    <p class="c5">
+      <span class="c2 c3">Devros von Inie</span><span class="c2"><br /></span
+      ><span class="c0"
+        >A wide grin spread across his face and he will lift his hand in the air
+        to playfully slap it on the others shoulder. &nbsp;Devros has always
+        been quick to physical contact and has little knowledge about how much
+        he can venture in other peoples personal bubbles, but if the other tenno
+        slaps his hand away in time or rejects the contact then it won&rsquo;t
+        bother Devros that much, he&rsquo;s used to getting smacked across the
+        face for acting too friendly&hellip;even with some of the infested</span
+      ><span class="c2"
+        ><br /><br />&ldquo;Aye, I&rsquo;d like that.&rdquo; </span
+      ><span class="c0">He booms in a cheerful voice</span
+      ><span class="c2"
+        >&nbsp;&ldquo;If ye truly workin&#39; for peace in de system den ye
+        &#39;av me skills ter yer use.&rdquo;<br /><br /></span
+      ><span class="c0"
+        >Devros looks over his shoulder to his companion who&rsquo;s been
+        patiently waiting. Smiling, he softly slaps his leg twice, which is one
+        of the commands for follow, and Garval quickly leaps towards his
+        lifelong friend. The huge beast almost towers over the two children as
+        he stands by Devros but won&rsquo;t appear threatening at all, maybe a
+        bit cautious of the stranger but overall won&rsquo;t go biting hands.
+        Giving his kubrow a good scratch behind the ear for being good, Devros
+        will look back at the other fellow</span
+      ><span class="c2"
+        ><br /><br />&ldquo;I be Devros and dis &lsquo;ere is Garhul.
+        Don&rsquo;t be fooled by his appearance, he just a big ol&rsquo;
+        softie&rdquo;<br /><br /></span
+      ><span class="c0"
+        >Garval reacts to Devros&rsquo;s scratches by opening his mouth to panth
+        and leaning in to the touch &ndash; which might just topple the boy due
+        to the massiveness of his companion</span
+      ><span class="c2"
+        ><br /><br />&ldquo;So is dare a procedure in ter joinin&#39;? a blud
+        pact? sum spittin&#39;?&rdquo;<br /><br /></span
+      ><span class="c0"
+        >He was of course joking about the matter, which the other can tell by
+        his playful smirk.</span
+      ><span class="c1">(edited)</span>
+    </p>
+    <h2 class="c7" id="h.27aipwt75vw1"><span class="c2 c3 c4"></span></h2>
+    <p class="c5">
+      <span class="c2">Mataeru:<br /></span
+      ><span class="c0"
+        >He looks at the hand on his shoulder and carefully lifts it off by
+        &nbsp;one of the fingers and steps back as the Kubrow nears</span
+      ><span class="c1"
+        ><br />&quot;The procedure was this discussion. If you no longer serve
+        the Lotus, then you are not a threat. Come, I will lead you to our base
+        of operations.&quot;</span
+      >
+    </p>
+    <h2 class="c7" id="h.q4s80vccncwi"><span class="c4 c2 c3"></span></h2>
+    <p class="c5">
+      <span class="c2 c3">Devros von Inie</span
+      ><span class="c2"
+        ><br /><br />&ldquo;Serious fella, ain&rsquo;t he?&rdquo; </span
+      ><span class="c0"
+        >Devros thought to himself as he nodded his head and followed close
+        behind with Garval.</span
+      ><span class="c2"
+        ><br /><br />&ldquo;So I never got yer name or of this group ye speak
+        of. Or even who&rsquo;s in charge&rdquo;<br /><br /></span
+      ><span class="c10 c0"
+        >He glances at the other from the corner of his eye as they walk</span
+      >
+    </p>
+    <h2 class="c7" id="h.n40cp0wb40y1"><span class="c4 c2 c3"></span></h2>
+    <p class="c5">
+      <span class="c2"
+        >Mataeru:<br />&quot;I apologise, I meant to introduce myself, but I
+        forgot as your Kubrow approached.&quot;<br /></span
+      ><span class="c0">He pauses and turns to face Devros, bowing deeply</span
+      ><span class="c1"
+        ><br />&quot;My name is Mataeru Lloria. Leader of the Orokin
+        Remnant.&quot;</span
+      >
+    </p>
+    <p class="c5 c8"><span class="c4 c2 c3"></span></p>
+    <p class="c5">
+      <span class="c2 c3">Devros von Inie</span><span class="c2"><br /></span
+      ><span class="c0"
+        >The bow caught Devros off guard and the stopped mid step to lean back a
+        bit and give Mataeru some space. Garval also reacts to his masters
+        action and quickly stopped mid walk, freezing like a statue. It&rsquo;s
+        been so long since he&rsquo;s been in the presence of other Orokin that
+        he forgot how formal and rigid the &ldquo;handling&rdquo; was.
+        It&rsquo;s one of the things Devros is glad to be rid off since the
+        awakening, no more adults to boss you around&hellip;well apart from
+        Lotus that is.</span
+      ><span class="c2"><br /><br />&ldquo;Hm?&rdquo; </span
+      ><span class="c0"
+        >Devros thought to himself. Well, if he&rsquo;s really been around for
+        more than thirty years then I suppose he&rsquo;s fine to run a whole
+        organisation under the Lotus&rsquo;s nose.</span
+      ><span class="c2"
+        ><br /><br />&ldquo;Ah? so you&rsquo;re not a fan av kubrows? or is it
+        jist &#39;is size?&rdquo;<br /><br /></span
+      ><span class="c0"
+        >He asks in a curious tone. Devros noticed how Mataeru backed away a few
+        steps when Garhul approached but decided not to voice it. Then again, if
+        Garhul makes people uncomfortable then he&rsquo;ll have to hold him back
+        at the Orbiter.</span
+      >
+    </p>
+    <h2 class="c13" id="h.ladnuqowj8j6"><span class="c4 c2 c3"></span></h2>
+    <p class="c5">
+      <span class="c2"
+        >Mataeru:<br />&quot;I have always favored Kavats... And that is not a
+        Kubrow, it is a small steed..&quot;<br /></span
+      ><span class="c0"
+        >he chuckles and gestures Devros to follow him once more</span
+      ><span class="c1"
+        ><br />&quot;Kubrows and I have never been on the best of terms... The
+        Orokin Learned that quickly, after they started training us, and when
+        they finally returned my Kavat from the Zariman to me, they realized
+        that we work in tandem far better than I ever had with a
+        Kubrow.&quot;</span
+      >
+    </p>
+    <h2 class="c7" id="h.o0d5hdl1ohre"><span class="c4 c2 c3"></span></h2>
+    <p class="c5">
+      <span class="c2 c3">Devros von Inie</span><span class="c2"><br /></span
+      ><span class="c0"
+        >Devros joined in on the chuckle, finding it relaxing that the other
+        fellow was loosening up a bit. Matareu is right, Garhul is big enough to
+        gloriously ride in to battle and perhaps he might do if he&rsquo;s
+        feeling adventurous&hellip;or drunk. But then again, he&rsquo;s more
+        useful in guarding than he is in charging.</span
+      ><span class="c2"><br /><br /></span
+      ><span class="c0"
+        >Nodding to the gesture, Devros once again follows Mataeru on light
+        strides, with his hands clasped behind his back. Garhul follows close
+        behind, occasionally glancing at the shadows and twirling his pointy
+        ears, as if waiting for something to jump out.</span
+      ><span class="c2"
+        ><br /><br />&ldquo;Ah? so it seems yer an&#39; oi are on opposite ends
+        av de spectre. Garval wus given ter me durin&#39; de trainin&#39; as
+        both a companion an&#39; support. Oi couldn&rsquo;t imagine me life
+        witout him. &#39;e&rsquo;s &#39;ad me back through lashings&hellip;.even
+        whaen most av em were caused by me&rdquo;<br /><br /></span
+      ><span class="c0"
+        >He laughed and looks over his shoulder to his trailing friend</span
+      ><span class="c2"
+        ><br /><br />&ldquo;I never expected &#39;imself ter git so big tho. He
+        eats almost as much as de infestashun&rdquo;<br /><br /></span
+      ><span class="c0"
+        >He joked, to which Garhul shot him a glare and a huff, and Devros just
+        mocked a kiss back. Looking straight ahead he adds</span
+      ><span class="c2"
+        ><br /><br />&ldquo;But hey, I guess everyone &#39;av things they loike
+        or don&rsquo;t, &#39;tis natural. Oi jist &#39;ope yer got a stable at
+        yer stashun for dis fella&rdquo;<br /><br /></span
+      ><span class="c0"
+        >He points with this thumb over his shoulder to Garhul.</span
+      >
+    </p>
+    <p class="c9 c8"><span class="c4 c6 c16"></span></p>
+    <p class="c5">
+      <span class="c2"
+        >Mataeru:<br />&quot;That we do not. The Orokin had us keep our pets
+        aboard our landing craft and Obiters. Although we were allowed to bring
+        them onto the base.&quot;<br /></span
+      ><span class="c0"
+        >they travelled for a few minutes longer before reaching a dead end.
+        After a touch from Mata the wall slides back revealing a much shorter
+        hallway</span
+      ><span class="c1"
+        ><br />&quot;Through here is our current command center.&quot;</span
+      >
+    </p>
+    <h2 class="c7" id="h.lwk9okd6atad"><span class="c4 c2 c3"></span></h2>
+    <p class="c5">
+      <span class="c2 c3">Devros von Inie</span><span class="c2"><br /></span
+      ><span class="c0"
+        >Huh&hellip;interesting. It looks like Mataeru was working with a
+        different training group cause the Orokin that was in charge of
+        Devros&rsquo;s division was fine with him bringing Garval wherever he
+        went. Then again the kubrow was tied to him as a rock, to keep him
+        mentally stable so maybe that&rsquo;s why he was allowed to have him
+        almost everywhere in the facilities.</span
+      ><span class="c2"><br /><br /></span
+      ><span class="c0"
+        >The short walk down the hall was passed in silence and Devros watched
+        as his new acquired colleague touches and opens the walls to lead down a
+        different hallway.</span
+      ><span class="c2"
+        ><br /><br />&ldquo;Secrets, passages, take it! Take it!&rdquo; </span
+      ><span class="c0"
+        >A voice whizzed past Devros&rsquo;s mind but he ignored it entirely
+        once more, not having the will to deal with it right now. However it did
+        affect his mood a bit and his trademark grin just melted away from his
+        face</span
+      ><span class="c2"
+        ><br /><br />&ldquo;Very well hidden, no wonder some returned speaking
+        of finding nothing but ghosts*<br /><br /></span
+      ><span class="c0"
+        >He spoke completely clear with no accent in sight. Stopping, he look
+        behind him and then back at Mataeru</span
+      ><span class="c2"
+        ><br /><br />&ldquo;Do you want me to tell him to wait here or can he
+        come along?&rdquo;<br /><br /></span
+      ><span class="c0"
+        >Devros may be a first class brute and a dolt, but he knows the struggle
+        of getting Garhul&#39;s fur out of EVERYTHING &ndash; and
+        well&hellip;there may be some people that won&rsquo;t enjoy his company
+        so he doesn&rsquo;t want to cause a row in the base on his first
+        day</span
+      ><span class="c1">(edited)</span>
+    </p>
+    <h2 class="c7" id="h.pr09xnfppjt6"><span class="c4 c2 c3"></span></h2>
+    <p class="c5">
+      <span class="c2">Mataeru:<br /></span
+      ><span class="c0">he shakes his head</span
+      ><span class="c2"
+        ><br />&quot;Your Kubrow can come, just keep him off the
+        furniture.&quot;<br /></span
+      ><span class="c10 c0"
+        >he then steps past the door and into the short hall, gesturing Devros
+        to follow him</span
+      >
+    </p>
+    <p class="c5 c8"><span class="c4 c2 c3"></span></p>
+    <p class="c5">
+      <span class="c2 c3">Devros von Inie</span><span class="c2"><br /></span
+      ><span class="c0"
+        >Devros smiles and nods in acknowledgement, his spirit somewhat lifting.
+        Garhul is very obedient and well behaved so he doubts that there will be
+        any clashes on that matter &ndash; in fact he&rsquo;s more behaved than
+        Devros. He just hopes that he doesn&rsquo;t cause anyone
+        discomfort.</span
+      ><span class="c2"><br /><br /></span
+      ><span class="c0"
+        >Looking over his shoulder be motions to his kubrow that he can continue
+        to follow him before he himself follows the other</span
+      ><span class="c2"
+        ><br /><br />&ldquo;So you&rsquo;ve been down &#39;ere for t&#39;airty
+        foive years &#39;uh? ye also cleave ties wi&#39; Lotus or&hellip;<br /><br /></span
+      ><span class="c0"
+        >He let his word trail off for the other to fill. Devros concluded that
+        Mataeru doesn&rsquo;t seem to belong to the tenno who&rsquo;ve been
+        awakened by her, or maybe he was&hellip;there are many things for the
+        boy to learn but this is a pretty good start since he&rsquo;ll know more
+        about the people he&rsquo;s supposed to work with from now on.</span
+      ><span class="c1">(edited)</span>
+    </p>
+    <p class="c5 c8"><span class="c1"></span></p>
+    <p class="c5">
+      <span class="c2">Mataeru:<br /></span
+      ><span class="c0"
+        >As the trio passes through the hall, it opens up into a large lounge
+        area with multiple couches, a dining area, bookselves and a fire
+        place</span
+      ><span class="c1"
+        ><br />&quot;I never worked for the Lotus. I saw what she caused the
+        Tenno to do during the victory ceremony, and while I was glad to finally
+        be free of our evil masters, I was also disgusted with how she lied to
+        and tricked the Tenno. I am the leader of a formerly Orokin hit squad
+        called the Veiled Tenno. This is our primary sanctuary and base of
+        operations.&quot;</span
+      >
+    </p>
+    <p class="c9 c8"><span class="c4 c6 c16"></span></p>
+    <h2 class="c13" id="h.crttstgsgxun"><span class="c4 c2 c3"></span></h2>
+    <p class="c5">
+      <span class="c2 c3">Devros von Inie</span><span class="c2"><br /></span
+      ><span class="c0"
+        >Whoa, it feels like it&rsquo;s been ages since the last time Devros has
+        seen so many Orokin books in one place &ndash; something he&rsquo;s been
+        missing dearly since the awakening cause he&rsquo;s a real addict when
+        it comes to stories and for whatever reason they don&rsquo;t seem to
+        exist that much anymore due to data being pushed over to digital
+        dispersion in this modern era. If you want to know something there is
+        always a cephalon at service, rather than doing it the oldie way of
+        going out a fetching a book for it.</span
+      ><span class="c2"><br /><br /></span
+      ><span class="c0"
+        >His eyes quickly light up with joy as he scanned them from afar, almost
+        missing what the other was saying due to how captivated he was by
+        them</span
+      ><span class="c2"><br /><br />&ldquo;Hm?...&rdquo;<br /><br /><br /></span
+      ><span class="c0"
+        >He hummed as he walked towards the bookshelf. Lifting a hand, he glides
+        it across their titles as if by doing it he could feel their content.
+        All the while he listened to Mataeru speak of the Lotus</span
+      ><span class="c2"
+        ><br /><br />&ldquo;In a way, yer are right&hellip;&rsquo;owever she wus
+        al&#39; dat we &#39;ad after findin&#39; oyt dat everythin&#39; we knew
+        av &#39;ad changed..&rdquo;<br /><br /></span
+      ><span class="c0"
+        >He paused his wandering hand to look over his shoulder to Mataeru</span
+      ><span class="c2"
+        ><br /><br />&ldquo;It wus either &#39;er or loneliness, an&#39; sum
+        couldn&rsquo;t &#39;andle dat&rdquo;<br /><br /></span
+      ><span class="c0"
+        >That might make him sound like he&rsquo;s defending the Lotus but
+        Devros fears that Mataeru doesn&rsquo;t know of the predicament most of
+        the Tenno were put in since the awakening. Sure, Lotus is shady and her
+        ways are the ways of a warlord but there is no denying it that she was a
+        rock for a lot of Tenno. Then again, Mataeru had wandered along for
+        decades so he&#39;s had it worse</span
+      ><span class="c2"><br /><br />&ldquo;But&rdquo; </span
+      ><span class="c0"
+        >He added, not lifting his head from the book as he spoke</span
+      ><span class="c1"
+        >&nbsp;&ldquo;Oi shan&rsquo;t miss &#39;er, she is &#39;eadin&#39; down
+        a patt dat oi won&rsquo;t folly. i&rsquo;m puttin&#39; me trust ter yer
+        an&#39; de Orokin Remnant In de &#39;opes for
+        peace.&rdquo;(edited)</span
+      >
+    </p>
+    <h2 class="c7" id="h.581dlknsvt2g"><span class="c4 c2 c3"></span></h2>
+    <p class="c5">
+      <span class="c2">Mataeru:<br /></span
+      ><span class="c0"
+        >he ofers a shallow bow in thanks for the Tenno&#39;s owords</span
+      ><span class="c2"
+        ><br />&quot;I have intention of making sure that trust is not
+        misplaced.&quot;<br /></span
+      ><span class="c0"
+        >he then steps over to the Tenno and the bookshelves</span
+      ><span class="c1"><br />&quot;I take it you like reading?&quot;</span>
+    </p>
+    <h2 class="c7" id="h.wtaf26f7wzo8"><span class="c4 c2 c3"></span></h2>
+    <p class="c5">
+      <span class="c2 c3">Devros von Inie</span><span class="c2"><br /></span
+      ><span class="c0"
+        >The book he picked up seemed to be a something of a history of the Dax
+        soldiers. Devros always found their order interesting, part cause it was
+        very loyalty driven and part cause of their elite skills in battle. Ever
+        since he met Teshin he&rsquo;s been fascinated by them&hellip;but Teshin
+        isn&rsquo;t a talkative fellow &ndash; and even when he does he insists
+        on talking in very vague phrases or riddles. EH! Now that he has found
+        this library he can read to his hearts content and fill his mind with
+        stories.<br /><br />Devros twitched in surprise when Mataeru stepped
+        closer cause he was so occupied by the book that he barely noticed the
+        other step so close. Lifting his head, he looks at Mataeru and with a
+        pleased smile, nods.</span
+      ><span class="c2"
+        ><br /><br />&ldquo;Kinda&hellip;i loike stories an&#39; me dad &#39;ad
+        a study room dat wus filled wi&#39; al&#39; kind av books so dis brings
+        me back.&rdquo;<br /><br /></span
+      ><span class="c0"
+        >He let out a soft chuckle as his mind wandered back to a old
+        memory</span
+      ><span class="c2"
+        ><br /><br />&ldquo;He wud git so mad at me cause oi never tidied up
+        after meself, jist lef &#39;is study in a &lsquo;ames, opened books
+        an&#39; paper everywhere.&rdquo; (&lsquo;ames = mess)<br /><br /></span
+      ><span class="c0"
+        >He shakes his head at the nostalgic feeling, not feeling sadness at all
+        cause to Devros they are always with him...in a way. Lifting his gaze he
+        looks at his companion that&rsquo;s found a temporary home in front of
+        the fireplace, obviously enjoying the cozy warmth of the fire by laying
+        down in to a huge ball of fur, almost obstructing the view of it
+        entirely. Rolling his eyes, he brings them back at Mataeru and lifts the
+        book that he&rsquo;s been holding</span
+      ><span class="c2"
+        ><br /><br />&ldquo;Oi assume al&#39; av dees are free ter
+        borrow?&rdquo;<br /><br /></span
+      ><span class="c10 c0"
+        >He points at it with a joyful expression, like a child awaiting
+        it&#39;s parents permission on the second piece of candy.</span
+      >
+    </p>
+    <p class="c9 c8"><span class="c4 c6 c16"></span></p>
+    <h2 class="c7" id="h.6ccwai8bl0fn"><span class="c4 c2 c3"></span></h2>
+    <p class="c5">
+      <span class="c2">Mataeru:<br /></span><span class="c0">he nods</span
+      ><span class="c2"
+        ><br />&quot;So long as they do not leave Sanctuary you may read as many
+        as you wish.&quot;<br /></span
+      ><span class="c0">he pauses for a moment before adding with a grin</span
+      ><span class="c1"
+        ><br />&quot;And provided you clean up after yourself....&quot;</span
+      >
+    </p>
+    <h2 class="c7" id="h.9a5lcpyc4txm"><span class="c4 c2 c3"></span></h2>
+    <p class="c5">
+      <span class="c2 c3">Devros von Inie</span><span class="c2"><br /></span
+      ><span class="c0">A low chuckle escaped from the bulky boys lips</span
+      ><span class="c2"
+        ><br /><br />&ldquo;I&rsquo;ll leave it spotless, sir!&rdquo;<br /><br /></span
+      ><span class="c0"
+        >He added a mock salute at the end to give his words a bit of sass. He
+        doesn&rsquo;t mean to mock Mataeru cause Devros is all about keeping
+        conversation light and in a joking spirit, it makes things more
+        interesting. He then looks back at the bookshelf and greedily eyes the
+        rest of the collection. If eating knowledge was a thing then I&rsquo;d
+        bet Devros would be a really fat Tenno.</span
+      ><span class="c2"><br /><br /></span
+      ><span class="c0"
+        >Then, a thought struck him. Looking back at Mataeru he says in his
+        rough voice</span
+      ><span class="c1"
+        ><br /><br />&ldquo;Waaat aboyt livin&#39; area? are dare enoof rooms
+        for al&#39; ter sleep &#39;ere or sum kip back on thair
+        orbiters?&rdquo;(edited)</span
+      >
+    </p>
+    <p class="c8 c9"><span class="c4 c6 c16"></span></p>
+    <h2 class="c7" id="h.mzrg9v2k49l8"><span class="c4 c2 c3"></span></h2>
+    <p class="c5">
+      <span class="c2"
+        >Mataeru:<br />&quot;We have room enough for twenty people. Worry not,
+        we will be relocating soon to more spacious accomodations.&quot;<br /></span
+      ><span class="c0">he bows</span
+      ><span class="c1"
+        ><br />&quot;I take it you would like to remain here and explore the
+        base later?&quot;</span
+      >
+    </p>
+    <h2 class="c7" id="h.rqtzenjcefs7"><span class="c4 c2 c3"></span></h2>
+    <p class="c5">
+      <span class="c2 c3">Devros von Inie</span><span class="c2"><br /></span
+      ><span class="c0"
+        >Devros smiled and nodded to Mataeru, offering a sloppy bow of his
+        own</span
+      ><span class="c2"
+        ><br /><br />&ldquo;Aye, Oi &#39;ill proobably kip &#39;ere
+        too&rdquo;<br /><br /></span
+      ><span class="c10 c0"
+        >He chuckled under his breath as he pointed to one of the couches with
+        his thumb</span
+      >
+    </p>
+    <p class="c9 c8"><span class="c4 c6 c16"></span></p>
+    <h2 class="c7" id="h.nd22gvhz9wgs"><span class="c4 c2 c3"></span></h2>
+    <p class="c5"><span class="c4 c2 c3">[End RP 18:23, 3/28]</span></p>
+    <p class="c8 c15"><span class="c1"></span></p>
+    <p class="c8 c18"><span class="c4 c6"></span></p>
+  </body>
+</html>

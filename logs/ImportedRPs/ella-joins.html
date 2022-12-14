@@ -1,0 +1,571 @@
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+    <link rel="stylesheet" href="../../css/solarized-dark.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/imported.css">
+    <style type="text/css">
+      ol {
+        margin: 0;
+        padding: 0;
+      }
+      table td,
+      table th {
+        padding: 0;
+      }
+      .c6 {
+        border-right-style: solid;
+        padding-top: 0pt;
+        border-top-width: 0pt;
+        border-right-width: 0pt;
+        padding-left: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1.15;
+        border-left-width: 0pt;
+        border-top-style: solid;
+        margin-right: 20pt;
+        margin-left: 15pt;
+        border-left-style: solid;
+        border-bottom-width: 0pt;
+        border-bottom-style: solid;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+        padding-right: 0pt;
+        height: 16pt;
+      }
+      .c9 {
+        border-right-style: solid;
+        padding-top: 0pt;
+        border-top-width: 0pt;
+        border-right-width: 0pt;
+        padding-left: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1.15;
+        border-left-width: 0pt;
+        border-top-style: solid;
+        margin-right: 20pt;
+        border-left-style: solid;
+        border-bottom-width: 0pt;
+        border-bottom-style: solid;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+        padding-right: 0pt;
+        height: 16pt;
+      }
+      .c1 {
+        margin-left: 15pt;
+        padding-top: 5pt;
+        padding-bottom: 0pt;
+        line-height: 1.1;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+        margin-right: 20pt;
+      }
+      .c2 {
+        font-weight: 400;
+        text-decoration: none;
+        vertical-align: baseline;
+        font-size: 12pt;
+        font-family: "Arial";
+        font-style: normal;
+      }
+      .c4 {
+        padding-top: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1.15;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+        height: 11pt;
+      }
+      .c5 {
+        font-weight: 400;
+        text-decoration: none;
+        vertical-align: baseline;
+        font-size: 11pt;
+        font-family: "Arial";
+        font-style: normal;
+      }
+      .c7 {
+        font-weight: 700;
+        text-decoration: none;
+        vertical-align: baseline;
+        font-family: "Arial";
+        font-style: normal;
+      }
+      .c8 {
+        font-weight: 400;
+        text-decoration: none;
+        vertical-align: baseline;
+        font-family: "Arial";
+      }
+      .c10 {
+        background-color: #ffffff;
+        max-width: 468pt;
+        padding: 72pt 72pt 72pt 72pt;
+      }
+      .c0 {
+        font-size: 12pt;
+        font-style: italic;
+      }
+      .c3 {
+        font-size: 12pt;
+      }
+      .title {
+        padding-top: 0pt;
+        font-size: 26pt;
+        padding-bottom: 3pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+      }
+      .subtitle {
+        padding-top: 0pt;
+        color: #666666;
+        font-size: 15pt;
+        padding-bottom: 16pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+      }
+      li {
+        font-size: 11pt;
+        font-family: "Arial";
+      }
+      p {
+        margin: 0;
+        font-size: 11pt;
+        font-family: "Arial";
+      }
+      h1 {
+        padding-top: 20pt;
+        font-size: 20pt;
+        padding-bottom: 6pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+      }
+      h2 {
+        padding-top: 18pt;
+        font-size: 16pt;
+        padding-bottom: 6pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+      }
+      h3 {
+        padding-top: 16pt;
+        color: #434343;
+        font-size: 14pt;
+        padding-bottom: 4pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+      }
+      h4 {
+        padding-top: 14pt;
+        color: #666666;
+        font-size: 12pt;
+        padding-bottom: 4pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+      }
+      h5 {
+        padding-top: 12pt;
+        color: #666666;
+        font-size: 11pt;
+        padding-bottom: 4pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+      }
+      h6 {
+        padding-top: 12pt;
+        color: #666666;
+        font-size: 11pt;
+        padding-bottom: 4pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        font-style: italic;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="c1">
+      <span class="c2"
+        >[Open RP]<br />&lt;03/23, 09:02&gt;<br />-Lua, source of recording-<br /><br />~A
+        Banshee with crystalline flare glinted through the lifeless, radiant
+        surface of Lua, ruins and rock alike slowly degrading as a short lived
+        wake of air rushed past, sometimes just enough to snap them away into
+        the abyss. The source of the transmission grew closer, and so did the
+        soft trail of footprints upon dust ridden halls. Almost reactively, the
+        arboriforms followed their glow to the Warframe as it closed itself
+        towards a cave.<br /><br />Signs of struggle and death were all
+        apparent, dried pools and other nonsensical fluids cast a different
+        shade from the dim light. Scorch marks, various casings and footprints
+        of once stalwart vanguards littered the ground.<br /><br />Bodies of
+        frames, parts of them, slowly increased in density, the handy work of
+        someone, or something, shooing away those with weak stomachs, drawing
+        the deadly curiosity of the untimely, or perhaps&hellip; untamed.~</span
+      >
+    </p>
+    <p class="c1">
+      <span class="c3">//Runner<br /><br /></span
+      ><span class="c0"
+        >Earlier, the Banshee had knelt before a hoofprint, tracing its familiar
+        image, now she was at the end facing an unknown future before her.
+        Alone.<br /><br />A wave of worry and haunt crept through her spine, the
+        thought of coming back to Lua always fickled her senses. Going so far to
+        ready her Nikana Prime to its closest reach; from the soft Teplo to her
+        hip with a length of cloth to suspend it.<br /><br />She has seen death
+        too often in the presence of the Infested, but yet, the amount of Tenno
+        that were struck low here, now, was an unnerving sight.<br /><br />Reluctantly,
+        she neared the object responsible for the signal; the panel. As she did,
+        she calmly, scanned the dark room, the Banshee&rsquo;s reverberated
+        helm&rsquo;s gem ginting beneath a blindfold of cloth as the rest
+        glittered like gentle, young stars to the lonely, albeit brutal
+        surroundings. The silence was jarring, if not caustic to her own self,
+        though the occasional quiet chirp of her Primed Carrier helped to
+        somewhat alleviate her of old bitter memories. It still provided nothing
+        to what may happen next as she stopped just a few feet from the mistuned
+        recording.<br /><br />With a combative sigh and a hand poised
+        nonchalantly on the Nikana&rsquo;s hilt, she dared cast a calm glow
+        where she focused; each body only adding to held breath and suspense,
+        but ultimately, of no success, or failure.</span
+      ><span class="c3"><br /><br /></span
+      ><span class="c0">She called out in a smooth hum,</span
+      ><span class="c2">&nbsp;&ldquo;Hello?&rdquo;</span>
+    </p>
+    <h2 class="c6" id="h.5jgq8x6x5fcu"><span class="c7 c3"></span></h2>
+    <p class="c4"><span class="c5"></span></p>
+    <p class="c1">
+      <span class="c3">Mataeru:<br /></span
+      ><span class="c0"
+        >A voice echoes down from the Shadows above, reverberating off the walls
+        and distoriting it&#39;s original location</span
+      ><span class="c2"
+        ><br />&quot;It has been quite some time since I last saw a Banshee.
+        Tell me Tenno, what brings you here past the halls of death from
+        before?&quot;</span
+      >
+    </p>
+    <h2 class="c6" id="h.br0fitw03g51"><span class="c7 c3"></span></h2>
+    <p class="c4"><span class="c5"></span></p>
+    <p class="c1">
+      <span class="c3">//Runner<br /><br /></span
+      ><span class="c0"
+        >The Banshee&#39;s head darted around in answer, its gem attempting to
+        glint through the thick ink. Her hand tightened aroind the circular
+        hilt,</span
+      ><span class="c3"
+        ><br /><br />&quot;I came here to escape the Lotus and her strings.
+        Her... puppets,&quot; </span
+      ><span class="c0"
+        >She paused, wondering if this was truly the author of the panel.</span
+      ><span class="c2"
+        >&nbsp;&quot;You mentioned an... end to the war? The endless
+        cycle?&quot;</span
+      >
+    </p>
+    <h2 class="c9" id="h.4p46d6yvnc7d"><span class="c7 c3"></span></h2>
+    <p class="c4"><span class="c5"></span></p>
+    <p class="c1">
+      <span class="c3">Mataeru:<br /></span
+      ><span class="c0"
+        >A black and red Ash Prime suddenly drops to the floor on the opposite
+        side of the room and looks at the Banshee</span
+      ><span class="c2"
+        ><br />&quot;I did mention that. I am trying to find Tenno like yourself
+        to help me those with me do the impossible.&quot;</span
+      >
+    </p>
+    <h2 class="c6" id="h.iauvs1ua9ui0"><span class="c3 c7"></span></h2>
+    <p class="c4"><span class="c5"></span></p>
+    <p class="c1">
+      <span class="c3">//Runner<br /><br /></span
+      ><span class="c0"
+        >The Banshee shifted a leant body to her other leg, the hand atop the
+        Nikana still remaining tightly locked in place on the hilt,</span
+      ><span class="c3"><br /><br />&quot;I am willing to-&quot; </span
+      ><span class="c0"
+        >The Prime Para Carrier beside the Banshee let out a staggered chirp as
+        something clicked within its body, an authoratative quick hand tucked it
+        behind her waist,</span
+      ><span class="c2"
+        >&nbsp;&quot;-join, your group. But I do have to ask first, who are you?
+        Secondly: Why name your group, the Orokin Remnant, after a corrupt, dead
+        empire?&quot;</span
+      >
+    </p>
+    <h2 class="c6" id="h.b7z9zjdttfgm"><span class="c7 c3"></span></h2>
+    <p class="c1">
+      <span class="c3">Mataeru:<br /></span
+      ><span class="c0">The Ash goes rigid as Tennonappears before it</span
+      ><span class="c3"
+        ><br />&quot;My name is Mataeru Lloria. I am the leader of a group
+        called The Veiled Tenno. We were hand picked by the Orokin to be used as
+        assassins.&quot;<br /></span
+      ><span class="c0"
+        >He pauses pondering her second question for a moment before
+        continuing</span
+      ><span class="c2"
+        ><br />&quot;We are called Orokin Remnant because that is our heritage.
+        We are the Remnant of a once strong Empire. The name Orokin carries a
+        certain weight to it that gives us an edge. However, our name will
+        change when we become more established. Something more fitting for our
+        cause.&quot;</span
+      >
+    </p>
+    <h2 class="c6" id="h.wxogubnymhd4"><span class="c7 c3"></span></h2>
+    <p class="c4"><span class="c5"></span></p>
+    <p class="c1">
+      <span class="c3">//Runner<br /><br /></span
+      ><span class="c0"
+        >The locked hand detached from the sheathed Nikana to her chest in a
+        shallow bow. Letting each finger float an inch from her chest, as if a
+        field of wind had barred itself between them, &ldquo;You may call me
+        Runner.&rdquo;</span
+      ><span class="c3"
+        ><br /><br />Her arms folded across her chest, aware of what yet may
+        lurk beneath the veil, &ldquo;But I see why you carry the name. But... I
+        also see there will be a surmounting cost to pay...&rdquo;<br /><br /></span
+      ><span class="c0"
+        >A phased sigh echoed from her, looking around at the scene once more,
+        eyeing a once familiar presence amidst it.</span
+      ><span class="c2"
+        >&nbsp;&ldquo;You said, &#39;were&#39;, you are no longer part of the
+        leash?&rdquo;</span
+      >
+    </p>
+    <h2 class="c6" id="h.uxpj0hqbruyg"><span class="c7 c3"></span></h2>
+    <p class="c4"><span class="c5"></span></p>
+    <p class="c1">
+      <span class="c3">Mataeru:<br /></span
+      ><span class="c0">He chuckles and nods</span
+      ><span class="c2"
+        ><br />&quot;Serving the Orokin and slaying whomever they desired was
+        not an enjoyable experience, but if we did not, they would have executed
+        us. Now, we serve a new cause.&quot;</span
+      >
+    </p>
+    <h2 class="c6" id="h.8jbixo9nh8gj"><span class="c7 c3"></span></h2>
+    <h2 class="c6" id="h.z4057v37cks6"><span class="c7 c3"></span></h2>
+    <p class="c1">
+      <span class="c3">//Runner<br /><br /></span
+      ><span class="c0"
+        >A relieved, prolonged sigh exhaled out from the Banshee.</span
+      ><span class="c2"
+        ><br /><br />&quot;Then, would you have use for a Madurai? A new member?
+        A capable forge artisan?&quot;</span
+      >
+    </p>
+    <h2 class="c6" id="h.fx1ko5q9k0w7"><span class="c7 c3"></span></h2>
+    <h2 class="c6" id="h.1bonq8ld2hiv"><span class="c7 c3"></span></h2>
+    <p class="c1">
+      <span class="c3">Mataeru:<br /></span
+      ><span class="c0">He nods once more with a little more enthusiasm</span
+      ><span class="c2"
+        ><br />&quot;Indeed. We will need Madurai&#39;s skill and ferocity in
+        the coming years. I take it you have decided to join us?&quot;</span
+      >
+    </p>
+    <h2 class="c6" id="h.lupplq80qrae"><span class="c7 c3"></span></h2>
+    <p class="c4"><span class="c5"></span></p>
+    <p class="c1">
+      <span class="c3"
+        >//Runner<br /><br />&quot;An assurable yes, Mataeru.&quot;<br /><br /></span
+      ><span class="c0"
+        >The Banshee stepped forward, breaking her crossed arms to offer a warm
+        hand, the frame&#39;s wary posture assuaging to a relaxed form.</span
+      >
+    </p>
+    <h2 class="c6" id="h.9ewlqoqooiir"><span class="c7 c3"></span></h2>
+    <p class="c4"><span class="c5"></span></p>
+    <p class="c1">
+      <span class="c3">Mataeru:<br /></span
+      ><span class="c0"
+        >he steps forward and clasps teh Warframes hand, shaking it firmly</span
+      ><span class="c3"
+        ><br />&quot;Welcome to the Remnant, Runner. Your strength is
+        appreciate. Now come, I will lead you to our base of
+        operations.&quot;<br /></span
+      ><span class="c8 c0"
+        >he releases the frame&#39;s hand and gestures the Banshee to
+        follow</span
+      >
+    </p>
+    <h2 class="c6" id="h.7ob0b2xgkd9b"><span class="c7 c3"></span></h2>
+    <p class="c4"><span class="c5"></span></p>
+    <p class="c1">
+      <span class="c3"
+        >//Runner<br /><br />&quot;Thank you, Mataeru, I will not let you
+        down.&quot;<br /><br /></span
+      ><span class="c0"
+        >Accepting his gesture, she followed closely behind. While nudging her
+        Carrier to follow.</span
+      ><span class="c2"
+        ><br /><br />&quot;How... many others have joined so far?&quot;</span
+      >
+    </p>
+    <h2 class="c6" id="h.drrhb24atiac"><span class="c7 c3"></span></h2>
+    <p class="c4"><span class="c5"></span></p>
+    <p class="c1">
+      <span class="c3"
+        >Mataeru:<br />&quot;I have several more Tenno at base. I have not made
+        a solid count, but it is currently less than twenty.&quot;<br /></span
+      ><span class="c0 c8"
+        >the proceed deeper into the ruins of Lua, the hallways darkening
+        steadily and rubble becoming more scarce</span
+      >
+    </p>
+    <h2 class="c6" id="h.22pxycojpuql"><span class="c7 c3"></span></h2>
+    <p class="c4"><span class="c5"></span></p>
+    <p class="c1">
+      <span class="c3"
+        >//Runner<br /><br />&quot;I, see... But it does hold respite.&quot;
+        <br /><br /></span
+      ><span class="c0"
+        >She curiously studied the halls, the ruins becoming less of an
+        abundance, and an obstacle.<br /><br />Scarcity would sometimes bely
+        -but not always- an endeavor, her mind swam within question.</span
+      ><span class="c2"
+        ><br /><br />&quot;You mentioned a base. Is this where we&#39;re
+        headed?&quot;</span
+      >
+    </p>
+    <h2 class="c6" id="h.2e69qsitv0ae"><span class="c7 c3"></span></h2>
+    <p class="c4"><span class="c5"></span></p>
+    <p class="c1">
+      <span class="c3">Mataeru:<br /></span
+      ><span class="c0"
+        >he nods as they round a corner to a dead end, placing his hand on the
+        wall, causing it to shift to the side with a low rumble, revealing a
+        short hallway</span
+      ><span class="c2"
+        ><br />&quot;Yes it is. Through here is Sanctuary, and our current
+        command center.&quot;</span
+      >
+    </p>
+    <h2 class="c6" id="h.pw608f1a05l5"><span class="c7 c3"></span></h2>
+    <p class="c4"><span class="c5"></span></p>
+    <p class="c1">
+      <span class="c3">//Runner<br /><br />&quot;A new, beginning&quot; </span
+      ><span class="c0">The Runner whispered to herself.</span
+      ><span class="c3"><br /><br /></span
+      ><span class="c0"
+        >Her spine tingled excitedly. Her own spine at the very least. The
+        Banshee&#39;s head turned towards Mataeru.</span
+      ><span class="c2"
+        ><br /><br />&quot;What is to be expected of... of me in the coming
+        days?&quot;</span
+      >
+    </p>
+    <h2 class="c6" id="h.ftbgen5rrf6e"><span class="c7 c3"></span></h2>
+    <p class="c4"><span class="c5"></span></p>
+    <p class="c1">
+      <span class="c3">Mataeru:<br /></span
+      ><span class="c0"
+        >The Ash looks at her and if it had an eyebrow, it would be raised</span
+      ><span class="c2"
+        ><br />&quot;Can you possibly elaborate? All I expect of you is to not
+        betray us to the Lotus and do your best to uphold assignments either on
+        your own or with a team.&quot;</span
+      >
+    </p>
+    <h2 class="c6" id="h.fjvcwcg1y176"><span class="c7 c3"></span></h2>
+    <p class="c4"><span class="c5"></span></p>
+    <p class="c1">
+      <span class="c3"
+        >//Runner<br /><br />&quot;Oh, it was... nevermind, I will do my
+        best.&quot; </span
+      ><span class="c0"
+        >She nodded with a gentle, restrained hum, before stepping through the
+        hidden door into the revealed hall, shying her sight from his.</span
+      >
+    </p>
+    <h2 class="c6" id="h.xysbhl4eeuzt"><span class="c7 c3"></span></h2>
+    <p class="c4"><span class="c5"></span></p>
+    <p class="c1">
+      <span class="c3">Mataeru:<br /></span
+      ><span class="c0">a soft chuckle emanates from the Ash</span
+      ><span class="c3"><br />&quot;I am glad to hear it.&quot;<br /></span
+      ><span class="c0"
+        >he steps into the room after her and stops near a couch</span
+      ><span class="c2"
+        ><br />&quot;Would you like a tour of the facility? or would you prefer
+        to explore it yourself?&quot;</span
+      >
+    </p>
+    <h2 class="c6" id="h.ezjywvggwem5"><span class="c7 c3"></span></h2>
+    <p class="c4"><span class="c5"></span></p>
+    <p class="c1">
+      <span class="c3">//Runner<br /><br /></span
+      ><span class="c0"
+        >The Banshee halted for a moment, her carrier bumping clumsily into her
+        Teplo after previously studying the Ash.</span
+      ><span class="c2"
+        ><br /><br />&quot;Mmm-I think I&#39;ll take the time to explore by
+        myself; relax from the scene back there. Maybe meet the others
+        possibly?&quot;</span
+      >
+    </p>
+    <h2 class="c6" id="h.w97mtoy1c4eq"><span class="c7 c3"></span></h2>
+    <p class="c4"><span class="c5"></span></p>
+    <p class="c1">
+      <span class="c3">Mataeru:<br /></span
+      ><span class="c0">he bows and nods</span
+      ><span class="c2"
+        ><br />&quot;Very well. I will be in the command center if you need me,
+        and I am always reachable by message.&quot;</span
+      >
+    </p>
+    <h2 class="c6" id="h.mks6tgydpn5c"><span class="c7 c3"></span></h2>
+    <p class="c4"><span class="c5"></span></p>
+    <p class="c1">
+      <span class="c3">//Runner<br /><br /></span
+      ><span class="c0"
+        >She turned and bowed in reply, pressing the dazed Carrier to her chest
+        like a toy, while it in response let out a rather abnormal doll-like
+        squeak,</span
+      ><span class="c3"
+        >&nbsp;&quot;Thank you, Mataeru, I&#39;ll keep that in mind.&quot;<br /><br /></span
+      ><span class="c8 c0"
+        >With that, she walked on, her Carrier Prime letting out another
+        helpless squeak further down the hall.</span
+      >
+    </p>
+    <h2 class="c6" id="h.2j1m03ub6fva"><span class="c7 c3"></span></h2>
+    <p class="c4"><span class="c5"></span></p>
+    <p class="c1"><span class="c2">[End RP 03/23 09:56]</span></p>
+    <p class="c4"><span class="c5"></span></p>
+  </body>
+</html>

@@ -1,0 +1,813 @@
+<html>
+
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link rel="stylesheet" href="../../css/solarized-dark.min.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/imported.css" />
+    <style type="text/css">
+        ol {
+            margin: 0;
+            padding: 0
+        }
+
+        table td,
+        table th {
+            padding: 0
+        }
+
+        .c17 {
+            border-right-style: solid;
+            padding-top: 0pt;
+            border-top-width: 0pt;
+            border-right-width: 0pt;
+            padding-left: 0pt;
+            padding-bottom: 0pt;
+            line-height: 1.14;
+            border-left-width: 0pt;
+            border-top-style: solid;
+            border-left-style: solid;
+            border-bottom-width: 0pt;
+            border-bottom-style: solid;
+            orphans: 2;
+            widows: 2;
+            text-align: left;
+            padding-right: 0pt;
+            height: 16pt
+        }
+
+        .c11 {
+            background-color: #2f3136;
+            font-weight: 400;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-size: 10.5pt;
+            font-family: "Verdana";
+            font-style: normal
+        }
+
+        .c14 {
+            background-color: #2f3136;
+            font-weight: 400;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-family: "Verdana";
+            font-style: normal
+        }
+
+        .c3 {
+            color: #4c1130;
+            font-weight: 400;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-size: 14pt;
+            font-family: "Arial";
+            font-style: normal
+        }
+
+        .c5 {
+            color: #1c4587;
+            font-weight: 400;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-size: 14pt;
+            font-family: "Arial";
+            font-style: normal
+        }
+
+        .c1 {
+            font-weight: 400;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-size: 12pt;
+            font-family: "Arial";
+            font-style: normal
+        }
+
+        .c13 {
+            font-weight: 700;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-size: 11.5pt;
+            font-family: "Arial";
+            font-style: normal
+        }
+
+        .c9 {
+            color: #134f5c;
+            font-weight: 400;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-size: 14pt;
+            font-family: "Arial";
+            font-style: normal
+        }
+
+        .c2 {
+            padding-top: 0pt;
+            padding-bottom: 2pt;
+            line-height: 1.14;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        .c15 {
+            font-weight: 700;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-family: "Arial";
+            font-style: normal
+        }
+
+        .c8 {
+            font-weight: 400;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-family: "Arial"
+        }
+
+        .c12 {
+            font-size: 14pt;
+            font-family: "Verdana";
+            color: #cf7715;
+            font-weight: 400
+        }
+
+        .c16 {
+            background-color: #ffffff;
+            max-width: 451.4pt;
+            padding: 72pt 72pt 72pt 72pt
+        }
+
+        .c0 {
+            font-size: 11.5pt;
+            font-style: italic
+        }
+
+        .c18 {
+            font-family: "Verdana";
+            font-weight: 700
+        }
+
+        .c10 {
+            color: #134f5c;
+            font-size: 14pt
+        }
+
+        .c4 {
+            height: 11pt
+        }
+
+        .c6 {
+            font-size: 12pt
+        }
+
+        .c7 {
+            font-style: italic
+        }
+
+        .title {
+            padding-top: 0pt;
+            font-size: 26pt;
+            padding-bottom: 3pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        .subtitle {
+            padding-top: 0pt;
+            color: #666666;
+            font-size: 15pt;
+            padding-bottom: 16pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        li {
+            font-size: 11pt;
+            font-family: "Arial"
+        }
+
+        p {
+            margin: 0;
+            font-size: 11pt;
+            font-family: "Arial"
+        }
+
+        h1 {
+            padding-top: 20pt;
+            font-size: 20pt;
+            padding-bottom: 6pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        h2 {
+            padding-top: 18pt;
+            font-size: 16pt;
+            padding-bottom: 6pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        h3 {
+            padding-top: 16pt;
+            color: #434343;
+            font-size: 14pt;
+            padding-bottom: 4pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        h4 {
+            padding-top: 14pt;
+            color: #666666;
+            font-size: 12pt;
+            padding-bottom: 4pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        h5 {
+            padding-top: 12pt;
+            color: #666666;
+            font-size: 11pt;
+            padding-bottom: 4pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        h6 {
+            padding-top: 12pt;
+            color: #666666;
+            font-size: 11pt;
+            padding-bottom: 4pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            font-style: italic;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+    </style>
+</head>
+
+<body>
+    <p class="c2"><span class="c1">-Lua Sanctuary, Hangar Bay, Vuko&rsquo;s Scimitar-</span></p>
+    <p class="c2"><span class="c1">&lt;04/2, 19:28&gt;</span></p>
+    <p class="c2 c4"><span class="c1"></span></p>
+    <p class="c2"><span class="c6 c15">A few hours have passed since the official briefing, and most of the remnant have
+            gone to rest, in order to prepare for the fight ahead of them. Yet some decide to spend that time...
+            differently. One of those others is Vuko.</span></p>
+    <p class="c2"><span class="c15 c6">His scimitar was bathing in the cold lights of the hangar, darkness leaking out
+            from above the open ramp, awaiting someone.</span></p>
+    <hr>
+    <p class="c2 c4"><span class="c1"></span></p>
+    <p class="c2"><span class="c9">Muro:</span></p>
+    <p class="c2"><span class="c8 c0">Muro wandered back into the hangar, the heavy sound of his Hydroid&#39;s footsteps
+            bouncing off the walls. He had just returned from a workout in the gym, followed by a quick shower. It
+            seemed to him that most everyone else in the sanctuary had gone to prepare for the oncoming mission in their
+            own way. However, Muro wasn&#39;t here for that kind of mission prep. That could wait. He quickly scanned
+            the line of landing craft in the hangar, looking for a certain craft. His target, a Scimitar with colors
+            reminiscent of a sunset on Earth, was docked a fair distance away. Seeing it amongst the sea of other
+            landing crafts, ranging from bright to pitch black, he strode in that direction, passing his own aqua-toned
+            Liset on the way. Upon arriving at the craft, he went to the doorway, noticing the ramp into the craft was
+            open. Reaching out, he knocked on the metal doorframe, calling to the inside of the craft.</span></p>
+    <p class="c2 c4"><span class="c8 c0"></span></p>
+    <p class="c2"><span class="c6">&quot;Vuko? You in here?&quot; </span><span class="c0">He wondered if he had taken
+            too long getting here.</span><span class="c1">&nbsp;&quot;Hey, you didn&#39;t start without me did
+            you?&quot;</span></p>
+    <hr>
+    <p class="c2 c4"><span class="c1"></span></p>
+    <p class="c2"><span class="c12">Vuko:</span></p>
+    <p class="c2"><span class="c6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- &ldquo;Come in!&rdquo; -
+        </span><span class="c8 c0">A familiar voice pierces through the veil of darkness, welcoming Muro.</span></p>
+    <p class="c2 c4"><span class="c8 c0"></span></p>
+    <p class="c2"><span class="c1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~As the Hydroid enters the landing
+            craft everything is dimly lit, making it almost impossible the notice anything other than a calm tangerine
+            light emitted from a hologram screen where normally the navigational display is located. Right in front of
+            the light source there is a pilot&rsquo;s seat in which Vuko is sitting in, browsing something on the
+            screen.~</span></p>
+    <p class="c2"><span class="c12">Vuko:</span></p>
+    <p class="c2"><span class="c6">&ldquo;You know, I said half an hour, not half a day.&rdquo; - </span><span
+            class="c0">He comments on his friends arrival, not bothering to stand up or even turn around to the greet
+            the guest. Vuko then swipes the screen to the right, making it fade away.</span><span class="c6">&nbsp;-
+            &ldquo;Ide, lights.&rdquo; - </span><span class="c0">He exclaims seemingly into nowhere, and immediately as
+            the words are spoken, the inside of the ship lightens up.</span></p>
+    <p class="c2"><span class="c1">~The darkness broken has revealed the rest of the room, showing off the hue of blacks
+            and greys contrasted by what used to be pearl whites, but with the passage of time have turned dull, fading
+            either slightly yellow or grey. Topping the palette of colors are peach metallics, detailings and lights,
+            breathing a spark of life into the otherwise stoic and modernistic design. The inside of the ship is vastly
+            different than a standard Scimitar, instead of a nav console with a kneeling pad there is a pilot&rsquo;s
+            chair with a complete set of controls ranging from thrust throttle to axis rotation. In place of the codex
+            stand there is a straight wall magnetically holding up a set of weapons, next to which Vuko&rsquo;s Ivara is
+            standing, locked into the adjacent wall. What usually is the market console is a rotating seat for a
+            potential co-pilot mixed with espionage equipment. All these changes do not look like they were
+            replacements, but were fit into the ship from the beginning. The aesthetic of the entire cockpit does not
+            differ much from the usual minimalistic tenno style, yet the hand of an Orokin designer can be seen in some
+            of the details.~</span></p>
+    <hr>
+    <p class="c2 c4"><span class="c1"></span></p>
+    <p class="c2"><span class="c9">Muro:</span></p>
+    <p class="c2"><span class="c0">Muro sighs resignedly, his head drooping a bit in a show of remorse.</span><span
+            class="c6">&nbsp;&quot;I know, I know, and I&#39;m sorry about that.&quot; </span><span class="c0">He moves
+            towards the co-pilot chair, resting one hand on its back without sitting.</span><span
+            class="c6">&nbsp;&quot;I meant to be here sooner, but I wound up running into Lekalis on my way here. We
+            ended up talking for a bit, so I guess I just lost track of time.&quot; </span><span class="c8 c0">He
+            laughed nervously, realizing this was a poor excuse. Looking around the ship, he couldn&#39;t help but
+            remark on the level of customization.</span></p>
+    <p class="c2"><span class="c1">&quot;You know, no matter how many times I&#39;ve been in here, I can never get over
+            how much detail they put into your ship. Most of the special stuff I have in mine was added after it was
+            finished, and it doesn&#39;t look nearly as flashy as yours.&quot;</span></p>
+    <hr>
+    <p class="c2 c4"><span class="c1"></span></p>
+    <p class="c2"><span class="c12">Vuko:</span></p>
+    <p class="c2"><span class="c6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- &ldquo;That&rsquo;s what killing
+            tens of thousands of people used to get you during the reign of the Empire.&rdquo; - </span><span
+            class="c0">He responds to the awe in a voice resembling that of a worn-out canvas, remorse partially faded
+            with the passage of time resonating within it. At the same time the tone in which he said &lsquo;the
+            Empire&rsquo; implying a certain level of respect for the now long-gone Orokin.</span><span
+            class="c6">&nbsp;- &ldquo;Plus, I did trash my previous craft beyond any repair.&rdquo; - </span><span
+            class="c8 c0">Vuko adds as he is getting out of the pilots seat, an awkward smile on his face as he tries to
+            loosen up the tension that he created with the previous sentence, without much success.</span></p>
+    <p class="c2"><span class="c6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c0">After
+            standing up completely, he notices that Muro is within his Hydroid, and eyes him.</span><span
+            class="c6">&nbsp;- &ldquo;Oh come on. It&rsquo;s just the two of us. Drop the facade.&rdquo; - </span><span
+            class="c8 c0">He tells him in a slightly condescending voice, as he goes towards the back of the
+            aforementioned wall of weaponry. From what looks like a hidden compartment he takes out a glass carafe of
+            Ostron design filled with a clear, mahogany liquid. Alongside the bottle he takes out two short, cylindrical
+            glasses with a thick bottom.</span></p>
+    <hr>
+    <p class="c2 c4"><span class="c1"></span></p>
+    <p class="c2"><span class="c9">Muro:</span></p>
+    <p class="c2"><span class="c0">He scoffed a little at Vuko&#39;s response.</span><span class="c6">&quot;Heh, I
+            almost forgot how they prioritized things like that back then. Not a whole lot of glory for those who were
+            supposed to keep people from dying, I suppose.&quot; </span><span class="c0">He leaned back against the
+            wall, reminiscing.</span><span class="c6">&nbsp;&quot;Right, I remember hearing about that whole ordeal back
+            then. Was that one of the assignments you and Kuve had?&quot; </span><span class="c0">Truth be told, he had
+            not had the chance to work with her terribly often, as their general roles were so different. &nbsp;He
+            turned his head towards Vuko, not understanding for a moment.</span><span class="c6">&nbsp;&quot;Oh! right,
+            right.&quot; </span><span class="c8 c0">Moving his frame into a seated position on the floor, Muro
+            transferred out, standing up to his full, rather diminutive height.</span></p>
+    <p class="c2 c4"><span class="c8 c0"></span></p>
+    <p class="c2"><span class="c1">~Muro, for once was not clad in his normal Zariman suit. Rather, he was clad in a
+            loose, plaintive pair of &nbsp;blue pants and a light, silvery long-sleeved shirt that extended past his
+            hips, worn open.~</span></p>
+    <p class="c2 c4"><span class="c1"></span></p>
+    <p class="c2"><span class="c0">Muro eyed the carafe with interest.</span><span class="c6">&nbsp;&quot;Nice, secret
+            compartment.&quot; </span><span class="c0">Just then he recognized the liquid within.</span><span
+            class="c1">&nbsp;&quot;Wait, we had that in Cetus right? When did you get it?&quot;</span></p>
+    <hr>
+    <p class="c2 c4"><span class="c1"></span></p>
+    <p class="c2"><span class="c12">Vuko:</span></p>
+    <p class="c2"><span class="c6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c0">When Muro
+            transferred out of his frame, Vuko handed him one of the glasses, and filled it to about a third of its
+            capacity with the liquid.</span><span class="c6">&nbsp;- &ldquo;Yeah, the Pluto job... My old liset got shot
+            down during extraction because Kuve attracted too much attention, but I wouldn&rsquo;t ask her about that.
+            She will just blame it all on me and get offended for questioning her skills.&rdquo; - </span><span
+            class="c8 c0">He chuckles during the sentence as he reminisces about the times passed, while at the same
+            time he pours himself the same amount of the drink.</span></p>
+    <p class="c2"><span class="c6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- &ldquo;Yes. Yes we did. I got this
+            fine bottle of daku liquor sometime between when you were freaking out about the kubrow puppies and tried to
+            adopt half of them, even though they were on sale and when you were arguing with the Corpus representative
+            that his belief in profit does not, in fact, make sense.&rdquo; - </span><span class="c0">Vuko tries to
+            contain himself from laughing while remembering what Muro had done when they were in Cetus.</span><span
+            class="c6">&nbsp;- &ldquo;I&rsquo;m guessing your memories of that trip aren&rsquo;t that fond?&rdquo; -
+        </span><span class="c8 c0">He teases his friend while barely containing himself.</span></p>
+    <p class="c2"><span class="c6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c0">After calming
+            down and putting the carafe on a nearby counter, he raises his glass a bit wanting to bump glasses in order
+            to raise a toast.</span><span class="c6">&nbsp;- &ldquo;To a successful mission!&rdquo; - </span><span
+            class="c0">He exclaims in a cheerful voice, before taking a sip of the drink.</span></p>
+    <hr>
+    <p class="c2 c4"><span class="c1"></span></p>
+    <p class="c2"><span class="c9">Muro:</span></p>
+    <p class="c2"><span class="c6 c7">Muro graciously accepts the glass, chuckling at Vuko&#39;s story.</span><span
+            class="c6">&nbsp;&quot;Sounds like her. &nbsp;Kinda hard not to draw attention with that Mirage she always
+            uses though.&quot; </span><span class="c8 c6 c7">Muro moved to a more comfortable, cross-legged position on
+            the floor, spurning the chair behind him. He made an indignant face at Vuko&#39;s teasing.</span></p>
+    <p class="c2"><span class="c6">&quot;Alright, first off,&quot; </span><span class="c0">He began, pointing a single
+            finger with his free hand towards the ceiling, before dramatically pointing at Vuko.</span><span
+            class="c6">&nbsp;&quot;Those puppies were adorable, and I didn&#39;t have any more credits on me.&quot;
+        </span><span class="c0">He leaned back slightly, gazing upwards.</span><span class="c6">&nbsp;&quot;Besides, you
+            know how my Cephalon is. She doesn&#39;t like having animals on board.&quot; </span><span class="c0">He said
+            wearily. &nbsp;He tilted his head back downwards, redirecting his gaze to Vuko.</span><span
+            class="c6">&nbsp;&quot;Secondly, bars aren&#39;t usually the kinds of places I would end up back in the old
+            days, so I didn&#39;t really know what to do. I was only talking with that corpus because I thought it would
+            be fun. It&rsquo;s just...&quot;</span><span class="c6 c7">&nbsp;Muro fidgeted with the glass in his hand,
+            seemingly embarrassed.</span><span class="c6">&nbsp;&quot;I get a little carried away sometimes, you know?
+            It isn&#39;t my fault that their idea of profit is so short sighted.&quot; </span><span class="c8 c0">Muro
+            huffed, recalling the arrogant way the Corpus had spoken to him.</span></p>
+    <h2 class="c17" id="h.2aqj9hg77j2a"><span class="c1"></span></h2>
+    <p class="c2"><span class="c0">Muro&#39;s expression then softened a bit, while he reflected on the trip as a
+            whole.</span><span class="c6">&nbsp;&quot;No, I wouldn&#39;t say the trip was bad or anything. Just a little
+            overwhelming in some ways.&quot; </span><span class="c0">He laughed a little at the irony. Here he was, a
+            kid who was perfectly fine being shot at by dozens of heavily armed combatants simultaneously, and a loud
+            social situation was putting him off his balance. Noting Vuko&#39;s offer of toast, he leaned forward,
+            clinking his glass against Vuko&#39;s.</span><span class="c6">&nbsp;&quot;To a successful mission.&quot;
+        </span><span class="c0">He said, more quietly. He put the glass up to his lips, taking only the smallest sip
+            before his face shriveled up in disgust.</span><span class="c6">&nbsp;&quot;Blech.&quot; </span><span
+            class="c6 c7">He looked downward towards the dark liquid, his face contorting in revulsion.</span><span
+            class="c6">&nbsp;&quot; I still don&#39;t get why you like this stuff so much.&quot; </span><span
+            class="c6 c7">upon saying that, a thought that had been nagging Muro since the trip resurfaced with a
+            vengeance. Adopting a more neutral, albeit curious expression, &nbsp;Muro looked up from his drink toward
+            Vuko.</span><span class="c6">&nbsp;&quot;Hey, speaking of not understanding something, could you explain
+            something to me? What exactly happened between you and that Loki we were with today?&quot; </span><span
+            class="c0">His head tilted sideways , trying to remember his name.</span><span class="c6">&nbsp;&quot;You
+            know, umm.... Strider, I think? I know how you act when you&#39;re mad, and something&#39;s obviously
+            bugging you about him, so what is it?&quot; </span><span class="c8 c0">Muro leaned farther forward intently,
+            cradling the now largely forgotten drink in his hands, &nbsp;waiting eagerly to hear the tale.</span></p>
+    <hr>
+    <p class="c2 c4"><span class="c1"></span></p>
+    <p class="c2"><span class="c12">Vuko:</span></p>
+    <p class="c2"><span class="c6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c0">He chuckles
+            at Muro&rsquo;s remark of Kuve using the flashiest of warframes, despite being a stealth operative. He
+            follows in his friends steps and sits down on the floor with one leg lying straight and the other bent in
+            the knee, foot close to him.</span><span class="c6">&nbsp;- &ldquo;That&rsquo;s why I took you there, we
+            longer have </span><span class="c6 c18">him</span><span class="c6">&nbsp;</span><span class="c6">breathing
+            down our necks, so you&rsquo;ve got to learn to live. Besides, I&rsquo;m pretty sure you reached the legal
+            drinking age sometime over the past couple hundred years.&rdquo; - </span><span class="c8 c0">He says with a
+            cheeky smile on his face, as he takes a sip of the drink.</span></p>
+    <p class="c2"><span class="c6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c0">When Muro
+            speaks of the Loki, the smile is immediately wiped off of Vuko&rsquo;s face, replaced by a somewhat
+            unpleasant grimace.</span><span class="c6">&nbsp;- &ldquo;I have my suspicions about him. I&rsquo;m not a
+            hundred percent sure he is who I think he is, but... if I am right...&rdquo; - </span><span class="c0">He
+            says in a worried voice and once again drinks the liquor, this time taking a big gulp, emptying the
+            glass.</span><span class="c6">&nbsp;- &ldquo;I guess it&rsquo;s time I told you the story of me and the
+            Loki...&rdquo; - </span><span class="c8 c0">He takes a deep breath, and begins the tale.</span></p>
+    <p class="c2 c4"><span class="c8 c0"></span></p>
+    <p class="c2"><span class="c1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- &ldquo;I will spare you the
+            unnecessary details that lead me to making such decisions, you just need to know that I was struggling with
+            a lot of hard questions and where I stand on them. Well, I still am, but that&rsquo;s besides the point. It
+            all started with a simple assignment of eliminating a rebel cell.&rdquo;</span></p>
+    <p class="c2"><span class="c1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- &ldquo;The task proved much harder
+            than anticipated, all thanks to a Loki, who stepped in as I was halfway done eliminating the targets. He is,
+            or rather was, one of the few people who could take me head on.&rdquo;</span></p>
+    <hr>
+    <p class="c2 c4"><span class="c1"></span></p>
+    <p class="c2"><span class="c10">Muro:</span></p>
+    <p class="c2"><span class="c0">Muro paused for a moment, connecting the dots of the story. Vuko&#39;s worried tone
+            was off-putting, to say the least. As far as Muro could remember, the only people that could stand a chance
+            against Vuko on their own were Mata, and perhaps some of the other Veiled Tenno. Still, there were some
+            things he was confused about.</span><span class="c6">&nbsp;&quot;This was a job from the old days,
+            wasn&#39;t it? Sure sounds like the kind of work they had you do.&quot; </span><span class="c0">His eyes
+            widened, understanding what Vuko was implying.</span><span class="c6">&nbsp;&quot;Oh, so you think the Loki
+            from back then and this Strider guy are the same person?&quot; </span><span class="c0">Muro shrugged, not
+            understanding what was bothering him so much about this.</span><span class="c6">&nbsp;&quot;If you
+            aren&#39;t sure, why not just ask him? I spent most of that trip following him around and he seemed like a
+            good guy. A little weird, sure, but that&#39;s kind of normal for us, isn&#39;t it? Besides, even if he is
+            the same Tenno from back then, then that just means we have another powerhouse on our side!&quot;
+        </span><span class="c0">He gestured grandly with one hand, excited at the prospect of having such a powerful
+            ally. He stopped the gesture halfway through, returning to a calmer, more concerned stance. Vuko wasn&#39;t
+            the type to get this concerned about anything, much less one person, so there was probably a good reason for
+            it.</span><span class="c6">&nbsp;&quot;There&#39;s... more to this, isn&#39;t there?&quot; </span><span
+            class="c8 c0">He asked, quietly.</span></p>
+    <hr>
+    <p class="c2 c4"><span class="c1"></span></p>
+    <p class="c2"><span class="c12">Vuko:</span></p>
+    <p class="c2"><span class="c6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- &ldquo;I can&rsquo;t ask him... if
+            only it was that simple.&rdquo; - </span><span class="c0">He chuckles sarcastically.</span><span
+            class="c6">&nbsp;- &ldquo;You&rsquo;ll understand once I finish the story. And yes it was... quite a long
+            time ago. Back when those cells started to spiral out of control.&rdquo; - </span><span class="c8 c0">Vuko
+            takes a moments to rest and recall the rest of the tale.</span></p>
+    <p class="c2"><span class="c6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- &ldquo;After the first encounter I
+            kept bumping into him time and time again. We fought. A lot. Every time I had anything to do with the rebels
+            he was there. Their guardian angel.&rdquo; - </span><span class="c0">He takes the bottle and pours himself
+            more liquor, this time a full glass.</span><span class="c6">&nbsp;- &ldquo;For over a year I hadn&rsquo;t
+            successfully completed a single task concerning the rebellion. Always because of him. When I look back at it
+            now, it makes more sense than it did then.&rdquo; - </span><span class="c0">He takes a sip of the drink and
+            takes a few seconds to rest.</span><span class="c1">&nbsp;- &ldquo;He was trying to teach me a lesson. A
+            lesson about the empire, and how rotten it was. He kept showing me what they stand for, their morals, their
+            goals, and most importantly their passion to make the system a better place.... And it worked. I started
+            doubting. Questioning. But there were no answers.&rdquo;</span></p>
+    <p class="c2 c4"><span class="c1"></span></p>
+    <p class="c2"><span class="c6">&quot;Wow. I, I never knew.&quot; </span><span class="c0">Muro sat there, awed by
+            Vuko&#39;s story. Thinking back, even when this must have been going on, Vuko never said anything about it.
+            Still, something bothered him.</span><span class="c6">&nbsp; &quot;If this was going on, why didn&#39;t you
+            tell me? I&#39;m sure the two of us could have handled this guy, whoever he was.&quot; </span><span
+            class="c0">Muro himself was rarely called on for assignments of this sort, as he was more often used to hold
+            defensive positions and act as a bodyguard/monitor for high-priority individuals, usually chosen by Ballas.
+            As a result, he never had the occasion to deal with the rebel element in the Orokin empire, at least not in
+            a direct combat situation. Muro&#39;s expression darkened when Vuko mentioned his doubts and questions, all
+            too familiar concerns bubbling to the surface of his own mind. However, he said nothing, waiting for him to
+            continue.</span></p>
+    <hr>
+    <p class="c2 c4"><span class="c1"></span></p>
+    <p class="c2"><span class="c12">Vuko:</span></p>
+    <p class="c2"><span class="c6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- &ldquo;I... didn&rsquo;t want help.
+            I wasn&rsquo;t fooling myself with the idea that I could defeat him without any help, nevertheless, I kept
+            coming up with excuses as to why I needed to handle this myself. All that, because deep down I knew he was
+            right.&rdquo; - </span><span class="c0">He admits to Muro, as well as to himself, as over the years he came
+            to truly understand what was happening then.</span><span class="c6">&nbsp;- &ldquo;Over the next few months
+            he burrowed himself into my mind even deeper. Not literally of course, I mean his ideals.&rdquo; -
+        </span><span class="c0">He frantically waved his free hand as if he actually wanted to blow away any weird
+            theories about mind control or anything similar.</span><span class="c6">&nbsp;- &ldquo;We started talking.
+            In secret of course. His words, reasoning, it all was just. I believed in everything he said, it was like I
+            finally opened my eyes to all the horrific things that I was doing. It made me mad at the Empire. It made me
+            want to...&rdquo; - </span><span class="c0">Vuko takes a moment to finish the sentence, almost like it pains
+            him to actually finish what he was saying.</span><span class="c1">&nbsp;- &ldquo;...want to join
+            him.&rdquo;</span></p>
+    <hr>
+    <p class="c2 c4"><span class="c1"></span></p>
+    <p class="c2"><span class="c9">Muro:</span></p>
+    <p class="c2"><span class="c8 c0">As Vuko spun his story, Muro could almost feel a vice gripping his own heart. What
+            Vuko was suggesting was treason, pure and simple. Knowing that, it wasn&#39;t at all surprising to Muro that
+            he kept quiet about it. Ballas was known to them for many things, but kindness and understanding were not
+            among them.</span></p>
+    <p class="c2 c4"><span class="c8 c0"></span></p>
+    <p class="c2"><span class="c1">&quot;I don&#39;t know what to say Vuko. That&#39;s... kind of a lot to take
+            in.&quot;</span></p>
+    <p class="c2 c4"><span class="c1"></span></p>
+    <p class="c2"><span class="c8 c0">At the moment, Muro&#39;s own mind was spinning through his own memories; a
+            garishly colored procession of cruelty and indulgence. How many atrocities had he seen the Orokin elite
+            endorse, or carry out themselves? How many servants ordered to be brutally murdered for the most
+            insignificant error? He knew well the corruption of the empire, but rebellion never even occurred to him as
+            a possibility. After all, they still had Margulis, and even Muro could deduce what would happen to her if
+            her &quot;children&quot; rebelled. What&#39;s more, Muro still had his de facto family in the Remnant. Then
+            and now, he couldn&#39;t bring himself to put them at risk, even if it meant ignoring the suffering of
+            millions more. Amidst this cascade of memories, certain past events began to resurface, illuminated by this
+            new information. He turned his questioning back to Vuko, his tone conveying disbelief.</span></p>
+    <p class="c2 c4"><span class="c8 c0"></span></p>
+    <p class="c2"><span class="c1">&quot;Wait, was this why you left the rest of us when we were recalled to Lua? Did
+            Kuve know about all of this? Why would you tell her and not me?&quot;</span></p>
+    <hr>
+    <p class="c2 c4"><span class="c1"></span></p>
+    <p class="c2"><span class="c12">Vuko:</span></p>
+    <p class="c2"><span class="c6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- &ldquo;I didn&rsquo;t want to
+            burden you. I was confused myself. Didn&rsquo;t know what the right choice was anymore.&rdquo; -
+        </span><span class="c0">He tried explaining his actions, but his arguments were lackluster at best, almost like
+            Vuko didn&rsquo;t believe in what he was saying.</span><span class="c6">&nbsp;- &ldquo;As to Kuve&hellip;
+            well&hellip; she was in the thick of it from the very beginning. There really isn&rsquo;t anything we talk
+            about. I hope you understand.&rdquo; - </span><span class="c8 c0">As the Tenno finished trying to excuse
+            himself, he pointed his head downwards, as if in shame, and began to twirl the liquid inside the glass by
+            delicately shaking it in a circular motion.</span></p>
+    <p class="c2 c4"><span class="c8 c0"></span></p>
+    <p class="c2"><span class="c6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c0">Silence
+            ensued, as Vuko let the information sink in, while he continued to play with the liquor. After a minute or
+            two, with the intent of breaking the silence, he took a sip of the alcohol, and went on to talk about the
+            past.</span><span class="c6">&nbsp;- &ldquo;Going back to what you are here for. The story. Well&hellip; I
+            went ahead with it. I was planning my defection. I tried to convince Kuve to go with me, but she refused
+            time and time again. The idea of leaving the family scared me, but I saw no other choice&hellip;
+            zaraza&hellip; it all felt like I was in a nightmare, no real control, no choice, I could only run forward.
+            So I did.&rdquo; - </span><span class="c0">His voice started growing in desperation, as if he was reliving
+            it all over again.</span></p>
+    <p class="c2"><span class="c6">- &rdquo;It was supposed to be our last meeting like this. Mine and Lekalis&rsquo;.
+            We were polishing up on some details on how to make sure the Empire couldn&rsquo;t track my ship once I went
+            dark. I have no idea how, I covered my tracks perfectly, made sure absolutely no one knew about this, did
+            everything to make sure I wasn&rsquo;t followed, but Sigyn found out about it. There was an ambush. More
+            than 20 Dax Soldiers. I thought I was done for. In all the scenarios that rushed through my head in none I
+            came out of it in one piece. If I tried fighting back I would have been instantly gunned down. If I gave up
+            Ballas would have made an example out of me, made my life worse than any hell I could imagine. I really
+            though my life was over.&rdquo; - </span><span class="c0">His speech was picking up pace as he went along
+            with it, Vuko getting visually nervous as he neared the conclusion.</span><span class="c1">&nbsp;-
+            &ldquo;Then what seemed like impossible happened. All of the soldiers went after Lekalis. Restrained him.
+            Took him. But not even a single one approached me. I had no clue what was happening. Until she approached
+            me. I will never forget what happened next. As the Dax were dragging him away, Sigyn came up to me, winked,
+            and said: &lsquo;Good job on infiltrating the rebels. I&rsquo;m sure Ballas will be pleased to hear about
+            the results.&rsquo; And then she left like nothing had ever happened. I was awestruck. I did not know what
+            to do next. For the first time in my life I was truly lost.&rdquo;</span></p>
+    <hr>
+    <p class="c2 c4"><span class="c1"></span></p>
+    <p class="c2"><span class="c9">Muro:</span></p>
+    <p class="c2"><span class="c8 c0">At this point, Muro didn&#39;t know what to feel. Looking back, he remembered
+            nothing of these events, nor the cover up that Sigyn apparently orchestrated. Just how out of the loop was
+            he? How could he be so blind to the turmoil that had engulfed someone he saw as his brother? As Vuko
+            recounted his story, Muro considered the other actors here. How much did they really know about all this? He
+            had long since considered Kuve&#39;s motives to be unknowable to him, but did Sigyn really put herself on
+            the line for Vuko? Muro doubted that Ballas would have allowed such a thing, even under the guise of an
+            undercover op. Muro&#39;s jaw was set. Where was he in all this? &nbsp;His eyes burned slightly as he choked
+            out an apology.</span></p>
+    <p class="c2 c4"><span class="c8 c0"></span></p>
+    <p class="c2"><span class="c6">&quot;Vuko, I... I&#39;m sorry. I&#39;m sorry I couldn&#39;t be there when you needed
+            help.&quot; </span><span class="c0">Muro bowed his head towards the floor, unable to meet Vuko&#39;s
+            gaze.</span></p>
+    <hr>
+    <p class="c2 c4"><span class="c1"></span></p>
+    <p class="c2"><span class="c12">Vuko:</span></p>
+    <p class="c2"><span class="c6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- &ldquo;Don&rsquo;t apologize. I
+            could have told you about back then, and I didn&rsquo;t. You had enough problems yourself.&rdquo; -
+        </span><span class="c0">He finishes the sentence with a loud &lsquo;sigh&rsquo;, lifting a stone off his
+            chest.</span><span class="c6">&nbsp;- &ldquo;I&rsquo;m telling you all this because you deserve to know.
+            &nbsp;- </span><span class="c0">He takes the a sip of liquor, leaving the glass at a third full.</span><span
+            class="c6">&nbsp;- &ldquo;And to clarify, this is not common knowledge. The only people that know about it
+            are the involved parties, which is Sigyn and Lekalis plus Kuve. Not even Mata knows about this, and I would
+            like it to stay that way.&rdquo; - </span><span class="c0">Vuko puts the glass on the floor next to him,
+            stands up and goes over to the pilot seat and puts his hands on the back of said seat, and goes on to talk,
+            with his back facing Muro.</span><span class="c6">&nbsp;- &ldquo;Enough about my struggles. Those are mine,
+            and for me to face alone. We need to focus about here and now.&rdquo; - </span><span class="c0">He turns
+            back around to look at his brother, now leaning against the seat.</span></p>
+    <p class="c2"><span class="c6">- &ldquo;This brings me to the second reason I&rsquo;m telling you this, my concern
+            about the Loki. From what I told you it would seem like he should be an ally, but after his capture...
+            something changed. I longer had any missions with rebels, and I was tasked with more espionage instead.
+            Ballas had me follow around some Dax soldier, I can&rsquo;t really bother to remember his name but it was
+            something about him committing treason... But that&rsquo;s besides the point. It bugged me that I was put on
+            the sidelines, especially with all news about Lekalis being covered in layers of red tape, and security
+            clearance so high I&rsquo;m pretty sure only executors could access it. So I started digging. What I found
+            was... concerning. To say the least. I found out that there apparently was someone else who took my spot in
+            destroying rebel outposts. My mind boggled with the idea who could be more fitting than me, so I decided to
+            contact some rebel sources. From them I found out that apparently there was a crazed Loki out and about, who
+            once was allied with the rebellion but now is eliminating them with deadly efficiency. That&rsquo;s when I
+            put two and two together. I heard rumours of what can happen to rogue Tenno. The Empire would break them.
+            Piece by piece. Both physically and mentally...&rdquo; - </span><span class="c0">He takes a deep breath and
+            continues.</span><span class="c1">&nbsp;- &ldquo;That&rsquo;s what I suspect happened to him. I think they
+            broke him. He might not even know who he is anymore.&rdquo;</span></p>
+    <p class="c2"><span class="c6">-&ldquo;That is why I don&rsquo;t trust this Loki that joined us. If my concerns are
+            accurate and that is him, we have no idea whose side he is on. And if he won&rsquo;t turn on us simply
+            because some kind of trigger goes off.&rdquo; - </span><span class="c8 c0">He finishes the sentence with a
+            worried tone</span></p>
+    <hr>
+    <p class="c2 c4"><span class="c1"></span></p>
+    <p class="c2"><span class="c10">Muro:</span></p>
+    <p class="c2"><span class="c8 c0">Muro lifted his head slightly, watching Vuko as he stood and changed position. It
+            surprised him that Mata himself didn&#39;t know of this, as their apparent leader. He did remember that
+            there was a point where he started seeing Vuko much more often. In fact, the job he described involving the
+            Dax soldier was indeed very similar to what Muro himself was often tasked to do. While he was relieved to
+            see Vuko around, he remembered even then that Vuko was all in all a poor fit for those kinds of assignments,
+            which was what got him jobs out on the fringes of the system in the first place. Amidst this reminiscence,
+            Muro&#39;s heart sank as Vuko explained his theory of what happened to this worthy opponent. They both knew
+            all too well what would happen to rogue Tenno. As it stood they were too valuable an asset to the empire to
+            simply be destroyed. No, it would be better to torment them, break the mere children that opposed them until
+            they would start following orders. Muro clenched his fists in rage.</span></p>
+    <p class="c2 c4"><span class="c8 c0"></span></p>
+    <p class="c2"><span class="c6">&quot;Damn them... So you&#39;re saying that Lekalis is a ticking time bomb? If he
+            manages to snap back to what he used to be, there&#39;s no way of knowing what he&#39;ll do, right?&quot;
+        </span><span class="c0 c8">Muro&#39;s laced his fingers together and brought them against his forehead, racking
+            his brain to try and figure a way to solve this. From what he saw, the Loki he met was a good person, as far
+            as he could tell. Maybe a little strange, but from everything Vuko had told him so far, it was
+            justifiable.</span></p>
+    <p class="c2"><span class="c6">&quot;I... I don&#39;t want him hurt, if we can help it. You two seemed to have some
+            kind of understanding back then, so maybe, if the time comes, you can try and talk sense into him.&quot;
+        </span><span class="c0">It wasn&#39;t much of an idea, but it was all Muro had.</span><span
+            class="c6">&nbsp;&quot;If we can make him understand that version of him understand that we aren&#39;t his
+            enemies and we had nothing to do with what happened to him, maybe that will at least stop him from trying to
+            kill us outright.&quot; </span><span class="c8 c0">His tone was skeptical, but still somewhat
+            hopeful.</span></p>
+    <hr>
+    <p class="c2 c4"><span class="c1"></span></p>
+    <p class="c2"><span class="c12">Vuko:</span></p>
+    <p class="c2"><span class="c6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- &ldquo;I&rsquo;m pretty sure
+            talking won&rsquo;t help. We could try it however. For the sake of your peace of mind.&rdquo; - </span><span
+            class="c0">He takes a deep breath, as if to prepare Muro for the worse.</span><span class="c6">&nbsp;-
+            &ldquo;But I need you to be ready. Be ready to help me take him down when the time comes. I can&rsquo;t do
+            it by myself.&rdquo; - </span><span class="c0">Vuko takes a few steps forward, placing himself in front of
+            Muro, takes a knee, and place his hands on his shoulders.</span><span class="c1">&nbsp;- &ldquo;Can I count
+            on you?&rdquo;</span></p>
+    <hr>
+    <p class="c2 c4"><span class="c1"></span></p>
+    <p class="c2"><span class="c9">Muro:</span></p>
+    <p class="c2"><span class="c0">Muro laughed, just a singular, coarse guffaw.</span><span
+            class="c6">&nbsp;&quot;Always.&quot; </span><span class="c8 c0">He didn&#39;t relish the idea of turning his
+            weapons on an ally, &nbsp;but if it came to it, Muro was more than ready to defend family. Muro would have
+            continued, but suddenly a familiar voice filled the cabin, making use of the speaker within Muro&#39;s
+            Hydroid.</span></p>
+    <p class="c2 c4"><span class="c8 c0"></span></p>
+    <p class="c2"><span class="c5">Aurelia:</span></p>
+    <p class="c2"><span class="c6">&quot;Muro, I&#39;ve finished with the Orbiter purge. You can come back now, if
+            you&#39;d like. However, If you don&#39;t mind, I have a few things I want you to...&quot; </span><span
+            class="c0">At this moment, &nbsp;the voice pauses, seemingly realizing where their operator was, as well as
+            their current company.</span><span class="c6">&nbsp;&quot;Ah, Vuko, darling! It&#39;s been eons! How have
+            you been? &nbsp;How&#39;s your socially stunted Cephalon?&quot; </span><span class="c8 c0">Her voice was
+            cheerful, talking as if they were all meeting over tea. Muro blushed slightly, embarrassed by his
+            Cephalon&#39;s general lack of tact.</span></p>
+    <p class="c2 c4"><span class="c9"></span></p>
+    <p class="c2"><span class="c10">Muro:</span></p>
+    <p class="c2"><span class="c6">&quot;Aurelia! Read the room, will ya?&quot; </span><span class="c0">Muro said,
+            visibly flustered</span><span class="c6">&nbsp;&quot;And I thought I told you not to talk through my
+            Warframe like that! It creeps people out!&quot; </span><span class="c0">&nbsp;He turned back towards Vuko, a
+            mixture of embarrassment and irritation on his face.</span><span class="c6">&nbsp;&quot;Well, if she&#39;s
+            coming after me, I should probably get going. Just let me know when you&#39;re ready to talk to him.&quot;
+        </span><span class="c0">In a brief moment, Muro transferred back into his frame and began to head for the exit.
+            Before he reached it, however, he paused, turning towards Vuko once again.</span><span
+            class="c1">&nbsp;&quot;To be honest, I think getting all this out in the open will be good for all of
+            us.&quot;</span></p>
+    <hr>
+    <p class="c2 c4"><span class="c1"></span></p>
+    <p class="c2"><span class="c3">Ide:</span></p>
+    <p class="c2"><span class="c6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+            class="c0">Unexpectedly, a passive-aggressive voice starts ringing throughout the ship, in response to what
+            came out of Muro&rsquo;s warframe.</span><span class="c6">&nbsp;- &ldquo;I&rsquo;M FINE. AND WHAT DO YOU
+            CARE ALL OF THE SUDDEN. HMPH.&rdquo; - </span><span class="c8 c0">The cephalon says accusingly.</span></p>
+    <p class="c2 c4"><span class="c8 c0"></span></p>
+    <p class="c2"><span class="c12">Vuko:</span></p>
+    <p class="c2"><span class="c6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- &ldquo;Ide, what&rsquo;s gotten
+            into you! First you don&rsquo;t want to talk to me at all, and now you&rsquo;re shouting at Aurelia?! She at
+            least is being kind and supportive!&rdquo; - </span><span class="c0">He responds to his
+            cephalon.</span><span class="c1">&nbsp;- &ldquo;I&rsquo;m fine Aurelia, thank you for asking.&rdquo;</span>
+    </p>
+    <p class="c2 c4"><span class="c1"></span></p>
+    <p class="c2"><span class="c3">Ide:</span></p>
+    <p class="c2"><span class="c6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ldquo;OH! So it&rsquo;s all my fault
+            now?! And how dare you compare that bitch to me?!&rdquo; - </span><span class="c0">She shouts back to the
+            Tenno.</span><span class="c6">&nbsp;- &ldquo;HOW DARE YOU JUST LEAVE FOR HALF A MILLENNIUM IN SOME DUSTY OLD
+            HANGAR LIKE I&rsquo;M A DISPOSABLE OBJECT!!&rdquo; - </span><span class="c0">The screaming of the cephalon
+            making the entire scimitar tremble.</span><span class="c1">&nbsp;- &ldquo;AND ON TOP OF THAT YOU RAN OFF
+            WITH THAT PINK HAIRED BIMBO!!!&rdquo;</span></p>
+    <p class="c2 c4"><span class="c1"></span></p>
+    <p class="c2"><span class="c12">Vuko:</span></p>
+    <p class="c2"><span class="c6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- &ldquo;DON&rsquo;T YOU DARE TALK
+            LIKE THAT ABOUT KUVE! NOT NOW. NOT EVER. OR I SWEAR TO THE VOID I WILL CRASH YOUR IDIOTIC CEPHALON BRAIN
+            INTO THE SUN!&rdquo; - </span><span class="c0">He continues the screaming competition. Vuko turns on his
+            feet towards Muro, steam fuming from his nostrils.</span><span class="c6">&nbsp;- &ldquo;Khkhkm. Now would
+            be the perfect time to go.&rdquo; - </span><span class="c0">He says in the calmest way he can, which right
+            now sounds kinda aggressive.</span></p>
+    <hr>
+    <p class="c2 c4"><span class="c1"></span></p>
+    <p class="c2"><span class="c5">Aurelia:</span></p>
+    <p class="c2"><span class="c8 c0">Through hijacking Muro&#39;s speakers for a moment, Aurelia managed a
+            courteous-sounding response.</span></p>
+    <p class="c2"><span class="c1">&quot;A pleasure as always, Ide dear. Glad to see you haven&#39;t lost a step in all
+            these years.&quot;</span></p>
+    <p class="c2 c4"><span class="c1"></span></p>
+    <p class="c2"><span class="c9">Muro:</span></p>
+    <p class="c2"><span class="c0">From within his frame, Muro wasn&#39;t sure if Aurelia was being sincere or not.
+            Being honest, he was never any good at telling when she was spewing decency or veiled derision. Regardless,
+            he knew he had to stop her before she went too far. He was good at shrugging off her snide comments, but he
+            had a feeling Ide wouldn&#39;t be as accommodating.</span><span class="c6">&nbsp; &nbsp;&quot;Aurelia, can
+            you stop poking her please? I think you&#39;ve done enough.&quot; </span><span class="c8 c0">The only
+            response he received was a satisfied &quot;hmph.&quot; It would have to do.</span></p>
+    <p class="c2 c4"><span class="c8 c0"></span></p>
+    <p class="c2"><span class="c5">Aurelia:</span></p>
+    <p class="c2"><span class="c8 c0">&#39;There he goes again&#39;, she thought to herself, &#39;assuming the worst of
+            me.&#39; &nbsp;At least Vuko still had some manners, a fact she greatly appreciated. that satisfaction began
+            to melt away however, as the the shouting match between Vuko &nbsp;and his Cephalon heated up. Both Muro and
+            Aurelia could only linger there, enraptured as the two of them screamed at each other with unexpected fury.
+            As Vuko gave them the calmest sign she thought he could manage that they should leave, Aurelia whispered to
+            Muro, her voice losing some of its own cool confidence.</span></p>
+    <p class="c2 c4"><span class="c8 c0"></span></p>
+    <p class="c2"><span class="c1">&quot;He may be right, Muro. We should probably leave. Now would be
+            good.&quot;</span></p>
+    <p class="c2 c4"><span class="c1"></span></p>
+    <p class="c2"><span class="c9">Muro:</span></p>
+    <p class="c2"><span class="c8 c0">Muro could only nod mutely to Aurelia&#39;s suggestion, giving Vuko a slight bow
+            before walking quickly out of the ship. Whatever was going to happen next, he was sure he wanted nothing to
+            do with it. As he gained more distance from the Scimitar, which, upon looking back, he swore he could see
+            heat waves emanating from, his stride slowed, his feet leading him back to his own Liset. Thinking back for
+            a moment, he remember what brought Aurelia to the party in the first place.</span></p>
+    <p class="c2"><span class="c6">&quot;So, uh, you said you had stuff you wanted me to get for home?&quot;
+        </span><span class="c8 c0">He could almost feel the conversational whiplash Aurelia was experiencing with that
+            question, but he needed to get the awkward burden of what they just left off his shoulders.</span></p>
+    <p class="c2 c4"><span class="c8 c0"></span></p>
+    <p class="c2"><span class="c5">Aurelia:</span></p>
+    <p class="c2"><span class="c8 c0">Still slightly-off balance by that awkward social situation, Muro&#39;s sudden
+            question was rather jarring. Within a moment or two, she managed to compose herself.</span></p>
+    <p class="c2"><span class="c1">&quot;Yes, actually. It&#39;s a just a few things. That Cetus place I&#39;ve read
+            about seems like it has some interesting d&eacute;cor that could help the bearer parts of the Orbiter while
+            I get the plants that died replaced. Speaking of that, there are few plant species that I don&#39;t
+            currently have the seeds for that I simply must have for the planters near the Transference room.
+            They&#39;re mostly on Earth, so they should be easy enough for you to find later on.&quot;</span></p>
+    <p class="c2 c4"><span class="c1"></span></p>
+    <p class="c2"><span class="c9">Muro:</span></p>
+    <p class="c2"><span class="c8 c0">Muro nodded along to her list. Ever the perfectionist, not that he didn&#39;t
+            appreciate the results. Aurelia paused for a moment, a rare occurrence for her once she had gotten into one
+            of her diatribes.</span></p>
+    <p class="c2 c4"><span class="c8 c0"></span></p>
+    <p class="c2"><span class="c5">Aurelia:</span></p>
+    <p class="c2"><span class="c1">&quot;You know, essentially having to redo all the work I had done to make that
+            Orbiter look presentable seems to be a small price to pay for getting to, in essence sleep through those
+            centuries while you were out. What I&#39;m trying to say is... Thank you.&quot;</span></p>
+    <p class="c2 c4"><span class="c1"></span></p>
+    <p class="c2 c4"><span class="c9"></span></p>
+    <p class="c2 c4"><span class="c9"></span></p>
+    <p class="c2"><span class="c10">Muro:</span></p>
+    <p class="c2"><span class="c6">&quot;Oh. Um, you&#39;re welcome, I guess. Well, might as well get started on those
+            errands. Send me the coordinates for the first location, if you would.&quot; </span><span class="c8 c0">Muro
+            heard what sounded like Aurelia clearing her throat, before donning a more professional, yet happy
+            tone.</span></p>
+    <p class="c2 c4"><span class="c8 c0"></span></p>
+    <p class="c2"><span class="c5">Aurelia:</span></p>
+    <p class="c2"><span class="c1">&quot;Of course, Operator. The first set of coordinates have been uploaded to the
+            Liset. Best of luck.&quot;</span></p>
+    <p class="c2 c4"><span class="c1"></span></p>
+    <p class="c2"><span class="c6">[End RP]</span></p>
+</body>
+
+</html>

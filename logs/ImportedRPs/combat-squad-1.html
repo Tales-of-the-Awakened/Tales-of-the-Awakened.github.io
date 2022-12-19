@@ -1,0 +1,792 @@
+<html>
+
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link rel="stylesheet" href="../../css/solarized-dark.min.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/imported.css" />
+    <style type="text/css">
+        ol {
+            margin: 0;
+            padding: 0
+        }
+
+        table td,
+        table th {
+            padding: 0
+        }
+
+        .c7 {
+            border-right-style: solid;
+            border-top-width: 0pt;
+            border-right-width: 0pt;
+            padding-left: 0pt;
+            border-left-width: 0pt;
+            border-top-style: solid;
+            border-left-style: solid;
+            border-bottom-width: 0pt;
+            border-bottom-style: solid;
+            padding-right: 0pt
+        }
+
+        .c11 {
+            -webkit-text-decoration-skip: none;
+            font-weight: 400;
+            text-decoration: underline;
+            vertical-align: baseline;
+            text-decoration-skip-ink: none;
+            font-family: "Arial";
+            font-style: normal
+        }
+
+        .c3 {
+            padding-top: 0pt;
+            padding-bottom: 0pt;
+            line-height: 1.14;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        .c5 {
+            font-weight: 400;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-family: "Arial";
+            font-style: normal
+        }
+
+        .c8 {
+            text-decoration: none;
+            vertical-align: baseline;
+            font-family: "Arial";
+            font-style: normal
+        }
+
+        .c13 {
+            font-weight: 400;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-family: "Arial"
+        }
+
+        .c17 {
+            background-color: #ffffff;
+            max-width: 468pt;
+            padding: 72pt 72pt 72pt 72pt
+        }
+
+        .c14 {
+            text-decoration-skip-ink: none;
+            -webkit-text-decoration-skip: none;
+            text-decoration: underline
+        }
+
+        .c6 {
+            color: inherit;
+            text-decoration: inherit
+        }
+
+        .c1 {
+            font-weight: 700
+        }
+
+        .c4 {
+            height: 11pt
+        }
+
+        .c0 {
+            font-size: 12pt
+        }
+
+        .c9 {
+            margin-right: 5pt
+        }
+
+        .c15 {
+            font-size: 11pt
+        }
+
+        .c2 {
+            font-style: italic
+        }
+
+        .c10 {
+            font-size: 10.5pt
+        }
+
+        .c12 {
+            margin-right: 3pt
+        }
+
+        .c16 {
+            margin-right: 15pt
+        }
+
+        .title {
+            padding-top: 0pt;
+            font-size: 26pt;
+            padding-bottom: 3pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        .subtitle {
+            padding-top: 0pt;
+            color: #666666;
+            font-size: 15pt;
+            padding-bottom: 16pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        li {
+            font-size: 11pt;
+            font-family: "Arial"
+        }
+
+        p {
+            margin: 0;
+            font-size: 11pt;
+            font-family: "Arial"
+        }
+
+        h1 {
+            padding-top: 20pt;
+            font-size: 20pt;
+            padding-bottom: 6pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        h2 {
+            padding-top: 18pt;
+            font-size: 16pt;
+            padding-bottom: 6pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        h3 {
+            padding-top: 16pt;
+            color: #434343;
+            font-size: 14pt;
+            padding-bottom: 4pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        h4 {
+            padding-top: 14pt;
+            color: #666666;
+            font-size: 12pt;
+            padding-bottom: 4pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        h5 {
+            padding-top: 12pt;
+            color: #666666;
+            font-size: 11pt;
+            padding-bottom: 4pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        h6 {
+            padding-top: 12pt;
+            color: #666666;
+            font-size: 11pt;
+            padding-bottom: 4pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            font-style: italic;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+    </style>
+</head>
+
+<body>
+    <p class="c3 c4"><span class="c5 c15"></span></p>
+    <p class="c3 c4 c12"><span class="c5 c15"></span></p>
+    <h1 class="c7 c3 c16" id="h.fgxm3yy6dyiw"><span class="c0">Welcome to the beginning of the </span><span
+            class="c1 c0">#combat-squad-1</span><span class="c5 c0">&nbsp;channel.</span></h1>
+    <h2 class="c7 c3" id="h.hduhhmqcg1xh"><span class="c1 c0">Mataeru - Mataeru Lloria</span><span
+            class="c8 c1 c0">05/22/2018</span></h2>
+    <p class="c3"><span class="c1 c0">RP Format</span><span class="c0"><br><br></span><span class="c1 c0">[Closed
+            RP]</span><span class="c0"><br>-Primary Location, Secondary Location within Primary-<br>&lt;IC Date, IC
+            Time&gt; (Use 24 hour system: 2/11, 13:04)<br><br>Character Name:<br>*Actions/Thoughts/Writing are italic
+            (Put </span><span class="c0 c2">&#39;s At the beginning and end of action text)</span><span
+            class="c0"><br>&quot;Speech is in Quotations.&quot;<br>~General environemnt descriptions are in
+            Tildes~<br><br></span><span class="c1 c0">[End RP IC Time, IC Date]</span><span class="c0"><br><br>RP Host
+            is responsible for logging the RP.<br>Logs and Instructions on how to log are located here:<br></span><span
+            class="c0 c14"><a class="c6"
+                href="https://www.google.com/url?q=https://drive.google.com/drive/folders/0BzkD7CN5CB24R041aWRWVUJVVDA?usp%3Dsharing&amp;sa=D&amp;source=editors&amp;ust=1671327048467056&amp;usg=AOvVaw0GKkNgai767ff_0MVp5SIV">https://drive.google.com/drive/folders/0BzkD7CN5CB24R041aWRWVUJVVDA?usp=sharing</a></span><span
+            class="c0"><br><br>Removing RP logs or altering the events that happened inside will result in a permanent
+            ban from the clan.<br><br></span><span class="c1 c0">Combat Formatting</span><span class="c0"><br>Type your
+            combat actions as you normally would, just keep in mind you must write in a period of 7 seconds, and make a
+            note of how many AP each action/set of actions takes in total.<br><br></span><span class="c1 c0">STRICT TURN
+            BASED COMBAT WILL BE ENFORCED. ONE POST PER PERSON UNTIL THE TURN CYCLE IS COMPLETE</span><span
+            class="c0"><br><br>Ex.<br><br>Mataeru:<br></span><span class="c0 c2">He sets his sight on a Grineer lancer
+            and draws his bowstrnig back, taking aim, and fires (2AP)<br>Mata then ducks back behind cover while
+            simultaneously drawing another arrow and knocking it to his string (1AP)<br>He holds behind cover for a
+            moment to let his shields regen (1AP) and then moves out of cover, taking aim once more, drawing his
+            bowstring, and firing (3AP)</span><span class="c5 c0">(edited)</span></p>
+    <hr>
+    <p class="c3 c4"><span class="c5 c0"></span></p>
+    <p class="c3 c9"><span class="c5 c10">May 29, 2018</span></p>
+    <h2 class="c7 c3" id="h.1a6drod7jduv"><span class="c1 c0">Mataeru - Mataeru Lloria</span><span
+            class="c8 c1 c0">05/29/2018</span></h2>
+    <p class="c3"><span class="c0">[Closed RP: </span><span class="c0">@Mataeru - Mataeru Lloria</span><span
+            class="c0">&nbsp;</span><span class="c0">@Rozencratz - Devros von Inie</span><span
+            class="c0">&nbsp;</span><span class="c0">@leirynot - Isa Tekchen</span><span class="c0">&nbsp;]<br>[Lua,
+            Ruins, approximately 810 meters from Sanctuary]<br>[4/3, 11:26]<br><br>~Mataeru has kept a watchful eye out
+            for any sign of Grineer soldiers, but has been met with nothing so far. Fearing that the enemy has moved on
+            deeper, he leads his squad further into the ruins of Lua in search of their
+            prey~<br><br>Mataeru:<br><br></span><span class="c0 c2">He pauses in a sitting room and steps out of his
+            Warframe, holding a hand up to signal the other two Tenno to hold position as well</span><span
+            class="c5 c0"><br>&quot;We will hold here for a few moments. I need to analyze the map and plot a modified
+            route for when we double back... I do not like how uneventful this has been.&quot;</span></p>
+    <hr>
+    <p class="c3 c4"><span class="c5 c0"></span></p>
+    <p class="c3 c9"><span class="c5 c10">May 30, 2018</span></p>
+    <h2 class="c7 c3" id="h.is4rf7wuk218"><span class="c1 c0">Rozencratz - Devros von Inie</span><span
+            class="c8 c1 c0">05/30/2018</span></h2>
+    <p class="c3"><span class="c1 c0">Devros von Inie</span><span class="c0"><br></span><span class="c0 c2">Devros, in
+            his Feyarch Operon Prime and his kubrow, follow close behind, his Lenz at the ready for any action. As he
+            saw Mata give the order, he stopped and flopped down on one of the benches, laying his Lenz next to him and
+            letting out a sigh</span><span class="c0"><br><br>&ldquo;Aye, I was &lsquo;oping to already leave some
+            bodies behind, but they&rsquo;r keeping real silent or real deep&rdquo;<br><br></span><span
+            class="c13 c0 c2">The boy spoke up through the metal of his warframe as he inspected his forearm and with a
+            shrug flicks it off him. Probably a bug.</span></p>
+    <hr>
+    <p class="c3 c4"><span class="c5 c0"></span></p>
+    <h2 class="c7 c3" id="h.plk7tat8yjrl"><span class="c1 c0">leirynot - Isa Tekchen</span><span
+            class="c8 c1 c0">05/30/2018</span></h2>
+    <p class="c3"><span class="c0">Isa:<br></span><span class="c0 c2">Isa remained at the ready as they stopped,
+            occasionally looking down the sights of her Argonak to look for any enemies highlighted in its
+            sights.</span><span class="c0"><br>&quot;You are certain you read their location correctly? Grineer
+            aren&#39;t generally known for their elusiveness.&quot;<br></span><span class="c0 c2">Isa turned to look at
+            Mataeru</span><span class="c5 c0"><br>&quot;Unless perhaps, a group of Sentients got to them first, or
+            perhaps the Lotus&#39;s Tenno. Then again, lack of any signs of conflict make that unlikely.&quot;</span>
+    </p>
+    <hr>
+    <p class="c3 c4"><span class="c5 c0"></span></p>
+    <h2 class="c7 c3" id="h.nu9yd5n78jzh"><span class="c1 c0">Mataeru - Mataeru Lloria</span><span
+            class="c8 c1 c0">05/30/2018</span></h2>
+    <p class="c3"><span class="c0">Mataeru:<br><br></span><span class="c0 c2">he looks up at Isa</span><span
+            class="c0"><br>&quot;I am sure I read it correctly, but I could have made a mistake. Unless they had Seekers
+            and latchers posted in areas we did not see...&quot;<br></span><span class="c0 c2">he pulls a data pad off
+            his belt and starts scrolling along the map, looking for the most likely route the Grineer would be hiding
+            in</span><span class="c5 c0"><br><br>(Their current room)</span></p>
+    <p class="c3"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 400.00px; height: 225.33px;"><img
+                alt="" src="images/image9.png"
+                style="width: 400.00px; height: 225.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <hr>
+    <p class="c3 c4"><span class="c5 c0"></span></p>
+    <p class="c3 c9"><span class="c5 c10">June 1, 2018</span></p>
+    <h2 class="c7 c3" id="h.cygvaasnl8e2"><span class="c1 c0">Mataeru - Mataeru Lloria</span><span
+            class="c8 c1 c0">06/01/2018</span></h2>
+    <p class="c3"><span class="c0">@leirynot - Isa Tekchen</span><span class="c0">&nbsp;</span><span
+            class="c5 c0">@Rozencratz - Devros von Inie</span></p>
+    <hr>
+    <p class="c3 c4"><span class="c5 c0"></span></p>
+    <h2 class="c7 c3" id="h.o5vzem8p7cn"><span class="c1 c0">Rozencratz - Devros von Inie</span><span
+            class="c8 c1 c0">06/01/2018</span></h2>
+    <p class="c3"><span class="c1 c0">Devros von Inie</span><span class="c0"><br></span><span class="c0 c2">Devros
+            hummed under his breath</span><span class="c0"><br><br>&ldquo;Hardly, these gadgets have
+            use&rdquo;<br><br></span><span class="c0 c2">He stood up and fished out one of Simaris&rsquo; codex
+            scanners, pointing towards it</span><span class="c0"><br><br>&ldquo;If thay were about, we would av seen em
+            by naw&rdquo;<br><br>*He picks up the Lenz from the bench and straps it on his back, taking some hoofed
+            steps towards the main door. Garhul trots close to the Oberon, keeping his ears on alert and his nose
+            searching for anything suspicious.<br><br>&ldquo;Maybe they got pulled back? Or waiting in
+            ambush&hellip;&rdquo;<br><br></span><span class="c13 c0 c2">He cocked his head to the side as he peaked
+            beyond the room, trying to catch any signs of activity</span></p>
+    <hr>
+    <p class="c3 c4"><span class="c0 c5"></span></p>
+    <h2 class="c7 c3" id="h.ednrvzmt7lwq"><span class="c1 c0">leirynot - Isa Tekchen</span><span
+            class="c8 c1 c0">06/01/2018</span></h2>
+    <p class="c3"><span class="c0">Isa:<br></span><span class="c0 c2">She nods and turns to Devros and
+            speaks.</span><span class="c0"><br>&quot;I&#39;ll keep watch for Mataeru to check his map if you&#39;re
+            going to look around.&quot;<br></span><span class="c13 c0 c2">She takes up a more exposed position than
+            where Mataeru currently is, but it does provide a good vantage point over the area. She peers about,
+            occasionally looking down the sights of her Argonak. She would switch to a scanner, but wanted to keep her
+            weapon ready in case of an ambush.</span></p>
+    <hr>
+    <p class="c3 c4"><span class="c5 c0"></span></p>
+    <h2 class="c7 c3" id="h.s8hkvf6fk1pc"><span class="c1 c0">Mataeru - Mataeru Lloria</span><span
+            class="c8 c1 c0">06/01/2018</span></h2>
+    <p class="c3"><span class="c0">~Suddenly, from the door the Tenno entered and two others on the sides of the room
+            comes the sound of gunfire accompanied by a yell of &quot;Rarfrem spotter! Tre gos to
+            kower!&quot;~<br></span><span class="c11 c0"><a class="c6"
+                href="https://www.google.com/url?q=https://youtu.be/C34BzC7rnos&amp;sa=D&amp;source=editors&amp;ust=1671327048475778&amp;usg=AOvVaw2fyNXNWVClGKOA6RNEpVW1">https://youtu.be/C34BzC7rnos</a></span>
+    </p>
+    <p class="c3"><span class="c11 c0"><a class="c6"
+                href="https://www.google.com/url?q=https://www.youtube.com/&amp;sa=D&amp;source=editors&amp;ust=1671327048476424&amp;usg=AOvVaw1bVidgFBPL0lvzEEntxO7r">YouTube</a></span>
+    </p>
+    <p class="c3"><span class="c11 c0"><a class="c6"
+                href="https://www.google.com/url?q=https://www.youtube.com/user/GeNeRaLAdilo&amp;sa=D&amp;source=editors&amp;ust=1671327048476827&amp;usg=AOvVaw01vzvAnkCNxgH-_A2n1HDd">GeNeRaLAdilo</a></span>
+    </p>
+    <p class="c3"><span class="c0 c11"><a class="c6"
+                href="https://www.google.com/url?q=https://youtu.be/C34BzC7rnos&amp;sa=D&amp;source=editors&amp;ust=1671327048477158&amp;usg=AOvVaw3770_vX5Wb5EvOZkOtV392">FFX
+                Main Battle Theme</a></span></p>
+    <p class="c3"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 400.00px; height: 300.00px;"><img
+                alt="" src="images/image7.jpg"
+                style="width: 400.00px; height: 300.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c3"><span class="c11 c0"><a class="c6"
+                href="https://www.google.com/url?q=https://docs.google.com/document/d/1dm95s9yekpD4QOVGf3owJE0iRqD_jqYMrdHxb5OIcBY/edit%23&amp;sa=D&amp;source=editors&amp;ust=1671327048477857&amp;usg=AOvVaw1fu_NpRMZvepNegJyo3mTc">https://docs.google.com/document/d/1dm95s9yekpD4QOVGf3owJE0iRqD_jqYMrdHxb5OIcBY/edit#</a></span>
+    </p>
+    <p class="c3"><span class="c5 c0">Google Docs</span></p>
+    <p class="c3"><span class="c11 c0"><a class="c6"
+                href="https://www.google.com/url?q=https://docs.google.com/document/d/1dm95s9yekpD4QOVGf3owJE0iRqD_jqYMrdHxb5OIcBY/edit&amp;sa=D&amp;source=editors&amp;ust=1671327048478507&amp;usg=AOvVaw3iByCbjjnbg7Xf59CZNmYp">Player
+                Rules | Info You Should Know</a></span></p>
+    <p class="c3"><span class="c5 c0">Combat and Action Rules Turn Sequence: Each turn in combat consists of a 7 second
+            phase where players and/or NPC&rsquo;s perform actions in the same 7 seconds and react to the to the other
+            sides behavior in their actions. Action Points (AP): Action Points are a resource that ...</span></p>
+    <p class="c3"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 80.00px; height: 42.67px;"><img
+                alt="" src="images/image8.png"
+                style="width: 80.00px; height: 42.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c3"><span class="c0">========Combat Intialized========<br>====Turn 1====<br></span><span
+            class="c1 c0">Enemy Phase:</span><span class="c0"><br><br>~Current Enemies in sight:<br>Elite Lancer x 4 -
+            Karak | Sheev<br>Trooper x 2 - Hek | Sheev~<br><br></span><span class="c1 c0">Grineer Lancer 1:</span><span
+            class="c0">&nbsp;(Approximately Medium range from Mataeru, who is currently situated near the two tables in
+            the picture. The lancer is on the platform where Mata is standing in void mode in the
+            picture)<br><br></span><span class="c0 c2">The Lancer sprints forward from the doorway on one of the raised
+            sections and kneels behind the rail</span><span class="c0"><br>(1 AP)<br><br></span><span class="c0 c2">He
+            then Leans over the rail and opens fire on Mataeru, aiming down sights</span><span class="c0"><br>(3 AP | 1
+            AP Aiming | 2 AP firing [Due to range, average potential for 2 hits])<br><br></span><span
+            class="c0 c2">After opening fire, the Lancer ducks back down behind cover and reaches for a Grenade on his
+            bandolier, arming it, and throwing it over at Mataeru</span><span class="c0"><br>(2 AP | 1 AP Taking cover
+            and grabbing grenade | 1 AP Throwing grenade)<br><br></span><span class="c0 c2">After throwing the Lancer
+            remains behind cover to allow his allies to draw hostile fire</span><span class="c5 c0"><br>(1 AP | 1 AP
+            Taking Cover)<br>====(edited)</span></p>
+    <p class="c3"><span class="c1 c0">Grineer Troopers 1 &amp; 2: </span><span class="c0">(Approximately Medium range
+            from Mata and Devros. These two soldiers come running up behind Mata and Devros on the same terrain
+            level.)<br><br></span><span class="c0 c2">Both Troopers run through the door the Tenno came through opening
+            fire with their Heks on Mataeru and Devros, chargin in a nearly Kamikaze way, then strafing in two different
+            directions, With the trooper on the right shooting at Mataeru, and the trooper on the left shooting at
+            Devros, moving from Medium to Close range</span><span class="c0"><br>(3 AP | 1 AP to close the distance from
+            Medium range to Close range, and 2 AP strafing and firing<br>[Due to Weapon type, Hits are guaranteed, but
+            damage is reduced due to range])<br><br></span><span class="c0 c2">After the second shot from both Troopers,
+            they duck behind cover, the right Trooper dropping behind the rail between himself, Mata and Devros,
+            remaining hunkered down for a couple seconds before opening fire once more.</span><span
+            class="c0"><br>(Right Trooper: 4 AP | 1 AP taking cover, 2 AP in cover, 1 AP opening fire<br>[Due to Weapon
+            type, Hits are guaranteed, but damage is reduced due to range])<br><br></span><span class="c0 c2">The
+            trooper on the left side pauses for a second, scanning his location for a place to take cover. Upon seeing
+            the plant bed behind him he turns and makes a dash for it, remaining shielded for a moment before standing
+            and opening fire once more.</span><span class="c5 c0"><br>(Left Trooper: 4 AP | 1 AP to scan for cover, 1 AP
+            to run to cover, 1 AP in cover, 1 AP opening fire<br>[Due to Weapon type, Hits are guaranteed, but damage is
+            reduced due to range])<br>====(edited)</span></p>
+    <hr>
+    <p class="c3 c4"><span class="c5 c0"></span></p>
+    <h2 class="c7 c3" id="h.avsbe8vlpc5w"><span class="c1 c0">Mataeru - Mataeru Lloria</span><span
+            class="c8 c1 c0">06/01/2018</span></h2>
+    <p class="c3"><span class="c1 c0">Lancers 2, 3 &amp; 4:</span><span class="c0">&nbsp;(These troopers on the same
+            level as Isa, in Close range)<br><br></span><span class="c0 c2">The Lancer trio runs through the door on the
+            level Isa is on, coming up behind her and pausing for a moment before opening fire on her and yelling every
+            Grineer insult that comes to mind</span><span class="c0"><br>(4 AP | 1 Moving to Isa&#39;s location, 1 AP
+            pause, 2 AP of firing [Due to range, high potential of 6 hits])<br><br></span><span class="c0 c2">After
+            opening fire, two of the Lancers run back for the door they entered from and attempt to duck out of sight,
+            while the 3rd starts walking back slowly continuing to fire at the Saryn</span><span class="c0"><br>(Left
+            Lancer 1 AP - End of Turn | 1 AP Running)<br>(Right Lancer 1 AP - End of Turn | 1 AP Running)<br>(Middle
+            Lancer 3 AP | 3 AP Shooting the Saryn &amp; Moving backwards [Due to range high potential for 3
+            hits)<br><br></span><span class="c1 c0">Tenno Phase:</span><span class="c5 c0">(edited)</span></p>
+    <hr>
+    <p class="c3 c4"><span class="c5 c0"></span></p>
+    <h2 class="c7 c3" id="h.glsivrna37y6"><span class="c1 c0">Mataeru - Mataeru Lloria</span><span
+            class="c8 c1 c0">06/01/2018</span></h2>
+    <p class="c3"><span class="c0">Mataeru:<br><br></span><span class="c0 c2">At the first sound of the Grineer presence
+            Mata transfers back into his Warframe, taking a hit from the Lancer above and behind him, and upon doing so,
+            rolling to his left successfully dodging more damage from the Lancer and also putting more distance between
+            himself and the Troopers.</span><span class="c0"><br>(2 AP | 1 AP Transference, 1 AP Roll) | Damage Taken to
+            Shields: 5 = (3 Base + 2 </span><span class="c1 c0">Impact</span><span class="c0">) + 6 ( 2 [shotgun range
+            penalty - 6] + 1 </span><span class="c1 c0">Puncture</span><span class="c0">)x2<br><br><br></span><span
+            class="c0 c2">He then pulls out a pair of his Spira Prime and throws them at the left trooper</span><span
+            class="c0"><br>[Due to weapon range, chance to miss is average]<br>3 AP | 3 AP throwing Spira | Damage Dealt
+            to Health: 9 (1 Base + 2 </span><span class="c1 c0">Viral</span><span class="c0">)x3<br>Damage Taken to
+            Shields: 10 (5 [shotgun range penalty - 3] + 1 </span><span class="c1 c0">Puncture</span><span
+            class="c5 c0">)x2<br><br>*After his target takes cover, Mataeru drops a smoke bomb, covering himself with
+            cloaking nanites and sprints up to the right side trooper, *<br>2 AP | 1 AP Smoke Screen | 1 AP
+            Movement<br><br>Total damage to Mataeru:<br>21 Shield Damage<br><br>Total Damage to Grineer Trooper:<br>9
+            Health Damage(edited)</span></p>
+    <hr>
+    <p class="c3 c4"><span class="c5 c0"></span></p>
+    <p class="c3 c9"><span class="c5 c10">June 2, 2018</span></p>
+    <h2 class="c7 c3" id="h.t91pdcwigk8m"><span class="c1 c0">Rozencratz - Devros von Inie</span><span
+            class="c8 c1 c0">06/02/2018</span></h2>
+    <p class="c3"><span class="c1 c0">Devros von Inie</span><span
+            class="c0"><br>&ldquo;Shite!&rdquo;<br><br></span><span class="c0 c2">Devros yells out as bullets start
+            whizzing around him, a couple of pellets from the Hek&rsquo;s grazing across his left side but before more
+            can land he quickly rolls to the side, to take cower behind some nearby rocks (1AP) Garhul following
+            close<br><br>He grabs his Lenz and pulls back the string. He waits for the firing to subside before he pops
+            out of cover to shoot the explosive dart at the grineer hiding behind the plant bed, tanking some loose
+            shots aimed at him (3AP - 1 &nbsp;AP to nock arrow, 1 AP to draw string AND aim, and 1 AP to fire and draw
+            another arrow)<br><br>He quickly ducks behind his cover once more (1AP?) and looks towards Isa&rsquo;s
+            location. Hearing a whole lot of firing going on there. The Oberon and his companion, will dash out of cover
+            to slide across the room and duck behind one of the pillars, waiting for another round of shots to go by
+            before he can assist Isa (2 AP - 1 for running across and 1 for taking cover)</span><span
+            class="c5 c0">(edited)</span></p>
+    <hr>
+    <p class="c3 c4"><span class="c5 c0"></span></p>
+    <h2 class="c7 c3" id="h.wlmd078zyapf"><span class="c1 c0">leirynot - Isa Tekchen</span><span
+            class="c8 c1 c0">06/02/2018</span></h2>
+    <p class="c3"><span class="c0">Isa:<br></span><span class="c0 c2">Isa hears the gunfire of the Grineer firing at
+            Mataeru and is about to assist when she hears footsteps behind her. She immediately molts, stepping forward
+            as she does so, putting the molted skin between her and the Grineer as they fire, allowing it to take the
+            hits for her. She then turns to face the Grineer.</span><span class="c0">&nbsp;(Move+molt combined: 1
+            AP)<br><br></span><span class="c0 c2">Taking aim at the Trooper that remained, she fires twice with her
+            Argonak in semi automatic mode.</span><span class="c0">&nbsp;(Aim + fire + fire: 3AP)<br><br></span><span
+            class="c0 c2">She then bolted and slid into cover</span><span class="c5 c0">&nbsp;(Move + Slide + Take
+            cover: 3AP)</span></p>
+    <hr>
+    <p class="c3 c4"><span class="c5 c0"></span></p>
+    <p class="c3 c9"><span class="c5 c10">June 3, 2018</span></p>
+    <h2 class="c7 c3" id="h.2ndvt2f5m989"><span class="c1 c0">Mataeru - Mataeru Lloria</span><span
+            class="c8 c1 c0">06/03/2018</span></h2>
+    <p class="c3"><span class="c5 c0">========Turn Ended========</span></p>
+    <hr>
+    <p class="c3 c4"><span class="c5 c0"></span></p>
+    <p class="c3 c9"><span class="c5 c10">June 4, 2018</span></p>
+    <h2 class="c7 c3" id="h.n591jjp33war"><span class="c1 c0">Mataeru - Mataeru Lloria</span><span
+            class="c8 c1 c0">06/04/2018</span></h2>
+    <p class="c3"><span class="c0">====Turn 2====<br></span><span class="c1 c0">Enemy Phase</span><span
+            class="c0"><br></span><span class="c1 c0">Grineer Lancer 1</span><span class="c0"><br></span><span
+            class="c0 c2">He stands up from his crouched place behind the railing and looks for the Ash momentarily and
+            then yells at the Trooper on the ground: &quot; Get ut Troopehr! Tenno klos by!&quot;</span><span
+            class="c0"><br>(3 AP | 1 AP looking | 2 AP yelling)<br><br></span><span class="c0 c2">After he finishes
+            firing he takes aim at </span><span class="c1 c0 c2">Devros&#39;</span><span class="c0 c2">&nbsp;location
+            and opens fire</span><span class="c0"><br>(4 AP | 1 AP to aim | 3 AP firing) [Due to Elevation Bonus + Aim
+            bonus - Range Penalty, chance to hit is average]<br>Damage Potential 5 - 15 SP damage. (3 base + 2
+        </span><span class="c1 c0">Impact</span><span class="c5 c0">)x1 to 3 hits(edited)</span></p>
+    <p class="c3"><span class="c0">====<br></span><span class="c1 c0">Trooper 1</span><span class="c0"><br></span><span
+            class="c0 c2">Due to the blast from the Lenz, the trooper is sent flying out of his location and slams into
+            the wall behind him. An audible snap is heard followed by the trooper falling to the ground
+            lifeless.</span><span class="c0"><br>0 AP Fatal Damage from wall impact<br><br></span><span
+            class="c1 c0">Trooper 2</span><span class="c0"><br></span><span class="c0 c2">Upon hearing his squadmate
+            call out, he immediately sprints from his location back in the direction of the door he came through.
+            Towards the Bombard and four additional Elite Lancers entering the room.</span><span class="c0"><br>3 AP
+            Movement to Medium Range<br><br></span><span class="c0 c2">He then joins the group, filing in between the
+            Lancers as they march in</span><span class="c5 c0"><br>4 AP | 1 AP to move into position. No additional AP
+            spent due to ineefective weapon range</span></p>
+    <p class="c3"><span class="c0">====<br></span><span class="c1 c0">Lancers 2 &amp; 3</span><span
+            class="c0"><br></span><span class="c0 c2">The two of them flee while their counter part draws cover from the
+            Saryn. and disappear back through the door they entered by</span><span class="c0"><br>2 AP (The rest is
+            irrelevant due to them being out of sight Unless Isa follows them. </span><span class="c0">@leirynot - Isa
+            Tekchen</span><span class="c0">&nbsp;let me know in DMs if she will follow them and I will explain what they
+            do if she walks in. Note, if you want to see what they would do, she is locked in to entering that
+            doorway)<br><br></span><span class="c1 c0">Lancer 4</span><span class="c0"><br></span><span
+            class="c0 c2">The Saryns Bullets end him with vicious efficiency and he falls, his head torn to pieces by
+            her bullets</span><span class="c5 c0"><br>====</span></p>
+    <p class="c3"><span class="c1 c0">Bombard</span><span class="c0"><br></span><span class="c0 c2">The Squad leader of
+            the Grineer fires a rocket in the direction of </span><span class="c1 c0 c2">Devros&#39;</span><span
+            class="c0 c2">&nbsp;hiding place, moving forward slowly behind his squad, stopping near the stairs in the
+            middle of the room, firing another rocket at Devros location</span><span class="c5 c0"><br>7 AP | &nbsp;3 AP
+            to move across 3 range tiers | 4 AP to charge and fire 2 rockets</span></p>
+    <hr>
+    <p class="c3 c4"><span class="c5 c0"></span></p>
+    <h2 class="c7 c3" id="h.9l26rhnxhaat"><span class="c1 c0">Mataeru - Mataeru Lloria</span><span
+            class="c8 c1 c0">06/04/2018</span></h2>
+    <p class="c3"><span class="c1 c0">Lancers 5, 6, 7, 8</span><span class="c0"><br></span><span class="c0 c2">All four
+            Lancers open fire on Devros hiding spot in an effort to pin him down or deal heavy damage if he does attempt
+            to avoid the Bombard rockets, while simultaneously spreading out and partially taking cover</span><span
+            class="c0"><br><br></span><span class="c1 c0">Lancer 5</span><span class="c0"><br></span><span
+            class="c0 c2">He moves with the Bombard forward, but then breaks off to take cover behind the flower garden
+            where the First trooper was, firing constantly at Devros position</span><span class="c0"><br>7 AP | Moving
+            and firing<br>[Due to range penalty, average chance to hit]<br>Damage Potential 15 - 30 SP damage (3 base +
+            2 </span><span class="c1 c0">Impact</span><span class="c0">)x6 + 3 AR damage (3 base + 0 </span><span
+            class="c1 c0">impact</span><span class="c0">)x1<br><br></span><span class="c1 c0">Lancer 6</span><span
+            class="c0"><br></span><span class="c0 c2">Stays with the group before moving ahead of the Bombard and
+            crouches behind the planter pot in front of him, maintaining fire on </span><span
+            class="c1 c0 c2">Devros&#39;</span><span class="c0 c2">&nbsp;location</span><span class="c0"><br>7 AP |
+            Movement and firing<br>Damage Potential 15 - 30 SP damage (3 base + 2 </span><span
+            class="c1 c0">Impact</span><span class="c0">)x6 + 3 AR damage (3 base + 0 </span><span
+            class="c1 c0">impact</span><span class="c0">)x1<br><br></span><span class="c1 c0">Lancer 7</span><span
+            class="c0"><br>The Lancer sticks close to the Bombard, partially using him as cover as he too fires on
+        </span><span class="c1 c0">Devros&#39;</span><span class="c0">&nbsp;hiding spot.<br>Damage Potential 15 - 30 SP
+            damage (3 base + 2 </span><span class="c1 c0">Impact</span><span class="c0">)x6 + 3 AR damage (3 base + 0
+        </span><span class="c1 c0">impact</span><span class="c0">)x1<br><br></span><span class="c1 c0">Lancer
+            8</span><span class="c0"><br>This Lancer sprints ahead of the group towards </span><span
+            class="c1 c0">Devros&#39;</span><span class="c5 c0">&nbsp;location in an attempt to either flush him out of
+            his hiding spot, or to gain a better shot.<br>7 AP | Movement(edited)</span></p>
+    <p class="c3"><span class="c5 c0">Total ptential Damage if Devros moves from his location:<br>30 SP damage + 12 AR
+            damage (minimum) 30 SP damage, 22 AR damage + 17 HP damage (maximum)</span></p>
+    <hr>
+    <p class="c3 c4"><span class="c5 c0"></span></p>
+    <p class="c3 c9"><span class="c5 c10">June 5, 2018</span></p>
+    <h2 class="c3 c7" id="h.nn6e3kbsbh67"><span class="c1 c0">Rozencratz - Devros von Inie</span><span
+            class="c8 c1 c0">06/05/2018</span></h2>
+    <p class="c3"><span class="c1 c0">Devros von Inie</span><span class="c0"><br></span><span class="c0 c2">Devros
+            hunkers down, trying to make his frame as thin as possible as shots bounce all around him, some scraping
+            along his left shoulder. He grit his teeth and glance towards Garhul, who is crouched down beside him,
+            bullets whizzing over his head.</span><span class="c0">&nbsp;&ldquo;Crap&hellip;I think it&rsquo;s time for
+            the crash eh?&rdquo;<br><br></span><span class="c0 c2">The Oberon peeks from his cover when the bullets have
+            taken a rest, just to see a bombard advancing on his position.</span><span
+            class="c0">&nbsp;&ldquo;Cock!&rdquo; </span><span class="c0 c2">He yells as he and his companion quickly
+            jump to another hiding spot, just as the rockets land on his previous one. In the process the Lancers hack
+            away at his and Garhul&rsquo;s shields with their constant firing before he managed to skid down near the
+            flower bed (1AP for movement)<br><br>However the firing still continues and he can&rsquo;t even take a peek
+            or jump up to return fire. He looks at his kubrow, bleeding in some places as well from behind caught by the
+            hailstorm.</span><span class="c0">&nbsp;&ldquo;They want me? FINE!&rdquo; *The boy equips his Venka prime
+            and waits, listening for something other than bullets. Footsteps. Smiling, he looks towards his companion
+            and nods. (1AP for equiping)<br><br></span><span class="c0 c2">At the same time, both the Oberon and the
+            Raksa kubrow jump out of the hiding place, but both running around different sides to engage in a clear
+            barbarian way. Devros will dash towards </span><span class="c1 c0 c2">Lancer 8</span><span
+            class="c0 c2">&nbsp;to sink his claws in the grineers chest in a head first collision, not caring if his
+            shield is depleted by this time from the firing, even if his health is taking a pounding. He will then keep
+            running, advancing towards </span><span class="c1 c0 c2">Lancer 6</span><span class="c0 c2">&nbsp;with
+        </span><span class="c1 c0 c2">Lancer 8</span><span class="c0 c2">&nbsp;still dangling from his Venka, being held
+            up like a flesh shield. (3 AP &ndash; 1 for engaging &ndash; 1 for using the Venkas &ndash; 1 for
+            running)</span><span class="c5 c0">(edited)</span></p>
+    <p class="c3"><span class="c0 c2">Devros will then throw </span><span class="c1 c0 c2">Lancer 8</span><span
+            class="c0 c2">&nbsp;towards the closest cluster as he jumps towards </span><span class="c1 c0 c2">Lancer
+            6</span><span class="c0 c2">&nbsp;to sink his Venka in to him as well (2 AP &ndash; 1 for throwing &ndash; 1
+            for slashing) He can feel his frame taking a huge pounding from the firing now since he&#39;s out in the
+            open, but he doesn&#39;t seem to care.<br><br>Meanwhile, Garhul looped around to </span><span
+            class="c1 c0 c2">Lancer 5</span><span class="c0 c2">&nbsp;to try and incapacitate him by using his sheer
+            size and force to gnaw at him.</span><span class="c5 c0">(edited)</span></p>
+    <hr>
+    <p class="c3 c4"><span class="c5 c0"></span></p>
+    <p class="c3 c9"><span class="c5 c10">June 6, 2018</span></p>
+    <h2 class="c7 c3" id="h.dyp6qtadqo6x"><span class="c1 c0">Mataeru - Mataeru Lloria</span><span
+            class="c8 c1 c0">06/06/2018</span></h2>
+    <p class="c3"><span class="c0">Mataeru:<br></span><span class="c0 c2">He looks at the fleeing Trooper the Lancer
+            warned and Teleports to him, quickly shoving his dagger into the Troopers lower back, hooking the curved
+            edge of the blade around his spine and yanking it out, severing his spine. The trooper falls to the floor
+            with a grunt, a pool of blood forming around his corpse</span><span class="c0"><br>2 AP | 1 AP For teleport
+            and stab | 1 AP for hook and kill<br></span><span class="c1 c0">Energy - 2</span><span
+            class="c0"><br><br></span><span class="c0 c2">A black smoke then appears in midair near where the Trooper
+            died as Mataeru activates his Bladestorm, and a couple moments later two Ash spectres appear on top of
+            Lancers 6 and 7, while the Bombard squad leader sinks to knee while being attacked by some unseen
+            force</span><span class="c0"><br>4 AP | 2 AP to mark targets, | 2 AP for Bladestorm attack<br>Damage to all
+            targets Health: 20 + Slash Proc (+ 2 damage per AP for 2 AP)<br></span><span class="c1 c0">Energy: -
+            15</span><span class="c0"><br><br></span><span class="c0 c2">Mataeru then rolls to the side towards the
+            planter near where the first trooper was killed as his cloak expires, leaving him once more in the
+            open</span><span class="c5 c0"><br>1 AP | 1 AP movement(edited)</span></p>
+    <hr>
+    <p class="c3 c4"><span class="c5 c0"></span></p>
+    <p class="c3 c9"><span class="c5 c10">June 8, 2018</span></p>
+    <h2 class="c7 c3" id="h.wgppsp8tq1s9"><span class="c1 c0">leirynot - Isa Tekchen</span><span
+            class="c8 c1 c0">06/08/2018</span></h2>
+    <p class="c3"><span class="c0">Isa:<br></span><span class="c0 c2">Isa quickly swapped over to her Broken War as the
+            trooper fell and activated her Toxic Lash.</span><span class="c0">&nbsp;(Swap 1 AP) </span><span
+            class="c0 c2">She then jumps after them through the door (move/ability combo 1AP), wall jumping through the
+            doorway, soaring over their heads, she bounces off the wall and swings at the closest one with her corrosive
+            blade as she glides by.</span><span class="c0">&nbsp;(1 AP move + attack combo)<br><br></span><span
+            class="c0 c2">She hits the ground now and slides towards the other, slicing at his midsection with the
+            Sentient blade now.</span><span class="c0">&nbsp;(1 AP slide + attack combo) </span><span class="c0 c2">She
+            jumps up once she is past him and bounces off the wall, bullet jumping out of the room.</span><span
+            class="c5 c0">&nbsp;(1 AP move, 1 AP bullet jump)<br><br>(Focus passives: All Madurai passives)</span></p>
+    <hr>
+    <p class="c3 c4"><span class="c5 c0"></span></p>
+    <p class="c3 c9"><span class="c5 c10">June 10, 2018</span></p>
+    <h2 class="c7 c3" id="h.q5nlax3ocutz"><span class="c1 c0">Mataeru - Mataeru Lloria</span><span
+            class="c8 c1 c0">06/10/2018</span></h2>
+    <p class="c3"><span class="c5 c0">========Turn Ended========</span></p>
+    <hr>
+    <p class="c3 c4"><span class="c5 c0"></span></p>
+    <p class="c3 c9"><span class="c5 c10">June 12, 2018</span></p>
+    <h2 class="c7 c3" id="h.2i7ydzby2n89"><span class="c1 c0">Mataeru - Mataeru Lloria</span><span
+            class="c8 c1 c0">06/12/2018</span></h2>
+    <p class="c3"><span class="c5 c0">=====Turn 3=====<br>====Enemy Phase====(edited)</span></p>
+    <p class="c3"><span class="c1 c0">Bombard</span><span class="c0"><br></span><span class="c0 c2">After the assault
+            from the inivisible foe, the Bombard stands again, and takes aim on Devros, currently standing over the
+            Corpse of his foe, and lifts his fist, slamming it hard intot he ground, sending out a shockwave that throws
+            Devros off his feet</span><span class="c0"><br>3 AP | 1 AP Standing up | 2 AP Fist slam<br>[Movement penalty
+            due to forced knockdown. </span><span class="c1 c0">Devros</span><span class="c0">&nbsp;must spend 3 AP
+            recovering from knockdown.]<br>Guaranteed Damage </span><span class="c1 c0">Blast</span><span
+            class="c0"><br></span><span class="c0 c2">The bombard then resumes his standing posture once more and
+            charges up another rocket, firing it at Devros as he starts moving backwards, before turning to sprint in
+            the direction of the Lancer on the platform above</span><span class="c5 c0"><br>4 AP | 1 AP standing | 2 AP,
+            charging and shooting | 1 AP running towards the platform</span></p>
+    <hr>
+    <p class="c3 c4"><span class="c5 c0"></span></p>
+    <h2 class="c7 c3" id="h.8vjayubzf5lk"><span class="c1 c0">Mataeru - Mataeru Lloria</span><span
+            class="c8 c1 c0">06/12/2018</span></h2>
+    <p class="c3"><span class="c1 c0">Elite Lancer 1</span><span class="c0"><br></span><span class="c0 c2">He notices
+            the Ash appear a short ways away from the Bombard and takes aim, opening fire on the Ash yelling to the
+            Bombard and Lancer below:</span><span class="c0">&nbsp;&quot;Ash rafrem spotter! Attaf!&quot;<br>7 AP | 1 AP
+            aiming | 6 AP Shooting<br>[Due to range chance to hit is average]<br>Potential damage 5 </span><span
+            class="c1 c0">SP</span><span class="c0">&nbsp;damage to 16 </span><span class="c1 c0">SP</span><span
+            class="c0">&nbsp;damage + 3 </span><span class="c1 c0">AR</span><span class="c0">&nbsp;damage to 9
+        </span><span class="c1 c0">AR</span><span class="c5 c0">&nbsp;damage</span></p>
+    <p class="c3"><span class="c1 c0">Elite Lancer 5</span><span class="c0"><br></span><span class="c0 c2">The Kubrow
+            grabs the Lancer&#39;s ankle, yanking his leg out from under him</span><span class="c0"><br>[Knockdown
+            Penalty - 2 AP]<br></span><span class="c0 c2">The Lancer kicks at the Kubrow to get it off his leg and
+            pushes himself back across teh floor with his legs, shooting at Garhul as he scoots back before pulling
+            himself to his feet</span><span class="c0"><br>5 AP | 3 AP scoot shooting | 2 AP standing up again<br>[Due
+            to range bonus, all attacks will hit]<br>Guaranteed Damage 10 </span><span class="c1 c0">SP</span><span
+            class="c0">&nbsp;damage + 3 </span><span class="c1 c0">AR</span><span
+            class="c5 c0">&nbsp;damage<br><br>====Tenno Phase====(edited)</span></p>
+    <hr>
+    <p class="c3 c4"><span class="c5 c0"></span></p>
+    <p class="c3 c9"><span class="c5 c10">June 13, 2018</span></p>
+    <h2 class="c7 c3" id="h.m28uswwnlnxa"><span class="c1 c0">Rozencratz - Devros von Inie</span><span
+            class="c8 c1 c0">06/13/2018</span></h2>
+    <p class="c3"><span class="c1 c0">Devros von Inie</span><span class="c0"><br></span><span class="c0 c2">The Oberon
+            yanks his venka from the chest of his latest victim and let&rsquo;s out a sigh. Well the wild charge
+            didn&rsquo;t go so bad, his shield was bonkers and his armor almost gone as well. A loud slam brought his
+            attention to the bombard, the shockwave throwing him a few meters backwards to land with a heavy bang on his
+            back, uncomfortably landing on top of the Lenz.</span><span class="c0">&nbsp;<br><br>&ldquo;Son of a-&ldquo;
+            <br><br></span><span class="c0 c2">He quickly pushes himself off the ground and jumps to the side, rolling
+            to avoid the oncoming rocket (4AP &ndash; 3 for recovery &ndash; 1 for movement) Getting up at the end of
+            the roll, he will break in to a mad dash to run straight towards the bombard. While in movement, Devros will
+            sheathe his Venka and pull out his Sonicor, firing one explosive round at him, trying to ragdoll him before
+            he runs away. (3AP &ndash; 1 for switching weapons &ndash; 1 for firing &ndash; 1 for movement)</span><span
+            class="c0"><br><br></span><span class="c1 c0">Garhul</span><span class="c0"><br></span><span
+            class="c0 c2">Garhul let&rsquo;s out a low whine as the Lancer kicks him in mis muzzle, making him let go of
+            his ankle. However, he doesn&#39;t pursue the grinner as he notices the Oberon&#39;s shields have depleted
+            and runs towards Devros to replenish it, following after Devros&#39; movement direction which is towards the
+            bombard (7AP)</span><span class="c5 c0">(edited)</span></p>
+    <hr>
+    <p class="c3 c4"><span class="c5 c0"></span></p>
+    <p class="c3 c9"><span class="c5 c10">June 16, 2018</span></p>
+    <h2 class="c7 c3" id="h.xjmp32ymtrrg"><span class="c1 c0">leirynot - Isa Tekchen</span><span
+            class="c8 c1 c0">06/16/2018</span></h2>
+    <p class="c3"><span class="c0">Isa:<br></span><span class="c0 c2">Having dealt with her group of opponents, Isa
+            surveys the battlefield and spots the Bombard. Choosing it as her priority target, she casts a spore on
+            it.</span><span class="c0">&nbsp;(1 AP)<br></span><span class="c0 c2">She then takes aim and &nbsp;fire two
+            shots at him.</span><span class="c0">&nbsp;(3 AP) </span><span class="c0 c2">With her toxic lash still
+            active, any hit should spread the spores to anything hostile nearby. Between the attacks of her teammates
+            and the spores, he should go down quickly. &nbsp;With him likely dealt with, she turns to the remaining
+            lancer, taking aim and firing two shots.</span><span class="c5 c0">&nbsp;(3 AP)(edited)</span></p>
+    <hr>
+    <p class="c3 c4"><span class="c5 c0"></span></p>
+    <p class="c3 c9"><span class="c5 c10">June 17, 2018</span></p>
+    <h2 class="c7 c3" id="h.lu803p7r3f5d"><span class="c1 c0">Mataeru - Mataeru Lloria</span><span
+            class="c8 c1 c0">06/17/2018</span></h2>
+    <p class="c3"><span class="c0">Mataeru:<br></span><span class="c0 c2">His radar displays that Isa has arrived in the
+            room, so he shifts his focus to the Lancer on the platform and teleports to the Lancer, shoving his Karyst
+            into his chest</span><span class="c0"><br>4 AP | 1 AP viewing combat area | 1 AP Teleport | 2 AP
+            finisher<br></span><span class="c0 c1">Energy</span><span class="c0">&nbsp;use: 2<br><br></span><span
+            class="c0 c2">He then holsters his Karyst and draws his Attica, taking aim on the Bombard</span><span
+            class="c5 c0"><br>3 AP | 2 AP Holstering and drawing | 1 AP Aiming</span></p>
+    <p class="c3"><span class="c5 c0">========Turn Ended========</span></p>
+    <p class="c3"><span class="c0">====Turn 4====<br>====Enemy Phase====<br><br></span><span
+            class="c1 c0">Bombard</span><span class="c0"><br></span><span class="c0 c2">The hit from the Sonicor stagger
+            the soldier briefly, knocking him off balance</span><span class="c0"><br>2 AP | 2 AP stagger<br></span><span
+            class="c0 c2">After recovering, he slowly makes ready to jump up to the platform, but the spores drastically
+            weakened his vitality, and he collapses to his knees, before falling lifeless to the ground</span><span
+            class="c5 c0">(edited)</span></p>
+    <p class="c3"><span class="c1 c0">Elite Lancer 1</span><span class="c0"><br></span><span class="c13 c0 c2">He keeps
+            firing in the direction of the Ash before gurgling a shocked response to the Karyst shoved into his throat,
+            slumping to the ground, The bullets from Isa&#39;s Argonak tear into his body, causing him to fall off the
+            platform and to the ground, dead</span></p>
+    <hr>
+    <p class="c3 c4"><span class="c5 c0"></span></p>
+    <p class="c3 c9"><span class="c5 c10">June 19, 2018</span></p>
+    <h2 class="c7 c3" id="h.eswpq2ifjh57"><span class="c1 c0">Mataeru - Mataeru Lloria</span><span
+            class="c8 c1 c0">06/19/2018</span></h2>
+    <p class="c3"><span class="c1 c0">Elite Lancer 5</span><span class="c0"><br></span><span class="c0 c2">He ceases his
+            firing as he notices the last members of his squad are dead, and he looks down at his body in a panic at the
+            corrosive spores eating away at his armor. He lets out a brief shriek of terror as he runs for the doors,
+            collapsing only a few feet away as the spores corroded his already weak and deteriorating body beyond the
+            point of no return</span><span class="c5 c0">(edited)</span></p>
+    <p class="c3"><span class="c5 c0">====Combat End====(edited)</span></p>
+    <hr>
+    <p class="c3 c4"><span class="c5 c0"></span></p>
+    <p class="c3 c9"><span class="c5 c10">June 21, 2018</span></p>
+    <h2 class="c7 c3" id="h.ck005mnqx8js"><span class="c1 c0">Rozencratz - Devros von Inie</span><span
+            class="c8 c1 c0">06/21/2018</span></h2>
+    <p class="c3"><span class="c1 c0">Devros von Inie</span><span class="c0"><br></span><span class="c0 c2">The Oberon
+            came to a halt in front of the collapsed bombard, and with a kick makes sure that the fucker is indeed dead.
+            Smiling, the will lift his head towards the Ash and put the Sonicor back in it&rsquo;s place</span><span
+            class="c5 c0"><br><br>&ldquo;Easy cleanup lads!&rdquo;<br><br>*He dusts his hands off and look towards his
+            companion, who is standing beside him. Giving Garhul a pet on the head for a good job. Looks like no healing
+            is required so far so Devros holds off on his renewal. He lifts his head towards his
+            allies<br><br>&ldquo;You think that&rsquo;s all of them?&rdquo;</span></p>
+    <hr>
+    <p class="c3 c4"><span class="c5 c0"></span></p>
+    <p class="c3 c9"><span class="c5 c10">June 25, 2018</span></p>
+    <h2 class="c7 c3" id="h.9ffebl3le2um"><span class="c1 c0">Mataeru - Mataeru Lloria</span><span
+            class="c8 c1 c0">06/25/2018</span></h2>
+    <p class="c3"><span class="c0">Mataeru:<br></span><span class="c0 c2">His Ash hops down to the ground below the
+            platform and looks around</span><span class="c0"><br>&quot;I certainly hope so. Being ambushed by the
+            targets we are hunting is not enjoyable...&quot;<br></span><span class="c0 c2">He looks at Devros, and then
+            at Garhul</span><span class="c5 c0"><br>&quot;Are you both okay? You took a significant amount of
+            fire...&quot;</span></p>
+    <hr>
+    <p class="c3 c4"><span class="c5 c0"></span></p>
+    <h2 class="c7 c3" id="h.fnycmmoqfd1b"><span class="c1 c0">leirynot - Isa Tekchen</span><span
+            class="c8 c1 c0">06/25/2018</span></h2>
+    <p class="c3"><span class="c0">Isa:<br></span><span class="c13 c0 c2">As the other two chat, Isa quietly takes out
+            her sword and uses it to ensure any of the Grineer that are intact enough that they might be alive are, in
+            fact, dead. She does so by removing the heads of any that still have them. She is not one to take
+            chances.</span></p>
+    <hr>
+    <p class="c3 c4"><span class="c5 c0"></span></p>
+    <p class="c3 c9"><span class="c5 c10">July 4, 2018</span></p>
+    <h2 class="c7 c3" id="h.1n3nzmz6v1a0"><span class="c1 c0">Rozencratz - Devros von Inie</span><span
+            class="c1 c0 c8">07/04/2018</span></h2>
+    <p class="c3"><span class="c1 c0">Devros von Inie</span><span class="c0"><br></span><span class="c0 c2">The Oberon
+            smirked, brushing invisible dust off his shoulder</span><span class="c0"><br><br>&ldquo;Psh! Me an&#39;
+            Garhul dayle wi&#39; fire loike dat constantly&rdquo;<br><br></span><span class="c0 c2">He smirked and
+            twirled his optics towards the Saryn that just went around the room decapitating the grineer. He tilts his
+            head and walks over to one of the heads that rolled away. Lowering himself, he picks it up and grabs the
+            mask part of it, chucking the naked head to the side.</span><span class="c0"><br><br>&ldquo;Oy!Yyer tink dis
+            is enoof ter eejit dem?&rdquo;<br><br></span><span class="c0 c2 c13">He yells out as he puts the mask on his
+            Oberon&rsquo;s face which looks kinda silly on him as it is obviously too small for the frames face.
+            Shrugging his shoulders the Oberon will start walking towards the door with his Lenz at the ready, his
+            kubrow following close behind</span></p>
+    <hr>
+    <p class="c3 c4"><span class="c5 c0"></span></p>
+    <p class="c3 c9"><span class="c5 c10">July 22, 2018</span></p>
+    <h2 class="c7 c3" id="h.qh0188qfzjwo"><span class="c1 c0">Mataeru - Mataeru Lloria</span><span
+            class="c8 c1 c0">07/22/2018</span></h2>
+    <p class="c3"><span class="c0">Mataeru:<br>&quot;I suspect that we will not be seeing Grineer in this area again,
+            yes.&quot;<br></span><span class="c0 c2">He turns to look at Isa</span><span class="c5 c0"><br>&quot;We
+            should all probably hurry and look for the Corpus squadron so we can get Isa a crewman&#39;s suit... Are you
+            both ready to go?&quot;</span></p>
+    <hr>
+    <p class="c3 c4"><span class="c5 c0"></span></p>
+    <h2 class="c7 c3" id="h.x1izqlx5791e"><span class="c1 c0">leirynot - Isa Tekchen</span><span
+            class="c8 c1 c0">07/22/2018</span></h2>
+    <p class="c3"><span class="c0">Isa:<br></span><span class="c13 c0 c2">Isa quietly nods her head, putting away her
+            sword and drawing her Argonak.</span></p>
+    <hr>
+    <p class="c3 c4"><span class="c5 c0"></span></p>
+    <p class="c3 c9"><span class="c5 c10">July 24, 2018</span></p>
+    <h2 class="c7 c3" id="h.6im2hf2q5ujy"><span class="c1 c0">Mataeru - Mataeru Lloria</span><span
+            class="c8 c1 c0">07/24/2018</span></h2>
+    <p class="c3"><span class="c8 c1 c0">[End RP, 11:28, 4/3]</span></p>
+    <p class="c3 c4"><span class="c5 c15"></span></p>
+</body>
+
+</html>

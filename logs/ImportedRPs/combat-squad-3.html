@@ -1,0 +1,982 @@
+<html>
+
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link rel="stylesheet" href="../../css/solarized-dark.min.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/imported.css" />
+    <style type="text/css">
+        ol {
+            margin: 0;
+            padding: 0
+        }
+
+        table td,
+        table th {
+            padding: 0
+        }
+
+        .c11 {
+            border-right-style: solid;
+            padding-top: 0pt;
+            border-top-width: 0pt;
+            border-right-width: 0pt;
+            padding-left: 0pt;
+            padding-bottom: 0pt;
+            line-height: 1.15;
+            border-left-width: 0pt;
+            border-top-style: solid;
+            border-left-style: solid;
+            border-bottom-width: 0pt;
+            border-bottom-style: solid;
+            orphans: 2;
+            widows: 2;
+            text-align: left;
+            padding-right: 0pt
+        }
+
+        .c2 {
+            margin-left: 15pt;
+            padding-top: 0pt;
+            padding-bottom: 0pt;
+            line-height: 1.15;
+            orphans: 2;
+            widows: 2;
+            text-align: left;
+            margin-right: 5pt
+        }
+
+        .c18 {
+            margin-left: 60pt;
+            padding-top: 12pt;
+            padding-bottom: 8pt;
+            line-height: 1.15;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        .c19 {
+            margin-left: 60pt;
+            padding-top: 9pt;
+            padding-bottom: 8pt;
+            line-height: 1.3;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        .c0 {
+            padding-top: 0pt;
+            padding-bottom: 0pt;
+            line-height: 1.15;
+            orphans: 2;
+            widows: 2;
+            text-align: left;
+            height: 11pt
+        }
+
+        .c21 {
+            margin-left: 72pt;
+            padding-top: 6pt;
+            padding-bottom: 8pt;
+            line-height: 1.15;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        .c16 {
+            margin-left: 60pt;
+            padding-top: 6pt;
+            padding-bottom: 8pt;
+            line-height: 1.15;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        .c17 {
+            margin-left: 60pt;
+            padding-top: 6pt;
+            padding-bottom: 8pt;
+            line-height: 1.3;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        .c3 {
+            margin-left: 60pt;
+            padding-top: 0pt;
+            padding-bottom: 2pt;
+            line-height: 1.3;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        .c15 {
+            padding-top: 0pt;
+            padding-bottom: 0pt;
+            line-height: 1.15;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        .c4 {
+            font-weight: 400;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-family: "Arial";
+            font-style: normal
+        }
+
+        .c7 {
+            text-decoration: none;
+            vertical-align: baseline;
+            font-family: "Arial";
+            font-style: normal
+        }
+
+        .c9 {
+            font-weight: 400;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-family: "Arial"
+        }
+
+        .c10 {
+            font-weight: 400;
+            vertical-align: baseline;
+            font-family: "Arial";
+            font-style: normal
+        }
+
+        .c20 {
+            background-color: #ffffff;
+            max-width: 468pt;
+            padding: 72pt 72pt 72pt 72pt
+        }
+
+        .c8 {
+            text-decoration-skip-ink: none;
+            -webkit-text-decoration-skip: none;
+            text-decoration: underline
+        }
+
+        .c13 {
+            color: inherit;
+            text-decoration: inherit
+        }
+
+        .c5 {
+            font-weight: 700
+        }
+
+        .c12 {
+            font-size: 11pt
+        }
+
+        .c6 {
+            font-style: italic
+        }
+
+        .c14 {
+            font-size: 10.5pt
+        }
+
+        .c1 {
+            font-size: 12pt
+        }
+
+        .title {
+            padding-top: 0pt;
+            font-size: 26pt;
+            padding-bottom: 3pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        .subtitle {
+            padding-top: 0pt;
+            color: #666666;
+            font-size: 15pt;
+            padding-bottom: 16pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        li {
+            font-size: 11pt;
+            font-family: "Arial"
+        }
+
+        p {
+            margin: 0;
+            font-size: 11pt;
+            font-family: "Arial"
+        }
+
+        h1 {
+            padding-top: 20pt;
+            font-size: 20pt;
+            padding-bottom: 6pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        h2 {
+            padding-top: 18pt;
+            font-size: 16pt;
+            padding-bottom: 6pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        h3 {
+            padding-top: 16pt;
+            color: #434343;
+            font-size: 14pt;
+            padding-bottom: 4pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        h4 {
+            padding-top: 14pt;
+            color: #666666;
+            font-size: 12pt;
+            padding-bottom: 4pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        h5 {
+            padding-top: 12pt;
+            color: #666666;
+            font-size: 11pt;
+            padding-bottom: 4pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        h6 {
+            padding-top: 12pt;
+            color: #666666;
+            font-size: 11pt;
+            padding-bottom: 4pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            font-style: italic;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+    </style>
+</head>
+
+<body>
+    <p class="c0"><span class="c4 c12"></span></p>
+    <h2 class="c11" id="h.j1eveu9fqim0"><span class="c5 c1">Mataeru - Mataeru Lloria</span><span
+            class="c7 c5 c1">05/22/2018</span></h2>
+    <p class="c3"><span class="c5 c1">RP Format</span><span class="c1"><br><br></span><span class="c5 c1">[Closed
+            RP]</span><span class="c1"><br>-Primary Location, Secondary Location within Primary-<br>&lt;IC Date, IC
+            Time&gt; (Use 24 hour system: 2/11, 13:04)<br><br>Character Name:<br>*Actions/Thoughts/Writing are italic
+            (Put </span><span class="c6 c1">&#39;s At the beginning and end of action text)</span><span
+            class="c1"><br>&quot;Speech is in Quotations.&quot;<br>~General environemnt descriptions are in
+            Tildes~<br><br></span><span class="c5 c1">[End RP IC Time, IC Date]</span><span class="c1"><br><br>RP Host
+            is responsible for logging the RP.<br>Logs and Instructions on how to log are located here:<br></span><span
+            class="c8 c1"><a class="c13"
+                href="https://www.google.com/url?q=https://drive.google.com/drive/folders/0BzkD7CN5CB24R041aWRWVUJVVDA?usp%3Dsharing&amp;sa=D&amp;source=editors&amp;ust=1671327055031377&amp;usg=AOvVaw3l-bfsChlxCf9jtTmIgPC3">https://drive.google.com/drive/folders/0BzkD7CN5CB24R041aWRWVUJVVDA?usp=sharing</a></span><span
+            class="c1"><br><br>Removing RP logs or altering the events that happened inside will result in a permanent
+            ban from the clan.<br><br></span><span class="c5 c1">Combat Formatting</span><span class="c1"><br>Type your
+            combat actions as you normally would, just keep in mind you must write in a period of 7 seconds, and make a
+            note of how many AP each action/set of actions takes in total.<br><br></span><span class="c5 c1">STRICT TURN
+            BASED COMBAT WILL BE ENFORCED. ONE POST PER PERSON UNTIL THE TURN CYCLE IS COMPLETE</span><span
+            class="c1"><br><br>Ex.<br><br>Mataeru:<br></span><span class="c6 c1">He sets his sight on a Grineer lancer
+            and draws his bowstrnig back, taking aim, and fires (2AP)<br>Mata then ducks back behind cover while
+            simultaneously drawing another arrow and knocking it to his string (1AP)<br>He holds behind cover for a
+            moment to let his shields regen (1AP) and then moves out of cover, taking aim once more, drawing his
+            bowstring, and firing (3AP)</span></p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <p class="c2"><span class="c4 c14">May 29, 2018</span></p>
+    <h2 class="c11" id="h.u32ll3m6jxae"><span class="c5 c1">Mataeru - Mataeru Lloria</span><span
+            class="c7 c5 c1">05/29/2018</span></h2>
+    <p class="c3"><span class="c1">[Closed RP: </span><span class="c1">@Almighty_Jado - Kapak</span><span
+            class="c1">&nbsp;</span><span class="c1">@Disruptis - Disruptis</span><span class="c1">&nbsp;</span><span
+            class="c1">@Nor_Urzak-Muro</span><span class="c4 c1">&nbsp;]<br>[Lua, Ruins approximately 670 meters from
+            Sanctuary]<br>[4/3, 10:47]<br><br>~The Tenno have wandered a fair distance away from Lua, having just passed
+            the halfway point to the end of their path, nearly 700km from Sanctuary. Their squad leader has brought them
+            this far, now all that remains is to find the first set of enemy forces~<br>(You may provide a screenshot of
+            the room you wish to fight in. Make sure it is large enough to accomodate 30 people that can be decently
+            spread out)</span></p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <h2 class="c11" id="h.pw0e4u2z520d"><span class="c5 c1">Disruptis - Disruptis</span><span
+            class="c7 c5 c1">05/29/2018</span></h2>
+    <p class="c3"><span class="c4 c1">Minimap</span></p>
+    <p class="c16"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 277.33px; height: 300.00px;"><img
+                alt="" src="images/combat-squad3-3.png"
+                style="width: 277.33px; height: 300.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c3"><span class="c4 c1">Landing Zone</span></p>
+    <p class="c16"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 400.00px; height: 225.33px;"><img
+                alt="" src="images/combat-squad3-9.jpg"
+                style="width: 400.00px; height: 225.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c3"><span class="c4 c1">Outside right corner</span></p>
+    <p class="c16"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 400.00px; height: 225.33px;"><img
+                alt="" src="images/combat-squad3-5.jpg"
+                style="width: 400.00px; height: 225.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c3"><span class="c4 c1">Outside left corner</span></p>
+    <p class="c16"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 400.00px; height: 225.33px;"><img
+                alt="" src="images/combat-squad3-4.jpg"
+                style="width: 400.00px; height: 225.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c3"><span class="c4 c1">Tunnels leading inside</span></p>
+    <p class="c16"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 400.00px; height: 225.33px;"><img
+                alt="" src="images/combat-squad3-2.jpg"
+                style="width: 400.00px; height: 225.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c3"><span class="c4 c1">Inside bridge</span></p>
+    <p class="c16"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 400.00px; height: 225.33px;"><img
+                alt="" src="images/combat-squad3-7.jpg"
+                style="width: 400.00px; height: 225.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c3"><span class="c4 c1">Inside bridge underside</span></p>
+    <p class="c16"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 400.00px; height: 225.33px;"><img
+                alt="" src="images/combat-squad3-6.jpg"
+                style="width: 400.00px; height: 225.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <p class="c2"><span class="c4 c14">May 30, 2018</span></p>
+    <h2 class="c11" id="h.4itma3iy99nl"><span class="c5 c1">Disruptis - Disruptis</span><span
+            class="c7 c5 c1">05/30/2018</span></h2>
+    <p class="c16"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 400.00px; height: 225.33px;"><img
+                alt="" src="images/combat-squad3-1.png"
+                style="width: 400.00px; height: 225.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <h2 class="c11" id="h.yn35t2wk1cjy"><span class="c5 c1">Disruptis - Disruptis</span><span
+            class="c7 c5 c1">05/30/2018</span></h2>
+    <p class="c3"><span class="c5 c1">Disruptis:</span><span class="c1"><br></span><span class="c6 c1">Powerful legs
+            ground into the cliff-side, scratching the stone as they ascended. Disruptis climbed up the face quickly,
+            reaching the top in about two minutes. Instead of pulling himself up however, he gripped on to the edge with
+            a cat-hang. He shifted his warframe&rsquo;s weight to his right arm as he tasked the other with reaching
+            into the merigold folds of his black cloak. The Limbo had been awake for a long time and was quite
+            old-school, perferring codex scanners over Symaris&rsquo;s enhanced and cutting-edge synthesis toolset. He
+            retrieved one and used it to look through rocky cliff-face and locate the positions of nearby enemies, for
+            the Tenno wasn&rsquo;t too keen on face-checking.</span><span class="c1"><br>((</span><span
+            class="c1">@Mataeru - Mataeru Lloria</span><span class="c4 c1">&nbsp;))</span></p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <p class="c2"><span class="c4 c14">May 31, 2018</span></p>
+    <h2 class="c11" id="h.pmxmcgghfso0"><span class="c5 c1">Almighty_Jado - Kapak</span><span
+            class="c7 c5 c1">05/31/2018</span></h2>
+    <p class="c3"><span class="c8 c1">Kapak:</span><span class="c1"><br></span><span class="c6 c1 c9">Kapak leaned his
+            figure against the rocks below Disruptis, watching him to see if he signaled anything.</span></p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <h2 class="c11" id="h.r077qnjpgse4"><span class="c5 c1">Nor_Urzak-Muro</span><span
+            class="c7 c5 c1">05/31/2018</span></h2>
+    <p class="c3"><span class="c1">Muro:<br></span><span class="c9 c6 c1">Muro crouches alongside Kapak, Zarr drawn,
+            eyeing Disruptis carefully, ready to spring upwards when given the order.</span></p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <h2 class="c11" id="h.awyvtthtoazm"><span class="c5 c1">Mataeru - Mataeru Lloria</span><span
+            class="c7 c5 c1">05/31/2018</span></h2>
+    <p class="c3"><span class="c4 c1">~There is a Scorch and four Elite Lancers standing on the landing platform above
+            the Tenno. Their voices can be faintly heard above the group on the platform above them:<br><br>Grinner
+            1:<br>&quot;Gar, krafe kley peremeter. Wey doht waht tre be kot kof gard!&quot;<br><br>Grineer
+            2:<br>&quot;Ahgre snopehr uhn posishun?&quot;<br><br>Grineer 1:<br>&quot;Yhos. Sekehr unets spotter tenno ah
+            ways kof urom eere. Wey ahve toom.&quot;~</span></p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <h2 class="c11" id="h.vy964xt80ncx"><span class="c5 c1">Disruptis - Disruptis</span><span
+            class="c7 c5 c1">05/31/2018</span></h2>
+    <p class="c3"><span class="c5 c1">Disruptis:</span><span class="c1"><br></span><span class="c6 c1">The Limbo turned
+            his audio transmitters off and switched to electronic communications.</span><span class="c1"><br>&ldquo;One
+            torch, four top-lance on top of the pad. They probably have overwatch somewhere too,&rdquo; </span><span
+            class="c6 c1">he reported, the tone of his voice portraying a seriousness the Tenno hadn&rsquo;t shown
+            yet,</span><span class="c1">&nbsp;&ldquo;Muro, you sneak around to the left behind the spire of rock and
+            climb it. Take out anyone on top as quietly as you can. It doesn&rsquo;t look like we&rsquo;re exactly the
+            stealthiest fighters, but I&rsquo;d like to take out the more annoying pieces before we light up our
+            guns.&rdquo; </span><span class="c6 c1">With a glance, he eyed Kapak&rsquo;s current loadout.</span><span
+            class="c1">&nbsp;&ldquo;Or&hellip; fists... Void, remind me never to fight you Kappa,&rdquo; </span><span
+            class="c6 c1">he added in a more light-hearted tune.</span><span class="c4 c1"><br><br>&ldquo;So, this is
+            the plan. Muro climbs the rock and secures it. Once he&rsquo;s green, I need you, Kappa, to chuck a larva
+            onto this platform so we cluster them together. Then I&rsquo;ll void dash into them, knocking them off the
+            cliff. As soon as we start, Muro tunnel-visions for anyone on the field holding a scope. At this point
+            we&rsquo;ll have a brawl so Kappa, leap in and take out anyone on the ground. Any suggestions?&rdquo;</span>
+    </p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <p class="c2"><span class="c4 c14">June 1, 2018</span></p>
+    <h2 class="c11" id="h.bagkyxhnuuno"><span class="c5 c1">Almighty_Jado - Kapak</span><span
+            class="c7 c5 c1">06/01/2018</span></h2>
+    <p class="c3"><span class="c8 c1">Kapak:</span><span class="c1"><br></span><span class="c6 c1">The burly Nidus
+            shivered for a moment at the mention of Grineer flame units, but quickly regained composure.</span><span
+            class="c1"><br>&ldquo;Sounds like a plan to me,&rdquo; </span><span class="c9 c6 c1">Kapak agreed, popping
+            the last of his block of cheese into his mouth.</span></p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <h2 class="c11" id="h.q97gqf6ec02x"><span class="c5 c1">Nor_Urzak-Muro</span><span
+            class="c7 c5 c1">06/01/2018</span></h2>
+    <p class="c3"><span class="c1">Muro:<br></span><span class="c9 c6 c1">Muro looks up at the tall rock formation,
+            slowly holstering his Zarr and pulling out his Fragor.</span></p>
+    <p class="c3"><span class="c4 c1">&quot;No questions here. Ready when you are.&quot;</span></p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <h2 class="c11" id="h.hz43h43azb5l"><span class="c5 c1">Disruptis - Disruptis</span><span
+            class="c7 c5 c1">06/01/2018</span></h2>
+    <p class="c3"><span class="c5 c1">Disruptis:</span><span class="c1"><br>&ldquo;Perfect,&rdquo; </span><span
+            class="c6 c1">Disruptis affirmed,</span><span class="c1">&nbsp;&ldquo;also I&rsquo;d like you to lemme know
+            if you see anyone else on the plateau or bridge once you get up.&rdquo; </span><span class="c6 c1">He softly
+            punched Muro&rsquo;s arm with a playful re-assurance.</span><span class="c4 c1">&nbsp;&ldquo;Get goin&rsquo;
+            man.&rdquo;</span></p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <h2 class="c11" id="h.trp9sc2n94f4"><span class="c5 c1">Almighty_Jado - Kapak</span><span
+            class="c7 c5 c1">06/01/2018</span></h2>
+    <p class="c3"><span class="c8 c1">Kapak:</span><span class="c1"><br>&ldquo;Yeah.&rdquo; </span><span
+            class="c6 c1">He gave Muro a two fingered salute and stood by.</span><span class="c4 c1"><br><br>((Literally
+            only posted this to conform to post order))</span></p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <h2 class="c11" id="h.h81us73dm0x7"><span class="c5 c1">Mataeru - Mataeru Lloria</span><span
+            class="c7 c5 c1">06/01/2018</span></h2>
+    <p class="c3"><span class="c8 c1"><a class="c13"
+                href="https://www.google.com/url?q=https://docs.google.com/document/d/1dm95s9yekpD4QOVGf3owJE0iRqD_jqYMrdHxb5OIcBY/edit?usp%3Ddrivesdk&amp;sa=D&amp;source=editors&amp;ust=1671327055037849&amp;usg=AOvVaw2uo4zQjrdGgs_J8mhJsO0F">https://docs.google.com/document/d/1dm95s9yekpD4QOVGf3owJE0iRqD_jqYMrdHxb5OIcBY/edit?usp=drivesdk</a></span>
+    </p>
+    <p class="c17"><span class="c4 c1">Google Docs</span></p>
+    <p class="c19"><span class="c10 c8 c1"><a class="c13"
+                href="https://www.google.com/url?q=https://docs.google.com/document/d/1dm95s9yekpD4QOVGf3owJE0iRqD_jqYMrdHxb5OIcBY/edit?usp%3Ddrivesdk&amp;sa=D&amp;source=editors&amp;ust=1671327055038379&amp;usg=AOvVaw0uxROdGpJBMBI1pw6kg8Fg">Player
+                Rules | Info You Should Know</a></span></p>
+    <p class="c19"><span class="c4 c1">Combat and Action Rules Turn Sequence: Each turn in combat consists of a 7 second
+            phase where players and/or NPC&rsquo;s perform actions in the same 7 seconds and react to the to the other
+            sides behavior in their actions. Action Points (AP): Action Points are a resource that ...</span></p>
+    <p class="c21"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 80.00px; height: 42.67px;"><img
+                alt="" src="images/combat-squad3-10.png"
+                style="width: 80.00px; height: 42.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c3"><span class="c8 c1 c10"><a class="c13"
+                href="https://www.google.com/url?q=https://youtu.be/C34BzC7rnos&amp;sa=D&amp;source=editors&amp;ust=1671327055038974&amp;usg=AOvVaw3q94Qih35L7waZyuM8BIt0">https://youtu.be/C34BzC7rnos</a></span>
+    </p>
+    <p class="c17"><span class="c10 c8 c1"><a class="c13"
+                href="https://www.google.com/url?q=https://www.youtube.com/&amp;sa=D&amp;source=editors&amp;ust=1671327055039268&amp;usg=AOvVaw2uKcyJjx3JRqzcYr3M01ar">YouTube</a></span>
+    </p>
+    <p class="c19"><span class="c10 c8 c1"><a class="c13"
+                href="https://www.google.com/url?q=https://www.youtube.com/user/GeNeRaLAdilo&amp;sa=D&amp;source=editors&amp;ust=1671327055039552&amp;usg=AOvVaw3y-esb_cYxFXu7fpYPG4RA">GeNeRaLAdilo</a></span>
+    </p>
+    <p class="c19"><span class="c10 c8 c1"><a class="c13"
+                href="https://www.google.com/url?q=https://youtu.be/C34BzC7rnos&amp;sa=D&amp;source=editors&amp;ust=1671327055039827&amp;usg=AOvVaw1zsAof5j8Ndyl_lDA-3gjC">FFX
+                Main Battle Theme</a></span></p>
+    <p class="c18"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 400.00px; height: 300.00px;"><img
+                alt="" src="images/combat-squad3-8.jpg"
+                style="width: 400.00px; height: 300.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c3"><span class="c1">========Combat Initialized========<br>Grinnner Squad:<br>x1 Scorch: Ignis<br>x8 Elite
+            Lancers: Karak<br>x2 Ballistas: Vulkar<br>x1 Heavy Gunner: Gorgon<br><br></span><span class="c5 c1">Tenno
+            phase</span><span class="c4 c1"><br>~Current Enemies in sight:<br>Scorch - Ignis | Heat Dagger<br>Elite
+            Lancer x4 - Karak | Sheev~</span></p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <p class="c2"><span class="c4 c14">June 2, 2018</span></p>
+    <h2 class="c11" id="h.o4557jhgednt"><span class="c5 c1">Nor_Urzak-Muro</span><span
+            class="c7 c5 c1">06/02/2018</span></h2>
+    <p class="c3"><span class="c1">Muro: <br></span><span class="c6 c1">Muro chuckles, grinning from within his
+            frame.</span><span class="c1">&nbsp;&quot;Roger.&quot;<br><br></span><span class="c9 c6 c1">Muro stays low,
+            moving around the column of rock. Once out of the assumed sight line of the Grineer, He transfers out of his
+            frame and void dashes to the top of the column, remaining in void mode once he lands (-5 AP, 1 movement, 1
+            transference, 2 void dash, 1 void mode ).</span></p>
+    <p class="c3"><span class="c1"><br></span><span class="c9 c6 c1">He looks around the top of the rocks, amp kept
+            ready to deal with any hostiles. (-1 AP).</span></p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <h2 class="c11" id="h.d0bfqdi8jsrl"><span class="c5 c1">Disruptis - Disruptis</span><span
+            class="c7 c5 c1">06/02/2018</span></h2>
+    <p class="c3"><span class="c5 c1">Disruptis</span><span class="c1"><br></span><span class="c6 c1">Disruptis
+            retrieved the quartakk off his back and crouched low next to the cliff-face. He slid out the rifle&#39;s
+            magazine in a carefully controlled movement and counted the bullets. 84 rounds: enough for 21 shots. The
+            Limbo smiled inwardly, locking the ammo back in place with a quiet click. He stood by for Muro&#39;s
+            report.</span><span class="c4 c1">&nbsp;(7 AP)</span></p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <h2 class="c11" id="h.m15y11m1bayh"><span class="c5 c1">Almighty_Jado - Kapak</span><span
+            class="c7 c5 c1">06/02/2018</span></h2>
+    <p class="c3"><span class="c8 c1">Kapak:</span><span class="c1"><br></span><span class="c9 c6 c1">Kapak yawned and
+            cracked his knuckles, small boney protrusions sticking up from the skin on his knuckles. He began to grow an
+            infested fetus within his forearm and mix in the correct combination of pyramidines to grow it into a
+            tentacled larvae.</span></p>
+    <p class="c3"><span class="c4 c1">(7 amp)</span></p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <p class="c2"><span class="c4 c14">June 3, 2018</span></p>
+    <h2 class="c11" id="h.a1bm2o718fa7"><span class="c5 c1">Mataeru - Mataeru Lloria</span><span
+            class="c7 c5 c1">06/03/2018</span></h2>
+    <p class="c3"><span class="c1 c5">Enemy Phase</span><span class="c1"><br><br></span><span class="c6 c1">No Actions
+            Taken</span><span class="c4 c1"><br>========Turn Ended========</span></p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <h2 class="c11" id="h.bputh03b704e"><span class="c5 c1">Mataeru - Mataeru Lloria</span><span
+            class="c7 c5 c1">06/03/2018</span></h2>
+    <p class="c3"><span class="c4 c1">========Turn 2========<br>====Tenno Phase====<br>~The top of the rock Muro is
+            standing on is clear, he now has clear view of the area. There is a Scorch and four Elite Lancers on the
+            landing pad. On the platform above though, there is a Heavy Gunner, two Ballistas and another four Elite
+            Lancers all standing at the ready, scanning the area. The Ballistas are standing along the posts of the
+            railings, taking cover, while the Heavy Gunner and Lancers are spread out, covering all directions~</span>
+    </p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <p class="c2"><span class="c4 c14">June 4, 2018</span></p>
+    <h2 class="c11" id="h.invr73xz3uqj"><span class="c5 c1">Nor_Urzak-Muro</span><span
+            class="c7 c5 c1">06/04/2018</span></h2>
+    <p class="c3"><span class="c1">Muro:<br></span><span class="c6 c1">Conducting a quick visual scan of the area, Muro
+            noticed the larger group of Grineer. His eyes widened. Transferring back to his frame, Muro ducked down,
+            trying to stay out of sight. (-2 AP, 1 transferrence, 1 take cover)</span><span
+            class="c1"><br><br>&quot;Disruptis, we have a problem. The four on the platform have friends. two with
+            sniper rifles, &nbsp;four more of those &quot;top lances&quot; you mentioned, and a tall skinny one,
+            carrying a heavy gun. They&#39;re on the other platform, higher up. &nbsp;I&#39;d say they&#39;re the bigger
+            issue between the two groups. Any Ideas?&quot; </span><span class="c6 c1">Muro carefully slides his hammer
+            back into his holster, then reaches for his gratakas, anticipating a ranged firefight.</span><span
+            class="c4 c1">&nbsp;(-2 AP, 1 weapon holster, 1 weapon draw)</span></p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <p class="c2"><span class="c4 c14">June 6, 2018</span></p>
+    <h2 class="c11" id="h.3oajx2mf4k3w"><span class="c5 c1">Disruptis - Disruptis</span><span
+            class="c7 c5 c1">06/06/2018</span></h2>
+    <p class="c3"><span class="c5 c1">Disruptis:</span><span class="c1"><br>&ldquo;Oh? Alright then, this is what we
+            need to do,&rdquo; </span><span class="c6 c1">Disruptis replied,</span><span class="c1">&nbsp;&ldquo;same
+            thing as before, but you take a pre-emptive strike with your water missiles as soon as we execute and try to
+            knock out both snipers. From there you can keep firing from the cover of that pillar, and I&rsquo;ll throw
+            Kappa and I in the rift to safely close the distance on the remaining half-wits after our attack
+            here.&rdquo; </span><span class="c6 c1">The Limbo flexed his hands by grabbing the fingers of each of them
+            and pulling back.</span><span class="c4 c1">&nbsp;&ldquo;Is everyone ready to kick some grineer
+            pedestal?&rdquo; (7AP stalling for next round)</span></p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <h2 class="c11" id="h.ecf2jqz7ez2e"><span class="c5 c1">Almighty_Jado - Kapak</span><span
+            class="c5 c1 c7">06/06/2018</span></h2>
+    <p class="c3"><span class="c8 c1">Kapak:</span><span class="c1"><br>&ldquo;Super ready! The quicker we deal with
+            these copycat bozos, the sooner I can go and watch the Index match. Its Zenith Galactical again!&rdquo;
+        </span><span class="c6 c1">Kapak&rsquo;s arm opened up like a pair of tongs, revealing a angrily squirming,
+            octopus looking infested mass struggling within.</span><span class="c4 c1"><br>(-7 ap, 1 enthusiasm, 1
+            Grineer insult, 2 Index excitement, 3 preparing Larva)</span></p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <h2 class="c11" id="h.6334a7hnrzj8"><span class="c5 c1">Mataeru - Mataeru Lloria</span><span
+            class="c7 c5 c1">06/06/2018</span></h2>
+    <p class="c3"><span class="c4 c1">====Enemy Phase====<br>~The Grineer squad is still blissfully unaware of the Tenno
+            presence in the area, however, after Muro returned to the group and while the squad was conversing their
+            strategy, the soldiers on the main platform had begun moving to rejoin their partners on the level above
+            them. Moving towards the hole in the wall opposite to the Tenno. the Grineer squads back is turned to them
+            as they make their way towards the door~<br>7 AP movement<br><br>========Turn 3========<br>====Tenno
+            Phase====</span></p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <p class="c2"><span class="c4 c14">June 7, 2018</span></p>
+    <h2 class="c11" id="h.5t192rz64mud"><span class="c5 c1">Disruptis - Disruptis</span><span
+            class="c7 c5 c1">06/07/2018</span></h2>
+    <p class="c3"><span class="c5 c1">Disruptis:</span><span class="c1"><br></span><span class="c6 c1">Disruptis heard
+            the sound footsteps of grineer soldiers as he finished talking. Whipping out his scanner again, he observed
+            the troops already moving out away from them. He cursed in an indiscriminate language.</span><span
+            class="c1"><br><br>&ldquo;Okay, new plan and we don&rsquo;t have time to waste,&rdquo; </span><span
+            class="c6 c1">he hurriedly announced as he reached for the Guandao on his back.</span><span
+            class="c1">&nbsp;&ldquo;Ground squad just moved out. I&rsquo;ll move to play a little game with it and
+            shield myself in the rift.&rdquo; </span><span class="c6 c1">The Limbo grabbed the pole-arm with one hand
+            and held it behind him, crouching low.</span><span class="c1">&nbsp;&ldquo;While they&rsquo;re distracted
+            with me, Kappa you let your home-grow loose on the bridge to gather the enemies there. Then Muro follows up
+            with the wrath of a desert&rsquo;s monsoon.&rdquo;<br><br></span><span class="c6 c1">Without another
+            moment&rsquo;s hesitation, Disruptis launched himself up the cliff. Before the Grineer even realized what
+            was happening, the Tenno bounded the distance between them, using both hands to joust with his
+            guandao&hellip; held backwards? (3 AP) He drove the spike-end of his pole-axe straight into the midsection
+            of the Scorch&rsquo;s chest. (1 AP) As his weapon pierced its target, Disruptis jumped, spun around, and
+            leapt off of the enemy&rsquo;s head, sending himself into the rift at the moment of launch (1 AP). Rising
+            into the air again, he deployed a carefully executed wave of rift-energy, trapping the Scorch and two of the
+            other lancers in the alternate plane (1 AP). Finally, as he came back down, Disruptis swung his guandao
+            axe-downwards onto the head of one of the lancers. (1 AP)</span></p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <h2 class="c11" id="h.nimbecmvpt70"><span class="c5 c1">Almighty_Jado - Kapak</span><span
+            class="c7 c5 c1">06/07/2018</span></h2>
+    <p class="c3"><span class="c8 c1">Kapak:</span><span class="c1"><br>&quot;Okay, sure thing my man,&quot;
+        </span><span class="c6 c1">Kapak said with a yawn, checking the boney growths on his hands.</span><span
+            class="c4 c1"><br>&quot;O-oh muck,&quot; *he stuttered immediately afterwards as he realized that they were
+            executing their plan now. (-1 AP, 1 not paying attention) He awkwardly climbed upwards, pulling himself
+            upwards as fast as possible, falling forwards onto the bridge with a brilliant display of clumsiness. (-1
+            AP, 1 clumsiness) Kapak thrust forward his currently split open arm, releasing the small shrieking squid
+            onto the platform where it flopped around, drinking in nutrients from the ancient Orokin rubble and moon
+            rock minerals, its tentacles reaching out to ensnare whatever living organisms it could grab nearby. (-5 ap,
+            3 shooting forth squid baby, 2 squid baby grabs snacks)</span></p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <p class="c2"><span class="c4 c14">June 10, 2018</span></p>
+    <h2 class="c11" id="h.buq5vuz4ytlk"><span class="c5 c1">Nor_Urzak-Muro</span><span
+            class="c7 c5 c1">06/10/2018</span></h2>
+    <p class="c3"><span class="c1">Muro:<br></span><span class="c6 c1">Muro stiffened, listening to Disruptis&#39;s
+            opening attack on the ground squad. he wasn&#39;t quite convinced going after them first was the best idea,
+            but it was a little late to worry about that now. Disruptis&#39; orders were a tad cryptic, but Muro got the
+            gist. Standing up so as to have a clear shot of the squad, Muro began to charge Tempest Barrage, aiming it
+            in the center of the squad.</span><span class="c4 c1">&nbsp;(-7 AP, charging Tempest Barrage, -5 SP)</span>
+    </p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <p class="c15"><span class="c1">Mataeru - Mataeru Lloria</span><span class="c1">&nbsp;pinned a message to this
+            channel. </span><span class="c1">See all the pins.</span><span class="c4 c1">06/10/2018</span></p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <h2 class="c11" id="h.va5yyeu1f4hm"><span class="c5 c1">Mataeru - Mataeru Lloria</span><span
+            class="c7 c5 c1">06/10/2018</span></h2>
+    <p class="c3"><span class="c1">====Enemy Phase====<br>(Lower level enemies begin with 4 AP due to undetected
+            approach. Upper level enemies begin with 2 AP due to undetected approach)<br><br></span><span
+            class="c5 c1">Scorch</span><span class="c1"><br></span><span class="c6 c1">The shaft of the Guandao caused
+            significant damage, redering his right arm essentially useless due to the pain. As Disruptis lept off his
+            head, he sent the Soldier tumbling to the ground.</span><span class="c1"><br>2 AP | 1 AP, impaled by stab |
+            1 AP, collapse to the ground<br></span><span class="c6 c1">By the time the rift wave hit him, he was already
+            on the ground. He simply moved his right arm, holding the ignis, and repositioned it so teh barrel of his
+            weapon was pointed in the Tenno&#39;s direction, and squeezed the trigger, sending a wave of flame to engulf
+            the now dead Lancer and Limbo in front of him.</span><span class="c1"><br>2 AP | &nbsp;1 AP arm positioning
+            and firing | 1 AP firing<br>[Due to AOE effect of Ignis and range bonus, damage is
+            unavoidable]<br>Guaranteed Damage 6 SP damage (2 base + 1 </span><span class="c5 c1">Heat</span><span
+            class="c1">)x2 + 1 SP damage (</span><span class="c5 c1">Heat</span><span
+            class="c4 c1">&nbsp;proc)<br>Total:<br>7 SP damage</span></p>
+    <p class="c3"><span class="c1">====<br></span><span class="c5 c1">Elite Lancer 1</span><span
+            class="c1"><br></span><span class="c1 c6">He looks behind him at his squad leader as Disruptis leaps off his
+            head, and then looks up at the form of the Tenno soaring over his head</span><span class="c1"><br>2 AP | 1
+            AP Looking at leader | 1 AP Looking at Disruptis<br></span><span class="c6 c1">He then falls to the floor
+            suddenly as he is sent into the rift, and starts to get up as the blade of the Guandao makes contact with
+            his helmet and slides off to the left, cutting through the soldiers collar bone and down the rest of his
+            weak clone body, cleaving him in two from the force of the hit</span><span class="c4 c1"><br>2 AP | 1 AP Aim
+            | 1 AP Dead</span></p>
+    <p class="c3"><span class="c1">====<br></span><span class="c5 c1">Elite Lancer 2</span><span
+            class="c1"><br></span><span class="c6 c1">The lancer notices his squad leader hit the ground and looks up at
+            the Tenno soaring overhead, brining his Karak to bear on the target</span><span class="c1"><br>2 AP | 1 AP
+            Looking at Disruptis | 1 AP aiming<br></span><span class="c6 c1">His aim is thwarted as the wave of energy
+            knocks him off his feet onto his back. Rather than try to stand up, the soldier points his gun at Disruptis
+            and opens fire, while using his legs to push him away, relying on the rounded nature of his armor to reduce
+            the friction between himself and the ground</span><span class="c1"><br>2 AP | 1 AP Knockdown | 1 AP shooting
+            while trying to move back<br>[Due to range bonus, chance to hit guaranteed]<br>Guaranteed Damage 5 SP damage
+            ( 3 base + 2 </span><span class="c5 c1">Impact</span><span class="c4 c1">)<br>Total:<br>5 SP damage</span>
+    </p>
+    <p class="c3"><span class="c1">====<br></span><span class="c5 c1">Elite Lancer 3</span><span
+            class="c1"><br></span><span class="c6 c1">The sight of his squad leader dying sent the soldier into battle
+            mode immediately, bringing his Karak to bear on the Tenno as he flew through the air over them yelling
+            Grineer expletives and insults</span><span class="c1"><br>2 AP | 1 AP Realization that they&#39;re under
+            attack | 1 AP Aiming<br></span><span class="c6 c1">He then opens fire at the Limbo, still yelling as the
+            Lancer in front of him falls before the Guandao blade</span><span class="c4 c1"><br>2 AP | 2 AP
+            Shooting<br>====</span></p>
+    <p class="c3"><span class="c5 c1">Elite Lancer 4</span><span class="c1"><br></span><span class="c6 c1">On seeing his
+            commander die, he quickly turns around to check for more tenno rushing from behind, and on Seeing the Nidus
+            and the Hydroid he yells out a Warning to his squadmates on the high ground while simultaneously bringing
+            his rifle to bear on </span><span class="c5 c6 c1">Muro</span><span class="c6 c1">:</span><span
+            class="c1">&nbsp;&quot;Rafrems spotter!&quot;<br>2 AP | 1 AP turn around | 1 AP Yelling
+            warning<br></span><span class="c6 c1">As soon as he finishes the warning, he opens fire on the
+            Hydroid</span><span class="c1"><br>2 AP | 2 AP shooting<br>[Due to range chance + aiming, chance to hit is
+            decent]<br>Guaranteed Damage 5 SP (3 base + </span><span class="c5 c1">Impact</span><span
+            class="c1">)<br>Potential Damage (User determined if hit connects) 5 SP (3 base + </span><span
+            class="c5 c1">Impact</span><span class="c4 c1">)<br>Potential Total:<br>10 SP damage</span></p>
+    <p class="c3"><span class="c1">====<br></span><span class="c5 c1">Heavy Gunner</span><span
+            class="c1"><br></span><span class="c6 c1">The squadron commander, upon hearing the alert of Warframes brings
+            her buzzlok to bear, but sees the Larva land on the platform with them and before she can open her mouth,
+            she is grabbed by a tendril and sucked in</span><span class="c1"><br>2 AP | 1 AP Recognition of assault | 1
+            AP abducted<br><br>====<br></span><span class="c5 c1">Ballistas 1 &amp; 2</span><span
+            class="c1"><br></span><span class="c6 c1">The two Ballistas immediately look throuhg their scopes at the
+            battlefield below and take aim on Muro, but before they can take their shots, the larva grabs them and adds
+            them to its infested mix of flesh and Grineer bodies</span><span class="c1"><br>2 AP | 1 AP Recognition of
+            assault | 1 AP abducted<br><br>====<br></span><span class="c5 c1">Elite Lancers 5, 6, 7, &amp; 8</span><span
+            class="c1"><br></span><span class="c6 c1">The quartet of Lancers immediately bring their rifles to bear,
+            taking a back to back formation in an effort to watch all flanks, but they are suddenly and unceremoniously
+            grabbed and yanked away by the Larva</span><span class="c4 c1"><br>2 AP | 1 AP Recognition of assault | 1 AP
+            abducted</span></p>
+    <p class="c3"><span class="c4 c1">========Turn Ended========</span></p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <h2 class="c11" id="h.erp1y94adspt"><span class="c5 c1">Mataeru - Mataeru Lloria</span><span
+            class="c7 c5 c1">06/10/2018</span></h2>
+    <p class="c3"><span class="c4 c1">========Turn 4========<br>====Tenno Phase====</span></p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <p class="c2"><span class="c4 c14">June 11, 2018</span></p>
+    <h2 class="c11" id="h.qgd9x4o8n5vb"><span class="c5 c1">Disruptis - Disruptis</span><span
+            class="c7 c5 c1">06/11/2018</span></h2>
+    <p class="c3"><span class="c5 c1">Disruptis:</span><span class="c1"><br></span><span class="c6 c1">Flames leapt up
+            from Disruptis&rsquo;s frame, licking the air as if seething with an unquenchable thirst. The Limbo gave a
+            small, twisted chuckle. He brought his guandao up in an speedy underhanded swing, knocking the second
+            lancer&rsquo;s weapon away and slicing his hands a little in the process (1 AP). Disruptis landed a forceful
+            kick to the grineer&rsquo;s gut, knocking the wind out of him and sending him flying into the fourth lancer
+            behind him. At the same time, he canceled his new projectile&rsquo;s access to the rift, bringing the
+            grineer back into the material plane. (1 AP) Fastening his grip on his deadly pole-arm, the Tenno swung
+            again. This time he swept the feet of the third lancer up into the air, bringing himself into the material
+            plane just as the pole connected. (1 AP) Using the momentum of that same swing while his enemy fell,
+            Disruptis brought his blood-stained upper blade around and straight down onto his unfortunate
+            opponent&rsquo;s neck. The graceful maneuver was accomplished within a second. (1 AP) <br><br>Not wasting
+            another drop of a credit, Disruptis whipped around, charging another wave of rift energy within his palm. He
+            rapidly extended it towards the two remaining grineer, blasting them in a wave of fresh hot entrance to the
+            other plane. (1 AP) He took a moment to glance over and see what his companions were up to, and was not
+            disappointed to see a vile mass of tentacles bundling together some grineer sushi as artificial rain
+            cascaded down in beautiful sheets of water. He lingered on the sight with a slight longing, for one of the
+            things he enjoyed most was sitting under the pressure of a good storm. (1 AP) As he watched, Disruptis
+            snapped his fingers unnecessarily while causing the trapped grineer to surge with rift energy. Extra layers
+            of purple light surrounded them as the bottled energy enveloped their bodies, brimming with power. [[Rift
+            surge if you didn&rsquo;t understand]] (1 AP)</span></p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <h2 class="c11" id="h.s9nuolmvaf4a"><span class="c5 c1">Almighty_Jado - Kapak</span><span
+            class="c7 c5 c1">06/11/2018</span></h2>
+    <p class="c3"><span class="c8 c1">Kapak:</span><span class="c4 c1"><br>*Kapak ran forward towards the ball writhing
+            mass of Grineer and flesh, leaping into the air and slamming his feet into the ground, sending a stream of
+            technocytic mycelium through the floor. The strands coleasced into jagged spikes that erupted below the
+            larva&rsquo;s orgy of clones. The spikes pierced through the crowd, and Kapak continued to send more and
+            more waves of razors sharp infested spines through the ground into them. He could feel his energy being
+            restored with every strike, his mycelial network leaching nutrients from his enemies every time. (7 ap, 1
+            running front flip styling on em, 6 virulences)</span></p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <p class="c2"><span class="c4 c14">June 13, 2018</span></p>
+    <h2 class="c11" id="h.xt9hzp23hzym"><span class="c5 c1">Nor_Urzak-Muro</span><span
+            class="c7 c5 c1">06/13/2018</span></h2>
+    <p class="c3"><span class="c1">Muro:<br></span><span class="c6 c1">Taking the time to assess the battlefield, Muro
+            quickly redirected his fully charged Tempest Barrage before firing it, aiming it instead at the larger squad
+            (-1AP, adjusting aim for attack). As he charged his attack, a surging ring of water emerged and grew around
+            him, generated by the Hydroid&#39;s own energy. With his eyes set on the squad who were still struggling
+            with Kapak&#39;s assault, he forcefully clenched his fist, sending the gathered water flying high above the
+            intended targets. The water arced in the air before crashing down on the disoriented squad in volley after
+            volley of aquatic missiles. &nbsp;(-5 AP, fully charged Tempest Barrage, -5 energy). As the torrential
+            attack slammed into the larger Grineer squad, Muro trains his Gratakas on the squad, ready to pick off any
+            surviving members. (-1 AP, aim secondary weapons.)</span></p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <p class="c2"><span class="c4 c14">June 17, 2018</span></p>
+    <h2 class="c11" id="h.b0cyjplwosua"><span class="c5 c1">Mataeru - Mataeru Lloria</span><span
+            class="c7 c5 c1">06/17/2018</span></h2>
+    <p class="c3"><span class="c1">====Enemy Phase====<br><br></span><span class="c5 c1">Elite Lancer 2</span><span
+            class="c1"><br></span><span class="c6 c1">He screams when he loses his hands before passing out as the Limbo
+            kicks him backwards into th elegs of his companion. He he ultimately succumbs to the poor engineering behind
+            his body which results in death by severe blood loss from his hands</span><span
+            class="c1"><br><br></span><span class="c5 c1">Elite Lancer 3</span><span class="c1"><br></span><span
+            class="c6 c1">the bullets he continues to fire have no effect on the Limbo, and before he realized what
+            happened, his life was ended as his weight forced a decapitation on the blade of the Guandao</span><span
+            class="c1"><br><br></span><span class="c5 c1">Elite Lancer 4</span><span class="c1"><br></span><span
+            class="c6 c1">The Lancer keeps firing at </span><span class="c5 c6 c1">Muro</span><span
+            class="c6 c1">&nbsp;until until his companion bumps into his legs, knocking him off balance briefly. Upon
+            recovering, he takes aim once more</span><span class="c1"><br>4 AP | 2 AP Firing at Muro | 1 AP Stagger | 1
+            AP aiming<br>[Due to range, average hit chance]<br>Possible Damage 5 - 10 SP damage (5 + 2 </span><span
+            class="c5 c1">Impact</span><span class="c1">) - (5 + 2 </span><span class="c5 c1">Impact</span><span
+            class="c1">)x2<br><br></span><span class="c6 c1">When Disruptis sends him into the void, the Lancer is
+            knocked onto his stomach for a moment before he rolls over and opens fire on Disruptis, not realizing the
+            Warframe is not in the Rift</span><span class="c4 c1"><br>3 AP | 1 AP knockdown | 1 AP rolling over and
+            looking at Disruptis | 1 AP shooting</span></p>
+    <p class="c3"><span class="c4 c1">~The troopers on the platform above are executed swiftly and mercilessly, by Kapak
+            and Muros combined onslaught. And after mere moments, the mass of tentacles is left holding only
+            corpses~</span></p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <p class="c2"><span class="c4 c14">June 18, 2018</span></p>
+    <h2 class="c11" id="h.62fkrrv81kwz"><span class="c5 c1">Mataeru - Mataeru Lloria</span><span
+            class="c7 c5 c1">06/18/2018</span></h2>
+    <p class="c3"><span class="c4 c1">========Turn Ended========</span></p>
+    <p class="c3"><span class="c4 c1">====Combat Ended====</span></p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <h2 class="c11" id="h.j1u10ybs19od"><span class="c5 c1">Disruptis - Disruptis</span><span
+            class="c7 c5 c1">06/18/2018</span></h2>
+    <p class="c3"><span class="c5 c1">Disruptis:</span><span class="c1"><br>&ldquo;Nice, nice, nice!&rdquo; </span><span
+            class="c6 c1">Disruptis commended, clapping his hands to applaud Muro and Kapak.</span><span
+            class="c1">&nbsp;&ldquo;You guys form the best synergy I&rsquo;ve seen in a
+            while!&rdquo;<br><br></span><span class="c6 c1">The Limbo snapped his fingers again, freezing the remaining
+            grineer in place. He returned his guandao to his back, locking it in place with a click. He twirled around
+            on one foot and nonchalantly sauntered up to the poor lancer. He placed an arm on the enemy&rsquo;s shoulder
+            and leaned onto him, also bringing up his hand to point at the trooper with his index finger and thumb
+            extended.</span><span class="c4 c1">&nbsp;&ldquo;I still have one more here chilling out, anyone want the
+            honours?&rdquo;</span></p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <p class="c2"><span class="c4 c14">June 19, 2018</span></p>
+    <h2 class="c11" id="h.senx64wxm5g1"><span class="c5 c1">Nor_Urzak-Muro</span><span
+            class="c7 c5 c1">06/19/2018</span></h2>
+    <p class="c3"><span class="c1">Muro:<br></span><span class="c6 c1">Muro grinned beneath his helmet, admiring his and
+            Kapak&#39;s handiwork. As brutal as it was, that was one effective group attack, especially for a group who
+            never fought together before. &nbsp;He turned towards Disruptis, appreciating his applause and comments. He
+            had handled himself masterfully as well, his attacks seeming like a well choregraphed dance in comparison to
+            his and Kapak&#39;s heavy-handed assault. It was only then that Muro noticed the Grineer soldier Disruptis
+            was leaning on.</span><span class="c1"><br><br>&quot;Oh, let me take care of that one.&quot; </span><span
+            class="c6 c1">Muro started to put his Gratakas away, swapping them out for his beloved Fragor.</span><span
+            class="c1">&nbsp;&quot;You uh, may want to step back though.&quot; </span><span class="c9 c6 c1">He said to
+            Disruptis, chuckling all the while.</span></p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <h2 class="c11" id="h.fbxbugngs3qq"><span class="c5 c1">Almighty_Jado - Kapak</span><span
+            class="c7 c5 c1">06/19/2018</span></h2>
+    <p class="c3"><span class="c1 c8">Kapak:</span><span class="c1"><br></span><span class="c6 c1">Kapak sauntered over
+            to the rest of his allies, his hands behind his back.</span><span class="c1"><br>&ldquo;Well done, well
+            done!&rdquo; </span><span class="c6 c1">he exclaimed enthusiastically to the two other Tenno.</span><span
+            class="c1">&nbsp;&ldquo;What&rsquo;d I tell ya, easy as pie.&rdquo; </span><span class="c6 c1">He smiled and
+            cracked his knuckles.</span><span class="c1">&nbsp;&ldquo;A shame Grineer are always so unhealthy.
+            Wasn&rsquo;t able to absorb any meaningful vitamins or minerals. Pffft!&rdquo;<br></span><span
+            class="c9 c6 c1">Kapak stretched his arms once more, resting them on the back of his head, relaxing to watch
+            whatever demise was headed for this poor Grineer.</span></p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <p class="c2"><span class="c4 c14">June 20, 2018</span></p>
+    <h2 class="c11" id="h.nf3mbnx72zem"><span class="c5 c1">Disruptis - Disruptis</span><span
+            class="c7 c5 c1">06/20/2018</span></h2>
+    <p class="c3"><span class="c5 c1">Disruptis:</span><span class="c1"><br></span><span class="c6 c1">Disruptis stepped
+            to the side, making way for Muro. He tucked his left arm behind his back and extended his right, preparing a
+            finger snap.</span><span class="c1"><br><br>&ldquo;I&rsquo;ll drop the rift right when you wind up your
+            swing.&rdquo; </span><span class="c6 c1">Disruptis declared. Taking note of the distance to the
+            cliff&rsquo;s edge, he judged that the soldier would at least make it to the gap.</span><span
+            class="c1">&nbsp;&ldquo;If you can make his express flight crash into the wall over there,&rdquo;
+        </span><span class="c6 c1">he pointed at the sheer rock face across the gap between it and their current
+            location,</span><span class="c4 c1">&nbsp;&ldquo;I&rsquo;ll give you five plat.&rdquo;</span></p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <h2 class="c11" id="h.8geplzuoxce0"><span class="c5 c1">Almighty_Jado - Kapak</span><span
+            class="c7 c5 c1">06/20/2018</span></h2>
+    <p class="c3"><span class="c8 c1">Kapak:</span><span class="c1"><br>&quot;Bullhonky! With a Fragor he could launch
+            that Grineer into orbit and hit Frohd Bek who&#39;s in his office relaxing!&quot; </span><span
+            class="c6 c1">Kapak pointed at the top of the cliff face, where more Orokin architecture sat. His gnarled
+            finger traces the air, outlining the golden arch.</span><span class="c4 c1">&nbsp;&quot;Hit that golden
+            piece of metal &#39;n I&#39;ll give you 20.&quot;</span></p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <h2 class="c11" id="h.qajcnue78p30"><span class="c5 c1">Nor_Urzak-Muro</span><span
+            class="c7 c5 c1">06/20/2018</span></h2>
+    <p class="c3"><span class="c1">Muro:<br>&quot;Hm, tough call.&quot; </span><span class="c6 c1">Muro rested his
+            Fragor on his free shoulder, eying both potential targets. In terms of raw distance, the cliff was farther,
+            but archway would technically be a more impressive shot. He turned and nodded to Kapak.</span><span
+            class="c1">&nbsp;<br><br>&quot;Alright Kapak, you&#39;re on!&quot; </span><span class="c6 c1">Muro walked
+            around to the opposite side of the frozen Grineer, so that its eyes, still wide with fear, faced his
+            executioner. Muro stood about eight feet away from the Grineer, easing his &nbsp;hammer off his shoulder
+            into both of his hands. Shifting his grip to maximize the torque of his swing, he began to stride up to the
+            Grineer, raising his hammer and rotating his torso in preparation. Making eye contact with the Grineer, he
+            offered his condolences.</span><span class="c1"><br><br>&quot;Sorry pal, but this is really gonna hurt.
+            &quot; </span><span class="c9 c6 c1">His voice was mirthful, yet malicious. There was not a hint of genuine
+            remorse. As he got within proper strike range, he swung his Fragor as hard as he could, bringing his hammer
+            low and arcing upward. A single finger snap could be heard, a fraction of second before the hammer
+            connected. The head of the hammer hit just below the chest plate of the Grineer, causing the armor to
+            crumple inward as the force of the blow began to lift the soldier off the ground. The swing was finished as
+            Muro completed his stride, launching his hapless target at the high arch.</span></p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <p class="c2"><span class="c4 c14">June 28, 2018</span></p>
+    <h2 class="c11" id="h.gmik4f4592bk"><span class="c5 c1">Nor_Urzak-Muro</span><span
+            class="c7 c5 c1">06/28/2018</span></h2>
+    <p class="c3"><span class="c1">(Sorry, stuff got crazy for a few days. </span><span class="c5 c1">AHEM</span><span
+            class="c1">)<br><br>Muro:<br></span><span class="c6 c1">Muro wasn&#39;t sure if his aim would have held up
+            after all that time in stasis, but it appeared he hadn&#39;t lost much. &nbsp;The initial blow had knocked
+            the wind from the hapless Grineer, who was now well past half dead and sailing through the air. His death
+            would be mercifully quick, as Muro&#39;a aim was a tad low. Rather than hitting the the archway squarely,
+            &nbsp;the grineer flew just high enough for the back of his head to slam into the arch, killing him
+            instantly and causing a satisfying, gong-like tone to ring forth from the metallic structure. Muro rested
+            his Fragor upon his shoulder once again, nodding in approval. He leaned back, looking towards
+            Kapak.</span><span class="c4 c1"><br><br>&quot;And that sound, my friend, means you owe me some
+            platinum.&quot; *Muro&#39;s tone was jovial, if slightly smug. &nbsp;Turning fully around to face his squad
+            mates, he asks excitedly. &quot;So! what&#39;s next?&quot;</span></p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <p class="c2"><span class="c4 c14">June 29, 2018</span></p>
+    <h2 class="c11" id="h.4ofz7vn7a7fe"><span class="c5 c1">Disruptis - Disruptis</span><span
+            class="c7 c5 c1">06/29/2018</span></h2>
+    <p class="c3"><span class="c5 c1">Disruptis:</span><span class="c1"><br></span><span class="c6 c1">Disruptis put a
+            fist to his mouth and cleared his throat.</span><span class="c1">&nbsp;&ldquo;Well, technically you
+            didn&rsquo;t go for the wall soooooo&hellip;.&rdquo; </span><span class="c6 c1">he said jokingly manner. He
+            slapped Kapak on the back.</span><span class="c1">&nbsp;&ldquo;I&rsquo;ll leave the cheque to you
+            man.&rdquo;<br><br></span><span class="c6 c1">The Limbo held out his arm. An holographic projection popped
+            up with his communications interface. With a couple taps, he brought up his direct messaging with
+            Mataeru.</span><span class="c1">&nbsp;&ldquo;Hey Mataeru! That trash has been taken out and quite
+            spectacularly dropped into the dumpster,&rdquo; </span><span class="c6 c1">he said, watching the grineer
+            finish his fall to the deep chasm floor below.</span><span class="c4 c1">&nbsp;&ldquo;Should we head
+            back?&rdquo;</span></p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <h2 class="c11" id="h.n830bvfm1m71"><span class="c5 c1">Mataeru - Mataeru Lloria</span><span
+            class="c7 c5 c1">06/29/2018</span></h2>
+    <p class="c3"><span class="c1">Mataeru:<br></span><span class="c9 c6 c1">A reply message pops up into Disruptis&#39;
+            view:<br>&quot;Good work. Return to Sanctuary when you are ready, but keep an eye out for any more
+            hostiles.&quot;</span></p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <h2 class="c11" id="h.9q4pypr053mh"><span class="c5 c1">Disruptis - Disruptis</span><span
+            class="c7 c5 c1">06/29/2018</span></h2>
+    <p class="c3"><span class="c5 c1">Disruptis:</span><span class="c4 c1"><br>&ldquo;Nice nice, we&rsquo;ll be right
+            there.&rdquo; Disruptis replied, terminating the connection by closing his hand. &ldquo;Alright squad!
+            We&rsquo;re moving back to base. Unless you somehow smell something else here Kappa. Which I&rsquo;m not
+            sure is a thing you can do, but I honestly wouldn&rsquo;t be surprised.&rdquo;<br><br>The Limbo moved to
+            walk in the direction they came from.</span></p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <p class="c2"><span class="c4 c14">July 2, 2018</span></p>
+    <h2 class="c11" id="h.n08xxqx0y0i9"><span class="c5 c1">Almighty_Jado - Kapak</span><span
+            class="c7 c5 c1">07/02/2018</span></h2>
+    <p class="c3"><span class="c8 c1">Kapak:</span><span class="c4 c1"><br>&ldquo;MUCK! Just my luck. All those years
+            gambling with Obsidian Dice didn&rsquo;t teach me anything!&rdquo; He grumbled, crossing his arms in a big
+            infested pout.<br>He turned towards Disruptis and splayed his arms out in exasperation.<br>&ldquo;Do I LOOK
+            like a Kubrow to you? I can&rsquo;t sniff out enemies directly!&rdquo; He scratches his chin. &ldquo;Well I
+            mean, maybe if you perforated they leg or arm, then I could track their blood a little bit...&rdquo;</span>
+    </p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <h2 class="c11" id="h.x0q8p3rqwty6"><span class="c5 c1">Nor_Urzak-Muro</span><span
+            class="c7 c5 c1">07/02/2018</span></h2>
+    <p class="c3"><span class="c1">Muro: <br><br></span><span class="c6 c1">Muro bellowed out a laugh at Kapak&#39;s
+            frustration.</span><span class="c1">&nbsp;&quot;Well, maybe they should have a rule for betting against
+            Tenno!&quot; &nbsp;</span><span class="c9 c6 c1">Muro didn&#39;t know much more about the bizzare Nidus&#39;
+            abilities than Disruptis, so as far as he knew it could be possible. &nbsp; Holstering his Fragor once more,
+            he strode after Disruptis, content to end the mission for today.</span></p>
+    <hr>
+    <p class="c0"><span class="c4 c1"></span></p>
+    <p class="c2"><span class="c4 c14">July 4, 2018</span></p>
+    <h2 class="c11" id="h.aiyyv3tiewok"><span class="c5 c1">Mataeru - Mataeru Lloria</span><span
+            class="c7 c5 c1">07/04/2018</span></h2>
+    <p class="c3"><span class="c4 c1">(Yeah, go ahead and jump back into the main RP channel if you guys want to. If you
+            do, jusut make sure to preface with &quot;Several Hours later&quot; or something</span></p>
+    <p class="c3"><span class="c4 c1">[End RP, 4/3, 10:59]</span></p>
+    <p class="c0"><span class="c4 c12"></span></p>
+</body>
+
+</html>

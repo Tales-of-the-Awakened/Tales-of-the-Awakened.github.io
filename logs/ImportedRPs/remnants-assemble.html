@@ -1,0 +1,702 @@
+<html>
+
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link rel="stylesheet" href="../../css/solarized-dark.min.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/imported.css" />
+    <style type="text/css">
+        ol {
+            margin: 0;
+            padding: 0
+        }
+
+        table td,
+        table th {
+            padding: 0
+        }
+
+        .c5 {
+            border-right-style: solid;
+            padding-top: 0pt;
+            border-top-width: 0pt;
+            border-right-width: 0pt;
+            padding-left: 0pt;
+            padding-bottom: 0pt;
+            line-height: 1.14;
+            border-left-width: 0pt;
+            border-top-style: solid;
+            border-left-style: solid;
+            border-bottom-width: 0pt;
+            border-bottom-style: solid;
+            orphans: 2;
+            widows: 2;
+            text-align: left;
+            padding-right: 0pt
+        }
+
+        .c3 {
+            padding-top: 0pt;
+            padding-bottom: 2pt;
+            line-height: 1.14;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        .c7 {
+            font-weight: 400;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-family: "Arial"
+        }
+
+        .c1 {
+            text-decoration: none;
+            vertical-align: baseline;
+            font-family: "Arial";
+            font-style: normal
+        }
+
+        .c10 {
+            font-weight: 700;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-family: "Arial"
+        }
+
+        .c16 {
+            background-color: #ffffff;
+            max-width: 468pt;
+            padding: 72pt 72pt 72pt 72pt
+        }
+
+        .c14 {
+            text-decoration-skip-ink: none;
+            -webkit-text-decoration-skip: none;
+            text-decoration: underline
+        }
+
+        .c6 {
+            font-weight: 400;
+            font-size: 10.5pt
+        }
+
+        .c17 {
+            font-size: 11pt;
+            font-style: normal
+        }
+
+        .c2 {
+            font-size: 12pt;
+            font-style: italic
+        }
+
+        .c13 {
+            font-size: 10.5pt;
+            font-style: normal
+        }
+
+        .c4 {
+            font-weight: 400;
+            font-size: 12pt
+        }
+
+        .c0 {
+            font-size: 12pt;
+            font-weight: 700
+        }
+
+        .c8 {
+            font-size: 12pt;
+            font-style: normal
+        }
+
+        .c12 {
+            font-weight: 700
+        }
+
+        .c11 {
+            height: 11pt
+        }
+
+        .c15 {
+            height: 16pt
+        }
+
+        .c9 {
+            font-size: 12pt
+        }
+
+        .title {
+            padding-top: 0pt;
+            font-size: 26pt;
+            padding-bottom: 3pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        .subtitle {
+            padding-top: 0pt;
+            color: #666666;
+            font-size: 15pt;
+            padding-bottom: 16pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        li {
+            font-size: 11pt;
+            font-family: "Arial"
+        }
+
+        p {
+            margin: 0;
+            font-size: 11pt;
+            font-family: "Arial"
+        }
+
+        h1 {
+            padding-top: 20pt;
+            font-size: 20pt;
+            padding-bottom: 6pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        h2 {
+            padding-top: 18pt;
+            font-size: 16pt;
+            padding-bottom: 6pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        h3 {
+            padding-top: 16pt;
+            color: #434343;
+            font-size: 14pt;
+            padding-bottom: 4pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        h4 {
+            padding-top: 14pt;
+            color: #666666;
+            font-size: 12pt;
+            padding-bottom: 4pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        h5 {
+            padding-top: 12pt;
+            color: #666666;
+            font-size: 11pt;
+            padding-bottom: 4pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        h6 {
+            padding-top: 12pt;
+            color: #666666;
+            font-size: 11pt;
+            padding-bottom: 4pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            font-style: italic;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+    </style>
+</head>
+
+<body>
+    <p class="c3"><span class="c9">[Open RP]<br>[Lua, Orokin Remnant Sanctuary, Secret Entrance]<br>[4/3,
+            10:30]<br><br>~A general message goes out ot the Tenno of the Sanctuary, short and to the
+            point:<br></span><span class="c2">&quot; </span><span class="c2">@Active</span><span class="c2">&nbsp;
+            Tenno, the time for our team building is here. meet me outside Sanctuary if you wish to train with me in
+            preparation of our assault on the Orokin Tower.<br>-Mataeru&quot;</span><span class="c7 c8"><br><br>Those
+            that respond would see his Ash Prime is standing motionless outside the open Sanctuary exit while he himself
+            is standing facing down the hallway, Commodore Prime suit polished with it&#39;s hood closed, hands clasped
+            behind his back~</span></p>
+    <hr>
+    <p class="c3 c11"><span class="c7 c8"></span></p>
+    <h2 class="c5" id="h.lszc7qpp4txr"><span class="c0">Muro</span></h2>
+    <p class="c3"><span class="c9">Muro:<br>~Mere minutes after the announcement had been broadcast, &nbsp;the sound of
+            heavy footsteps could be heard slowly thudding through the lounge and down the entrance hallway. Within a
+            few moments, the cause of the sound came into view: a Hydroid warframe, heavily armed with a Zarr over his
+            right shoulder, twin Gratakas hanging from his waist, and his trademark Fragor Prime holstered on his lower
+            back. He moved with purpose, but at the same time it was clear he wasn&#39;t in a
+            hurry.~<br><br></span><span class="c2">Muro briefly looked about the entrance at the end of the hall, mildly
+            surprised that no one else had arrived yet. &nbsp;True, years of working for Ballas had drilled into him the
+            art of being ready at a moment&#39;s notice, but among the Veiled Tenno he wasn&#39;t known as the most
+            punctual of the lot. Reaching the end of the hallway, he gave Mata a &nbsp;wave.</span><span
+            class="c9"><br><br>&quot;Mornin&#39; Boss!&quot; </span><span class="c2">he began, bowing
+            slightly,</span><span class="c9">&nbsp;&quot; Glad to see you&#39;re coming with this time. Can&#39;t
+            remember the last time we did a mission together, so I&#39;m curious if you&#39;re as scary as I
+            remember.&quot; </span><span class="c7 c2">he spoke lightly, teasing him with the last sentence. Not wanting
+            to take up too much space, Muro walked to one the walls and leaned against it, waiting for more people to
+            show up.</span></p>
+    <hr>
+    <p class="c3 c11"><span class="c7 c8"></span></p>
+    <h2 class="c5" id="h.mx5v5ztk5hah"><span class="c0">Disruptis</span></h2>
+    <p class="c3"><span class="c9">~The barracks weren&rsquo;t the particularly most comfortable place to sleep in. Any
+            Tenno could argue that better accommodations could be found in any of their orbiters, but that was only to
+            the picky. The darkened quarters were blanketed in a thick sheet of silence at the moment. None of the beds
+            were occupied, but that didn&rsquo;t mean the room was empty. A Tenno had collapsed on the floor and was
+            experiencing the greatest sense of tranquility he had felt in a long time. He had lain down in the recovery
+            position with a small stream of drool escaping his open mouth. The teen was fast asleep, sinking into the
+            depths of his release from fatigue. Unfortunately, it would not last much longer.~<br><br></span><span
+            class="c0">XerAI:</span><span class="c9"><br></span><span class="c2">A soothing hum crescendoed through the
+            Tenno&rsquo;s communications as XerAI initiated a transmission. She was here to wake her sleepy operator
+            up.</span><span class="c9"><br><br></span><span class="c2 c12">BEEEEEP BEEEEP
+            BEEEEEEEEEEPPP!!!!!!!!!!!</span><span class="c9"><br><br></span><span class="c0">Disruptis:</span><span
+            class="c9"><br></span><span class="c2">Disruptis jerked upwards, attempting to assume a combat stance but
+            ending up smashing his head against the panel he was sleeping under.</span><span
+            class="c9"><br><br>&ldquo;What the MUCK!?!?!? Are we dying?!&rdquo; </span><span class="c2">he
+            yelled.</span><span class="c9"><br><br></span><span class="c0">XerAI:</span><span class="c9"><br>&ldquo;Oh
+            sorry, that was the last sound sample you gave me for an alarm. (&#12539;&#12408;&#12539;)&rdquo;
+        </span><span class="c7 c2">the cephalon responded.</span></p>
+    <p class="c3 c11"><span class="c7 c2"></span></p>
+    <p class="c3"><span class="c0">Disruptis:</span><span class="c9"><br>&ldquo;Ah, I guess that&rsquo;s my fault then,
+            whoops.&rdquo; </span><span class="c2">Disruptis rubbed the back of his head and stood up, revealing his
+            work. His equipment was now properly installed in the building, and quite unobtrusively too. New circuits
+            lay in small portions on the walls in appealing, straight lines. They would allow the sanctuary to
+            communicate with o&rsquo;twelve in case of an emergency. It had always been picky about its
+            services.</span><span class="c9">&nbsp;<br><br>&ldquo;Wait a second, why in the Void did I ever use
+            something like that as an alarm anyway?&rdquo; </span><span class="c2">he questioned, wiping the drool off
+            his cheek.</span><span class="c9"><br><br></span><span class="c0">XerAI:</span><span
+            class="c9"><br>&ldquo;By the way, Mataeru is waiting for you at the entrance. -&#8255;-&rdquo; the cephalon
+            reminded him.<br><br></span><span class="c0">Disruptis:</span><span class="c9"><br>&ldquo;OH, that&rsquo;s
+            right!&rdquo; </span><span class="c2">the operator exclaimed. He quickly summoned his warframe and hurried
+            out the exit of the barracks. The Limbo sped-walk through the halls, eventually coming up on Muro and
+            Mataeru. Upon arriving, he felt over his frame for his weapons. They were all in place and ready to finally
+            see some action.</span><span class="c9"><br><br>&ldquo;Ey, ey, ey! Told ya I&rsquo;d be here on time for the
+            next one,&rdquo; </span><span class="c2">he greeted the two.</span></p>
+    <hr>
+    <p class="c3 c11"><span class="c1 c6"></span></p>
+    <h2 class="c5" id="h.s8i8cfwz56y8"><span class="c0">sa Tekchen</span></h2>
+    <p class="c3"><span class="c9">Isa:<br></span><span class="c2">Isa was in the foundry, quietly watching it work on
+            the MOAs Mataeru had requested her to build when she receive the message. She immediately transferred into
+            her Saryn and strode towards the exit, her Argonak in its hands already. She rolled her left shoulder as she
+            approached the exit. She stopped a few feet short of Mataeru and looked down at him through the
+            warframe.</span><span class="c9"><br><br>&quot;Weapons are currently modified for combat against the Corpus.
+            Shall we find one my size for the mission?&quot;<br><br></span><span class="c2">She said, attempting to
+            supply a bit of dry humor towards Mataeru&#39;s plan to her infiltrating them.</span><span
+            class="c7 c8"><br><br>&quot;A well placed shot to the head should leave enough of the uniform undamaged that
+            it could be easily repaired.&quot;</span></p>
+    <hr>
+    <p class="c3 c11"><span class="c7 c8"></span></p>
+    <h2 class="c5" id="h.nt0go1gm6txv"><span class="c0">Vuko</span></h2>
+    <p class="c3"><span class="c9">Vuko:<br> </span><span class="c2">Being late for a mission, briefing, or even a
+            training session is not something that Vuko does. He usually is the first one to show up, as the
+            militaristic routine has been drilled into him during all those years served under Ballas. &rsquo;There is
+            no way I&rsquo;m going to make it on time.&rsquo; He thinks to himself as he makes his way across another
+            ravine by leaping from one of the edges to the other and slamming his Kamas into the rocky wall to catch
+            himself. As he lift himself over the ledge, and stands on top he sees a big part of the broken Lua, and
+            below him, no more than a hundred meters away is the entrance to the Sanctuary. Vuko notices that except
+            Mata there are 3 more people present, including a familiar face - Muro. &lsquo;Huh. Maybe I won&rsquo;t be
+            that late after all.&rsquo; He tells himself, as Artemis appears in his hand. He takes an arrow out of the
+            quiver on his arm, takes the characteristic archer stance, right foot forward, right hand with the bow in
+            front and pulls the bowstring. With a &lsquo;THWISH&rsquo; the arrow is released and quickly hits the wall
+            above the entrance forming a zip line between the two places. Without any hesitation Vuko takes out a single
+            Kama and jumps down, hooking himself on the zip line with the weapon. He slides down, hanging on the Kama,
+            and at the very end of the ride the line disappears, allowing him for a graceful landing.</span><span
+            class="c9">&nbsp;- &ldquo;Hey Boss, hope I didn&rsquo;t take too long.&rdquo; - </span><span
+            class="c7 c2">He says as he took his place next to Muro.</span></p>
+    <hr>
+    <p class="c3 c11"><span class="c7 c8"></span></p>
+    <h2 class="c5" id="h.izq71oqz7lto"><span class="c0">Devros von Inie</span><span class="c9"><br>&ldquo;Ah aye, jist a
+            wee more an&#39; &#39;e&rsquo;ll be ready ter ayte!&rdquo;<br><br></span><span class="c2">Proclaimed Devros
+            in a lot of excitement as he stood above one of the caged Kuaka onboard his orbiter with a bag of feed in
+            one hand. He was making the usual round of the animals, giving them food and keeping a eye on their
+            gains&hellip;meanwhile the familiar tip tap of hoofs resonating behind him with each step, a shadow
+            constantly over him in his flowery ship. Reaching the final animal, a caged Condor right next to the
+            Navigator, he crouches down and looks at the bird, probably thinking of how to eat it while the presence
+            stares at him, almost throwing daggers.<br><br>Letting out a sigh he looks over his shoulder at his stalker.
+            Standing with his arms crossed over his chest is a Feyarch Oberon with a Oberon Prime helmet. The armor part
+            of him is colored in cloud white, while the more fleshy &ldquo;plant&rdquo; part of him is in algae green,
+            finally his drape is painted with crimson red, like that of a withering rose. The Oberon, although eyeless,
+            appears to be glaring down at the boy in a displeased manner. Devros chuckles and throws his arms in the air
+            in surrender as he straightens up</span><span class="c9"><br><br>&ldquo;Gran&#39; so, a dayle is a dayle, oi
+            tuk wan a week ago so yer filled yisser quota..&rdquo;<br><br></span><span class="c2">The Oberon seemed
+            pleased by the response and relaxed his posture, turning around to head towards the fish tanks. Devros
+            shakes his head at his warframe thinking about who is the actual master onboard.<br><br>Then a bright
+            flashing light lit up on his Navigator and the boy whipped his head towards it, wrinkling his brows.
+            &ldquo;Man&hellip;I really shud fix me cephalon&hellip;&rdquo;He thought as he flipped on the Navigator and
+            it displayed a message just on top of a blinking point on Lua, the place of the transmission.</span><span
+            class="c7 c8">&nbsp;&ldquo;Oh? Team building!&rdquo;</span></h2>
+    <p class="c3"><span class="c2">He twirled on his heels and slid down the ramp</span><span
+            class="c9">&nbsp;&ldquo;Garhul! Git up yer lug! Trainin&#39; day!&rdquo; </span><span class="c2">He yelled
+            out as he passed the Incubator, causing a sleeping behemoth to wiggle back from a bomb nap. Devros dashed
+            towards his personal quarters where he undresses from his casual clothes and puts on his Verida suit,
+            without the hood.<br><br>A few moments later, Devros in his Oberon and Garhul land, via Scimitar drop, a few
+            meters away from the gathering. Devros gives his gear a check &ldquo;Venka prime here, Good ol&rsquo; Lenzy,
+            and the boom brick&rdquo; Nodding his head, he walks up to the meeting with the kubrow trailing close
+            behind.<br><br>Upon arrival, Devros will throw anyone that looks his way a nod and a wave of his hand but
+            otherwise says nothing as he takes a seat on top of some nearby rocks. Garhul sits beside his legs and
+            nudges them. Devros smiles and starts petting his kubrows head as they wait for further instructions.</span>
+    </p>
+    <hr>
+    <p class="c3 c11"><span class="c7 c8"></span></p>
+    <h2 class="c5" id="h.dt1i2wfsxi3"><span class="c0">Kapak</span></h2>
+    <p class="c3"><span class="c9"><br></span><span class="c2">A familiar looking, dented Liset flew overhead, dropping
+            down Kapak&#39;s all too enigmatic Nidus, the dust covered ground being flung outwards ad he landed on one
+            knee.</span><span class="c9"><br>&quot;Apologies, thought I&#39;d drop in dramatically, as if we were doing
+            a </span><span class="c2">real</span><span class="c9">&nbsp;mission.&quot; </span><span class="c2">He stood
+            up to reveal a large block of cheese in his hand.</span><span class="c9"><br>&quot;Hmm. That&#39;s not the
+            Paracyst. Oh well, what can you do,&quot; he chortled, popping the light yellow cube of dairy into his mouth
+            and taking a bite out of it.*<br>&quot;Devros,&quot; </span><span class="c2">he said, tipping his imaginary
+            hat to the Tenno and his dog before turning to the others.</span><span class="c9">&nbsp;&quot;Isa. Vuko, my
+            mans. Greetings Muro and... oh my, Disruptis, you&#39;re not late this time!&quot; </span><span
+            class="c2">he laughed to himself and turned to face the brooding leader of the Remnant.</span><span
+            class="c9">&nbsp;&quot;And bossman.&quot; </span><span class="c7 c2">He saluted with two fingers before
+            moving off to the side.</span></p>
+    <hr>
+    <p class="c3 c11"><span class="c7 c8"></span></p>
+    <h2 class="c5" id="h.b5fcxjzab888"><span class="c0">Cev</span></h2>
+    <p class="c3"><span class="c9"><br></span><span class="c2">The sound of music playing grew until the entrance opened
+            again and an Octavia stepped through, his resonator following closely behind as the source of the symphony.
+            As the sound dissipated, Cev&rsquo;s neuroptics scanned over the group.</span><span
+            class="c9"><br>&ldquo;Looks like I am running behind sorry mates.&rdquo;<br></span><span class="c2 c7">He
+            laughed to himself as he moved to lean against a nearby wall.</span></p>
+    <hr>
+    <p class="c3 c11"><span class="c7 c13"></span></p>
+    <h2 class="c5" id="h.tuvtnlrpy2ys"><span class="c0">Mataeru Lloria</span></h2>
+    <p class="c3"><span class="c9">Mataeru:<br></span><span class="c2">He nods to Isa</span><span
+            class="c9"><br>&quot;Very good. However, make sure you have weapons that can assault the Grineer as well.
+            There is no telling what we may run into first...&quot;<br><br></span><span class="c2">He chuckles at
+            Muro&#39;s remark before quietly observing the group for a few moments -after Cev arrives- in silence before
+            crossing his arms and shifting his weight</span><span class="c9"><br>&quot;Greetings Tenno and thank you for
+            joining me here. This exercise was designed to help us get at least some familiarity with each other&#39;s
+            combat prowess. We will be separating into groups of four and moving to different parts of the ruins in this
+            area. Several of my security systems have detected several squads of Grineer and Corpus soldiers within our
+            outer base perimeter that need to be dealt with.&quot;<br></span><span class="c2">he sighs looking at the
+            seven tenno before him</span><span class="c9"><br>&quot;I had hoped more of us would show for this, but
+            eight will suffice.&quot;<br></span><span class="c2">he looks to Muro, Cev, and Devros</span><span
+            class="c7 c8"><br>&quot;You all have support Warframes, so what I need to know is, Muro, Devros. Are you
+            both built for combat, or team support?&quot;</span></p>
+    <hr>
+    <p class="c3 c11"><span class="c1 c0"></span></p>
+    <p class="c3"><span class="c0">Devros von Inie</span><span class="c9"><br></span><span class="c2">The Oberon lifts
+            his head from the kubrow to look towards Kapak, with a smile he will tip his own imaginary hat at him.
+            Garhul looks over too and his stubby little tail starts wagging at the sight of food, but stays put while
+            his dull yellow eyes follow the cheese like a hawk gazing at prey. Devros shakes his head at his companion
+            and playfully covers the kubrows eyes with his hand, only for him to dip his head to the side to lock on to
+            the cheese again. Devros covers Garhul&rsquo;s eyes again but he tilts his head to the side again. This
+            little antic goes about till Devros hears his name being mentioned and he quickly whipped up to look at
+            Mata</span><span class="c9"><br><br>&ldquo;Ah no, more af a bruiser. I&rsquo;m always up in front lines as a
+            crasher but when need be I&rsquo;ll back out and assist, &#39;ave Phoenix Renewal for when thigs gae
+            hectic&rdquo; </span><span class="c2">He said in his more formal tone, his accent pulled back a bit</span>
+    </p>
+    <hr>
+    <p class="c3 c11"><span class="c7 c8"></span></p>
+    <h2 class="c5 c15" id="h.4bsng9iit6dg"><span class="c1 c0"></span></h2>
+    <p class="c3"><span class="c0">Muro:</span><span class="c9"><br></span><span class="c2">Muro greeted the others as
+            they approached, or at least the ones who spoke to him. He offered a friendly wave to Disruptis and Kapak,
+            then gave Vuko a playful punch in the arm once he settled in.</span><span class="c9">&nbsp;&quot;Nice
+            entrance.&quot; </span><span class="c2">He teased. Looking up at Mata, Muro was surprised that he even
+            needed to ask, given their history.</span><span class="c9">&nbsp;&quot;I&#39;m capable of both Boss. I get
+            in the thick of things and keep people alive, but I can do some damage if its needed.&quot; </span><span
+            class="c7 c2">He motioned with his thumb to the cannon slung over his shoulder.</span></p>
+    <hr>
+    <p class="c3 c11"><span class="c0 c1"></span></p>
+    <p class="c3"><span class="c0">Disruptis:</span><span class="c9"><br></span><span class="c2">The Limbo chuckled at
+            Isa&#39;s slight wit.</span><span class="c9">&nbsp;&ldquo;What? Isa making me laugh? How is this
+            possible?!&rdquo; </span><span class="c2">he mused, returning Muro&rsquo;s wave at the same
+            time,</span><span class="c7 c8">&nbsp;&ldquo;Are you good with a bulky bundle or are you looking for a slim
+            fit?&rdquo;</span></p>
+    <hr>
+    <p class="c3 c11"><span class="c1 c0"></span></p>
+    <p class="c3"><span class="c0">Isa:</span><span class="c9"><br>&quot;My gammacor will be less than optimal, but my
+            rifle and sword should suffice well enough against Grineer as well.&quot;<br></span><span class="c2">She
+            turns her head to face Distruptis.</span><span class="c9"><br>&quot;Yes, despite what it may seem, I am
+            human and thus capable of humor.&quot;<br></span><span class="c2">She looks back down the hallway now,
+            rolling her shoulder again.</span><span class="c7 c8"><br>&quot;More would have been ideal, though at least
+            we have enough to operate in groups of four, standard for the Lotus&#39;s tactics. We would not want to
+            appear too different from her Tenno yet.&quot;</span></p>
+    <hr>
+    <p class="c3 c11"><span class="c1 c0"></span></p>
+    <p class="c3"><span class="c0">Mataeru:</span><span class="c9"><br></span><span class="c2">He nods at Devros and
+            Muro in turn</span><span class="c9"><br>&quot;Alright, Muro, for the sake of balance, I would like you to
+            fill in a supporting role. Each squad of four will have one dedicated support Warframe. So Muro and Cev, you
+            will be the starting points of two teams.&quot;<br><br></span><span class="c2">he looks to Isa and
+            nods</span><span class="c9"><br>&quot;Very good. I will place you on the same squad as
+            Cev.&quot;<br><br></span><span class="c2">looking to the other Tenno in the group, he continues</span><span
+            class="c9"><br>&quot;Disruptis, Kapak, and Vuko, you will team up with Muro. Disruptis, I will have to act
+            as squad captain. However, if you do not want to lead the squad, you may pass it off to Muro or
+            Kapak.&quot;<br><br></span><span class="c2">He then turns to Isa and Devros</span><span
+            class="c9"><br>&quot;You two and I will join a squad with Cev.&quot;<br><br></span><span class="c2">He then
+            turns to face Cev</span><span class="c7 c8"><br>&quot;Would you like to take squad lead?&quot;</span></p>
+    <hr>
+    <p class="c3 c11"><span class="c7 c8"></span></p>
+    <p class="c3"><span class="c14 c0">Kapak:</span><span class="c9"><br></span><span class="c7 c2">The Nidus pumped his
+            fleshy fist and offered high fives to the others he&rsquo;d been assigned with. Fortunately he&rsquo;d been
+            put with people he knew and could stand. The only one he wasn&rsquo;t familiar with was the Veiled Tenno
+            Muro, but he seemed to be pretty close with Vuko, so that was fine.</span></p>
+    <hr>
+    <p class="c3 c11"><span class="c7 c8"></span></p>
+    <p class="c3"><span class="c0">Cev:</span><span class="c9"><br></span><span class="c2">Cev stood in silence for a
+            moment, lost in thought as his finger tapped rhythmically against his opposite shoulder.</span><span
+            class="c9"><br>&ldquo;I mean, sure mate. I just thought you may want to lead because, well, you&rsquo;re the
+            boss after all.&rdquo;<br></span><span class="c2">He pushed off the wall and moved closer to Isa and Devros,
+            bouncing on the balls off his feet in time to the music he had playing in his ear. He clasped his hands
+            behind his head as he spoke with a child-like excitement in his voice.</span><span
+            class="c7 c8"><br>&ldquo;Either way I can&rsquo;t wait to see what tricks you guys got up your
+            sleeves.&rdquo;</span></p>
+    <hr>
+    <p class="c3 c11"><span class="c7 c8"></span></p>
+    <p class="c3"><span class="c0">Disruptis:</span><span class="c9"><br></span><span class="c2">Disruptis perked up,
+            standing with his back straight and one hand on the rim of his Limbo&rsquo;s built in &lsquo;hat&rsquo;. He
+            gave Mataeru a deep and flourishing bow.</span><span class="c9">&nbsp;&ldquo;Why yes sir, I do believe I
+            shall accept that responsibility then.&rdquo; </span><span class="c2">he replied in a dandy accent. The
+            Tenno hadn&rsquo;t gotten the chance to see Vuko or Muro in action, but felt they would had some great
+            tricks to show. The picturing of a million ways to creatively use Vuko&rsquo;s wire-arrows already got him
+            excited. He sauntered over to Kapak and received his high-five, motioning for Muro and Vuko to come
+            closer.</span><span class="c9">&nbsp;<br><br>&ldquo;Don&rsquo;t worry, it&rsquo;s most likely going to just
+            be a free-for-all anyway, so you won&rsquo;t have to follow any orders,&rdquo; </span><span class="c2">he
+            whispered near the Nidus&rsquo;s audio receptors,</span><span class="c1 c4">&nbsp;&ldquo;and I&rsquo;m sure
+            we can all handle ourselves in these situations.&rdquo;</span></p>
+    <hr>
+    <p class="c3 c11"><span class="c7 c8"></span></p>
+    <p class="c3"><span class="c0">Isa:</span><span class="c9"><br>&quot;Yes... tricks. I don&#39;t have the equipment
+            do perform the sort of tricks I prefer. I doubt Mataeru would appreciate controlled demolitions so close to
+            the base.&quot; <br></span><span class="c2">She said looking down at her Argonak.</span><span
+            class="c7 c8">&nbsp;<br>&quot;My primary &#39;trick&#39; when I&#39;m unable to utilize demolition is to
+            place spores on the enemy, then shoot them until they stop moving, then put one more bullet in their head
+            for good measure. I just hope you don&#39;t intend to rely too much on stealth. Sneaking is... not my strong
+            suit.&quot;</span></p>
+    <hr>
+    <p class="c3 c11"><span class="c1 c0"></span></p>
+    <p class="c3"><span class="c0">Devros von Inie</span><span class="c9"><br></span><span class="c2">The flora
+            patterned Oberon Prime nods his head and hops off the rock to meet his designated group half way with his
+            companion trailing close behind. Devros will let out a loud cackle and aim to playfully slap the Saryn on
+            the shoulder as a form of greeting</span><span class="c9"><br><br>&ldquo;Aye, I feel ya, I&rsquo;m more of a
+            party crasher meself, stealthing aboyt is dull. I like to spread panic and give &lsquo;em a fighting
+            chance&rdquo;<br><br></span><span class="c2">He points with his thumb over his shoulder to his polished
+            Lenz. Of course, the Lenz is not really a &ldquo;fair&rdquo; weapon but Devros likes the pocket explosives
+            and it feels empowering to shoot that in a cluster of them or just to flush them out from cover. Tilting his
+            head towards the bouncing Octavia, he nods his head and says in his rusty voice</span><span
+            class="c9"><br><br>&ldquo;Disrupt, distract and crash, those are me tricks...if all else fails den just let
+            de kubrow out!&rdquo;<br><br></span><span class="c2">He chuckles and will throw Cev a fist bump as a
+            greeting.<br><br>Garhul remains close to Devros, throwing looks at the unfamiliar &ldquo;faces&rdquo; but
+            doesn&rsquo;t make a move for anything just yet.</span></p>
+    <hr>
+    <p class="c3 c11"><span class="c1 c0"></span></p>
+    <p class="c3"><span class="c0">Vuko:</span><span class="c9"><br> &nbsp; &nbsp;</span><span class="c2">He stands in a
+            stoic manner, emotionally distanced from everyone, similar to Mataeru. However the root of his behavior
+            seems to stem not from the need to exert domanince and leadership, but from a personal need of solitude.
+            Vuko responds to Devros&rsquo; nod in a formal fashion with a sharp and mechanical nod.</span><span
+            class="c9"><br> &nbsp; &nbsp;</span><span class="c2">However, as Mataeru announces the squad he lightens and
+            looseness up. Being assigned with both Muro, who is basically his younger brother, despite them not being
+            related, and Kapak, who he bonded with since he woke up, put him in a good mood. Vuko gave Kapak a high
+            five, despite the fact he had to jump up to reach his hand, which looked almost comically, as the difference
+            between the towering Nidus, and the short Ivara is quite drastic.</span><span class="c9"><br> &nbsp;
+            &nbsp;</span><span class="c2">Overhearing what the Limbo said, he added in a tone low enough for no one
+            other that the freshly assembled squad to hear.</span><span class="c9">&nbsp;- &ldquo;I appreciate that you
+            are giving us a lot of leeway in our combat, but I think it would be beneficial for you to get used to
+            commanding us. Muro and me have been trained over many years to fight in tandem. You need to learn how to
+            use that efficiently.&rdquo; - </span><span class="c2">He explained in the robotic, scrambled
+            voice.</span><span class="c9">&nbsp;- &ldquo;To add to that I have quite a few tricks up my sleeve.&rdquo; -
+        </span><span class="c7 c2">He added, this time one could notice a hint of excitement about the use of his
+            quiver, at which he pointed with his head.</span></p>
+    <hr>
+    <p class="c3 c11"><span class="c7 c8"></span></p>
+    <p class="c3"><span class="c0">Muro:</span><span class="c9"><br></span><span class="c2">Muro nodded along with
+            Mata&#39;s speech, listening carefully as he assigned teams. He visibly perked up when he and Vuko were
+            assigned the same team, and went over to join the other three members of his squad, enthusiastically
+            returning Kapak&#39;s high-five. Upon hearing Disruptis&#39; plan, however, he became confused. He had never
+            had a leader who wasn&#39;t giving orders before, so that took a moment to process. Besides, wasn&#39;t the
+            whole point of this exercise to learn how to work as a team? &nbsp;Muro was about to voice his concern, but
+            Vuko beat him to it.</span><span class="c9"><br><br>&quot;Vuko has a point,&quot; </span><span class="c2">He
+            whispered,</span><span class="c7 c8">&nbsp;&quot; I&#39;m sure each of us could do this alone if we really
+            had to, but we need to have each other&#39;s backs here. &quot;</span></p>
+    <hr>
+    <p class="c3 c11"><span class="c1 c0"></span></p>
+    <p class="c3"><span class="c0">Oro&#39;Kino: </span><span class="c9"><br></span><span class="c2">Oro&#39;Kino had
+            been painting yet a new monstrosity of art on a new piece of scrap metal. He raised his masked face once
+            hearing the annoucement, and transferred into his Rhino. He had decided to give the helmet on his shoulder a
+            bit more of colorful pigments - a mix of drawn flowers on it. Oro&#39;Kino made his way with his selection
+            of weapons - his Jat Kitaag and his lenz. He was one of t he last to make it, waving as he walked towards
+            the exit.</span></p>
+    <hr>
+    <p class="c3 c11"><span class="c1 c0"></span></p>
+    <p class="c3"><span class="c0">Mataeru:</span><span class="c9"><br></span><span class="c2">He Nods to
+            Cev</span><span class="c9"><br>&quot;I know how to lead a squad. I just thought you might like the
+            opportunity to call the shots for an operation. If you do not wish to lead that is
+            fine.&quot;<br><br></span><span class="c2">he then turns to Orokino as he approaches teh group</span><span
+            class="c9"><br>&quot;Ah, Kino, I was beginning to think you were not going to make appearance like the rest
+            of our brethren.&quot;<br><br></span><span class="c2">He looks at the two currently formed
+            squads</span><span class="c9"><br>&quot;We need to rearrange our numbers...&quot;<br></span><span
+            class="c2">He pauses eyeing the current group composition before slowly pointing to Cev and then to
+            Vuko</span><span class="c9"><br>&quot;Cev, you will take command of a third squad. Vuko, you will join Cev
+            and Orokino. That should spread our balance of power relatively evenly.&quot;<br></span><span class="c2">He
+            stops once more, looking at each group before him one last time for a power balance analysis before
+            nodding</span><span class="c7 c8"><br>&quot;Any questions?&quot;</span></p>
+    <hr>
+    <p class="c3 c11"><span class="c1 c0"></span></p>
+    <p class="c3"><span class="c0">Disruptis:</span><span class="c9"><br></span><span class="c2">Truth be told,
+            Disruptis possessed quite excellent leadership skills. (There was a reason behind his Naramon focus.) His
+            most recent failures merely clamped a damper onto his self-confidence. Fortunately, the voices of his fellow
+            Tenno were re-assuring him once again, if just a little.</span><span class="c9"><br><br>&ldquo;Alright well,
+            in that case I&rsquo;ve got some great ideas if you&rsquo;re willing to listen.&rdquo; </span><span
+            class="c2">he stated in slowly growing excitement.</span><span class="c9"><br><br></span><span
+            class="c2">His posture sank a little as he grew disappointed at the thought of Vuko&rsquo;s transfer. He
+            didn&rsquo;t feel too bad however, the Ivara would be in more than capable hands. His old friend Cev was no
+            pushover when it came to strategy, and might even work better than Disruptis could. When it came to a good
+            plan, the Octavia easily won the race between the two of them on a good day. He would only place second next
+            to Disruptis&rsquo;s incredible proficiency in winging any given situation.</span><span
+            class="c9"><br><br>&ldquo;Guts,&rdquo; </span><span class="c2">he cursed. The Limbo still expressed some
+            concern over the composition of Cev&rsquo;s team, but didn&rsquo;t voice his worries. An Ivara, Octavia, and
+            Rhino weren&rsquo;t necessarily the easiest things to play around with. The Tenno would have his work cut
+            out for him.</span></p>
+    <hr>
+    <p class="c3 c11"><span class="c7 c8"></span></p>
+    <p class="c3"><span class="c0">Muro:</span><span class="c9"><br></span><span class="c2">Muro marveled at the oddly
+            decorated Rhino that now stood before them. Were the flowers supposed to intimidate enemies? He doubted it,
+            but who knew what scared Grineer these days? Admittedly, he wasn&#39;t initially paying attention as Mata
+            was talking, but his head snapped towards Mata when he announced Vuko&#39;s transfer.</span><span
+            class="c9">&nbsp;<br>&quot;Aw, seriously Boss?&quot; </span><span class="c2">He said disappointedly, his
+            arms spread wide as if to demonstrate shock. A quick look at Mata&#39;s face made Muro reel in his emotions.
+            Even with his hood up, he knew the face Mata was making. &nbsp;Questioning the leader was never a wise
+            choice. He sighed resignedly, dropping his arms to his sides</span><span class="c9">&nbsp;&quot;Oh,
+            alright.&quot; </span><span class="c7 c2">Muro had really wanted to fight alongside Vuko again after all
+            this time, but he had a feeling he&#39;d get his chance. &nbsp;&#39;Besides&#39;, he thought, looking at his
+            remaining squad mates, &#39;these two look like they&#39;re pretty interesting too.&#39;</span></p>
+    <hr>
+    <p class="c3 c11"><span class="c1 c0"></span></p>
+    <p class="c3"><span class="c0">Mataeru:</span><span class="c9"><br></span><span class="c2">He nods at the silence
+            from everyone in the group and sends general messages to each squad members inbox.</span><span
+            class="c9"><br>&quot;Attached to the message I just sent you all is the path your squad will be following. I
+            could not pinpoint the location of each hostile group, so be wary. If you do not encounter them on your
+            initial sweep, double back and widen the search area.&quot;<br><br></span><span class="c2">Mata disappears
+            from view as his Ash begins moving, pulling the Attica off its back</span><span class="c9"><br>&quot;Lets go
+            Tenno!&quot;<br></span><span class="c7 c2">he then gestures to his squad and moves off in the direction his
+            squads path</span></p>
+    <hr>
+    <p class="c3 c11"><span class="c7 c8"></span></p>
+    <p class="c3"><span class="c0">Disruptis:</span><span class="c9"><br></span><span class="c2">The Limbo brought up
+            the augmented reality within his neuroptics with a focused thought. With a few swipes, he navigated to his
+            messages and added the location coordinates to a waypoint on his warframe&rsquo;s HUD.</span><span
+            class="c9"><br><br>&ldquo;Squad &lsquo;Sadly Vukoless&rsquo; is rolling out, let&rsquo;s go.&rdquo;
+        </span><span class="c2">Disruptis announced with a hint of reluctance to Kapak and Muro, walking forward.</span>
+    </p>
+    <hr>
+    <p class="c3 c11"><span class="c7 c8"></span></p>
+    <p class="c3"><span class="c0">Isa:</span><span class="c9"><br></span><span class="c7 c2">Isa remains silent as the
+            others head out. She follows a short distance behind Mataeru, Argonak still at the ready, Taxon hovering
+            about her head.</span></p>
+    <hr>
+    <p class="c3 c11"><span class="c7 c8"></span></p>
+    <p class="c3"><span class="c14 c0">Kapak:</span><span class="c9"><br></span><span class="c7 c2">The Nidus coughed
+            and sulked away behind the Limbo, stealing one last glance at Vuko.</span></p>
+    <hr>
+    <p class="c3 c11"><span class="c7 c8"></span></p>
+    <p class="c3"><span class="c0">Oro&#39;Kino:</span><span class="c9"><br></span><span class="c2">Oro&#39;Kino bowed
+            his head to Mata, both in greeting and in goodbye. Once he was told of his squad he straightened his
+            posture, taking hammer in hand. It was his weapon of choice after all. The Rhino hadn&#39;t fought much but
+            small pockets of Grineer that dared to approach the Sanctuary - hence his latest art projects. The Rhino
+            approached Cev, coming quite close to him, almost uncomfortably so. Oro&#39;Kino was a natural follower, and
+            as always, obedient to the words of his peers. He loomed his head next to Cev&#39;s, as if awaiting
+            command.</span></p>
+    <hr>
+    <p class="c3 c11"><span class="c7 c8"></span></p>
+    <p class="c3"><span class="c0">Cev:</span><span class="c9"><br></span><span class="c2">He watched the other teams
+            begin to leave as the rhino approached him. Taking a few steps back he tilted his head to the side as he
+            looked the oddly painted rhino over. Cev pressed his fingers together nervously, his gaze darting back and
+            forth between Vuko and Oro&rsquo;Kino.</span><span class="c9"><br>&ldquo;Well this will be an interesting
+            set to fight with&hellip;&rdquo; <br></span><span class="c2">he stated, trailing off as he lost himself in
+            thought. When he finally snapped back he looked to the rhino next to him.</span><span
+            class="c7 c8"><br>&ldquo;Okay, you take the lead since you&rsquo;re our shield. Make sure no one touches me
+            &lsquo;n Vuko. Vuko, you stay near the back and pick them off. With that, let&#39;s get rolling
+            mates.&rdquo;</span></p>
+    <hr>
+    <p class="c3 c11"><span class="c1 c0"></span></p>
+    <p class="c3"><span class="c0">Oro&#39;Kino:</span><span class="c9"><br></span><span class="c2">Oro&#39;Kino only
+            scooted closer when Cev stepped away. Listening intently, the Rhino nods in understanding and backs away
+            once knowing his objective. Looking towards the other teams and the way they went, he stepped forward and
+            clenched a fist. Swinging it up in the air then pulling it back down, his Warframe&#39;s outermost layer is
+            coated in golden moving layers of energy. The several odd paintings on Oro&#39;Kino&#39;s warframe shined in
+            the radiance, wonderfully highlighting their colors and making their edges much more bold. Hammer in hand,
+            he looked back to Cev and questioned,</span><span class="c9"><br></span><span class="c2 c10">&quot;WHERE.
+            GO?&quot;</span></p>
+    <hr>
+    <p class="c3 c11"><span class="c7 c8"></span></p>
+    <p class="c3"><span class="c0">Muro:</span><span class="c9"><br></span><span class="c2">Muro pulled his Zarr off his
+            shoulder, cracking his neck in the same fluid motion. Giving a low chuckle at Disruptis&#39; clever naming,
+            &nbsp;he strode after the Limbo, cradling his weapon in his hands. He spoke with enthusiasm, delighted to be
+            going on a proper mission after all this time.</span><span class="c9"><br><br>&quot;Aye aye, sir, lead
+            on.&quot; <br><br></span><span class="c7 c2">As he walked away from the other groups, Muro looked over his
+            shoulder and gave a regretful wave to Vuko. &#39;Maybe next time&#39;, he thought.</span></p>
+    <hr>
+    <p class="c3 c11"><span class="c7 c8"></span></p>
+    <p class="c3"><span class="c0">Vuko:</span><span class="c9"><br> &nbsp; &nbsp;</span><span class="c7 c2">He
+            approached his squad without saying a single word, or even making a single sound, and only nodded in
+            agreement to Cev&rsquo;s orders. As if to show his readiness, he took a polished and well taken care of
+            Vectis off his capeless back.</span></p>
+    <hr>
+    <p class="c3 c11"><span class="c7 c8"></span></p>
+    <p class="c3"><span class="c0 c14">//[SEVERAL HOURS LATER]\</span><span class="c9"><br><br></span><span
+            class="c0">Disruptis:</span><span class="c9"><br></span><span class="c2">&quot;WOOHOOO!&quot; Disruptis
+            hollered over transmission as he penguin-dived off the last cliff near Sanctuary. The Limbo hit the ground
+            in a hard slide. The momentum of his fall plus the special anti-friction provided by his modifications
+            carried him the rest of the way to the base entrance. His slide slowed down to a crawl and finally stopped
+            before the door. Disruptis got up and lifted his arms above his head, locking his fingers behind his
+            neck.</span><span class="c7 c8"><br><br>&quot;AH. That was pretty refreshing, I&#39;m not gonna lie. I even
+            managed to save a crude simulacrum replay for later.&quot;</span></p>
+    <hr>
+    <p class="c3 c11"><span class="c7 c8"></span></p>
+    <p class="c3"><span class="c0">Muro:</span><span class="c9"><br></span><span class="c2">Muro arrived behind
+            Disruptis a few moments later, moving at a moderately paced jog. He wasn&#39;t in any major rush to get back
+            to the Sanctuary, as he was still enjoying the nostalgic rush of combat, in addition to his sudden windfall
+            of platinum.</span><span class="c9"><br><br>&quot;A replay?&quot; </span><span class="c2">Muro asked,
+            jokingly.</span><span class="c9">&nbsp;&quot;Of what? the fight was over in less than a minute.&quot;
+        </span><span class="c2">He laughed for a moment.</span><span class="c7 c8">&nbsp;&quot;Its a shame they
+            can&#39;t all be that simple.&quot;</span></p>
+    <hr>
+    <p class="c3 c11"><span class="c7 c8"></span></p>
+    <p class="c3"><span class="c0">Mataeru:</span><span class="c9"><br></span><span class="c2">a handful of minutes
+            after the third group returned Mataeru falls into step a short ways behind Muro</span><span
+            class="c7 c8"><br>&quot;Good to hear your mission was a success. We destroyed both squads and managed to
+            procure a suit for Isa that looks like it will fit. That being said, we will be able to begin the first
+            steps of our mission to commandeer an Orokin tower shortly. Well done Tenno.&quot;</span></p>
+    <hr>
+    <p class="c3 c11"><span class="c1 c4"></span></p>
+    <p class="c3"><span class="c1 c0">[End RP 4/3, 17:23]</span></p>
+    <p class="c3 c11"><span class="c7 c17"></span></p>
+</body>
+
+</html>

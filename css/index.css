@@ -9,3 +9,8 @@ body {
 div.about {
   text-align: left;
 }
+
+.subtitle {
+  font-size: 0.8rem;
+  display: block;
+}
